@@ -1,7 +1,7 @@
 // Typed fetch wrappers around the FastAPI backend.
 
 import { API_BASE_URL } from "@/lib/config";
-import { getApiKey } from "@/lib/settings";
+import { getApiKey, getModel, getProvider } from "@/lib/settings";
 import type { Index, Snapshot } from "./types";
 
 class ApiError extends Error {
@@ -14,8 +14,23 @@ class ApiError extends Error {
 
 async function jsonOrThrow<T>(res: Response): Promise<T> {
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new ApiError(res.status, body || res.statusText);
+    // Try to extract the `detail` field FastAPI uses; fall back to text.
+    let detail = res.statusText || `HTTP ${res.status}`;
+    try {
+      const body = await res.json();
+      if (body && typeof body.detail === "string") {
+        detail = body.detail;
+      } else if (body) {
+        detail = JSON.stringify(body);
+      }
+    } catch {
+      try {
+        detail = (await res.text()) || detail;
+      } catch {
+        /* keep status text */
+      }
+    }
+    throw new ApiError(res.status, detail);
   }
   return res.json() as Promise<T>;
 }
@@ -42,7 +57,10 @@ export async function runPipeline(): Promise<Index> {
 
 export interface ChatRequest {
   query: string;
+  /** Legacy single-month context; superseded by month_from/month_to. */
   month?: string;
+  month_from?: string;
+  month_to?: string;
   focused_entity?: string;
 }
 
@@ -59,10 +77,48 @@ export interface ChatResponse {
   model: string;
 }
 
+export interface SearchRequest {
+  query: string;
+  month?: string;
+  month_from?: string;
+  month_to?: string;
+  focused_entity?: string;
+  limit?: number;
+}
+
+export interface ArticleResult {
+  title: string;
+  ticker: string;
+  date: string;
+  url: string;
+  summary: string;
+  score: number;
+}
+
+export interface SearchResponse {
+  results: ArticleResult[];
+}
+
+export async function searchArticles(
+  req: SearchRequest
+): Promise<SearchResponse> {
+  const res = await fetch(`${API_BASE_URL}/api/search`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(req),
+    cache: "no-store",
+  });
+  return jsonOrThrow<SearchResponse>(res);
+}
+
 export async function sendChat(req: ChatRequest): Promise<ChatResponse> {
   const headers: Record<string, string> = { "Content-Type": "application/json" };
-  const apiKey = getApiKey();
-  if (apiKey) headers["X-Gemini-Api-Key"] = apiKey;
+  const provider = getProvider();
+  const model = getModel(provider);
+  const apiKey = getApiKey(provider);
+  if (provider) headers["X-LLM-Provider"] = provider;
+  if (model) headers["X-LLM-Model"] = model;
+  if (apiKey) headers["X-LLM-Api-Key"] = apiKey;
 
   const res = await fetch(`${API_BASE_URL}/api/chat`, {
     method: "POST",

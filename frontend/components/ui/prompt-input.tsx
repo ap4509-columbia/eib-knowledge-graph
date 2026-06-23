@@ -197,8 +197,8 @@ export function PromptInput({
         onMouseMove={handleMouseMove}
         onClick={handleClick}
         className={cn(
-          "group relative flex w-full items-end gap-2 rounded-3xl border border-zinc-800 bg-zinc-900/60 p-2 shadow-lg backdrop-blur-xl transition-colors",
-          "hover:bg-zinc-900/70 focus-within:bg-zinc-900/80"
+          "group relative flex w-full items-end gap-2 rounded-3xl border border-border bg-muted/60 p-2 shadow-lg backdrop-blur-xl transition-colors",
+          "hover:bg-muted/70 focus-within:bg-muted/80"
         )}
         style={{ transitionDuration: `${animationDuration}ms` }}
       >
@@ -223,8 +223,8 @@ export function PromptInput({
           disabled={disabled}
           className={cn(
             "relative z-10 max-h-40 min-h-8 flex-1 resize-none self-center bg-transparent",
-            "px-2 py-1 text-sm leading-[22px] text-zinc-100 outline-none",
-            "placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:opacity-50"
+            "px-2 py-1 text-sm leading-[22px] text-foreground outline-none",
+            "placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
           )}
           style={{ letterSpacing: "-0.14px" }}
         />
@@ -236,8 +236,8 @@ export function PromptInput({
           className={cn(
             "relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition",
             isSubmitDisabled
-              ? "cursor-not-allowed bg-zinc-800 text-zinc-600"
-              : "bg-zinc-100 text-zinc-900 hover:bg-white"
+              ? "cursor-not-allowed bg-muted text-muted-foreground"
+              : "bg-foreground text-background hover:opacity-90"
           )}
         >
           <ArrowUp className="h-4 w-4" strokeWidth={2.5} />

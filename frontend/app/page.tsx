@@ -1,13 +1,13 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Loader2,
   RefreshCw,
   AlertCircle,
   Search as SearchIcon,
-  Sparkles,
+  FileSearch,
 } from "lucide-react";
 
 import { fetchIndex, fetchSnapshot, runPipeline } from "@/lib/api/client";
@@ -17,11 +17,17 @@ import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
 import { NodeDetailSheet } from "@/components/detail/NodeDetailSheet";
 import { ChatPanel } from "@/components/chat/ChatPanel";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
   { ssr: false }
 );
+
+function currentMonthYYYYMM(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
 
 export default function Home() {
   // Data
@@ -35,7 +41,10 @@ export default function Home() {
   const [visibleCategories, setVisibleCategories] = useState<Set<string>>(
     new Set()
   );
-  const [minDegree, setMinDegree] = useState(2);
+  // Min-degree threshold expressed as a percentage of the current month's max
+  // degree. Stays meaningful across months even though absolute degree ranges
+  // change wildly (March 2020 has 5× the activity of January 2019).
+  const [minDegreePct, setMinDegreePct] = useState(5);
 
   // Interaction state
   const [searchOpen, setSearchOpen] = useState(false);
@@ -69,7 +78,21 @@ export default function Home() {
     loadIndex();
   }, [loadIndex]);
 
-  // Fetch snapshot whenever currentMonth changes
+  // Split the backend-provided months into past vs forecast based on today.
+  // If the backend doesn't return any months past today, the forecast zone
+  // simply doesn't exist and the slider stops at the latest actual month.
+  const { actualMonths, futureMonths } = useMemo(() => {
+    const all = index?.months ?? [];
+    const today = currentMonthYYYYMM();
+    return {
+      actualMonths: all.filter((m) => m <= today),
+      futureMonths: all.filter((m) => m > today),
+    };
+  }, [index]);
+
+  const isForecast = !!currentMonth && futureMonths.includes(currentMonth);
+
+  // Fetch snapshot whenever currentMonth changes.
   useEffect(() => {
     if (!currentMonth) return;
     const cached = snapshotCacheRef.current.get(currentMonth);
@@ -97,7 +120,7 @@ export default function Home() {
     };
   }, [currentMonth]);
 
-  // Initialize filter sets once on the first snapshot (so they include all types).
+  // Initialize filter sets once on the first snapshot
   useEffect(() => {
     if (!snapshot || filtersInitializedRef.current) return;
     const types = new Set(snapshot.nodes.map((n) => n.type));
@@ -141,7 +164,6 @@ export default function Home() {
       await runPipeline();
       snapshotCacheRef.current.clear();
       await loadIndex();
-      // Re-fetch current month if it survived
       if (currentMonth) {
         const snap = await fetchSnapshot(currentMonth);
         snapshotCacheRef.current.set(currentMonth, snap);
@@ -176,16 +198,23 @@ export default function Home() {
     setFocusedNodeId(id || null);
   }, []);
 
+  // Derive the current snapshot's max degree, then the absolute threshold.
+  const maxDegree = (snapshot?.nodes ?? []).reduce(
+    (acc, n) => (n.degree > acc ? n.degree : acc),
+    1
+  );
+  const minDegree = Math.max(1, Math.round((minDegreePct / 100) * maxDegree));
+
   return (
     <>
-      <div className="flex flex-col h-screen w-screen bg-zinc-950 text-zinc-100 overflow-hidden">
+      <div className="flex h-screen w-screen flex-col overflow-hidden bg-background text-foreground">
         {/* Header */}
-        <header className="flex items-center justify-between px-6 py-3 border-b border-zinc-800 shrink-0">
+        <header className="flex shrink-0 items-center justify-between border-b border-border px-6 py-3">
           <div className="flex items-baseline gap-3">
             <h1 className="text-base font-semibold tracking-tight">
               EIB Knowledge Graph
             </h1>
-            <p className="text-xs text-zinc-400 font-mono">
+            <p className="font-mono text-xs text-muted-foreground">
               {snapshot
                 ? `${snapshot.month}  ·  ${snapshot.stats.nodes} entities  ·  ${snapshot.stats.edges} relationships`
                 : loading
@@ -195,18 +224,18 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2">
             {index && (
-              <span className="text-xs text-zinc-500 font-mono mr-2">
+              <span className="mr-2 font-mono text-xs text-muted-foreground">
                 {index.months.length} months available
               </span>
             )}
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-100 hover:bg-zinc-800 hover:border-zinc-700 transition"
+              className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-accent"
             >
               <SearchIcon className="h-3.5 w-3.5" />
               Search
-              <kbd className="ml-1 hidden sm:inline-block rounded border border-zinc-700 bg-zinc-950 px-1.5 font-mono text-[10px] text-zinc-400">
+              <kbd className="ml-1 hidden rounded border border-border bg-background px-1.5 font-mono text-[10px] text-muted-foreground sm:inline-block">
                 ⌘K
               </kbd>
             </button>
@@ -214,7 +243,7 @@ export default function Home() {
               type="button"
               onClick={handleRefresh}
               disabled={running || loading}
-              className="flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-100 hover:bg-zinc-800 hover:border-zinc-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-50"
             >
               {running ? (
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -223,6 +252,7 @@ export default function Home() {
               )}
               {running ? "Refreshing…" : "Refresh"}
             </button>
+            <ThemeToggle />
           </div>
         </header>
 
@@ -232,27 +262,29 @@ export default function Home() {
             snapshot={snapshot}
             visibleTypes={visibleTypes}
             visibleCategories={visibleCategories}
+            minDegreePct={minDegreePct}
             minDegree={minDegree}
+            maxDegree={maxDegree}
             onToggleType={handleToggleType}
             onToggleCategory={handleToggleCategory}
-            onMinDegreeChange={setMinDegree}
+            onMinDegreePctChange={setMinDegreePct}
           />
 
-          <main className="flex-1 relative">
+          <main className="relative flex-1">
             {error && (
-              <div className="absolute inset-x-0 top-0 z-20 bg-red-950/90 border-b border-red-900 text-red-100 px-6 py-3 text-sm backdrop-blur">
+              <div className="absolute inset-x-0 top-0 z-20 border-b border-destructive/30 bg-destructive/10 px-6 py-3 text-sm backdrop-blur">
                 <div className="flex items-start gap-3">
-                  <AlertCircle className="h-4 w-4 mt-0.5 shrink-0 text-red-400" />
-                  <div>
+                  <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+                  <div className="text-destructive">
                     <div className="font-medium">Backend unreachable.</div>
-                    <div className="mt-1 text-red-300/80 text-xs">
+                    <div className="mt-1 text-xs opacity-80">
                       Run{" "}
-                      <code className="rounded bg-red-950 px-1 py-0.5 font-mono text-red-200">
+                      <code className="rounded bg-destructive/20 px-1 py-0.5 font-mono">
                         uvicorn main:app --reload --port 8000
                       </code>{" "}
                       in <code>backend/</code>.
                     </div>
-                    <div className="mt-1 text-red-400/60 text-[10px] font-mono">
+                    <div className="mt-1 font-mono text-[10px] opacity-60">
                       {error}
                     </div>
                   </div>
@@ -260,8 +292,8 @@ export default function Home() {
               </div>
             )}
             {loading && !snapshot && !error && (
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Loader2 className="h-6 w-6 animate-spin text-zinc-600" />
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
               </div>
             )}
             <GraphCanvas
@@ -270,17 +302,26 @@ export default function Home() {
               focusedNodeId={focusedNodeId}
               onNodeClick={handleNodeClick}
             />
+            {isForecast && (
+              <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1.5 text-[11px] text-purple-700 backdrop-blur-md dark:text-purple-200">
+                <span className="font-mono uppercase tracking-wider">
+                  Forecast · {currentMonth}
+                </span>
+                <span className="ml-2 opacity-70">model prediction</span>
+              </div>
+            )}
           </main>
         </div>
 
         {/* Time slider */}
         <TimeSlider
-          months={index?.months ?? []}
+          months={actualMonths}
+          futureMonths={futureMonths}
           currentMonth={currentMonth}
           onChange={setCurrentMonth}
         />
 
-        <footer className="border-t border-zinc-800 px-6 py-2 text-[10px] text-zinc-600 font-mono shrink-0">
+        <footer className="shrink-0 border-t border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
           IEOR 4737 · Sponsor: European Investment Bank · Summer 2026
         </footer>
       </div>
@@ -299,22 +340,21 @@ export default function Home() {
       <ChatPanel
         open={chatOpen}
         onOpenChange={setChatOpen}
+        months={index?.months ?? []}
         month={currentMonth}
         focusedEntity={focusedNodeId}
       />
 
-      {/* Floating chat trigger — clearly AI-branded */}
+      {/* Floating article-search trigger */}
       {!chatOpen && (
         <button
           type="button"
           onClick={() => setChatOpen(true)}
-          aria-label="Ask AI about the knowledge graph"
-          className="group fixed bottom-24 right-6 z-30 flex items-center gap-2 rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 via-fuchsia-600/25 to-blue-600/30 px-4 py-2.5 text-sm font-medium text-zinc-100 shadow-lg shadow-purple-500/30 backdrop-blur-xl transition hover:from-purple-600/40 hover:via-fuchsia-600/35 hover:to-blue-600/40 hover:shadow-purple-500/40"
+          aria-label="Find articles in the source data"
+          className="fixed bottom-40 right-6 z-30 flex items-center gap-2 rounded-full border border-border bg-background/90 px-4 py-2.5 text-sm font-medium text-foreground shadow-lg backdrop-blur-xl transition hover:bg-accent"
         >
-          <Sparkles className="h-4 w-4 text-purple-300 transition group-hover:text-purple-200" />
-          <span className="bg-gradient-to-r from-purple-200 via-fuchsia-200 to-blue-200 bg-clip-text text-transparent font-semibold">
-            Ask AI
-          </span>
+          <FileSearch className="h-4 w-4 text-purple-500 dark:text-purple-400" />
+          <span>Find articles</span>
         </button>
       )}
     </>

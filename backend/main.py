@@ -16,7 +16,12 @@ from pydantic import BaseModel
 from typing import Optional
 
 from runner import get_index, get_snapshot, run as runner_run
-from chat import chat as chat_fn, ChatNotConfigured
+from chat import (
+    chat as chat_fn,
+    ChatNotConfigured,
+    ChatRateLimited,
+    retrieve_articles,
+)
 
 app = FastAPI(title="EIB Knowledge Graph backend", version="0.1.0")
 
@@ -71,29 +76,90 @@ def run():
 
 class ChatRequest(BaseModel):
     query: str
+    # Legacy single-month context (kept for backward compatibility).
     month: Optional[str] = None
+    # Preferred: range. If only one end is set, treat it as an open bound.
+    month_from: Optional[str] = None
+    month_to: Optional[str] = None
     focused_entity: Optional[str] = None
+
+
+class SearchRequest(BaseModel):
+    query: str
+    month: Optional[str] = None
+    month_from: Optional[str] = None
+    month_to: Optional[str] = None
+    focused_entity: Optional[str] = None
+    limit: int = 20
+
+
+@app.post("/api/search")
+def search_endpoint(req: SearchRequest):
+    """Pure article retrieval. Keyword search over titles + summaries, filtered
+    by month range and focused entity. Returns matching articles with their
+    source URLs — no LLM, no summaries, no commentary.
+    """
+    month_from = req.month_from or req.month
+    month_to = req.month_to or req.month
+    articles = retrieve_articles(
+        query=req.query,
+        month_from=month_from,
+        month_to=month_to,
+        focused_entity=req.focused_entity,
+        max_articles=max(1, min(req.limit, 50)),
+    )
+    results = []
+    for _, row in articles.iterrows():
+        summary = (row.get("summary") or "")[:400]
+        score_val = row.get("_score", 0)
+        try:
+            score_int = int(score_val)
+        except (ValueError, TypeError):
+            score_int = 0
+        results.append(
+            {
+                "title": row["title"],
+                "ticker": row["ticker"],
+                "date": str(row["date"].date()),
+                "url": row.get("url", "") or "",
+                "summary": summary,
+                "score": score_int,
+            }
+        )
+    return {"results": results}
 
 
 @app.post("/api/chat")
 def chat_endpoint(
     req: ChatRequest,
+    x_llm_provider: Optional[str] = Header(default=None),
+    x_llm_model: Optional[str] = Header(default=None),
+    x_llm_api_key: Optional[str] = Header(default=None),
+    # Backwards compat: an earlier version of the frontend sent this header.
     x_gemini_api_key: Optional[str] = Header(default=None),
 ):
     """Ask the LLM about the knowledge graph. Retrieves relevant article summaries.
 
-    The Gemini API key can be supplied via:
-      1. GEMINI_API_KEY env var on the backend, or
-      2. X-Gemini-Api-Key request header (set by the frontend Settings dialog).
+    Provider/model/key can be supplied via headers (set by the frontend Settings
+    dialog) or fall back to env vars in backend/.env.
     """
+    # If only `month` is sent (legacy frontends), treat it as a single-month range.
+    month_from = req.month_from or req.month
+    month_to = req.month_to or req.month
+
     try:
         return chat_fn(
             query=req.query,
-            month=req.month,
+            month_from=month_from,
+            month_to=month_to,
             focused_entity=req.focused_entity,
-            api_key=x_gemini_api_key,
+            provider=x_llm_provider,
+            model=x_llm_model,
+            api_key=x_llm_api_key or x_gemini_api_key,
         )
     except ChatNotConfigured as e:
         raise HTTPException(status_code=503, detail=str(e))
+    except ChatRateLimited as e:
+        raise HTTPException(status_code=429, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chat failed: {e}")

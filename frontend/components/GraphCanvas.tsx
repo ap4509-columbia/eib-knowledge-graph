@@ -2,13 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
+// @ts-expect-error — cytoscape-d3-force ships without bundled types
+import d3Force from "cytoscape-d3-force";
+import { useTheme } from "next-themes";
 import type { Snapshot } from "@/lib/api/types";
-import { graphStyles } from "./graphStyles";
+import { makeGraphStyles } from "./graphStyles";
 
-interface EdgeTooltip {
-  text: string;
-  x: number;
-  y: number;
+// Register the d3-force extension once on the client.
+if (typeof window !== "undefined") {
+  try {
+    cytoscape.use(d3Force);
+  } catch {
+    // Already registered (HMR re-imports). Safe to ignore.
+  }
 }
 
 export interface GraphFilters {
@@ -24,6 +30,12 @@ export interface GraphCanvasProps {
   onNodeClick?: (id: string) => void;
 }
 
+interface EdgeTooltip {
+  text: string;
+  x: number;
+  y: number;
+}
+
 export function GraphCanvas({
   snapshot,
   filters,
@@ -32,9 +44,13 @@ export function GraphCanvas({
 }: GraphCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const cyRef = useRef<Core | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const layoutRef = useRef<any>(null);
   const onNodeClickRef = useRef(onNodeClick);
   onNodeClickRef.current = onNodeClick;
   const [tooltip, setTooltip] = useState<EdgeTooltip | null>(null);
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme !== "light";
 
   // Mount Cytoscape once
   useEffect(() => {
@@ -44,7 +60,7 @@ export function GraphCanvas({
     const cy = cytoscape({
       container,
       elements: [],
-      style: graphStyles as cytoscape.StylesheetJson,
+      style: makeGraphStyles(isDark) as cytoscape.StylesheetJson,
       layout: { name: "preset" },
       wheelSensitivity: 0.2,
       minZoom: 0.05,
@@ -52,7 +68,6 @@ export function GraphCanvas({
     });
     cyRef.current = cy;
 
-    // Node click → callback (background click clears focus via parent)
     cy.on("tap", "node", (evt) => {
       onNodeClickRef.current?.(evt.target.id());
     });
@@ -60,17 +75,13 @@ export function GraphCanvas({
       if (evt.target === cy) onNodeClickRef.current?.("");
     });
 
-    // Edge hover tooltip
     cy.on("mouseover", "edge", (evt) => {
       const e = evt.target;
       const orig = evt.originalEvent as MouseEvent | undefined;
-      const src = e.data("source");
-      const tgt = e.data("target");
-      const rel = e.data("rel");
       const weight = e.data("weight");
       e.addClass("hovered");
       setTooltip({
-        text: `${src}  →  ${rel}  →  ${tgt}${weight > 1 ? `   ·   ×${weight}` : ""}`,
+        text: `${e.data("source")}  →  ${e.data("rel")}  →  ${e.data("target")}${weight > 1 ? `   ·   ×${weight}` : ""}`,
         x: orig?.clientX ?? 0,
         y: orig?.clientY ?? 0,
       });
@@ -87,22 +98,40 @@ export function GraphCanvas({
       setTooltip(null);
     });
 
-    const resizeObs = new ResizeObserver(() => {
-      cy.resize();
+    // When the user grabs a node, reheat the simulation so neighbors respond.
+    cy.on("grab", "node", () => {
+      const layout = layoutRef.current;
+      if (layout && typeof layout.reheat === "function") {
+        layout.reheat();
+      }
     });
+
+    const resizeObs = new ResizeObserver(() => cy.resize());
     resizeObs.observe(container);
 
     return () => {
       resizeObs.disconnect();
+      try {
+        layoutRef.current?.stop?.();
+      } catch {
+        /* ignore */
+      }
       cy.destroy();
       cyRef.current = null;
     };
   }, []);
 
-  // Replace elements + re-layout when the snapshot changes
+  // Replace elements + start a fresh d3-force simulation on snapshot change.
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy || !snapshot) return;
+
+    // Stop any running layout before mutating elements
+    try {
+      layoutRef.current?.stop?.();
+    } catch {
+      /* ignore */
+    }
 
     const elements: ElementDefinition[] = [];
     for (const n of snapshot.nodes) {
@@ -132,23 +161,78 @@ export function GraphCanvas({
       cy.add(elements);
     });
 
-    cy.layout({
-      name: "cose",
-      animate: false,
+    // Start a d3-force simulation. Tuned for subtle, calm motion — lower
+    // starting energy + faster decay + heavy friction so nodes settle
+    // quickly and only twitch a little when neighbors are dragged.
+    const layout = cy.layout({
+      name: "d3-force",
+      animate: true,
+      fit: false,
       randomize: true,
-      idealEdgeLength: 80,
-      nodeRepulsion: () => 8000,
-      gravity: 0.25,
-      numIter: 400,
-    } as cytoscape.LayoutOptions).run();
+      fixedAfterDragging: false,
+      // forces — gentler
+      linkId: (d: { id: string }) => d.id,
+      linkDistance: 60,
+      manyBodyStrength: -90,
+      collideRadius: 18,
+      // simulation — settle fast, dampen wobble
+      alpha: 0.6,
+      alphaDecay: 0.04,
+      alphaMin: 0.001,
+      velocityDecay: 0.7,
+      infinite: false,
+    } as cytoscape.LayoutOptions);
+    layoutRef.current = layout;
 
-    requestAnimationFrame(() => {
+    layout.run();
+
+    // Keep the graph centered while the d3-force simulation settles.
+    // The forces spread nodes outward over ~3s; a single fit() right after
+    // layoutready catches them mid-flight and they drift off-screen as the
+    // simulation expands. So we re-fit on a short interval until the user
+    // touches the canvas.
+    const fit = () => {
       cy.resize();
-      cy.fit(undefined, 32);
+      cy.fit(undefined, 40);
+      cy.center();
+    };
+    requestAnimationFrame(fit);
+
+    const refitInterval = window.setInterval(fit, 200);
+    const stopRefitTimer = window.setTimeout(
+      () => window.clearInterval(refitInterval),
+      2200
+    );
+
+    // Stop auto-fitting as soon as the user touches the canvas.
+    const onUserInteract = () => {
+      window.clearInterval(refitInterval);
+      window.clearTimeout(stopRefitTimer);
+    };
+    const containerEl = containerRef.current;
+    containerEl?.addEventListener("mousedown", onUserInteract);
+    containerEl?.addEventListener("wheel", onUserInteract, { passive: true });
+    containerEl?.addEventListener("touchstart", onUserInteract, {
+      passive: true,
     });
+
+    return () => {
+      window.clearInterval(refitInterval);
+      window.clearTimeout(stopRefitTimer);
+      containerEl?.removeEventListener("mousedown", onUserInteract);
+      containerEl?.removeEventListener("wheel", onUserInteract);
+      containerEl?.removeEventListener("touchstart", onUserInteract);
+    };
   }, [snapshot]);
 
-  // Apply filters (no re-layout) when filters change
+  // Swap the Cytoscape stylesheet when the theme changes.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy) return;
+    cy.style(makeGraphStyles(isDark) as cytoscape.StylesheetJson).update();
+  }, [isDark]);
+
+  // Apply filters (no relayout)
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy) return;
@@ -173,7 +257,7 @@ export function GraphCanvas({
     });
   }, [filters]);
 
-  // Focus a node: highlight its neighborhood, dim everything else
+  // Focus a node: highlight + animate viewport
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy) return;
@@ -208,11 +292,11 @@ export function GraphCanvas({
       <div
         ref={containerRef}
         style={{ width: "100%", height: "100%", position: "absolute", inset: 0 }}
-        className="bg-zinc-950"
+        className="bg-background"
       />
       {tooltip && (
         <div
-          className="fixed z-50 pointer-events-none rounded-md border border-zinc-700 bg-zinc-900/95 px-2.5 py-1.5 text-xs text-zinc-100 font-mono shadow-lg backdrop-blur"
+          className="pointer-events-none fixed z-50 rounded-md border border-border bg-popover/95 px-2.5 py-1.5 font-mono text-xs text-popover-foreground shadow-lg backdrop-blur"
           style={{
             left: tooltip.x + 14,
             top: tooltip.y + 14,

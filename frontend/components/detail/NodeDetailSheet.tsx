@@ -48,8 +48,8 @@ export function NodeDetailSheet({
       aria-label="Node details"
       className={cn(
         "fixed right-0 top-0 bottom-0 z-40 w-full sm:max-w-md",
-        "bg-zinc-950 border-l border-zinc-800 text-zinc-100",
-        "shadow-2xl shadow-black/50",
+        "border-l border-border bg-background text-foreground",
+        "shadow-2xl shadow-black/30 dark:shadow-black/60",
         "transition-transform duration-200 ease-out",
         open ? "translate-x-0" : "translate-x-full pointer-events-none"
       )}
@@ -57,11 +57,11 @@ export function NodeDetailSheet({
       {data ? (
         <div className="flex h-full flex-col">
           {/* Header */}
-          <div className="flex items-start justify-between gap-3 px-6 pt-6 pb-4 border-b border-zinc-900">
+          <div className="flex items-start justify-between gap-3 border-b border-border px-6 pb-4 pt-6">
             <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2 mb-2">
+              <div className="mb-2 flex items-center gap-2">
                 <span
-                  className="inline-block w-3 h-3 rounded-full"
+                  className="inline-block h-3 w-3 rounded-full"
                   style={{
                     backgroundColor:
                       ENTITY_COLORS[data.node.type] ?? "#71717a",
@@ -69,15 +69,15 @@ export function NodeDetailSheet({
                 />
                 <Badge
                   variant="secondary"
-                  className="font-mono text-[10px] bg-zinc-900 text-zinc-300 border border-zinc-800"
+                  className="border border-border bg-muted font-mono text-[10px] text-muted-foreground"
                 >
                   {data.node.type}
                 </Badge>
               </div>
-              <h2 className="text-lg font-semibold leading-tight break-words">
+              <h2 className="break-words text-lg font-semibold leading-tight">
                 {data.node.id}
               </h2>
-              <p className="mt-1 text-xs text-zinc-400 font-mono">
+              <p className="mt-1 font-mono text-xs text-muted-foreground">
                 {snapshot?.month}  ·  degree {data.node.degree}  ·{" "}
                 {data.outgoing.length} out / {data.incoming.length} in
               </p>
@@ -86,7 +86,7 @@ export function NodeDetailSheet({
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="shrink-0 rounded p-1 text-zinc-400 hover:bg-zinc-900 hover:text-zinc-100 transition"
+              className="shrink-0 rounded p-1 text-muted-foreground transition hover:bg-accent hover:text-foreground"
             >
               <X className="h-4 w-4" />
             </button>
@@ -94,26 +94,26 @@ export function NodeDetailSheet({
 
           {/* Body */}
           <ScrollArea className="flex-1">
-            <div className="px-6 py-4 space-y-5 pb-12">
+            <div className="space-y-5 px-6 py-4 pb-12">
               {data.outgoing.length > 0 && (
                 <section>
-                  <h3 className="text-[10px] uppercase tracking-wider font-mono text-zinc-500 mb-2">
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
                     Outgoing ({data.outgoing.length})
                   </h3>
                   <ul className="space-y-1.5">
                     {data.outgoing.map((e) => (
                       <li
                         key={e.id}
-                        className="text-xs leading-relaxed text-zinc-300"
+                        className="text-xs leading-relaxed"
                       >
-                        <span className="text-zinc-500">→</span>{" "}
-                        <span className="text-zinc-200">{e.rel}</span>{" "}
-                        <span className="text-zinc-600">·</span>{" "}
-                        <span className="font-medium text-zinc-100 break-words">
+                        <span className="text-muted-foreground">→</span>{" "}
+                        <span>{e.rel}</span>{" "}
+                        <span className="text-muted-foreground">·</span>{" "}
+                        <span className="break-words font-medium">
                           {e.target}
                         </span>
                         {e.weight > 1 && (
-                          <span className="ml-1 text-[10px] text-zinc-500 font-mono">
+                          <span className="ml-1 font-mono text-[10px] text-muted-foreground">
                             ×{e.weight}
                           </span>
                         )}
@@ -123,27 +123,27 @@ export function NodeDetailSheet({
                 </section>
               )}
               {data.outgoing.length > 0 && data.incoming.length > 0 && (
-                <Separator className="bg-zinc-900" />
+                <Separator />
               )}
               {data.incoming.length > 0 && (
                 <section>
-                  <h3 className="text-[10px] uppercase tracking-wider font-mono text-zinc-500 mb-2">
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
                     Incoming ({data.incoming.length})
                   </h3>
                   <ul className="space-y-1.5">
                     {data.incoming.map((e) => (
                       <li
                         key={e.id}
-                        className="text-xs leading-relaxed text-zinc-300"
+                        className="text-xs leading-relaxed"
                       >
-                        <span className="text-zinc-500">←</span>{" "}
-                        <span className="font-medium text-zinc-100 break-words">
+                        <span className="text-muted-foreground">←</span>{" "}
+                        <span className="break-words font-medium">
                           {e.source}
                         </span>{" "}
-                        <span className="text-zinc-600">·</span>{" "}
-                        <span className="text-zinc-200">{e.rel}</span>
+                        <span className="text-muted-foreground">·</span>{" "}
+                        <span>{e.rel}</span>
                         {e.weight > 1 && (
-                          <span className="ml-1 text-[10px] text-zinc-500 font-mono">
+                          <span className="ml-1 font-mono text-[10px] text-muted-foreground">
                             ×{e.weight}
                           </span>
                         )}
@@ -153,7 +153,7 @@ export function NodeDetailSheet({
                 </section>
               )}
               {data.outgoing.length === 0 && data.incoming.length === 0 && (
-                <p className="text-xs text-zinc-500 italic">
+                <p className="text-xs italic text-muted-foreground">
                   No relationships in this month.
                 </p>
               )}
