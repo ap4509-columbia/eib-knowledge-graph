@@ -55,13 +55,22 @@ export const graphStyles: StylesheetJson = [
   {
     selector: "edge",
     style: {
-      "width": 1,
+      "width": ("mapData(weight, 1, 15, 0.6, 4)" as unknown) as number,
       "line-color": "#3f3f46",
       "curve-style": "bezier",
       "target-arrow-color": "#3f3f46",
       "target-arrow-shape": "triangle",
       "arrow-scale": 0.6,
-      "opacity": 0.6,
+      "opacity": 0.55,
+    },
+  },
+  {
+    selector: "edge.hovered",
+    style: {
+      "line-color": "#a1a1aa",
+      "target-arrow-color": "#a1a1aa",
+      "opacity": 1,
+      "z-index": 99,
     },
   },
   // edges with a GAT score render brighter and thicker
