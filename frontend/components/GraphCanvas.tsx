@@ -120,6 +120,7 @@ export function GraphCanvas({
           target: e.target,
           rel: e.rel,
           rel_cat: e.rel_cat,
+          polarity: e.polarity,
           score: e.score ?? undefined,
           weight: e.weight,
         },
@@ -172,20 +173,31 @@ export function GraphCanvas({
     });
   }, [filters]);
 
-  // Focus a node
+  // Focus a node: highlight its neighborhood, dim everything else
   useEffect(() => {
     const cy = cyRef.current;
-    if (!cy || !focusedNodeId) {
-      cy?.elements().unselect();
-      return;
-    }
+    if (!cy) return;
+
+    cy.batch(() => {
+      cy.elements().removeClass("dimmed highlighted focused");
+    });
+    cy.elements().unselect();
+
+    if (!focusedNodeId) return;
     const node = cy.getElementById(focusedNodeId);
     if (node.empty()) return;
 
-    cy.elements().unselect();
-    node.select();
+    const neighborhood = node.closedNeighborhood();
+    const others = cy.elements().difference(neighborhood);
+
+    cy.batch(() => {
+      others.addClass("dimmed");
+      neighborhood.addClass("highlighted");
+      node.addClass("focused");
+    });
+
     cy.animate({
-      fit: { eles: node.closedNeighborhood(), padding: 80 },
+      fit: { eles: neighborhood, padding: 80 },
       duration: 400,
       easing: "ease-in-out",
     });

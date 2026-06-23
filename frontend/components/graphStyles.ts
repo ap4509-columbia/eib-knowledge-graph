@@ -56,12 +56,29 @@ export const graphStyles: StylesheetJson = [
     selector: "edge",
     style: {
       "width": ("mapData(weight, 1, 15, 0.6, 4)" as unknown) as number,
-      "line-color": "#3f3f46",
+      "line-color": "#52525b",
       "curve-style": "bezier",
-      "target-arrow-color": "#3f3f46",
+      "target-arrow-color": "#52525b",
       "target-arrow-shape": "triangle",
       "arrow-scale": 0.6,
-      "opacity": 0.55,
+      "opacity": 0.45,
+    },
+  },
+  // Polarity coloring: bullish (green), bearish (red), neutral (gray)
+  {
+    selector: 'edge[polarity = "positive"]',
+    style: {
+      "line-color": "#22c55e",
+      "target-arrow-color": "#22c55e",
+      "opacity": 0.7,
+    },
+  },
+  {
+    selector: 'edge[polarity = "negative"]',
+    style: {
+      "line-color": "#ef4444",
+      "target-arrow-color": "#ef4444",
+      "opacity": 0.75,
     },
   },
   {
@@ -96,6 +113,39 @@ export const graphStyles: StylesheetJson = [
       "line-color": "#fafafa",
       "target-arrow-color": "#fafafa",
       "opacity": 1,
+    },
+  },
+  // ── Focus mode: dim everything outside the selected neighborhood ──
+  {
+    selector: ".dimmed",
+    style: {
+      "opacity": 0.08,
+    },
+  },
+  {
+    selector: "node.highlighted",
+    style: {
+      "border-width": 3,
+      "border-color": "#fafafa",
+      "z-index": 99,
+    },
+  },
+  {
+    selector: "node.focused",
+    style: {
+      "border-width": 4,
+      "border-color": "#fafafa",
+      "z-index": 100,
+    },
+  },
+  {
+    selector: "edge.highlighted",
+    style: {
+      "line-color": "#fafafa",
+      "target-arrow-color": "#fafafa",
+      "opacity": 1,
+      "width": ("mapData(weight, 1, 15, 1.5, 5)" as unknown) as number,
+      "z-index": 99,
     },
   },
 ];

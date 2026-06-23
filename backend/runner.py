@@ -73,6 +73,89 @@ def _norm(s, default: str = "UNK") -> str:
     return s
 
 
+# ── Polarity classification ────────────────────────────────────────────
+# Keyword lists. Matched case-insensitively against the relation verb.
+
+_NEGATIVE_KEYWORDS = (
+    "negative impact",
+    "decrease",
+    "decline",
+    "drop",
+    "fall",
+    "miss",
+    "cut",
+    "lose",
+    "loss",
+    "lost",
+    "weak",
+    "underperform",
+    "downgrade",
+    "lower",
+    "sue",
+    "fine",
+    "restrict",
+    "ban",
+    "warn",
+    "concern",
+    "fear",
+    "doubt",
+    "delay",
+    "halt",
+    "fail",
+    "below",
+    "default",
+    "bankrupt",
+    "deteriorat",
+    "shrink",
+    "slow",
+)
+
+_POSITIVE_KEYWORDS = (
+    "positive impact",
+    "increase",
+    "rise",
+    "grow",
+    "gain",
+    "surge",
+    "rally",
+    "jump",
+    "beat",
+    "surpass",
+    "exceed",
+    "outperform",
+    "upgrade",
+    "raise",
+    "boost",
+    "expand",
+    "acquire",
+    "partner",
+    "launch",
+    "innovat",
+    "lead",
+    "announce",  # often-positive in finance news (announcements skew bullish)
+    "approve",
+    "accelerat",
+    "strong",
+    "recover",
+    "improve",
+    "support",
+)
+
+
+def _classify_polarity(rel: str) -> str:
+    """Classify a relation verb into 'negative' / 'neutral' / 'positive'."""
+    if not rel:
+        return "neutral"
+    r = rel.lower()
+    has_neg = any(kw in r for kw in _NEGATIVE_KEYWORDS)
+    has_pos = any(kw in r for kw in _POSITIVE_KEYWORDS)
+    if has_neg and not has_pos:
+        return "negative"
+    if has_pos and not has_neg:
+        return "positive"
+    return "neutral"
+
+
 # ── Snapshot builder ───────────────────────────────────────────────────
 
 def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
@@ -130,6 +213,7 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
                 "target": obj,
                 "rel": rel,
                 "rel_cat": rel_cat,
+                "polarity": _classify_polarity(rel),
                 "weight": w,
                 "score": None,  # GAT scoring added later
             }

@@ -38,12 +38,15 @@ export interface NodeJson {
   degree: number;
 }
 
+export type Polarity = "negative" | "neutral" | "positive";
+
 export interface EdgeJson {
   id: string;
   source: string;
   target: string;
   rel: string;
   rel_cat: RelCategory | string;
+  polarity: Polarity;
   weight: number;
   score: number | null;
 }
