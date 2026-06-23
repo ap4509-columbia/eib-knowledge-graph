@@ -13,6 +13,8 @@ Run with:
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
+from runner import get_index, get_snapshot, run as runner_run
+
 app = FastAPI(title="EIB Knowledge Graph backend", version="0.1.0")
 
 app.add_middleware(
@@ -37,26 +39,28 @@ def health():
     return {"status": "healthy"}
 
 
-# ── Stubs — implemented in Session 3 ─────────────────────────────────
+# ── Real endpoints ─────────────────────────────────────────────────────
+
 
 @app.get("/api/index")
 def index():
-    """List available months and which ones have GAT scores."""
-    return {
-        "months": [],
-        "latest": None,
-        "hasScores": [],
-        "note": "stub — implement in session 3",
-    }
+    """Manifest of available months."""
+    return get_index()
 
 
 @app.get("/api/snapshot/{month}")
 def snapshot(month: str):
-    """Return the graph for a specific month."""
-    raise HTTPException(status_code=501, detail="stub — implement in session 3")
+    """Graph data for a specific month."""
+    snap = get_snapshot(month)
+    if snap is None:
+        raise HTTPException(status_code=404, detail=f"No snapshot for month {month}")
+    return snap
 
 
 @app.post("/api/run")
 def run():
-    """Trigger the runner to refresh data from source CSVs."""
-    raise HTTPException(status_code=501, detail="stub — implement in session 3")
+    """Re-run the runner against the source CSV. Returns the new index + timing."""
+    try:
+        return runner_run()
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=500, detail=str(e))
