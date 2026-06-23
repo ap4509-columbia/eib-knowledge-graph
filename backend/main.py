@@ -27,10 +27,9 @@ app = FastAPI(title="EIB Knowledge Graph backend", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://localhost:3000",
-    ],
+    # Public read-only API — allow any origin. The Vercel preview URL changes
+    # per deploy, so a strict allowlist would mean editing this on every push.
+    allow_origin_regex=r"https?://(localhost(:\d+)?|.*\.vercel\.app|.*\.ngrok-free\.(app|dev))",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

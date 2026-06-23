@@ -4,6 +4,10 @@ import { API_BASE_URL } from "@/lib/config";
 import { getApiKey, getModel, getProvider } from "@/lib/settings";
 import type { Index, Snapshot } from "./types";
 
+// ngrok's free tier shows an HTML interstitial on first browser visit; this
+// header tells ngrok to skip it for our XHR/fetch requests.
+const NGROK_BYPASS = { "ngrok-skip-browser-warning": "1" } as const;
+
 class ApiError extends Error {
   status: number;
   constructor(status: number, message: string) {
@@ -36,13 +40,17 @@ async function jsonOrThrow<T>(res: Response): Promise<T> {
 }
 
 export async function fetchIndex(): Promise<Index> {
-  const res = await fetch(`${API_BASE_URL}/api/index`, { cache: "no-store" });
+  const res = await fetch(`${API_BASE_URL}/api/index`, {
+    cache: "no-store",
+    headers: { ...NGROK_BYPASS },
+  });
   return jsonOrThrow<Index>(res);
 }
 
 export async function fetchSnapshot(month: string): Promise<Snapshot> {
   const res = await fetch(`${API_BASE_URL}/api/snapshot/${month}`, {
     cache: "no-store",
+    headers: { ...NGROK_BYPASS },
   });
   return jsonOrThrow<Snapshot>(res);
 }
@@ -51,6 +59,7 @@ export async function runPipeline(): Promise<Index> {
   const res = await fetch(`${API_BASE_URL}/api/run`, {
     method: "POST",
     cache: "no-store",
+    headers: { ...NGROK_BYPASS },
   });
   return jsonOrThrow<Index>(res);
 }
@@ -104,7 +113,7 @@ export async function searchArticles(
 ): Promise<SearchResponse> {
   const res = await fetch(`${API_BASE_URL}/api/search`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...NGROK_BYPASS },
     body: JSON.stringify(req),
     cache: "no-store",
   });
@@ -112,7 +121,10 @@ export async function searchArticles(
 }
 
 export async function sendChat(req: ChatRequest): Promise<ChatResponse> {
-  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+    ...NGROK_BYPASS,
+  };
   const provider = getProvider();
   const model = getModel(provider);
   const apiKey = getApiKey(provider);
