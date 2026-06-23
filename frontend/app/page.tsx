@@ -7,6 +7,7 @@ import {
   RefreshCw,
   AlertCircle,
   Search as SearchIcon,
+  Sparkles,
 } from "lucide-react";
 
 import { fetchIndex, fetchSnapshot, runPipeline } from "@/lib/api/client";
@@ -15,6 +16,7 @@ import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
 import { NodeDetailSheet } from "@/components/detail/NodeDetailSheet";
+import { ChatPanel } from "@/components/chat/ChatPanel";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
@@ -37,6 +39,7 @@ export default function Home() {
 
   // Interaction state
   const [searchOpen, setSearchOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
   const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
   const filtersInitializedRef = useRef(false);
 
@@ -293,6 +296,27 @@ export default function Home() {
         snapshot={snapshot}
         onClose={() => setFocusedNodeId(null)}
       />
+      <ChatPanel
+        open={chatOpen}
+        onOpenChange={setChatOpen}
+        month={currentMonth}
+        focusedEntity={focusedNodeId}
+      />
+
+      {/* Floating chat trigger — clearly AI-branded */}
+      {!chatOpen && (
+        <button
+          type="button"
+          onClick={() => setChatOpen(true)}
+          aria-label="Ask AI about the knowledge graph"
+          className="group fixed bottom-24 right-6 z-30 flex items-center gap-2 rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 via-fuchsia-600/25 to-blue-600/30 px-4 py-2.5 text-sm font-medium text-zinc-100 shadow-lg shadow-purple-500/30 backdrop-blur-xl transition hover:from-purple-600/40 hover:via-fuchsia-600/35 hover:to-blue-600/40 hover:shadow-purple-500/40"
+        >
+          <Sparkles className="h-4 w-4 text-purple-300 transition group-hover:text-purple-200" />
+          <span className="bg-gradient-to-r from-purple-200 via-fuchsia-200 to-blue-200 bg-clip-text text-transparent font-semibold">
+            Ask AI
+          </span>
+        </button>
+      )}
     </>
   );
 }

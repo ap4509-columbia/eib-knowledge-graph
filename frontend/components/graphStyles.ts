@@ -141,11 +141,31 @@ export const graphStyles: StylesheetJson = [
   {
     selector: "edge.highlighted",
     style: {
-      "line-color": "#fafafa",
-      "target-arrow-color": "#fafafa",
       "opacity": 1,
       "width": ("mapData(weight, 1, 15, 1.5, 5)" as unknown) as number,
       "z-index": 99,
+    },
+  },
+  // Brighter polarity colors when highlighted (so green/red stay green/red)
+  {
+    selector: 'edge.highlighted[polarity = "positive"]',
+    style: {
+      "line-color": "#4ade80", // green-400
+      "target-arrow-color": "#4ade80",
+    },
+  },
+  {
+    selector: 'edge.highlighted[polarity = "negative"]',
+    style: {
+      "line-color": "#f87171", // red-400
+      "target-arrow-color": "#f87171",
+    },
+  },
+  {
+    selector: 'edge.highlighted[polarity = "neutral"]',
+    style: {
+      "line-color": "#d4d4d8", // zinc-300
+      "target-arrow-color": "#d4d4d8",
     },
   },
 ];

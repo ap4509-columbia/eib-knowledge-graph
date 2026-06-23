@@ -1,6 +1,7 @@
 // Typed fetch wrappers around the FastAPI backend.
 
 import { API_BASE_URL } from "@/lib/config";
+import { getApiKey } from "@/lib/settings";
 import type { Index, Snapshot } from "./types";
 
 class ApiError extends Error {
@@ -37,6 +38,39 @@ export async function runPipeline(): Promise<Index> {
     cache: "no-store",
   });
   return jsonOrThrow<Index>(res);
+}
+
+export interface ChatRequest {
+  query: string;
+  month?: string;
+  focused_entity?: string;
+}
+
+export interface ChatSource {
+  title: string;
+  ticker: string;
+  date: string;
+  url: string;
+}
+
+export interface ChatResponse {
+  answer: string;
+  sources: ChatSource[];
+  model: string;
+}
+
+export async function sendChat(req: ChatRequest): Promise<ChatResponse> {
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  const apiKey = getApiKey();
+  if (apiKey) headers["X-Gemini-Api-Key"] = apiKey;
+
+  const res = await fetch(`${API_BASE_URL}/api/chat`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(req),
+    cache: "no-store",
+  });
+  return jsonOrThrow<ChatResponse>(res);
 }
 
 export { ApiError };

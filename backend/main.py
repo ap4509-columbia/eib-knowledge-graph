@@ -10,10 +10,13 @@ Run with:
     uvicorn main:app --reload --port 8000
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import Optional
 
 from runner import get_index, get_snapshot, run as runner_run
+from chat import chat as chat_fn, ChatNotConfigured
 
 app = FastAPI(title="EIB Knowledge Graph backend", version="0.1.0")
 
@@ -64,3 +67,33 @@ def run():
         return runner_run()
     except FileNotFoundError as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+class ChatRequest(BaseModel):
+    query: str
+    month: Optional[str] = None
+    focused_entity: Optional[str] = None
+
+
+@app.post("/api/chat")
+def chat_endpoint(
+    req: ChatRequest,
+    x_gemini_api_key: Optional[str] = Header(default=None),
+):
+    """Ask the LLM about the knowledge graph. Retrieves relevant article summaries.
+
+    The Gemini API key can be supplied via:
+      1. GEMINI_API_KEY env var on the backend, or
+      2. X-Gemini-Api-Key request header (set by the frontend Settings dialog).
+    """
+    try:
+        return chat_fn(
+            query=req.query,
+            month=req.month,
+            focused_entity=req.focused_entity,
+            api_key=x_gemini_api_key,
+        )
+    except ChatNotConfigured as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Chat failed: {e}")
