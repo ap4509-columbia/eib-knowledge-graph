@@ -21,21 +21,29 @@ eib-knowledge-graph/
   .gitignore
 ```
 
-## Quick start (once scaffolded)
+## Quick start (any teammate's laptop)
+
+**One command:**
 
 ```bash
-# Backend
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-# Frontend (in a separate terminal)
-cd frontend
-npm install
-npm run dev
+git clone https://github.com/ap4509-columbia/eib-knowledge-graph
+cd eib-knowledge-graph
+./dev.sh
 ```
 
-Frontend runs on `localhost:3000`; backend on `localhost:8000`.
+Then open **http://localhost:3000**.
+
+The first run installs Python + Node deps (~2 minutes) and creates a venv in
+`backend/.venv`. Subsequent runs skip setup and boot in seconds. Ctrl-C in the
+terminal stops both servers.
+
+**Requirements:** Python 3.10+ and Node 20+ on `PATH`. On macOS:
+`brew install python node`.
+
+The repo includes cached snapshot JSONs (`backend/data/`), so the app works
+out of the box without the source CSV. The `/api/run` "refresh data" endpoint
+will only succeed for whoever has the source CSV at the expected path
+(see `backend/runner.py`).
 
 ## Architecture
 
