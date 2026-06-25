@@ -10,7 +10,12 @@ import {
   FileSearch,
 } from "lucide-react";
 
-import { fetchIndex, fetchSnapshot, runPipeline } from "@/lib/api/client";
+import {
+  fetchIndex,
+  fetchSnapshot,
+  runPipeline,
+  HAS_BACKEND,
+} from "@/lib/api/client";
 import type { Index, Snapshot } from "@/lib/api/types";
 import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
@@ -239,19 +244,24 @@ export default function Home() {
                 ⌘K
               </kbd>
             </button>
-            <button
-              type="button"
-              onClick={handleRefresh}
-              disabled={running || loading}
-              className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {running ? (
-                <Loader2 className="h-3.5 w-3.5 animate-spin" />
-              ) : (
-                <RefreshCw className="h-3.5 w-3.5" />
-              )}
-              {running ? "Refreshing…" : "Refresh"}
-            </button>
+            {/* Refresh button only appears when a backend is wired in
+                (NEXT_PUBLIC_API_BASE_URL set). The static Vercel build
+                hides it since /api/run has no destination there. */}
+            {HAS_BACKEND && (
+              <button
+                type="button"
+                onClick={handleRefresh}
+                disabled={running || loading}
+                className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {running ? (
+                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                ) : (
+                  <RefreshCw className="h-3.5 w-3.5" />
+                )}
+                {running ? "Refreshing…" : "Refresh"}
+              </button>
+            )}
             <ThemeToggle />
           </div>
         </header>

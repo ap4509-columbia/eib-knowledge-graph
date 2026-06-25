@@ -38,10 +38,21 @@ _DEFAULT_SOURCE = (
 )
 SOURCE_CSV = Path(os.environ.get("SOURCE_CSV", _DEFAULT_SOURCE))
 
-# Output directory (consumed by the API). Cleared and rewritten on every run.
+# Output directory (consumed by the local API). Cleared and rewritten on every run.
 OUT_DIR = _BACKEND_DIR / "data"
 SNAPSHOTS_DIR = OUT_DIR / "snapshots"
 INDEX_FILE = OUT_DIR / "index.json"
+
+# Mirror output for static-only Vercel deploys. Same files served straight
+# from the CDN with no backend at runtime.
+_FRONTEND_PUBLIC = _BACKEND_DIR.parent / "frontend" / "public" / "data"
+PUBLIC_SNAPSHOTS_DIR = _FRONTEND_PUBLIC / "snapshots"
+PUBLIC_ARTICLES_DIR = _FRONTEND_PUBLIC / "articles"
+PUBLIC_INDEX_FILE = _FRONTEND_PUBLIC / "index.json"
+
+# How much of each article summary to bundle for client-side keyword search.
+# Matches the backend's previous truncation length so search behavior is identical.
+_ARTICLE_SUMMARY_CHARS = 600
 
 
 # ── Parsing helpers ────────────────────────────────────────────────────
@@ -234,12 +245,43 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
     return snapshots
 
 
+def _build_articles_by_month(source_csv: Path) -> dict[str, list[dict]]:
+    """Slim per-month article corpus for client-side search.
+    Keeps only fields the search needs (date/title/ticker/url/summary).
+    """
+    df = pd.read_csv(source_csv, low_memory=False)
+    df["date"] = pd.to_datetime(df["date"], errors="coerce", utc=True)
+    df = df.dropna(subset=["date"])
+    df["month"] = df["date"].dt.to_period("M").astype(str)
+
+    out: dict[str, list[dict]] = {}
+    for month, month_df in df.groupby("month"):
+        rows = []
+        for _, row in month_df.iterrows():
+            summary = (row.get("summary") or "")
+            if not isinstance(summary, str):
+                summary = ""
+            rows.append(
+                {
+                    "date": str(row["date"].date()),
+                    "title": _norm(row.get("title"), default=""),
+                    "ticker": _norm(row.get("ticker"), default=""),
+                    "url": (row.get("url") or "") if isinstance(row.get("url"), str) else "",
+                    "summary": summary[:_ARTICLE_SUMMARY_CHARS],
+                }
+            )
+        out[month] = rows
+    return out
+
+
 def write_outputs(snapshots: dict[str, dict]) -> dict:
-    """Write per-month JSON + the index manifest."""
+    """Write per-month snapshot JSONs, the index manifest, and the per-month
+    article corpus. Writes to both the backend cache and the frontend's
+    public/data tree so Vercel can serve everything as static files.
+    """
+    # ── Backend cache (consumed by /api/* endpoints when running locally) ──
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Clear stale snapshots
     for old in SNAPSHOTS_DIR.glob("*.json"):
         old.unlink()
 
@@ -251,11 +293,32 @@ def write_outputs(snapshots: dict[str, dict]) -> dict:
     index = {
         "months": months,
         "latest": months[-1] if months else None,
-        "hasScores": [],  # populated when GAT scoring is wired in
+        "hasScores": [],
         "source": str(SOURCE_CSV),
     }
     with open(INDEX_FILE, "w") as f:
         json.dump(index, f, indent=2)
+
+    # ── Frontend public mirror (consumed at runtime on Vercel) ─────────────
+    PUBLIC_SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
+    PUBLIC_ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
+    for old in PUBLIC_SNAPSHOTS_DIR.glob("*.json"):
+        old.unlink()
+    for old in PUBLIC_ARTICLES_DIR.glob("*.json"):
+        old.unlink()
+
+    for month in months:
+        with open(PUBLIC_SNAPSHOTS_DIR / f"{month}.json", "w") as f:
+            json.dump(snapshots[month], f)
+    with open(PUBLIC_INDEX_FILE, "w") as f:
+        json.dump(index, f, indent=2)
+
+    # Article corpus for client-side search
+    articles_by_month = _build_articles_by_month(SOURCE_CSV)
+    for month, rows in articles_by_month.items():
+        with open(PUBLIC_ARTICLES_DIR / f"{month}.json", "w") as f:
+            json.dump(rows, f)
+
     return index
 
 
