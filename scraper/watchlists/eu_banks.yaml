@@ -1,0 +1,22 @@
+corpus: eu_banks
+description: European banks — high EIB-relevance for lending and financial-stability analysis.
+
+sources:
+  - google_news
+  - yahoo_finance
+
+tickers:
+  - BNP.PA       # BNP Paribas (Paris)
+  - SAN.MC       # Santander (Madrid)
+  - DBK.DE       # Deutsche Bank (XETRA)
+  - INGA.AS      # ING (Amsterdam)
+  - UCG.MI       # UniCredit (Milan)
+  - ISP.MI       # Intesa Sanpaolo (Milan)
+  - CS.PA        # AXA (Paris)
+  - HSBA.L       # HSBC (London)
+  - BARC.L       # Barclays (London)
+  - LLOY.L       # Lloyds (London)
+  - CBK.DE       # Commerzbank (XETRA)
+  - SAB.MC       # Sabadell (Madrid)
+  - BBVA.MC      # BBVA (Madrid)
+  - GLE.PA       # Société Générale (Paris)

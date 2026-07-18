@@ -1,0 +1,27 @@
+corpus: eu_utilities
+description: European utility companies EIB frequently lends to.
+
+sources:
+  - google_news
+  - yahoo_finance
+
+tickers:
+  - IBE.MC       # Iberdrola (Madrid)
+  - ENEL.MI      # Enel (Milan)
+  - EDF.PA       # EDF (Paris) — largely delisted, keep for historical
+  - RWE.DE       # RWE (XETRA)
+  - ENGI.PA      # Engie (Paris)
+  - EOAN.DE      # E.ON (XETRA)
+  - SSE.L        # SSE (London)
+  - VER.VI       # Verbund (Vienna)
+  - NG.L         # National Grid (London)
+  - ORSTED.CO    # Ørsted (Copenhagen)
+  - EDPR.LS      # EDP Renováveis (Lisbon)
+  - FORTUM.HE    # Fortum (Helsinki)
+
+# Google News queries in local languages for broader European coverage
+extra_google_queries:
+  region: DE
+  terms:
+    - Energiewende
+    - EU renewable energy

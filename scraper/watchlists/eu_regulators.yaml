@@ -1,0 +1,13 @@
+corpus: eu_regulators
+description: Institutional / regulatory feeds. Low volume, high signal, authoritative.
+
+sources:
+  - rss_feeds
+
+# No tickers — pure RSS. Only feeds verified to return live entries.
+# EIB + Council of EU RSS endpoints are currently stale — omitted;
+# revisit later if they publish a working feed URL.
+rss_feeds:
+  - https://www.ecb.europa.eu/rss/press.html         # ECB press releases + interviews (~15 entries)
+  - https://www.esma.europa.eu/rss.xml               # ESMA (~10 entries)
+  - https://www.bankofengland.co.uk/rss/news         # Bank of England (~50 entries)

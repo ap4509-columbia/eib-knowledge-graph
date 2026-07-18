@@ -1,0 +1,469 @@
+corpus: stoxx_europe_600
+description: STOXX Europe 600 constituents with Yahoo Finance exchange suffixes (auto-generated from Wikipedia on 2026-07-18).
+
+sources:
+  - google_news
+  - yahoo_finance
+
+# 439 tickers sorted by country, then ticker.
+# Regenerate with: python scraper/build_stoxx600_watchlist.py
+tickers:
+  # ── Austria ──
+  - AMS.VI        # ams OSRAM · Technology
+  - EBS.VI        # Erste Group · Banks
+  - OMV.VI        # OMV · Energy
+  - RBI.VI        # Raiffeisen Bank International · Banks
+  - VER.VI        # Verbund · Utilities
+  - VIG.VI        # Vienna Insurance Group · Insurance
+  - VOE.VI        # Voestalpine · Basic Resources
+  - WIE.VI        # Wienerberger · Construction and Materials
+  # ── Belgium ──
+  - ABI.BR        # Anheuser-Busch InBev · Food, Beverage and Tobacco
+  - AGS.BR        # Ageas · Insurance
+  - AZE.BR        # Azelis Group · Industrial Goods and Services
+  - BPOST.BR      # Bpost · Industrial Goods and Services
+  - COLR.BR       # Colruyt · Personal Care, Drug and Grocery Stores
+  - DIE.BR        # DIETEREN Group · Automobiles and Parts
+  - KBC.BR        # KBC Group · Banks
+  - MELE.BR       # Melexis · Technology
+  - ONT.BR        # Ontex · Personal Care, Drug and Grocery Stores
+  - PROX.BR       # Proximus · Telecommunications
+  - SOLB.BR       # Solvay · Chemicals
+  - UMI.BR        # Umicore · Chemicals
+  - WDP.BR        # Warehouses De Pauw · Real Estate
+  # ── Bermuda ──
+  - HSX           # Hiscox · Insurance
+  # ── Denmark ──
+  - DEMANT.CO     # Demant · Health Care
+  - FALK.CO       # Falck · Health Care
+  - GN.CO         # GN Store Nord · Health Care
+  - ORSTED.CO     # Ørsted · Utilities
+  - PANDORA.CO    # Pandora · Consumer Products and Services
+  - TRYG.CO       # Tryg · Insurance
+  - VESTAS.CO     # Vestas · Energy
+  # ── Finland ──
+  - ELISA.HE      # Elisa · Telecommunications
+  - FORTUM.HE     # Fortum · Utilities
+  - KNEBV.HE      # Kone · Industrial Goods and Services
+  - METSO.HE      # Metso · Industrial Goods and Services
+  - NOKIA.HE      # Nokia · Technology
+  - NSN.HE        # Neste · Energy
+  - SAMPO.HE      # Sampo Group · Insurance
+  - SANO.HE       # Sanoma · Media
+  - STER.HE       # Stora Enso · Basic Resources
+  - UPM.HE        # UPM-Kymmene · Basic Resources
+  - VALMT.HE      # Valmet · Industrial Goods and Services
+  # ── France ──
+  - AC.PA         # Accor · Travel and Leisure
+  - AF.PA         # Air France-KLM · Travel and Leisure
+  - AIR.PA        # Airbus · Industrial Goods and Services
+  - AIRP.PA       # Air Liquide · Chemicals
+  - AKE.PA        # Arkema · Chemicals
+  - ALO.PA        # Alstom · Industrial Goods and Services
+  - ATOS.PA       # Atos · Technology
+  - BNPP.PA       # BNP Paribas · Banks
+  - BVI.PA        # Bureau Veritas · Industrial Goods and Services
+  - CAGR.PA       # Crédit Agricole · Banks
+  - CAPP.PA       # Capgemini · Technology
+  - CARR.PA       # Carrefour · Retail
+  - CS.PA         # AXA · Insurance
+  - DANO.PA       # Danone · Food, Beverage and Tobacco
+  - DG.PA         # Vinci · Construction and Materials
+  - EDEN.PA       # Edenred · Industrial Goods and Services
+  - EFGI.PA       # Eiffage · Construction and Materials
+  - EN.PA         # Bouygues · Construction and Materials
+  - ENGI.PA       # Engie · Utilities
+  - ESLX.PA       # EssilorLuxottica · Health Care
+  - FR.PA         # Valeo · Automobiles and Parts
+  - FRVIA.PA      # Forvia · Automobiles and Parts
+  - GET.PA        # Getlink · Industrial Goods and Services
+  - GFC.PA        # Gecina · Real Estate
+  - GLE.PA        # Société Générale · Banks
+  - IPN.PA        # Ipsen · Health Care
+  - IPX.PA        # Ipsos · Media
+  - KER.PA        # Kering · Consumer Products and Services
+  - LANV.PA       # Lanvin Group · Consumer Products and Services
+  - LUMI.PA       # Lumibird · Technology
+  - MC.PA         # LVMH · Consumer Products and Services
+  - MICP.PA       # Michelin · Automobiles and Parts
+  - NEOEN.PA      # Neoen · Utilities
+  - NEX.PA        # Nexans · Industrial Goods and Services
+  - OR.PA         # L'Oréal · Personal Care, Drug and Grocery Stores
+  - ORA.PA        # Orange S.A. · Telecommunications
+  - PERP.PA       # Pernod Ricard · Food, Beverage and Tobacco
+  - RCO.PA        # Rémy Cointreau · Food, Beverage and Tobacco
+  - RMS.PA        # Hermès · Consumer Products and Services
+  - RNO.PA        # Renault · Automobiles and Parts
+  - RXL.PA        # Rexel · Industrial Goods and Services
+  - SAF.PA        # Safran · Industrial Goods and Services
+  - SCR.PA        # SCOR SE · Insurance
+  - SGO.PA        # Saint-Gobain · Construction and Materials
+  - SU.PA         # Schneider Electric · Industrial Goods and Services
+  - SW.PA         # Sodexo · Travel and Leisure
+  - TEP.PA        # Teleperformance · Industrial Goods and Services
+  - THL.PA        # Thales · Industrial Goods and Services
+  - TTE.PA        # TotalEnergies · Energy
+  - UBI.PA        # Ubisoft · Consumer Products and Services
+  - URW.PA        # Unibail-Rodamco-Westfield · Real Estate
+  - VCT.PA        # Vicat · Construction and Materials
+  - VIE.PA        # Veolia · Utilities
+  - VIV.PA        # Vivendi · Media
+  - VK.PA         # Vallourec · Basic Resources
+  - WEND.PA       # Wendel · Financial Services
+  - WLN.PA        # Worldline · Industrial Goods and Services
+  # ── Germany ──
+  - 1COV.DE       # Covestro · Chemicals
+  - 8TRA.DE       # Traton · Industrial Goods and Services
+  - ADS.DE        # Adidas · Consumer Products and Services
+  - AFX.DE        # Carl Zeiss Meditec · Health Care
+  - AIXA.DE       # AIXTRON · Technology
+  - ALV.DE        # Allianz · Insurance
+  - ARND.DE       # Aroundtown · Real Estate
+  - BAS.DE        # BASF · Chemicals
+  - BAYN.DE       # Bayer · Health Care
+  - BEI.DE        # Beiersdorf · Consumer Products and Services
+  - BMW.DE        # BMW · Automobiles and Parts
+  - BNR.DE        # Brenntag · Chemicals
+  - BOSS.DE       # Hugo Boss · Consumer Products and Services
+  - CBK.DE        # Commerzbank · Banks
+  - CON.DE        # Continental · Automobiles and Parts
+  - CTS.DE        # CTS Eventim · Media
+  - DB1.DE        # Deutsche Börse · Financial Services
+  - DHER.DE       # Delivery Hero · Retail
+  - DHL.DE        # DHL Group · Industrial Goods and Services
+  - DTE.DE        # Deutsche Telekom · Telecommunications
+  - DTG.DE        # Daimler Truck · Industrial Goods and Services
+  - EOAN.DE       # E.ON · Utilities
+  - EVK.DE        # Evonik Industries · Chemicals
+  - EVT.DE        # Evotec · Health Care
+  - FME.DE        # Fresenius Medical Care · Health Care
+  - FNTN.DE       # Freenet · Telecommunications
+  - FRA.DE        # Rational · Industrial Goods and Services
+  - G1A.DE        # GEA Group · Industrial Goods and Services
+  - G24.DE        # Scout24 · Technology
+  - HEI.DE        # Heidelberg Materials · Construction and Materials
+  - HEN3.DE       # Henkel · Consumer Products and Services
+  - HNR.DE        # Hannover Re · Insurance
+  - IFX.DE        # Infineon Technologies · Technology
+  - LEG.DE        # LEG Immobilien · Real Estate
+  - LHA.DE        # Lufthansa · Travel and Leisure
+  - LXS.DE        # Lanxess · Chemicals
+  - MAN.DE        # MAN SE · Industrial Goods and Services
+  - MBG.DE        # Mercedes-Benz Group · Automobiles and Parts
+  - MOR.DE        # MorphoSys · Health Care
+  - MTX.DE        # MTU Aero Engines · Industrial Goods and Services
+  - MUV2.DE       # Munich Re · Insurance
+  - NEM.DE        # Nemetschek · Technology
+  - P911.DE       # Porsche · Automobiles and Parts
+  - PAH3.DE       # Porsche SE · Automobiles and Parts
+  - PBB.DE        # Deutsche Pfandbriefbank · Banks
+  - PUM.DE        # Puma · Consumer Products and Services
+  - RHM.DE        # Rheinmetall · Industrial Goods and Services
+  - RWE.DE        # RWE · Utilities
+  - SAP.DE        # SAP · Technology
+  - SIE.DE        # Siemens · Industrial Goods and Services
+  - SIX2.DE       # Sixt · Consumer Products and Services
+  - SOW.DE        # Software · Technology
+  - SRT3.DE       # Sartorius · Health Care
+  - SY1.DE        # Symrise · Chemicals
+  - TKA.DE        # ThyssenKrupp · Industrial Goods and Services
+  - TLX.DE        # Talanx · Insurance
+  - TMV.DE        # TeamViewer · Technology
+  - TUI.DE        # TUI Group · Travel and Leisure
+  - UN01.DE       # Uniper · Utilities
+  - VAR1.DE       # Varta · Industrial Goods and Services
+  - VNA.DE        # Vonovia · Real Estate
+  - ZAL.DE        # Zalando · Retail
+  # ── Greece ──
+  - NAB.AT        # National Bank of Greece · Banks
+  # ── Ireland ──
+  - FLTR.IR       # Flutter Entertainment · Travel and Leisure
+  - GFT.IR        # Grafton Group · Industrial Goods and Services
+  - GLB.IR        # Glanbia · Food, Beverage and Tobacco
+  - LIF.IR        # LifeCo · Insurance
+  - SKG.IR        # Smurfit Kappa · Industrial Goods and Services
+  # ── Israel ──
+  - TEV           # Teva Pharmaceutical Industries · Health Care
+  # ── Italy ──
+  - BRNW.MI       # Brunello Cucinelli · Consumer Products and Services
+  - CPR.MI        # Davide Campari-Milano · Food, Beverage and Tobacco
+  - ENEL.MI       # Enel · Utilities
+  - ENI.MI        # Eni · Energy
+  - FERR.MI       # Ferrari · Automobiles and Parts
+  - GWI.MI        # Gruppo Campari · Food, Beverage and Tobacco
+  - IDP.MI        # Interpump Group · Industrial Goods and Services
+  - ISP.MI        # Intesa Sanpaolo · Banks
+  - LDO.MI        # Leonardo · Industrial Goods and Services
+  - MB.MI         # Mediobanca · Financial Services
+  - MONC.MI       # Moncler · Consumer Products and Services
+  - NEXI.MI       # Nexi · Industrial Goods and Services
+  - PIRC.MI       # Pirelli · Automobiles and Parts
+  - PRY.MI        # Prysmian · Industrial Goods and Services
+  - PST.MI        # Poste Italiane · Insurance
+  - REC.MI        # Recordati · Health Care
+  - SRG.MI        # Snam · Energy
+  - TIT.MI        # Telecom Italia · Telecommunications
+  - TRN.MI        # Terna · Utilities
+  - UC.MI         # UniCredit · Banks
+  # ── Luxembourg ──
+  - INPST.LU      # InPost · Industrial Goods and Services
+  - MT.LU         # ArcelorMittal · Basic Resources
+  - TEN.LU        # Tenaris · Energy
+  # ── Netherlands ──
+  - ABN.AS        # ABN AMRO · Banks
+  - ADYEN.AS      # Adyen · Industrial Goods and Services
+  - AKZA.AS       # AkzoNobel · Chemicals
+  - ARGX.AS       # Argenx · Health Care
+  - ASMI.AS       # ASM International · Technology
+  - ASML.AS       # ASML Holding · Technology
+  - ENX.AS        # Euronext · Financial Services
+  - EXO.AS        # Exor · Financial Services
+  - FER.AS        # Ferrovial · Construction and Materials
+  - FLOW.AS       # Flow Traders · Financial Services
+  - INGA.AS       # ING Group · Banks
+  - JUST.AS       # Just Eat Takeaway · Retail
+  - KPN.AS        # KPN · Telecommunications
+  - LIGHT.AS      # Signify · Construction and Materials
+  - NN.AS         # NN Group · Insurance
+  - OCI.AS        # OCI · Chemicals
+  - PNL.AS        # PostNL · Industrial Goods and Services
+  - QIA.AS        # Qiagen · Health Care
+  - STLAM.AS      # Stellantis · Automobiles and Parts
+  - TOM.AS        # TomTom · Technology
+  - UMG.AS        # Universal Music Group · Media
+  - VPK.AS        # Vopak · Industrial Goods and Services
+  - WKL.AS        # Wolters Kluwer · Media
+  # ── Norway ──
+  - ADH.OL        # Adevinta · Consumer Products and Services
+  - AKERBP.OL     # Aker BP · Energy
+  - LSG.OL        # Lerøy Seafood · Food, Beverage and Tobacco
+  - NHY.OL        # Norsk Hydro · Basic Resources
+  - ORK.OL        # Orkla ASA · Food, Beverage and Tobacco
+  - SALM.OL       # SalMar · Food, Beverage and Tobacco
+  - SCHA.OL       # Schibsted · Media
+  - SRB.OL        # Storebrand · Insurance
+  - TEL.OL        # Telenor · Telecommunications
+  - TGS.OL        # TGS · Energy
+  - YAR.OL        # Yara International · Chemicals
+  # ── Poland ──
+  - CDR.WA        # CD Projekt · Consumer Products and Services
+  - LPP.WA        # LPP · Consumer Products and Services
+  # ── Portugal ──
+  - EDP.LS        # EDP - Energias de Portugal · Utilities
+  - EDPR.LS       # EDP Renováveis · Utilities
+  - GALP.LS       # Galp Energia · Energy
+  - JMT.LS        # Jerónimo Martins · Retail
+  # ── Spain ──
+  - ACS.MC        # ACS Group · Construction and Materials
+  - ACX.MC        # Acerinox · Basic Resources
+  - AENA.MC       # Aena · Travel and Leisure
+  - ALLFG.MC      # Allfunds Group · Financial Services
+  - ANA.MC        # Acciona · Construction and Materials
+  - ANE.MC        # Acciona Energía · Utilities
+  - BBVA.MC       # Banco Bilbao Vizcaya Argentaria · Banks
+  - BKT.MC        # Bankinter · Banks
+  - CABK.MC       # CaixaBank · Banks
+  - DIA.MC        # Dia · Personal Care, Drug and Grocery Stores
+  - ENG.MC        # Enagás · Utilities
+  - FOR.MC        # FCC · Construction and Materials
+  - GRF.MC        # Grifols · Health Care
+  - IBE.MC        # Iberdrola · Utilities
+  - ITX.MC        # Inditex · Retail
+  - MEL.MC        # Meliá Hotels · Travel and Leisure
+  - MRL.MC        # Merlin Properties · Real Estate
+  - NTGY.MC       # Naturgy · Utilities
+  - RED.MC        # Redeia · Utilities
+  - REP.MC        # Repsol · Energy
+  - SAB.MC        # Banco Sabadell · Banks
+  - SAN.MC        # Banco Santander · Banks
+  - TEF.MC        # Telefónica · Telecommunications
+  # ── Sweden ──
+  - ALFA.ST       # Alfa Laval · Industrial Goods and Services
+  - BOL.ST        # Boliden AB · Basic Resources
+  - CASP.ST       # Castellum · Real Estate
+  - CAST.ST       # Castellum · Real Estate
+  - ELUX-B.ST     # Electrolux · Consumer Products and Services
+  - HMB.ST        # H&M · Retail
+  - INDT.ST       # Indutrade · Industrial Goods and Services
+  - LUN.ST        # Lundin Energy · Energy
+  - SAND.ST       # Sandvik AB · Industrial Goods and Services
+  - SEB.ST        # Skandinaviska Enskilda Banken · Banks
+  - SKF-B.ST      # SKF · Industrial Goods and Services
+  - SWMA.ST       # Swedish Match · Food, Beverage and Tobacco
+  - TEL2-B.ST     # Tele2 · Telecommunications
+  - TELIA.ST      # Telia Company · Telecommunications
+  - TIGO.ST       # Millicom · Telecommunications
+  - VITR.ST       # Vitrolife · Health Care
+  - WIHL.ST       # Wihlborgs Fastigheter · Real Estate
+  # ── Switzerland ──
+  - ABBN.SW       # ABB Ltd · Industrial Goods and Services
+  - ADEN.SW       # Adecco · Industrial Goods and Services
+  - ALC.SW        # Alcon · Health Care
+  - BAER.SW       # Julius Baer · Banks
+  - BALN.SW       # Baloise · Insurance
+  - BARN.SW       # Barry Callebaut · Food, Beverage and Tobacco
+  - BEB.SW        # Belimo · Construction and Materials
+  - CCH.SW        # Coca-Cola HBC · Food, Beverage and Tobacco
+  - CFR.SW        # Richemont · Consumer Products and Services
+  - CLN.SW        # Clariant · Chemicals
+  - DOCM.SW       # DocMorris · Health Care
+  - DSM.SW        # DSM-Firmenich · Chemicals
+  - EMSN.SW       # Ems-Chemie · Chemicals
+  - GALE.SW       # Galenica · Health Care
+  - GEBN.SW       # Geberit · Construction and Materials
+  - GF.SW         # Georg Fischer · Industrial Goods and Services
+  - GIVN.SW       # Givaudan · Chemicals
+  - HELN.SW       # Helvetia Insurance · Insurance
+  - HOLN.SW       # Holcim · Construction and Materials
+  - KNIN.SW       # Kuehne + Nagel · Industrial Goods and Services
+  - LISN.SW       # Lindt & Sprüngli · Food, Beverage and Tobacco
+  - LOGN.SW       # Logitech · Technology
+  - LONN.SW       # Lonza Group · Health Care
+  - NESN.SW       # Nestlé · Food, Beverage and Tobacco
+  - OERL.SW       # Oerlikon · Industrial Goods and Services
+  - PGHN.SW       # Partners Group · Financial Services
+  - PLPH.SW       # PolyPeptide · Health Care
+  - RIGN.SW       # Transocean · Energy
+  - ROG.SW        # Roche Holding · Health Care
+  - SCHP.SW       # Schindler Group · Industrial Goods and Services
+  - SCMN.SW       # Swisscom · Telecommunications
+  - SDZ.SW        # Sandoz · Health Care
+  - SGSN.SW       # SGS S.A. · Industrial Goods and Services
+  - SIG.SW        # SIG Group · Industrial Goods and Services
+  - SIKA.SW       # Sika · Construction and Materials
+  - SLHN.SW       # Swiss Life · Insurance
+  - SOON.SW       # Sonova · Health Care
+  - SPSN.SW       # Swiss Prime Site · Real Estate
+  - SRENH.SW      # Swiss Re · Insurance
+  - STMN.SW       # Straumann · Health Care
+  - STMPA.SW      # STMicroelectronics · Technology
+  - TEMN.SW       # Temenos Group · Technology
+  - UBSG.SW       # UBS Group · Banks
+  - UHR.SW        # Swatch Group · Consumer Products and Services
+  - VACN.SW       # VAT Group · Industrial Goods and Services
+  - ZURN.SW       # Zurich Insurance Group · Insurance
+  # ── United Kingdom ──
+  - AAL.L         # Anglo American plc · Basic Resources
+  - ABF.L         # Associated British Foods · Food, Beverage and Tobacco
+  - ADM.L         # Admiral Group · Insurance
+  - AML.L         # Aston Martin · Automobiles and Parts
+  - ANTO.L        # Antofagasta plc · Basic Resources
+  - AUTO.L        # Auto Trader Group · Media
+  - AV.L          # Aviva · Insurance
+  - AZN.L         # AstraZeneca · Health Care
+  - BA.L          # BAE Systems · Industrial Goods and Services
+  - BARC.L        # Barclays · Banks
+  - BATS.L        # British American Tobacco · Food, Beverage and Tobacco
+  - BBY.L         # Balfour Beatty · Construction and Materials
+  - BEZ.L         # Beazley · Insurance
+  - BKG.L         # Berkeley Group Holdings · Consumer Products and Services
+  - BME.L         # B&M European Value Retail · Retail
+  - BNZL.L        # Bunzl · Industrial Goods and Services
+  - BP.L          # BP · Energy
+  - BRBY.L        # Burberry · Consumer Products and Services
+  - BT.A          # BT Group · Telecommunications
+  - BTRW.L        # Barratt Redrow · Consumer Products and Services
+  - BYG.L         # Big Yellow Group · Real Estate
+  - CNA.L         # Centrica · Utilities
+  - CPG.L         # Compass Group · Travel and Leisure
+  - CRDA.L        # Croda International · Chemicals
+  - CTEC.L        # ConvaTec · Health Care
+  - CTG.L         # Computer Center · Technology
+  - DGE.L         # Diageo · Food, Beverage and Tobacco
+  - DLG.L         # Direct Line · Insurance
+  - DLN.L         # Derwent London · Real Estate
+  - DPLM.L        # Diploma · Industrial Goods and Services
+  - EDV.L         # Endeavour Mining · Basic Resources
+  - ENT.L         # Entain · Travel and Leisure
+  - EVR.L         # Evraz · Basic Resources
+  - EXPN.L        # Experian · Industrial Goods and Services
+  - EZJ.L         # EasyJet · Travel and Leisure
+  - FTI.L         # TechnipFMC · Energy
+  - GAW.L         # Games Workshop · Consumer Products and Services
+  - GLEN.L        # Glencore · Basic Resources
+  - GREG.L        # Greggs · Retail
+  - GSK.L         # GSK plc · Health Care
+  - HAS.L         # Hays · Industrial Goods and Services
+  - HIK.L         # Hikma Pharmaceuticals · Health Care
+  - HLI.L         # Haleon · Consumer Products and Services
+  - HLMA.L        # Halma plc · Industrial Goods and Services
+  - HSBA.L        # HSBC · Banks
+  - HWDN.L        # Howden Joinery · Retail
+  - IAG.L         # International Airlines Group · Travel and Leisure
+  - ICP.L         # Intermediate Capital Group · Financial Services
+  - IGGI.L        # IG Group · Financial Services
+  - IHG.L         # InterContinental Hotels Group · Travel and Leisure
+  - III.L         # 3i · Financial Services
+  - IMB.L         # Imperial Brands · Food, Beverage and Tobacco
+  - IMI.L         # IMI · Industrial Goods and Services
+  - INCH.L        # Inchcape · Retail
+  - INDV.L        # Indivior · Health Care
+  - INF.L         # Informa · Media
+  - INP.L         # Investec · Financial Services
+  - ITRK.L        # Intertek · Industrial Goods and Services
+  - ITV.L         # ITV · Media
+  - JD.L          # JD Sports · Retail
+  - JMAT.L        # Johnson Matthey · Chemicals
+  - KGF.L         # Kingfisher plc · Retail
+  - LAND.L        # Land Securities · Real Estate
+  - LGEN.L        # Legal & General · Insurance
+  - LII.L         # Liberty Global · Telecommunications
+  - LIN.L         # Linde plc · Chemicals
+  - LLOY.L        # Lloyds Banking Group · Banks
+  - LSEG.L        # London Stock Exchange Group · Financial Services
+  - MCG.L         # Mobico Group · Travel and Leisure
+  - MKS.L         # Marks & Spencer · Retail
+  - MNDI.L        # Mondi · Industrial Goods and Services
+  - MNG.L         # M&G · Financial Services
+  - MONY.L        # Moneysupermarket.com · Media
+  - MRW.L         # Morrisons · Retail
+  - NG.L          # National Grid · Utilities
+  - NGG.L         # National Grid · Utilities
+  - NWG.L         # NatWest Group · Banks
+  - NXT.L         # Next plc · Retail
+  - OCDO.L        # Ocado · Retail
+  - PNN.L         # Pennon Group · Utilities
+  - PRU.L         # Prudential plc · Insurance
+  - PSN.L         # Persimmon plc · Consumer Products and Services
+  - PSON.L        # Pearson · Media
+  - QLT.L         # Quilter · Financial Services
+  - REL.L         # RELX · Media
+  - RIO.L         # Rio Tinto Group · Basic Resources
+  - RKT.L         # Reckitt · Personal Care, Drug and Grocery Stores
+  - RMV.L         # Rightmove · Real Estate
+  - ROL.L         # Royal Mail · Industrial Goods and Services
+  - RR.L          # Rolls-Royce Holdings · Industrial Goods and Services
+  - RTO.L         # Rentokil Initial · Industrial Goods and Services
+  - S4.L          # S4 Capital · Media
+  - SBRY.L        # Sainsbury's · Personal Care, Drug and Grocery Stores
+  - SCT.L         # Softcat · Technology
+  - SDLF.L        # Standard Life plc · Insurance
+  - SDR.L         # Schroders · Financial Services
+  - SGE.L         # Sage Group · Technology
+  - SGRO.L        # Segro · Real Estate
+  - SHEL.L        # Shell plc · Energy
+  - SKY.L         # Sky Group · Media
+  - SMDS.L        # DS Smith · Industrial Goods and Services
+  - SMIN.L        # Smiths Group · Industrial Goods and Services
+  - SMT.L         # Scottish Mortgage Investment Trust · Financial Services
+  - SN.L          # Smith & Nephew · Health Care
+  - SPX.L         # Spirax-Sarco Engineering · Industrial Goods and Services
+  - SSE.L         # SSE plc · Utilities
+  - STAN.L        # Standard Chartered · Banks
+  - STJ.L         # St. James's Place · Financial Services
+  - SUNB.L        # Sunbelt Rentals · Industrial Goods and Services
+  - SVT.L         # Severn Trent · Utilities
+  - SXS.L         # Spectris · Industrial Goods and Services
+  - TATE.L        # Tate & Lyle · Food, Beverage and Tobacco
+  - TJW.L         # Taylor Wimpey · Consumer Products and Services
+  - TPG.L         # Telecom Plus · Telecommunications
+  - TPK.L         # Travis Perkins · Retail
+  - TSCO.L        # Tesco · Retail
+  - ULVR.L        # Unilever · Personal Care, Drug and Grocery Stores
+  - UPW.L         # United Utilities · Utilities
+  - UTG.L         # Unite Group · Real Estate
+  - VOD.L         # Vodafone · Telecommunications
+  - WEIR.L        # Weir Group · Industrial Goods and Services
+  - WISE.L        # Wise · Financial Services
+  - WPP.L         # WPP · Media
+  - WTB.L         # Whitbread · Travel and Leisure

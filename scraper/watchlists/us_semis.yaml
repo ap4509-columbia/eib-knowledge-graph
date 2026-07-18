@@ -1,0 +1,24 @@
+corpus: us_semis
+description: US semiconductor sector — parity with the past team's original scope.
+
+sources:
+  - google_news
+  - yahoo_finance
+
+tickers:
+  - NVDA         # Nvidia
+  - AMD          # AMD
+  - INTC         # Intel
+  - TSM          # Taiwan Semiconductor
+  - AVGO         # Broadcom
+  - QCOM         # Qualcomm
+  - MU           # Micron
+  - AMAT         # Applied Materials
+  - LRCX         # Lam Research
+  - KLAC         # KLA
+  - ASML         # ASML
+  - MRVL         # Marvell
+  - TXN          # Texas Instruments
+  - ADI          # Analog Devices
+  - NXPI         # NXP
+  - ON           # ON Semiconductor
