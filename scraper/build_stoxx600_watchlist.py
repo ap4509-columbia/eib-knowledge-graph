@@ -102,11 +102,10 @@ def main():
 
     lines = [
         "corpus: stoxx_europe_600",
-        f"description: STOXX Europe 600 constituents with Yahoo Finance exchange suffixes (auto-generated from Wikipedia on {date.today().isoformat()}).",
+        f"description: STOXX Europe 600 constituents (auto-generated from Wikipedia on {date.today().isoformat()}). Yahoo Finance suffixes kept on tickers for exchange disambiguation, but google_news is the only source in use.",
         "",
         "sources:",
         "  - google_news",
-        "  - yahoo_finance",
         "",
         f"# {len(table)} tickers sorted by country, then ticker.",
         "# Regenerate with: python scraper/build_stoxx600_watchlist.py",
