@@ -215,9 +215,6 @@ export function FilterRail(props: FilterRailProps) {
               <p className="text-xs italic text-muted-foreground">no data</p>
             )}
           </div>
-          <p className="mt-2 text-[10px] leading-snug text-muted-foreground">
-            Dashed edges = model predictions; solid edges = extracted from news.
-          </p>
         </div>
       </div>
     </aside>
