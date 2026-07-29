@@ -5,7 +5,11 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Separator } from "@/components/ui/separator";
-import { ENTITY_COLORS } from "@/components/graphStyles";
+import {
+  CAUSAL_TYPE_COLORS,
+  CAUSAL_TYPE_LABELS,
+  ENTITY_COLORS,
+} from "@/components/graphStyles";
 import type { Snapshot } from "@/lib/api/types";
 
 export interface FilterRailProps {
@@ -36,7 +40,9 @@ export function FilterRail(props: FilterRailProps) {
     onMinDegreePctChange,
   } = props;
 
-  // Type + category counts for the current snapshot.
+  // Type + causal-type counts for the current snapshot.
+  // (Category list swapped from rel_cat SSI/GMM/GFMK to the causal-type
+  // families that drive edge coloring — same variable name kept for now.)
   const { typeCounts, catCounts } = useMemo(() => {
     const typeCounts: Record<string, number> = {};
     const catCounts: Record<string, number> = {};
@@ -45,7 +51,8 @@ export function FilterRail(props: FilterRailProps) {
         typeCounts[n.type] = (typeCounts[n.type] ?? 0) + 1;
       }
       for (const e of snapshot.edges) {
-        catCounts[e.rel_cat] = (catCounts[e.rel_cat] ?? 0) + 1;
+        const key = e.causal_type ?? "OTHER";
+        catCounts[key] = (catCounts[key] ?? 0) + 1;
       }
     }
     return { typeCounts, catCounts };
@@ -122,22 +129,28 @@ export function FilterRail(props: FilterRailProps) {
 
         <Separator />
 
-        {/* Relation categories */}
+        {/* Causal types — primary edge coloring signal, doubles as legend */}
         <div className="mt-4">
-          <Label className="mb-2 block text-xs">Relation categories</Label>
+          <Label className="mb-2 block text-xs">Edge meaning (causal type)</Label>
           <div className="space-y-1.5">
             {catsSorted.map(([cat, count]) => {
               const checked = visibleCategories.has(cat);
+              const color = CAUSAL_TYPE_COLORS[cat] ?? "#94a3b8";
+              const label = CAUSAL_TYPE_LABELS[cat] ?? cat;
               return (
                 <label
                   key={cat}
-                  className="flex cursor-pointer items-center gap-2 rounded px-1.5 py-1 text-xs transition hover:bg-accent"
+                  className="group flex cursor-pointer items-center gap-2 rounded px-1.5 py-1 text-xs transition hover:bg-accent"
                 >
                   <Checkbox
                     checked={checked}
                     onCheckedChange={() => onToggleCategory(cat)}
                   />
-                  <span className="flex-1">{cat}</span>
+                  <span
+                    className="inline-block h-2 w-2 shrink-0 rounded-full"
+                    style={{ backgroundColor: color }}
+                  />
+                  <span className="flex-1 truncate">{label}</span>
                   <span className="font-mono text-[10px] tabular-nums text-muted-foreground">
                     {count}
                   </span>
@@ -148,6 +161,9 @@ export function FilterRail(props: FilterRailProps) {
               <p className="text-xs italic text-muted-foreground">no data</p>
             )}
           </div>
+          <p className="mt-2 text-[10px] leading-snug text-muted-foreground">
+            Dashed edges = model predictions; solid edges = extracted from news.
+          </p>
         </div>
       </div>
     </aside>

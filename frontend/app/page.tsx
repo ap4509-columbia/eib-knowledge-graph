@@ -8,6 +8,7 @@ import {
   AlertCircle,
   Search as SearchIcon,
   FileSearch,
+  Settings as SettingsIcon,
 } from "lucide-react";
 
 import {
@@ -23,6 +24,8 @@ import { EntitySearch } from "@/components/controls/EntitySearch";
 import { NodeDetailSheet } from "@/components/detail/NodeDetailSheet";
 import { ChatPanel } from "@/components/chat/ChatPanel";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { GraphSettingsDialog } from "@/components/settings/GraphSettingsDialog";
+import { DEFAULT_PHYSICS, type PhysicsSettings } from "@/components/GraphCanvas";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
@@ -54,6 +57,8 @@ export default function Home() {
   // Interaction state
   const [searchOpen, setSearchOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [physics, setPhysics] = useState<PhysicsSettings>(DEFAULT_PHYSICS);
   const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
   const filtersInitializedRef = useRef(false);
 
@@ -125,17 +130,18 @@ export default function Home() {
     };
   }, [currentMonth]);
 
-  // Initialize filter sets once on the first snapshot
+  // Initialize filter sets once on the first snapshot.
+  // Category filter now keys on causal_type (edge meaning), not on rel_cat.
   useEffect(() => {
     if (!snapshot || filtersInitializedRef.current) return;
     const types = new Set(snapshot.nodes.map((n) => n.type));
-    const cats = new Set(snapshot.edges.map((e) => e.rel_cat));
+    const cats = new Set(snapshot.edges.map((e) => e.causal_type ?? "OTHER"));
     setVisibleTypes(types);
     setVisibleCategories(cats);
     filtersInitializedRef.current = true;
   }, [snapshot]);
 
-  // Add any new types/cats from later months so they're visible by default
+  // Add any new types/causal-types from later months so they're visible by default
   useEffect(() => {
     if (!snapshot || !filtersInitializedRef.current) return;
     setVisibleTypes((prev) => {
@@ -145,7 +151,7 @@ export default function Home() {
     });
     setVisibleCategories((prev) => {
       const next = new Set(prev);
-      for (const e of snapshot.edges) next.add(e.rel_cat);
+      for (const e of snapshot.edges) next.add(e.causal_type ?? "OTHER");
       return next.size === prev.size ? prev : next;
     });
   }, [snapshot]);
@@ -262,6 +268,15 @@ export default function Home() {
                 {running ? "Refreshing…" : "Refresh"}
               </button>
             )}
+            <button
+              type="button"
+              onClick={() => setSettingsOpen(true)}
+              aria-label="Graph settings"
+              title="Graph settings (physics)"
+              className="flex items-center justify-center rounded-md border border-border bg-muted p-1.5 text-foreground transition hover:bg-accent"
+            >
+              <SettingsIcon className="h-3.5 w-3.5" />
+            </button>
             <ThemeToggle />
           </div>
         </header>
@@ -311,6 +326,7 @@ export default function Home() {
               filters={{ visibleTypes, visibleCategories, minDegree }}
               focusedNodeId={focusedNodeId}
               onNodeClick={handleNodeClick}
+              physics={physics}
             />
             {isForecast && (
               <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1.5 text-[11px] text-purple-700 backdrop-blur-md dark:text-purple-200">
@@ -353,6 +369,12 @@ export default function Home() {
         months={index?.months ?? []}
         month={currentMonth}
         focusedEntity={focusedNodeId}
+      />
+      <GraphSettingsDialog
+        open={settingsOpen}
+        onOpenChange={setSettingsOpen}
+        physics={physics}
+        onPhysicsChange={setPhysics}
       />
 
       {/* Floating article-search trigger */}

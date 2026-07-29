@@ -45,6 +45,18 @@ export interface NodeJson {
 
 export type Polarity = "negative" | "neutral" | "positive";
 
+export type CausalType =
+  | "CAUSAL"
+  | "COMPETITIVE"
+  | "CORPORATE_ACTION"
+  | "FINANCIAL_METRIC"
+  | "STRUCTURAL"
+  | "OPERATIONAL"
+  | "REGULATORY"
+  | "OTHER";
+
+export type EdgeOrigin = "news" | "prediction";
+
 export interface EdgeJson {
   id: string;
   source: string;
@@ -52,6 +64,10 @@ export interface EdgeJson {
   rel: string;
   rel_cat: RelCategory | string;
   polarity: Polarity;
+  /** Primary coloring axis. Assigned by keyword classification in the runner. */
+  causal_type?: CausalType | string;
+  /** "news" for LLM-extracted edges, "prediction" for GAT-scored/generated edges. */
+  origin?: EdgeOrigin | string;
   weight: number;
   score: number | null;
 }

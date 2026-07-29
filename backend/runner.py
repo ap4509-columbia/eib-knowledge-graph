@@ -85,7 +85,93 @@ def _norm(s, default: str = "UNK") -> str:
     return s
 
 
+# ── Causal-type classification ─────────────────────────────────────────
+# Group free-text relation verbs into a small set of families so the UI
+# can color edges by "what kind of relationship this is" rather than by
+# sentiment alone. Case-insensitive keyword match against the verb string.
+# First-match wins, evaluated in order — put narrower buckets before broader.
+
+_CAUSAL_TYPES: list[tuple[str, tuple[str, ...]]] = [
+    ("REGULATORY", (
+        "sues", "sue", "regulates", "regulate", "fines", "fine",
+        "penalizes", "penalize", "investigates", "investigate",
+        "files against", "files suit", "settles with", "settle with",
+        "complies with", "violates",
+    )),
+    ("CORPORATE_ACTION", (
+        "acquires", "acquire", "acquisition", "divests", "divest",
+        "spins off", "spin off", "spinoff", "merges with", "merge with",
+        "partners with", "partnership", "invests in", "investment in",
+        "launches", "launch", "announces", "announce",
+        "buys", "sells to", "sells stake", "purchases",
+        "signs", "signed", "expands into", "enters",
+        "releases", "release", "collaborates with", "collaborate with",
+        "buy", "sell",
+    )),
+    ("FINANCIAL_METRIC", (
+        "reports", "report", "beats", "beat", "misses", "miss",
+        "exceeds", "exceed", "increases", "increase", "decreases", "decrease",
+        "raises guidance", "cuts guidance", "raises", "cuts",
+        "generates", "generate", "grows", "growth",
+        "experiences increase", "experiences decrease",
+        "experiences price increase", "experiences price decrease",
+        "posts", "records", "surges", "surge", "declines", "decline",
+        "falls", "fall", "drops", "drop", "gains", "gain",
+        "rises", "rise", "rises by", "rises with", "improves", "improve",
+        "declares", "declare", "discloses", "disclose", "forecasts", "forecast",
+        "targets", "target", "estimates", "estimate", "projects", "project",
+    )),
+    ("COMPETITIVE", (
+        "competes with", "compete with", "outperforms", "outperform",
+        "underperforms", "underperform", "leads", "lead in",
+        "gains lead", "loses lead", "market share", "gains share",
+        "beats out", "surpasses", "rivals",
+    )),
+    ("CAUSAL", (
+        "causes", "cause", "drives", "drive", "forces", "force",
+        "impacts", "impact", "positive impact on", "negative impact on",
+        "influences", "influence", "enables", "enable",
+        "triggers", "trigger", "affects", "affect",
+        "leads to", "results in", "contributes to", "drives up",
+        "drives down", "boosts", "boost", "hurts", "hurt", "damages",
+        "benefits from", "benefit from", "stimulates", "stimulate",
+        "enhances", "enhance", "faces", "face", "signifies", "signify",
+    )),
+    ("STRUCTURAL", (
+        "has ticker", "has stock ticker", "is ticker for",
+        "is component of", "is part of", "is subsidiary of",
+        "belongs to", "represents", "identified by",
+        "is identified by", "trades as", "listed on",
+        "has target price", "has trading history",
+        "includes", "include", "contains", "contain",
+        "hosts", "host", "derives value from",
+        "is out of the money", "is in the money",
+        "has", "tracks", "track",
+    )),
+    ("OPERATIONAL", (
+        "produces", "produce", "manufactures", "manufacture",
+        "develops", "develop", "operates in", "operates",
+        "supports", "support", "focuses on", "focus on",
+        "provides", "provide", "delivers", "deliver",
+        "serves", "supplies", "supply", "runs",
+        "uses", "used in", "implements", "implement",
+        "pays", "pay", "offers", "offer",
+    )),
+]
+
+
+def _classify_causal_type(rel: str) -> str:
+    """Bucket a verb into a causal-type family. Falls back to OTHER."""
+    r = (rel or "").lower()
+    for family, keywords in _CAUSAL_TYPES:
+        for kw in keywords:
+            if kw in r:
+                return family
+    return "OTHER"
+
+
 # ── Polarity classification ────────────────────────────────────────────
+# Kept for back-compat and any downstream tooling that still consumes it.
 # Keyword lists. Matched case-insensitively against the relation verb.
 
 _NEGATIVE_KEYWORDS = (
@@ -237,9 +323,11 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
                 "target": obj,
                 "rel": rel,
                 "rel_cat": rel_cat,
-                "polarity": _classify_polarity(rel),
+                "polarity": _classify_polarity(rel),          # kept for back-compat
+                "causal_type": _classify_causal_type(rel),    # new primary coloring axis
+                "origin": "news",                             # "prediction" when GAT-derived
                 "weight": w,
-                "score": None,  # GAT scoring added later
+                "score": None,                                # GAT scoring added later
             }
             for i, ((sub, obj, rel, rel_cat), w) in enumerate(edge_counter.items())
         ]

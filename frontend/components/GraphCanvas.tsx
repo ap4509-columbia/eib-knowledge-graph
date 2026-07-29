@@ -19,15 +19,32 @@ if (typeof window !== "undefined") {
 
 export interface GraphFilters {
   visibleTypes: Set<string>;
+  /** Legacy field name — kept for compatibility. Now used for causal types. */
   visibleCategories: Set<string>;
   minDegree: number;
 }
+
+/** Live-physics knobs. `enabled=false` (default) uses the precomputed
+ * `preset` layout — the fixed "best view". Turning `enabled` on switches to
+ * a d3-force simulation with the given repulsion / link-strength values. */
+export interface PhysicsSettings {
+  enabled: boolean;
+  repulsion: number;       // absolute value; sign flipped internally (negative = repel)
+  linkStrength: number;    // preferred edge length in px
+}
+
+export const DEFAULT_PHYSICS: PhysicsSettings = {
+  enabled: false,
+  repulsion: 90,
+  linkStrength: 60,
+};
 
 export interface GraphCanvasProps {
   snapshot: Snapshot | null;
   filters: GraphFilters;
   focusedNodeId: string | null;
   onNodeClick?: (id: string) => void;
+  physics?: PhysicsSettings;
 }
 
 interface EdgeTooltip {
@@ -41,6 +58,7 @@ export function GraphCanvas({
   filters,
   focusedNodeId,
   onNodeClick,
+  physics = DEFAULT_PHYSICS,
 }: GraphCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const cyRef = useRef<Core | null>(null);
@@ -159,6 +177,8 @@ export function GraphCanvas({
           rel: e.rel,
           rel_cat: e.rel_cat,
           polarity: e.polarity,
+          causal_type: e.causal_type ?? "OTHER",
+          origin: e.origin ?? "news",
           score: e.score ?? undefined,
           weight: e.weight,
         },
@@ -170,23 +190,51 @@ export function GraphCanvas({
       cy.add(elements);
     });
 
-    // `preset` uses each node's position field verbatim; `grid` is the
-    // legacy fallback for snapshots that don't have positions yet.
-    const layout = cy.layout(
-      hasPositions
-        ? ({ name: "preset", fit: false, animate: false } as cytoscape.LayoutOptions)
-        : ({ name: "grid", fit: false, animate: false } as cytoscape.LayoutOptions)
-    );
+    // Layout selection:
+    // - physics disabled → `preset` uses each node's precomputed x/y verbatim
+    // - physics enabled  → d3-force with user's repulsion/link-strength
+    // - no positions available → `grid` fallback (should be rare)
+    let layout;
+    if (physics.enabled) {
+      layout = cy.layout({
+        name: "d3-force",
+        animate: true,
+        fit: false,
+        randomize: !hasPositions, // seed from preset positions if we have them
+        fixedAfterDragging: false,
+        linkId: (d: { id: string }) => d.id,
+        linkDistance: physics.linkStrength,
+        manyBodyStrength: -physics.repulsion,
+        collideRadius: 18,
+        alpha: 0.4,
+        alphaDecay: 0.03,
+        alphaMin: 0.001,
+        velocityDecay: 0.5,
+        infinite: false,
+      } as cytoscape.LayoutOptions);
+    } else if (hasPositions) {
+      layout = cy.layout({
+        name: "preset",
+        fit: false,
+        animate: false,
+      } as cytoscape.LayoutOptions);
+    } else {
+      layout = cy.layout({
+        name: "grid",
+        fit: false,
+        animate: false,
+      } as cytoscape.LayoutOptions);
+    }
     layoutRef.current = layout;
     layout.run();
 
     // Fit the viewport once so everything is visible, then hand control to
-    // the user. No continuous refit, no auto-recenter — positions are fixed.
+    // the user. No continuous refit — positions are stable.
     requestAnimationFrame(() => {
       cy.resize();
       cy.fit(undefined, 40);
     });
-  }, [snapshot]);
+  }, [snapshot, physics.enabled, physics.repulsion, physics.linkStrength]);
 
   // Swap the Cytoscape stylesheet when the theme changes.
   useEffect(() => {
@@ -211,7 +259,10 @@ export function GraphCanvas({
         n.style("display", visible ? "element" : "none");
       });
       cy.edges().forEach((e) => {
-        const cat = e.data("rel_cat");
+        // Edge visibility now keys on causal_type (the primary coloring
+        // signal), not on rel_cat. The Set is still named visibleCategories
+        // for backward compat.
+        const cat = e.data("causal_type") ?? "OTHER";
         const srcOk = nodeVisible.get(e.data("source")) ?? false;
         const tgtOk = nodeVisible.get(e.data("target")) ?? false;
         const visible = visibleCategories.has(cat) && srcOk && tgtOk;

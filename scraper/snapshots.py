@@ -32,6 +32,56 @@ _POS_KEYWORDS = (
 )
 
 
+_CAUSAL_TYPES: list[tuple[str, tuple[str, ...]]] = [
+    ("REGULATORY", (
+        "sues", "sue", "regulates", "regulate", "fines", "fine",
+        "penalizes", "investigates", "files against", "files suit",
+        "settles with", "complies with", "violates",
+    )),
+    ("CORPORATE_ACTION", (
+        "acquires", "acquire", "divests", "spins off", "merges with",
+        "partners with", "invests in", "launches", "announces",
+        "buys", "sells to", "sells stake", "purchases", "signs",
+        "expands into", "enters",
+    )),
+    ("FINANCIAL_METRIC", (
+        "reports", "beats", "misses", "exceeds", "increases", "decreases",
+        "raises guidance", "cuts guidance", "raises", "cuts",
+        "generates", "grows", "experiences increase", "experiences decrease",
+        "experiences price increase", "experiences price decrease",
+        "posts", "records", "surges", "declines", "falls", "drops", "gains",
+    )),
+    ("COMPETITIVE", (
+        "competes with", "outperforms", "underperforms", "leads",
+        "gains lead", "loses lead", "market share", "gains share",
+        "beats out", "surpasses", "rivals",
+    )),
+    ("CAUSAL", (
+        "causes", "drives", "forces", "impacts", "positive impact on",
+        "negative impact on", "influences", "enables", "triggers", "affects",
+        "leads to", "results in", "contributes to", "boosts", "hurts", "damages",
+    )),
+    ("STRUCTURAL", (
+        "has ticker", "has stock ticker", "is ticker for", "is component of",
+        "is part of", "is subsidiary of", "belongs to", "represents",
+        "identified by", "trades as", "listed on",
+    )),
+    ("OPERATIONAL", (
+        "produces", "manufactures", "develops", "operates in", "operates",
+        "supports", "focuses on", "provides", "delivers", "serves", "supplies", "runs",
+    )),
+]
+
+
+def _classify_causal_type(rel: str) -> str:
+    r = (rel or "").lower()
+    for family, keywords in _CAUSAL_TYPES:
+        for kw in keywords:
+            if kw in r:
+                return family
+    return "OTHER"
+
+
 def _classify_polarity(rel: str) -> str:
     r = (rel or "").lower()
     for kw in _NEG_KEYWORDS:
@@ -172,6 +222,8 @@ def update_corpus(
                 "rel": rel,
                 "rel_cat": rel_cat,
                 "polarity": _classify_polarity(rel),
+                "causal_type": _classify_causal_type(rel),
+                "origin": "news",
                 "weight": w,
                 "score": None,
             }
