@@ -125,25 +125,56 @@ def main():
     t_start = time.perf_counter()
     per_article_times = []
 
+    # Incremental checkpointing: every N articles, dump the current state so
+    # partial results survive a crash / kill / rate-limit.
+    CHECKPOINT_EVERY = 10
+
+    # Per-article wall-clock timeout so one hung call can't stall the whole run.
+    # The SDK's own timeout is generous (~10 min); we want tighter.
+    import signal
+
+    class _CallTimeout(Exception):
+        pass
+
+    def _alarm_handler(signum, frame):
+        raise _CallTimeout("Per-article timeout")
+
+    signal.signal(signal.SIGALRM, _alarm_handler)
+    PER_ARTICLE_TIMEOUT_S = 60
+
     for i in range(len(df)):
         row = df.iloc[i]
         prompt = TripletGenerator.build_prompt(row, args.text_column)
         t0 = time.perf_counter()
         try:
+            signal.alarm(PER_ARTICLE_TIMEOUT_S)
             resp = client.models.generate_content(
                 model=args.model,
                 contents=prompt,
             )
             triplets = sanitize(resp.text or "")
+        except _CallTimeout:
+            print(f"  [{i+1}/{len(df)}] TIMEOUT after {PER_ARTICLE_TIMEOUT_S}s — skipping")
+            triplets = "[]"
         except Exception as exc:  # noqa: BLE001
             print(f"  [{i+1}/{len(df)}] ERROR — {exc}")
             triplets = "[]"
+        finally:
+            signal.alarm(0)  # cancel alarm no matter what
         dt = time.perf_counter() - t0
         per_article_times.append(dt)
         df.at[i, "output_triplets"] = triplets
 
         preview = triplets[:110] + ("…" if len(triplets) > 110 else "")
-        print(f"  [{i+1:>3}/{len(df)}] {dt:5.1f}s  {row['ticker']:<8}  {preview}")
+        print(
+            f"  [{i+1:>3}/{len(df)}] {dt:5.1f}s  {row['ticker']:<8}  {preview}",
+            flush=True,
+        )
+
+        # Checkpoint: write partial results periodically so partial progress
+        # survives an interruption. Costs almost nothing.
+        if (i + 1) % CHECKPOINT_EVERY == 0:
+            df.to_csv(out_path, index=False)
 
     df.to_csv(out_path, index=False)
     total = time.perf_counter() - t_start
