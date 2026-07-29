@@ -20,6 +20,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Optional
 
+import networkx as nx
 import pandas as pd
 
 # ── Paths ──────────────────────────────────────────────────────────────
@@ -213,8 +214,20 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
             out_deg[sub] += w
             in_deg[obj] += w
 
+        # Compute a deterministic, precomputed layout so the graph loads
+        # at a fixed "best view" on every reload instead of settling from
+        # random init. Positions live directly in the node data; the
+        # frontend uses Cytoscape's `preset` layout to place them instantly.
+        positions = _layout_positions(node_types, edge_counter)
+
         nodes = [
-            {"id": e, "type": t, "degree": in_deg[e] + out_deg[e]}
+            {
+                "id": e,
+                "type": t,
+                "degree": in_deg[e] + out_deg[e],
+                "x": positions[e][0],
+                "y": positions[e][1],
+            }
             for e, t in node_types.items()
         ]
         edges = [
@@ -243,6 +256,55 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
         }
 
     return snapshots
+
+
+def _layout_positions(
+    node_types: dict[str, str],
+    edge_counter: Counter,
+    canvas_size: float = 1000.0,
+    seed: int = 42,
+) -> dict[str, tuple[float, float]]:
+    """Deterministic force-directed layout via networkx.
+
+    Positions are scaled to fit inside [-canvas_size/2, canvas_size/2] on both
+    axes and delivered as (x, y) tuples. Same input graph → same layout every
+    time (fixed seed).
+
+    Frontend loads these with Cytoscape's `preset` layout so nodes appear at
+    their final positions instantly, no settling animation.
+    """
+    G = nx.DiGraph()
+    for entity in node_types:
+        G.add_node(entity)
+    for (sub, obj, _, _), w in edge_counter.items():
+        G.add_edge(sub, obj, weight=int(w))
+
+    if G.number_of_nodes() == 0:
+        return {}
+
+    n = G.number_of_nodes()
+    # k = optimal distance between nodes; scales inversely with sqrt(n)
+    # so bigger graphs stay legible. iterations gives the layout time to
+    # actually reach a settled state (default 50 is often too shallow).
+    k = 1.0 / (n ** 0.5) if n > 1 else 1.0
+    raw = nx.spring_layout(G, k=k, iterations=120, seed=seed, weight="weight")
+
+    # Rescale into pixel-ish coordinates centered on 0
+    xs = [p[0] for p in raw.values()]
+    ys = [p[1] for p in raw.values()]
+    x_range = max(xs) - min(xs) or 1.0
+    y_range = max(ys) - min(ys) or 1.0
+    x_mid = (max(xs) + min(xs)) / 2.0
+    y_mid = (max(ys) + min(ys)) / 2.0
+    scale = canvas_size / max(x_range, y_range)
+
+    return {
+        node: (
+            round((pos[0] - x_mid) * scale, 2),
+            round((pos[1] - y_mid) * scale, 2),
+        )
+        for node, pos in raw.items()
+    }
 
 
 def _build_articles_by_month(source_csv: Path) -> dict[str, list[dict]]:

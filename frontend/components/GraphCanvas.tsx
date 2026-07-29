@@ -98,13 +98,8 @@ export function GraphCanvas({
       setTooltip(null);
     });
 
-    // When the user grabs a node, reheat the simulation so neighbors respond.
-    cy.on("grab", "node", () => {
-      const layout = layoutRef.current;
-      if (layout && typeof layout.reheat === "function") {
-        layout.reheat();
-      }
-    });
+    // No physics: dragging a node moves only that node. Neighbors stay still.
+    // Positions come precomputed from the backend and are loaded verbatim.
 
     const resizeObs = new ResizeObserver(() => cy.resize());
     resizeObs.observe(container);
@@ -133,12 +128,26 @@ export function GraphCanvas({
       /* ignore */
     }
 
+    // Nodes carry their precomputed layout positions from the snapshot JSON
+    // (spring_layout, deterministic per snapshot). Pass them as `position`
+    // and use Cytoscape's `preset` layout so the graph appears at its final
+    // arrangement instantly — no settling animation, no drift.
+    // If a snapshot predates the position field, fall back to a small grid
+    // so we still render something rather than crashing.
+    const hasPositions = snapshot.nodes.some(
+      (n) => typeof n.x === "number" && typeof n.y === "number"
+    );
+
     const elements: ElementDefinition[] = [];
     for (const n of snapshot.nodes) {
-      elements.push({
+      const el: ElementDefinition = {
         group: "nodes",
         data: { id: n.id, label: n.id, type: n.type, degree: n.degree },
-      });
+      };
+      if (typeof n.x === "number" && typeof n.y === "number") {
+        el.position = { x: n.x, y: n.y };
+      }
+      elements.push(el);
     }
     for (const e of snapshot.edges) {
       elements.push({
@@ -161,68 +170,22 @@ export function GraphCanvas({
       cy.add(elements);
     });
 
-    // Start a d3-force simulation. Tuned for subtle, calm motion — lower
-    // starting energy + faster decay + heavy friction so nodes settle
-    // quickly and only twitch a little when neighbors are dragged.
-    const layout = cy.layout({
-      name: "d3-force",
-      animate: true,
-      fit: false,
-      randomize: true,
-      fixedAfterDragging: false,
-      // forces — gentler
-      linkId: (d: { id: string }) => d.id,
-      linkDistance: 60,
-      manyBodyStrength: -90,
-      collideRadius: 18,
-      // simulation — settle fast, dampen wobble
-      alpha: 0.6,
-      alphaDecay: 0.04,
-      alphaMin: 0.001,
-      velocityDecay: 0.7,
-      infinite: false,
-    } as cytoscape.LayoutOptions);
+    // `preset` uses each node's position field verbatim; `grid` is the
+    // legacy fallback for snapshots that don't have positions yet.
+    const layout = cy.layout(
+      hasPositions
+        ? ({ name: "preset", fit: false, animate: false } as cytoscape.LayoutOptions)
+        : ({ name: "grid", fit: false, animate: false } as cytoscape.LayoutOptions)
+    );
     layoutRef.current = layout;
-
     layout.run();
 
-    // Keep the graph centered while the d3-force simulation settles.
-    // The forces spread nodes outward over ~3s; a single fit() right after
-    // layoutready catches them mid-flight and they drift off-screen as the
-    // simulation expands. So we re-fit on a short interval until the user
-    // touches the canvas.
-    const fit = () => {
+    // Fit the viewport once so everything is visible, then hand control to
+    // the user. No continuous refit, no auto-recenter — positions are fixed.
+    requestAnimationFrame(() => {
       cy.resize();
       cy.fit(undefined, 40);
-      cy.center();
-    };
-    requestAnimationFrame(fit);
-
-    const refitInterval = window.setInterval(fit, 200);
-    const stopRefitTimer = window.setTimeout(
-      () => window.clearInterval(refitInterval),
-      2200
-    );
-
-    // Stop auto-fitting as soon as the user touches the canvas.
-    const onUserInteract = () => {
-      window.clearInterval(refitInterval);
-      window.clearTimeout(stopRefitTimer);
-    };
-    const containerEl = containerRef.current;
-    containerEl?.addEventListener("mousedown", onUserInteract);
-    containerEl?.addEventListener("wheel", onUserInteract, { passive: true });
-    containerEl?.addEventListener("touchstart", onUserInteract, {
-      passive: true,
     });
-
-    return () => {
-      window.clearInterval(refitInterval);
-      window.clearTimeout(stopRefitTimer);
-      containerEl?.removeEventListener("mousedown", onUserInteract);
-      containerEl?.removeEventListener("wheel", onUserInteract);
-      containerEl?.removeEventListener("touchstart", onUserInteract);
-    };
   }, [snapshot]);
 
   // Swap the Cytoscape stylesheet when the theme changes.

@@ -9,6 +9,8 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+import networkx as nx
+
 from .sources.base import Article
 
 _ARTICLE_SUMMARY_CHARS = 600
@@ -69,6 +71,42 @@ def _month_of(iso_date: str) -> str:
     return iso_date[:7]  # YYYY-MM
 
 
+def _layout_positions(
+    node_ids: list[str],
+    edges: list[dict],
+    canvas_size: float = 1000.0,
+    seed: int = 42,
+) -> dict[str, tuple[float, float]]:
+    """Deterministic spring-layout so the graph opens at a fixed 'best view'."""
+    if not node_ids:
+        return {}
+    G = nx.DiGraph()
+    for eid in node_ids:
+        G.add_node(eid)
+    for e in edges:
+        G.add_edge(e["source"], e["target"], weight=e.get("weight", 1))
+
+    n = G.number_of_nodes()
+    k = 1.0 / (n ** 0.5) if n > 1 else 1.0
+    raw = nx.spring_layout(G, k=k, iterations=120, seed=seed, weight="weight")
+
+    xs = [p[0] for p in raw.values()]
+    ys = [p[1] for p in raw.values()]
+    x_range = max(xs) - min(xs) or 1.0
+    y_range = max(ys) - min(ys) or 1.0
+    x_mid = (max(xs) + min(xs)) / 2.0
+    y_mid = (max(ys) + min(ys)) / 2.0
+    scale = canvas_size / max(x_range, y_range)
+
+    return {
+        node: (
+            round((pos[0] - x_mid) * scale, 2),
+            round((pos[1] - y_mid) * scale, 2),
+        )
+        for node, pos in raw.items()
+    }
+
+
 def update_corpus(
     corpus_root: Path,
     corpus_name: str,
@@ -126,10 +164,6 @@ def update_corpus(
             out_deg[s] += w
             in_deg[o] += w
 
-        nodes = [
-            {"id": e, "type": t, "degree": in_deg[e] + out_deg[e]}
-            for e, t in node_types.items()
-        ]
         edges = [
             {
                 "id": f"e{i}",
@@ -142,6 +176,19 @@ def update_corpus(
                 "score": None,
             }
             for i, ((s, o, rel, rel_cat), w) in enumerate(edge_counter.items())
+        ]
+
+        positions = _layout_positions(list(node_types.keys()), edges)
+
+        nodes = [
+            {
+                "id": e,
+                "type": t,
+                "degree": in_deg[e] + out_deg[e],
+                "x": positions.get(e, (0.0, 0.0))[0],
+                "y": positions.get(e, (0.0, 0.0))[1],
+            }
+            for e, t in node_types.items()
         ]
 
         snap = {

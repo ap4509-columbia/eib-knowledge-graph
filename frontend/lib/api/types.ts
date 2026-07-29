@@ -36,6 +36,11 @@ export interface NodeJson {
   id: string;
   type: EntityType | string;
   degree: number;
+  // Optional precomputed layout position (spring_layout, deterministic).
+  // When present, the frontend uses Cytoscape's `preset` layout so the graph
+  // loads at a fixed "best view" instantly instead of settling from random.
+  x?: number;
+  y?: number;
 }
 
 export type Polarity = "negative" | "neutral" | "positive";
