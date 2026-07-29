@@ -23,6 +23,43 @@ export const ENTITY_COLORS: Record<string, string> = {
   EVENT: "#ef4444", // red-500
   CONCEPT: "#94a3b8", // slate-400
   UNK: "#71717a", // zinc-500
+  // Real categories the extractor produces that the schema doesn't model yet
+  // (see _UNMODELED_ENTITY_TYPES in backend/runner.py). Colored so they don't
+  // all read as UNK gray while the team decides whether to promote them.
+  PERSON: "#8b5cf6", // violet-500
+  COUNTRY: "#14b8a6", // teal-500
+  LOCATION: "#0ea5e9", // sky-500
+  INSTITUTION: "#64748b", // slate-500
+};
+
+// Human-readable labels for the entity-type filter. The raw values are
+// run-together uppercase ("FININSTRUMENTINFO"), which is unreadable in a
+// sidebar. Mirrors CAUSAL_TYPE_LABELS below. Anything missing falls back to
+// the raw value, so a new type degrades to shouty rather than blank.
+export const ENTITY_LABELS: Record<string, string> = {
+  COMPANY: "Company",
+  STOCK_TICKER: "Stock ticker",
+  STOCKTICKER: "Stock ticker",
+  FINANCIAL_ENTITY: "Financial entity",
+  FINANCIALENTITY: "Financial entity",
+  SECTOR: "Sector",
+  MACRO_INDICATOR: "Macro indicator",
+  MACROINDICATOR: "Macro indicator",
+  ECON_INDICATOR: "Economic indicator",
+  ECONINDICATOR: "Economic indicator",
+  FIN_INSTRUMENT_INFO: "Financial instrument",
+  FININSTRUMENTINFO: "Financial instrument",
+  PRODUCT: "Product",
+  DERIVATIVE: "Derivative",
+  CURRENCY: "Currency",
+  BOND: "Bond",
+  EVENT: "Event",
+  CONCEPT: "Concept",
+  PERSON: "Person",
+  COUNTRY: "Country",
+  LOCATION: "Location",
+  INSTITUTION: "Institution",
+  UNK: "Unclassified",
 };
 
 // Causal-type palette (colorblind-safe, adapted from Okabe-Ito).

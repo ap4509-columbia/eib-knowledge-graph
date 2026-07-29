@@ -1,6 +1,11 @@
 fastapi==0.115.6
 uvicorn[standard]==0.32.1
 pandas>=2.0
+# networkx powers the precomputed spring_layout node positions in runner.py.
+# scipy is not imported directly, but networkx requires it for spring_layout
+# on graphs this size — without it the runner dies partway through.
+networkx>=3.0
+scipy>=1.11
 google-genai>=1.0
 openai>=1.50
 python-dotenv>=1.0

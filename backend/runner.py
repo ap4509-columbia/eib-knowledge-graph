@@ -85,6 +85,107 @@ def _norm(s, default: str = "UNK") -> str:
     return s
 
 
+# ── Entity-type normalization ──────────────────────────────────────────
+# The extraction model writes the entity type as free text, so the raw column
+# is a long tail of near-misses. Across the 24-month corpus there were 36
+# distinct types, but 24 of them accounted for ~0.45% of nodes — singletons
+# that showed up in the filter rail with the same visual weight as CONCEPT's
+# 4,239. Four failure modes, all visible in that tail:
+#
+#   1. character corruption   COMPAY / COMPARY / COMPONY / COMPAN → COMPANY
+#   2. spelling variants      STOCK_TICKER vs STOCKTICKER (both were in use)
+#   3. value-datatype leak    FLOAT / INTEGER / NUMBER / PERCENTAGE, whose
+#                             "entities" are bare numerals like '677091'
+#   4. column misalignment    the entity's own name landing in the type slot
+#                             (type=TSMC on an entity named 'Ltd'), and one
+#                             case of a rel_cat value (GMM) leaking across
+#
+# This maps onto a closed vocabulary via an explicit allowlist. It is
+# deliberately NON-DESTRUCTIVE: only the type label is rewritten, never the
+# entity name and never the row itself, so anything keyed on entity identity
+# downstream — notably the Spring 2026 team's per-edge GAT scores — still
+# joins. Dropping the junk *entities* is a separate call; see TODO.md.
+
+# Types the UI knows how to color (frontend/components/graphStyles.ts) and
+# that types.ts declares. Underscore-free spelling is canonical: it's what the
+# corpus overwhelmingly uses, and the lookup strips separators anyway.
+_CANONICAL_ENTITY_TYPES = frozenset({
+    "COMPANY",
+    "STOCKTICKER",
+    "FINANCIALENTITY",
+    "SECTOR",
+    "MACROINDICATOR",
+    "ECONINDICATOR",
+    "FININSTRUMENTINFO",
+    "PRODUCT",
+    "DERIVATIVE",
+    "CURRENCY",
+    "BOND",
+    "EVENT",
+    "CONCEPT",
+    "UNK",
+})
+
+# Real categories the model found that the schema doesn't model yet. Passed
+# through rather than crushed to UNK — folding PERSON ('Jensen Huang') or
+# COUNTRY ('China') into UNK would discard correct extractions. Whether to
+# promote these to first-class schema types is a pending team decision.
+_UNMODELED_ENTITY_TYPES = frozenset({
+    "PERSON",
+    "COUNTRY",
+    "LOCATION",
+    "INSTITUTION",
+})
+
+# Corrupted spellings with an unambiguous canonical target. Keys are compared
+# after separators are stripped, so "ECON_INDICTOR" resolves here too.
+_ENTITY_TYPE_ALIASES = {
+    "COMPAY": "COMPANY",
+    "COMPARY": "COMPANY",
+    "COMPONY": "COMPANY",
+    "COMPAN": "COMPANY",
+    "COMPANYNAME": "COMPANY",
+    "ECONINDICTOR": "ECONINDICATOR",
+    "ECONOMICINDICATOR": "ECONINDICATOR",
+    "MACROECONOMICINDICATOR": "MACROINDICATOR",
+    "FINANCIALINSTRUMENT": "FININSTRUMENTINFO",
+    "FININSTRUMENT": "FININSTRUMENTINFO",
+    "TICKER": "STOCKTICKER",
+    "ORGANIZATION": "FINANCIALENTITY",
+    "ORG": "FINANCIALENTITY",
+}
+
+
+def _classify_entity_type(raw: str) -> str:
+    """Map a free-text entity type onto the closed vocabulary.
+
+    Separators and non-letters are stripped before lookup, which collapses the
+    STOCK_TICKER / STOCKTICKER split without needing an entry per variant.
+    Anything unrecognized becomes UNK — that is the point, since the
+    unrecognized values are overwhelmingly parse debris rather than new
+    categories.
+    """
+    key = "".join(ch for ch in str(raw).upper() if ch.isalpha())
+    if not key:
+        return "UNK"
+    key = _ENTITY_TYPE_ALIASES.get(key, key)
+    if key in _CANONICAL_ENTITY_TYPES or key in _UNMODELED_ENTITY_TYPES:
+        return key
+    return "UNK"
+
+
+def _record_type(node_types: dict[str, str], entity: str, entity_type: str) -> None:
+    """Remember an entity's type, letting a known type replace an earlier UNK.
+
+    An entity is usually mentioned many times, and only some of those mentions
+    are mistyped. Taking the first one seen (the previous behavior) meant a
+    single bad mention could leave a well-typed entity stuck on UNK.
+    """
+    current = node_types.get(entity)
+    if current is None or (current == "UNK" and entity_type != "UNK"):
+        node_types[entity] = entity_type
+
+
 # ── Causal-type classification ─────────────────────────────────────────
 # Group free-text relation verbs into a small set of families so the UI
 # can color edges by "what kind of relationship this is" rather than by
@@ -285,11 +386,11 @@ def build_snapshots(source_csv: Path = None) -> dict[str, dict]:
                 if not sub or not obj or not rel:
                     continue
                 rel_cat = _norm(rel_cat)
-                sub_t = _norm(sub_t).upper()
-                obj_t = _norm(obj_t).upper()
+                sub_t = _classify_entity_type(_norm(sub_t))
+                obj_t = _classify_entity_type(_norm(obj_t))
                 edge_counter[(sub, obj, rel, rel_cat)] += 1
-                node_types.setdefault(sub, sub_t)
-                node_types.setdefault(obj, obj_t)
+                _record_type(node_types, sub, sub_t)
+                _record_type(node_types, obj, obj_t)
 
         if not node_types:
             continue

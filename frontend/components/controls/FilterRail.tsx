@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
@@ -9,8 +9,21 @@ import {
   CAUSAL_TYPE_COLORS,
   CAUSAL_TYPE_LABELS,
   ENTITY_COLORS,
+  ENTITY_LABELS,
 } from "@/components/graphStyles";
 import type { Snapshot } from "@/lib/api/types";
+
+// Entity types are a steep long tail: a dozen cover ~99.5% of nodes and the
+// rest are a handful of nodes each. Shown flat, a 1-node type gets the same
+// visual weight as a 4,000-node one.
+//
+// The cut is by share rather than row count, because absolute counts scale
+// with how wide a month range is selected — a fixed "top 8" would collapse
+// EVENT and STOCKTICKER in a single month while leaving noise visible across
+// a merged range. A share keeps the same types visible either way.
+const TYPE_TAIL_SHARE = 0.01;
+/** Never collapse below this many rows, however flat the distribution is. */
+const MIN_TYPE_ROWS = 6;
 
 export interface FilterRailProps {
   snapshot: Snapshot | null;
@@ -61,6 +74,27 @@ export function FilterRail(props: FilterRailProps) {
   const typesSorted = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
   const catsSorted = Object.entries(catCounts).sort((a, b) => b[1] - a[1]);
 
+  const [showAllTypes, setShowAllTypes] = useState(false);
+  const typeTotal = typesSorted.reduce((sum, [, n]) => sum + n, 0);
+  const typeCutoff = Math.min(
+    typesSorted.length,
+    Math.max(
+      MIN_TYPE_ROWS,
+      typesSorted.filter(([, n]) => n >= typeTotal * TYPE_TAIL_SHARE).length
+    )
+  );
+
+  const hiddenTypeCount = Math.max(0, typesSorted.length - typeCutoff);
+  const typesShown =
+    showAllTypes || hiddenTypeCount === 0
+      ? typesSorted
+      : typesSorted.slice(0, typeCutoff);
+  // A type hidden in the tail can still be filtered off, and silently doing so
+  // would look like the filter had broken. Surface it on the toggle instead.
+  const hiddenUnchecked = typesSorted
+    .slice(typeCutoff)
+    .filter(([type]) => !visibleTypes.has(type)).length;
+
   return (
     <aside className="w-72 shrink-0 overflow-y-auto border-r border-border bg-background">
       <div className="px-4 py-4">
@@ -98,12 +132,14 @@ export function FilterRail(props: FilterRailProps) {
         <div className="mb-5 mt-4">
           <Label className="mb-2 block text-xs">Entity types</Label>
           <div className="space-y-1.5">
-            {typesSorted.map(([type, count]) => {
+            {typesShown.map(([type, count]) => {
               const checked = visibleTypes.has(type);
               const color = ENTITY_COLORS[type] ?? "#71717a";
+              const label = ENTITY_LABELS[type] ?? type;
               return (
                 <label
                   key={type}
+                  title={label === type ? undefined : type}
                   className="group flex cursor-pointer items-center gap-2 rounded px-1.5 py-1 text-xs transition hover:bg-accent"
                 >
                   <Checkbox
@@ -114,13 +150,31 @@ export function FilterRail(props: FilterRailProps) {
                     className="inline-block h-2 w-2 shrink-0 rounded-full"
                     style={{ backgroundColor: color }}
                   />
-                  <span className="flex-1 truncate">{type}</span>
+                  <span className="flex-1 truncate">{label}</span>
                   <span className="font-mono text-[10px] tabular-nums text-muted-foreground">
                     {count}
                   </span>
                 </label>
               );
             })}
+            {hiddenTypeCount > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowAllTypes((v) => !v)}
+                className="flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left text-[10px] font-medium text-muted-foreground transition hover:bg-accent hover:text-foreground"
+              >
+                {showAllTypes
+                  ? "Show fewer"
+                  : `Show ${hiddenTypeCount} rarer type${
+                      hiddenTypeCount === 1 ? "" : "s"
+                    }`}
+                {!showAllTypes && hiddenUnchecked > 0 && (
+                  <span className="rounded-sm bg-muted px-1 font-mono text-[9px] text-muted-foreground">
+                    {hiddenUnchecked} hidden
+                  </span>
+                )}
+              </button>
+            )}
             {typesSorted.length === 0 && (
               <p className="text-xs italic text-muted-foreground">no data</p>
             )}
