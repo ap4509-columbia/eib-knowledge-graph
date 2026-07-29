@@ -18,6 +18,8 @@ import {
   HAS_BACKEND,
 } from "@/lib/api/client";
 import type { Index, Snapshot } from "@/lib/api/types";
+import { mergeSnapshots } from "@/lib/mergeSnapshots";
+import { formatMonthRange, monthsBetween } from "@/lib/months";
 import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
@@ -40,9 +42,15 @@ function currentMonthYYYYMM(): string {
 export default function Home() {
   // Data
   const [index, setIndex] = useState<Index | null>(null);
-  const [currentMonth, setCurrentMonth] = useState<string | null>(null);
+  // The timeline selects an inclusive month range. from === to is the
+  // single-month case, which stays the default on load.
+  const [monthFrom, setMonthFrom] = useState<string | null>(null);
+  const [monthTo, setMonthTo] = useState<string | null>(null);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const snapshotCacheRef = useRef<Map<string, Snapshot>>(new Map());
+  // Bumped after a pipeline run so the range effect refetches even when the
+  // selected range itself hasn't changed.
+  const [reloadToken, setReloadToken] = useState(0);
 
   // Filter state
   const [visibleTypes, setVisibleTypes] = useState<Set<string>>(new Set());
@@ -75,7 +83,8 @@ export default function Home() {
       const idx = await fetchIndex();
       setIndex(idx);
       if (idx.latest) {
-        setCurrentMonth(idx.latest);
+        setMonthFrom(idx.latest);
+        setMonthTo(idx.latest);
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -100,23 +109,51 @@ export default function Home() {
     };
   }, [index]);
 
-  const isForecast = !!currentMonth && futureMonths.includes(currentMonth);
+  // Every month the current range covers, chronological.
+  const selectedMonths = useMemo(
+    () => monthsBetween(index?.months ?? [], monthFrom, monthTo),
+    [index, monthFrom, monthTo]
+  );
+  // Primitive key so the fetch effect doesn't re-run on identical ranges.
+  const rangeKey = selectedMonths.join(",");
 
-  // Fetch snapshot whenever currentMonth changes.
+  const isForecast = selectedMonths.some((m) => futureMonths.includes(m));
+
+  // Fetch every month in the range (in parallel, cached per month) and fold
+  // them into one graph. A one-month range short-circuits inside
+  // mergeSnapshots and returns the runner's snapshot untouched.
   useEffect(() => {
-    if (!currentMonth) return;
-    const cached = snapshotCacheRef.current.get(currentMonth);
-    if (cached) {
-      setSnapshot(cached);
+    if (selectedMonths.length === 0) return;
+
+    const cache = snapshotCacheRef.current;
+    const missing = selectedMonths.filter((m) => !cache.has(m));
+
+    const applyFromCache = () => {
+      const snaps = selectedMonths
+        .map((m) => cache.get(m))
+        .filter((s): s is Snapshot => !!s);
+      setSnapshot(mergeSnapshots(snaps));
+    };
+
+    if (missing.length === 0) {
+      applyFromCache();
+      // Clear loading explicitly: an in-flight fetch we just cancelled skips
+      // its own finally, so without this the flag could stay stuck on.
+      setLoading(false);
       return;
     }
+
     let cancelled = false;
     setLoading(true);
-    fetchSnapshot(currentMonth)
-      .then((snap) => {
+    Promise.all(
+      missing.map((m) =>
+        fetchSnapshot(m).then((snap) => [m, snap] as const)
+      )
+    )
+      .then((fetched) => {
         if (cancelled) return;
-        snapshotCacheRef.current.set(currentMonth, snap);
-        setSnapshot(snap);
+        for (const [m, snap] of fetched) cache.set(m, snap);
+        applyFromCache();
       })
       .catch((e) => {
         if (cancelled) return;
@@ -128,7 +165,10 @@ export default function Home() {
     return () => {
       cancelled = true;
     };
-  }, [currentMonth]);
+    // selectedMonths is derived from rangeKey; listing both keeps lint happy
+    // without re-running on an unchanged range.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rangeKey, reloadToken]);
 
   // Initialize filter sets once on the first snapshot.
   // Category filter now keys on causal_type (edge meaning), not on rel_cat.
@@ -175,17 +215,15 @@ export default function Home() {
       await runPipeline();
       snapshotCacheRef.current.clear();
       await loadIndex();
-      if (currentMonth) {
-        const snap = await fetchSnapshot(currentMonth);
-        snapshotCacheRef.current.set(currentMonth, snap);
-        setSnapshot(snap);
-      }
+      // Cache is empty; the bump makes the range effect refetch and re-merge
+      // even if the selected range came back identical.
+      setReloadToken((t) => t + 1);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
       setRunning(false);
     }
-  }, [currentMonth, loadIndex]);
+  }, [loadIndex]);
 
   const handleToggleType = useCallback((type: string) => {
     setVisibleTypes((prev) => {
@@ -227,7 +265,13 @@ export default function Home() {
             </h1>
             <p className="font-mono text-xs text-muted-foreground">
               {snapshot
-                ? `${snapshot.month}  ·  ${snapshot.stats.nodes} entities  ·  ${snapshot.stats.edges} relationships`
+                ? `${formatMonthRange(monthFrom, monthTo)}${
+                    selectedMonths.length > 1
+                      ? `  (${selectedMonths.length} mo)`
+                      : ""
+                  }  ·  ${snapshot.stats.nodes} entities  ·  ${
+                    snapshot.stats.edges
+                  } relationships`
                 : loading
                   ? "loading…"
                   : "no data"}
@@ -331,7 +375,7 @@ export default function Home() {
             {isForecast && (
               <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1.5 text-[11px] text-purple-700 backdrop-blur-md dark:text-purple-200">
                 <span className="font-mono uppercase tracking-wider">
-                  Forecast · {currentMonth}
+                  Forecast · {formatMonthRange(monthFrom, monthTo)}
                 </span>
                 <span className="ml-2 opacity-70">model prediction</span>
               </div>
@@ -343,8 +387,12 @@ export default function Home() {
         <TimeSlider
           months={actualMonths}
           futureMonths={futureMonths}
-          currentMonth={currentMonth}
-          onChange={setCurrentMonth}
+          monthFrom={monthFrom}
+          monthTo={monthTo}
+          onChange={(from, to) => {
+            setMonthFrom(from);
+            setMonthTo(to);
+          }}
         />
 
         <footer className="shrink-0 border-t border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
@@ -367,7 +415,8 @@ export default function Home() {
         open={chatOpen}
         onOpenChange={setChatOpen}
         months={index?.months ?? []}
-        month={currentMonth}
+        monthFrom={monthFrom}
+        monthTo={monthTo}
         focusedEntity={focusedNodeId}
       />
       <GraphSettingsDialog

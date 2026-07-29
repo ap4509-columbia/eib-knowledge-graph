@@ -4,17 +4,29 @@ Follow-ups to pick up when working on the UI or the scraper next.
 
 ## UI
 
-- **Timeline: support a date-range selector, not just a fixed point.**
-  Currently the time slider picks a single month. Team feedback: analysts
-  want to select a range (e.g., "Q1 2020 through Q2 2021") and see the KG
-  aggregated across that window. Requires:
-    - Dual-thumb range slider component (or two-thumb version of current
-      Slider primitive)
-    - Snapshot merger on the fetch side: when a range is picked, union the
-      nodes across all selected months and sum edge weights across the range
-    - "Currently viewing" header updated to show the range instead of one month
-    - Chat panel's month-range picker already does this — the same UX
-      pattern can be lifted to the main timeline
+- ~~**Timeline: support a date-range selector, not just a fixed point.**~~
+  Done. The slider is dual-thumb, months in range are fetched in parallel and
+  folded together by `frontend/lib/mergeSnapshots.ts`, and the header, forecast
+  badge, and node detail sheet all read the range. Preset chips (1M/3M/6M/12M/
+  All) anchor trailing windows on the range's right edge.
+  Follow-ups this opened:
+    - **Min-degree filter over-prunes wide ranges.** The threshold is a
+      percentage of max degree, and hub degrees grow much faster than the tail
+      as months are added — so at the default 5% a 24-month range shows ~28
+      entities where a single month shows ~76. Widening the range makes the
+      graph *smaller*, which reads as a bug. Options: normalize degree per
+      month, switch to an absolute threshold, or keep the percentage and
+      auto-lower it as the range widens. Worth a team call.
+    - **Merged layout is a heuristic, not a re-solved layout.** Positions are
+      precomputed per month by `spring_layout`, and each month's run has an
+      arbitrary rotation/reflection, so they can't be averaged. The merger
+      adopts one month's layout wholesale (most-covered month = anchor), pulls
+      the remaining nodes to their neighbors' centroid over 6 passes, and puts
+      components that never reach the anchor in an outer halo. It renders
+      instantly and is deterministic, but it doesn't reflect merged-graph
+      structure. The physics toggle is the escape hatch. A real fix is
+      precomputing range layouts in the backend, which doesn't scale to every
+      possible range — or accepting a one-off client layout for wide ranges.
 - Confirm all UI code is in the GitHub repo (spot-check `frontend/` after
   every scraper push)
 

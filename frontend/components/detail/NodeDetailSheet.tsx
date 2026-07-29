@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { ENTITY_COLORS } from "@/components/graphStyles";
+import { formatPeriod } from "@/lib/months";
 import { cn } from "@/lib/utils";
 import type { Snapshot } from "@/lib/api/types";
 
@@ -78,7 +79,7 @@ export function NodeDetailSheet({
                 {data.node.id}
               </h2>
               <p className="mt-1 font-mono text-xs text-muted-foreground">
-                {snapshot?.month}  ·  degree {data.node.degree}  ·{" "}
+                {formatPeriod(snapshot)}  ·  degree {data.node.degree}  ·{" "}
                 {data.outgoing.length} out / {data.incoming.length} in
               </p>
             </div>
@@ -154,7 +155,7 @@ export function NodeDetailSheet({
               )}
               {data.outgoing.length === 0 && data.incoming.length === 0 && (
                 <p className="text-xs italic text-muted-foreground">
-                  No relationships in this month.
+                  No relationships in this period.
                 </p>
               )}
             </div>

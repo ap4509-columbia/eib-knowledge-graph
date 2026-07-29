@@ -8,19 +8,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { searchArticles, type ArticleResult } from "@/lib/api/client";
+import { MONTH_NAMES, formatMonth } from "@/lib/months";
 import { cn } from "@/lib/utils";
-
-const MONTH_NAMES = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-];
-
-function formatMonth(m: string | null): string {
-  if (!m) return "—";
-  const [y, mo] = m.split("-").map(Number);
-  if (!y || !mo) return m;
-  return `${MONTH_NAMES[mo - 1]} ${y}`;
-}
 
 function formatDate(d: string): string {
   // "2024-02-15" → "Feb 15, 2024"
@@ -48,7 +37,10 @@ export interface ChatPanelProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   months: string[];
-  month: string | null;
+  /** Start of the range the graph is showing. */
+  monthFrom: string | null;
+  /** End of that range; equal to monthFrom when a single month is selected. */
+  monthTo: string | null;
   focusedEntity: string | null;
 }
 
@@ -56,7 +48,8 @@ export function ChatPanel({
   open,
   onOpenChange,
   months,
-  month,
+  monthFrom: graphMonthFrom,
+  monthTo: graphMonthTo,
   focusedEntity,
 }: ChatPanelProps) {
   const [query, setQuery] = useState("");
@@ -66,13 +59,14 @@ export function ChatPanel({
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Range picker — defaults to the currently-viewed month on both ends.
-  const [monthFrom, setMonthFrom] = useState<string | null>(month);
-  const [monthTo, setMonthTo] = useState<string | null>(month);
+  // Range picker — follows whatever range the graph is showing, but stays
+  // independently adjustable once the panel is open.
+  const [monthFrom, setMonthFrom] = useState<string | null>(graphMonthFrom);
+  const [monthTo, setMonthTo] = useState<string | null>(graphMonthTo);
   useEffect(() => {
-    setMonthFrom(month);
-    setMonthTo(month);
-  }, [month]);
+    setMonthFrom(graphMonthFrom);
+    setMonthTo(graphMonthTo);
+  }, [graphMonthFrom, graphMonthTo]);
 
   useEffect(() => {
     if (monthFrom && monthTo && monthFrom > monthTo) setMonthFrom(monthTo);
@@ -150,7 +144,7 @@ export function ChatPanel({
         const toIdx = monthTo
           ? Math.max(0, months.indexOf(monthTo))
           : months.length - 1;
-        const anchor = month ?? months[months.length - 1];
+        const anchor = graphMonthTo ?? months[months.length - 1];
         const anchorIdx = months.indexOf(anchor);
         const span = toIdx - fromIdx + 1;
 

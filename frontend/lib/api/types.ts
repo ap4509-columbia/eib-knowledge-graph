@@ -72,8 +72,21 @@ export interface EdgeJson {
   score: number | null;
 }
 
+/** Provenance for a snapshot merged from several months (see lib/mergeSnapshots). */
+export interface SnapshotRange {
+  from: string;
+  to: string;
+  /** Every month folded into this snapshot, chronological. */
+  months: string[];
+  /** Month whose precomputed layout seeded the merged positions, if any. */
+  anchor: string | null;
+}
+
 export interface Snapshot {
+  /** "2020-03" for one month, "2020-03..2021-06" when merged over a range. */
   month: string;
+  /** Present only on merged snapshots; absent on runner output. */
+  range?: SnapshotRange;
   stats: { nodes: number; edges: number; scored_edges: number };
   nodes: NodeJson[];
   edges: EdgeJson[];

@@ -88,7 +88,7 @@ export function FilterRail(props: FilterRailProps) {
           />
           <p className="mt-1.5 text-[10px] leading-snug text-muted-foreground">
             Hides nodes with fewer than {minDegree} connection
-            {minDegree === 1 ? "" : "s"} (max this month: {maxDegree}).
+            {minDegree === 1 ? "" : "s"} (max in view: {maxDegree}).
           </p>
         </div>
 

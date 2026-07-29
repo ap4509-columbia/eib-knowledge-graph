@@ -51,7 +51,7 @@ will only succeed for whoever has the source CSV at the expected path
 ┌─────────────────────────┐         ┌──────────────────────────┐
 │  Next.js (Vercel)       │  HTTP   │  FastAPI (local laptop)  │
 │  ─────────────────      │ ──────► │  ─────────────────       │
-│  · time slider          │ ◄────── │  · GET  /api/index       │
+│  · time slider (range)  │ ◄────── │  · GET  /api/index       │
 │  · search + filters     │  JSON   │  · GET  /api/snapshot/   │
 │  · detail panel         │         │  · POST /api/run         │
 │  · refresh button       │         │                          │
