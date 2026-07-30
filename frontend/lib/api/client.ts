@@ -10,7 +10,7 @@
 
 import { API_BASE_URL } from "@/lib/config";
 import { getApiKey, getModel, getProvider } from "@/lib/settings";
-import type { Index, Snapshot } from "./types";
+import type { Index, PredictionsFile, Snapshot } from "./types";
 
 // True when this build has a backend wired in. Driven by the env var so the
 // Vercel static build flips it off and local dev flips it on.
@@ -59,6 +59,18 @@ export async function fetchSnapshot(month: string): Promise<Snapshot> {
     cache: "no-store",
   });
   return jsonOrThrow<Snapshot>(res);
+}
+
+// GAT predictions ship as one file for all periods (~450 KB), so this is
+// cached in-memory after the first fetch — the predictions panel re-reads
+// it on every month change but there's no reason to re-download.
+let PREDICTIONS_CACHE: PredictionsFile | null = null;
+
+export async function fetchPredictions(): Promise<PredictionsFile> {
+  if (PREDICTIONS_CACHE) return PREDICTIONS_CACHE;
+  const res = await fetch(`/data/predictions.json`, { cache: "force-cache" });
+  PREDICTIONS_CACHE = await jsonOrThrow<PredictionsFile>(res);
+  return PREDICTIONS_CACHE;
 }
 
 // ── Article search (browser-side) ──────────────────────────────────────

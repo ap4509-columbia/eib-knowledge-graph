@@ -28,6 +28,9 @@ import { ChatPanel } from "@/components/chat/ChatPanel";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { GraphSettingsDialog } from "@/components/settings/GraphSettingsDialog";
 import { DEFAULT_PHYSICS, type PhysicsSettings } from "@/components/GraphCanvas";
+import { PredictionsView } from "@/components/PredictionsPanel";
+
+type ActiveTab = "graph" | "predictions";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
@@ -74,6 +77,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<ActiveTab>("graph");
 
   // Initial load: index → latest snapshot
   const loadIndex = useCallback(async () => {
@@ -325,19 +329,51 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Body: filter rail | graph */}
+        {/* Safari-style tab strip. Tabs sit in a slightly recessed bar; the
+            active one is filled with the content background and rounded on
+            top corners so it reads as "attached" to the panel below. */}
+        <div className="flex shrink-0 items-end gap-1 border-b border-border bg-muted/60 px-2 pt-2">
+          {(
+            [
+              { id: "graph", label: "Knowledge graph" },
+              { id: "predictions", label: "Predictions" },
+            ] as const
+          ).map((tab) => {
+            const active = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setActiveTab(tab.id)}
+                aria-pressed={active}
+                className={
+                  "relative -mb-px rounded-t-md border px-4 py-2 text-xs font-medium transition " +
+                  (active
+                    ? "border-border border-b-background bg-background text-foreground"
+                    : "border-transparent text-muted-foreground hover:bg-background/50 hover:text-foreground")
+                }
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Body: filter rail (graph tab only) | active tab content */}
         <div className="flex flex-1 overflow-hidden">
-          <FilterRail
-            snapshot={snapshot}
-            visibleTypes={visibleTypes}
-            visibleCategories={visibleCategories}
-            minDegreePct={minDegreePct}
-            minDegree={minDegree}
-            maxDegree={maxDegree}
-            onToggleType={handleToggleType}
-            onToggleCategory={handleToggleCategory}
-            onMinDegreePctChange={setMinDegreePct}
-          />
+          {activeTab === "graph" && (
+            <FilterRail
+              snapshot={snapshot}
+              visibleTypes={visibleTypes}
+              visibleCategories={visibleCategories}
+              minDegreePct={minDegreePct}
+              minDegree={minDegree}
+              maxDegree={maxDegree}
+              onToggleType={handleToggleType}
+              onToggleCategory={handleToggleCategory}
+              onMinDegreePctChange={setMinDegreePct}
+            />
+          )}
 
           <main className="relative flex-1">
             {error && (
@@ -360,30 +396,37 @@ export default function Home() {
                 </div>
               </div>
             )}
-            {loading && !snapshot && !error && (
+            {loading && !snapshot && !error && activeTab === "graph" && (
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
               </div>
             )}
-            <GraphCanvas
-              snapshot={snapshot}
-              filters={{ visibleTypes, visibleCategories, minDegree }}
-              focusedNodeId={focusedNodeId}
-              onNodeClick={handleNodeClick}
-              physics={physics}
-            />
-            {isForecast && (
-              <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1.5 text-[11px] text-purple-700 backdrop-blur-md dark:text-purple-200">
-                <span className="font-mono uppercase tracking-wider">
-                  Forecast · {formatMonthRange(monthFrom, monthTo)}
-                </span>
-                <span className="ml-2 opacity-70">model prediction</span>
-              </div>
+
+            {activeTab === "graph" ? (
+              <>
+                <GraphCanvas
+                  snapshot={snapshot}
+                  filters={{ visibleTypes, visibleCategories, minDegree }}
+                  focusedNodeId={focusedNodeId}
+                  onNodeClick={handleNodeClick}
+                  physics={physics}
+                />
+                {isForecast && (
+                  <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full border border-border bg-muted/80 px-3 py-1.5 text-[11px] text-foreground backdrop-blur-md">
+                    <span className="font-mono uppercase tracking-wider">
+                      Forecast · {formatMonthRange(monthFrom, monthTo)}
+                    </span>
+                    <span className="ml-2 opacity-70">model prediction</span>
+                  </div>
+                )}
+              </>
+            ) : (
+              <PredictionsView monthTo={monthTo} />
             )}
           </main>
         </div>
 
-        {/* Time slider */}
+        {/* Time slider — shared control for both tabs */}
         <TimeSlider
           months={actualMonths}
           futureMonths={futureMonths}

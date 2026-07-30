@@ -91,3 +91,39 @@ export interface Snapshot {
   nodes: NodeJson[];
   edges: EdgeJson[];
 }
+
+// ── GAT predictions (FinDKG-style leaderboard) ────────────────────────────
+// Produced by scripts/compute_gat_predictions.py from the CE No-Edge-Feats
+// checkpoints. One entry per validation period; the first period has no
+// weights (no prior training window) and is absent from `periods`.
+
+export interface PredictedImpactedEntity {
+  entity: string;
+  type: string;
+  score: number;
+}
+
+export interface PredictionEntry {
+  entity: string;
+  entity_type: string;
+  /** Higher = more influential in the period's KG (100 = rank 1). */
+  rank_percentile: number;
+  /** Positive = spiking, negative = quieting. Standardized within the period. */
+  novelty_z: number;
+  /** Edge count in [P-2, P-1, P]; left-zero-padded at the corpus start. */
+  trend_3m: [number, number, number];
+  predicted_impacted: PredictedImpactedEntity[];
+}
+
+export interface PredictionPeriod {
+  period: string;
+  total_entities: number;
+  entries: PredictionEntry[];
+}
+
+export interface PredictionsFile {
+  model: string;
+  strategy: string;
+  mrr: number;
+  periods: Record<string, PredictionPeriod>;
+}

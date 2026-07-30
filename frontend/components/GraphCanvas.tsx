@@ -64,6 +64,10 @@ export function GraphCanvas({
   const cyRef = useRef<Core | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const layoutRef = useRef<any>(null);
+  // rAF handle for the deferred cy.fit() so we can cancel it if the effect
+  // re-runs (or the component unmounts) before the frame fires — otherwise
+  // switching tabs mid-frame crashes with Core.headless on a destroyed cy.
+  const pendingFitRef = useRef<number | null>(null);
   const onNodeClickRef = useRef(onNodeClick);
   onNodeClickRef.current = onNodeClick;
   const [tooltip, setTooltip] = useState<EdgeTooltip | null>(null);
@@ -123,6 +127,10 @@ export function GraphCanvas({
     resizeObs.observe(container);
 
     return () => {
+      if (pendingFitRef.current !== null) {
+        cancelAnimationFrame(pendingFitRef.current);
+        pendingFitRef.current = null;
+      }
       resizeObs.disconnect();
       try {
         layoutRef.current?.stop?.();
@@ -230,7 +238,15 @@ export function GraphCanvas({
 
     // Fit the viewport once so everything is visible, then hand control to
     // the user. No continuous refit — positions are stable.
-    requestAnimationFrame(() => {
+    // Cancel any prior pending fit before scheduling a new one; guard the
+    // callback against cy having been destroyed between the schedule and the
+    // frame firing (happens on rapid tab switches).
+    if (pendingFitRef.current !== null) {
+      cancelAnimationFrame(pendingFitRef.current);
+    }
+    pendingFitRef.current = requestAnimationFrame(() => {
+      pendingFitRef.current = null;
+      if (cyRef.current !== cy || cy.destroyed()) return;
       cy.resize();
       cy.fit(undefined, 40);
     });
