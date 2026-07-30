@@ -55,8 +55,6 @@ export function TimeSlider({
 
   const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
   const futureStartPct = total > 1 ? (months.length / (total - 1)) * 100 : 100;
-  // Kept off the extremes so the centered label never hangs off the edge.
-  const labelPct = Math.min(94, Math.max(6, (pct(fromIdx) + pct(toIdx)) / 2));
 
   const emit = (a: number, b: number) => {
     const lo = allMonths[clampIdx(Math.min(a, b))];
@@ -95,24 +93,17 @@ export function TimeSlider({
 
   return (
     <div className="border-t border-border bg-background/80 px-6 pb-3 pt-3 backdrop-blur">
-      {/* Label row: a single month floats over its thumb (keeps the scrubber
-          feel), a multi-month range reads as a static heading on the left so
-          it can't collide with the preset chips. */}
-      <div className="relative mb-2 flex h-6 items-start">
-        <div
-          className={cn(
-            "top-0",
-            isSingle
-              ? "absolute -translate-x-1/2 transition-[left] duration-100"
-              : "shrink-0"
-          )}
-          style={isSingle ? { left: `${labelPct}%` } : undefined}
-        >
+      {/* Label row: date chip pinned left, preset chips pinned right, with a
+          gap between them so the chip can never overlap the presets even at
+          the far edges of the range. min-w-0 lets the chip truncate rather
+          than push into the preset zone if the corpus/format ever grows. */}
+      <div className="mb-2 flex h-6 items-start gap-3">
+        <div className="min-w-0 shrink">
           <span
             className={cn(
               "inline-flex items-center gap-1.5 whitespace-nowrap rounded-md border px-2 py-0.5 font-mono text-xs font-semibold tabular-nums shadow-sm",
               touchesFuture
-                ? "border-purple-500/40 bg-purple-500/10 text-purple-700 dark:text-purple-300"
+                ? "border-border bg-muted text-foreground"
                 : "border-border bg-background text-foreground"
             )}
           >
@@ -129,7 +120,7 @@ export function TimeSlider({
               </>
             )}
             {touchesFuture && (
-              <span className="rounded-sm bg-purple-500/20 px-1 text-[8px] uppercase tracking-wider">
+              <span className="rounded-sm bg-muted-foreground/20 px-1 text-[8px] uppercase tracking-wider">
                 forecast
               </span>
             )}
@@ -165,7 +156,7 @@ export function TimeSlider({
         {/* Future-zone backdrop — diagonal stripes to signal "beyond the data" */}
         {futureMonths.length > 0 && (
           <div
-            className="pointer-events-none absolute -inset-y-3 z-0 rounded-sm bg-[length:6px_6px] bg-[linear-gradient(45deg,transparent_25%,rgba(168,85,247,0.10)_25%,rgba(168,85,247,0.10)_50%,transparent_50%,transparent_75%,rgba(168,85,247,0.10)_75%)]"
+            className="pointer-events-none absolute -inset-y-3 z-0 rounded-sm bg-[length:6px_6px] bg-[linear-gradient(45deg,transparent_25%,rgba(120,120,120,0.10)_25%,rgba(120,120,120,0.10)_50%,transparent_50%,transparent_75%,rgba(120,120,120,0.10)_75%)]"
             style={{
               left: `${futureStartPct}%`,
               right: 0,
@@ -208,7 +199,7 @@ export function TimeSlider({
                   "absolute top-0 w-px -translate-x-1/2",
                   isJan ? "h-2.5" : "h-1.5",
                   isFutureTick
-                    ? "bg-purple-500/50"
+                    ? "bg-muted-foreground/50"
                     : inRange
                       ? "bg-primary"
                       : isJan
@@ -235,7 +226,7 @@ export function TimeSlider({
           {/* "forecast →" hint at the start of the future zone */}
           {futureMonths.length > 0 && (
             <span
-              className="absolute font-mono text-[9px] uppercase tracking-wider text-purple-500/80"
+              className="absolute font-mono text-[9px] uppercase tracking-wider text-muted-foreground"
               style={{ left: `${futureStartPct}%`, paddingLeft: 4 }}
               aria-hidden
             >
