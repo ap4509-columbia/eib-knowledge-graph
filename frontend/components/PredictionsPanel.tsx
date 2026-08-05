@@ -6,14 +6,15 @@
 // MRR 0.7746), baked into a static JSON by
 // scripts/compute_gat_predictions.py.
 //
-// Columns match the FinDKG reference:
-//   Top KG Entity | Entity Type | Rank Percentile | Novelty (z-score) |
-//   Recent 3-mo Trend (sparkline) | Predicted Most Impacted Financial Entities
+// Columns (rewritten to be readable to non-engineers):
+//   # | Entity | Type | Activity | 3-mo trend | Predicted most impacted
 //
-// Multi-month ranges show the LAST month in the range — the data is
-// per-period, and averaging would obscure the "what changed most recently"
-// signal that motivates this table. The timeline slider below the tabs
-// updates both this view and the graph tab.
+// The extraction pipeline emits a lot of generic phrases ("Quarterly
+// Results", "Cash Dividend") and stray numerals as pseudo-entities. Those
+// are filtered out at generation time so the leaderboard shows real named
+// entities only. Score numbers on the impacted list are hidden — ordinal
+// position carries the strength signal; the raw dot products are not
+// meaningful to an analyst.
 
 import { useEffect, useMemo, useState } from "react";
 import { Loader2 } from "lucide-react";
@@ -65,22 +66,36 @@ function Sparkline({ values }: { values: readonly number[] }) {
   );
 }
 
-function NoveltyCell({ z }: { z: number }) {
-  // Divergent scale, muted: positive = subtle green (spike above baseline),
-  // near-zero = plain muted, negative = plain muted (a "quieting" cell is
-  // less interesting than a spike, so it doesn't need its own color).
-  // Threshold |z|=1 matches the way a standard-deviation move reads to the
-  // eye without being noisy for normal months.
+function ActivityCell({ z }: { z: number }) {
+  // Plain-English label instead of a bare z-score number. Thresholds
+  // chosen at |z| = 1 (one standard-deviation move) and |z| = 2 (rare).
   const abs = Math.abs(z);
-  const showAccent = abs >= 1 && z > 0;
-  const cls = showAccent
-    ? "text-emerald-800 dark:text-emerald-500"
-    : "text-muted-foreground";
-  const marker = abs < 1 ? " " : z > 0 ? "↑" : "↓";
+  const positive = z > 0;
+
+  let label: string;
+  let cls: string;
+
+  if (abs < 1) {
+    label = "Stable";
+    cls = "text-muted-foreground";
+  } else if (abs < 2) {
+    label = positive ? "Rising" : "Cooling";
+    cls = positive
+      ? "text-emerald-800 dark:text-emerald-500"
+      : "text-muted-foreground";
+  } else {
+    label = positive ? "Spiking" : "Quiet";
+    cls = positive
+      ? "text-emerald-800 dark:text-emerald-500 font-medium"
+      : "text-muted-foreground";
+  }
+
   return (
-    <span className={`font-mono text-xs tabular-nums ${cls}`}>
-      {marker} {z > 0 ? "+" : ""}
-      {z.toFixed(2)}
+    <span
+      className={`text-xs ${cls}`}
+      title={`Activity z-score vs. this entity's own history: ${z.toFixed(2)}`}
+    >
+      {label}
     </span>
   );
 }
@@ -102,32 +117,17 @@ function EntityChip({ name, type }: { name: string; type: string }) {
   );
 }
 
-function RankBar({ pct }: { pct: number }) {
-  // Percentile as a small solid bar in a neutral tone — the number stays as
-  // the source of truth; the bar just lets the eye compare rows quickly.
-  return (
-    <div className="flex items-center gap-2">
-      <div className="h-1 w-14 overflow-hidden rounded-sm bg-muted">
-        <div
-          className="h-full bg-foreground/60"
-          style={{ width: `${Math.max(0, Math.min(100, pct))}%` }}
-        />
-      </div>
-      <span className="font-mono text-xs tabular-nums text-muted-foreground">
-        {pct.toFixed(1)}%
-      </span>
-    </div>
-  );
-}
-
 const COLS =
-  "grid grid-cols-[minmax(12rem,1fr)_9rem_10rem_5rem_4rem_minmax(0,2.2fr)] items-center gap-4";
+  "grid grid-cols-[2.5rem_minmax(11rem,1fr)_8rem_5.5rem_4rem_minmax(0,2.5fr)] items-center gap-4";
 
 function EntryRow({ entry }: { entry: PredictionEntry }) {
   return (
     <div
       className={`${COLS} border-b border-border/60 px-6 py-2.5 text-xs last:border-b-0 hover:bg-accent/30`}
     >
+      <div className="font-mono text-xs tabular-nums text-muted-foreground">
+        #{entry.rank}
+      </div>
       <div className="truncate font-medium text-foreground">{entry.entity}</div>
       <div>
         <EntityChip
@@ -135,13 +135,12 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
           type={entry.entity_type}
         />
       </div>
-      <RankBar pct={entry.rank_percentile} />
-      <NoveltyCell z={entry.novelty_z} />
+      <ActivityCell z={entry.novelty_z} />
       <Sparkline values={entry.trend_3m} />
       <div className="flex flex-wrap gap-1 overflow-hidden">
         {entry.predicted_impacted.length === 0 ? (
           <span className="text-[10px] italic text-muted-foreground">
-            no financial targets in top ranks
+            (no strong targets)
           </span>
         ) : (
           entry.predicted_impacted.map((imp) => (
@@ -175,7 +174,7 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
 
   return (
     <div className="flex h-full flex-col overflow-hidden bg-background">
-      {/* Metadata strip — mirrors the header meta line on the graph tab */}
+      {/* Metadata strip */}
       <div className="flex shrink-0 items-center justify-between border-b border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
         <span>
           {monthTo ? (
@@ -191,6 +190,15 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
             {data.model} · rolling-window MRR {data.mrr.toFixed(3)}
           </span>
         )}
+      </div>
+
+      {/* One-line legend so a first-time viewer knows what they're looking at */}
+      <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-2 text-[11px] leading-relaxed text-muted-foreground">
+        Entities ranked by how strongly the GAT model predicts links from them
+        to the rest of the graph in this month. <span className="text-foreground">Activity</span> compares the
+        entity's news volume in the last 3 months to its own history. <span className="text-foreground">3-mo trend</span> shows
+        month-by-month article counts. <span className="text-foreground">Predicted most impacted</span> lists the top
+        financial entities the model expects to move with this one.
       </div>
 
       {error && (
@@ -232,24 +240,23 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
           <div
             className={`${COLS} shrink-0 border-b border-border bg-muted/40 px-6 py-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground`}
           >
-            <div>Top KG entity</div>
-            <div>Entity type</div>
-            <div>Rank percentile</div>
-            <div>Novelty (z)</div>
+            <div>#</div>
+            <div>Entity</div>
+            <div>Type</div>
+            <div>Activity</div>
             <div>3-mo trend</div>
-            <div>Predicted most impacted financial entities</div>
+            <div>Predicted most impacted</div>
           </div>
           <div className="flex-1 overflow-y-auto">
             {period.entries.map((entry) => (
               <EntryRow key={entry.entity} entry={entry} />
             ))}
             <div className="border-t border-border/50 px-6 py-3 text-[10px] leading-relaxed text-muted-foreground">
-              Top {period.entries.length} of {period.total_entities} entities
-              active in <span className="font-mono">{period.period}</span>.
-              Ranked by mean outgoing GAT prediction score; novelty z-score
-              standardizes each entity's 3-month activity against its own
-              prior baseline; impacted entities are the highest-scoring
-              financial-type targets from the GAT embedding.
+              Showing top {period.entries.length} named entities of{" "}
+              {period.total_entities} active in{" "}
+              <span className="font-mono">{period.period}</span>. Generic
+              phrases ("Quarterly Results", "Cash Dividend") and stray
+              numerals are filtered out; near-duplicate entities are deduped.
             </div>
           </div>
         </>

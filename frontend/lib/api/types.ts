@@ -100,14 +100,13 @@ export interface Snapshot {
 export interface PredictedImpactedEntity {
   entity: string;
   type: string;
-  score: number;
 }
 
 export interface PredictionEntry {
+  /** 1-based position in the per-month leaderboard. */
+  rank: number;
   entity: string;
   entity_type: string;
-  /** Higher = more influential in the period's KG (100 = rank 1). */
-  rank_percentile: number;
   /** Positive = spiking, negative = quieting. Standardized within the period. */
   novelty_z: number;
   /** Edge count in [P-2, P-1, P]; left-zero-padded at the corpus start. */

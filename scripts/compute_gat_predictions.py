@@ -13,6 +13,7 @@ Requires Pierre's fork on disk (weights + gat_model + gat_utils), and the
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -50,13 +51,31 @@ OUTPUT_PATH = (
     / "predictions.json"
 )
 
-TOP_ENTITIES_PER_PERIOD = 20
+TOP_ENTITIES_PER_PERIOD = 15
 TOP_IMPACTED_PER_ENTITY = 5
 
-# Which entity types count as "financial" for the "Predicted Most Impacted
-# Financial Entities" column. Same set drives the label list — anything else
-# is dropped from the impacted list, but still allowed as a source entity.
-FINANCIAL_TYPES = {
+# Source entities allowed into the "Top KG Entities" leaderboard. Deliberately
+# narrow — only unambiguously named things (companies, tickers, sectors, named
+# institutions). CONCEPT / PRODUCT / EVENT / UNK / CURRENCY are excluded
+# because they were dominated by generic phrases ("Company Performance",
+# "Stock Price") or stray numerals. MACRO/ECON indicators are also excluded
+# even though they're a real ontology type — the LLM extractor overuses them
+# for quarterly-reporting boilerplate ("Quarterly Results", "Next Quarter EPS",
+# "Adjusted Earnings"), not for actual macro indicators like GDP or CPI.
+SOURCE_TYPES = {
+    "COMPANY",
+    "STOCKTICKER",
+    "STOCK_TICKER",
+    "FINANCIALENTITY",
+    "FINANCIAL_ENTITY",
+    "SECTOR",
+    "BOND",
+}
+
+# Impacted-target types (right-hand column). Slightly broader than source
+# types — allow financial instruments and derivatives here even though they
+# make weak sources, because they're informative as *predicted outcomes*.
+IMPACTED_TYPES = {
     "COMPANY",
     "STOCKTICKER",
     "STOCK_TICKER",
@@ -69,10 +88,72 @@ FINANCIAL_TYPES = {
     "FININSTRUMENTINFO",
     "FIN_INSTRUMENT_INFO",
     "BOND",
-    "CURRENCY",
     "DERIVATIVE",
     "SECTOR",
 }
+
+# Regex families for junk entities the LLM extractor emits.
+JUNK_PATTERNS = [
+    re.compile(r"^\d+$"),                                    # "50", "1840"
+    re.compile(r"^\d+\.?\d*\s*(k|m|b|bn|billion|million|trillion)?\s*(usd|eur|gbp|dollars)?$", re.I),
+    re.compile(r"^\d+\s*Strike\s*(Call|Put)\s*Option$", re.I),
+    re.compile(r"^\d+\s*USD$", re.I),
+    # Quarterly-reporting boilerplate: "Q1 2021", "Q3 Loss", "SecondQuarter …",
+    # "FirstQuarter …", "Next Quarter EPS", "Fiscal FirstQuarter Revenue".
+    re.compile(r"^Q[1-4]\b", re.I),
+    re.compile(r"^(First|Second|Third|Fourth|Next)\s?Quarter\b", re.I),
+    re.compile(r"^Fiscal\s+(First|Second|Third|Fourth)\s?Quarter\b", re.I),
+    re.compile(r"^Quarterly\b", re.I),
+    # Percent-only strings the extractor tags as entities: "129 Percent".
+    re.compile(r"^\d+\s*Percent$", re.I),
+]
+
+# Generic-phrase blocklist — LLM-emitted noise that passed type filtering.
+# Curated from a survey of the previous prediction output.
+GENERIC_NAME_BLOCKLIST = {
+    # Prices
+    "stock price", "stock prices", "ipo price", "share price", "price",
+    # Company boilerplate
+    "company performance", "financial performance", "profitability",
+    "revenue decline", "revenue drop", "revenue growth", "revenue",
+    "cash per share amount", "cash dividend",
+    # After-hours movement
+    "extended hours gains", "extended hours losses",
+    "extendedhours gains", "extendedhours losses",
+    # Margins / earnings
+    "operating margin", "gross margin", "gross margins", "margins", "margin",
+    "net income", "earnings", "adjusted earnings", "earnings per share",
+    "profit", "profits", "growth", "growth rate", "sales", "sales growth",
+    # Forecasts / estimates
+    "forecast", "guidance", "analyst estimates", "estimates", "estimate",
+    # Returns / values
+    "value", "year to date performance", "annualized total return",
+    # Generic sector names
+    "chip stocks", "tech stocks", "semiconductor stocks",
+}
+
+
+def is_junk_entity(name: str) -> bool:
+    """True if the entity string is extraction noise, not a real entity."""
+    if not name or not name.strip():
+        return True
+    if name.lower() in GENERIC_NAME_BLOCKLIST:
+        return True
+    for p in JUNK_PATTERNS:
+        if p.match(name.strip()):
+            return True
+    return False
+
+
+def normalise_name(name: str) -> str:
+    """Cheap normalisation for the near-alias dedupe pass."""
+    n = name.lower()
+    # Drop common corporate suffixes so "Texas Instruments Inc" ≈ "Texas Instruments".
+    for suffix in [" inc", " inc.", " corp", " corp.", " co.", " co", " ltd",
+                   " ltd.", " plc", " sa", " nv", " ag", " gmbh", " llc"]:
+        if n.endswith(suffix):
+            n = n[: -len(suffix)]
+    return re.sub(r"[^a-z0-9]", "", n)
 
 
 def build_graph(df_slice: pd.DataFrame, rel2id, cat2id) -> nx.DiGraph:
@@ -220,57 +301,70 @@ def compute_period_predictions(
     scores = emb_np @ emb_np.T  # [N, N]
     np.fill_diagonal(scores, -np.inf)
 
-    # Importance ranking: mean outgoing score (rewards nodes whose embedding
-    # predicts many strong links across the graph, without being dominated by
-    # a single outlier target).
+    # Importance ranking: mean outgoing score across the graph.
     importance = np.mean(np.where(scores > -np.inf, scores, 0), axis=1)
     order = np.argsort(-importance)
 
-    # Top-N by importance
-    top_n_idx = order[:TOP_ENTITIES_PER_PERIOD]
-    top_entities = [nodes_list[i] for i in top_n_idx]
-
-    novelty = compute_novelty(df, period, top_entities)
-    trend = compute_trend_3m(df, period, top_entities)
-
-    # Rank percentile within the period. Rank 1 → 100%, last → ~0%.
+    # Walk the ranking and pick the top-N *after* filtering junk types and
+    # deduping near-alias pairs (TXN + Texas Instruments Inc etc). We
+    # oversample because ~half the raw top rows are CONCEPT / bare numerals.
     n_total = len(nodes_list)
-    rank_percentile = {}
-    for rank, i in enumerate(order):
-        rank_percentile[nodes_list[i]] = round(
-            100.0 * (n_total - rank) / n_total, 1
-        )
+    top_entities: list[tuple[int, str, str]] = []  # (idx, name, normalised)
+    seen_norm: set[str] = set()
 
-    # Top-K predicted impacted financial entities per source entity.
+    for i in order:
+        if len(top_entities) >= TOP_ENTITIES_PER_PERIOD:
+            break
+        name = nodes_list[i]
+        t = node_map.get(name, "UNK")
+        if t not in SOURCE_TYPES:
+            continue
+        if is_junk_entity(name):
+            continue
+        norm = normalise_name(name)
+        if not norm or norm in seen_norm:
+            continue
+        seen_norm.add(norm)
+        top_entities.append((i, name, norm))
+
+    top_entity_names = [n for _, n, _ in top_entities]
+
+    novelty = compute_novelty(df, period, top_entity_names)
+    trend = compute_trend_3m(df, period, top_entity_names)
+
+    # Top-K predicted impacted entities per source. Filter junk, dedupe
+    # aliases against the source and against each other. Score is dropped
+    # from the output — ordinal position carries the strength signal in the
+    # UI and raw dot products aren't interpretable to end users.
     entries = []
-    for i in top_n_idx:
-        src_name = nodes_list[i]
+    for rank_idx, (i, src_name, src_norm) in enumerate(top_entities, start=1):
         src_type = node_map.get(src_name, "UNK")
 
         row_scores = scores[i]
         candidate_order = np.argsort(-row_scores)
 
         impacted = []
+        impacted_norms: set[str] = {src_norm}
         for j in candidate_order:
             if len(impacted) >= TOP_IMPACTED_PER_ENTITY:
                 break
             tgt_name = nodes_list[j]
             tgt_type = node_map.get(tgt_name, "UNK")
-            if tgt_type not in FINANCIAL_TYPES:
+            if tgt_type not in IMPACTED_TYPES:
                 continue
-            impacted.append(
-                {
-                    "entity": tgt_name,
-                    "type": tgt_type,
-                    "score": round(float(row_scores[j]), 4),
-                }
-            )
+            if is_junk_entity(tgt_name):
+                continue
+            tgt_norm = normalise_name(tgt_name)
+            if not tgt_norm or tgt_norm in impacted_norms:
+                continue
+            impacted_norms.add(tgt_norm)
+            impacted.append({"entity": tgt_name, "type": tgt_type})
 
         entries.append(
             {
+                "rank": rank_idx,
                 "entity": src_name,
                 "entity_type": src_type,
-                "rank_percentile": rank_percentile[src_name],
                 "novelty_z": round(novelty.get(src_name, 0.0), 3),
                 "trend_3m": trend.get(src_name, [0, 0, 0]),
                 "predicted_impacted": impacted,
