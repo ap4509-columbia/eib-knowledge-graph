@@ -179,7 +179,8 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
         <span>
           {monthTo ? (
             <>
-              Top KG entities for <span className="text-foreground">{monthTo}</span>
+              Most-connected entities for{" "}
+              <span className="text-foreground">{monthTo}</span>
             </>
           ) : (
             "Select a month below"
@@ -192,13 +193,33 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
         )}
       </div>
 
-      {/* One-line legend so a first-time viewer knows what they're looking at */}
-      <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-2 text-[11px] leading-relaxed text-muted-foreground">
-        Entities ranked by how strongly the GAT model predicts links from them
-        to the rest of the graph in this month. <span className="text-foreground">Activity</span> compares the
-        entity's news volume in the last 3 months to its own history. <span className="text-foreground">3-mo trend</span> shows
-        month-by-month article counts. <span className="text-foreground">Predicted most impacted</span> lists the top
-        financial entities the model expects to move with this one.
+      {/* What the model actually predicts. This section exists because
+          "predictions" reads as "price forecasts" — it isn't. The GAT is a
+          link-prediction model: it predicts which entities are related in
+          the knowledge graph. */}
+      <div className="shrink-0 space-y-2 border-b border-border/60 bg-muted/20 px-6 py-3 text-[11px] leading-relaxed text-muted-foreground">
+        <div>
+          <span className="font-medium text-foreground">What this table shows.</span>{" "}
+          The entities the model considers most central to this month's news
+          graph, and — for each — the other entities the model expects to be
+          most closely connected to them. The GAT does <em>not</em> predict
+          prices or specific events; it predicts <em>which entities relate to
+          which</em>. Read it as: "when entity A is in the news, the model
+          expects entity B to be in the news too."
+        </div>
+        <div>
+          <span className="font-medium text-foreground">Columns.</span>{" "}
+          <span className="text-foreground">#</span> is the model's
+          influence ranking for this month.{" "}
+          <span className="text-foreground">Activity</span> compares the
+          entity's news volume in the last 3 months to its own baseline
+          (Spiking / Rising / Stable / Cooling / Quiet).{" "}
+          <span className="text-foreground">3-mo trend</span> is the raw
+          article count month by month.{" "}
+          <span className="text-foreground">Predicted co-movers</span> are the
+          top-5 financial entities the model links most strongly to this one,
+          ordered strongest first.
+        </div>
       </div>
 
       {error && (
@@ -245,7 +266,7 @@ export function PredictionsView({ monthTo }: PredictionsViewProps) {
             <div>Type</div>
             <div>Activity</div>
             <div>3-mo trend</div>
-            <div>Predicted most impacted</div>
+            <div>Predicted co-movers</div>
           </div>
           <div className="flex-1 overflow-y-auto">
             {period.entries.map((entry) => (
