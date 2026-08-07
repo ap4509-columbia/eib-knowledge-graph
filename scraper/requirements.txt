@@ -4,3 +4,7 @@ pandas>=2.0
 PyYAML>=6.0
 google-genai>=1.0
 python-dotenv>=1.0
+# networkx powers the spring_layout call in scraper/snapshots.py; scipy is
+# a soft dependency of networkx that spring_layout needs at graph scale.
+networkx>=3.0
+scipy>=1.11
