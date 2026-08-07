@@ -186,16 +186,16 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         "target-arrow-shape": "triangle",
         "arrow-scale": 0.6,
         opacity: 0.55,
-        // Edge labels — the extracted verb, rotated along the edge. Dim
-        // and small by default (so a dense graph still reads), full-size
-        // and full-opacity on hover.
+        // Edge label — the extracted verb, rotated along the edge. Hidden
+        // by default so dense graphs stay readable; the label pops on
+        // hover (see the .hovered rule below).
         label: "data(rel)",
         "font-size": 6,
         color: p.textColor,
-        "text-opacity": 0.4,
+        "text-opacity": 0,
         "text-outline-color": p.textOutlineColor,
         "text-outline-width": 1,
-        "text-outline-opacity": 0.5,
+        "text-outline-opacity": 0,
         "text-rotation": "autorotate",
         "text-margin-y": -3,
       },
