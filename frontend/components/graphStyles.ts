@@ -218,10 +218,12 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         "target-arrow-color": p.hoveredEdgeColor,
         opacity: 1,
         "z-index": 99,
-        // Label pops on hover: bigger + fully opaque + outlined.
-        "font-size": 11,
+        // Label reveals on hover — same 6px as the default rule so it
+        // doesn't grow / jump. Outlined so it stays readable over other
+        // edges and node fills.
+        "font-size": 6,
         "text-opacity": 1,
-        "text-outline-width": 2.5,
+        "text-outline-width": 1.5,
         "text-outline-opacity": 1,
       },
     },
