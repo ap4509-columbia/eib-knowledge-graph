@@ -92,6 +92,22 @@ export interface Snapshot {
   edges: EdgeJson[];
 }
 
+// ── Data-source index (multi-corpus support) ──────────────────────────────
+
+export interface DataSource {
+  id: string;
+  label: string;
+  description: string;
+  kind: "historical" | "live";
+  /** false = "coming soon" placeholder; the dropdown disables the option. */
+  available: boolean;
+}
+
+export interface SourcesFile {
+  default: string;
+  sources: DataSource[];
+}
+
 // ── GAT predictions (FinDKG-style leaderboard) ────────────────────────────
 // Produced by scripts/compute_gat_predictions.py from the CE No-Edge-Feats
 // checkpoints. One entry per validation period; the first period has no

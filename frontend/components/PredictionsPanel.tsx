@@ -7,7 +7,7 @@
 // scripts/compute_gat_predictions.py.
 //
 // Columns:
-//   # | Entity | Type | Activity | 3-mo trend | Predicted co-movers
+//   # | Entity | Type | Activity | News volume (3mo) | Predicted co-movers
 //
 // The extraction pipeline emits generic phrases ("Quarterly Results") and
 // stray numerals as pseudo-entities. Those are filtered at generation time
@@ -31,6 +31,8 @@ import type {
 import { ENTITY_COLORS, ENTITY_LABELS } from "@/components/graphStyles";
 
 interface PredictionsViewProps {
+  /** Which corpus the predictions come from. Fetched per-source. */
+  sourceId: string;
   /** The right edge of the currently-selected month range. */
   monthTo: string | null;
   /** Entity types the user has toggled on in the filter rail. Applied to
@@ -310,10 +312,10 @@ function AboutSection() {
               </li>
               <li>
                 <span className="font-medium text-foreground">
-                  3-mo trend
+                  News volume (3mo)
                 </span>{" "}
-                — actual article count for [3 months ago, 2 months ago, this
-                month].
+                — sparkline of the number of news articles this entity
+                appeared in during each of the last 3 months.
               </li>
               <li>
                 <span className="font-medium text-foreground">
@@ -331,6 +333,7 @@ function AboutSection() {
 }
 
 export function PredictionsView({
+  sourceId,
   monthTo,
   visibleTypes,
 }: PredictionsViewProps) {
@@ -338,10 +341,13 @@ export function PredictionsView({
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchPredictions()
+    if (!sourceId) return;
+    setData(null);
+    setError(null);
+    fetchPredictions(sourceId)
       .then(setData)
       .catch((e) => setError(e instanceof Error ? e.message : String(e)));
-  }, []);
+  }, [sourceId]);
 
   const rawPeriod: PredictionPeriod | null = useMemo(() => {
     if (!data || !monthTo) return null;
@@ -448,13 +454,13 @@ export function PredictionsView({
               Activity
             </div>
             <div title="Article count for the last 3 months.">
-              3-mo trend
+              News volume (3mo)
             </div>
             <div title="Top 5 financial entities the model links most strongly to this one, ordered strongest first. This is the model's prediction.">
               Predicted co-movers
             </div>
           </div>
-          <div className="flex-1 overflow-y-auto">
+          <div className="min-h-0 flex-1 overflow-y-auto">
             {period.entries.map((entry) => (
               <EntryRow key={entry.entity} entry={entry} />
             ))}

@@ -1,0 +1,47 @@
+{
+  "default": "fnspid-19-20-semis",
+  "sources": [
+    {
+      "id": "fnspid-19-20-semis",
+      "label": "FNSPID — US semiconductors (2019–2020)",
+      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
+      "kind": "historical",
+      "available": true
+    },
+    {
+      "id": "us-semis-live",
+      "label": "US semiconductors — live",
+      "description": "Google News RSS + regulator feeds, US semiconductor watchlist. Updates daily. Coming soon.",
+      "kind": "live",
+      "available": false
+    },
+    {
+      "id": "eu-utilities-live",
+      "label": "EU utilities — live",
+      "description": "Google News RSS + regulator feeds, EU utilities watchlist. Updates daily. Coming soon.",
+      "kind": "live",
+      "available": false
+    },
+    {
+      "id": "eu-banks-live",
+      "label": "EU banks — live",
+      "description": "Google News RSS + regulator feeds, EU banks watchlist. Updates daily. Coming soon.",
+      "kind": "live",
+      "available": false
+    },
+    {
+      "id": "eu-regulators-live",
+      "label": "EU regulators — live",
+      "description": "ECB / ESMA / BoE press-release feeds. Updates daily. Coming soon.",
+      "kind": "live",
+      "available": false
+    },
+    {
+      "id": "stoxx-600-live",
+      "label": "STOXX Europe 600 — live",
+      "description": "Google News RSS across the STOXX Europe 600 constituent watchlist. Updates daily. Coming soon.",
+      "kind": "live",
+      "available": false
+    }
+  ]
+}

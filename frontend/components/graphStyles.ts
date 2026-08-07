@@ -186,15 +186,16 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         "target-arrow-shape": "triangle",
         "arrow-scale": 0.6,
         opacity: 0.55,
-        // Edge labels — the extracted verb, rotated along the edge so the
-        // meaning is readable without cross-referencing the colour legend.
-        // Small font, outlined text so it stays legible over overlapping
-        // edges and node fills.
+        // Edge labels — the extracted verb, rotated along the edge. Dim
+        // and small by default (so a dense graph still reads), full-size
+        // and full-opacity on hover.
         label: "data(rel)",
-        "font-size": 8,
+        "font-size": 6,
         color: p.textColor,
+        "text-opacity": 0.4,
         "text-outline-color": p.textOutlineColor,
-        "text-outline-width": 2,
+        "text-outline-width": 1,
+        "text-outline-opacity": 0.5,
         "text-rotation": "autorotate",
         "text-margin-y": -3,
       },
@@ -217,6 +218,11 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         "target-arrow-color": p.hoveredEdgeColor,
         opacity: 1,
         "z-index": 99,
+        // Label pops on hover: bigger + fully opaque + outlined.
+        "font-size": 11,
+        "text-opacity": 1,
+        "text-outline-width": 2.5,
+        "text-outline-opacity": 1,
       },
     },
     {

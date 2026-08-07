@@ -14,10 +14,11 @@ import {
 import {
   fetchIndex,
   fetchSnapshot,
+  fetchSources,
   runPipeline,
   HAS_BACKEND,
 } from "@/lib/api/client";
-import type { Index, Snapshot } from "@/lib/api/types";
+import type { Index, Snapshot, SourcesFile } from "@/lib/api/types";
 import { mergeSnapshots } from "@/lib/mergeSnapshots";
 import { formatMonthRange, monthsBetween } from "@/lib/months";
 import { TimeSlider } from "@/components/controls/TimeSlider";
@@ -42,8 +43,18 @@ function currentMonthYYYYMM(): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 }
 
+// Types that start UNCHECKED in the entity-type filter on a fresh source
+// load. The extractor emits a lot of generic "Stock Price"/"IPO Price"/etc.
+// entities tagged FININSTRUMENTINFO — they're rarely useful to an analyst
+// on first look, so we ship them hidden by default. Toggleable via the rail.
+const DEFAULT_HIDDEN_TYPES = new Set(["FININSTRUMENTINFO", "FIN_INSTRUMENT_INFO"]);
+
+const ACTIVE_SOURCE_STORAGE_KEY = "eibkg.activeSource";
+
 export default function Home() {
   // Data
+  const [sources, setSources] = useState<SourcesFile | null>(null);
+  const [activeSourceId, setActiveSourceId] = useState<string | null>(null);
   const [index, setIndex] = useState<Index | null>(null);
   // The timeline selects an inclusive month range. from === to is the
   // single-month case, which stays the default on load.
@@ -71,6 +82,12 @@ export default function Home() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [physics, setPhysics] = useState<PhysicsSettings>(DEFAULT_PHYSICS);
   const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
+  // Types / causal-types the app has ever encountered under the current
+  // source. New types get added to the visible set with default rules;
+  // types the user has explicitly toggled off are NOT re-added on later
+  // snapshots, so switching months / tabs won't reset their choices.
+  const knownTypesRef = useRef<Set<string>>(new Set());
+  const knownCategoriesRef = useRef<Set<string>>(new Set());
   const filtersInitializedRef = useRef(false);
 
   // UI state
@@ -79,31 +96,67 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<ActiveTab>("graph");
 
-  // Initial load: index → latest snapshot
-  const loadIndex = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const idx = await fetchIndex();
-      setIndex(idx);
-      if (idx.latest) {
-        // Default view: trailing 6 months ending at the latest available
-        // month. Falls back to the corpus start if fewer than 6 months exist.
-        const latestIdx = idx.months.indexOf(idx.latest);
-        const fromIdx = Math.max(0, latestIdx - 5);
-        setMonthFrom(idx.months[fromIdx] ?? idx.latest);
-        setMonthTo(idx.latest);
-      }
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setLoading(false);
-    }
+  // Bootstrap: load the sources catalogue, pick either the last-used source
+  // (from localStorage) or the catalogue default, then load that source's
+  // index.
+  useEffect(() => {
+    let cancelled = false;
+    fetchSources().then((s) => {
+      if (cancelled) return;
+      setSources(s);
+      const stored =
+        typeof window !== "undefined"
+          ? window.localStorage.getItem(ACTIVE_SOURCE_STORAGE_KEY)
+          : null;
+      const initial =
+        (stored && s.sources.find((x) => x.id === stored && x.available)?.id) ||
+        s.default;
+      setActiveSourceId(initial);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
+  const loadIndex = useCallback(
+    async (sourceId: string) => {
+      setLoading(true);
+      setError(null);
+      try {
+        const idx = await fetchIndex(sourceId);
+        setIndex(idx);
+        if (idx.latest) {
+          // Default view: trailing 6 months ending at the latest available
+          // month. Falls back to corpus start if fewer than 6 months exist.
+          const latestIdx = idx.months.indexOf(idx.latest);
+          const fromIdx = Math.max(0, latestIdx - 5);
+          setMonthFrom(idx.months[fromIdx] ?? idx.latest);
+          setMonthTo(idx.latest);
+        }
+      } catch (e) {
+        setError(e instanceof Error ? e.message : String(e));
+      } finally {
+        setLoading(false);
+      }
+    },
+    []
+  );
+
+  // Reload index when the active source changes. Also reset per-source
+  // caches so we don't merge snapshots across corpora.
   useEffect(() => {
-    loadIndex();
-  }, [loadIndex]);
+    if (!activeSourceId) return;
+    snapshotCacheRef.current.clear();
+    knownTypesRef.current = new Set();
+    knownCategoriesRef.current = new Set();
+    filtersInitializedRef.current = false;
+    setVisibleTypes(new Set());
+    setVisibleCategories(new Set());
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(ACTIVE_SOURCE_STORAGE_KEY, activeSourceId);
+    }
+    loadIndex(activeSourceId);
+  }, [activeSourceId, loadIndex]);
 
   // Split the backend-provided months into past vs forecast based on today.
   // If the backend doesn't return any months past today, the forecast zone
@@ -151,11 +204,12 @@ export default function Home() {
       return;
     }
 
+    if (!activeSourceId) return;
     let cancelled = false;
     setLoading(true);
     Promise.all(
       missing.map((m) =>
-        fetchSnapshot(m).then((snap) => [m, snap] as const)
+        fetchSnapshot(activeSourceId, m).then((snap) => [m, snap] as const)
       )
     )
       .then((fetched) => {
@@ -176,32 +230,52 @@ export default function Home() {
     // selectedMonths is derived from rangeKey; listing both keeps lint happy
     // without re-running on an unchanged range.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rangeKey, reloadToken]);
+  }, [rangeKey, reloadToken, activeSourceId]);
 
-  // Initialize filter sets once on the first snapshot.
-  // Category filter now keys on causal_type (edge meaning), not on rel_cat.
+  // Filter-set maintenance.
+  // Rule 1: on first snapshot after a source load, default-check every type
+  //   EXCEPT the DEFAULT_HIDDEN_TYPES set (currently: financial instrument).
+  //   Default-check every causal category.
+  // Rule 2: on later snapshots, add ONLY never-before-seen types to the
+  //   visible set (also using the default-hidden rule). Types the user
+  //   explicitly toggled off stay off — no reset on tab change or timeline
+  //   scrub.
   useEffect(() => {
-    if (!snapshot || filtersInitializedRef.current) return;
-    const types = new Set(snapshot.nodes.map((n) => n.type));
-    const cats = new Set(snapshot.edges.map((e) => e.causal_type ?? "OTHER"));
-    setVisibleTypes(types);
-    setVisibleCategories(cats);
-    filtersInitializedRef.current = true;
-  }, [snapshot]);
+    if (!snapshot) return;
 
-  // Add any new types/causal-types from later months so they're visible by default
-  useEffect(() => {
-    if (!snapshot || !filtersInitializedRef.current) return;
+    const newTypes: string[] = [];
+    for (const n of snapshot.nodes) {
+      if (!knownTypesRef.current.has(n.type)) newTypes.push(n.type);
+    }
+    const newCats: string[] = [];
+    for (const e of snapshot.edges) {
+      const c = e.causal_type ?? "OTHER";
+      if (!knownCategoriesRef.current.has(c)) newCats.push(c);
+    }
+    if (
+      filtersInitializedRef.current &&
+      newTypes.length === 0 &&
+      newCats.length === 0
+    ) {
+      return;
+    }
+
+    for (const t of newTypes) knownTypesRef.current.add(t);
+    for (const c of newCats) knownCategoriesRef.current.add(c);
+
     setVisibleTypes((prev) => {
       const next = new Set(prev);
-      for (const n of snapshot.nodes) next.add(n.type);
+      for (const t of newTypes) {
+        if (!DEFAULT_HIDDEN_TYPES.has(t)) next.add(t);
+      }
       return next.size === prev.size ? prev : next;
     });
     setVisibleCategories((prev) => {
       const next = new Set(prev);
-      for (const e of snapshot.edges) next.add(e.causal_type ?? "OTHER");
+      for (const c of newCats) next.add(c);
       return next.size === prev.size ? prev : next;
     });
+    filtersInitializedRef.current = true;
   }, [snapshot]);
 
   // ⌘K / Ctrl+K to open search
@@ -217,12 +291,13 @@ export default function Home() {
   }, []);
 
   const handleRefresh = useCallback(async () => {
+    if (!activeSourceId) return;
     setRunning(true);
     setError(null);
     try {
       await runPipeline();
       snapshotCacheRef.current.clear();
-      await loadIndex();
+      await loadIndex(activeSourceId);
       // Cache is empty; the bump makes the range effect refetch and re-merge
       // even if the selected range came back identical.
       setReloadToken((t) => t + 1);
@@ -231,7 +306,7 @@ export default function Home() {
     } finally {
       setRunning(false);
     }
-  }, [loadIndex]);
+  }, [loadIndex, activeSourceId]);
 
   const handleToggleType = useCallback((type: string) => {
     setVisibleTypes((prev) => {
@@ -286,9 +361,31 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-2">
+            {sources && (
+              <label className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <span className="hidden sm:inline">Data source</span>
+                <select
+                  className="rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring"
+                  value={activeSourceId ?? sources.default}
+                  onChange={(e) => setActiveSourceId(e.target.value)}
+                >
+                  {sources.sources.map((s) => (
+                    <option
+                      key={s.id}
+                      value={s.id}
+                      disabled={!s.available}
+                      title={s.description}
+                    >
+                      {s.label}
+                      {!s.available ? "  (coming soon)" : ""}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
             {index && (
               <span className="mr-2 font-mono text-xs text-muted-foreground">
-                {index.months.length} months available
+                {index.months.length} months
               </span>
             )}
             <button
@@ -381,7 +478,7 @@ export default function Home() {
             onMinDegreePctChange={setMinDegreePct}
           />
 
-          <main className="relative flex-1">
+          <main className="relative flex-1 overflow-hidden">
             {error && (
               <div className="absolute inset-x-0 top-0 z-20 border-b border-destructive/30 bg-destructive/10 px-6 py-3 text-sm backdrop-blur">
                 <div className="flex items-start gap-3">
@@ -427,10 +524,13 @@ export default function Home() {
                 )}
               </>
             ) : (
-              <PredictionsView
-                monthTo={monthTo}
-                visibleTypes={visibleTypes}
-              />
+              activeSourceId && (
+                <PredictionsView
+                  sourceId={activeSourceId}
+                  monthTo={monthTo}
+                  visibleTypes={visibleTypes}
+                />
+              )
             )}
           </main>
         </div>
@@ -466,6 +566,7 @@ export default function Home() {
       <ChatPanel
         open={chatOpen}
         onOpenChange={setChatOpen}
+        sourceId={activeSourceId ?? ""}
         months={index?.months ?? []}
         monthFrom={monthFrom}
         monthTo={monthTo}

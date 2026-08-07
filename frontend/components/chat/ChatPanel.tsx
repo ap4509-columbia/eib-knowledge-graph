@@ -36,6 +36,8 @@ const SUGGESTED_QUERIES = [
 export interface ChatPanelProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  /** Which corpus the article search runs against. */
+  sourceId: string;
   months: string[];
   /** Start of the range the graph is showing. */
   monthFrom: string | null;
@@ -47,6 +49,7 @@ export interface ChatPanelProps {
 export function ChatPanel({
   open,
   onOpenChange,
+  sourceId,
   months,
   monthFrom: graphMonthFrom,
   monthTo: graphMonthTo,
@@ -91,6 +94,7 @@ export function ChatPanel({
       setQuery("");
       try {
         const res = await searchArticles({
+          sourceId,
           query: text,
           month_from: monthFrom ?? undefined,
           month_to: monthTo ?? undefined,

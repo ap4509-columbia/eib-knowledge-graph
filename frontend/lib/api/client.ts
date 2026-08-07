@@ -10,7 +10,12 @@
 
 import { API_BASE_URL } from "@/lib/config";
 import { getApiKey, getModel, getProvider } from "@/lib/settings";
-import type { Index, PredictionsFile, Snapshot } from "./types";
+import type {
+  Index,
+  PredictionsFile,
+  Snapshot,
+  SourcesFile,
+} from "./types";
 
 // True when this build has a backend wired in. Driven by the env var so the
 // Vercel static build flips it off and local dev flips it on.
@@ -48,34 +53,59 @@ async function jsonOrThrow<T>(res: Response): Promise<T> {
 }
 
 // ── Static data fetches (work everywhere) ──────────────────────────────
+// All per-corpus fetches now live under /data/sources/<sourceId>/*.
+// The sources.json index at the top level lists which corpora exist.
 
-export async function fetchIndex(): Promise<Index> {
-  const res = await fetch(`/data/index.json`, { cache: "no-store" });
+function sourceBase(sourceId: string): string {
+  return `/data/sources/${sourceId}`;
+}
+
+// Cache the source index and the predictions per source — both are read
+// often (predictions view re-renders on every month change).
+let SOURCES_CACHE: SourcesFile | null = null;
+const PREDICTIONS_CACHE = new Map<string, PredictionsFile>();
+
+export async function fetchSources(): Promise<SourcesFile> {
+  if (SOURCES_CACHE) return SOURCES_CACHE;
+  const res = await fetch(`/data/sources.json`, { cache: "force-cache" });
+  SOURCES_CACHE = await jsonOrThrow<SourcesFile>(res);
+  return SOURCES_CACHE;
+}
+
+export async function fetchIndex(sourceId: string): Promise<Index> {
+  const res = await fetch(`${sourceBase(sourceId)}/index.json`, {
+    cache: "no-store",
+  });
   return jsonOrThrow<Index>(res);
 }
 
-export async function fetchSnapshot(month: string): Promise<Snapshot> {
-  const res = await fetch(`/data/snapshots/${month}.json`, {
+export async function fetchSnapshot(
+  sourceId: string,
+  month: string
+): Promise<Snapshot> {
+  const res = await fetch(`${sourceBase(sourceId)}/snapshots/${month}.json`, {
     cache: "no-store",
   });
   return jsonOrThrow<Snapshot>(res);
 }
 
-// GAT predictions ship as one file for all periods (~450 KB), so this is
-// cached in-memory after the first fetch — the predictions panel re-reads
-// it on every month change but there's no reason to re-download.
-let PREDICTIONS_CACHE: PredictionsFile | null = null;
-
-export async function fetchPredictions(): Promise<PredictionsFile> {
-  if (PREDICTIONS_CACHE) return PREDICTIONS_CACHE;
-  const res = await fetch(`/data/predictions.json`, { cache: "force-cache" });
-  PREDICTIONS_CACHE = await jsonOrThrow<PredictionsFile>(res);
-  return PREDICTIONS_CACHE;
+export async function fetchPredictions(
+  sourceId: string
+): Promise<PredictionsFile> {
+  const cached = PREDICTIONS_CACHE.get(sourceId);
+  if (cached) return cached;
+  const res = await fetch(`${sourceBase(sourceId)}/predictions.json`, {
+    cache: "force-cache",
+  });
+  const data = await jsonOrThrow<PredictionsFile>(res);
+  PREDICTIONS_CACHE.set(sourceId, data);
+  return data;
 }
 
 // ── Article search (browser-side) ──────────────────────────────────────
 
 export interface SearchRequest {
+  sourceId: string;
   query: string;
   month?: string;
   month_from?: string;
@@ -106,25 +136,29 @@ interface BundledArticle {
 }
 
 // Cache fetched month files so widening the range / running multiple
-// searches doesn't re-download.
+// searches doesn't re-download. Keyed by "<sourceId>:<month>".
 const ARTICLE_CACHE = new Map<string, BundledArticle[]>();
 
-async function loadArticles(month: string): Promise<BundledArticle[]> {
-  const cached = ARTICLE_CACHE.get(month);
+async function loadArticles(
+  sourceId: string,
+  month: string
+): Promise<BundledArticle[]> {
+  const key = `${sourceId}:${month}`;
+  const cached = ARTICLE_CACHE.get(key);
   if (cached) return cached;
   try {
-    const res = await fetch(`/data/articles/${month}.json`, {
+    const res = await fetch(`${sourceBase(sourceId)}/articles/${month}.json`, {
       cache: "force-cache",
     });
     if (!res.ok) {
-      ARTICLE_CACHE.set(month, []);
+      ARTICLE_CACHE.set(key, []);
       return [];
     }
     const data = (await res.json()) as BundledArticle[];
-    ARTICLE_CACHE.set(month, data);
+    ARTICLE_CACHE.set(key, data);
     return data;
   } catch {
-    ARTICLE_CACHE.set(month, []);
+    ARTICLE_CACHE.set(key, []);
     return [];
   }
 }
@@ -162,7 +196,7 @@ export async function searchArticles(
   // We need the full month list to handle "all months" (no range).
   let allMonths: string[] = [];
   try {
-    const index = await fetchIndex();
+    const index = await fetchIndex(req.sourceId);
     allMonths = index.months ?? [];
   } catch {
     allMonths = [];
@@ -173,7 +207,9 @@ export async function searchArticles(
   const months = monthsInRange(monthFrom, monthTo, allMonths);
 
   // Fetch all relevant month corpora in parallel; concatenate.
-  const corpora = await Promise.all(months.map(loadArticles));
+  const corpora = await Promise.all(
+    months.map((m) => loadArticles(req.sourceId, m))
+  );
   let articles = corpora.flat();
 
   // Focused-entity filter — same heuristic as the backend.

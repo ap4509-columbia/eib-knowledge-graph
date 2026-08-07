@@ -164,6 +164,12 @@ export function GraphCanvas({
       (n) => typeof n.x === "number" && typeof n.y === "number"
     );
 
+    // Spread precomputed positions out so the graph doesn't render packed.
+    // networkx spring_layout returns coordinates in a compact ~[-1, 1] cube;
+    // multiplying gives each node more breathing room without changing the
+    // structural relationships. Bump this if the graph still reads dense.
+    const POSITION_SCALE = 2.2;
+
     const elements: ElementDefinition[] = [];
     for (const n of snapshot.nodes) {
       const el: ElementDefinition = {
@@ -171,7 +177,7 @@ export function GraphCanvas({
         data: { id: n.id, label: n.id, type: n.type, degree: n.degree },
       };
       if (typeof n.x === "number" && typeof n.y === "number") {
-        el.position = { x: n.x, y: n.y };
+        el.position = { x: n.x * POSITION_SCALE, y: n.y * POSITION_SCALE };
       }
       elements.push(el);
     }
