@@ -51,17 +51,14 @@ OUTPUT_PATH = (
     / "predictions.json"
 )
 
-TOP_ENTITIES_PER_PERIOD = 15
+TOP_ENTITIES_PER_PERIOD = 40
 TOP_IMPACTED_PER_ENTITY = 5
 
-# Source entities allowed into the "Top KG Entities" leaderboard. Deliberately
-# narrow — only unambiguously named things (companies, tickers, sectors, named
-# institutions). CONCEPT / PRODUCT / EVENT / UNK / CURRENCY are excluded
-# because they were dominated by generic phrases ("Company Performance",
-# "Stock Price") or stray numerals. MACRO/ECON indicators are also excluded
-# even though they're a real ontology type — the LLM extractor overuses them
-# for quarterly-reporting boilerplate ("Quarterly Results", "Next Quarter EPS",
-# "Adjusted Earnings"), not for actual macro indicators like GDP or CPI.
+# Every entity type worth exposing in the leaderboard. Everything except
+# UNK is included so the analyst can filter to whichever slice they want
+# via the graph-tab filter rail (which now drives both views). The old
+# narrow default is preserved as ANALYST_DEFAULT_TYPES for the initial
+# render — but the raw data ships every type so the filter can widen.
 SOURCE_TYPES = {
     "COMPANY",
     "STOCKTICKER",
@@ -70,27 +67,25 @@ SOURCE_TYPES = {
     "FINANCIAL_ENTITY",
     "SECTOR",
     "BOND",
-}
-
-# Impacted-target types (right-hand column). Slightly broader than source
-# types — allow financial instruments and derivatives here even though they
-# make weak sources, because they're informative as *predicted outcomes*.
-IMPACTED_TYPES = {
-    "COMPANY",
-    "STOCKTICKER",
-    "STOCK_TICKER",
-    "FINANCIALENTITY",
-    "FINANCIAL_ENTITY",
+    "CONCEPT",
+    "EVENT",
+    "PRODUCT",
     "MACROINDICATOR",
     "MACRO_INDICATOR",
     "ECONINDICATOR",
     "ECON_INDICATOR",
     "FININSTRUMENTINFO",
     "FIN_INSTRUMENT_INFO",
-    "BOND",
     "DERIVATIVE",
-    "SECTOR",
+    "CURRENCY",
+    "PERSON",
+    "COUNTRY",
+    "LOCATION",
+    "INSTITUTION",
 }
+
+# Impacted-target types — same wide set; caller filters client-side.
+IMPACTED_TYPES = set(SOURCE_TYPES)
 
 # Regex families for junk entities the LLM extractor emits.
 JUNK_PATTERNS = [

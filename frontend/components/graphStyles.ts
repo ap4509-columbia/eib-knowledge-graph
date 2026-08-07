@@ -186,6 +186,17 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         "target-arrow-shape": "triangle",
         "arrow-scale": 0.6,
         opacity: 0.55,
+        // Edge labels — the extracted verb, rotated along the edge so the
+        // meaning is readable without cross-referencing the colour legend.
+        // Small font, outlined text so it stays legible over overlapping
+        // edges and node fills.
+        label: "data(rel)",
+        "font-size": 8,
+        color: p.textColor,
+        "text-outline-color": p.textOutlineColor,
+        "text-outline-width": 2,
+        "text-rotation": "autorotate",
+        "text-margin-y": -3,
       },
     },
     // Color by causal type (primary edge signal)

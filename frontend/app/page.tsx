@@ -363,21 +363,23 @@ export default function Home() {
           })}
         </div>
 
-        {/* Body: filter rail (graph tab only) | active tab content */}
+        {/* Body: filter rail | active tab content.
+            Filter rail shows on both tabs — its entity-type toggles drive
+            the graph AND the predictions leaderboard. The other rail
+            controls (edge causal type, min connections) are graph-only,
+            no-op on predictions. */}
         <div className="flex flex-1 overflow-hidden">
-          {activeTab === "graph" && (
-            <FilterRail
-              snapshot={snapshot}
-              visibleTypes={visibleTypes}
-              visibleCategories={visibleCategories}
-              minDegreePct={minDegreePct}
-              minDegree={minDegree}
-              maxDegree={maxDegree}
-              onToggleType={handleToggleType}
-              onToggleCategory={handleToggleCategory}
-              onMinDegreePctChange={setMinDegreePct}
-            />
-          )}
+          <FilterRail
+            snapshot={snapshot}
+            visibleTypes={visibleTypes}
+            visibleCategories={visibleCategories}
+            minDegreePct={minDegreePct}
+            minDegree={minDegree}
+            maxDegree={maxDegree}
+            onToggleType={handleToggleType}
+            onToggleCategory={handleToggleCategory}
+            onMinDegreePctChange={setMinDegreePct}
+          />
 
           <main className="relative flex-1">
             {error && (
@@ -425,7 +427,10 @@ export default function Home() {
                 )}
               </>
             ) : (
-              <PredictionsView monthTo={monthTo} />
+              <PredictionsView
+                monthTo={monthTo}
+                visibleTypes={visibleTypes}
+              />
             )}
           </main>
         </div>
