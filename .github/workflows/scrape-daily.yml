@@ -19,7 +19,10 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # STOXX 600 has 439 tickers → 15-25 min for RSS + dedup + Gemini extraction
+    # on a typical delta. First-time backfill or heavy news days can push this,
+    # so 60 min gives headroom without letting a stuck run bill forever.
+    timeout-minutes: 60
     permissions:
       contents: write
 

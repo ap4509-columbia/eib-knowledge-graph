@@ -75,6 +75,21 @@ export default function Home() {
   // degree. Stays meaningful across months even though absolute degree ranges
   // change wildly (March 2020 has 5× the activity of January 2019).
   const [minDegreePct, setMinDegreePct] = useState(5);
+  // Auto-tighten the min-degree threshold when the graph is huge (STOXX 600
+  // months routinely exceed 1,000 nodes). Small graphs → 5% (default);
+  // 500-node graphs → 8%; 1,000+ → 12%. User can override in the rail.
+  // Only auto-adjusts before the user has touched the slider themselves.
+  const userAdjustedDegreeRef = useRef(false);
+  const handleMinDegreePctChange = useCallback((pct: number) => {
+    userAdjustedDegreeRef.current = true;
+    setMinDegreePct(pct);
+  }, []);
+  useEffect(() => {
+    if (userAdjustedDegreeRef.current || !snapshot) return;
+    const n = snapshot.nodes.length;
+    const auto = n > 1000 ? 12 : n > 500 ? 8 : n > 200 ? 6 : 5;
+    setMinDegreePct(auto);
+  }, [snapshot]);
 
   // Interaction state
   const [searchOpen, setSearchOpen] = useState(false);
@@ -475,7 +490,7 @@ export default function Home() {
             maxDegree={maxDegree}
             onToggleType={handleToggleType}
             onToggleCategory={handleToggleCategory}
-            onMinDegreePctChange={setMinDegreePct}
+            onMinDegreePctChange={handleMinDegreePctChange}
           />
 
           <main className="relative flex-1 overflow-hidden">

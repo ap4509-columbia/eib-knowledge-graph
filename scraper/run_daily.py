@@ -43,7 +43,10 @@ from scraper.snapshots import update_corpus, refresh_corpora_manifest  # noqa: E
 SCRAPER_DIR = REPO_ROOT / "scraper"
 WATCHLIST_DIR = SCRAPER_DIR / "watchlists"
 LEDGER_PATH = SCRAPER_DIR / "state" / "seen_urls.json"
-PUBLIC_DATA = REPO_ROOT / "frontend" / "public" / "data"
+# Per-corpus data now lives under /data/sources/{id}/ — one subdirectory
+# per source-id, matching the front-end's data-source dropdown. The
+# corpus name from each watchlist YAML doubles as the source id.
+PUBLIC_DATA = REPO_ROOT / "frontend" / "public" / "data" / "sources"
 
 
 SOURCE_MODULES = {
