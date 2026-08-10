@@ -6,7 +6,8 @@
       "label": "FNSPID — US semiconductors (2019–2020)",
       "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
       "kind": "historical",
-      "available": true
+      "available": true,
+      "features": ["graph", "predictions"]
     },
     {
       "id": "stoxx_600_factors",
@@ -14,42 +15,7 @@
       "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",
       "kind": "live",
       "available": true,
-      "features": ["factors"]
-    },
-    {
-      "id": "stoxx_europe_600",
-      "label": "STOXX Europe 600 — live",
-      "description": "Google News across the 439 STOXX Europe 600 constituents. Refreshed daily by a GitHub Actions cron; Gemini 2.5 Flash extracts triplets from each new article.",
-      "kind": "live",
-      "available": true
-    },
-    {
-      "id": "us_semis",
-      "label": "US semiconductors — live",
-      "description": "Google News across the US semiconductor watchlist. Coming soon.",
-      "kind": "live",
-      "available": false
-    },
-    {
-      "id": "eu_banks",
-      "label": "EU banks — live",
-      "description": "Google News across the EU banks watchlist. Coming soon.",
-      "kind": "live",
-      "available": false
-    },
-    {
-      "id": "eu_utilities",
-      "label": "EU utilities — live",
-      "description": "Google News across the EU utilities watchlist. Coming soon.",
-      "kind": "live",
-      "available": false
-    },
-    {
-      "id": "eu_regulators",
-      "label": "EU regulators — live",
-      "description": "ECB / ESMA / BoE press-release feeds. Coming soon.",
-      "kind": "live",
-      "available": false
+      "features": ["graph", "factors"]
     }
   ]
 }

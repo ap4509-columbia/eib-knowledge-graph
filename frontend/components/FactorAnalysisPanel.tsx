@@ -71,6 +71,7 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   const W = 640, H = 420;
   const M = { top: 20, right: 24, bottom: 40, left: 40 };
   const b = useMemo(() => computeBounds(entities), [entities]);
+  const [hoveredName, setHoveredName] = useState<string | null>(null);
 
   const px = (x: number) => M.left + ((x - b.xMin) / (b.xMax - b.xMin)) * (W - M.left - M.right);
   const py = (y: number) => H - M.bottom - ((y - b.yMin) / (b.yMax - b.yMin)) * (H - M.top - M.bottom);
@@ -88,26 +89,10 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
         stroke="currentColor"
         strokeOpacity={0.1}
       />
-      {/* Origin cross */}
-      <line
-        x1={M.left}
-        x2={W - M.right}
-        y1={originY}
-        y2={originY}
-        stroke="currentColor"
-        strokeOpacity={0.25}
-        strokeDasharray="2 3"
-      />
-      <line
-        x1={originX}
-        x2={originX}
-        y1={M.top}
-        y2={H - M.bottom}
-        stroke="currentColor"
-        strokeOpacity={0.25}
-        strokeDasharray="2 3"
-      />
-      {/* Axis labels */}
+      <line x1={M.left} x2={W - M.right} y1={originY} y2={originY}
+        stroke="currentColor" strokeOpacity={0.25} strokeDasharray="2 3" />
+      <line x1={originX} x2={originX} y1={M.top} y2={H - M.bottom}
+        stroke="currentColor" strokeOpacity={0.25} strokeDasharray="2 3" />
       <text x={W - M.right - 4} y={originY - 6} textAnchor="end"
         className="fill-current text-[10px] font-mono opacity-70">
         PC1 →
@@ -117,30 +102,54 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
         PC2 ↑
       </text>
 
-      {/* Points */}
-      {entities.map((e) => (
-        <g key={e.name}>
-          <circle
-            cx={px(e.pc1)}
-            cy={py(e.pc2)}
-            r={4 + Math.min(4, e.n_articles - 2)}
-            fill={clusterColor(e.cluster)}
-            fillOpacity={0.85}
-          >
-            <title>
-              {e.name} · {e.type}\ncluster {e.cluster}\nattention {e.factors.attention.toFixed(1)}, sentiment {e.factors.sentiment.toFixed(2)}, consensus {e.factors.consensus.toFixed(2)}, novelty {e.factors.novelty.toFixed(2)}, materiality {e.factors.materiality.toFixed(1)}
-            </title>
-          </circle>
+      {/* Points — dots always, labels only for the hovered entity so
+          nearby clusters don't collide. The <title> gives every dot a
+          native tooltip on hover as well. */}
+      {entities.map((e) => {
+        const cx = px(e.pc1);
+        const cy = py(e.pc2);
+        const isHovered = hoveredName === e.name;
+        return (
+          <g key={e.name}>
+            <circle
+              cx={cx}
+              cy={cy}
+              r={4 + Math.min(4, e.n_articles - 2)}
+              fill={clusterColor(e.cluster)}
+              fillOpacity={isHovered ? 1 : 0.85}
+              stroke={isHovered ? "currentColor" : "none"}
+              strokeWidth={isHovered ? 1.5 : 0}
+              style={{ cursor: "pointer" }}
+              onMouseEnter={() => setHoveredName(e.name)}
+              onMouseLeave={() => setHoveredName(null)}
+            >
+              <title>
+                {`${e.name} — ${e.type}\ncluster ${e.cluster} · ${e.n_articles} articles\nattention ${e.factors.attention.toFixed(1)} · sentiment ${e.factors.sentiment.toFixed(2)} · consensus ${e.factors.consensus.toFixed(2)} · novelty ${e.factors.novelty.toFixed(2)} · materiality ${e.factors.materiality.toFixed(1)}`}
+              </title>
+            </circle>
+          </g>
+        );
+      })}
+      {/* Draw the hovered-entity label last so it sits on top of every dot */}
+      {hoveredName && (() => {
+        const h = entities.find((e) => e.name === hoveredName);
+        if (!h) return null;
+        const cx = px(h.pc1), cy = py(h.pc2);
+        const anchor = cx > (W - M.right - 100) ? "end" : "start";
+        const dx = anchor === "end" ? -8 : 8;
+        return (
           <text
-            x={px(e.pc1) + 6}
-            y={py(e.pc2) + 3}
-            className="fill-current text-[9px] font-medium"
+            x={cx + dx}
+            y={cy - 8}
+            textAnchor={anchor}
+            className="fill-current text-[11px] font-semibold"
             pointerEvents="none"
+            style={{ paintOrder: "stroke", stroke: "var(--background, #fff)", strokeWidth: 3 }}
           >
-            {e.name.length > 22 ? e.name.slice(0, 21) + "…" : e.name}
+            {h.name}
           </text>
-        </g>
-      ))}
+        );
+      })()}
     </svg>
   );
 }

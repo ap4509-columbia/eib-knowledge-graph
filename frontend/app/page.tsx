@@ -175,14 +175,14 @@ export default function Home() {
   }, [activeSourceId, loadIndex]);
 
   // If the user switches sources while on a tab that the new source doesn't
-  // support (e.g. Factor Analysis → source with no 'factors' feature), fall
-  // back to Knowledge graph instead of rendering a blank pane.
+  // support (e.g. Factor Analysis → historical source), fall back to
+  // Knowledge graph instead of rendering a blank pane.
   useEffect(() => {
     if (!sources) return;
     const currentSource = sources.sources.find((s) => s.id === activeSourceId);
-    const hasFactors = currentSource?.features?.includes("factors") ?? false;
-    if (activeTab === "factors" && !hasFactors) {
-      setActiveTab("graph");
+    const features = new Set(currentSource?.features ?? ["graph"]);
+    if (!features.has(activeTab)) {
+      setActiveTab(features.has("graph") ? "graph" : "predictions");
     }
   }, [sources, activeSourceId, activeTab]);
 
@@ -405,7 +405,6 @@ export default function Home() {
                       title={s.description}
                     >
                       {s.label}
-                      {!s.available ? "  (coming soon)" : ""}
                     </option>
                   ))}
                 </select>
@@ -460,36 +459,38 @@ export default function Home() {
 
         {/* Safari-style tab strip. Tabs sit in a slightly recessed bar; the
             active one is filled with the content background and rounded on
-            top corners so it reads as "attached" to the panel below.
-            Factor Analysis tab only appears when the active source declares
-            "factors" in its features. */}
+            top corners so it reads as "attached" to the panel below. Tabs
+            the current source doesn't support are rendered but greyed out
+            so the analyst can see what capabilities exist per corpus. */}
         <div className="flex shrink-0 items-end gap-1 border-b border-border bg-muted/60 px-2 pt-2">
           {(() => {
             const currentSource = sources?.sources.find(
               (s) => s.id === activeSourceId
             );
-            const hasFactors = currentSource?.features?.includes("factors") ?? false;
-            const tabs = [
-              { id: "graph" as const, label: "Knowledge graph" },
-              { id: "predictions" as const, label: "Predictions" },
-              ...(hasFactors
-                ? [{ id: "factors" as const, label: "Factor analysis" }]
-                : []),
+            const features = new Set(currentSource?.features ?? ["graph"]);
+            return [
+              { id: "graph" as const, label: "Knowledge graph", available: features.has("graph") },
+              { id: "predictions" as const, label: "Predictions", available: features.has("predictions") },
+              { id: "factors" as const, label: "Factor analysis", available: features.has("factors") },
             ];
-            return tabs;
           })().map((tab) => {
             const active = activeTab === tab.id;
+            const disabled = !tab.available;
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => !disabled && setActiveTab(tab.id)}
+                disabled={disabled}
                 aria-pressed={active}
+                title={disabled ? "This tab is not available for the selected data source." : undefined}
                 className={
                   "relative -mb-px rounded-t-md border px-4 py-2 text-xs font-medium transition " +
                   (active
                     ? "border-border border-b-background bg-background text-foreground"
-                    : "border-transparent text-muted-foreground hover:bg-background/50 hover:text-foreground")
+                    : disabled
+                      ? "border-transparent text-muted-foreground/40 cursor-not-allowed"
+                      : "border-transparent text-muted-foreground hover:bg-background/50 hover:text-foreground")
                 }
               >
                 {tab.label}
