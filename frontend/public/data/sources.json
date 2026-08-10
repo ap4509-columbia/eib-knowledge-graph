@@ -9,6 +9,14 @@
       "available": true
     },
     {
+      "id": "stoxx_600_factors",
+      "label": "STOXX 600 — factor model (live)",
+      "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",
+      "kind": "live",
+      "available": true,
+      "features": ["factors"]
+    },
+    {
       "id": "stoxx_europe_600",
       "label": "STOXX Europe 600 — live",
       "description": "Google News across the 439 STOXX Europe 600 constituents. Refreshed daily by a GitHub Actions cron; Gemini 2.5 Flash extracts triplets from each new article.",

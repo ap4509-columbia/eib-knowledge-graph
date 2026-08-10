@@ -8,3 +8,7 @@ python-dotenv>=1.0
 # a soft dependency of networkx that spring_layout needs at graph scale.
 networkx>=3.0
 scipy>=1.11
+# scikit-learn is only used by the factor-model add-on pipeline
+# (scraper/factors.py). Safe to keep here; the older pipeline doesn't
+# import it.
+scikit-learn>=1.3

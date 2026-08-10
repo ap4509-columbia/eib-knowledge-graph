@@ -101,6 +101,9 @@ export interface DataSource {
   kind: "historical" | "live";
   /** false = "coming soon" placeholder; the dropdown disables the option. */
   available: boolean;
+  /** Optional capability tags. "factors" ⇒ the Factor Analysis tab is
+   *  enabled for this source (it reads factors/latest.json). */
+  features?: string[];
 }
 
 export interface SourcesFile {
@@ -141,4 +144,54 @@ export interface PredictionsFile {
   strategy: string;
   mrr: number;
   periods: Record<string, PredictionPeriod>;
+}
+
+// ── Factor-model bundle (Factor Analysis tab) ──────────────────────────────
+// Produced by scraper/factors.py + scraper/run_daily_factors.py — one file
+// per day per corpus at sources/<id>/factors/<YYYY-MM-DD>.json, plus a
+// factors/latest.json symlink-alike for the UI to fetch without knowing
+// today's date first.
+
+export interface FactorEntity {
+  name: string;
+  type: string;
+  cluster: number;
+  pc1: number;
+  pc2: number;
+  pc3: number;
+  factors: {
+    attention: number;
+    sentiment: number;
+    consensus: number;
+    novelty: number;
+    materiality: number;
+  };
+  n_articles: number;
+  event_mix: Array<[string, number]>;
+  top_partners: string[];
+}
+
+export interface FactorClusterSignature {
+  cluster: number;
+  size: number;
+  signature: Array<{ factor: string; loading: number }>;
+  members: string[];
+}
+
+export interface FactorsFile {
+  corpus: string;
+  date: string;
+  generated_at: string;
+  min_articles: number;
+  kept_factors: string[];
+  entities: FactorEntity[];
+  pca: {
+    explained_variance: number[];
+    components: number[][];
+  };
+  kmeans: {
+    k: number;
+    centroids: number[][];
+    clusters: FactorClusterSignature[];
+  };
 }

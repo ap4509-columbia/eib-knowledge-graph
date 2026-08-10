@@ -30,8 +30,9 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { GraphSettingsDialog } from "@/components/settings/GraphSettingsDialog";
 import { DEFAULT_PHYSICS, type PhysicsSettings } from "@/components/GraphCanvas";
 import { PredictionsView } from "@/components/PredictionsPanel";
+import { FactorAnalysisView } from "@/components/FactorAnalysisPanel";
 
-type ActiveTab = "graph" | "predictions";
+type ActiveTab = "graph" | "predictions" | "factors";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
@@ -172,6 +173,18 @@ export default function Home() {
     }
     loadIndex(activeSourceId);
   }, [activeSourceId, loadIndex]);
+
+  // If the user switches sources while on a tab that the new source doesn't
+  // support (e.g. Factor Analysis → source with no 'factors' feature), fall
+  // back to Knowledge graph instead of rendering a blank pane.
+  useEffect(() => {
+    if (!sources) return;
+    const currentSource = sources.sources.find((s) => s.id === activeSourceId);
+    const hasFactors = currentSource?.features?.includes("factors") ?? false;
+    if (activeTab === "factors" && !hasFactors) {
+      setActiveTab("graph");
+    }
+  }, [sources, activeSourceId, activeTab]);
 
   // Split the backend-provided months into past vs forecast based on today.
   // If the backend doesn't return any months past today, the forecast zone
@@ -447,14 +460,24 @@ export default function Home() {
 
         {/* Safari-style tab strip. Tabs sit in a slightly recessed bar; the
             active one is filled with the content background and rounded on
-            top corners so it reads as "attached" to the panel below. */}
+            top corners so it reads as "attached" to the panel below.
+            Factor Analysis tab only appears when the active source declares
+            "factors" in its features. */}
         <div className="flex shrink-0 items-end gap-1 border-b border-border bg-muted/60 px-2 pt-2">
-          {(
-            [
-              { id: "graph", label: "Knowledge graph" },
-              { id: "predictions", label: "Predictions" },
-            ] as const
-          ).map((tab) => {
+          {(() => {
+            const currentSource = sources?.sources.find(
+              (s) => s.id === activeSourceId
+            );
+            const hasFactors = currentSource?.features?.includes("factors") ?? false;
+            const tabs = [
+              { id: "graph" as const, label: "Knowledge graph" },
+              { id: "predictions" as const, label: "Predictions" },
+              ...(hasFactors
+                ? [{ id: "factors" as const, label: "Factor analysis" }]
+                : []),
+            ];
+            return tabs;
+          })().map((tab) => {
             const active = activeTab === tab.id;
             return (
               <button
@@ -538,7 +561,7 @@ export default function Home() {
                   </div>
                 )}
               </>
-            ) : (
+            ) : activeTab === "predictions" ? (
               activeSourceId && (
                 <PredictionsView
                   sourceId={activeSourceId}
@@ -546,7 +569,11 @@ export default function Home() {
                   visibleTypes={visibleTypes}
                 />
               )
-            )}
+            ) : activeTab === "factors" ? (
+              activeSourceId && (
+                <FactorAnalysisView sourceId={activeSourceId} />
+              )
+            ) : null}
           </main>
         </div>
 

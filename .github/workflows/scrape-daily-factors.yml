@@ -1,0 +1,79 @@
+name: Daily factor-model refresh
+
+# Separate cron from the existing "Daily corpus refresh" (scrape-daily.yml).
+# Runs run_daily_factors.py on the stoxx_600_factors watchlist, writes to
+# frontend/public/data/sources/stoxx_600_factors/ and commits daily.
+#
+# Timing choice: 07:30 UTC so it lands after the older workflow (06:00) —
+# no race on file writes since they target different source directories,
+# but staggering keeps the log noise separable.
+
+on:
+  schedule:
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+    inputs:
+      articles_per_ticker:
+        description: 'Max articles per ticker (default 3)'
+        required: false
+        default: '3'
+      slice:
+        description: 'Optional slice N/M for chunked backfill (leave blank for full run)'
+        required: false
+        default: ''
+
+concurrency:
+  group: scrape-daily-factors
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # Factor pipeline is capped to ~30 tickers × 3 articles = 90 Gemini calls,
+    # ~15-25 min including PCA/KMeans. 60 gives headroom.
+    timeout-minutes: 60
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install deps
+        run: |
+          pip install -r scraper/requirements.txt
+          pip install scikit-learn
+
+      - name: Run factor scraper
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          ARGS="--watchlist stoxx_600_factors"
+          if [ -n "${{ github.event.inputs.articles_per_ticker }}" ]; then
+            ARGS="$ARGS --articles-per-ticker ${{ github.event.inputs.articles_per_ticker }}"
+          fi
+          if [ -n "${{ github.event.inputs.slice }}" ]; then
+            ARGS="$ARGS --slice ${{ github.event.inputs.slice }}"
+          fi
+          python scraper/run_daily_factors.py $ARGS
+
+      - name: Commit new data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/sources/stoxx_600_factors scraper/state
+          if git diff --staged --quiet; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          git commit -m "chore: factor-model refresh $(date -u +%Y-%m-%d)"
+          git push

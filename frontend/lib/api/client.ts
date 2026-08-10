@@ -11,6 +11,7 @@
 import { API_BASE_URL } from "@/lib/config";
 import { getApiKey, getModel, getProvider } from "@/lib/settings";
 import type {
+  FactorsFile,
   Index,
   PredictionsFile,
   Snapshot,
@@ -99,6 +100,23 @@ export async function fetchPredictions(
   });
   const data = await jsonOrThrow<PredictionsFile>(res);
   PREDICTIONS_CACHE.set(sourceId, data);
+  return data;
+}
+
+// Factor-model bundle. factors/latest.json holds the most recent daily
+// rollup produced by scraper/run_daily_factors.py. Cached per source.
+const FACTORS_CACHE = new Map<string, FactorsFile>();
+
+export async function fetchFactorsLatest(
+  sourceId: string
+): Promise<FactorsFile> {
+  const cached = FACTORS_CACHE.get(sourceId);
+  if (cached) return cached;
+  const res = await fetch(`${sourceBase(sourceId)}/factors/latest.json`, {
+    cache: "no-store",
+  });
+  const data = await jsonOrThrow<FactorsFile>(res);
+  FACTORS_CACHE.set(sourceId, data);
   return data;
 }
 

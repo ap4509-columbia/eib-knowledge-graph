@@ -1,0 +1,53 @@
+corpus: stoxx_600_factors
+description: |
+  Factor-model live corpus. Curated diverse subset of STOXX Europe 600
+  (30 tickers across pharma, tech, banks, industrials, energy, consumer,
+  telecoms, chemicals) chosen to:
+    - fit within a 60-min GitHub Actions run at 3 articles/ticker
+    - span sectors and countries so KMeans/PCA has variance to work with
+    - overlap with the local factor-preview script (so behaviour is comparable)
+  Extraction uses the enriched prompt (sentiment / materiality / event_type
+  on every triplet). Downstream: computes daily factor loadings per entity
+  and writes them to sources/stoxx_600_factors/factors/YYYY-MM-DD.json.
+
+sources:
+  - google_news
+
+# 30 tickers, ~5 per sector.
+tickers:
+  # Pharma
+  - NOVO-B.CO      # Novo Nordisk · Denmark
+  - ROG.SW         # Roche · Switzerland
+  - NOVN.SW        # Novartis · Switzerland
+  - SAN.PA         # Sanofi · France
+  - AZN.L          # AstraZeneca · UK
+  # Tech
+  - SAP.DE         # SAP · Germany
+  - ASML.AS        # ASML · Netherlands
+  - ADYEN.AS       # Adyen · Netherlands
+  - CAP.PA         # Capgemini · France
+  - STMPA.PA       # STMicroelectronics · France
+  # Banks & financials
+  - BNP.PA         # BNP Paribas · France
+  - HSBA.L         # HSBC · UK
+  - SAN.MC         # Santander · Spain
+  - DBK.DE         # Deutsche Bank · Germany
+  - INGA.AS        # ING Groep · Netherlands
+  # Industrials & aerospace
+  - SIE.DE         # Siemens · Germany
+  - AIR.PA         # Airbus · France
+  - SU.PA          # Schneider Electric · France
+  - VOW3.DE        # Volkswagen · Germany
+  - MBG.DE         # Mercedes-Benz · Germany
+  # Energy
+  - SHEL.L         # Shell · UK
+  - TTE.PA         # TotalEnergies · France
+  - BP.L           # BP · UK
+  - EQNR.OL        # Equinor · Norway
+  - ENI.MI         # Eni · Italy
+  # Consumer & luxury
+  - NESN.SW        # Nestlé · Switzerland
+  - MC.PA          # LVMH · France
+  - ULVR.L         # Unilever · UK
+  - ITX.MC         # Inditex · Spain
+  - OR.PA          # L'Oréal · France
