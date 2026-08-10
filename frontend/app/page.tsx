@@ -457,11 +457,8 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Safari-style tab strip. Tabs sit in a slightly recessed bar; the
-            active one is filled with the content background and rounded on
-            top corners so it reads as "attached" to the panel below. Tabs
-            the current source doesn't support are rendered but greyed out
-            so the analyst can see what capabilities exist per corpus. */}
+        {/* Safari-style tab strip. Only tabs the current source supports
+            are rendered — no grey placeholders. */}
         <div className="flex shrink-0 items-end gap-1 border-b border-border bg-muted/60 px-2 pt-2">
           {(() => {
             const currentSource = sources?.sources.find(
@@ -469,28 +466,23 @@ export default function Home() {
             );
             const features = new Set(currentSource?.features ?? ["graph"]);
             return [
-              { id: "graph" as const, label: "Knowledge graph", available: features.has("graph") },
-              { id: "predictions" as const, label: "Predictions", available: features.has("predictions") },
-              { id: "factors" as const, label: "Factor analysis", available: features.has("factors") },
-            ];
+              { id: "graph" as const, label: "Knowledge graph" },
+              { id: "predictions" as const, label: "Predictions" },
+              { id: "factors" as const, label: "Factor analysis" },
+            ].filter((t) => features.has(t.id));
           })().map((tab) => {
             const active = activeTab === tab.id;
-            const disabled = !tab.available;
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => !disabled && setActiveTab(tab.id)}
-                disabled={disabled}
+                onClick={() => setActiveTab(tab.id)}
                 aria-pressed={active}
-                title={disabled ? "This tab is not available for the selected data source." : undefined}
                 className={
                   "relative -mb-px rounded-t-md border px-4 py-2 text-xs font-medium transition " +
                   (active
                     ? "border-border border-b-background bg-background text-foreground"
-                    : disabled
-                      ? "border-transparent text-muted-foreground/40 cursor-not-allowed"
-                      : "border-transparent text-muted-foreground hover:bg-background/50 hover:text-foreground")
+                    : "border-transparent text-muted-foreground hover:bg-background/50 hover:text-foreground")
                 }
               >
                 {tab.label}
