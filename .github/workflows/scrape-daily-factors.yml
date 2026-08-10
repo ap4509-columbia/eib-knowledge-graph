@@ -76,4 +76,14 @@ jobs:
             exit 0
           fi
           git commit -m "chore: factor-model refresh $(date -u +%Y-%m-%d)"
-          git push
+          # If someone (or the other daily workflow) pushed while we were
+          # busy extracting, our fast-forward push will be rejected. Rebase
+          # onto latest main and try up to 3 times before giving up.
+          for i in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $i); pulling with rebase and retrying…"
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 attempts."; exit 1

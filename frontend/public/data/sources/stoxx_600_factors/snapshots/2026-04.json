@@ -1,0 +1,88 @@
+{
+  "month": "2026-04",
+  "stats": {
+    "nodes": 4,
+    "edges": 3,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Nestl\u00e9",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 4.936619387199892,
+      "y": 8.920441407663747
+    },
+    {
+      "id": "SWX:NESN",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": 111.85197510139093
+    },
+    {
+      "id": "Q1 Sales",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -308.91771690373673,
+      "y": -793.1356792514842
+    },
+    {
+      "id": "Recovery Plan",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -596.0189024834633,
+      "y": 672.3632627424296
+    }
+  ],
+  "edges": [
+    {
+      "id": "Nestl\u00e9||Has Ticker||SWX:NESN",
+      "source": "Nestl\u00e9",
+      "target": "SWX:NESN",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Nestl\u00e9||Reports Sales Beat||Q1 Sales",
+      "source": "Nestl\u00e9",
+      "target": "Q1 Sales",
+      "rel": "Reports Sales Beat",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Nestl\u00e9||Makes Progress On||Recovery Plan",
+      "source": "Nestl\u00e9",
+      "target": "Recovery Plan",
+      "rel": "Makes Progress On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    }
+  ]
+}

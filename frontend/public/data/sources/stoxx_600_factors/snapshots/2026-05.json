@@ -1,0 +1,254 @@
+{
+  "month": "2026-05",
+  "stats": {
+    "nodes": 14,
+    "edges": 9,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "XTB",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -251.33037850276682,
+      "y": 65.76704031556605
+    },
+    {
+      "id": "SAP",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": -336.87633250067773,
+      "y": 55.11025645001627
+    },
+    {
+      "id": "Market Sell-off",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -253.98918319034155,
+      "y": -633.6969886681276
+    },
+    {
+      "id": "Valuation Discount",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -411.3701914584826,
+      "y": 744.8356715670155
+    },
+    {
+      "id": "Equinor",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 668.8714963138766,
+      "y": -2.7958336729149917
+    },
+    {
+      "id": "Europe gas stocks",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 2,
+      "x": 586.0033474527681,
+      "y": -56.92340335553902
+    },
+    {
+      "id": "Hormuz shut",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -144.70577748456088
+    },
+    {
+      "id": "Wawa",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 8.36983859732641,
+      "y": 433.1328025945066
+    },
+    {
+      "id": "Shootout",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 35.88062508351927,
+      "y": 635.4644502725679
+    },
+    {
+      "id": "Industria de Dise\u00f1o Textil",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 76.69077837693256,
+      "y": -455.11792037553903
+    },
+    {
+      "id": "BME:ITX",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 558.5312566046167,
+      "y": -576.0996808351955
+    },
+    {
+      "id": "Retail Optimism",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -406.4371654221118,
+      "y": -328.33234778273027
+    },
+    {
+      "id": "American Academy of Physician Associates",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -524.8266598120973,
+      "y": 162.74051916861828
+    },
+    {
+      "id": "2026 Diversity Award",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -649.5174315425616,
+      "y": 100.62121180631647
+    }
+  ],
+  "edges": [
+    {
+      "id": "XTB||Publishes Article About||SAP",
+      "source": "XTB",
+      "target": "SAP",
+      "rel": "Publishes Article About",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SAP||Is Subject To Speculation Regarding||Market Sell-off",
+      "source": "SAP",
+      "target": "Market Sell-off",
+      "rel": "Is Subject To Speculation Regarding",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "SAP||Is Subject To Speculation Regarding||Valuation Discount",
+      "source": "SAP",
+      "target": "Valuation Discount",
+      "rel": "Is Subject To Speculation Regarding",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Equinor||Warns About||Europe gas stocks",
+      "source": "Equinor",
+      "target": "Europe gas stocks",
+      "rel": "Warns About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Europe gas stocks||Could Turn Critical Due To||Hormuz shut",
+      "source": "Europe gas stocks",
+      "target": "Hormuz shut",
+      "rel": "Could Turn Critical Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Wawa||Was Associated With||Shootout",
+      "source": "Wawa",
+      "target": "Shootout",
+      "rel": "Was Associated With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Industria de Dise\u00f1o Textil||Has Ticker||BME:ITX",
+      "source": "Industria de Dise\u00f1o Textil",
+      "target": "BME:ITX",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Industria de Dise\u00f1o Textil||Is Pricing In||Retail Optimism",
+      "source": "Industria de Dise\u00f1o Textil",
+      "target": "Retail Optimism",
+      "rel": "Is Pricing In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "American Academy of Physician Associates||Receives||2026 Diversity Award",
+      "source": "American Academy of Physician Associates",
+      "target": "2026 Diversity Award",
+      "rel": "Receives",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    }
+  ]
+}

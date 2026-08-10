@@ -1,0 +1,42 @@
+{
+  "month": "2026-01",
+  "stats": {
+    "nodes": 2,
+    "edges": 1,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Siemens Aktiengesellschaft",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "ETR:SIE",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    }
+  ],
+  "edges": [
+    {
+      "id": "Siemens Aktiengesellschaft||Has Ticker||ETR:SIE",
+      "source": "Siemens Aktiengesellschaft",
+      "target": "ETR:SIE",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    }
+  ]
+}

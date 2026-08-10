@@ -1,0 +1,240 @@
+{
+  "month": "2026-06",
+  "stats": {
+    "nodes": 12,
+    "edges": 9,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Supa!",
+      "type": "COMPANY",
+      "degree": 5,
+      "x": 54.04171275399189,
+      "y": 296.7293641801071
+    },
+    {
+      "id": "Japanese Dining Experience",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": 278.0332403726747
+    },
+    {
+      "id": "Sushi by the pound",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -611.7252096453922,
+      "y": -371.6226539310862
+    },
+    {
+      "id": "Three Locations",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -524.5964125851605,
+      "y": 734.6646453270222
+    },
+    {
+      "id": "A Fourth Location",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 542.0042554610434,
+      "y": 780.0402029371759
+    },
+    {
+      "id": "The Spokesman-Review",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 78.82133512060072,
+      "y": 405.6874437430839
+    },
+    {
+      "id": "Eni",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -85.84151291924898,
+      "y": -588.0602464346622
+    },
+    {
+      "id": "environmental hub",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": -216.48348761915437,
+      "y": -629.3972121255136
+    },
+    {
+      "id": "Hera",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -189.0831958101147,
+      "y": -482.20777989348426
+    },
+    {
+      "id": "Inditex",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 18.684114682944738,
+      "y": -141.0978812353436
+    },
+    {
+      "id": "Zara",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 681.086389414805,
+      "y": -474.3813979904203
+    },
+    {
+      "id": "Iran war concerns",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -646.9079888543149,
+      "y": 191.6122750504461
+    }
+  ],
+  "edges": [
+    {
+      "id": "Supa!||Aims To Change||Japanese Dining Experience",
+      "source": "Supa!",
+      "target": "Japanese Dining Experience",
+      "rel": "Aims To Change",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Supa!||Offers Service Via||Sushi by the pound",
+      "source": "Supa!",
+      "target": "Sushi by the pound",
+      "rel": "Offers Service Via",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Supa!||Operates||Three Locations",
+      "source": "Supa!",
+      "target": "Three Locations",
+      "rel": "Operates",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Supa!||Plans To Open||A Fourth Location",
+      "source": "Supa!",
+      "target": "A Fourth Location",
+      "rel": "Plans To Open",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "The Spokesman-Review||Publishes Article About||Supa!",
+      "source": "The Spokesman-Review",
+      "target": "Supa!",
+      "rel": "Publishes Article About",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Eni||Completes||environmental hub",
+      "source": "Eni",
+      "target": "environmental hub",
+      "rel": "Completes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 108000000.0,
+      "materiality_log": 18.498,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Hera||Completes||environmental hub",
+      "source": "Hera",
+      "target": "environmental hub",
+      "rel": "Completes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 108000000.0,
+      "materiality_log": 18.498,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Inditex||Owns||Zara",
+      "source": "Inditex",
+      "target": "Zara",
+      "rel": "Owns",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Inditex||Defies||Iran war concerns",
+      "source": "Inditex",
+      "target": "Iran war concerns",
+      "rel": "Defies",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    }
+  ]
+}

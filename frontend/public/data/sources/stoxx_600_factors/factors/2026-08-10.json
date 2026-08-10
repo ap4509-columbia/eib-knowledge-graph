@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-08-10T23:30:13.903428+00:00",
+  "min_articles": 2,
+  "kept_factors": [
+    "sentiment",
+    "consensus",
+    "novelty",
+    "materiality"
+  ],
+  "entities": [
+    {
+      "name": "AstraZeneca PLC",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.9106973007977264,
+      "pc2": 0.4318915835099767,
+      "pc3": -1.2970348863787637,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.2333333333333333,
+        "consensus": 0.825,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "GUIDANCE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AZN.L",
+        "Potential Upside"
+      ]
+    },
+    {
+      "name": "BNP Paribas",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.2340904979063497,
+      "pc2": -2.606148304473102,
+      "pc3": -0.2995692953844396,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.6666666666666666,
+        "consensus": 0.5,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "EARNINGS",
+          2
+        ],
+        [
+          "GUIDANCE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Gold",
+        "equity trading",
+        "profit"
+      ]
+    },
+    {
+      "name": "Eni",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.2959477169654159,
+      "pc2": 1.1561480242447792,
+      "pc3": -1.0248313087529408,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.46666666666666673,
+        "consensus": 0.95,
+        "novelty": 0.6666666666666666,
+        "materiality": 20.1398695221377
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PARTNERSHIP",
+          1
+        ],
+        [
+          "PRODUCT",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Chile",
+        "Lithium",
+        "environmental hub"
+      ]
+    },
+    {
+      "name": "Equinor",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3982259843444318,
+      "pc2": 0.6765845684784204,
+      "pc3": 1.5157086583745776,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "GUIDANCE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "EQNR",
+        "Europe gas stocks"
+      ]
+    },
+    {
+      "name": "Myricx Bio",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.6881751776177636,
+      "pc2": 0.27869536902843123,
+      "pc3": 0.11446920887079895,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.75,
+        "consensus": 0.95,
+        "novelty": 1.0,
+        "materiality": 21.821878125947855
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "M_AND_A",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Novartis"
+      ]
+    },
+    {
+      "name": "Novartis",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.926629276903596,
+      "pc2": 0.16196890882149223,
+      "pc3": 0.019836288471066353,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.8500000000000001,
+        "consensus": 0.95,
+        "novelty": 1.0,
+        "materiality": 21.821878125947855
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "M_AND_A",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Myricx Bio"
+      ]
+    },
+    {
+      "name": "White Cap",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.3677383884382673,
+      "pc2": -0.09914014960999776,
+      "pc3": 0.971421334799701,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.45,
+        "consensus": 0.95,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Pennsylvania Distribution Center",
+        "Pennsylvania Distribution Hub"
+      ]
+    }
+  ],
+  "pca": {
+    "explained_variance": [
+      0.44447324336559874,
+      0.3173827879460865,
+      0.21703033198273125
+    ],
+    "components": [
+      [
+        0.6601518554015113,
+        0.13695543185349968,
+        0.35587881648327674,
+        0.6471421833524893
+      ],
+      [
+        -0.32315313308031535,
+        0.8060292675904969,
+        -0.34982245566562087,
+        0.3514443368159167
+      ],
+      [
+        -0.2619879388572072,
+        0.38116707698379276,
+        0.8423452783794527,
+        -0.27663768960289276
+      ]
+    ]
+  },
+  "kmeans": {
+    "k": 2,
+    "centroids": [
+      [
+        0.7252887157787776,
+        0.4660915996993988,
+        0.041030496993111516,
+        1.1532978747312561
+      ],
+      [
+        -0.5439665368340836,
+        -0.3495686997745494,
+        -0.03077287274483253,
+        -0.864973406048442
+      ]
+    ],
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 3,
+        "signature": [
+          {
+            "factor": "materiality",
+            "loading": 1.1532978747312561
+          },
+          {
+            "factor": "sentiment",
+            "loading": 0.7252887157787776
+          },
+          {
+            "factor": "consensus",
+            "loading": 0.4660915996993988
+          }
+        ],
+        "members": [
+          "Eni",
+          "Myricx Bio",
+          "Novartis"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 4,
+        "signature": [
+          {
+            "factor": "materiality",
+            "loading": -0.864973406048442
+          },
+          {
+            "factor": "sentiment",
+            "loading": -0.5439665368340836
+          },
+          {
+            "factor": "consensus",
+            "loading": -0.3495686997745494
+          }
+        ],
+        "members": [
+          "AstraZeneca PLC",
+          "BNP Paribas",
+          "Equinor",
+          "White Cap"
+        ]
+      }
+    ]
+  },
+  "corpus": "stoxx_600_factors",
+  "date": "2026-08-10"
+}
