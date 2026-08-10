@@ -140,11 +140,12 @@ def _build_month_snapshot(
         G.add_edge(src, tgt)
     positions = _layout_positions(G)
 
-    # Scale layout for readability
+    # Scale layout for readability. `positions[n]` is a numpy array —
+    # explicit `is None` check because `if not p:` raises on ndarray.
     SCALE = 900
     def _pos(n: str) -> tuple[float, float]:
         p = positions.get(n)
-        if not p:
+        if p is None:
             return (0.0, 0.0)
         return (float(p[0]) * SCALE, float(p[1]) * SCALE)
 
