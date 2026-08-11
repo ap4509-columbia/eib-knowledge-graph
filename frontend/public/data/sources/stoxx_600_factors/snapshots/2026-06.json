@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 12,
-    "edges": 9,
+    "nodes": 20,
+    "edges": 14,
     "scored_edges": 0
   },
   "nodes": [
@@ -89,6 +89,62 @@
       "degree": 1,
       "x": -646.9079888543149,
       "y": 191.6122750504461
+    },
+    {
+      "id": "Novartis AG",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -127.65867500701997,
+      "y": 3.7527973331050033
+    },
+    {
+      "id": "NVS",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 646.3512792735589,
+      "y": 272.8932754965172
+    },
+    {
+      "id": "Longevity and Anti-Aging Stock",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": -900.0,
+      "y": -269.86666770791163
+    },
+    {
+      "id": "SAN",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 54.79134357425542,
+      "y": 652.0658983457588
+    },
+    {
+      "id": "Acquisition",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 172.34949169835733,
+      "y": 831.4603174242667
+    },
+    {
+      "id": "Equinor",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 25.004178676843487,
+      "y": -370.51528998763666
+    },
+    {
+      "id": "OB:EQNR",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 520.1938578565771,
+      "y": -474.4581486842251
+    },
+    {
+      "id": "Stock Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -391.03147607257233,
+      "y": -645.3321822198743
     }
   ],
   "edges": [
@@ -235,6 +291,86 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
+    },
+    {
+      "id": "Novartis AG||Has Ticker||NVS",
+      "source": "Novartis AG",
+      "target": "NVS",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Novartis AG||Is Classified As||Longevity and Anti-Aging Stock",
+      "source": "Novartis AG",
+      "target": "Longevity and Anti-Aging Stock",
+      "rel": "Is Classified As",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SAN||Is Integrating||Acquisition",
+      "source": "SAN",
+      "target": "Acquisition",
+      "rel": "Is Integrating",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Equinor||Has Ticker||OB:EQNR",
+      "source": "Equinor",
+      "target": "OB:EQNR",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Equinor||Saw 31% Year-to-Date Increase In||Stock Value",
+      "source": "Equinor",
+      "target": "Stock Value",
+      "rel": "Saw 31% Year-to-Date Increase In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

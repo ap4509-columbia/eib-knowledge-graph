@@ -1,8 +1,8 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 4,
-    "edges": 3,
+    "nodes": 11,
+    "edges": 8,
     "scored_edges": 0
   },
   "nodes": [
@@ -33,6 +33,55 @@
       "degree": 1,
       "x": -596.0189024834633,
       "y": 672.3632627424296
+    },
+    {
+      "id": "SAP",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 717.166511998132,
+      "y": 62.16859166114886
+    },
+    {
+      "id": "first-quarter profit",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 858.5427848845799,
+      "y": -33.47037309108202
+    },
+    {
+      "id": "Siemens",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -740.2816155088669,
+      "y": 294.6835669050942
+    },
+    {
+      "id": "XTRA:SIE",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -819.4025301755288,
+      "y": 442.7638947573005
+    },
+    {
+      "id": "Rising Sales",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -345.0023366077356,
+      "y": 900.0
+    },
+    {
+      "id": "Coffee and Snacks",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 613.7165830079501,
+      "y": -726.0026795228816
+    },
+    {
+      "id": "Product Recall",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -270.8234097962397,
+      "y": -827.7085917957382
     }
   ],
   "edges": [
@@ -83,6 +132,86 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "SAP||beats estimates for||first-quarter profit",
+      "source": "SAP",
+      "target": "first-quarter profit",
+      "rel": "beats estimates for",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Siemens||Has Ticker||XTRA:SIE",
+      "source": "Siemens",
+      "target": "XTRA:SIE",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Nestl\u00e9||Reports||Rising Sales",
+      "source": "Nestl\u00e9",
+      "target": "Rising Sales",
+      "rel": "Reports",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Nestl\u00e9||Experiences Strong Demand for||Coffee and Snacks",
+      "source": "Nestl\u00e9",
+      "target": "Coffee and Snacks",
+      "rel": "Experiences Strong Demand for",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Nestl\u00e9||Was Affected by||Product Recall",
+      "source": "Nestl\u00e9",
+      "target": "Product Recall",
+      "rel": "Was Affected by",
+      "rel_cat": "SSI",
+      "causal_type": "CAUSAL",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

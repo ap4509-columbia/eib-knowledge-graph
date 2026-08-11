@@ -1,0 +1,65 @@
+{
+  "month": "2025-03",
+  "stats": {
+    "nodes": 3,
+    "edges": 2,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Inditex",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 0.5573411067315199,
+      "y": 0.3474303776217324
+    },
+    {
+      "id": "Zara",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 899.4426588932685,
+      "y": 564.0393185325732
+    },
+    {
+      "id": "Sales Slowdown",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -900.0,
+      "y": -564.386748910195
+    }
+  ],
+  "edges": [
+    {
+      "id": "Inditex||Owns||Zara",
+      "source": "Inditex",
+      "target": "Zara",
+      "rel": "Owns",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Inditex||Points To||Sales Slowdown",
+      "source": "Inditex",
+      "target": "Sales Slowdown",
+      "rel": "Points To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    }
+  ]
+}

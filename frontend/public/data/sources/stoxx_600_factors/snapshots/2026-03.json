@@ -1,8 +1,8 @@
 {
   "month": "2026-03",
   "stats": {
-    "nodes": 8,
-    "edges": 5,
+    "nodes": 11,
+    "edges": 7,
     "scored_edges": 0
   },
   "nodes": [
@@ -61,6 +61,27 @@
       "degree": 1,
       "x": -38.208911652227854,
       "y": -561.143332797549
+    },
+    {
+      "id": "Unilever",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -213.4589165344926,
+      "y": 900.0
+    },
+    {
+      "id": "Foods Division",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": 607.1786534528404,
+      "y": -63.01147459103761
+    },
+    {
+      "id": "McCormick",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -393.71973691834853,
+      "y": -836.9885254089626
     }
   ],
   "edges": [
@@ -143,6 +164,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Unilever||is in advanced negotiations for partial divestment of||Foods Division",
+      "source": "Unilever",
+      "target": "Foods Division",
+      "rel": "is in advanced negotiations for partial divestment of",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "McCormick||is in advanced negotiations with Unilever to acquire part of||Foods Division",
+      "source": "McCormick",
+      "target": "Foods Division",
+      "rel": "is in advanced negotiations with Unilever to acquire part of",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 14,
-    "edges": 9,
+    "nodes": 18,
+    "edges": 12,
     "scored_edges": 0
   },
   "nodes": [
@@ -103,6 +103,34 @@
       "degree": 1,
       "x": -649.5174315425616,
       "y": 100.62121180631647
+    },
+    {
+      "id": "Schneider Electric",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 4.707462965621628,
+      "y": 8.249004258830876
+    },
+    {
+      "id": "ENXTPA:SU",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": 112.0244246274341
+    },
+    {
+      "id": "Strong Multi-Year Stock Performance",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -308.7291968691058,
+      "y": -792.9666098825343
+    },
+    {
+      "id": "Optimistic Future Growth Expectations",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -595.9782660965161,
+      "y": 672.6931809962693
     }
   ],
   "edges": [
@@ -249,6 +277,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Schneider Electric||Has Ticker||ENXTPA:SU",
+      "source": "Schneider Electric",
+      "target": "ENXTPA:SU",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Schneider Electric||Experienced||Strong Multi-Year Stock Performance",
+      "source": "Schneider Electric",
+      "target": "Strong Multi-Year Stock Performance",
+      "rel": "Experienced",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Schneider Electric||Faces Question of Potential Overvaluation Due To||Optimistic Future Growth Expectations",
+      "source": "Schneider Electric",
+      "target": "Optimistic Future Growth Expectations",
+      "rel": "Faces Question of Potential Overvaluation Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
     }
   ]
 }

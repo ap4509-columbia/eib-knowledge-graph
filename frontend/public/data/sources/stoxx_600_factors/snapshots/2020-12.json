@@ -1,24 +1,31 @@
 {
-  "month": "2026-02",
+  "month": "2020-12",
   "stats": {
-    "nodes": 1,
+    "nodes": 2,
     "edges": 1,
     "scored_edges": 0
   },
   "nodes": [
     {
-      "id": "VXUS",
+      "id": "Novartis Ag",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "NOVN.SW",
       "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 0.0,
-      "y": 0.0
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
     {
-      "id": "VXUS||Has Ticker||VXUS",
-      "source": "VXUS",
-      "target": "VXUS",
+      "id": "Novartis Ag||Has Ticker||NOVN.SW",
+      "source": "Novartis Ag",
+      "target": "NOVN.SW",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
