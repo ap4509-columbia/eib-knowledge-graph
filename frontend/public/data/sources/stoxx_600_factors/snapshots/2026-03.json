@@ -1,8 +1,8 @@
 {
   "month": "2026-03",
   "stats": {
-    "nodes": 11,
-    "edges": 7,
+    "nodes": 13,
+    "edges": 8,
     "scored_edges": 0
   },
   "nodes": [
@@ -82,6 +82,20 @@
       "degree": 1,
       "x": -393.71973691834853,
       "y": -836.9885254089626
+    },
+    {
+      "id": "AstraZeneca",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Chronic Lung Disease",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -196,6 +210,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_AND_A"
+    },
+    {
+      "id": "AstraZeneca||Reports Positive Outcome In Late-Stage Trials For Treatment Of||Chronic Lung Disease",
+      "source": "AstraZeneca",
+      "target": "Chronic Lung Disease",
+      "rel": "Reports Positive Outcome In Late-Stage Trials For Treatment Of",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

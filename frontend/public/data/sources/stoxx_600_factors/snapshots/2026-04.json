@@ -1,8 +1,8 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 11,
-    "edges": 8,
+    "nodes": 20,
+    "edges": 14,
     "scored_edges": 0
   },
   "nodes": [
@@ -82,6 +82,69 @@
       "degree": 1,
       "x": -270.8234097962397,
       "y": -827.7085917957382
+    },
+    {
+      "id": "Deutsche Bank",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 53.15517276584287,
+      "y": -56.416805285251606
+    },
+    {
+      "id": "XTRA:DBK",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 899.9999999999999,
+      "y": 179.07266628342697
+    },
+    {
+      "id": "Bond Tender Offer",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -208.98426021456945,
+      "y": -827.9335367696065
+    },
+    {
+      "id": "New Debt Issuances",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -591.2208086601711,
+      "y": 455.83555014296564
+    },
+    {
+      "id": "Volkswagen",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 337.27810028468895,
+      "y": 104.02959481933019
+    },
+    {
+      "id": "Planned Cost Cuts",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -122.5112795443876,
+      "y": 813.1291972013189
+    },
+    {
+      "id": "First-Quarter Profit",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 790.7003180672806,
+      "y": -608.1160514779067
+    },
+    {
+      "id": "Eni",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -533.2408372281502,
+      "y": -83.37699367395594
+    },
+    {
+      "id": "CEO Pay Boost",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -625.176405470534,
+      "y": 23.776378759679083
     }
   ],
   "edges": [
@@ -212,6 +275,102 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "Deutsche Bank||Has Ticker||XTRA:DBK",
+      "source": "Deutsche Bank",
+      "target": "XTRA:DBK",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Deutsche Bank||Conducted||Bond Tender Offer",
+      "source": "Deutsche Bank",
+      "target": "Bond Tender Offer",
+      "rel": "Conducted",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Deutsche Bank||Undertook||New Debt Issuances",
+      "source": "Deutsche Bank",
+      "target": "New Debt Issuances",
+      "rel": "Undertook",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Volkswagen||Warns Planned Cost Cuts Are Insufficient||Planned Cost Cuts",
+      "source": "Volkswagen",
+      "target": "Planned Cost Cuts",
+      "rel": "Warns Planned Cost Cuts Are Insufficient",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Volkswagen||Reports 14% Drop In||First-Quarter Profit",
+      "source": "Volkswagen",
+      "target": "First-Quarter Profit",
+      "rel": "Reports 14% Drop In",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Eni||Faces Shareholder Opposition To||CEO Pay Boost",
+      "source": "Eni",
+      "target": "CEO Pay Boost",
+      "rel": "Faces Shareholder Opposition To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
     }
   ]
 }

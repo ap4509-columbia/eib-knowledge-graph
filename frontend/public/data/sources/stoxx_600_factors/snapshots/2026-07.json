@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 54,
-    "edges": 45,
+    "nodes": 60,
+    "edges": 50,
     "scored_edges": 0
   },
   "nodes": [
@@ -383,6 +383,48 @@
       "degree": 2,
       "x": 302.00629358639213,
       "y": -748.7029873131593
+    },
+    {
+      "id": "SCHNEIDER ELECTRIC SE",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 62.58848450030347,
+      "y": 665.2007610957963
+    },
+    {
+      "id": "SU.PA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 653.9828536138483,
+      "y": 586.5804404951456
+    },
+    {
+      "id": "Q2 FY2026 earnings call",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -530.0659286738659,
+      "y": 735.1795408600806
+    },
+    {
+      "id": "Nestl\u00e9",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -255.7766547971174,
+      "y": -319.28362671511184
+    },
+    {
+      "id": "SWX:NESN",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 169.20631391842377,
+      "y": -760.8775909689409
+    },
+    {
+      "id": "Hungary Plant",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -676.9264188674726,
+      "y": 123.23920518114267
     }
   ],
   "edges": [
@@ -603,7 +645,7 @@
       "causal_type": "OPERATIONAL",
       "polarity": "positive",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.5,
       "materiality_usd": 0.0,
@@ -1105,6 +1147,86 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "GRYPHLINE||Partners with||Adyen",
+      "source": "GRYPHLINE",
+      "target": "Adyen",
+      "rel": "Partners with",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "SCHNEIDER ELECTRIC SE||Has Ticker||SU.PA",
+      "source": "SCHNEIDER ELECTRIC SE",
+      "target": "SU.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "SCHNEIDER ELECTRIC SE||Held||Q2 FY2026 earnings call",
+      "source": "SCHNEIDER ELECTRIC SE",
+      "target": "Q2 FY2026 earnings call",
+      "rel": "Held",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Nestl\u00e9||Has Ticker||SWX:NESN",
+      "source": "Nestl\u00e9",
+      "target": "SWX:NESN",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Nestl\u00e9||Closes||Hungary Plant",
+      "source": "Nestl\u00e9",
+      "target": "Hungary Plant",
+      "rel": "Closes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }

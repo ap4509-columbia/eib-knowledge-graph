@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 20,
-    "edges": 14,
+    "nodes": 26,
+    "edges": 18,
     "scored_edges": 0
   },
   "nodes": [
@@ -145,6 +145,48 @@
       "degree": 1,
       "x": -391.03147607257233,
       "y": -645.3321822198743
+    },
+    {
+      "id": "Adyen",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 670.8343865515608,
+      "y": -117.35832056378464
+    },
+    {
+      "id": "North America chief",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 822.4518618965345,
+      "y": -226.93306278962308
+    },
+    {
+      "id": "HSBC",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -744.7035570356556,
+      "y": 170.35841568659512
+    },
+    {
+      "id": "HSBA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -776.8107795784468,
+      "y": 339.9473920700442
+    },
+    {
+      "id": "European Battery Expansion",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -365.62264588229345,
+      "y": 789.4090062098074
+    },
+    {
+      "id": "Baleine Oil And Gas Growth",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 385.07246111800123,
+      "y": -900.0
     }
   ],
   "edges": [
@@ -371,6 +413,70 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Adyen||Appoints||North America chief",
+      "source": "Adyen",
+      "target": "North America chief",
+      "rel": "Appoints",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "HSBC||Has Ticker||HSBA",
+      "source": "HSBC",
+      "target": "HSBA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Eni||Pursues||European Battery Expansion",
+      "source": "Eni",
+      "target": "European Battery Expansion",
+      "rel": "Pursues",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Eni||Pursues||Baleine Oil And Gas Growth",
+      "source": "Eni",
+      "target": "Baleine Oil And Gas Growth",
+      "rel": "Pursues",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }
