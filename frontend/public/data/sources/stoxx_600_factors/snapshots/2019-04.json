@@ -1,0 +1,65 @@
+{
+  "month": "2019-04",
+  "stats": {
+    "nodes": 3,
+    "edges": 2,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Novartis AG",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 31.936569433134082,
+      "y": 70.89303618862066
+    },
+    {
+      "id": "NOVN.SW",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 380.61839178282594,
+      "y": -900.0
+    },
+    {
+      "id": "Yahoo Finance UK",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -412.5549612159606,
+      "y": 829.1069638113793
+    }
+  ],
+  "edges": [
+    {
+      "id": "Novartis AG||Has Ticker||NOVN.SW",
+      "source": "Novartis AG",
+      "target": "NOVN.SW",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Yahoo Finance UK||Provides Information On||Novartis AG",
+      "source": "Yahoo Finance UK",
+      "target": "Novartis AG",
+      "rel": "Provides Information On",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    }
+  ]
+}

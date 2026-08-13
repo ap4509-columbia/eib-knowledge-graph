@@ -1,8 +1,8 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 20,
-    "edges": 14,
+    "nodes": 22,
+    "edges": 15,
     "scored_edges": 0
   },
   "nodes": [
@@ -145,6 +145,20 @@
       "degree": 1,
       "x": -625.176405470534,
       "y": 23.776378759679083
+    },
+    {
+      "id": "Market Research Future",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -371,6 +385,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Market Research Future||Authored||InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+      "source": "Market Research Future",
+      "target": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+      "rel": "Authored",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

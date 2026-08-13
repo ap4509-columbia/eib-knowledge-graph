@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 60,
-    "edges": 50,
+    "nodes": 64,
+    "edges": 53,
     "scored_edges": 0
   },
   "nodes": [
@@ -425,6 +425,34 @@
       "degree": 1,
       "x": -676.9264188674726,
       "y": 123.23920518114267
+    },
+    {
+      "id": "Fair Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -18.656353679768007,
+      "y": -761.6196470221599
+    },
+    {
+      "id": "AI Revenue Ambitions",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -548.2735508635054,
+      "y": -80.8090621155804
+    },
+    {
+      "id": "Disney",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -168.09108607936977,
+      "y": 523.6824020086793
+    },
+    {
+      "id": "the unique potential of animation",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -312.2291216618222,
+      "y": 652.6516181767769
     }
   ],
   "edges": [
@@ -901,7 +929,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1227,6 +1255,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "STMicroelectronics||Is Valued Below||Fair Value",
+      "source": "STMicroelectronics",
+      "target": "Fair Value",
+      "rel": "Is Valued Below",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "STMicroelectronics||Has||AI Revenue Ambitions",
+      "source": "STMicroelectronics",
+      "target": "AI Revenue Ambitions",
+      "rel": "Has",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Disney||has forgotten||the unique potential of animation",
+      "source": "Disney",
+      "target": "the unique potential of animation",
+      "rel": "has forgotten",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

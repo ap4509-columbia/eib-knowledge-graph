@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 18,
-    "edges": 12,
+    "nodes": 22,
+    "edges": 14,
     "scored_edges": 0
   },
   "nodes": [
@@ -131,6 +131,34 @@
       "degree": 1,
       "x": -595.9782660965161,
       "y": 672.6931809962693
+    },
+    {
+      "id": "ASML Holding N.V.",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 705.8331725319806,
+      "y": -558.2402493711152
+    },
+    {
+      "id": "ASML",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 861.0412429866086,
+      "y": -881.8922617596519
+    },
+    {
+      "id": "Deutsche Bank Aktiengesellschaft",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -750.3159712270452,
+      "y": 540.1325111307669
+    },
+    {
+      "id": "ETR:DBK",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
     }
   ],
   "edges": [
@@ -325,6 +353,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "GUIDANCE"
+    },
+    {
+      "id": "ASML Holding N.V.||Has Ticker||ASML",
+      "source": "ASML Holding N.V.",
+      "target": "ASML",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Deutsche Bank Aktiengesellschaft||Has Ticker||ETR:DBK",
+      "source": "Deutsche Bank Aktiengesellschaft",
+      "target": "ETR:DBK",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
