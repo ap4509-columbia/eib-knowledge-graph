@@ -79,6 +79,8 @@ export function GraphCanvas({
   const styleScaleRef = useRef(1);
   const isDarkRef = useRef(isDark);
   isDarkRef.current = isDark;
+  const physicsEnabledRef = useRef(physics.enabled);
+  physicsEnabledRef.current = physics.enabled;
 
   // Fit the viewport, then normalize node/label sizes to the zoom the fit
   // landed on. Sizes in the stylesheet are graph units, so a sprawling
@@ -106,6 +108,68 @@ export function GraphCanvas({
       ).update();
       fit();
     }
+    // With final sizes known, gently push apart any visible nodes that
+    // touch, then re-frame once. Runs only on the preset layout — the
+    // physics simulation handles its own spacing.
+    if (!physicsEnabledRef.current && separateOverlaps(cy)) fit();
+  };
+
+  // Nudge overlapping visible nodes apart. Not a physics simulation — a few
+  // damped pairwise relaxation passes that resolve touching/overlapping
+  // circles while leaving the overall layout shape intact. Node radii come
+  // from the *styled* width (which includes the zoom-compensation scale),
+  // so this must run after fitNormalized has converged. Returns whether
+  // anything moved.
+  const separateOverlaps = (cy: Core): boolean => {
+    const nodes = cy.nodes(":visible");
+    // O(N²) per pass — fine at the few-hundred-node scale the filters
+    // produce; bail on pathological views rather than jank the UI.
+    if (nodes.length < 2 || nodes.length > 900) return false;
+    const pts = nodes.map((n) => ({
+      n,
+      x: n.position("x"),
+      y: n.position("y"),
+      r: n.width() / 2,
+    }));
+    const pad = 2 * styleScaleRef.current; // breathing room, in graph units
+    let movedAny = false;
+    for (let pass = 0; pass < 8; pass++) {
+      let moved = false;
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const a = pts[i];
+          const b = pts[j];
+          let dx = b.x - a.x;
+          let dy = b.y - a.y;
+          let d = Math.hypot(dx, dy);
+          const min = a.r + b.r + pad;
+          if (d >= min) continue;
+          if (d < 1e-6) {
+            // Coincident centres: pick a deterministic direction so
+            // repeated renders stay stable.
+            const ang = ((i * 37 + j * 101) % 360) * (Math.PI / 180);
+            dx = Math.cos(ang);
+            dy = Math.sin(ang);
+            d = 1;
+          }
+          // Split the overlap between the pair, half-damped so dense
+          // clusters relax over passes instead of ricocheting.
+          const push = ((min - d) / d) * 0.5;
+          a.x -= dx * push * 0.5;
+          a.y -= dy * push * 0.5;
+          b.x += dx * push * 0.5;
+          b.y += dy * push * 0.5;
+          moved = movedAny = true;
+        }
+      }
+      if (!moved) break;
+    }
+    if (movedAny) {
+      cy.batch(() => {
+        for (const p of pts) p.n.position({ x: p.x, y: p.y });
+      });
+    }
+    return movedAny;
   };
 
   // Mount Cytoscape once
