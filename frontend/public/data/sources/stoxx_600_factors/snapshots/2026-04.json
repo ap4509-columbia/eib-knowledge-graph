@@ -1,8 +1,8 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 22,
-    "edges": 15,
+    "nodes": 29,
+    "edges": 21,
     "scored_edges": 0
   },
   "nodes": [
@@ -159,6 +159,55 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "DAX",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": 646.5947743098455,
+      "y": 661.4417883384173
+    },
+    {
+      "id": "all-time high",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": 465.2973283424556
+    },
+    {
+      "id": "BitFlow",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -605.8984884052076,
+      "y": 219.47034381470763
+    },
+    {
+      "id": "BitFlow Frame Grabber",
+      "type": "PRODUCT",
+      "degree": 4,
+      "x": -422.320506822693,
+      "y": -81.32478691723199
+    },
+    {
+      "id": "NASA",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -728.0475788504848,
+      "y": -169.48392111354963
+    },
+    {
+      "id": "Space Radiation Testing",
+      "type": "EVENT",
+      "degree": 2,
+      "x": -49.26549274830937,
+      "y": -240.9765478398887
+    },
+    {
+      "id": "InGaAs Infrared Camera",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 258.9372925168498,
+      "y": -854.4242046249101
     }
   ],
   "edges": [
@@ -392,6 +441,102 @@
       "target": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
       "rel": "Authored",
       "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "DAX||is down 12% from||all-time high",
+      "source": "DAX",
+      "target": "all-time high",
+      "rel": "is down 12% from",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "BitFlow||Manufactures||BitFlow Frame Grabber",
+      "source": "BitFlow",
+      "target": "BitFlow Frame Grabber",
+      "rel": "Manufactures",
+      "rel_cat": "GFMK",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "BitFlow Frame Grabber||Was Selected By||NASA",
+      "source": "BitFlow Frame Grabber",
+      "target": "NASA",
+      "rel": "Was Selected By",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "NASA||Selected||BitFlow Frame Grabber",
+      "source": "NASA",
+      "target": "BitFlow Frame Grabber",
+      "rel": "Selected",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "BitFlow Frame Grabber||Is Used For||Space Radiation Testing",
+      "source": "BitFlow Frame Grabber",
+      "target": "Space Radiation Testing",
+      "rel": "Is Used For",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Space Radiation Testing||Is For Testing Of||InGaAs Infrared Camera",
+      "source": "Space Radiation Testing",
+      "target": "InGaAs Infrared Camera",
+      "rel": "Is For Testing Of",
+      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",

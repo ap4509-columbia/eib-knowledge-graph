@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 26,
-    "edges": 18,
+    "nodes": 30,
+    "edges": 21,
     "scored_edges": 0
   },
   "nodes": [
@@ -187,6 +187,34 @@
       "degree": 1,
       "x": 385.07246111800123,
       "y": -900.0
+    },
+    {
+      "id": "Novartis",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 4.707462965621628,
+      "y": 8.249004258830876
+    },
+    {
+      "id": "SWX:NOVN",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": 112.0244246274341
+    },
+    {
+      "id": "Antares Cancer",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -308.7291968691058,
+      "y": -792.9666098825343
+    },
+    {
+      "id": "Disability Access",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -595.9782660965161,
+      "y": 672.6931809962693
     }
   ],
   "edges": [
@@ -477,6 +505,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "Novartis||Has Ticker||SWX:NOVN",
+      "source": "Novartis",
+      "target": "SWX:NOVN",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Novartis||Forms Partnership With||Antares Cancer",
+      "source": "Novartis",
+      "target": "Antares Cancer",
+      "rel": "Forms Partnership With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Novartis||Expands Efforts For||Disability Access",
+      "source": "Novartis",
+      "target": "Disability Access",
+      "rel": "Expands Efforts For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

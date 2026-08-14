@@ -1,0 +1,65 @@
+{
+  "month": "2025-04",
+  "stats": {
+    "nodes": 3,
+    "edges": 2,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Nestl\u00e9",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 844.9394243538261,
+      "y": 328.89953340738094
+    },
+    {
+      "id": "Perrier",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": 55.060575646174016,
+      "y": -14.155405289725406
+    },
+    {
+      "id": "Mineral Water",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -900.0,
+      "y": -314.7441281176552
+    }
+  ],
+  "edges": [
+    {
+      "id": "Nestl\u00e9||May have to stop selling||Perrier",
+      "source": "Nestl\u00e9",
+      "target": "Perrier",
+      "rel": "May have to stop selling",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Perrier||May lose classification as||Mineral Water",
+      "source": "Perrier",
+      "target": "Mineral Water",
+      "rel": "May lose classification as",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    }
+  ]
+}

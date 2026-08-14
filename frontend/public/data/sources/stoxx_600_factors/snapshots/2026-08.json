@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 155,
-    "edges": 128,
+    "nodes": 169,
+    "edges": 142,
     "scored_edges": 0
   },
   "nodes": [
@@ -1090,6 +1090,104 @@
       "degree": 1,
       "x": -289.1445184376203,
       "y": -786.9509465208038
+    },
+    {
+      "id": "Obesity Race",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 637.7586242637473,
+      "y": 498.05442465888973
+    },
+    {
+      "id": "BNP Paribas Obliselect Nordic HY 2016 CC",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": -675.6638785984072,
+      "y": 453.7627242311463
+    },
+    {
+      "id": "FR0011488162.PA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -796.3997006414,
+      "y": 532.4079513200649
+    },
+    {
+      "id": "Market Read",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -772.4722373786888,
+      "y": 5.1873100505386605
+    },
+    {
+      "id": "Mercedes Benz Group",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -35.93181979766021,
+      "y": -426.51037994302567
+    },
+    {
+      "id": "XTRA:MBG",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": -584.1633790164575,
+      "y": -377.3758673444068
+    },
+    {
+      "id": "Fleet Charging Deal",
+      "type": "EVENT",
+      "degree": 2,
+      "x": 510.2876206479873,
+      "y": -493.55010232522983
+    },
+    {
+      "id": "Mercedes-Benz Group",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": -31.996115277238353,
+      "y": 52.09588194409073
+    },
+    {
+      "id": "Undervalued Narrative",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -69.62657426465613,
+      "y": 900.0
+    },
+    {
+      "id": "Data Theft",
+      "type": "EVENT",
+      "degree": 4,
+      "x": -46.014062325727174,
+      "y": -746.6168066407433
+    },
+    {
+      "id": "Philips",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 11.872605005003573,
+      "y": -641.5596722947148
+    },
+    {
+      "id": "GE",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -55.71425364993714,
+      "y": -465.8511689394985
+    },
+    {
+      "id": "Fiserv",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 9.746922582298604,
+      "y": -519.195165480256
+    },
+    {
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 566.0019167677438,
+      "y": 188.19932988773883
     }
   ],
   "edges": [
@@ -1566,7 +1664,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -3140,6 +3238,230 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "Novo Nordisk||Reframes||Obesity Race",
+      "source": "Novo Nordisk",
+      "target": "Obesity Race",
+      "rel": "Reframes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "BNP Paribas Obliselect Nordic HY 2016 CC||Has Ticker||FR0011488162.PA",
+      "source": "BNP Paribas Obliselect Nordic HY 2016 CC",
+      "target": "FR0011488162.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Volkswagen||Has Reasonable Stock Performance Based On||Earnings",
+      "source": "Volkswagen",
+      "target": "Earnings",
+      "rel": "Has Reasonable Stock Performance Based On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Volkswagen||Experiences Weakness Based On||Market Read",
+      "source": "Volkswagen",
+      "target": "Market Read",
+      "rel": "Experiences Weakness Based On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Mercedes Benz Group||Has Ticker||XTRA:MBG",
+      "source": "Mercedes Benz Group",
+      "target": "XTRA:MBG",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Mercedes Benz Group||Expands||Fleet Charging Deal",
+      "source": "Mercedes Benz Group",
+      "target": "Fleet Charging Deal",
+      "rel": "Expands",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Mercedes-Benz Group||Has Ticker||XTRA:MBG",
+      "source": "Mercedes-Benz Group",
+      "target": "XTRA:MBG",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Mercedes-Benz Group||Has Fleet Charging Deal||Fleet Charging Deal",
+      "source": "Mercedes-Benz Group",
+      "target": "Fleet Charging Deal",
+      "rel": "Has Fleet Charging Deal",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Mercedes-Benz Group||Is Subject To||Undervalued Narrative",
+      "source": "Mercedes-Benz Group",
+      "target": "Undervalued Narrative",
+      "rel": "Is Subject To",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Suffers Data Theft||Data Theft",
+      "source": "Shell",
+      "target": "Data Theft",
+      "rel": "Suffers Data Theft",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Philips||Suffers Data Theft||Data Theft",
+      "source": "Philips",
+      "target": "Data Theft",
+      "rel": "Suffers Data Theft",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "GE||Suffers Data Theft||Data Theft",
+      "source": "GE",
+      "target": "Data Theft",
+      "rel": "Suffers Data Theft",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Fiserv||Suffers Data Theft||Data Theft",
+      "source": "Fiserv",
+      "target": "Data Theft",
+      "rel": "Suffers Data Theft",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne||Has Ticker||MC.PA",
+      "source": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+      "target": "MC.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
