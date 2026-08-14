@@ -570,7 +570,11 @@ export default function Home() {
           </main>
         </div>
 
-        {/* Time slider — shared control for both tabs */}
+        {/* Time slider — shared control across tabs. On the Predictions tab
+            we overlay a training-vs-prediction band so it's clear which
+            months fed the GAT vs which month is being visualized. The
+            trainingWindow value mirrors the WINDOW_SIZE in the rolling-
+            window GAT trainer (backend/eib-eval components/gat.py). */}
         <TimeSlider
           months={actualMonths}
           futureMonths={futureMonths}
@@ -580,6 +584,11 @@ export default function Home() {
             setMonthFrom(from);
             setMonthTo(to);
           }}
+          predictionsContext={
+            activeTab === "predictions" && monthTo
+              ? { predictionMonth: monthTo, trainingWindow: 3 }
+              : undefined
+          }
         />
 
         <footer className="shrink-0 border-t border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">

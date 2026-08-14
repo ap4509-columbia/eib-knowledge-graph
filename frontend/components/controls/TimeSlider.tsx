@@ -14,6 +14,16 @@ export interface TimeSliderProps {
   /** End of the selected range (inclusive). Equal to monthFrom for one month. */
   monthTo: string | null;
   onChange: (from: string, to: string) => void;
+  /** When the Predictions tab is active, this overlays a visual split of
+   *  the rolling-window training months vs the prediction month on the
+   *  timeline. Not passed on other tabs, so the timeline stays plain. */
+  predictionsContext?: {
+    /** The month whose predictions are being shown (usually monthTo). */
+    predictionMonth: string;
+    /** Rolling-window size — the model uses this many months preceding
+     *  predictionMonth as training data. */
+    trainingWindow: number;
+  };
 }
 
 type Preset = { label: string; span: number | "all"; title: string };
@@ -33,6 +43,7 @@ export function TimeSlider({
   monthFrom,
   monthTo,
   onChange,
+  predictionsContext,
 }: TimeSliderProps) {
   const allMonths = [...months, ...futureMonths];
   const total = allMonths.length;
@@ -55,6 +66,28 @@ export function TimeSlider({
 
   const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
   const futureStartPct = total > 1 ? (months.length / (total - 1)) * 100 : 100;
+
+  // Predictions-tab overlay: compute training window + prediction month
+  // percentage positions on the timeline. WINDOW_SIZE mirrors the GAT
+  // rolling-window trainer (train on [t-W, t-1], predict t).
+  let predictionBand: { trainStartPct: number; trainEndPct: number; predPct: number; label: string } | null = null;
+  if (predictionsContext) {
+    const predIdx = allMonths.indexOf(predictionsContext.predictionMonth);
+    if (predIdx > 0) {
+      const trainStart = Math.max(0, predIdx - predictionsContext.trainingWindow);
+      const trainEnd = predIdx - 1;
+      const bandOffset = total > 1 ? 100 / (total - 1) / 2 : 0;
+      predictionBand = {
+        trainStartPct: Math.max(0, pct(trainStart) - bandOffset),
+        trainEndPct: pct(trainEnd) + bandOffset,
+        predPct: pct(predIdx),
+        label:
+          trainEnd >= trainStart
+            ? `train ${allMonths[trainStart]}–${allMonths[trainEnd]} · predict ${predictionsContext.predictionMonth}`
+            : `predict ${predictionsContext.predictionMonth}`,
+      };
+    }
+  }
 
   const emit = (a: number, b: number) => {
     const lo = allMonths[clampIdx(Math.min(a, b))];
@@ -150,6 +183,44 @@ export function TimeSlider({
           })}
         </div>
       </div>
+
+      {/* Predictions-tab overlay: shows the training window + prediction
+          month above the timeline. Rendered only when predictionsContext
+          is passed by page.tsx (i.e. Predictions tab active). */}
+      {predictionBand && (
+        <div className="mb-1.5 select-none">
+          <div className="relative h-3">
+            {/* Training band */}
+            <div
+              className="absolute top-0 h-full rounded-l-sm border-y border-l border-amber-600/40 bg-amber-500/15 dark:border-amber-500/40 dark:bg-amber-400/10"
+              style={{
+                left: `${predictionBand.trainStartPct}%`,
+                width: `${Math.max(0, predictionBand.trainEndPct - predictionBand.trainStartPct)}%`,
+              }}
+              title={`Training window: ${allMonths[Math.max(0, allMonths.indexOf(predictionsContext!.predictionMonth) - predictionsContext!.trainingWindow)]} through ${allMonths[allMonths.indexOf(predictionsContext!.predictionMonth) - 1]}`}
+            />
+            {/* Prediction month marker — a thin vertical line + fill */}
+            <div
+              className="absolute top-0 h-full rounded-r-sm border-y border-r border-emerald-700/50 bg-emerald-600/25 dark:border-emerald-500/50 dark:bg-emerald-400/20"
+              style={{
+                left: `${predictionBand.trainEndPct}%`,
+                width: `${Math.max(1.5, (100 / Math.max(1, total - 1)))}%`,
+              }}
+              title={`Prediction month: ${predictionsContext!.predictionMonth}`}
+            />
+          </div>
+          <div className="mt-0.5 flex items-center gap-3 font-mono text-[9px] text-muted-foreground">
+            <span className="flex items-center gap-1">
+              <span className="inline-block h-2 w-3 rounded-sm border border-amber-600/40 bg-amber-500/25 dark:border-amber-500/40 dark:bg-amber-400/20" />
+              trained on the {predictionsContext!.trainingWindow} months before
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="inline-block h-2 w-2 rounded-sm border border-emerald-700/50 bg-emerald-600/40 dark:border-emerald-500/50 dark:bg-emerald-400/30" />
+              prediction month shown
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* Timeline track + slider */}
       <div className="relative">
