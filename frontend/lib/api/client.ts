@@ -68,7 +68,10 @@ const PREDICTIONS_CACHE = new Map<string, PredictionsFile>();
 
 export async function fetchSources(): Promise<SourcesFile> {
   if (SOURCES_CACHE) return SOURCES_CACHE;
-  const res = await fetch(`/data/sources.json`, { cache: "force-cache" });
+  // cache: no-store — sources.json changes when we add/remove corpora and
+  // we've been repeatedly bitten by browsers holding onto a stale copy.
+  // File is tiny so bypassing the cache costs ~nothing.
+  const res = await fetch(`/data/sources.json`, { cache: "no-store" });
   SOURCES_CACHE = await jsonOrThrow<SourcesFile>(res);
   return SOURCES_CACHE;
 }
@@ -96,7 +99,7 @@ export async function fetchPredictions(
   const cached = PREDICTIONS_CACHE.get(sourceId);
   if (cached) return cached;
   const res = await fetch(`${sourceBase(sourceId)}/predictions.json`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
   const data = await jsonOrThrow<PredictionsFile>(res);
   PREDICTIONS_CACHE.set(sourceId, data);
@@ -166,7 +169,7 @@ async function loadArticles(
   if (cached) return cached;
   try {
     const res = await fetch(`${sourceBase(sourceId)}/articles/${month}.json`, {
-      cache: "force-cache",
+      cache: "no-store",
     });
     if (!res.ok) {
       ARTICLE_CACHE.set(key, []);
