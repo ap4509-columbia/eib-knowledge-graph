@@ -169,15 +169,15 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
  *  remembered per browser via localStorage so returning users aren't
  *  re-lectured. */
 function AboutSection() {
-  // Start collapsed on the server to avoid layout shift, then read the
-  // remembered preference on the client. First-time users get the expanded
-  // view (default when the key is missing).
+  // Default to COLLAPSED so the table (below) always has room. Users can
+  // toggle to expand; choice is remembered per browser via localStorage.
   const [collapsed, setCollapsed] = useState(true);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     const stored = window.localStorage.getItem(ABOUT_COLLAPSED_STORAGE_KEY);
-    setCollapsed(stored === "1");
+    // Only respect an explicit "expanded" preference; missing key stays collapsed
+    setCollapsed(stored !== "0");
     setHydrated(true);
   }, []);
 
@@ -207,7 +207,7 @@ function AboutSection() {
       </button>
 
       {!collapsed && (
-        <div className="space-y-3 border-t border-border/40 px-6 py-3 text-[11px] leading-relaxed text-muted-foreground">
+        <div className="max-h-64 space-y-3 overflow-y-auto border-t border-border/40 px-6 py-3 text-[11px] leading-relaxed text-muted-foreground">
           <div>
             <div className="mb-1 font-medium text-foreground">
               What is this?
