@@ -184,6 +184,18 @@ export function makeGraphStyles(isDark: boolean, scale = 1): StylesheetJson {
       selector: `node[type = "${type}"]`,
       style: { "background-color": color },
     })),
+    // Label thinning: GraphCanvas grants `showLabel = 1` to the top nodes
+    // by degree among the currently *visible* set — a few hundred
+    // always-on labels turn dense corpora into an unreadable word cloud.
+    // The rest reveal their label on hover / focus / selection (below).
+    {
+      selector: "node[showLabel != 1]",
+      style: { "text-opacity": 0 },
+    },
+    {
+      selector: "node.hovered, node.highlighted, node.focused, node:selected",
+      style: { "text-opacity": 1, "z-index": 98 },
+    },
     {
       selector: "edge",
       style: {

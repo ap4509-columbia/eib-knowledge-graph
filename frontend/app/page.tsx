@@ -141,10 +141,10 @@ export default function Home() {
         const idx = await fetchIndex(sourceId);
         setIndex(idx);
         if (idx.latest) {
-          // Default view: trailing 6 months ending at the latest available
-          // month. Falls back to corpus start if fewer than 6 months exist.
+          // Default view: trailing quarter (3 months) ending at the latest
+          // available month. Falls back to corpus start if fewer exist.
           const latestIdx = idx.months.indexOf(idx.latest);
-          const fromIdx = Math.max(0, latestIdx - 5);
+          const fromIdx = Math.max(0, latestIdx - 2);
           setMonthFrom(idx.months[fromIdx] ?? idx.latest);
           setMonthTo(idx.latest);
         }

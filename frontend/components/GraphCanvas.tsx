@@ -112,6 +112,21 @@ export function GraphCanvas({
     // touch, then re-frame once. Runs only on the preset layout — the
     // physics simulation handles its own spacing.
     if (!physicsEnabledRef.current && separateOverlaps(cy)) fit();
+    assignLabelBudget(cy);
+  };
+
+  // Permanent labels go to the most-connected nodes of the current view
+  // only; everything else stays unlabeled until hovered/focused. Runs
+  // after every fit so filter/range changes re-rank.
+  const LABEL_BUDGET = 40;
+  const assignLabelBudget = (cy: Core) => {
+    const visible = cy
+      .nodes(":visible")
+      .toArray()
+      .sort((a, b) => (b.data("degree") ?? 0) - (a.data("degree") ?? 0));
+    cy.batch(() => {
+      visible.forEach((n, i) => n.data("showLabel", i < LABEL_BUDGET ? 1 : 0));
+    });
   };
 
   // Nudge overlapping visible nodes apart. Not a physics simulation — a few
@@ -131,9 +146,9 @@ export function GraphCanvas({
       y: n.position("y"),
       r: n.width() / 2,
     }));
-    const pad = 2 * styleScaleRef.current; // breathing room, in graph units
+    const pad = 9 * styleScaleRef.current; // breathing room, in graph units
     let movedAny = false;
-    for (let pass = 0; pass < 8; pass++) {
+    for (let pass = 0; pass < 12; pass++) {
       let moved = false;
       for (let i = 0; i < pts.length; i++) {
         for (let j = i + 1; j < pts.length; j++) {
@@ -216,6 +231,15 @@ export function GraphCanvas({
     cy.on("mouseout", "edge", (evt) => {
       evt.target.removeClass("hovered");
       setTooltip(null);
+    });
+
+    // Small nodes hide their label by default (see graphStyles label
+    // thinning) — hovering reveals it.
+    cy.on("mouseover", "node", (evt) => {
+      evt.target.addClass("hovered");
+    });
+    cy.on("mouseout", "node", (evt) => {
+      evt.target.removeClass("hovered");
     });
 
     // No physics: dragging a node moves only that node. Neighbors stay still.

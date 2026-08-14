@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Slider } from "@/components/ui/slider";
 import { formatMonth } from "@/lib/months";
 import { cn } from "@/lib/utils";
 
@@ -248,40 +247,13 @@ export function TimeSlider({
               onChange={(idx) => emit(idx, idx)}
             />
           ) : (
-            <div className="relative">
-              <Slider
-                min={0}
-                max={total - 1}
-                step={1}
-                value={[fromIdx, toIdx]}
-                aria-label="Selected month range"
-                // "push" (the library default, stated here so it isn't accidental):
-                // with the thumbs collapsed on one month, dragging forward carries
-                // both and keeps the old single-month scrubbing feel, while
-                // dragging back opens the range. The preset chips are the
-                // guaranteed path to any span regardless of drag direction.
-                thumbCollisionBehavior="push"
-                onValueChange={(v) => {
-                  const arr = Array.isArray(v) ? v : [v];
-                  if (arr.length < 2) return;
-                  emit(arr[0], arr[1]);
-                }}
-              />
-              {/* Drag strip over the selected range: slide the whole window
-                  left/right while preserving its span (set a span with the
-                  1M/3M/6M/12M presets, then drag the middle to scrub).
-                  Inset from the ends so the thumbs stay individually
-                  grabbable for resizing. Only rendered for spans >= 2
-                  months — a collapsed range IS the thumb. */}
-              {span >= 2 && (
-                <RangeDragStrip
-                  total={total}
-                  fromIdx={fromIdx}
-                  toIdx={toIdx}
-                  onSlide={(f, t) => emit(f, t)}
-                />
-              )}
-            </div>
+            <RangeScrubber
+              total={total}
+              allMonths={allMonths}
+              fromIdx={fromIdx}
+              toIdx={toIdx}
+              onChange={(f, t) => emit(f, t)}
+            />
           )}
         </div>
 
@@ -497,92 +469,172 @@ function WindowScrubber({
 
 
 /**
- * Invisible drag strip laid over the middle of the selected range on the
- * KG timeline. Dragging it slides the whole window left/right while
- * preserving the span — so after clicking a 3M/6M preset the analyst can
- * scrub the window through time without re-setting both ends. The strip
- * is inset ~12px from each thumb so the thumbs stay grabbable for
- * resizing.
+ * The knowledge-graph timeline scrubber — same interaction model as the
+ * Predictions WindowScrubber but neutral-colored and resizable. The
+ * selected range renders as a visible block whose edges land exactly on
+ * month ticks. Drag the middle to slide the whole window (span
+ * preserved); drag either edge handle to resize; click the empty track
+ * to jump the window there; arrow keys nudge by one month.
  */
-function RangeDragStrip({
+function RangeScrubber({
   total,
+  allMonths,
   fromIdx,
   toIdx,
-  onSlide,
+  onChange,
 }: {
   total: number;
+  allMonths: string[];
   fromIdx: number;
   toIdx: number;
-  onSlide: (from: number, to: number) => void;
+  onChange: (from: number, to: number) => void;
 }) {
-  const stripRef = useRef<HTMLDivElement>(null);
-  const dragRef = useRef<{ startX: number; startFrom: number; startTo: number; trackWidth: number } | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef<{
+    mode: "move" | "left" | "right";
+    startX: number;
+    startFrom: number;
+    startTo: number;
+  } | null>(null);
   const [isDragging, setIsDragging] = useState(false);
 
+  const clampIdx = (i: number) => Math.min(total - 1, Math.max(0, i));
   const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
   const span = toIdx - fromIdx;
 
-  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const parent = stripRef.current?.parentElement;
-    if (!parent) return;
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
-    dragRef.current = {
-      startX: e.clientX,
-      startFrom: fromIdx,
-      startTo: toIdx,
-      trackWidth: parent.getBoundingClientRect().width,
-    };
-    setIsDragging(true);
+  const idxFromClientX = (clientX: number): number => {
+    const el = trackRef.current;
+    if (!el) return fromIdx;
+    const rect = el.getBoundingClientRect();
+    const ratio = (clientX - rect.left) / rect.width;
+    return clampIdx(Math.round(ratio * (total - 1)));
   };
-  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    const st = dragRef.current;
-    if (!st) return;
-    const deltaMonths = Math.round(
-      ((e.clientX - st.startX) / st.trackWidth) * (total - 1)
-    );
-    let nextFrom = st.startFrom + deltaMonths;
-    let nextTo = st.startTo + deltaMonths;
-    // Clamp while preserving span
-    if (nextFrom < 0) {
-      nextFrom = 0;
-      nextTo = span;
-    }
+
+  const slideTo = (centerIdx: number) => {
+    // Move the window so it centres on centerIdx, span preserved, clamped.
+    let nextFrom = clampIdx(centerIdx - Math.round(span / 2));
+    let nextTo = nextFrom + span;
     if (nextTo > total - 1) {
       nextTo = total - 1;
       nextFrom = nextTo - span;
     }
-    if (nextFrom !== fromIdx || nextTo !== toIdx) onSlide(nextFrom, nextTo);
+    onChange(nextFrom, nextTo);
   };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    const target = e.target as HTMLElement;
+    const mode: "move" | "left" | "right" = target.closest(
+      "[data-handle='left']"
+    )
+      ? "left"
+      : target.closest("[data-handle='right']")
+        ? "right"
+        : "move";
+    // Click on empty track: jump the window there first, then drag moves it.
+    if (mode === "move" && !target.closest("[data-scrub-block]")) {
+      slideTo(idxFromClientX(e.clientX));
+    }
+    dragRef.current = { mode, startX: e.clientX, startFrom: fromIdx, startTo: toIdx };
+    setIsDragging(true);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const st = dragRef.current;
+    const el = trackRef.current;
+    if (!st || !el) return;
+    const rect = el.getBoundingClientRect();
+    const deltaMonths = Math.round(
+      ((e.clientX - st.startX) / rect.width) * (total - 1)
+    );
+    if (st.mode === "left") {
+      const nextFrom = Math.min(st.startTo, clampIdx(st.startFrom + deltaMonths));
+      if (nextFrom !== fromIdx) onChange(nextFrom, toIdx);
+      return;
+    }
+    if (st.mode === "right") {
+      const nextTo = Math.max(st.startFrom, clampIdx(st.startTo + deltaMonths));
+      if (nextTo !== toIdx) onChange(fromIdx, nextTo);
+      return;
+    }
+    const startSpan = st.startTo - st.startFrom;
+    let nextFrom = st.startFrom + deltaMonths;
+    let nextTo = st.startTo + deltaMonths;
+    if (nextFrom < 0) {
+      nextFrom = 0;
+      nextTo = startSpan;
+    }
+    if (nextTo > total - 1) {
+      nextTo = total - 1;
+      nextFrom = nextTo - startSpan;
+    }
+    if (nextFrom !== fromIdx || nextTo !== toIdx) onChange(nextFrom, nextTo);
+  };
+
   const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
     dragRef.current = null;
     setIsDragging(false);
     (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
   };
 
-  // Inset the strip from both thumbs. At narrow spans the strip may
-  // disappear entirely — that's fine, the preset chips re-set the span.
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const step = e.key === "ArrowLeft" ? -1 : e.key === "ArrowRight" ? 1 : 0;
+    if (!step) return;
+    e.preventDefault();
+    const nextFrom = fromIdx + step;
+    const nextTo = toIdx + step;
+    if (nextFrom < 0 || nextTo > total - 1) return;
+    onChange(nextFrom, nextTo);
+  };
+
   const leftPct = pct(fromIdx);
   const rightPct = pct(toIdx);
-  const width = rightPct - leftPct;
+  // A collapsed (single-month) window still needs a grabbable block.
+  const widthPct = Math.max(1.5, rightPct - leftPct);
 
   return (
     <div
-      ref={stripRef}
+      ref={trackRef}
+      role="slider"
+      tabIndex={0}
+      aria-label={`Selected month range, ${allMonths[fromIdx]} through ${allMonths[toIdx]}. Drag the block to slide, drag its edges to resize, arrow keys to nudge.`}
+      aria-valuemin={0}
+      aria-valuemax={total - 1}
+      aria-valuenow={fromIdx}
+      aria-valuetext={`${allMonths[fromIdx]} – ${allMonths[toIdx]}`}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
-      title="Drag to slide the whole window through time"
-      className={
-        "absolute top-1/2 z-10 h-5 -translate-y-1/2 " +
-        (isDragging ? "cursor-grabbing" : "cursor-grab")
-      }
-      style={{
-        left: `calc(${leftPct}% + 14px)`,
-        width: `calc(${width}% - 28px)`,
-        touchAction: "none",
-      }}
-    />
+      onKeyDown={onKeyDown}
+      className={cn(
+        "relative h-5 w-full overflow-hidden rounded-full border border-border bg-muted/40 outline-none",
+        "focus-visible:ring-2 focus-visible:ring-ring",
+        isDragging ? "cursor-grabbing" : "cursor-pointer"
+      )}
+      style={{ touchAction: "none" }}
+    >
+      {/* Selected-range block — neutral counterpart of the predictions
+          window. Edges land exactly on month ticks. */}
+      <div
+        data-scrub-block
+        className={cn(
+          "absolute top-0 h-full rounded-full border border-foreground/40 bg-foreground/15",
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        )}
+        style={{ left: `${leftPct}%`, width: `${widthPct}%` }}
+      >
+        {/* Resize handles — invisible edge zones (the ew-resize cursor is
+            the affordance; visible grip bars read as misaligned ticks) */}
+        <div
+          data-handle="left"
+          className="absolute left-0 top-0 h-full w-3.5 cursor-ew-resize"
+        />
+        <div
+          data-handle="right"
+          className="absolute right-0 top-0 h-full w-3.5 cursor-ew-resize"
+        />
+      </div>
+    </div>
   );
 }
