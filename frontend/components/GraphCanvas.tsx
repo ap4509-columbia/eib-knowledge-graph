@@ -73,6 +73,40 @@ export function GraphCanvas({
   const [tooltip, setTooltip] = useState<EdgeTooltip | null>(null);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme !== "light";
+  // Zoom-compensation scale currently baked into the stylesheet (see
+  // makeGraphStyles). Kept in refs so the fit callbacks — which run outside
+  // the effects that know the current theme — can restyle correctly.
+  const styleScaleRef = useRef(1);
+  const isDarkRef = useRef(isDark);
+  isDarkRef.current = isDark;
+
+  // Fit the viewport, then normalize node/label sizes to the zoom the fit
+  // landed on. Sizes in the stylesheet are graph units, so a sprawling
+  // layout (STOXX, spring_layout × 900) fits at low zoom and renders tiny
+  // nodes while a compact one (FNSPID) renders huge ones. Restyling with
+  // scale ≈ 1/zoom makes nodes come out at the same pixel size in both,
+  // then a second fit accounts for the changed bounding box.
+  const fitNormalized = (
+    cy: Core,
+    eles?: cytoscape.CollectionReturnValue
+  ) => {
+    const fit = () =>
+      eles ? cy.fit(eles, 40) : cy.fit(undefined, 40);
+    fit();
+    // Iterate: restyling changes node sizes, which changes the bounding box
+    // the next fit sees, which changes the zoom the scale is derived from.
+    // Sparse views (a few hub nodes) need 2–3 rounds to converge.
+    for (let i = 0; i < 4; i++) {
+      const k = Math.min(8, Math.max(0.25, 1 / cy.zoom()));
+      if (Math.abs(k - styleScaleRef.current) <= styleScaleRef.current * 0.1)
+        break;
+      styleScaleRef.current = k;
+      cy.style(
+        makeGraphStyles(isDarkRef.current, k) as cytoscape.StylesheetJson
+      ).update();
+      fit();
+    }
+  };
 
   // Mount Cytoscape once
   useEffect(() => {
@@ -189,11 +223,27 @@ export function GraphCanvas({
       sy = target / spreadY;
     }
 
+    // Node size maps `sizeDeg` (see graphStyles), a 0–50 value normalised to
+    // this snapshot's own degree ceiling. Raw degree spans hundreds in
+    // FNSPID but only ~1–8 in the STOXX corpus, so mapping raw degree to a
+    // fixed 1–50 domain leaves every STOXX node at the minimum size. The
+    // sqrt keeps mid-degree nodes visually distinct instead of ceding the
+    // whole range to the single biggest hub.
+    const maxDeg = Math.max(1, ...snapshot.nodes.map((n) => n.degree || 0));
+    const sizeDeg = (deg: number) =>
+      Math.sqrt(Math.max(0, deg) / maxDeg) * 50;
+
     const elements: ElementDefinition[] = [];
     for (const n of snapshot.nodes) {
       const el: ElementDefinition = {
         group: "nodes",
-        data: { id: n.id, label: n.id, type: n.type, degree: n.degree },
+        data: {
+          id: n.id,
+          label: n.id,
+          type: n.type,
+          degree: n.degree,
+          sizeDeg: sizeDeg(n.degree),
+        },
       };
       if (typeof n.x === "number" && typeof n.y === "number") {
         el.position = { x: (n.x - cx) * sx, y: (n.y - cy0) * sy };
@@ -273,7 +323,7 @@ export function GraphCanvas({
       pendingFitRef.current = null;
       if (cyRef.current !== cy || cy.destroyed()) return;
       cy.resize();
-      cy.fit(undefined, 40);
+      fitNormalized(cy);
     });
   }, [snapshot, physics.enabled, physics.repulsion, physics.linkStrength]);
 
@@ -281,7 +331,9 @@ export function GraphCanvas({
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy) return;
-    cy.style(makeGraphStyles(isDark) as cytoscape.StylesheetJson).update();
+    cy.style(
+      makeGraphStyles(isDark, styleScaleRef.current) as cytoscape.StylesheetJson
+    ).update();
   }, [isDark]);
 
   // Apply filters (no relayout)
@@ -323,7 +375,7 @@ export function GraphCanvas({
       pendingFitRef.current = null;
       if (cyRef.current !== cy || cy.destroyed()) return;
       const visible = cy.elements(':visible');
-      if (visible.length > 0) cy.fit(visible, 40);
+      if (visible.length > 0) fitNormalized(cy, visible);
     });
   }, [filters]);
 

@@ -167,6 +167,11 @@ export default function Home() {
     filtersInitializedRef.current = false;
     setVisibleTypes(new Set());
     setVisibleCategories(new Set());
+    // Drop the old corpus's index/snapshot immediately — otherwise the
+    // snapshot-fetch effect fires once with the old months against the new
+    // source's path and 404s before loadIndex swaps the months in.
+    setIndex(null);
+    setSnapshot(null);
     if (typeof window !== "undefined") {
       window.localStorage.setItem(ACTIVE_SOURCE_STORAGE_KEY, activeSourceId);
     }
@@ -243,6 +248,7 @@ export default function Home() {
         if (cancelled) return;
         for (const [m, snap] of fetched) cache.set(m, snap);
         applyFromCache();
+        setError(null);
       })
       .catch((e) => {
         if (cancelled) return;
@@ -516,13 +522,11 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
                   <div className="text-destructive">
-                    <div className="font-medium">Backend unreachable.</div>
+                    <div className="font-medium">
+                      Couldn&apos;t load data for this view.
+                    </div>
                     <div className="mt-1 text-xs opacity-80">
-                      Run{" "}
-                      <code className="rounded bg-destructive/20 px-1 py-0.5 font-mono">
-                        uvicorn main:app --reload --port 8000
-                      </code>{" "}
-                      in <code>backend/</code>.
+                      Try reloading the page or switching data source.
                     </div>
                     <div className="mt-1 font-mono text-[10px] opacity-60">
                       {error}

@@ -127,8 +127,14 @@ const LIGHT: ThemePalette = {
   hoveredEdgeColor: "#52525b", // zinc-600
 };
 
-export function makeGraphStyles(isDark: boolean): StylesheetJson {
+// `scale` compensates for the zoom level cy.fit() lands on: node/label/edge
+// sizes here are in graph units, so a corpus whose layout spans 2600 units
+// renders the same 12–40-unit nodes far smaller on screen than one spanning
+// 500 units. GraphCanvas re-invokes this with scale ≈ 1/zoom after each fit
+// so nodes come out at a consistent pixel size across corpora.
+export function makeGraphStyles(isDark: boolean, scale = 1): StylesheetJson {
   const p = isDark ? DARK : LIGHT;
+  const s = (v: number) => v * scale;
 
   const causalTypeSelectors = Object.entries(CAUSAL_TYPE_COLORS).flatMap(
     ([type, color]) => [
@@ -157,17 +163,19 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
     {
       selector: "node",
       style: {
-        "background-color": `mapData(degree, 0, 50, ${ENTITY_COLORS.UNK}, ${ENTITY_COLORS.COMPANY})` as unknown as string,
+        "background-color": `mapData(sizeDeg, 0, 50, ${ENTITY_COLORS.UNK}, ${ENTITY_COLORS.COMPANY})` as unknown as string,
         label: "data(label)",
         color: p.textColor,
-        "font-size": 10,
+        "font-size": s(10),
         "text-outline-color": p.textOutlineColor,
-        "text-outline-width": 2,
+        "text-outline-width": s(2),
         "text-valign": "center",
         "text-halign": "center",
-        width: "mapData(degree, 1, 50, 12, 40)",
-        height: "mapData(degree, 1, 50, 12, 40)",
-        "border-width": 1,
+        // sizeDeg is per-snapshot-normalised degree (0–50), computed in
+        // GraphCanvas — raw degree spans wildly different ranges per corpus.
+        width: `mapData(sizeDeg, 0, 50, ${s(12)}, ${s(40)})`,
+        height: `mapData(sizeDeg, 0, 50, ${s(12)}, ${s(40)})`,
+        "border-width": s(1),
         "border-color": p.nodeBorderColor,
       },
     },
@@ -179,7 +187,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
     {
       selector: "edge",
       style: {
-        width: ("mapData(weight, 1, 15, 0.6, 4)" as unknown) as number,
+        width: (`mapData(weight, 1, 15, ${s(0.6)}, ${s(4)})` as unknown) as number,
         "line-color": p.defaultEdgeColor,
         "curve-style": "bezier",
         "target-arrow-color": p.defaultEdgeColor,
@@ -190,14 +198,14 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         // by default so dense graphs stay readable; the label pops on
         // hover (see the .hovered rule below).
         label: "data(rel)",
-        "font-size": 6,
+        "font-size": s(6),
         color: p.textColor,
         "text-opacity": 0,
         "text-outline-color": p.textOutlineColor,
-        "text-outline-width": 1,
+        "text-outline-width": s(1),
         "text-outline-opacity": 0,
         "text-rotation": "autorotate",
-        "text-margin-y": -3,
+        "text-margin-y": s(-3),
       },
     },
     // Color by causal type (primary edge signal)
@@ -208,7 +216,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
       selector: 'edge[origin = "prediction"]',
       style: {
         "line-style": "dashed",
-        "line-dash-pattern": [6, 3],
+        "line-dash-pattern": [s(6), s(3)],
       },
     },
     {
@@ -221,9 +229,9 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
         // Label reveals on hover — same 6px as the default rule so it
         // doesn't grow / jump. Outlined so it stays readable over other
         // edges and node fills.
-        "font-size": 6,
+        "font-size": s(6),
         "text-opacity": 1,
-        "text-outline-width": 1.5,
+        "text-outline-width": s(1.5),
         "text-outline-opacity": 1,
       },
     },
@@ -231,7 +239,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
       selector: "node:selected",
       style: {
         "border-color": p.selectedBorderColor,
-        "border-width": 3,
+        "border-width": s(3),
       },
     },
     {
@@ -252,7 +260,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
     {
       selector: "node.highlighted",
       style: {
-        "border-width": 3,
+        "border-width": s(3),
         "border-color": p.selectedBorderColor,
         "z-index": 99,
       },
@@ -260,7 +268,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
     {
       selector: "node.focused",
       style: {
-        "border-width": 4,
+        "border-width": s(4),
         "border-color": p.selectedBorderColor,
         "z-index": 100,
       },
@@ -269,7 +277,7 @@ export function makeGraphStyles(isDark: boolean): StylesheetJson {
       selector: "edge.highlighted",
       style: {
         opacity: 1,
-        width: ("mapData(weight, 1, 15, 1.5, 5)" as unknown) as number,
+        width: (`mapData(weight, 1, 15, ${s(1.5)}, ${s(5)})` as unknown) as number,
         "z-index": 99,
       },
     },

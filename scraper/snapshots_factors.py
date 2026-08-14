@@ -255,9 +255,21 @@ def update_corpus_enriched(
         _write_json(snap_path, month_snapshot)
         summary["months_updated"].append(month)
 
-    # Update index.json
+    # Update index.json. Months whose snapshot holds almost nothing (a
+    # stray misdated article or two) are left out of the index so they
+    # never reach the UI timeline — except the current month, which is
+    # legitimately thin while it accumulates.
+    MIN_INDEX_EDGES = 3
+    current_month = date.today().isoformat()[:7]
     snap_dir = corpus_root / "snapshots"
-    months = sorted([p.stem for p in snap_dir.glob("*.json")])
+    months = []
+    for p in sorted(snap_dir.glob("*.json")):
+        if p.stem == current_month:
+            months.append(p.stem)
+            continue
+        snap = _load_json(p, {})
+        if len(snap.get("edges", [])) >= MIN_INDEX_EDGES:
+            months.append(p.stem)
     index = {
         "months": months,
         "latest": months[-1] if months else None,

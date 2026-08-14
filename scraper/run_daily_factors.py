@@ -18,7 +18,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import yaml
@@ -44,6 +44,11 @@ WATCHLIST_DIR = REPO_ROOT / "scraper" / "watchlists"
 LEDGER_PATH = REPO_ROOT / "scraper" / "state" / "seen_urls_factors.json"
 
 DEFAULT_ARTICLES_PER_TICKER = 3
+
+# Reject articles whose pubDate is older than this — Google News RSS
+# sometimes serves republished pieces dated years back, which would spawn
+# junk single-article month buckets on the timeline.
+MAX_ARTICLE_AGE_DAYS = 120
 
 
 def _load_watchlist(name: str) -> dict:
@@ -150,6 +155,17 @@ def main():
     if not articles:
         print("No articles fetched; exiting.")
         return
+
+    # Google News RSS occasionally surfaces republished evergreen pieces
+    # whose pubDate is years old. One such article creates a whole junk
+    # month bucket (a 2-node snapshot in 2019) that pollutes the timeline,
+    # so drop anything dated beyond the realistic RSS lookback before
+    # spending Gemini calls on it.
+    stale_cutoff = (date.today() - timedelta(days=MAX_ARTICLE_AGE_DAYS)).isoformat()
+    dated = [a for a in articles if (a.date or "")[:10] >= stale_cutoff]
+    if len(dated) < len(articles):
+        print(f"Dropped {len(articles) - len(dated)} stale articles (older than {MAX_ARTICLE_AGE_DAYS} days).")
+    articles = dated
 
     # Dedup
     ledger = Ledger(LEDGER_PATH)
