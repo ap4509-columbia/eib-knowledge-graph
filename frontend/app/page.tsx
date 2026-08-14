@@ -457,7 +457,8 @@ export default function Home() {
         </header>
 
         {/* Safari-style tab strip. Only tabs the current source supports
-            are rendered — no grey placeholders. */}
+            are rendered — no grey placeholders. Right-side tools shown per
+            active tab (KG gets a merged/single toggle). */}
         <div className="flex shrink-0 items-end gap-1 border-b border-border bg-muted/60 px-2 pt-2">
           {(() => {
             const currentSource = sources?.sources.find(
@@ -488,6 +489,7 @@ export default function Home() {
               </button>
             );
           })}
+
         </div>
 
         {/* Body: filter rail | active tab content.

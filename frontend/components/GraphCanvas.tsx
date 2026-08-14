@@ -164,11 +164,30 @@ export function GraphCanvas({
       (n) => typeof n.x === "number" && typeof n.y === "number"
     );
 
-    // Spread precomputed positions out so the graph doesn't render packed.
-    // networkx spring_layout returns coordinates in a compact ~[-1, 1] cube;
-    // multiplying gives each node more breathing room without changing the
-    // structural relationships. Bump this if the graph still reads dense.
-    const POSITION_SCALE = 2.2;
+    // Normalise precomputed positions to a spread proportional to the node
+    // count. Different pipelines write coordinates at wildly different
+    // scales (FNSPID runner ~[-1,1] cube; the factor pipeline pre-scales by
+    // 900), and a fixed multiplier either packs one corpus or scatters the
+    // other. Rescaling the bounding box to sqrt(N)-proportional target
+    // keeps node density visually consistent regardless of source.
+    const posNodes = snapshot.nodes.filter(
+      (n) => typeof n.x === "number" && typeof n.y === "number"
+    );
+    let sx = 1, sy = 1, cx = 0, cy0 = 0;
+    if (posNodes.length > 1) {
+      const xs = posNodes.map((n) => n.x as number);
+      const ys = posNodes.map((n) => n.y as number);
+      const minX = Math.min(...xs), maxX = Math.max(...xs);
+      const minY = Math.min(...ys), maxY = Math.max(...ys);
+      cx = (minX + maxX) / 2;
+      cy0 = (minY + maxY) / 2;
+      const spreadX = Math.max(1e-6, maxX - minX);
+      const spreadY = Math.max(1e-6, maxY - minY);
+      // Target diagonal: ~55px of room per node along each axis, clamped.
+      const target = Math.min(2600, Math.max(500, Math.sqrt(posNodes.length) * 110));
+      sx = target / spreadX;
+      sy = target / spreadY;
+    }
 
     const elements: ElementDefinition[] = [];
     for (const n of snapshot.nodes) {
@@ -177,7 +196,7 @@ export function GraphCanvas({
         data: { id: n.id, label: n.id, type: n.type, degree: n.degree },
       };
       if (typeof n.x === "number" && typeof n.y === "number") {
-        el.position = { x: n.x * POSITION_SCALE, y: n.y * POSITION_SCALE };
+        el.position = { x: (n.x - cx) * sx, y: (n.y - cy0) * sy };
       }
       elements.push(el);
     }
@@ -290,6 +309,21 @@ export function GraphCanvas({
         const visible = visibleCategories.has(cat) && srcOk && tgtOk;
         e.style("display", visible ? "element" : "none");
       });
+    });
+
+    // Re-fit the viewport to whatever's currently visible. Without this,
+    // filter changes could leave the graph off-centre (e.g. hiding all
+    // Concept nodes leaves the remaining core drifting in the corner).
+    // Same rAF-cancel dance as the snapshot effect below to avoid firing
+    // fit() on a destroyed cy after a tab switch.
+    if (pendingFitRef.current !== null) {
+      cancelAnimationFrame(pendingFitRef.current);
+    }
+    pendingFitRef.current = requestAnimationFrame(() => {
+      pendingFitRef.current = null;
+      if (cyRef.current !== cy || cy.destroyed()) return;
+      const visible = cy.elements(':visible');
+      if (visible.length > 0) cy.fit(visible, 40);
     });
   }, [filters]);
 

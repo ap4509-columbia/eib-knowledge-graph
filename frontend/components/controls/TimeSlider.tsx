@@ -168,7 +168,7 @@ export function TimeSlider({
 
         {/* Preset chips, pinned right so they never collide with the label.
             Hidden on the Predictions tab — trailing 3M/6M/etc ranges don't
-            make sense there; only a single prediction month is meaningful. */}
+            make sense when only one month drives the view. */}
         {!predictionsContext && (
           <div className="ml-auto flex shrink-0 gap-1">
             {PRESETS.map((p) => {
@@ -216,9 +216,9 @@ export function TimeSlider({
             </span>
             <span
               className="ml-auto text-muted-foreground/70"
-              title={`Window size fixed at ${predictionsContext!.trainingWindow} training months per the rolling-window GAT (see scripts/compute_gat_predictions.py). Raw per-month prediction bundle: sources/fnspid-19-20-semis/predictions.json — hover to verify against the model.`}
+              title={`Window size fixed at ${predictionsContext!.trainingWindow} training months (1 quarter) per the rolling-window GAT — see scripts/compute_gat_predictions.py. Raw per-month prediction bundle: sources/fnspid-19-20-semis/predictions.json — hover to verify against the model.`}
             >
-              drag the window · rolling size = {predictionsContext!.trainingWindow}
+              drag the window · rolling window = {predictionsContext!.trainingWindow} months
             </span>
           </div>
         );
@@ -248,24 +248,40 @@ export function TimeSlider({
               onChange={(idx) => emit(idx, idx)}
             />
           ) : (
-            <Slider
-              min={0}
-              max={total - 1}
-              step={1}
-              value={[fromIdx, toIdx]}
-              aria-label="Selected month range"
-              // "push" (the library default, stated here so it isn't accidental):
-              // with the thumbs collapsed on one month, dragging forward carries
-              // both and keeps the old single-month scrubbing feel, while
-              // dragging back opens the range. The preset chips are the
-              // guaranteed path to any span regardless of drag direction.
-              thumbCollisionBehavior="push"
-              onValueChange={(v) => {
-                const arr = Array.isArray(v) ? v : [v];
-                if (arr.length < 2) return;
-                emit(arr[0], arr[1]);
-              }}
-            />
+            <div className="relative">
+              <Slider
+                min={0}
+                max={total - 1}
+                step={1}
+                value={[fromIdx, toIdx]}
+                aria-label="Selected month range"
+                // "push" (the library default, stated here so it isn't accidental):
+                // with the thumbs collapsed on one month, dragging forward carries
+                // both and keeps the old single-month scrubbing feel, while
+                // dragging back opens the range. The preset chips are the
+                // guaranteed path to any span regardless of drag direction.
+                thumbCollisionBehavior="push"
+                onValueChange={(v) => {
+                  const arr = Array.isArray(v) ? v : [v];
+                  if (arr.length < 2) return;
+                  emit(arr[0], arr[1]);
+                }}
+              />
+              {/* Drag strip over the selected range: slide the whole window
+                  left/right while preserving its span (set a span with the
+                  1M/3M/6M/12M presets, then drag the middle to scrub).
+                  Inset from the ends so the thumbs stay individually
+                  grabbable for resizing. Only rendered for spans >= 2
+                  months — a collapsed range IS the thumb. */}
+              {span >= 2 && (
+                <RangeDragStrip
+                  total={total}
+                  fromIdx={fromIdx}
+                  toIdx={toIdx}
+                  onSlide={(f, t) => emit(f, t)}
+                />
+              )}
+            </div>
           )}
         </div>
 
@@ -359,15 +375,13 @@ function WindowScrubber({
   const trainStartIdx = Math.max(0, predIdx - trainingWindow);
   const trainEndIdx = predIdx - 1;
 
+  // Band edges land EXACTLY on month tick positions — no half-cell
+  // offsets. Amber spans [trainStart … trainEnd] ticks; emerald spans
+  // [trainEnd … predIdx] ticks, ending precisely on the prediction month.
   const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
-  // Half-cell offset so the bands align with month tick marks below.
-  // All positions clamped to [0, 100] so the block never overflows the
-  // track — otherwise the rightmost month would push the emerald block
-  // past the viewport edge.
-  const half = total > 1 ? 100 / (total - 1) / 2 : 0;
-  const trainStartPct = Math.max(0, pct(trainStartIdx) - half);
-  const trainEndPct = Math.min(100, pct(trainEndIdx) + half);
-  const predEndPct = Math.min(100, pct(predIdx) + half);
+  const trainStartPct = pct(trainStartIdx);
+  const trainEndPct = pct(trainEndIdx);
+  const predEndPct = pct(predIdx);
 
   const idxFromClientX = useCallback(
     (clientX: number): number => {
@@ -478,5 +492,97 @@ function WindowScrubber({
         }}
       />
     </div>
+  );
+}
+
+
+/**
+ * Invisible drag strip laid over the middle of the selected range on the
+ * KG timeline. Dragging it slides the whole window left/right while
+ * preserving the span — so after clicking a 3M/6M preset the analyst can
+ * scrub the window through time without re-setting both ends. The strip
+ * is inset ~12px from each thumb so the thumbs stay grabbable for
+ * resizing.
+ */
+function RangeDragStrip({
+  total,
+  fromIdx,
+  toIdx,
+  onSlide,
+}: {
+  total: number;
+  fromIdx: number;
+  toIdx: number;
+  onSlide: (from: number, to: number) => void;
+}) {
+  const stripRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef<{ startX: number; startFrom: number; startTo: number; trackWidth: number } | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
+  const span = toIdx - fromIdx;
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const parent = stripRef.current?.parentElement;
+    if (!parent) return;
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    dragRef.current = {
+      startX: e.clientX,
+      startFrom: fromIdx,
+      startTo: toIdx,
+      trackWidth: parent.getBoundingClientRect().width,
+    };
+    setIsDragging(true);
+  };
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const st = dragRef.current;
+    if (!st) return;
+    const deltaMonths = Math.round(
+      ((e.clientX - st.startX) / st.trackWidth) * (total - 1)
+    );
+    let nextFrom = st.startFrom + deltaMonths;
+    let nextTo = st.startTo + deltaMonths;
+    // Clamp while preserving span
+    if (nextFrom < 0) {
+      nextFrom = 0;
+      nextTo = span;
+    }
+    if (nextTo > total - 1) {
+      nextTo = total - 1;
+      nextFrom = nextTo - span;
+    }
+    if (nextFrom !== fromIdx || nextTo !== toIdx) onSlide(nextFrom, nextTo);
+  };
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    dragRef.current = null;
+    setIsDragging(false);
+    (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
+  };
+
+  // Inset the strip from both thumbs. At narrow spans the strip may
+  // disappear entirely — that's fine, the preset chips re-set the span.
+  const leftPct = pct(fromIdx);
+  const rightPct = pct(toIdx);
+  const width = rightPct - leftPct;
+
+  return (
+    <div
+      ref={stripRef}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      title="Drag to slide the whole window through time"
+      className={
+        "absolute top-1/2 z-10 h-5 -translate-y-1/2 " +
+        (isDragging ? "cursor-grabbing" : "cursor-grab")
+      }
+      style={{
+        left: `calc(${leftPct}% + 14px)`,
+        width: `calc(${width}% - 28px)`,
+        touchAction: "none",
+      }}
+    />
   );
 }
