@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { formatMonth } from "@/lib/months";
 import { cn } from "@/lib/utils";
@@ -140,7 +141,12 @@ export function TimeSlider({
                 : "border-border bg-background text-foreground"
             )}
           >
-            {isSingle ? (
+            {predictionsContext ? (
+              <>
+                <span className="font-normal text-muted-foreground">predicting</span>
+                {formatMonth(monthTo)}
+              </>
+            ) : isSingle ? (
               formatMonth(monthTo)
             ) : (
               <>
@@ -160,34 +166,37 @@ export function TimeSlider({
           </span>
         </div>
 
-        {/* Preset chips, pinned right so they never collide with the label */}
-        <div className="ml-auto flex shrink-0 gap-1">
-          {PRESETS.map((p) => {
-            const active = activePreset === p;
-            return (
-              <button
-                key={p.label}
-                type="button"
-                title={p.title}
-                onClick={() => applyPreset(p)}
-                className={cn(
-                  "rounded-md border px-1.5 py-0.5 font-mono text-[10px] font-medium transition",
-                  active
-                    ? "border-foreground/40 bg-foreground/10 text-foreground"
-                    : "border-border bg-muted/40 text-muted-foreground hover:bg-accent hover:text-foreground"
-                )}
-              >
-                {p.label}
-              </button>
-            );
-          })}
-        </div>
+        {/* Preset chips, pinned right so they never collide with the label.
+            Hidden on the Predictions tab — trailing 3M/6M/etc ranges don't
+            make sense there; only a single prediction month is meaningful. */}
+        {!predictionsContext && (
+          <div className="ml-auto flex shrink-0 gap-1">
+            {PRESETS.map((p) => {
+              const active = activePreset === p;
+              return (
+                <button
+                  key={p.label}
+                  type="button"
+                  title={p.title}
+                  onClick={() => applyPreset(p)}
+                  className={cn(
+                    "rounded-md border px-1.5 py-0.5 font-mono text-[10px] font-medium transition",
+                    active
+                      ? "border-foreground/40 bg-foreground/10 text-foreground"
+                      : "border-border bg-muted/40 text-muted-foreground hover:bg-accent hover:text-foreground"
+                  )}
+                >
+                  {p.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      {/* Predictions-tab overlay: shows the training window + prediction
-          month right above the slider. Rendered only when predictionsContext
-          is passed (Predictions tab active). Legend is placed BELOW the
-          bands so the analyst sees which colour = which month directly. */}
+      {/* Predictions-tab legend — the actual scrubber IS rendered below,
+          replacing the range slider entirely. Legend just names what the
+          two colours mean plus the exact months in the current window. */}
       {predictionBand && (() => {
         const predIdx = allMonths.indexOf(predictionsContext!.predictionMonth);
         const trainStartIdx = Math.max(0, predIdx - predictionsContext!.trainingWindow);
@@ -196,44 +205,21 @@ export function TimeSlider({
         const trainEndMo = allMonths[Math.max(trainStartIdx, trainEndIdx)];
         const predMo = predictionsContext!.predictionMonth;
         return (
-          <div className="mb-1.5 select-none">
-            {/* The bands themselves */}
-            <div className="relative h-3">
-              <div
-                className="absolute top-0 h-full rounded-l-sm border-y border-l border-amber-600/50 bg-amber-500/25 dark:border-amber-500/50 dark:bg-amber-400/20"
-                style={{
-                  left: `${predictionBand.trainStartPct}%`,
-                  width: `${Math.max(0, predictionBand.trainEndPct - predictionBand.trainStartPct)}%`,
-                }}
-                title={`Training window: ${trainStartMo} → ${trainEndMo}`}
-              />
-              <div
-                className="absolute top-0 h-full rounded-r-sm border-y border-r border-emerald-700/60 bg-emerald-600/35 dark:border-emerald-500/60 dark:bg-emerald-400/30"
-                style={{
-                  left: `${predictionBand.trainEndPct}%`,
-                  width: `${Math.max(1.5, (100 / Math.max(1, total - 1)))}%`,
-                }}
-                title={`Prediction month: ${predMo}`}
-              />
-            </div>
-            {/* Legend with the ACTUAL months named — analyst can verify
-                against the model without guessing what "3 months" means. */}
-            <div className="mt-1 flex items-center gap-x-4 gap-y-0.5 font-mono text-[9px] text-muted-foreground">
-              <span className="flex items-center gap-1">
-                <span className="inline-block h-2 w-3 rounded-sm border border-amber-600/50 bg-amber-500/40 dark:border-amber-500/50 dark:bg-amber-400/30" />
-                training: <span className="text-foreground">{trainStartMo} → {trainEndMo}</span>
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="inline-block h-2 w-2 rounded-sm border border-emerald-700/60 bg-emerald-600/50 dark:border-emerald-500/60 dark:bg-emerald-400/40" />
-                predicting: <span className="text-foreground">{predMo}</span>
-              </span>
-              <span
-                className="ml-auto text-[9px] text-muted-foreground/70"
-                title={`window size = ${predictionsContext!.trainingWindow} months, matching WINDOW_SIZE in scripts/compute_gat_predictions.py — the raw per-month prediction bundle lives at frontend/public/data/sources/fnspid-19-20-semis/predictions.json`}
-              >
-                (rolling window = {predictionsContext!.trainingWindow} · hover to verify)
-              </span>
-            </div>
+          <div className="mb-2 flex select-none items-center gap-x-4 gap-y-0.5 font-mono text-[10px] text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <span className="inline-block h-2 w-3 rounded-sm border border-amber-600/50 bg-amber-500/40 dark:border-amber-500/50 dark:bg-amber-400/30" />
+              trained on <span className="text-foreground">{trainStartMo} → {trainEndMo}</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="inline-block h-2 w-2 rounded-sm border border-emerald-700/60 bg-emerald-600/50 dark:border-emerald-500/60 dark:bg-emerald-400/40" />
+              predicts <span className="text-foreground">{predMo}</span>
+            </span>
+            <span
+              className="ml-auto text-muted-foreground/70"
+              title={`Window size fixed at ${predictionsContext!.trainingWindow} training months per the rolling-window GAT (see scripts/compute_gat_predictions.py). Raw per-month prediction bundle: sources/fnspid-19-20-semis/predictions.json — hover to verify against the model.`}
+            >
+              drag the window · rolling size = {predictionsContext!.trainingWindow}
+            </span>
           </div>
         );
       })()}
@@ -253,24 +239,34 @@ export function TimeSlider({
         )}
 
         <div className="relative z-10">
-          <Slider
-            min={0}
-            max={total - 1}
-            step={1}
-            value={[fromIdx, toIdx]}
-            aria-label="Selected month range"
-            // "push" (the library default, stated here so it isn't accidental):
-            // with the thumbs collapsed on one month, dragging forward carries
-            // both and keeps the old single-month scrubbing feel, while
-            // dragging back opens the range. The preset chips are the
-            // guaranteed path to any span regardless of drag direction.
-            thumbCollisionBehavior="push"
-            onValueChange={(v) => {
-              const arr = Array.isArray(v) ? v : [v];
-              if (arr.length < 2) return;
-              emit(arr[0], arr[1]);
-            }}
-          />
+          {predictionsContext ? (
+            <WindowScrubber
+              total={total}
+              allMonths={allMonths}
+              trainingWindow={predictionsContext.trainingWindow}
+              predictionMonthIdx={toIdx}
+              onChange={(idx) => emit(idx, idx)}
+            />
+          ) : (
+            <Slider
+              min={0}
+              max={total - 1}
+              step={1}
+              value={[fromIdx, toIdx]}
+              aria-label="Selected month range"
+              // "push" (the library default, stated here so it isn't accidental):
+              // with the thumbs collapsed on one month, dragging forward carries
+              // both and keeps the old single-month scrubbing feel, while
+              // dragging back opens the range. The preset chips are the
+              // guaranteed path to any span regardless of drag direction.
+              thumbCollisionBehavior="push"
+              onValueChange={(v) => {
+                const arr = Array.isArray(v) ? v : [v];
+                if (arr.length < 2) return;
+                emit(arr[0], arr[1]);
+              }}
+            />
+          )}
         </div>
 
         {/* Per-month tick marks below the track — in-range months read brighter */}
@@ -322,6 +318,162 @@ export function TimeSlider({
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+
+/**
+ * A draggable 4-month "window" on the timeline for the Predictions tab.
+ * Renders as amber (training) + emerald (prediction) blocks side-by-side.
+ * The whole block is the interaction — no separate thumbs. Click anywhere
+ * on the track to snap the window; drag the block to slide it; arrow keys
+ * for one-month nudges. The block size is fixed by `trainingWindow + 1`
+ * (the GAT's rolling-window setup); it can't be resized because the
+ * model's setup can't be resized.
+ */
+function WindowScrubber({
+  total,
+  allMonths,
+  trainingWindow,
+  predictionMonthIdx,
+  onChange,
+}: {
+  total: number;
+  allMonths: string[];
+  trainingWindow: number;
+  predictionMonthIdx: number;
+  onChange: (idx: number) => void;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const dragStateRef = useRef<{ startX: number; startIdx: number } | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Clamp to [1, total-1] — need at least one prior month for training.
+  const clampPred = useCallback(
+    (idx: number) => Math.min(total - 1, Math.max(1, Math.round(idx))),
+    [total]
+  );
+
+  const predIdx = clampPred(predictionMonthIdx);
+  const trainStartIdx = Math.max(0, predIdx - trainingWindow);
+  const trainEndIdx = predIdx - 1;
+
+  const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
+  // Half-cell offset so the bands align with month tick marks below.
+  const half = total > 1 ? 100 / (total - 1) / 2 : 0;
+  const trainStartPct = Math.max(0, pct(trainStartIdx) - half);
+  const trainEndPct = pct(trainEndIdx) + half;
+  const predEndPct = pct(predIdx) + half;
+
+  const idxFromClientX = useCallback(
+    (clientX: number): number => {
+      const el = trackRef.current;
+      if (!el) return predIdx;
+      const rect = el.getBoundingClientRect();
+      const ratio = (clientX - rect.left) / rect.width;
+      // Anywhere on the track → pred month at that ratio (not window centre;
+      // matches the "click to jump prediction month here" mental model).
+      return clampPred(Math.round(ratio * (total - 1)));
+    },
+    [clampPred, predIdx, total]
+  );
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    dragStateRef.current = { startX: e.clientX, startIdx: predIdx };
+    setIsDragging(true);
+    // Also jump on initial click if user pressed on empty track (not the block)
+    const target = e.target as HTMLElement;
+    if (!target.closest("[data-scrub-block]")) {
+      onChange(idxFromClientX(e.clientX));
+    }
+  };
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const state = dragStateRef.current;
+    if (!state) return;
+    const el = trackRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const deltaMonths = Math.round(
+      ((e.clientX - state.startX) / rect.width) * (total - 1)
+    );
+    const nextIdx = clampPred(state.startIdx + deltaMonths);
+    if (nextIdx !== predIdx) onChange(nextIdx);
+  };
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    dragStateRef.current = null;
+    setIsDragging(false);
+    (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      onChange(clampPred(predIdx - 1));
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      onChange(clampPred(predIdx + 1));
+    }
+  };
+
+  useEffect(() => {
+    // Clear any lingering dragging state on unmount.
+    return () => {
+      dragStateRef.current = null;
+    };
+  }, []);
+
+  const trainMo = allMonths[trainStartIdx];
+  const trainEndMo = allMonths[Math.max(trainStartIdx, trainEndIdx)];
+  const predMo = allMonths[predIdx];
+
+  return (
+    <div
+      ref={trackRef}
+      role="slider"
+      tabIndex={0}
+      aria-label={`Prediction month, currently ${predMo}; trained on ${trainMo} through ${trainEndMo}. Use arrow keys or drag the amber/emerald window.`}
+      aria-valuemin={1}
+      aria-valuemax={total - 1}
+      aria-valuenow={predIdx}
+      aria-valuetext={predMo}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onKeyDown={onKeyDown}
+      className={cn(
+        "relative h-5 w-full rounded-full border border-border bg-muted/40 outline-none",
+        "focus-visible:ring-2 focus-visible:ring-ring",
+        isDragging ? "cursor-grabbing" : "cursor-pointer"
+      )}
+      style={{ touchAction: "none" }}
+    >
+      {/* Training block (amber) */}
+      <div
+        data-scrub-block
+        className={cn(
+          "absolute top-0 h-full rounded-l-full border-y border-l border-amber-600/60 bg-amber-500/35 dark:border-amber-500/60 dark:bg-amber-400/25",
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        )}
+        style={{
+          left: `${trainStartPct}%`,
+          width: `${Math.max(0, trainEndPct - trainStartPct)}%`,
+        }}
+      />
+      {/* Prediction block (emerald) — thicker border so it reads as the anchor */}
+      <div
+        data-scrub-block
+        className={cn(
+          "absolute top-0 h-full rounded-r-full border-y-2 border-r-2 border-emerald-700 bg-emerald-500/50 dark:border-emerald-400 dark:bg-emerald-400/40",
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        )}
+        style={{
+          left: `${trainEndPct}%`,
+          width: `${Math.max(1.5, predEndPct - trainEndPct)}%`,
+        }}
+      />
     </div>
   );
 }
