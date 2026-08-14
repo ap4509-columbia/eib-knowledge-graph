@@ -361,10 +361,13 @@ function WindowScrubber({
 
   const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
   // Half-cell offset so the bands align with month tick marks below.
+  // All positions clamped to [0, 100] so the block never overflows the
+  // track — otherwise the rightmost month would push the emerald block
+  // past the viewport edge.
   const half = total > 1 ? 100 / (total - 1) / 2 : 0;
   const trainStartPct = Math.max(0, pct(trainStartIdx) - half);
-  const trainEndPct = pct(trainEndIdx) + half;
-  const predEndPct = pct(predIdx) + half;
+  const trainEndPct = Math.min(100, pct(trainEndIdx) + half);
+  const predEndPct = Math.min(100, pct(predIdx) + half);
 
   const idxFromClientX = useCallback(
     (clientX: number): number => {
@@ -444,7 +447,7 @@ function WindowScrubber({
       onPointerUp={onPointerUp}
       onKeyDown={onKeyDown}
       className={cn(
-        "relative h-5 w-full rounded-full border border-border bg-muted/40 outline-none",
+        "relative h-5 w-full overflow-hidden rounded-full border border-border bg-muted/40 outline-none",
         "focus-visible:ring-2 focus-visible:ring-ring",
         isDragging ? "cursor-grabbing" : "cursor-pointer"
       )}

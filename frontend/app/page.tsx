@@ -7,7 +7,6 @@ import {
   RefreshCw,
   AlertCircle,
   Search as SearchIcon,
-  FileSearch,
   Settings as SettingsIcon,
 } from "lucide-react";
 
@@ -623,22 +622,8 @@ export default function Home() {
         onPhysicsChange={setPhysics}
       />
 
-      {/* Floating article-search trigger. Hidden on the Predictions tab —
-          that view is a leaderboard read, not a search-articles workflow,
-          and the button sits too close to the timeline preset chips there.
-          For other tabs, bumped up to bottom-56 so it never crowds the
-          timeline no matter which tab is showing. */}
-      {!chatOpen && activeTab !== "predictions" && (
-        <button
-          type="button"
-          onClick={() => setChatOpen(true)}
-          aria-label="Find articles in the source data"
-          className="fixed bottom-56 right-6 z-30 flex items-center gap-2 rounded-full border border-border bg-background/90 px-4 py-2.5 text-sm font-medium text-foreground shadow-lg backdrop-blur-xl transition hover:bg-accent"
-        >
-          <FileSearch className="h-4 w-4 text-muted-foreground" />
-          <span>Find articles</span>
-        </button>
-      )}
+      {/* Find articles button intentionally disabled for now — the chat
+          panel is still available via ⌘K if we want to re-enable it later. */}
     </>
   );
 }

@@ -80,6 +80,9 @@ function Sparkline({ values }: { values: readonly number[] }) {
 function ActivityCell({ z }: { z: number }) {
   // Plain-English label instead of a bare z-score number. Thresholds
   // chosen at |z| = 1 (one standard-deviation move) and |z| = 2 (rare).
+  // Divergent palette: emerald for upside momentum, blue for cooling
+  // — mirrors the standard finance convention (green up, blue down)
+  // and gives Cooling/Quiet a real visual weight against Spiking/Rising.
   const abs = Math.abs(z);
   const positive = z > 0;
 
@@ -93,12 +96,12 @@ function ActivityCell({ z }: { z: number }) {
     label = positive ? "Rising" : "Cooling";
     cls = positive
       ? "text-emerald-800 dark:text-emerald-500"
-      : "text-muted-foreground";
+      : "text-sky-700 dark:text-sky-400";
   } else {
     label = positive ? "Spiking" : "Quiet";
     cls = positive
       ? "text-emerald-800 dark:text-emerald-500 font-medium"
-      : "text-muted-foreground";
+      : "text-sky-700 dark:text-sky-400 font-medium";
   }
 
   return (
