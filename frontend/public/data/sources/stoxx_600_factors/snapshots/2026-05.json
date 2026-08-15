@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 22,
-    "edges": 14,
+    "nodes": 26,
+    "edges": 17,
     "scored_edges": 0
   },
   "nodes": [
@@ -159,6 +159,34 @@
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
+    },
+    {
+      "id": "Eni",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 582.7322594609042,
+      "y": 407.78850246884406
+    },
+    {
+      "id": "Eni BlackRock CCUS JV",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": -45.81838381506291,
+      "y": -24.381061013984503
+    },
+    {
+      "id": "BlackRock",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 363.0861243541587,
+      "y": -701.339881670723
+    },
+    {
+      "id": "Capital",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -900.0,
+      "y": 317.93244021586355
     }
   ],
   "edges": [
@@ -385,6 +413,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Eni||Forms Partnership With||Eni BlackRock CCUS JV",
+      "source": "Eni",
+      "target": "Eni BlackRock CCUS JV",
+      "rel": "Forms Partnership With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "BlackRock||Forms Partnership With||Eni BlackRock CCUS JV",
+      "source": "BlackRock",
+      "target": "Eni BlackRock CCUS JV",
+      "rel": "Forms Partnership With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Eni BlackRock CCUS JV||Raises||Capital",
+      "source": "Eni BlackRock CCUS JV",
+      "target": "Capital",
+      "rel": "Raises",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 582000000.0,
+      "materiality_log": 20.182,
+      "event_type": "OTHER"
     }
   ]
 }

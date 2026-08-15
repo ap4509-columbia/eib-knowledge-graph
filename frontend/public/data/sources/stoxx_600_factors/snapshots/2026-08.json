@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 169,
-    "edges": 142,
+    "nodes": 189,
+    "edges": 159,
     "scored_edges": 0
   },
   "nodes": [
@@ -1188,6 +1188,146 @@
       "degree": 1,
       "x": 566.0019167677438,
       "y": 188.19932988773883
+    },
+    {
+      "id": "JSS Sustainable Equity CH I CHF dist",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 721.8764366866957,
+      "y": 225.48523789260994
+    },
+    {
+      "id": "0P0001LJB7.SW",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 817.4982510963539,
+      "y": 241.17699623289607
+    },
+    {
+      "id": "a share price crash",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -859.9099797147295,
+      "y": 217.519855953785
+    },
+    {
+      "id": "Below Fair Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 845.0729512055833,
+      "y": -318.7204241418973
+    },
+    {
+      "id": "Analyst Target Cuts",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -715.9510917795138,
+      "y": -519.1109321164286
+    },
+    {
+      "id": "South Africa's top court",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -0.8090498764131445,
+      "y": -683.5170844063947
+    },
+    {
+      "id": "Shell's Wild Coast exploration plans",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -4.223925611007243,
+      "y": -805.4471330417902
+    },
+    {
+      "id": "Treasury",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": 251.15541396683898,
+      "y": 642.5359813076599
+    },
+    {
+      "id": "reporting rules for shell companies",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 318.6218872821573,
+      "y": 765.2322065735623
+    },
+    {
+      "id": "shell companies",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 179.65449381889414,
+      "y": 531.7451285790166
+    },
+    {
+      "id": "Pa. Turnpike Commission",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 257.07692535280285,
+      "y": 168.57905497872315
+    },
+    {
+      "id": "debt management improvements",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 637.4487109398201,
+      "y": -562.2991210471018
+    },
+    {
+      "id": "ongoing debt challenges",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -123.59599685409154,
+      "y": 899.9999999999999
+    },
+    {
+      "id": "New audit",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -203.09202857351525,
+      "y": -580.7620313865785
+    },
+    {
+      "id": "Pa. Turnpike Commission's finances",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -341.229331178148,
+      "y": -825.2995647022769
+    },
+    {
+      "id": "Harrisburg YMCA",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -535.8113365268404,
+      "y": 440.9370579439839
+    },
+    {
+      "id": "P.A. Dairymen\u2019s Association",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -639.507263229943,
+      "y": 531.9484764967449
+    },
+    {
+      "id": "The Milkshake Mile",
+      "type": "EVENT",
+      "degree": 2,
+      "x": -723.1133952999625,
+      "y": 604.549752077165
+    },
+    {
+      "id": "Venezuela",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 692.0663362575863,
+      "y": -105.68860493655757
+    },
+    {
+      "id": "Gulf partners",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 303.93975592519075,
+      "y": -782.6004125974158
     }
   ],
   "edges": [
@@ -1664,7 +1804,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 2,
+      "weight": 4,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -3462,6 +3602,278 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "JSS Sustainable Equity CH I CHF dist||Has Ticker||0P0001LJB7.SW",
+      "source": "JSS Sustainable Equity CH I CHF dist",
+      "target": "0P0001LJB7.SW",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 2,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "AstraZeneca||was impacted by||a share price crash",
+      "source": "AstraZeneca",
+      "target": "a share price crash",
+      "rel": "was impacted by",
+      "rel_cat": "SSI",
+      "causal_type": "CAUSAL",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Volkswagen||Is Valued||Below Fair Value",
+      "source": "Volkswagen",
+      "target": "Below Fair Value",
+      "rel": "Is Valued",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Volkswagen||Receives||Analyst Target Cuts",
+      "source": "Volkswagen",
+      "target": "Analyst Target Cuts",
+      "rel": "Receives",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "South Africa's top court||blocks||Shell's Wild Coast exploration plans",
+      "source": "South Africa's top court",
+      "target": "Shell's Wild Coast exploration plans",
+      "rel": "blocks",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Shell||had exploration plans blocked by||South Africa's top court",
+      "source": "Shell",
+      "target": "South Africa's top court",
+      "rel": "had exploration plans blocked by",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Treasury||curtails||reporting rules for shell companies",
+      "source": "Treasury",
+      "target": "reporting rules for shell companies",
+      "rel": "curtails",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "shell companies||have reporting rules curtailed by||Treasury",
+      "source": "shell companies",
+      "target": "Treasury",
+      "rel": "have reporting rules curtailed by",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Pa. Turnpike Commission||achieved||debt management improvements",
+      "source": "Pa. Turnpike Commission",
+      "target": "debt management improvements",
+      "rel": "achieved",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Pa. Turnpike Commission||faces||ongoing debt challenges",
+      "source": "Pa. Turnpike Commission",
+      "target": "ongoing debt challenges",
+      "rel": "faces",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "New audit||reviewed||Pa. Turnpike Commission's finances",
+      "source": "New audit",
+      "target": "Pa. Turnpike Commission's finances",
+      "rel": "reviewed",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Harrisburg YMCA||Partners with||P.A. Dairymen\u2019s Association",
+      "source": "Harrisburg YMCA",
+      "target": "P.A. Dairymen\u2019s Association",
+      "rel": "Partners with",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Harrisburg YMCA||Organizes||The Milkshake Mile",
+      "source": "Harrisburg YMCA",
+      "target": "The Milkshake Mile",
+      "rel": "Organizes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "P.A. Dairymen\u2019s Association||Organizes||The Milkshake Mile",
+      "source": "P.A. Dairymen\u2019s Association",
+      "target": "The Milkshake Mile",
+      "rel": "Organizes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BP||Returns To||Venezuela",
+      "source": "BP",
+      "target": "Venezuela",
+      "rel": "Returns To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "BP||returns to operations in||Venezuela",
+      "source": "BP",
+      "target": "Venezuela",
+      "rel": "returns to operations in",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "BP||partners with||Gulf partners",
+      "source": "BP",
+      "target": "Gulf partners",
+      "rel": "partners with",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
     }
   ]
 }

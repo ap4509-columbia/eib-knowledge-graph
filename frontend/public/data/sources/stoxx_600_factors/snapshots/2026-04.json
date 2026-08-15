@@ -1,8 +1,8 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 29,
-    "edges": 21,
+    "nodes": 31,
+    "edges": 22,
     "scored_edges": 0
   },
   "nodes": [
@@ -208,6 +208,20 @@
       "degree": 1,
       "x": 258.9372925168498,
       "y": -854.4242046249101
+    },
+    {
+      "id": "STMicroelectronics",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "ENXTPA:STMPA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -546,6 +560,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
+      "source": "STMicroelectronics",
+      "target": "ENXTPA:STMPA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 30,
-    "edges": 21,
+    "nodes": 32,
+    "edges": 23,
     "scored_edges": 0
   },
   "nodes": [
@@ -215,6 +215,20 @@
       "degree": 1,
       "x": -595.9782660965161,
       "y": 672.6931809962693
+    },
+    {
+      "id": "Banco Santander",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 0.5573411067315199,
+      "y": 0.3474303776217324
+    },
+    {
+      "id": "AI-Powered Commerce",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -900.0,
+      "y": -564.386748910195
     }
   ],
   "edges": [
@@ -553,6 +567,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Banco Santander||Has Ticker||SAN",
+      "source": "Banco Santander",
+      "target": "SAN",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Banco Santander||Advances toward||AI-Powered Commerce",
+      "source": "Banco Santander",
+      "target": "AI-Powered Commerce",
+      "rel": "Advances toward",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

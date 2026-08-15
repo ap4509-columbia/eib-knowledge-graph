@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 83,
-    "edges": 70,
+    "nodes": 91,
+    "edges": 77,
     "scored_edges": 0
   },
   "nodes": [
@@ -586,6 +586,62 @@
       "degree": 1,
       "x": -591.1361754514519,
       "y": 795.8322523611798
+    },
+    {
+      "id": "Wegovy Pill",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -590.9830919741511,
+      "y": -657.3827704027258
+    },
+    {
+      "id": "US",
+      "type": "REGULATORY",
+      "degree": 1,
+      "x": -766.7379330006607,
+      "y": 529.067776854481
+    },
+    {
+      "id": "SAP SE",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 261.9987117054793,
+      "y": 352.3305258887122
+    },
+    {
+      "id": "SAP",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -322.69789086667697,
+      "y": 900.0
+    },
+    {
+      "id": "AI Transition Era",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 844.2487717929549,
+      "y": -198.8509726861879
+    },
+    {
+      "id": "Oil",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -793.1105965917287,
+      "y": 41.11172716163256
+    },
+    {
+      "id": "Skrugard North Tub\u00e5en",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 2,
+      "x": 432.9354944604527,
+      "y": -601.6948610668804
+    },
+    {
+      "id": "Johan Castberg",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 562.8981840417804,
+      "y": -607.7984227067839
     }
   ],
   "edges": [
@@ -598,7 +654,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1708,6 +1764,118 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Novo Nordisk||Receives EU Approval For||Wegovy Pill",
+      "source": "Novo Nordisk",
+      "target": "Wegovy Pill",
+      "rel": "Receives EU Approval For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Secures Access Deal In||US",
+      "source": "Novo Nordisk",
+      "target": "US",
+      "rel": "Secures Access Deal In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "SAP SE||Has Ticker||SAP",
+      "source": "SAP SE",
+      "target": "SAP",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "SAP SE||Is Analyzed In Context Of||AI Transition Era",
+      "source": "SAP SE",
+      "target": "AI Transition Era",
+      "rel": "Is Analyzed In Context Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Equinor||Discovers||Oil",
+      "source": "Equinor",
+      "target": "Oil",
+      "rel": "Discovers",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Equinor||Makes Discovery At||Skrugard North Tub\u00e5en",
+      "source": "Equinor",
+      "target": "Skrugard North Tub\u00e5en",
+      "rel": "Makes Discovery At",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Skrugard North Tub\u00e5en||Is Located Near||Johan Castberg",
+      "source": "Skrugard North Tub\u00e5en",
+      "target": "Johan Castberg",
+      "rel": "Is Located Near",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
