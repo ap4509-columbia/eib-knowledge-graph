@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 189,
-    "edges": 159,
+    "nodes": 193,
+    "edges": 162,
     "scored_edges": 0
   },
   "nodes": [
@@ -1328,6 +1328,34 @@
       "degree": 1,
       "x": 303.93975592519075,
       "y": -782.6004125974158
+    },
+    {
+      "id": "Undervalued",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -18.656353679768007,
+      "y": -761.6196470221599
+    },
+    {
+      "id": "Interim Dividend",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -548.2735508635054,
+      "y": -80.8090621155804
+    },
+    {
+      "id": "BPL",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -168.09108607936977,
+      "y": 523.6824020086793
+    },
+    {
+      "id": "Overtime Bill",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -312.2291216618222,
+      "y": 652.6516181767769
     }
   ],
   "edges": [
@@ -2684,7 +2712,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 2,
+      "weight": 3,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -3874,6 +3902,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Novo Nordisk||Is Assessed As Undervalued||Undervalued",
+      "source": "Novo Nordisk",
+      "target": "Undervalued",
+      "rel": "Is Assessed As Undervalued",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Novo Nordisk||Issued||Interim Dividend",
+      "source": "Novo Nordisk",
+      "target": "Interim Dividend",
+      "rel": "Issued",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "BPL||Faces Annual Overtime Bill Of||Overtime Bill",
+      "source": "BPL",
+      "target": "Overtime Bill",
+      "rel": "Faces Annual Overtime Bill Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 20000000.0,
+      "materiality_log": 16.811,
+      "event_type": "EARNINGS"
     }
   ]
 }

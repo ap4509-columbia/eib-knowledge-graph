@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 32,
-    "edges": 23,
+    "nodes": 37,
+    "edges": 26,
     "scored_edges": 0
   },
   "nodes": [
@@ -229,6 +229,41 @@
       "degree": 1,
       "x": -900.0,
       "y": -564.386748910195
+    },
+    {
+      "id": "STMicroelectronics",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 232.2751965467121,
+      "y": -350.1838136450497
+    },
+    {
+      "id": "ENXTPA:STMPA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 359.14569454878375,
+      "y": -579.6843410298887
+    },
+    {
+      "id": "Industria De Dise\u00f1o Textil",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -197.93736074497312,
+      "y": 312.7198920900006
+    },
+    {
+      "id": "BME:ITX",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -900.0,
+      "y": 232.54383858694828
+    },
+    {
+      "id": "Analyst Targets",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 506.51646964947713,
+      "y": 384.60442399798944
     }
   ],
   "edges": [
@@ -599,6 +634,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
+      "source": "STMicroelectronics",
+      "target": "ENXTPA:STMPA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Industria De Dise\u00f1o Textil||Has Ticker||BME:ITX",
+      "source": "Industria De Dise\u00f1o Textil",
+      "target": "BME:ITX",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Industria De Dise\u00f1o Textil||Is Subject To Refined||Analyst Targets",
+      "source": "Industria De Dise\u00f1o Textil",
+      "target": "Analyst Targets",
+      "rel": "Is Subject To Refined",
+      "rel_cat": "GFMK",
+      "causal_type": "REGULATORY",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
     }
   ]
 }

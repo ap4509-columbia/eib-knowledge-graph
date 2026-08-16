@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 91,
-    "edges": 77,
+    "nodes": 98,
+    "edges": 83,
     "scored_edges": 0
   },
   "nodes": [
@@ -642,6 +642,55 @@
       "degree": 1,
       "x": 562.8981840417804,
       "y": -607.7984227067839
+    },
+    {
+      "id": "Schneider Electric",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 138.29802149799704,
+      "y": 127.7959335161715
+    },
+    {
+      "id": "ENXTPA:SU",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 896.4538702260878,
+      "y": 439.12640105071256
+    },
+    {
+      "id": "Cognite",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -126.04071833594082,
+      "y": -689.2450628871479
+    },
+    {
+      "id": "California SF6 Free Grid Deal",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -376.8328178379956,
+      "y": 700.5325797800217
+    },
+    {
+      "id": "financial performance",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -382.9513530363459
+    },
+    {
+      "id": "BP",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -490.78116452760105,
+      "y": -127.06651797463391
+    },
+    {
+      "id": "Bay du Nord",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -579.2602179554608,
+      "y": -27.796715777545398
     }
   ],
   "edges": [
@@ -1630,7 +1679,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1876,6 +1925,102 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Schneider Electric||Has Ticker||ENXTPA:SU",
+      "source": "Schneider Electric",
+      "target": "ENXTPA:SU",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Schneider Electric||Acquires||Cognite",
+      "source": "Schneider Electric",
+      "target": "Cognite",
+      "rel": "Acquires",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Schneider Electric||Secures||California SF6 Free Grid Deal",
+      "source": "Schneider Electric",
+      "target": "California SF6 Free Grid Deal",
+      "rel": "Secures",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Equinor||Reports strong||financial performance",
+      "source": "Equinor",
+      "target": "financial performance",
+      "rel": "Reports strong",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "BP||Sells Stake In||Bay du Nord",
+      "source": "BP",
+      "target": "Bay du Nord",
+      "rel": "Sells Stake In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "EQNR||Acquires Stake In||Bay du Nord",
+      "source": "EQNR",
+      "target": "Bay du Nord",
+      "rel": "Acquires Stake In",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
     }
   ]
 }
