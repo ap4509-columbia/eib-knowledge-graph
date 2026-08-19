@@ -78,6 +78,62 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   const originX = px(0);
   const originY = py(0);
 
+  // Permanent point labels with greedy collision avoidance: highest-
+  // attention entities claim label space first; each label tries right /
+  // left / above / below of its dot and takes the first spot that doesn't
+  // overlap an already-placed label (falling back to "right" so every
+  // point stays named). Long names are truncated — hover shows the full
+  // name via the bold overlay + native tooltip.
+  const LABEL_MAX_CHARS = 18;
+  const pointLabels = useMemo(() => {
+    const pxl = (x: number) =>
+      M.left + ((x - b.xMin) / (b.xMax - b.xMin)) * (W - M.left - M.right);
+    const pyl = (y: number) =>
+      H - M.bottom - ((y - b.yMin) / (b.yMax - b.yMin)) * (H - M.top - M.bottom);
+    const placed: { x: number; y: number; w: number; h: number }[] = [];
+    const overlaps = (a: (typeof placed)[0], c: (typeof placed)[0]) =>
+      a.x < c.x + c.w && a.x + a.w > c.x && a.y < c.y + c.h && a.y + a.h > c.y;
+    const out: { name: string; text: string; x: number; y: number; anchor: string }[] = [];
+    const ents = [...entities].sort((a, z) => z.n_articles - a.n_articles);
+    for (const e of ents) {
+      const cx = pxl(e.pc1);
+      const cy = pyl(e.pc2);
+      const r = 4 + Math.min(4, e.n_articles - 2);
+      const text =
+        e.name.length > LABEL_MAX_CHARS
+          ? `${e.name.slice(0, LABEL_MAX_CHARS - 1)}…`
+          : e.name;
+      const w = text.length * 5.1;
+      const h = 10;
+      const candidates = [
+        { x: cx + r + 4, y: cy + 3, anchor: "start" },
+        { x: cx - r - 4, y: cy + 3, anchor: "end" },
+        { x: cx, y: cy - r - 5, anchor: "middle" },
+        { x: cx, y: cy + r + 11, anchor: "middle" },
+      ];
+      let chosen = candidates[0];
+      for (const c of candidates) {
+        const bx =
+          c.anchor === "start" ? c.x : c.anchor === "end" ? c.x - w : c.x - w / 2;
+        const box = { x: bx, y: c.y - h + 2, w, h };
+        if (box.x < 2 || box.x + w > W - 2 || box.y < 2) continue;
+        if (!placed.some((p) => overlaps(p, box))) {
+          chosen = c;
+          break;
+        }
+      }
+      const bx =
+        chosen.anchor === "start"
+          ? chosen.x
+          : chosen.anchor === "end"
+            ? chosen.x - w
+            : chosen.x - w / 2;
+      placed.push({ x: bx, y: chosen.y - h + 2, w, h });
+      out.push({ name: e.name, text, ...chosen });
+    }
+    return out;
+  }, [entities, b]);
+
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-full">
       <rect
@@ -130,6 +186,28 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
           </g>
         );
       })}
+      {/* Permanent name labels (collision-avoided; hover overlay handles
+          the emphasized full name) */}
+      {pointLabels.map((l) =>
+        l.name === hoveredName ? null : (
+          <text
+            key={l.name}
+            x={l.x}
+            y={l.y}
+            textAnchor={l.anchor as "start" | "end" | "middle"}
+            className="fill-current text-[8.5px]"
+            opacity={0.75}
+            pointerEvents="none"
+            style={{
+              paintOrder: "stroke",
+              stroke: "var(--background, #fff)",
+              strokeWidth: 2.5,
+            }}
+          >
+            {l.text}
+          </text>
+        )
+      )}
       {/* Draw the hovered-entity label last so it sits on top of every dot */}
       {hoveredName && (() => {
         const h = entities.find((e) => e.name === hoveredName);
