@@ -8,7 +8,7 @@
 //   • A footer with the raw variance-explained + kept-factor list
 
 import { useEffect, useMemo, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { ChevronDown, ChevronRight, Loader2 } from "lucide-react";
 
 import { fetchFactorsLatest } from "@/lib/api/client";
 import type { FactorEntity, FactorsFile } from "@/lib/api/types";
@@ -17,6 +17,10 @@ import { ENTITY_COLORS } from "@/components/graphStyles";
 interface FactorAnalysisViewProps {
   sourceId: string;
 }
+
+// Collapsed-state persistence for the explainer, mirroring the
+// Predictions about-box: default collapsed, choice remembered per browser.
+const ABOUT_COLLAPSED_STORAGE_KEY = "eibkg.factors.about.collapsed";
 
 /** Cluster palette — muted, consistent with the rest of the UI. */
 const CLUSTER_COLORS = [
@@ -65,6 +69,82 @@ function computeBounds(entities: FactorEntity[]): Bounds {
     yMin: yMin - yr * pad,
     yMax: yMax + yr * pad,
   };
+}
+
+/** Collapsible "What this is" explainer. Default collapsed; the choice is
+ *  remembered per browser (same pattern as the Predictions about-box). */
+function AboutStrip() {
+  const [collapsed, setCollapsed] = useState(true);
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    const stored = window.localStorage.getItem(ABOUT_COLLAPSED_STORAGE_KEY);
+    setCollapsed(stored !== "0");
+    setHydrated(true);
+  }, []);
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(
+      ABOUT_COLLAPSED_STORAGE_KEY,
+      collapsed ? "1" : "0"
+    );
+  }, [collapsed, hydrated]);
+
+  return (
+    <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-2 text-[11px] leading-relaxed text-muted-foreground">
+      <button
+        type="button"
+        onClick={() => setCollapsed((c) => !c)}
+        className="flex w-full items-center gap-1.5 text-left font-medium text-foreground"
+      >
+        {collapsed ? (
+          <ChevronRight className="h-3 w-3 shrink-0" />
+        ) : (
+          <ChevronDown className="h-3 w-3 shrink-0" />
+        )}
+        What this is — and how the clusters are built
+      </button>
+      {!collapsed && (
+        <div className="mt-2 max-h-56 space-y-2 overflow-y-auto pb-1 pr-2">
+          <p>
+            Every entity is scored on five news factors from the LLM-extracted
+            relationships:{" "}
+            <span className="text-foreground">Attention</span> (coverage
+            volume), <span className="text-foreground">Sentiment</span> (mean
+            tone), <span className="text-foreground">Consensus</span> (do
+            sources agree — 1 − sentiment spread),{" "}
+            <span className="text-foreground">Novelty</span> (share of
+            counterparties unique to it), and{" "}
+            <span className="text-foreground">Materiality</span> (log of
+            extracted dollar amounts). Point size ≈ mention count; hover a
+            point for its full loading vector.
+          </p>
+          <p>
+            <span className="font-medium text-foreground">Clustering.</span>{" "}
+            Each factor is standardized to z-scores (so &ldquo;+0.9
+            consensus&rdquo; means 0.9 standard deviations above the corpus
+            average), then KMeans groups entities in the full 5-factor space:
+            it places k centroids, assigns each entity to the nearest one,
+            moves each centroid to its members&rsquo; average, and repeats
+            until stable. A cluster card&rsquo;s signature is its
+            centroid&rsquo;s three strongest factors — an{" "}
+            <em>archetype</em> of news posture (e.g. Attention+ · Consensus−
+            = heavily covered, contested story), not anything the model was
+            told about the companies.
+          </p>
+          <p>
+            <span className="font-medium text-foreground">
+              The scatter is only a map.
+            </span>{" "}
+            PCA projects the 5 factors onto the 2 directions of greatest
+            variance for display; clustering happened in the full space, so
+            two nearby points can belong to different clusters. Trust the
+            colors over the distances. Factors reflect the current rolling
+            news window, so clusters drift as coverage changes.
+          </p>
+        </div>
+      )}
+    </div>
+  );
 }
 
 function Scatter({ entities }: { entities: FactorEntity[] }) {
@@ -306,16 +386,8 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
         )}
       </div>
 
-      {/* Explainer strip */}
-      <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-3 text-[11px] leading-relaxed text-muted-foreground">
-        <span className="font-medium text-foreground">What this is.</span>{" "}
-        Each entity in the corpus is scored on five news factors — Attention,
-        Sentiment, Consensus, Novelty, Materiality — derived from the day's
-        LLM-extracted triplets. PCA projects those scores to 2D for the
-        scatter; KMeans groups entities with similar loadings into archetype
-        clusters. Point size ≈ mention count; hover a point for its full
-        loading vector.
-      </div>
+      {/* Explainer strip — collapsible, default collapsed */}
+      <AboutStrip />
 
       {error && (
         <div className="px-6 py-6 text-xs text-destructive">
