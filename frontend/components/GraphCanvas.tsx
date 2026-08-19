@@ -115,15 +115,16 @@ export function GraphCanvas({
     };
     fit();
     converge();
-    // With sizes known: spread disconnected clusters into their own
-    // regions, push apart nodes that still touch, then re-frame. Packing
-    // can change the bounding box substantially, so re-converge the size
-    // scale afterwards (and re-separate if sizes grew). Preset layout
-    // only — the physics simulation spaces itself.
+    // With sizes known: organically relax multi-cluster views (node
+    // repulsion + edge attraction), push apart nodes that still touch,
+    // then re-frame. The relaxation can change the bounding box
+    // substantially, so re-converge the size scale afterwards (and
+    // re-separate if sizes grew). Preset layout only — the interactive
+    // physics mode spaces itself.
     if (!physicsEnabledRef.current) {
-      const packed = packComponents(cy);
+      const relaxed = forceRelax(cy);
       const separated = separateOverlaps(cy);
-      if (packed || separated) {
+      if (relaxed || separated) {
         fit();
         if (converge() && separateOverlaps(cy)) fit();
       }
@@ -133,70 +134,119 @@ export function GraphCanvas({
 
   // News corpora (STOXX especially) are a swarm of small disconnected
   // clusters — one per story — whose per-month spring layouts all pile
-  // into the same coordinate space, reading as one clotted blob. Re-pack
-  // the visible connected components onto a shelf grid (largest first,
-  // internal layout preserved) so each cluster occupies its own region.
-  // Single-component views (FNSPID's hairball) are left untouched.
-  const packComponents = (cy: Core): boolean => {
+  // into the same coordinate space, reading as one clotted blob. Relax
+  // them with a deterministic Fruchterman–Reingold pass: every node
+  // repels every other, edges pull their endpoints together, and a light
+  // gravity keeps disconnected clusters from drifting apart. Connected
+  // stories settle into tight organic clumps that stand clear of each
+  // other. Single-component views (FNSPID's curated hairball) are left
+  // untouched, as are very large views (cost is O(N² · iterations)).
+  const forceRelax = (cy: Core): boolean => {
     const visible = cy.elements(":visible");
-    if (visible.nodes().length === 0) return false;
-    const comps = visible.components().filter((c) => c.nodes().length > 0);
-    if (comps.length < 2) return false;
+    const nodeColl = visible.nodes();
+    const n = nodeColl.length;
+    if (n < 2 || n > 500) return false;
+    if (visible.components().length < 2) return false;
 
-    const k = styleScaleRef.current;
-    const gap = 70 * k; // margin between cluster regions, in graph units
-    const boxes = comps
-      .map((comp) => {
-        const ns = comp.nodes();
-        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-        ns.forEach((n) => {
-          const r = n.width() / 2;
-          const p = n.position();
-          minX = Math.min(minX, p.x - r);
-          maxX = Math.max(maxX, p.x + r);
-          minY = Math.min(minY, p.y - r);
-          maxY = Math.max(maxY, p.y + r);
-        });
-        return {
-          nodes: ns,
-          minX,
-          minY,
-          w: maxX - minX + gap,
-          h: maxY - minY + gap,
-          id: ns.min((n) => n.id().charCodeAt(0)).ele?.id() ?? "",
-        };
-      })
-      // Largest first for tighter shelves; id tiebreak keeps it stable.
-      .sort((a, b) => b.w * b.h - a.w * a.h || a.id.localeCompare(b.id));
-
-    // Shelf packing toward the viewport's aspect ratio so the packed
-    // canvas fills the pane instead of forming a long strip.
-    const totalArea = boxes.reduce((s, b) => s + b.w * b.h, 0);
-    const aspect = Math.max(0.5, Math.min(3, cy.width() / Math.max(1, cy.height())));
-    const rowWidth = Math.sqrt(totalArea * aspect);
-    let x = 0, y = 0, rowH = 0;
-    let moved = false;
-    cy.batch(() => {
-      for (const b of boxes) {
-        if (x > 0 && x + b.w > rowWidth) {
-          y += rowH;
-          x = 0;
-          rowH = 0;
-        }
-        const dx = x - b.minX;
-        const dy = y - b.minY;
-        if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
-          b.nodes.forEach((n) => {
-            const p = n.position();
-            n.position({ x: p.x + dx, y: p.y + dy });
-          });
-          moved = true;
-        }
-        x += b.w;
-        rowH = Math.max(rowH, b.h);
-      }
+    const scale = styleScaleRef.current;
+    const pts = nodeColl.map((nd) => ({
+      nd,
+      x: nd.position("x"),
+      y: nd.position("y"),
+      r: nd.width() / 2,
+      dx: 0,
+      dy: 0,
+    }));
+    const idxOf = new Map(pts.map((p, i) => [p.nd.id(), i]));
+    const springs: Array<[number, number]> = [];
+    visible.edges().forEach((e) => {
+      const a = idxOf.get(e.data("source"));
+      const b = idxOf.get(e.data("target"));
+      if (a !== undefined && b !== undefined && a !== b) springs.push([a, b]);
     });
-    return moved;
+
+    // Ideal pairwise distance. Kept modest — with a large kIdeal the cloud
+    // area outgrows what the zoom-compensation clamp can recover and nodes
+    // shrink to dots.
+    const kIdeal = 50 * scale;
+    // Repulsion is LOCAL (cutoff): it resolves crowding without inflating
+    // the whole layout; global shape comes from the springs plus gravity.
+    const repCutoff = 3 * kIdeal;
+    // Start from the centroid so gravity doesn't yank the cloud sideways.
+    const cx0 = pts.reduce((s, p) => s + p.x, 0) / n;
+    const cy0 = pts.reduce((s, p) => s + p.y, 0) / n;
+
+    const ITER = 150;
+    let temp = kIdeal * 2.5; // max displacement per tick, cools linearly
+    const cool = temp / (ITER + 1);
+    const gravity = 0.08;
+
+    for (let iter = 0; iter < ITER; iter++) {
+      for (const p of pts) {
+        p.dx = 0;
+        p.dy = 0;
+      }
+      // Repulsion — nearby pairs only
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const a = pts[i];
+          const b = pts[j];
+          let vx = a.x - b.x;
+          let vy = a.y - b.y;
+          let d = Math.hypot(vx, vy);
+          if (d > repCutoff) continue;
+          if (d < 1e-4) {
+            // Coincident: deterministic direction so renders stay stable.
+            const ang = ((i * 37 + j * 101) % 360) * (Math.PI / 180);
+            vx = Math.cos(ang);
+            vy = Math.sin(ang);
+            d = 1;
+          }
+          const rep = (kIdeal * kIdeal) / d;
+          const ux = (vx / d) * rep;
+          const uy = (vy / d) * rep;
+          a.dx += ux;
+          a.dy += uy;
+          b.dx -= ux;
+          b.dy -= uy;
+        }
+      }
+      // Attraction — springs along edges
+      for (const [i, j] of springs) {
+        const a = pts[i];
+        const b = pts[j];
+        const vx = a.x - b.x;
+        const vy = a.y - b.y;
+        const d = Math.max(1e-4, Math.hypot(vx, vy));
+        const attr = (d * d) / kIdeal;
+        const ux = (vx / d) * attr;
+        const uy = (vy / d) * attr;
+        a.dx -= ux;
+        a.dy -= uy;
+        b.dx += ux;
+        b.dy += uy;
+      }
+      // Gravity toward the centroid keeps disconnected clusters in frame
+      for (const p of pts) {
+        p.dx += (cx0 - p.x) * gravity;
+        p.dy += (cy0 - p.y) * gravity;
+      }
+      // Apply, capped by the cooling temperature
+      for (const p of pts) {
+        const len = Math.hypot(p.dx, p.dy);
+        if (len > 1e-6) {
+          const step = Math.min(len, temp);
+          p.x += (p.dx / len) * step;
+          p.y += (p.dy / len) * step;
+        }
+      }
+      temp -= cool;
+    }
+
+    cy.batch(() => {
+      for (const p of pts) p.nd.position({ x: p.x, y: p.y });
+    });
+    return true;
   };
 
   // Permanent labels: everything gets one in comfortable views; in dense

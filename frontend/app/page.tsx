@@ -104,6 +104,12 @@ export default function Home() {
   const knownTypesRef = useRef<Set<string>>(new Set());
   const knownCategoriesRef = useRef<Set<string>>(new Set());
   const filtersInitializedRef = useRef(false);
+  // Which source the current `index` (and monthFrom/monthTo) belong to.
+  // During a source switch there's a commit where activeSourceId is already
+  // the new source but index/months are still the old one's — the snapshot
+  // fetch effect must not fire in that window (it would request the old
+  // months against the new source's path, 404, and drop the view).
+  const indexSourceRef = useRef<string | null>(null);
 
   // UI state
   const [loading, setLoading] = useState(true);
@@ -139,6 +145,7 @@ export default function Home() {
       setError(null);
       try {
         const idx = await fetchIndex(sourceId);
+        indexSourceRef.current = sourceId;
         setIndex(idx);
         if (idx.latest) {
           // Default view: trailing quarter (3 months) ending at the latest
@@ -169,7 +176,10 @@ export default function Home() {
     setVisibleCategories(new Set());
     // Drop the old corpus's index/snapshot immediately — otherwise the
     // snapshot-fetch effect fires once with the old months against the new
-    // source's path and 404s before loadIndex swaps the months in.
+    // source's path and 404s before loadIndex swaps the months in. The ref
+    // closes the same window synchronously (state updates land a render
+    // later; effects in THIS commit still see the old index).
+    indexSourceRef.current = null;
     setIndex(null);
     setSnapshot(null);
     if (typeof window !== "undefined") {
@@ -217,6 +227,9 @@ export default function Home() {
   // mergeSnapshots and returns the runner's snapshot untouched.
   useEffect(() => {
     if (selectedMonths.length === 0) return;
+    // Stale-window guard: only fetch when the loaded index actually belongs
+    // to the active source (see indexSourceRef).
+    if (!activeSourceId || indexSourceRef.current !== activeSourceId) return;
 
     const cache = snapshotCacheRef.current;
     const missing = selectedMonths.filter((m) => !cache.has(m));
