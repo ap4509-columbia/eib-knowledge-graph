@@ -1,5 +1,11 @@
 # Publishing VM pipeline output to the UI
 
+**This is the publishing path for the FNSPID corpus** — the team's
+production dataset, extracted by the eib-eval pipeline on the VM. (The
+"STOXX Europe 600 (Live)" source is a separate experiment with its own
+fully-automated GitHub Actions pipeline, `scrape-daily-factors.yml`; it
+does not use this path.)
+
 The team's triplet-extraction pipeline (eib-eval) runs on a VM and writes
 CSVs like `output/triplets_<model>_..._summary.csv`. This repo ships a
 publisher that converts those CSVs into the site's static data format and
