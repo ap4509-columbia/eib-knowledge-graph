@@ -54,6 +54,11 @@ function currentMonthYYYYMM(): string {
 // on first look, so we ship them hidden by default. Toggleable via the rail.
 const DEFAULT_HIDDEN_TYPES = new Set(["FININSTRUMENTINFO", "FIN_INSTRUMENT_INFO"]);
 
+// Industry filter default: only these sectors start checked on a fresh
+// source load, so the first STOXX view opens on one industry instead of
+// the full 300-node swarm. Everything stays one click away in the rail.
+const DEFAULT_CHECKED_SECTORS = new Set(["Pharma"]);
+
 const ACTIVE_SOURCE_STORAGE_KEY = "eibkg.activeSource";
 
 export default function Home() {
@@ -357,8 +362,10 @@ export default function Home() {
     );
   }, [nodeSectors]);
 
-  // Same maintenance rule as types: newly seen sectors default to checked;
-  // sectors the user unchecked stay off across timeline scrubs.
+  // Same maintenance rule as types, but only DEFAULT_CHECKED_SECTORS start
+  // checked — the rest ship unchecked so the first view is one industry,
+  // not the whole swarm. The user's later checks/unchecks stay put across
+  // timeline scrubs.
   useEffect(() => {
     if (!nodeSectors) return;
     const fresh: string[] = [];
@@ -369,7 +376,9 @@ export default function Home() {
     for (const s of fresh) knownSectorsRef.current.add(s);
     setVisibleSectors((prev) => {
       const next = new Set(prev);
-      for (const s of fresh) next.add(s);
+      for (const s of fresh) {
+        if (DEFAULT_CHECKED_SECTORS.has(s)) next.add(s);
+      }
       return next;
     });
   }, [nodeSectors]);
