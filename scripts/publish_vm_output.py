@@ -91,7 +91,14 @@ def load_csvs(paths: list[Path]) -> tuple[list[Article], dict[str, list[dict]]]:
     triplets_by_url: dict[str, list[dict]] = {}
     seen_urls: set[str] = set()
     for p in paths:
-        df = pd.read_csv(p)
+        try:
+            df = pd.read_csv(p)
+        except pd.errors.ParserError:
+            # Big VM outputs sometimes carry rows whose article text breaks
+            # the quoting. Re-parse with the tolerant python engine and drop
+            # the malformed rows rather than failing the whole publish.
+            df = pd.read_csv(p, engine="python", on_bad_lines="skip")
+            print(f"{p.name}: malformed rows skipped (tolerant parse)")
         missing = {"date", "url", "output_triplets"} - set(df.columns)
         if missing:
             raise SystemExit(f"{p}: missing expected columns {sorted(missing)}")

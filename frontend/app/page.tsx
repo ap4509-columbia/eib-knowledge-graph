@@ -102,8 +102,24 @@ export default function Home() {
   useEffect(() => {
     if (userAdjustedDegreeRef.current || !snapshot) return;
     const n = snapshot.nodes.length;
-    const auto = n > 1000 ? 12 : n > 500 ? 8 : n > 200 ? 6 : 5;
-    setMinDegreePct(auto);
+    if (n <= 200) {
+      setMinDegreePct(5);
+      return;
+    }
+    // Pick the threshold that keeps roughly the top ~300 most-connected
+    // nodes. A fixed percentage of the max degree breaks on heavy-tailed
+    // corpora — one 800-connection hub pushes 12% to a bar only the hub
+    // itself clears, rendering a single lonely node.
+    const degrees = snapshot.nodes
+      .map((nd) => nd.degree)
+      .sort((a, b) => b - a);
+    const maxDeg = Math.max(1, degrees[0] ?? 1);
+    let cutoff = degrees[Math.min(degrees.length - 1, 299)] ?? 1;
+    // Long-tail corpora tie hundreds of nodes at the 300th node's degree;
+    // bump the threshold one step so the default view stays readable.
+    if (degrees.filter((d) => d >= cutoff).length > 450) cutoff += 1;
+    const pct = Math.max(1, Math.min(20, Math.ceil((cutoff / maxDeg) * 100)));
+    setMinDegreePct(pct);
   }, [snapshot]);
 
   // Interaction state

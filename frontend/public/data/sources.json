@@ -10,6 +10,14 @@
       "features": ["graph", "predictions"]
     },
     {
+      "id": "fnspid-qwen-vm",
+      "label": "FNSPID — qwen2.5 VM run (2019–2021)",
+      "description": "Full 2-year FNSPID semiconductor corpus extracted by the team's VM pipeline (qwen2.5:14b via Ollama on eib-central1a) and published through the VM→UI publisher. 5,358 articles / 30,861 triplets.",
+      "kind": "historical",
+      "available": true,
+      "features": ["graph"]
+    },
+    {
       "id": "stoxx_600_factors",
       "label": "STOXX Europe 600 (Live)",
       "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",
