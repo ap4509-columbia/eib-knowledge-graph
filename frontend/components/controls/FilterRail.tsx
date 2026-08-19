@@ -38,6 +38,11 @@ export interface FilterRailProps {
   onToggleType: (type: string) => void;
   onToggleCategory: (cat: string) => void;
   onMinDegreePctChange: (value: number) => void;
+  /** Industry filter rows [sector, nodeCount] — null hides the section.
+   *  Only provided for watchlist-backed sources (STOXX 600 Live). */
+  sectors?: ReadonlyArray<readonly [string, number]> | null;
+  visibleSectors?: Set<string>;
+  onToggleSector?: (sector: string) => void;
 }
 
 export function FilterRail(props: FilterRailProps) {
@@ -51,6 +56,9 @@ export function FilterRail(props: FilterRailProps) {
     onToggleType,
     onToggleCategory,
     onMinDegreePctChange,
+    sectors,
+    visibleSectors,
+    onToggleSector,
   } = props;
 
   // Type + causal-type counts for the current snapshot.
@@ -125,6 +133,42 @@ export function FilterRail(props: FilterRailProps) {
             {minDegree === 1 ? "" : "s"} (max in view: {maxDegree}).
           </p>
         </div>
+
+        {sectors && sectors.length > 0 && (
+          <>
+            <Separator />
+
+            {/* Industry — clusters inherit the sector of the watchlist
+                company their story is about (see lib/sectors.ts) */}
+            <div className="mb-5 mt-4">
+              <Label className="mb-2 block text-xs">Industry</Label>
+              <div className="space-y-1.5">
+                {sectors.map(([sector, count]) => {
+                  const checked = visibleSectors?.has(sector) ?? true;
+                  return (
+                    <label
+                      key={sector}
+                      className="group flex cursor-pointer items-center gap-2 rounded px-1.5 py-1 text-xs transition hover:bg-accent"
+                    >
+                      <Checkbox
+                        checked={checked}
+                        onCheckedChange={() => onToggleSector?.(sector)}
+                      />
+                      <span className="flex-1 truncate">{sector}</span>
+                      <span className="font-mono text-[10px] tabular-nums text-muted-foreground">
+                        {count}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              <p className="mt-1.5 text-[10px] leading-snug text-muted-foreground">
+                Inferred from the watchlist company each news cluster is
+                about. &ldquo;Other&rdquo; = no watchlist company matched.
+              </p>
+            </div>
+          </>
+        )}
 
         <Separator />
 

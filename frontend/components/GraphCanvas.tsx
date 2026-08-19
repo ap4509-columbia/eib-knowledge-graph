@@ -22,6 +22,10 @@ export interface GraphFilters {
   /** Legacy field name — kept for compatibility. Now used for causal types. */
   visibleCategories: Set<string>;
   minDegree: number;
+  /** Optional industry filter (STOXX): node id → inferred sector. */
+  sectorOf?: Map<string, string> | null;
+  /** Sectors currently checked; only consulted when sectorOf is present. */
+  visibleSectors?: Set<string> | null;
 }
 
 /** Live-physics knobs. `enabled=false` (default) uses the precomputed
@@ -581,14 +585,19 @@ export function GraphCanvas({
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy) return;
-    const { visibleTypes, visibleCategories, minDegree } = filters;
+    const { visibleTypes, visibleCategories, minDegree, sectorOf, visibleSectors } =
+      filters;
 
     cy.batch(() => {
       const nodeVisible = new Map<string, boolean>();
       cy.nodes().forEach((n) => {
         const t = n.data("type");
         const d = n.data("degree") ?? 0;
-        const visible = visibleTypes.has(t) && d >= minDegree;
+        const sectorOk =
+          !sectorOf || !visibleSectors
+            ? true
+            : visibleSectors.has(sectorOf.get(n.id()) ?? "Other");
+        const visible = visibleTypes.has(t) && d >= minDegree && sectorOk;
         nodeVisible.set(n.id(), visible);
         n.style("display", visible ? "element" : "none");
       });

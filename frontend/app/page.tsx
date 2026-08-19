@@ -20,6 +20,11 @@ import {
 import type { Index, Snapshot, SourcesFile } from "@/lib/api/types";
 import { mergeSnapshots } from "@/lib/mergeSnapshots";
 import { formatMonthRange, monthsBetween } from "@/lib/months";
+import {
+  inferNodeSectors,
+  SECTOR_ORDER,
+  SECTOR_SOURCE_IDS,
+} from "@/lib/sectors";
 import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
@@ -71,6 +76,11 @@ export default function Home() {
   const [visibleCategories, setVisibleCategories] = useState<Set<string>>(
     new Set()
   );
+  // Industry filter (sources listed in SECTOR_SOURCE_IDS only). Sectors are
+  // inferred per connected cluster from the watchlist companies mentioned
+  // in it — see lib/sectors.ts.
+  const [visibleSectors, setVisibleSectors] = useState<Set<string>>(new Set());
+  const knownSectorsRef = useRef<Set<string>>(new Set());
   // Min-degree threshold expressed as a percentage of the current month's max
   // degree. Stays meaningful across months even though absolute degree ranges
   // change wildly (March 2020 has 5× the activity of January 2019).
@@ -174,6 +184,8 @@ export default function Home() {
     filtersInitializedRef.current = false;
     setVisibleTypes(new Set());
     setVisibleCategories(new Set());
+    knownSectorsRef.current = new Set();
+    setVisibleSectors(new Set());
     // Drop the old corpus's index/snapshot immediately — otherwise the
     // snapshot-fetch effect fires once with the old months against the new
     // source's path and 404s before loadIndex swaps the months in. The ref
@@ -323,6 +335,53 @@ export default function Home() {
     });
     filtersInitializedRef.current = true;
   }, [snapshot]);
+
+  // Industry inference — only for sources that have a watchlist-backed
+  // sector map. nodeSectors: node id → sector for the current merged
+  // snapshot; null hides the Industry filter entirely.
+  const nodeSectors = useMemo(() => {
+    if (!snapshot || !activeSourceId || !SECTOR_SOURCE_IDS.has(activeSourceId))
+      return null;
+    return inferNodeSectors(snapshot);
+  }, [snapshot, activeSourceId]);
+
+  const sectorCounts = useMemo(() => {
+    if (!nodeSectors) return null;
+    const counts = new Map<string, number>();
+    for (const sector of nodeSectors.values()) {
+      counts.set(sector, (counts.get(sector) ?? 0) + 1);
+    }
+    // Stable order from SECTOR_ORDER; drop sectors absent from this view.
+    return SECTOR_ORDER.filter((s) => counts.has(s)).map(
+      (s) => [s, counts.get(s) as number] as const
+    );
+  }, [nodeSectors]);
+
+  // Same maintenance rule as types: newly seen sectors default to checked;
+  // sectors the user unchecked stay off across timeline scrubs.
+  useEffect(() => {
+    if (!nodeSectors) return;
+    const fresh: string[] = [];
+    for (const sector of new Set(nodeSectors.values())) {
+      if (!knownSectorsRef.current.has(sector)) fresh.push(sector);
+    }
+    if (fresh.length === 0) return;
+    for (const s of fresh) knownSectorsRef.current.add(s);
+    setVisibleSectors((prev) => {
+      const next = new Set(prev);
+      for (const s of fresh) next.add(s);
+      return next;
+    });
+  }, [nodeSectors]);
+
+  const handleToggleSector = useCallback((sector: string) => {
+    setVisibleSectors((prev) => {
+      const next = new Set(prev);
+      if (next.has(sector)) next.delete(sector);
+      else next.add(sector);
+      return next;
+    });
+  }, []);
 
   // ⌘K / Ctrl+K to open search
   useEffect(() => {
@@ -527,6 +586,9 @@ export default function Home() {
             onToggleType={handleToggleType}
             onToggleCategory={handleToggleCategory}
             onMinDegreePctChange={handleMinDegreePctChange}
+            sectors={sectorCounts}
+            visibleSectors={visibleSectors}
+            onToggleSector={handleToggleSector}
           />
 
           <main className="relative flex-1 overflow-hidden">
@@ -558,7 +620,13 @@ export default function Home() {
               <>
                 <GraphCanvas
                   snapshot={snapshot}
-                  filters={{ visibleTypes, visibleCategories, minDegree }}
+                  filters={{
+                    visibleTypes,
+                    visibleCategories,
+                    minDegree,
+                    sectorOf: nodeSectors,
+                    visibleSectors: nodeSectors ? visibleSectors : null,
+                  }}
                   focusedNodeId={focusedNodeId}
                   onNodeClick={handleNodeClick}
                   physics={physics}
