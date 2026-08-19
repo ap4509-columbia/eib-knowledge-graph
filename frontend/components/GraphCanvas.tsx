@@ -94,38 +94,141 @@ export function GraphCanvas({
   ) => {
     const fit = () =>
       eles ? cy.fit(eles, 40) : cy.fit(undefined, 40);
-    fit();
     // Iterate: restyling changes node sizes, which changes the bounding box
     // the next fit sees, which changes the zoom the scale is derived from.
-    // Sparse views (a few hub nodes) need 2–3 rounds to converge.
-    for (let i = 0; i < 4; i++) {
-      const k = Math.min(8, Math.max(0.25, 1 / cy.zoom()));
-      if (Math.abs(k - styleScaleRef.current) <= styleScaleRef.current * 0.1)
-        break;
-      styleScaleRef.current = k;
-      cy.style(
-        makeGraphStyles(isDarkRef.current, k) as cytoscape.StylesheetJson
-      ).update();
-      fit();
+    // Sparse views (a few hub nodes) need 2–3 rounds to converge. Returns
+    // whether the scale actually moved.
+    const converge = (): boolean => {
+      let changed = false;
+      for (let i = 0; i < 4; i++) {
+        const k = Math.min(8, Math.max(0.25, 1 / cy.zoom()));
+        if (Math.abs(k - styleScaleRef.current) <= styleScaleRef.current * 0.1)
+          break;
+        styleScaleRef.current = k;
+        changed = true;
+        cy.style(
+          makeGraphStyles(isDarkRef.current, k) as cytoscape.StylesheetJson
+        ).update();
+        fit();
+      }
+      return changed;
+    };
+    fit();
+    converge();
+    // With sizes known: spread disconnected clusters into their own
+    // regions, push apart nodes that still touch, then re-frame. Packing
+    // can change the bounding box substantially, so re-converge the size
+    // scale afterwards (and re-separate if sizes grew). Preset layout
+    // only — the physics simulation spaces itself.
+    if (!physicsEnabledRef.current) {
+      const packed = packComponents(cy);
+      const separated = separateOverlaps(cy);
+      if (packed || separated) {
+        fit();
+        if (converge() && separateOverlaps(cy)) fit();
+      }
     }
-    // With final sizes known, gently push apart any visible nodes that
-    // touch, then re-frame once. Runs only on the preset layout — the
-    // physics simulation handles its own spacing.
-    if (!physicsEnabledRef.current && separateOverlaps(cy)) fit();
     assignLabelBudget(cy);
   };
 
-  // Permanent labels go to the most-connected nodes of the current view
-  // only; everything else stays unlabeled until hovered/focused. Runs
-  // after every fit so filter/range changes re-rank.
-  const LABEL_BUDGET = 40;
+  // News corpora (STOXX especially) are a swarm of small disconnected
+  // clusters — one per story — whose per-month spring layouts all pile
+  // into the same coordinate space, reading as one clotted blob. Re-pack
+  // the visible connected components onto a shelf grid (largest first,
+  // internal layout preserved) so each cluster occupies its own region.
+  // Single-component views (FNSPID's hairball) are left untouched.
+  const packComponents = (cy: Core): boolean => {
+    const visible = cy.elements(":visible");
+    if (visible.nodes().length === 0) return false;
+    const comps = visible.components().filter((c) => c.nodes().length > 0);
+    if (comps.length < 2) return false;
+
+    const k = styleScaleRef.current;
+    const gap = 70 * k; // margin between cluster regions, in graph units
+    const boxes = comps
+      .map((comp) => {
+        const ns = comp.nodes();
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        ns.forEach((n) => {
+          const r = n.width() / 2;
+          const p = n.position();
+          minX = Math.min(minX, p.x - r);
+          maxX = Math.max(maxX, p.x + r);
+          minY = Math.min(minY, p.y - r);
+          maxY = Math.max(maxY, p.y + r);
+        });
+        return {
+          nodes: ns,
+          minX,
+          minY,
+          w: maxX - minX + gap,
+          h: maxY - minY + gap,
+          id: ns.min((n) => n.id().charCodeAt(0)).ele?.id() ?? "",
+        };
+      })
+      // Largest first for tighter shelves; id tiebreak keeps it stable.
+      .sort((a, b) => b.w * b.h - a.w * a.h || a.id.localeCompare(b.id));
+
+    // Shelf packing toward the viewport's aspect ratio so the packed
+    // canvas fills the pane instead of forming a long strip.
+    const totalArea = boxes.reduce((s, b) => s + b.w * b.h, 0);
+    const aspect = Math.max(0.5, Math.min(3, cy.width() / Math.max(1, cy.height())));
+    const rowWidth = Math.sqrt(totalArea * aspect);
+    let x = 0, y = 0, rowH = 0;
+    let moved = false;
+    cy.batch(() => {
+      for (const b of boxes) {
+        if (x > 0 && x + b.w > rowWidth) {
+          y += rowH;
+          x = 0;
+          rowH = 0;
+        }
+        const dx = x - b.minX;
+        const dy = y - b.minY;
+        if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+          b.nodes.forEach((n) => {
+            const p = n.position();
+            n.position({ x: p.x + dx, y: p.y + dy });
+          });
+          moved = true;
+        }
+        x += b.w;
+        rowH = Math.max(rowH, b.h);
+      }
+    });
+    return moved;
+  };
+
+  // Permanent labels: everything gets one in comfortable views; in dense
+  // views the most-connected ~40% keep theirs (rest label on hover), and
+  // every disconnected cluster's top entity is always named so no island
+  // goes unidentified. Runs after every fit so filter/range changes
+  // re-rank.
   const assignLabelBudget = (cy: Core) => {
-    const visible = cy
-      .nodes(":visible")
+    const visible = cy.elements(":visible");
+    const nodes = visible
+      .nodes()
       .toArray()
       .sort((a, b) => (b.data("degree") ?? 0) - (a.data("degree") ?? 0));
+    const n = nodes.length;
+    const comps = visible.components();
+    // Label everything when the view has room: moderate node counts, or a
+    // many-component layout (the packer gives each cluster its own region,
+    // so labels don't pile up the way they do in one dense hairball).
+    const labelAll = n <= 220 || comps.length >= 8;
+    const budget = labelAll ? n : Math.max(80, Math.round(n * 0.4));
+    const chosen = new Set(nodes.slice(0, budget).map((nd) => nd.id()));
+    for (const comp of comps) {
+      const top = comp
+        .nodes()
+        .toArray()
+        .sort((a, b) => (b.data("degree") ?? 0) - (a.data("degree") ?? 0))[0];
+      if (top) chosen.add(top.id());
+    }
     cy.batch(() => {
-      visible.forEach((n, i) => n.data("showLabel", i < LABEL_BUDGET ? 1 : 0));
+      nodes.forEach((nd) =>
+        nd.data("showLabel", chosen.has(nd.id()) ? 1 : 0)
+      );
     });
   };
 
