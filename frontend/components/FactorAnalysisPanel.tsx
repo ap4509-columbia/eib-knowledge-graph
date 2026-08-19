@@ -114,9 +114,11 @@ function AboutStrip() {
             sources agree — 1 − sentiment spread),{" "}
             <span className="text-foreground">Novelty</span> (share of
             counterparties unique to it), and{" "}
-            <span className="text-foreground">Materiality</span> (log of
-            extracted dollar amounts). Point size ≈ mention count; hover a
-            point for its full loading vector.
+            <span className="text-foreground">Materiality</span> (how much
+            money the entity&rsquo;s stories involve — deal sizes, fines,
+            revenue figures quoted in the news; log-scaled so one mega-deal
+            doesn&rsquo;t drown everything else). Point size ≈ mention count;
+            hover a point for its full loading vector.
           </p>
           <p>
             <span className="font-medium text-foreground">Clustering.</span>{" "}

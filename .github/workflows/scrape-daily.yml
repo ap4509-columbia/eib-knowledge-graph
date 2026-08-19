@@ -1,9 +1,11 @@
 name: Daily corpus refresh
 
 on:
-  schedule:
-    # Every day at 06:00 UTC. Adjust cadence here if you want it more/less frequent.
-    - cron: '0 6 * * *'
+  # Schedule removed: at full STOXX-600 scale this run exceeded the 60-min
+  # job timeout every day and was auto-cancelled — a daily hour of wasted
+  # runner minutes with zero output. The live corpus is maintained by
+  # scrape-daily-factors.yml (curated 30-ticker watchlist). Manual dispatch
+  # kept for one-off runs against a smaller watchlist.
   workflow_dispatch:
     # Adds a "Run workflow" button in the Actions tab for manual triggers.
     inputs:
