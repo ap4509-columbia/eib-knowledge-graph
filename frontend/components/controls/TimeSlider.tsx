@@ -64,30 +64,20 @@ export function TimeSlider({
   // The forecast styling keys on the range *reaching into* the future zone.
   const touchesFuture = toIdx >= months.length;
 
-  const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
-  const futureStartPct = total > 1 ? (months.length / (total - 1)) * 100 : 100;
+  // Cell model: each month owns an equal slot of the track, so a 1-month
+  // selection is a full cell wide (not a zero-width point) and cell
+  // boundaries are the snap grid for every scrubber. cellStart(i) is the
+  // left edge of month i's cell; cellStart(total) is the track's right end.
+  const cellW = 100 / total;
+  const cellStart = (i: number) => i * cellW;
+  const futureStartPct = cellStart(months.length);
 
-  // Predictions-tab overlay: compute training window + prediction month
-  // percentage positions on the timeline. WINDOW_SIZE mirrors the GAT
-  // rolling-window trainer (train on [t-W, t-1], predict t).
-  let predictionBand: { trainStartPct: number; trainEndPct: number; predPct: number; label: string } | null = null;
-  if (predictionsContext) {
-    const predIdx = allMonths.indexOf(predictionsContext.predictionMonth);
-    if (predIdx > 0) {
-      const trainStart = Math.max(0, predIdx - predictionsContext.trainingWindow);
-      const trainEnd = predIdx - 1;
-      const bandOffset = total > 1 ? 100 / (total - 1) / 2 : 0;
-      predictionBand = {
-        trainStartPct: Math.max(0, pct(trainStart) - bandOffset),
-        trainEndPct: pct(trainEnd) + bandOffset,
-        predPct: pct(predIdx),
-        label:
-          trainEnd >= trainStart
-            ? `train ${allMonths[trainStart]}–${allMonths[trainEnd]} · predict ${predictionsContext.predictionMonth}`
-            : `predict ${predictionsContext.predictionMonth}`,
-      };
-    }
-  }
+  // Predictions-tab legend gate — rendered when the prediction month has at
+  // least one prior month to train on. (The WindowScrubber below draws the
+  // actual bands; positions live there.)
+  const predictionBand =
+    predictionsContext &&
+    allMonths.indexOf(predictionsContext.predictionMonth) > 0;
 
   const emit = (a: number, b: number) => {
     const lo = allMonths[clampIdx(Math.min(a, b))];
@@ -257,7 +247,9 @@ export function TimeSlider({
           )}
         </div>
 
-        {/* Per-month tick marks below the track — in-range months read brighter */}
+        {/* Month-boundary ticks below the track. Each tick marks the START
+            of a month's cell (plus one closing tick at the far right), so
+            they line up with the scrubber block's edges. */}
         <div className="pointer-events-none relative mt-1 h-2.5">
           {allMonths.map((m, i) => {
             const isJan = m.endsWith("-01");
@@ -277,10 +269,14 @@ export function TimeSlider({
                         ? "bg-muted-foreground/70"
                         : "bg-border"
                 )}
-                style={{ left: `${pct(i)}%` }}
+                style={{ left: `${cellStart(i)}%` }}
               />
             );
           })}
+          <div
+            className="absolute top-0 h-1.5 w-px -translate-x-1/2 bg-border"
+            style={{ left: "100%" }}
+          />
         </div>
 
         {/* Year labels along the bottom */}
@@ -289,7 +285,7 @@ export function TimeSlider({
             <span
               key={year}
               className="absolute -translate-x-1/2 font-mono text-[10px] tabular-nums text-muted-foreground"
-              style={{ left: `${pct(idx)}%` }}
+              style={{ left: `${cellStart(idx)}%` }}
             >
               {year}
             </span>
@@ -347,13 +343,13 @@ function WindowScrubber({
   const trainStartIdx = Math.max(0, predIdx - trainingWindow);
   const trainEndIdx = predIdx - 1;
 
-  // Band edges land EXACTLY on month tick positions — no half-cell
-  // offsets. Amber spans [trainStart … trainEnd] ticks; emerald spans
-  // [trainEnd … predIdx] ticks, ending precisely on the prediction month.
-  const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
-  const trainStartPct = pct(trainStartIdx);
-  const trainEndPct = pct(trainEndIdx);
-  const predEndPct = pct(predIdx);
+  // Cell model (matches the KG scrubber and the tick row): month i owns
+  // [i, i+1)/total of the track. Amber covers the training months' cells;
+  // emerald covers the prediction month's full cell.
+  const cellW = 100 / total;
+  const trainStartPct = trainStartIdx * cellW;
+  const trainEndPct = (trainEndIdx + 1) * cellW;
+  const predEndPct = (predIdx + 1) * cellW;
 
   const idxFromClientX = useCallback(
     (clientX: number): number => {
@@ -361,9 +357,9 @@ function WindowScrubber({
       if (!el) return predIdx;
       const rect = el.getBoundingClientRect();
       const ratio = (clientX - rect.left) / rect.width;
-      // Anywhere on the track → pred month at that ratio (not window centre;
-      // matches the "click to jump prediction month here" mental model).
-      return clampPred(Math.round(ratio * (total - 1)));
+      // Anywhere on the track → pred month whose cell was clicked (not
+      // window centre; matches "click to jump prediction month here").
+      return clampPred(Math.floor(ratio * total));
     },
     [clampPred, predIdx, total]
   );
@@ -386,7 +382,7 @@ function WindowScrubber({
     if (!el) return;
     const rect = el.getBoundingClientRect();
     const deltaMonths = Math.round(
-      ((e.clientX - state.startX) / rect.width) * (total - 1)
+      ((e.clientX - state.startX) / rect.width) * total
     );
     const nextIdx = clampPred(state.startIdx + deltaMonths);
     if (nextIdx !== predIdx) onChange(nextIdx);
@@ -497,28 +493,24 @@ function RangeScrubber({
     startTo: number;
   } | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  // While move-dragging, the block follows the pointer continuously (this
+  // holds its live left edge in %); the emitted month range still snaps.
+  // Null when idle → block sits exactly on its cells.
+  const [liveLeftPct, setLiveLeftPct] = useState<number | null>(null);
 
-  const clampIdx = (i: number) => Math.min(total - 1, Math.max(0, i));
-  const pct = (i: number) => (total > 1 ? (i / (total - 1)) * 100 : 0);
-  const span = toIdx - fromIdx;
+  // Cell model — month i owns [i, i+1) / total of the track, so a 1-month
+  // window renders one full cell wide instead of collapsing to a point.
+  const cellW = 100 / total;
+  const span = toIdx - fromIdx; // in cells minus one; block covers span+1 cells
+  const clampFrom = (i: number) =>
+    Math.min(total - 1 - span, Math.max(0, i));
 
-  const idxFromClientX = (clientX: number): number => {
+  const monthFromClientX = (clientX: number): number => {
     const el = trackRef.current;
     if (!el) return fromIdx;
     const rect = el.getBoundingClientRect();
     const ratio = (clientX - rect.left) / rect.width;
-    return clampIdx(Math.round(ratio * (total - 1)));
-  };
-
-  const slideTo = (centerIdx: number) => {
-    // Move the window so it centres on centerIdx, span preserved, clamped.
-    let nextFrom = clampIdx(centerIdx - Math.round(span / 2));
-    let nextTo = nextFrom + span;
-    if (nextTo > total - 1) {
-      nextTo = total - 1;
-      nextFrom = nextTo - span;
-    }
-    onChange(nextFrom, nextTo);
+    return Math.min(total - 1, Math.max(0, Math.floor(ratio * total)));
   };
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -532,12 +524,18 @@ function RangeScrubber({
       : target.closest("[data-handle='right']")
         ? "right"
         : "move";
-    // Click on empty track: jump the window there first, then drag moves it.
+    let from = fromIdx;
+    let to = toIdx;
+    // Click on empty track: centre the window on the clicked month first,
+    // then the same gesture keeps dragging it.
     if (mode === "move" && !target.closest("[data-scrub-block]")) {
-      slideTo(idxFromClientX(e.clientX));
+      from = clampFrom(monthFromClientX(e.clientX) - Math.round(span / 2));
+      to = from + span;
+      onChange(from, to);
     }
-    dragRef.current = { mode, startX: e.clientX, startFrom: fromIdx, startTo: toIdx };
+    dragRef.current = { mode, startX: e.clientX, startFrom: from, startTo: to };
     setIsDragging(true);
+    if (mode === "move") setLiveLeftPct(from * cellW);
   };
 
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -545,36 +543,41 @@ function RangeScrubber({
     const el = trackRef.current;
     if (!st || !el) return;
     const rect = el.getBoundingClientRect();
-    const deltaMonths = Math.round(
-      ((e.clientX - st.startX) / rect.width) * (total - 1)
-    );
+    const deltaPct = ((e.clientX - st.startX) / rect.width) * 100;
+
     if (st.mode === "left") {
-      const nextFrom = Math.min(st.startTo, clampIdx(st.startFrom + deltaMonths));
+      const nextFrom = Math.min(
+        st.startTo,
+        Math.max(0, Math.round(st.startFrom + deltaPct / cellW))
+      );
       if (nextFrom !== fromIdx) onChange(nextFrom, toIdx);
       return;
     }
     if (st.mode === "right") {
-      const nextTo = Math.max(st.startFrom, clampIdx(st.startTo + deltaMonths));
+      const nextTo = Math.max(
+        st.startFrom,
+        Math.min(total - 1, Math.round(st.startTo + deltaPct / cellW))
+      );
       if (nextTo !== toIdx) onChange(fromIdx, nextTo);
       return;
     }
+    // Move: block glides with the pointer; the selection snaps to whichever
+    // cells the block mostly covers.
     const startSpan = st.startTo - st.startFrom;
-    let nextFrom = st.startFrom + deltaMonths;
-    let nextTo = st.startTo + deltaMonths;
-    if (nextFrom < 0) {
-      nextFrom = 0;
-      nextTo = startSpan;
-    }
-    if (nextTo > total - 1) {
-      nextTo = total - 1;
-      nextFrom = nextTo - startSpan;
-    }
-    if (nextFrom !== fromIdx || nextTo !== toIdx) onChange(nextFrom, nextTo);
+    const maxLeft = (total - startSpan - 1) * cellW;
+    const rawLeft = Math.min(
+      maxLeft,
+      Math.max(0, st.startFrom * cellW + deltaPct)
+    );
+    setLiveLeftPct(rawLeft);
+    const nextFrom = clampFrom(Math.round(rawLeft / cellW));
+    if (nextFrom !== fromIdx) onChange(nextFrom, nextFrom + startSpan);
   };
 
   const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
     dragRef.current = null;
     setIsDragging(false);
+    setLiveLeftPct(null); // snap the block back onto its cells
     (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
   };
 
@@ -588,10 +591,8 @@ function RangeScrubber({
     onChange(nextFrom, nextTo);
   };
 
-  const leftPct = pct(fromIdx);
-  const rightPct = pct(toIdx);
-  // A collapsed (single-month) window still needs a grabbable block.
-  const widthPct = Math.max(1.5, rightPct - leftPct);
+  const leftPct = liveLeftPct ?? fromIdx * cellW;
+  const widthPct = (span + 1) * cellW;
 
   return (
     <div
@@ -620,7 +621,9 @@ function RangeScrubber({
         data-scrub-block
         className={cn(
           "absolute top-0 h-full rounded-full border border-foreground/40 bg-foreground/15",
-          isDragging ? "cursor-grabbing" : "cursor-grab"
+          isDragging
+            ? "cursor-grabbing"
+            : "cursor-grab transition-[left,width] duration-150 ease-out"
         )}
         style={{ left: `${leftPct}%`, width: `${widthPct}%` }}
       >
