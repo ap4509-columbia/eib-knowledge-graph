@@ -104,44 +104,63 @@ function AboutStrip() {
         What this is — and how the clusters are built
       </button>
       {!collapsed && (
-        <div className="mt-2 max-h-56 space-y-2 overflow-y-auto pb-1 pr-2">
+        <div className="mt-2 max-h-64 space-y-2 overflow-y-auto pb-1 pr-2">
           <p>
-            Every entity is scored on five news factors from the LLM-extracted
-            relationships:{" "}
-            <span className="text-foreground">Attention</span> (coverage
-            volume), <span className="text-foreground">Sentiment</span> (mean
-            tone), <span className="text-foreground">Consensus</span> (do
-            sources agree — 1 − sentiment spread),{" "}
-            <span className="text-foreground">Novelty</span> (share of
-            counterparties unique to it), and{" "}
-            <span className="text-foreground">Materiality</span> (how much
-            money the entity&rsquo;s stories involve — deal sizes, fines,
-            revenue figures quoted in the news; log-scaled so one mega-deal
-            doesn&rsquo;t drown everything else). Point size ≈ mention count;
-            hover a point for its full loading vector.
-          </p>
-          <p>
-            <span className="font-medium text-foreground">Clustering.</span>{" "}
-            Each factor is standardized to z-scores (so &ldquo;+0.9
-            consensus&rdquo; means 0.9 standard deviations above the corpus
-            average), then KMeans groups entities in the full 5-factor space:
-            it places k centroids, assigns each entity to the nearest one,
-            moves each centroid to its members&rsquo; average, and repeats
-            until stable. A cluster card&rsquo;s signature is its
-            centroid&rsquo;s three strongest factors — an{" "}
-            <em>archetype</em> of news posture (e.g. Attention+ · Consensus−
-            = heavily covered, contested story), not anything the model was
-            told about the companies.
+            <span className="font-medium text-foreground">
+              What this tab is for.
+            </span>{" "}
+            It answers &ldquo;who is in the news, how is the press treating
+            them, and which names are behaving alike?&rdquo; — without
+            reading hundreds of articles. Instead of headlines, every
+            company and topic gets a news profile, and similar profiles are
+            grouped so unusual behaviour stands out.
           </p>
           <p>
             <span className="font-medium text-foreground">
-              The scatter is only a map.
+              The five factors
             </span>{" "}
-            PCA projects the 5 factors onto the 2 directions of greatest
-            variance for display; clustering happened in the full space, so
-            two nearby points can belong to different clusters. Trust the
-            colors over the distances. Factors reflect the current rolling
-            news window, so clusters drift as coverage changes.
+            are five simple questions asked of each entity&rsquo;s recent
+            coverage: <span className="text-foreground">Attention</span> —
+            how much is it being written about?{" "}
+            <span className="text-foreground">Sentiment</span> — is the tone
+            positive or negative?{" "}
+            <span className="text-foreground">Consensus</span> — do sources
+            agree, or is the story contested?{" "}
+            <span className="text-foreground">Novelty</span>&nbsp;— is it
+            generating its own storylines, or only appearing in
+            others&rsquo;? <span className="text-foreground">Materiality</span>{" "}
+            — how much money do its stories involve (deal sizes, fines,
+            revenue figures)?
+          </p>
+          <p>
+            <span className="font-medium text-foreground">
+              The clusters
+            </span>{" "}
+            group entities that answer those five questions the same way —
+            think of them as news <em>personalities</em>&nbsp;found
+            automatically (by KMeans, a standard grouping algorithm), with no
+            labels or sector information given to it. Each card names the
+            personality&rsquo;s defining traits: &ldquo;Attention+ ·
+            Consensus−&rdquo; reads as <em>heavily covered, contested
+            story</em>&nbsp;— names to watch; &ldquo;Materiality+ ·
+            Sentiment+&rdquo; is <em>big money moving on good news</em>. The
+            practical use: scan the cards to see which regime each name is
+            in, and notice when a company sits in a different cluster than
+            its peers — that&rsquo;s the anomaly worth a closer look.
+          </p>
+          <p>
+            <span className="font-medium text-foreground">
+              The scatter is just the map.
+            </span>{" "}
+            Five scores can&rsquo;t be drawn on a screen, so a standard
+            technique (PCA) flattens them onto two axes while preserving as
+            much of the differences between entities as possible. Points
+            near each other have similar news profiles; colors are the
+            clusters. Because the map is a flattened view, trust the colors
+            over the distances. Profiles reflect the current rolling news
+            window, so the picture shifts as coverage changes — that&rsquo;s
+            by design for a live corpus. Point size ≈ mention count; hover
+            any point for its exact scores.
           </p>
         </div>
       )}
