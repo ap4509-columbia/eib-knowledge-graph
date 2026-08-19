@@ -4,6 +4,16 @@ import { useEffect, useRef, useState } from "react";
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 // @ts-expect-error — cytoscape-d3-force ships without bundled types
 import d3Force from "cytoscape-d3-force";
+import {
+  forceCollide,
+  forceLink,
+  forceManyBody,
+  forceSimulation,
+  forceX,
+  forceY,
+  type SimulationLinkDatum,
+  type SimulationNodeDatum,
+} from "d3-force";
 import { useTheme } from "next-themes";
 import type { Snapshot } from "@/lib/api/types";
 import { makeGraphStyles } from "./graphStyles";
@@ -136,119 +146,90 @@ export function GraphCanvas({
     assignLabelBudget(cy);
   };
 
-  // News corpora (STOXX especially) are a swarm of small disconnected
-  // clusters — one per story — whose per-month spring layouts all pile
-  // into the same coordinate space, reading as one clotted blob. Relax
-  // them with a deterministic Fruchterman–Reingold pass: every node
-  // repels every other, edges pull their endpoints together, and a light
-  // gravity keeps disconnected clusters from drifting apart. Connected
-  // stories settle into tight organic clumps that stand clear of each
-  // other. Single-component views (FNSPID's curated hairball) are left
-  // untouched, as are very large views (cost is O(N² · iterations)).
+  // Obsidian-style layout: a real d3-force simulation run to completion
+  // before render. Many-body charge makes every node repel its neighbors,
+  // link springs pull connected entities together (d3's default strength
+  // scales down on hubs so stars fan out instead of collapsing), a
+  // collision force guarantees nodes never overlap, and x/y gravity keeps
+  // disconnected clusters in frame. d3-force's internal jiggle is a seeded
+  // LCG, so the result is deterministic — same view, same layout. The sim
+  // runs in zoom-independent units (positions divided by the current size
+  // scale) so its tuning holds for every corpus. Skipped for very large
+  // views, where the O(N log N · ticks) cost would jank the UI; those keep
+  // the pairwise separation pass as their no-overlap fallback.
   const forceRelax = (cy: Core): boolean => {
     const visible = cy.elements(":visible");
     const nodeColl = visible.nodes();
     const n = nodeColl.length;
-    if (n < 2 || n > 500) return false;
-    if (visible.components().length < 2) return false;
+    if (n < 2 || n > 600) return false;
 
     const scale = styleScaleRef.current;
-    const pts = nodeColl.map((nd) => ({
+    interface SimNode extends SimulationNodeDatum {
+      id: string;
+      r: number;
+      nd: (typeof nodeColl)[0];
+    }
+    const cx0 =
+      nodeColl.reduce((s, nd) => s + nd.position("x"), 0) / n / scale;
+    const cy0 =
+      nodeColl.reduce((s, nd) => s + nd.position("y"), 0) / n / scale;
+    const simNodes: SimNode[] = nodeColl.map((nd) => ({
+      id: nd.id(),
       nd,
-      x: nd.position("x"),
-      y: nd.position("y"),
-      r: nd.width() / 2,
-      dx: 0,
-      dy: 0,
+      r: nd.width() / 2 / scale,
+      x: nd.position("x") / scale,
+      y: nd.position("y") / scale,
     }));
-    const idxOf = new Map(pts.map((p, i) => [p.nd.id(), i]));
-    const springs: Array<[number, number]> = [];
+    const ids = new Set(simNodes.map((s) => s.id));
+    const simLinks: SimulationLinkDatum<SimNode>[] = [];
+    const seenPairs = new Set<string>();
     visible.edges().forEach((e) => {
-      const a = idxOf.get(e.data("source"));
-      const b = idxOf.get(e.data("target"));
-      if (a !== undefined && b !== undefined && a !== b) springs.push([a, b]);
+      const a = e.data("source");
+      const b = e.data("target");
+      if (a === b || !ids.has(a) || !ids.has(b)) return;
+      // Parallel edges would multiply spring strength; keep one per pair.
+      const key = a < b ? `${a}|${b}` : `${b}|${a}`;
+      if (seenPairs.has(key)) return;
+      seenPairs.add(key);
+      simLinks.push({ source: a, target: b });
     });
 
-    // Ideal pairwise distance. Kept modest — with a large kIdeal the cloud
-    // area outgrows what the zoom-compensation clamp can recover and nodes
-    // shrink to dots.
-    const kIdeal = 50 * scale;
-    // Repulsion is LOCAL (cutoff): it resolves crowding without inflating
-    // the whole layout; global shape comes from the springs plus gravity.
-    const repCutoff = 3 * kIdeal;
-    // Start from the centroid so gravity doesn't yank the cloud sideways.
-    const cx0 = pts.reduce((s, p) => s + p.x, 0) / n;
-    const cy0 = pts.reduce((s, p) => s + p.y, 0) / n;
+    const sim = forceSimulation(simNodes)
+      .force(
+        "charge",
+        forceManyBody().strength(-160).distanceMax(500)
+      )
+      .force(
+        "link",
+        forceLink<SimNode, SimulationLinkDatum<SimNode>>(simLinks)
+          .id((d) => d.id)
+          .distance((l) => {
+            const s = l.source as SimNode;
+            const t = l.target as SimNode;
+            return s.r + t.r + 30;
+          })
+      )
+      .force(
+        "collide",
+        forceCollide<SimNode>()
+          .radius((d) => d.r + 4)
+          .strength(1)
+          .iterations(3)
+      )
+      .force("x", forceX(cx0).strength(0.06))
+      .force("y", forceY(cy0).strength(0.06))
+      .stop();
 
-    const ITER = 150;
-    let temp = kIdeal * 2.5; // max displacement per tick, cools linearly
-    const cool = temp / (ITER + 1);
-    const gravity = 0.08;
-
-    for (let iter = 0; iter < ITER; iter++) {
-      for (const p of pts) {
-        p.dx = 0;
-        p.dy = 0;
-      }
-      // Repulsion — nearby pairs only
-      for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
-          const a = pts[i];
-          const b = pts[j];
-          let vx = a.x - b.x;
-          let vy = a.y - b.y;
-          let d = Math.hypot(vx, vy);
-          if (d > repCutoff) continue;
-          if (d < 1e-4) {
-            // Coincident: deterministic direction so renders stay stable.
-            const ang = ((i * 37 + j * 101) % 360) * (Math.PI / 180);
-            vx = Math.cos(ang);
-            vy = Math.sin(ang);
-            d = 1;
-          }
-          const rep = (kIdeal * kIdeal) / d;
-          const ux = (vx / d) * rep;
-          const uy = (vy / d) * rep;
-          a.dx += ux;
-          a.dy += uy;
-          b.dx -= ux;
-          b.dy -= uy;
-        }
-      }
-      // Attraction — springs along edges
-      for (const [i, j] of springs) {
-        const a = pts[i];
-        const b = pts[j];
-        const vx = a.x - b.x;
-        const vy = a.y - b.y;
-        const d = Math.max(1e-4, Math.hypot(vx, vy));
-        const attr = (d * d) / kIdeal;
-        const ux = (vx / d) * attr;
-        const uy = (vy / d) * attr;
-        a.dx -= ux;
-        a.dy -= uy;
-        b.dx += ux;
-        b.dy += uy;
-      }
-      // Gravity toward the centroid keeps disconnected clusters in frame
-      for (const p of pts) {
-        p.dx += (cx0 - p.x) * gravity;
-        p.dy += (cy0 - p.y) * gravity;
-      }
-      // Apply, capped by the cooling temperature
-      for (const p of pts) {
-        const len = Math.hypot(p.dx, p.dy);
-        if (len > 1e-6) {
-          const step = Math.min(len, temp);
-          p.x += (p.dx / len) * step;
-          p.y += (p.dy / len) * step;
-        }
-      }
-      temp -= cool;
-    }
+    // Run the full cooling schedule synchronously (alpha 1 → alphaMin).
+    const ticks = Math.ceil(
+      Math.log(sim.alphaMin()) / Math.log(1 - sim.alphaDecay())
+    );
+    sim.tick(ticks);
 
     cy.batch(() => {
-      for (const p of pts) p.nd.position({ x: p.x, y: p.y });
+      for (const p of simNodes) {
+        p.nd.position({ x: (p.x ?? 0) * scale, y: (p.y ?? 0) * scale });
+      }
     });
     return true;
   };
