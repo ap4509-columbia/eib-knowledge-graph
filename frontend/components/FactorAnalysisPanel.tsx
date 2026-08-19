@@ -7,7 +7,7 @@
 //   • Cluster archetype cards on the right
 //   • A footer with the raw variance-explained + kept-factor list
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Loader2 } from "lucide-react";
 
 import { fetchFactorsLatest } from "@/lib/api/client";
@@ -155,6 +155,63 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   const b = useMemo(() => computeBounds(entities), [entities]);
   const [hoveredName, setHoveredName] = useState<string | null>(null);
 
+  // Zoom + pan: the viewBox is the camera. Wheel zooms about the cursor
+  // (everything — dots AND labels — renders larger, which is what makes
+  // overlapping labels readable); dragging pans. Reset restores the full
+  // frame. Attached via a native non-passive listener because React's
+  // onWheel can't preventDefault page scroll.
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [view, setView] = useState({ x: 0, y: 0, w: W, h: H });
+  const isZoomed = view.w < W - 0.5;
+  const panRef = useRef<{ startX: number; startY: number; vx: number; vy: number } | null>(null);
+
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const rect = svg.getBoundingClientRect();
+      setView((v) => {
+        const factor = e.deltaY > 0 ? 1.18 : 1 / 1.18;
+        const newW = Math.min(W, Math.max(W / 10, v.w * factor));
+        if (newW === v.w) return v;
+        const scale = newW / v.w;
+        const mx = v.x + ((e.clientX - rect.left) / rect.width) * v.w;
+        const my = v.y + ((e.clientY - rect.top) / rect.height) * v.h;
+        const newH = v.h * scale;
+        return {
+          x: mx - (mx - v.x) * scale,
+          y: my - (my - v.y) * scale,
+          w: newW,
+          h: newH,
+        };
+      });
+    };
+    svg.addEventListener("wheel", onWheel, { passive: false });
+    return () => svg.removeEventListener("wheel", onWheel);
+  }, []);
+
+  const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (!isZoomed) return;
+    (e.target as Element).setPointerCapture?.(e.pointerId);
+    panRef.current = { startX: e.clientX, startY: e.clientY, vx: view.x, vy: view.y };
+  };
+  const onPointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
+    const st = panRef.current;
+    const svg = svgRef.current;
+    if (!st || !svg) return;
+    const rect = svg.getBoundingClientRect();
+    setView((v) => ({
+      ...v,
+      x: st.vx - ((e.clientX - st.startX) / rect.width) * v.w,
+      y: st.vy - ((e.clientY - st.startY) / rect.height) * v.h,
+    }));
+  };
+  const onPointerUp = (e: React.PointerEvent<SVGSVGElement>) => {
+    panRef.current = null;
+    (e.target as Element).releasePointerCapture?.(e.pointerId);
+  };
+
   const px = (x: number) => M.left + ((x - b.xMin) / (b.xMax - b.xMin)) * (W - M.left - M.right);
   const py = (y: number) => H - M.bottom - ((y - b.yMin) / (b.yMax - b.yMin)) * (H - M.top - M.bottom);
   const originX = px(0);
@@ -217,7 +274,33 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   }, [entities, b]);
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-full">
+    <div className="relative">
+      <div className="pointer-events-none absolute right-2 top-1 z-10 flex items-center gap-2">
+        <span className="font-mono text-[9px] text-muted-foreground/70">
+          scroll to zoom{isZoomed ? " · drag to pan" : ""}
+        </span>
+        {isZoomed && (
+          <button
+            type="button"
+            onClick={() => setView({ x: 0, y: 0, w: W, h: H })}
+            className="pointer-events-auto rounded-md border border-border bg-background/90 px-1.5 py-0.5 font-mono text-[9px] text-muted-foreground transition hover:text-foreground"
+          >
+            Reset view
+          </button>
+        )}
+      </div>
+    <svg
+      ref={svgRef}
+      viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
+      className="w-full max-w-full"
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      style={{
+        touchAction: "none",
+        cursor: isZoomed ? (panRef.current ? "grabbing" : "grab") : "default",
+      }}
+    >
       <rect
         x={M.left}
         y={M.top}
@@ -311,6 +394,7 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
         );
       })()}
     </svg>
+    </div>
   );
 }
 

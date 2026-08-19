@@ -239,6 +239,23 @@ def update_corpus_enriched(
         merged_arts_dicts = existing_arts + new_arts_dicts
         _write_json(existing_arts_path, merged_arts_dicts)
 
+        # Raw triplet persistence: triplets/<month>.json maps article URL →
+        # its extracted triplet list, appended before aggregation. The month
+        # snapshot merges identical triples into weighted edges (lossy:
+        # per-article attribution and per-occurrence sentiment are averaged
+        # away), so this file is the exact record — for provenance, factor
+        # recomputation, and future retraining.
+        trip_path = corpus_root / "triplets" / f"{month}.json"
+        existing_trips = _load_json(trip_path, {})
+        trips_added = False
+        for art in month_articles:
+            trips = triplets_by_url.get(art.url)
+            if trips and art.url not in existing_trips:
+                existing_trips[art.url] = trips
+                trips_added = True
+        if trips_added:
+            _write_json(trip_path, existing_trips)
+
         # Rebuild the month snapshot from the merged articles.
         # For merged old articles we don't have their triplets in-memory, so
         # they contribute only as article records — the KG structure for the
