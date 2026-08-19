@@ -33,7 +33,6 @@ from scraper.sources import google_news, rss_feeds  # noqa: E402
 from scraper.sources.base import Article  # noqa: E402
 from scraper.ledger import Ledger  # noqa: E402
 from scraper.extraction_enriched import extract_enriched  # noqa: E402
-from scraper.factors import compute_entity_factors, run_pca_kmeans  # noqa: E402
 from scraper.snapshots_factors import update_corpus_enriched  # noqa: E402
 
 
@@ -138,6 +137,11 @@ def main():
         action="store_true",
         help="Run everything except the final Gemini extraction and disk writes. Useful for testing.",
     )
+    parser.add_argument(
+        "--factors-only",
+        action="store_true",
+        help="Skip fetch + extraction; recompute the factor bundle and index from snapshots already on disk (no API calls).",
+    )
     args = parser.parse_args()
 
     watchlist = _load_watchlist(args.watchlist)
@@ -149,6 +153,20 @@ def main():
     print(f"Corpus: {corpus}")
     print(f"Tickers (this run): {len(tickers)}  slice={args.slice or 'full'}")
     print(f"Articles per ticker: {args.articles_per_ticker}\n")
+
+    # --factors-only: skip fetch/extraction entirely and recompute the
+    # factor bundle (and index) from the snapshots already on disk. No
+    # Gemini calls; useful for rebuilds and after data cleanups.
+    if args.factors_only:
+        corpus_root = PUBLIC_DATA / corpus
+        summary = update_corpus_enriched(
+            corpus_root=corpus_root,
+            corpus_name=corpus,
+            articles=[],
+            triplets_by_url={},
+        )
+        print(f"\nSummary: {summary}")
+        return
 
     # Fetch
     articles = _fetch_for_watchlist(watchlist, args.articles_per_ticker, tickers)
@@ -191,22 +209,15 @@ def main():
         ledger.add(a.url)
     ledger.save()
 
-    # Factor rollup + PCA + KMeans
-    print("Computing factors…")
-    factors = compute_entity_factors(triplets_by_url)
-    factors_bundle = run_pca_kmeans(factors, min_articles=2)
-    print(f"Factor bundle: {len(factors_bundle['entities'])} entities, "
-          f"{len(factors_bundle['kept_factors'])} factors kept, "
-          f"k={factors_bundle['kmeans']['k']}")
-
-    # Write snapshots + factors under sources/<corpus>/
+    # Write snapshots + factors under sources/<corpus>/. The factor bundle
+    # is computed inside from the last months of stored snapshots (rolling
+    # corpus), not from today's delta — see snapshots_factors.
     corpus_root = PUBLIC_DATA / corpus
     summary = update_corpus_enriched(
         corpus_root=corpus_root,
         corpus_name=corpus,
         articles=fresh,
         triplets_by_url=triplets_by_url,
-        factors_bundle=factors_bundle,
     )
     print(f"\nSummary: {summary}")
 

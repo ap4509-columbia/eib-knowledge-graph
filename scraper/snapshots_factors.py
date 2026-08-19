@@ -211,10 +211,15 @@ def update_corpus_enriched(
     corpus_name: str,
     articles: list[Article],
     triplets_by_url: dict[str, list[dict]],
-    factors_bundle: dict,
+    factors_window_months: int = 2,
 ) -> dict:
     """Merge fresh extractions into per-month snapshot + article files and
-    write today's factors bundle. Returns a summary dict."""
+    write today's factors bundle. The bundle is rolled up from the last
+    `factors_window_months` stored month snapshots, NOT just today's fresh
+    triplets — a day's post-ledger delta is a handful of articles and
+    produced empty bundles for weeks. Returns a summary dict. Passing
+    empty `articles`/`triplets_by_url` recomputes index + factors from
+    what's already on disk (used by --factors-only)."""
     corpus_root.mkdir(parents=True, exist_ok=True)
 
     # Group articles by month
@@ -278,9 +283,21 @@ def update_corpus_enriched(
     }
     _write_json(corpus_root / "index.json", index)
 
-    # Today's factor bundle
+    # Today's factor bundle — rolled up from the freshest month snapshots
+    # (see factors.compute_entity_factors_from_snapshots).
+    from scraper.factors import (
+        compute_entity_factors_from_snapshots,
+        run_pca_kmeans,
+    )
+
+    snap_files = sorted(snap_dir.glob("*.json"))
+    window_files = snap_files[-factors_window_months:]
+    window_snaps = [_load_json(p, {}) for p in window_files]
+    factors = compute_entity_factors_from_snapshots(window_snaps)
+    factors_bundle = run_pca_kmeans(factors, min_articles=2)
+    factors_bundle["window_months"] = [p.stem for p in window_files]
+
     today = date.today().isoformat()
-    factors_bundle = dict(factors_bundle)
     factors_bundle["generated_at"] = datetime.now(timezone.utc).isoformat()
     factors_bundle["corpus"] = corpus_name
     factors_bundle["date"] = today

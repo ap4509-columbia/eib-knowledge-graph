@@ -126,6 +126,101 @@ def compute_entity_factors(triplets_by_url: dict[str, list[dict]]) -> dict[str, 
     return out
 
 
+def compute_entity_factors_from_snapshots(snapshots: list[dict]) -> dict[str, dict]:
+    """Roll up per-entity factor scores from stored month snapshots.
+
+    The daily runner originally computed factors from that day's freshly
+    extracted triplets only — after the URL ledger warmed up, a day's delta
+    was a handful of articles and every bundle came out empty. Month
+    snapshots accumulate the whole corpus on disk, so rolling up from the
+    latest snapshots gives the factor model a real sample every day.
+
+    Snapshot edges are aggregated (one edge per unique sub|rel|obj with a
+    `weight` = number of supporting extractions), so article-level
+    granularity is approximated:
+      ATTENTION   — total weight of edges where the entity is the subject
+      SENTIMENT   — weight-weighted mean of edge sentiments
+      CONSENSUS   — 1 − stdev of per-edge sentiment (≥2 edges, else 1.0)
+      NOVELTY     — fraction of the entity's partners unique to it
+      MATERIALITY — log1p of summed edge materiality_usd
+    Output shape matches compute_entity_factors, so run_pca_kmeans consumes
+    it unchanged (`n_articles` carries the attention weight for the
+    min_articles threshold).
+    """
+    subj_weight: dict[str, float] = defaultdict(float)
+    subj_sentiments: dict[str, list[tuple[float, float]]] = defaultdict(list)  # (sent, weight)
+    subj_materialities: dict[str, list[float]] = defaultdict(list)
+    subj_event_types: dict[str, list[str]] = defaultdict(list)
+    subj_partners: dict[str, set[str]] = defaultdict(set)
+    type_map: dict[str, str] = {}
+
+    for snap in snapshots:
+        for n in snap.get("nodes", []):
+            type_map.setdefault(n.get("id", ""), n.get("type", "UNK"))
+        for e in snap.get("edges", []):
+            subj = e.get("source")
+            obj = e.get("target")
+            if not subj:
+                continue
+            w = float(e.get("weight") or 1)
+            subj_weight[subj] += w
+            if obj:
+                subj_partners[subj].add(obj)
+
+            s = e.get("sentiment")
+            if isinstance(s, (int, float)):
+                subj_sentiments[subj].append((float(s), w))
+
+            m = e.get("materiality_usd")
+            if isinstance(m, (int, float)) and m > 0:
+                subj_materialities[subj].append(float(m))
+
+            ev = e.get("event_type")
+            if isinstance(ev, str):
+                subj_event_types[subj].extend([ev] * int(w))
+
+    partner_subject_count: dict[str, int] = defaultdict(int)
+    for subj, partners in subj_partners.items():
+        for p in partners:
+            partner_subject_count[p] += 1
+
+    out: dict[str, dict] = {}
+    for e in sorted(subj_weight.keys()):
+        sents = subj_sentiments[e]
+        if sents:
+            total_w = sum(w for _, w in sents)
+            sentiment = float(sum(s * w for s, w in sents) / total_w)
+        else:
+            sentiment = 0.0
+
+        if len(sents) < 2:
+            consensus = 1.0
+        else:
+            consensus = float(max(0.0, 1.0 - np.std([s for s, _ in sents])))
+
+        partners = subj_partners[e]
+        if not partners:
+            novelty = 0.0
+        else:
+            unique_partners = sum(1 for p in partners if partner_subject_count[p] == 1)
+            novelty = unique_partners / len(partners)
+
+        mag_sum = sum(subj_materialities[e]) if subj_materialities[e] else 0.0
+        attention = subj_weight[e]
+        out[e] = {
+            "type": type_map.get(e, "UNK"),
+            "n_articles": int(round(attention)),
+            "attention": float(attention),
+            "sentiment": sentiment,
+            "consensus": consensus,
+            "novelty": novelty,
+            "materiality": float(np.log1p(mag_sum)),
+            "event_mix": Counter(subj_event_types[e]).most_common(5),
+            "top_partners": sorted(partners)[:10],
+        }
+    return out
+
+
 def run_pca_kmeans(
     factors: dict[str, dict],
     min_articles: int = 2,
