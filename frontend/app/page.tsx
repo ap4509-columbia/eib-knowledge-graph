@@ -580,25 +580,28 @@ export default function Home() {
         </div>
 
         {/* Body: filter rail | active tab content.
-            Filter rail shows on both tabs — its entity-type toggles drive
-            the graph AND the predictions leaderboard. The other rail
-            controls (edge causal type, min connections) are graph-only,
-            no-op on predictions. */}
+            Filter rail shows on the graph + predictions tabs — its
+            entity-type toggles drive the graph AND the predictions
+            leaderboard. It's hidden on Factor analysis: that tab renders
+            the whole precomputed bundle and none of the rail's controls
+            apply to it. */}
         <div className="flex flex-1 overflow-hidden">
-          <FilterRail
-            snapshot={snapshot}
-            visibleTypes={visibleTypes}
-            visibleCategories={visibleCategories}
-            minDegreePct={minDegreePct}
-            minDegree={minDegree}
-            maxDegree={maxDegree}
-            onToggleType={handleToggleType}
-            onToggleCategory={handleToggleCategory}
-            onMinDegreePctChange={handleMinDegreePctChange}
-            sectors={sectorCounts}
-            visibleSectors={visibleSectors}
-            onToggleSector={handleToggleSector}
-          />
+          {activeTab !== "factors" && (
+            <FilterRail
+              snapshot={snapshot}
+              visibleTypes={visibleTypes}
+              visibleCategories={visibleCategories}
+              minDegreePct={minDegreePct}
+              minDegree={minDegree}
+              maxDegree={maxDegree}
+              onToggleType={handleToggleType}
+              onToggleCategory={handleToggleCategory}
+              onMinDegreePctChange={handleMinDegreePctChange}
+              sectors={sectorCounts}
+              visibleSectors={visibleSectors}
+              onToggleSector={handleToggleSector}
+            />
+          )}
 
           <main className="relative flex-1 overflow-hidden">
             {error && (
@@ -665,26 +668,31 @@ export default function Home() {
           </main>
         </div>
 
-        {/* Time slider — shared control across tabs. On the Predictions tab
-            we overlay a training-vs-prediction band so it's clear which
-            months fed the GAT vs which month is being visualized. The
-            trainingWindow value mirrors the WINDOW_SIZE in the rolling-
-            window GAT trainer (backend/eib-eval components/gat.py). */}
-        <TimeSlider
-          months={actualMonths}
-          futureMonths={futureMonths}
-          monthFrom={monthFrom}
-          monthTo={monthTo}
-          onChange={(from, to) => {
-            setMonthFrom(from);
-            setMonthTo(to);
-          }}
-          predictionsContext={
-            activeTab === "predictions" && monthTo
-              ? { predictionMonth: monthTo, trainingWindow: 3 }
-              : undefined
-          }
-        />
+        {/* Time slider — shared by the graph + predictions tabs. On the
+            Predictions tab we overlay a training-vs-prediction band so
+            it's clear which months fed the GAT vs which month is being
+            visualized (trainingWindow mirrors the WINDOW_SIZE in the
+            rolling-window GAT trainer, backend/eib-eval components/
+            gat.py). Hidden on Factor analysis: the factor bundle is
+            always the latest rolling window, so the timeline would be a
+            dead control there. */}
+        {activeTab !== "factors" && (
+          <TimeSlider
+            months={actualMonths}
+            futureMonths={futureMonths}
+            monthFrom={monthFrom}
+            monthTo={monthTo}
+            onChange={(from, to) => {
+              setMonthFrom(from);
+              setMonthTo(to);
+            }}
+            predictionsContext={
+              activeTab === "predictions" && monthTo
+                ? { predictionMonth: monthTo, trainingWindow: 3 }
+                : undefined
+            }
+          />
+        )}
 
         <footer className="shrink-0 border-t border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
           IEOR 4737 · Sponsor: European Investment Bank · Summer 2026
