@@ -33,6 +33,11 @@ from scraper.sources import google_news, rss_feeds  # noqa: E402
 from scraper.sources.base import Article  # noqa: E402
 from scraper.ledger import Ledger  # noqa: E402
 from scraper.extraction_enriched import extract_enriched  # noqa: E402
+from scraper.refinement import (  # noqa: E402
+    canonicalize_entities,
+    known_entity_names,
+    refine_triplets,
+)
 from scraper.snapshots_factors import update_corpus_enriched  # noqa: E402
 
 
@@ -203,6 +208,19 @@ def main():
     triplets_by_url = extract_enriched(fresh)
     total_triplets = sum(len(v) for v in triplets_by_url.values())
     print(f"\nExtracted {total_triplets} triplets across {len(fresh)} articles.\n")
+
+    # Second + third LLM passes (mirrors the team pipeline's judge +
+    # flagged-triplet refiner): per-article judge-and-refine, then one
+    # cross-article entity canonicalization call. Both fail open.
+    print("Refining triplets (judge + refine pass)…")
+    triplets_by_url = refine_triplets(fresh, triplets_by_url)
+    print("Canonicalizing entities across articles…")
+    triplets_by_url = canonicalize_entities(
+        triplets_by_url, known_entity_names(PUBLIC_DATA / corpus)
+    )
+    refined_total = sum(len(v) for v in triplets_by_url.values())
+    print(f"After refinement: {refined_total} triplets "
+          f"({total_triplets - refined_total:+d} vs first pass).\n")
 
     # Mark ledger
     for a in fresh:

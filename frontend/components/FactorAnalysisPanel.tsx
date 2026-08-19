@@ -224,6 +224,12 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   // point stays named). Long names are truncated — hover shows the full
   // name via the bold overlay + native tooltip.
   const LABEL_MAX_CHARS = 18;
+  // Zoom scale: labels are drawn at a constant *screen* size (their SVG
+  // footprint shrinks by `zs` as the camera zooms in), so zooming spreads
+  // the dots apart while the text stays the same size on screen — the
+  // collision solver reruns at each zoom level and overlapping names
+  // resolve. At full frame zs = 1 and nothing changes.
+  const zs = view.w / W;
   const pointLabels = useMemo(() => {
     const pxl = (x: number) =>
       M.left + ((x - b.xMin) / (b.xMax - b.xMin)) * (W - M.left - M.right);
@@ -237,18 +243,21 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
     for (const e of ents) {
       const cx = pxl(e.pc1);
       const cy = pyl(e.pc2);
-      const r = 4 + Math.min(4, e.n_articles - 2);
+      // Dot radius damped by sqrt(zs): dots grow on zoom but slower than
+      // the spacing, so deep zoom separates points instead of inflating
+      // them into planets.
+      const r = (4 + Math.min(4, e.n_articles - 2)) * Math.sqrt(zs);
       const text =
         e.name.length > LABEL_MAX_CHARS
           ? `${e.name.slice(0, LABEL_MAX_CHARS - 1)}…`
           : e.name;
-      const w = text.length * 5.1;
-      const h = 10;
+      const w = text.length * 5.1 * zs;
+      const h = 10 * zs;
       const candidates = [
-        { x: cx + r + 4, y: cy + 3, anchor: "start" },
-        { x: cx - r - 4, y: cy + 3, anchor: "end" },
-        { x: cx, y: cy - r - 5, anchor: "middle" },
-        { x: cx, y: cy + r + 11, anchor: "middle" },
+        { x: cx + r + 4 * zs, y: cy + 3 * zs, anchor: "start" },
+        { x: cx - r - 4 * zs, y: cy + 3 * zs, anchor: "end" },
+        { x: cx, y: cy - r - 5 * zs, anchor: "middle" },
+        { x: cx, y: cy + r + 11 * zs, anchor: "middle" },
       ];
       let chosen = candidates[0];
       for (const c of candidates) {
@@ -271,7 +280,8 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
       out.push({ name: e.name, text, ...chosen });
     }
     return out;
-  }, [entities, b]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entities, b, zs]);
 
   return (
     <div className="relative">
@@ -335,7 +345,7 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
             <circle
               cx={cx}
               cy={cy}
-              r={4 + Math.min(4, e.n_articles - 2)}
+              r={(4 + Math.min(4, e.n_articles - 2)) * Math.sqrt(zs)}
               fill={clusterColor(e.cluster)}
               fillOpacity={isHovered ? 1 : 0.85}
               stroke={isHovered ? "currentColor" : "none"}
@@ -360,13 +370,14 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
             x={l.x}
             y={l.y}
             textAnchor={l.anchor as "start" | "end" | "middle"}
-            className="fill-current text-[8.5px]"
+            className="fill-current"
             opacity={0.75}
             pointerEvents="none"
             style={{
+              fontSize: 8.5 * zs,
               paintOrder: "stroke",
               stroke: "var(--background, #fff)",
-              strokeWidth: 2.5,
+              strokeWidth: 2.5 * zs,
             }}
           >
             {l.text}
@@ -379,15 +390,20 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
         if (!h) return null;
         const cx = px(h.pc1), cy = py(h.pc2);
         const anchor = cx > (W - M.right - 100) ? "end" : "start";
-        const dx = anchor === "end" ? -8 : 8;
+        const dx = anchor === "end" ? -8 * zs : 8 * zs;
         return (
           <text
             x={cx + dx}
-            y={cy - 8}
+            y={cy - 8 * zs}
             textAnchor={anchor}
-            className="fill-current text-[11px] font-semibold"
+            className="fill-current font-semibold"
             pointerEvents="none"
-            style={{ paintOrder: "stroke", stroke: "var(--background, #fff)", strokeWidth: 3 }}
+            style={{
+              fontSize: 11 * zs,
+              paintOrder: "stroke",
+              stroke: "var(--background, #fff)",
+              strokeWidth: 3 * zs,
+            }}
           >
             {h.name}
           </text>
