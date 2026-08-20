@@ -25,7 +25,9 @@
   \large A Cross-Semester Project Report for the European Investment Bank}
 \author{IEOR 4737 --- AI Applications in Finance \\
   Columbia University --- EIB 1 \\
-  Fall 2025 \textbullet\ Spring 2026 \textbullet\ Summer 2026}
+  EIB Advisors: Giuseppe Bonavolont\'a \textbullet\ Oleg Reichmann \\
+  Columbia Faculty Advisors: Dr.\ Ali Hirsa \textbullet\ Miao Wang \\[0.4em]
+  Spring 2025 \textbullet\ Summer 2025 \textbullet\ Fall 2025 \textbullet\ Spring 2026 \textbullet\ Summer 2026}
 \date{\today}
 
 \begin{document}
@@ -33,7 +35,7 @@
 
 \begin{abstract}
 \noindent
-This report documents the full lineage of the EIB Knowledge Graph project across three consecutive Columbia University teams (Fall 2025, Spring 2026, Summer 2026). It covers the data, the extraction and evaluation pipeline, the graph neural network used for link prediction, the recent multi-model LLM benchmark, and the interactive web application built this summer.
+This report documents the full lineage of the EIB Knowledge Graph project across five consecutive Columbia University teams (Spring 2025 through Summer 2026), building on a 2024 precursor. It covers the data, the extraction and evaluation pipeline, the graph neural network used for link prediction, the recent multi-model LLM benchmark, and the interactive web application built this summer.
 \end{abstract}
 
 \tableofcontents
@@ -45,18 +47,20 @@ This report documents the full lineage of the EIB Knowledge Graph project across
 \begin{itemize}
   \item \textbf{Business question.} How to turn the daily firehose of financial news into a structured, searchable view of what companies, sectors, and instruments are affecting each other over time.
   \item \textbf{Approach.} Large language models (LLMs) read each news article and extract \emph{triplets} --- short factual statements of the form ``\textit{Nvidia --- competes with --- AMD}''. Triplets accumulate into a knowledge graph. A graph neural network trained on the graph then predicts which entity relationships are likely to appear next.
-  \item \textbf{Three semesters of work.}
+  \item \textbf{Five semesters of work} (building on a 2024 Llama-based precursor by Yang, Lin \& Couzinet):
     \begin{itemize}
-      \item Fall 2025 built the first end-to-end pipeline on the FNSPID financial news dataset.
-      \item Spring 2026 hardened the pipeline: fixed a data-leakage bug in the evaluation, showed full article text beats article summary for extraction, added causal-feature augmentation that stabilised the model through Covid-19.
-      \item Summer 2026 (current) added: multi-LLM benchmark (Claude, GPT, Qwen, Gemini) with automated quality scoring; a public, deployed web application; a FinDKG-style predictions leaderboard driven by real GAT weights.
+      \item Spring 2025 extracted the first triplets from Yahoo Finance headlines (Llama3-8B), built entity/relation canonicalisation, interactive temporal visualisation, and the first GNN comparison (GAT vs.\ GraphSAGE).
+      \item Summer 2025 upgraded the prompt to the 6-tuple format with 14 entity types, invented the handcrafted + Judge-LLM quality metrics, and closed the loop with a third-LLM triplet regeneration pipeline. Expanded the dataset from headlines to full articles (9\(\times\) longer inputs).
+      \item Fall 2025 moved to the FNSPID semiconductor corpus and a locally hosted Qwen 2.5 32B, unified the pipeline end to end, and reached MRR 0.8018 with strict semantic filtering --- showing cleaner graphs beat larger ones.
+      \item Spring 2026 hardened the evaluation: fixed a data-leakage bug, showed full article text beats summaries, added causal-feature augmentation that stabilised the model through Covid-19.
+      \item Summer 2026 (current) added: multi-LLM benchmark (Claude, GPT, Qwen, Gemini) with automated quality scoring; a public, deployed web application with predictions, live corpus, and factor model; and the VM-to-UI publishing pipeline.
     \end{itemize}
   \item \textbf{Current state.}
     \begin{itemize}
-      \item Live web application at \url{https://eib-knowledge-graph.vercel.app}.
-      \item 24 months of knowledge graph snapshots (2019-01 through 2020-12), \(\approx\) 12{,}000 triplets, \(\approx\) 8{,}000 entities.
-      \item GAT predictions layer with MRR 0.77 on rolling-window link prediction.
+      \item Live web application at \url{https://eib-knowledge-graph.vercel.app} with three data sources: the curated FNSPID 2019--2020 corpus (with GAT predictions), the full 2019--2021 Qwen VM extraction (5{,}358 articles / 30{,}861 triplets), and the daily-updating STOXX Europe 600 live corpus (with the news factor model).
+      \item GAT predictions layer with MRR 0.77 on rolling-window link prediction; project-best MRR 0.8018 (Fall 2025, strict graph).
       \item Multi-model LLM benchmark completed for four models on identical inputs, scored on four quality dimensions by an independent Judge LLM.
+      \item Full-corpus extraction (54{,}563 articles, 2009--2024) in progress on the team's GPU VM, publishing to the UI chunk by chunk as it completes.
     \end{itemize}
 \end{itemize}
 
@@ -64,7 +68,77 @@ This report documents the full lineage of the EIB Knowledge Graph project across
 \section{Project timeline}
 \label{sec:timeline}
 
-\subsection{Fall 2025 --- Baseline pipeline}
+\subsection{Spring 2025 --- First triplets, canonicalisation, first GNNs}
+\emph{Kaidi Chen; Haining Han; Minhao Pang.}
+
+\begin{itemize}
+  \item Collected financial news headlines from the Yahoo Finance RSS feed; extracted subject--predicate--object triplets with Llama3-8B using a 5-tuple prompt --- \texttt{(entity1, type1, relation, entity2, type2)} --- with 11 entity types, five few-shot examples, directional verbs required, dates/numbers excluded.
+  \item Entity-level cleaning: regex filters for temporal patterns (years, quarters, dates), low-frequency entity pruning (\(<\)5 occurrences), rule-based validity checks (bare numbers, symbols, fiscal abbreviations).
+  \item Entity \& relation canonicalisation: TF-IDF vectorisation (character + word n-grams, 1--4) \(\to\) cosine similarity \(\to\) MiniLM-L6-v2 semantic embeddings with sentiment-aligned merging for relations \(\to\) union-find clustering with canonical label assignment. The direct ancestor of every later dedupe stage.
+  \item Dynamic visualisation: NetworkX + Pyvis interactive graphs, sliceable weekly / monthly / yearly (Figure~\ref{fig:spring2025kg}).
+  \item First GNN comparison --- GAT vs.\ GraphSAGE, static vs.\ rolling windows (Table~\ref{tab:spring2025gnn}): GraphSAGE static led with MRR 0.550; rolling windows showed adaptability to temporal market shifts.
+\end{itemize}
+
+\begin{table}[h]\centering\small
+\begin{tabular}{lccccc}
+\toprule
+Model & MRR & Hits@1 & Hits@3 & Hits@10 \\
+\midrule
+GAT Static & 0.351 & 0.176 & 0.363 & 0.952 \\
+GAT Monthly Rolling & 0.444 & 0.242 & 0.533 & 0.966 \\
+GAT Quarterly Rolling & 0.430 & 0.220 & 0.524 & 0.968 \\
+\textbf{GraphSAGE Static} & \textbf{0.550} & \textbf{0.351} & \textbf{0.669} & \textbf{0.997} \\
+GraphSAGE Monthly Rolling & 0.482 & 0.267 & 0.605 & 0.974 \\
+GraphSAGE Quarterly Rolling & 0.497 & 0.284 & 0.624 & 0.977 \\
+\bottomrule
+\end{tabular}
+\caption{Spring 2025 GNN comparison (from the team's poster).}
+\label{tab:spring2025gnn}
+\end{table}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.95\textwidth]{figures/spring2025_kg.png}
+\caption{Spring 2025: interactive Pyvis knowledge graph over European financial news --- companies, indicators and countries linked by extracted relations.}
+\label{fig:spring2025kg}
+\end{figure}
+
+\subsection{Summer 2025 --- Metrics, Judge LLMs, regeneration}
+\emph{Gunn Lee; Jarvis Gao; Xinnan Lu; Andrea Cuadros.}
+
+\begin{itemize}
+  \item Prompt engineering overhaul: 5-tuple \(\to\) \textbf{6-tuple} output adding a relationship-category type (GFMK / SSI / GMM); entity taxonomy 11 \(\to\) 14 types (adding DERIVATIVE, EQUITIES, MACRO\_INDICATOR) with refined definitions; few-shot examples 5 \(\to\) 8 with errors amended.
+  \item \textbf{Handcrafted metrics} (unsupervised, lightweight): Coverage (MiniLM-L6-v2 embeddings, weighted cosine similarity), Semantic Uniqueness (similarity grouping; score = groups/triplets), Semantic Validity (ontology domain/range checks), Entropy Ratio (triplet vs.\ article information density; want \(<1\)).
+  \item \textbf{Judge LLMs}: one independent judge per metric dimension, scoring 0--1 with a written explanation for interpretability.
+  \item \textbf{Triplet regeneration pipeline} --- the origin of the project's three-LLM design: if any LLM metric falls below threshold, a third LLM (Gemini 2.5 Flash) regenerates the triplets from the original article plus the judge and handcrafted evaluations; handcrafted-below/LLM-above disagreements are flagged for human review.
+  \item Dataset expansion: from \(\approx\)19k headline-only samples (\(\approx\)82 words each) to \(\approx\)11k full-article samples (\(\approx\)743 words) --- over 9\(\times\) more context per sample.
+  \item Model comparison on identical inputs (Table~\ref{tab:summer2025eval}): Gemini 2.5 Flash beat Amazon Nova Pro on coverage (LLM coverage 0.893 vs.\ 0.735), comparable on uniqueness and validity.
+\end{itemize}
+
+\begin{table}[h]\centering\small
+\begin{tabular}{lcc}
+\toprule
+Metric & Gemini 2.5 Flash & Amazon Nova Pro \\
+\midrule
+Handcrafted Coverage & 0.823 & 0.799 \\
+LLM Coverage & 0.893 & 0.735 \\
+Handcrafted Uniqueness & 0.584 & 0.768 \\
+LLM Uniqueness & 0.941 & 0.974 \\
+Handcrafted Semantic & 0.890 & 0.775 \\
+LLM Semantic & 0.985 & 0.954 \\
+Entropy Ratio & 0.735 & 0.679 \\
+\bottomrule
+\end{tabular}
+\caption{Summer 2025 extraction-model evaluation, averaged over 10 samples per model (from the team's poster).}
+\label{tab:summer2025eval}
+\end{table}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.9\textwidth]{figures/prior_work_overview.png}
+\caption{Overview of the pre-Fall-2025 pipeline (from the Fall 2025 poster): triplet generation, knowledge-graph construction with GNNs, and market-moving factor prediction, with the three Summer 2025 improvements annotated.}
+\label{fig:priorwork}
+\end{figure}
+
+\subsection{Fall 2025 --- FNSPID, local Qwen, unified pipeline}
 \emph{Lee, G.; Gao, J.; Lu, X.; Cuadros, A.}
 
 \begin{itemize}
@@ -75,8 +149,23 @@ This report documents the full lineage of the EIB Knowledge Graph project across
   \item Defined the four quality dimensions: Coverage, Uniqueness, Semantic Validity, Consistency.
   \item Built the first Graph Attention Network (GAT) for link prediction; trialled five loss functions (BPR, InfoNCE, Cross-Entropy, FindKG, Hybrid).
   \item Defined three graph-construction strategies keyed to Judge output: \emph{Original}, \emph{Fallback}, \emph{Strict}.
-  \item Delivered an initial static HTML visualisation of monthly knowledge graphs.
+  \item Unified the pipeline end to end (Figure~\ref{fig:unifiedpipeline}): article-level handcrafted + Judge evaluation with regenerate-or-flag routing, then corpus-level frequency filtering, TF-IDF similarity clustering, union-find canonical mapping, relation-label consolidation and global dedupe.
+  \item Switched to a locally hosted Qwen 2.5 32B via Ollama with a structured ``Mental Sandbox'' prompt --- rapid iteration, stable throughput, zero API cost.
+  \item Key finding: \textbf{cleaner graphs beat larger ones}. The Strict graph, \(\approx\)58\% smaller than raw, reached the project's best MRR of 0.8018 (BPR loss, no edge features), improving Hits@1 by \(\approx\)10\%; ranking losses beat classification losses; topology carried more signal than relation semantics.
+  \item Delivered interactive topology-aware visualisation of the monthly graphs (Figure~\ref{fig:fall2025graph}) plus global topology metrics tracked over time.
 \end{itemize}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.95\textwidth]{figures/unified_pipeline.png}
+\caption{Fall 2025 unified end-to-end pipeline: evaluation-gated retention / human review / regeneration at the article level, then corpus-level canonicalisation into the graph used for GNN prediction.}
+\label{fig:unifiedpipeline}
+\end{figure}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.8\textwidth]{figures/fall2025_full_graph.png}
+\caption{Fall 2025: full knowledge graph over the FNSPID semiconductor corpus --- a dense connected core surrounded by small satellite stories.}
+\label{fig:fall2025graph}
+\end{figure}
 
 \subsection{Spring 2026 --- Robustness and causality}
 \emph{Xixi Chen; Xinyi Chen; Yi Yang.}
@@ -761,8 +850,20 @@ Ago, T.\ et al.\ (2024). \emph{FinDKG: Dynamic Knowledge Graphs with Large Langu
 \bibitem{notears}
 Zheng, X., Aragam, B., Ravikumar, P., \& Xing, E.\ P.\ (2018). \emph{DAGs with NO TEARS: Continuous optimization for structure learning.} Advances in Neural Information Processing Systems, 31.
 
+\bibitem{yang2024}
+Yang, C., Lin, W., \& Couzinet, T.\ (2024). \emph{LLM and Graphs for Financial Texts.} IEOR EIB 1, Columbia University.
+
+\bibitem{spring2025}
+Chen, K., Han, H., \& Pang, M.\ (Spring 2025). \emph{LLM and Graphs for Financial Texts} (poster). IEOR EIB 1, Columbia University.
+
+\bibitem{summer2025}
+Lee, G., Gao, J., Lu, X., \& Cuadros, A.\ (Summer 2025). \emph{LLM and Graphs for Financial Texts} (poster). IEOR EIB 1, Columbia University.
+
+\bibitem{samdani2025}
+Samdani, A., \& Zhang, B.\ (August 2025). \emph{LLM and Graphs for Financial Texts.} IEOR EIB 1, Columbia University.
+
 \bibitem{fall2025}
-Lee, G., Gao, J., Lu, X., \& Cuadros, A.\ (Fall 2025). \emph{LLM and Graphs for Financial Texts} (baseline pipeline report).
+Lee, G., Gao, J., Lu, X., \& Cuadros, A.\ (Fall 2025). \emph{LLM and Graphs for Financial Texts} (poster + report). IEOR EIB 1, Columbia University.
 
 \bibitem{spring2026}
 Chen, Xixi; Chen, Xinyi; Yang, Yi (Spring 2026). \emph{LLM and Graphs for Financial Texts} (Spring 2026 EIB1 report).
