@@ -3,27 +3,34 @@
   "sources": [
     {
       "id": "fnspid-19-20-semis",
-      "label": "FNSPID — US semiconductors (2019–2020)",
-      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
+      "label": "FNSPID \u2014 US semiconductors (2019\u20132020)",
+      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid \u2192 Covid-shock \u2192 recovery arc. Static; does not update.",
       "kind": "historical",
       "available": true,
-      "features": ["graph", "predictions"]
+      "features": [
+        "graph",
+        "predictions"
+      ]
     },
     {
       "id": "fnspid-qwen-vm",
-      "label": "FNSPID — qwen2.5 VM run (2019–2021)",
-      "description": "Full 2-year FNSPID semiconductor corpus extracted by the team's VM pipeline (qwen2.5:14b via Ollama on eib-central1a) and published through the VM→UI publisher. 5,358 articles / 30,861 triplets.",
+      "label": "FNSPID \u2014 Full corpus (VM pipeline, updating)",
+      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009\u20132024), extracted by our automated pipeline on the team GPU VM: qwen2.5:14b extraction \u2192 Judge LLM \u2192 third-LLM refinement \u2192 published chunk by chunk as the run progresses. Currently covers 2009\u20132021; remaining years land automatically.",
       "kind": "historical",
       "available": true,
-      "features": ["graph"]
+      "features": [
+        "graph"
+      ]
     },
     {
       "id": "report",
       "label": "Project report (PDF)",
-      "description": "The full three-semester project report — data, pipeline, GAT, benchmarks, live corpus, factor model, and UI — as an in-app PDF.",
+      "description": "The full three-semester project report \u2014 data, pipeline, GAT, benchmarks, live corpus, factor model, and UI \u2014 as an in-app PDF.",
       "kind": "report",
       "available": true,
-      "features": ["report"]
+      "features": [
+        "report"
+      ]
     },
     {
       "id": "stoxx_600_factors",
@@ -31,7 +38,10 @@
       "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",
       "kind": "live",
       "available": true,
-      "features": ["graph", "factors"]
+      "features": [
+        "graph",
+        "factors"
+      ]
     }
   ]
 }
