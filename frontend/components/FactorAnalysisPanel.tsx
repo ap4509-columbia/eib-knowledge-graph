@@ -532,8 +532,11 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
       )}
 
       {data && data.entities.length > 0 && (
-        <div className="flex flex-1 overflow-hidden">
-          <div className="flex-1 overflow-auto p-4">
+        // min-h-0 is load-bearing: without it this flex-1 row refuses to
+        // shrink below its content height, the inner overflow scrollbars
+        // never engage, and everything below the fold is silently clipped.
+        <div className="flex min-h-0 flex-1 overflow-hidden">
+          <div className="min-w-0 flex-1 overflow-auto p-4">
             <Scatter entities={data.entities} />
           </div>
           <div className="w-72 shrink-0 space-y-2 overflow-y-auto border-l border-border/60 px-4 py-4">
