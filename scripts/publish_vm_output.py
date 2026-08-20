@@ -111,6 +111,13 @@ def load_csvs(
             if not url or len(date) != 10 or url in seen_urls:
                 continue
             trips = _parse_triplets(row.get(triplets_column))
+            if not trips and triplets_column != "output_triplets":
+                # Judged CSVs put sentinel strings ("Require Human Review",
+                # "Error: ...") in the revised column for ambiguous rows —
+                # the metrics disagreed, not that the triplets are bad.
+                # Fall back to the first-pass triplets instead of dropping
+                # the article.
+                trips = _parse_triplets(row.get("output_triplets"))
             if not trips:
                 continue
             seen_urls.add(url)
