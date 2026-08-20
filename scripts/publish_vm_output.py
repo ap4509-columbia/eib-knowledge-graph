@@ -86,7 +86,10 @@ def _parse_triplets(raw) -> list[dict]:
     return out
 
 
-def load_csvs(paths: list[Path]) -> tuple[list[Article], dict[str, list[dict]]]:
+def load_csvs(
+    paths: list[Path],
+    triplets_column: str = "output_triplets",
+) -> tuple[list[Article], dict[str, list[dict]]]:
     articles: list[Article] = []
     triplets_by_url: dict[str, list[dict]] = {}
     seen_urls: set[str] = set()
@@ -99,7 +102,7 @@ def load_csvs(paths: list[Path]) -> tuple[list[Article], dict[str, list[dict]]]:
             # the malformed rows rather than failing the whole publish.
             df = pd.read_csv(p, engine="python", on_bad_lines="skip")
             print(f"{p.name}: malformed rows skipped (tolerant parse)")
-        missing = {"date", "url", "output_triplets"} - set(df.columns)
+        missing = {"date", "url", triplets_column} - set(df.columns)
         if missing:
             raise SystemExit(f"{p}: missing expected columns {sorted(missing)}")
         for _, row in df.iterrows():
@@ -107,7 +110,7 @@ def load_csvs(paths: list[Path]) -> tuple[list[Article], dict[str, list[dict]]]:
             date = str(row.get("date") or "")[:10]
             if not url or len(date) != 10 or url in seen_urls:
                 continue
-            trips = _parse_triplets(row.get("output_triplets"))
+            trips = _parse_triplets(row.get(triplets_column))
             if not trips:
                 continue
             seen_urls.add(url)
@@ -129,12 +132,19 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--csv", action="append", required=True, type=Path)
     ap.add_argument("--source-id", default="fnspid-19-20-semis")
+    ap.add_argument(
+        "--triplets-column",
+        default="output_triplets",
+        help="CSV column holding the triplet list. Use 'Revised triplets' "
+        "on JudgeLLM metrics_computation outputs to publish the "
+        "third-LLM-refined triplets instead of the raw first pass.",
+    )
     ap.add_argument("--replace", action="store_true")
     ap.add_argument("--push", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    articles, triplets_by_url = load_csvs(args.csv)
+    articles, triplets_by_url = load_csvs(args.csv, args.triplets_column)
     by_month: dict[str, int] = defaultdict(int)
     for a in articles:
         by_month[a.date[:7]] += 1
