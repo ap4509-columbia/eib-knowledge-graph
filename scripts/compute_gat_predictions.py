@@ -12,7 +12,9 @@ Requires Pierre's fork on disk (weights + gat_model + gat_utils), and the
 
 from __future__ import annotations
 
+import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -22,9 +24,11 @@ import numpy as np
 import pandas as pd
 import torch
 
-# Pierre's fork provides the model + feature builders. Add it to sys.path so
-# imports resolve regardless of where this script is invoked from.
-EIB_EVAL_ROOT = Path("/Users/alexandrapaiz/Desktop/eib-eval/eib")
+# The eib pipeline repo provides the model + feature builders. Overridable
+# via --eib-root (or EIB_ROOT env) so the same script runs on the VM.
+EIB_EVAL_ROOT = Path(
+    os.environ.get("EIB_ROOT", "/Users/alexandrapaiz/Desktop/eib-eval/eib")
+).expanduser()
 sys.path.insert(0, str(EIB_EVAL_ROOT))
 
 from components.gat_model import GATLP  # noqa: E402
@@ -374,6 +378,34 @@ def compute_period_predictions(
 
 
 def main():
+    global TRIPLETS_CSV, WEIGHTS_DIR, OUTPUT_PATH, STRATEGY, USE_EDGE_TYPES
+    ap = argparse.ArgumentParser(
+        description="FinDKG-style predictions JSON from GAT checkpoints"
+    )
+    ap.add_argument("--csv", type=Path, default=TRIPLETS_CSV)
+    ap.add_argument("--weights-dir", type=Path, default=WEIGHTS_DIR)
+    ap.add_argument("--out", type=Path, default=OUTPUT_PATH)
+    ap.add_argument("--source-id", default=None,
+                    help="Shortcut: write to frontend/public/data/sources/"
+                    "<id>/predictions.json (overrides --out).")
+    ap.add_argument("--strategy", default=STRATEGY)
+    ap.add_argument("--model-label", default="CE (No Edge Feats)")
+    ap.add_argument("--mrr", type=float, default=0.7746,
+                    help="Headline MRR to display for this weight set.")
+    args = ap.parse_args()
+    TRIPLETS_CSV = args.csv.expanduser()
+    WEIGHTS_DIR = args.weights_dir.expanduser()
+    STRATEGY = args.strategy
+    OUTPUT_PATH = args.out
+    if args.source_id:
+        OUTPUT_PATH = (
+            Path(__file__).resolve().parent.parent
+            / "frontend" / "public" / "data" / "sources"
+            / args.source_id / "predictions.json"
+        )
+    main.model_label = args.model_label
+    main.mrr = args.mrr
+
     print(f"Loading triplets from {TRIPLETS_CSV}")
     df = load_df_from_csv(TRIPLETS_CSV, strategy=STRATEGY)
     if df.empty:
@@ -411,9 +443,9 @@ def main():
     with open(OUTPUT_PATH, "w") as f:
         json.dump(
             {
-                "model": "CE (No Edge Feats)",
+                "model": main.model_label,
                 "strategy": STRATEGY,
-                "mrr": 0.7746,
+                "mrr": main.mrr,
                 "periods": results,
             },
             f,
