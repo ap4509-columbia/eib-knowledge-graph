@@ -18,9 +18,7 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from google import genai
-from google.genai import errors as genai_errors
-
+from scraper import llm
 from scraper.sources.base import Article
 
 
@@ -97,31 +95,16 @@ def extract_enriched(
 
     Retries once on Gemini transient errors. Logs per-article progress to
     stdout so the GitHub Actions log tail is useful mid-run."""
-    api_key = api_key or os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set — cannot extract triplets.")
-
-    client = genai.Client(api_key=api_key)
+    print(f"LLM backend: {llm.describe()}")
     results: dict[str, list[dict]] = {}
 
     for i, art in enumerate(articles, start=1):
         prompt = _build_prompt(art)
         triplets: list[dict] = []
-        for attempt in (0, 1):
-            try:
-                resp = client.models.generate_content(
-                    model="gemini-2.5-flash", contents=prompt
-                )
-                triplets = _sanitize(resp.text or "")
-                break
-            except genai_errors.APIError as e:
-                if attempt == 0:
-                    time.sleep(1.5)
-                    continue
-                print(f"  [{i:4}/{len(articles):4}] gemini error, giving up: {e}")
-            except Exception as e:
-                print(f"  [{i:4}/{len(articles):4}] unexpected: {e}")
-                break
+        try:
+            triplets = _sanitize(llm.generate(prompt, api_key))
+        except Exception as e:
+            print(f"  [{i:4}/{len(articles):4}] llm error, giving up: {e}")
 
         results[art.url] = triplets
         if i % 10 == 0 or i == len(articles):

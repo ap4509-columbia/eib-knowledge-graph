@@ -32,9 +32,7 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from google import genai
-from google.genai import errors as genai_errors
-
+from scraper import llm
 from scraper.sources.base import Article
 from scraper.extraction_enriched import _sanitize
 
@@ -43,35 +41,11 @@ REFINE_PROMPT_PATH = (
 )
 _REFINE_TEMPLATE: Optional[str] = None
 
-_MODEL = "gemini-2.5-flash"
-
-
 def _refine_template() -> str:
     global _REFINE_TEMPLATE
     if _REFINE_TEMPLATE is None:
         _REFINE_TEMPLATE = REFINE_PROMPT_PATH.read_text()
     return _REFINE_TEMPLATE
-
-
-def _client(api_key: str | None) -> genai.Client:
-    api_key = api_key or os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set — cannot run refinement.")
-    return genai.Client(api_key=api_key)
-
-
-def _generate(client: genai.Client, prompt: str) -> str:
-    """One generate call with a single retry on transient API errors."""
-    for attempt in (0, 1):
-        try:
-            resp = client.models.generate_content(model=_MODEL, contents=prompt)
-            return resp.text or ""
-        except genai_errors.APIError:
-            if attempt == 0:
-                time.sleep(1.5)
-                continue
-            raise
-    return ""
 
 
 def refine_triplets(
@@ -84,7 +58,6 @@ def refine_triplets(
     Returns a new {url: triplets} mapping. Articles whose refinement call
     fails (or returns nothing parseable) keep their original triplets —
     fail open, never lose a day's data to a flaky call."""
-    client = _client(api_key)
     out: dict[str, list[dict]] = {}
     n = len(articles)
     refined_ct = kept_ct = 0
@@ -103,7 +76,7 @@ def refine_triplets(
             .replace("{triplets_}", json.dumps(original, ensure_ascii=False))
         )
         try:
-            refined = _sanitize(_generate(client, prompt))
+            refined = _sanitize(llm.generate(prompt, api_key))
         except Exception as e:
             print(f"  [refine {i:3}/{n:3}] failed, keeping originals: {e}")
             out[art.url] = original
@@ -181,7 +154,7 @@ def canonicalize_entities(
         "be omitted. No prose, no markdown fences."
     )
     try:
-        raw = _generate(_client(api_key), prompt)
+        raw = llm.generate(prompt, api_key)
     except Exception as e:
         print(f"Canonicalization call failed, skipping: {e}")
         return triplets_by_url
