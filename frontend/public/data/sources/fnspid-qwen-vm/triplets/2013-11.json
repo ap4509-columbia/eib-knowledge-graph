@@ -1,0 +1,4710 @@
+{
+  "https://www.nasdaq.com/articles/qualcomm-breakout-coming-soon-2013-11-01": [
+    {
+      "sub": "QCOM",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Volume",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Surpasses",
+      "rel_category": "GMM",
+      "obj": "Open Interest",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Buying Calls",
+      "sub_type": "CONCEPT",
+      "rel": "Locks In",
+      "rel_category": "GMM",
+      "obj": "Purchase Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Selling Puts",
+      "sub_type": "CONCEPT",
+      "rel": "Lets Collect Money If",
+      "rel_category": "GMM",
+      "obj": "Shares Hold Above Designated Levels",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/trading-radar-gdp-non-farm-payrolls-and-ecb-rate-decision-will-move-markets-2013-11-01": [
+    {
+      "sub": "US Economics",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Includes",
+      "rel_category": "GMM",
+      "obj": "MBA Mortgage Applications",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "US Economics",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Includes",
+      "rel_category": "GMM",
+      "obj": "Challenger Job Cuts",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Leading Economic Index",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "06",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Federal Reserve",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Buys",
+      "rel_category": "GMM",
+      "obj": "7 to 10year Treasury Notes",
+      "obj_type": "BOND",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Fed",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Speaks",
+      "rel_category": "SSI",
+      "obj": "Pianalto",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "JPY BoJ Oct Minutes",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Bank of Japan Policy Decision",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AUD Trade Balance",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Trade Balance Report",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "EUR Eurozone Services PMI",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Services Sector Performance",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "GBP Industrial and Manufacturing Production",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Industrial Output Report",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "EUR Eurozone Retail Sales",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Retail Sales Data",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "CAD Building Permits",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Building Permit Issuance",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Germany",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Sells",
+      "rel_category": "GMM",
+      "obj": "10year Notes",
+      "obj_type": "BOND",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Time Warner",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Chesapeake Energy",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "HollyFrontier",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Carlyle Group",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Devon Energy",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Humana",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Duke Energy",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ralph Lauren",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "EOG Resources",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Walt Disney",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Tesla",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Chesapeake Energy",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Whole Foods Market",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "CBS",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Pricelinecom",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LionsGate",
+      "sub_type": "COMPANY",
+      "rel": "Schedules",
+      "rel_category": "SSI",
+      "obj": "Earnings Call",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/xilinx-inc-xlnx-ex-dividend-date-scheduled-november-04-2013-2013-11-01": [
+    {
+      "sub": "XLNX",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "XLNX",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "XLNX",
+      "sub_type": "COMPANY",
+      "rel": "Has Forecasted Earnings Growth",
+      "rel_category": "GMM",
+      "obj": "2075",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes Companies Such As",
+      "rel_category": "GFMK",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes Companies Such As",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-corporation-intc-ex-dividend-date-scheduled-november-05-2013-2013-11-04": [
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Ticker",
+      "rel_category": "GFMK",
+      "obj": "TSM",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Texas Instruments Incorporated",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Ticker",
+      "rel_category": "GFMK",
+      "obj": "TXN",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Pays Dividend To",
+      "rel_category": "SSI",
+      "obj": "Shareholders",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Has Financial Instrument Info",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reports Forecast For",
+      "rel_category": "SSI",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Forecasted Earnings Growth",
+      "rel_category": "SSI",
+      "obj": "1255",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Industry Average Earnings Growth",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Is",
+      "rel_category": "GFMK",
+      "obj": "4",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/calculate-better-returns-2013-11-04": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Produces",
+      "rel_category": "GFMK",
+      "obj": "Graphing Calculators",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TXN",
+      "sub_type": "STOCKTICKER",
+      "rel": "Derives Value From",
+      "rel_category": "GFMK",
+      "obj": "Texas Instruments",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "GFMK",
+      "obj": "Dividend Yield",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Reduces",
+      "rel_category": "GMM",
+      "obj": "Share Count",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Digital Chip Makers",
+      "sub_type": "SECTOR",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qcoms-processor-to-power-nexus-5-analyst-blog-2013-11-04": [
+    {
+      "sub": "Qualcomm Technologies",
+      "sub_type": "COMPANY",
+      "rel": "Supplies To",
+      "rel_category": "SSI",
+      "obj": "Google Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Snapdragon 800 Processors",
+      "sub_type": "PRODUCT",
+      "rel": "Used In",
+      "rel_category": "SSI",
+      "obj": "Nexus 5 Smartphones",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Image Signal Processor",
+      "sub_type": "PRODUCT",
+      "rel": "Powered By",
+      "rel_category": "SSI",
+      "obj": "Qualcomm Technologies",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Android Camera HAL Functions",
+      "sub_type": "CONCEPT",
+      "rel": "Supported By",
+      "rel_category": "SSI",
+      "obj": "Image Signal Processor",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/stocks-slip-modestly-after-steep-morning-losses-2013-11-05": [
+    {
+      "sub": "QUALCOMM",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Increase In Volume Of",
+      "rel_category": "SSI",
+      "obj": "December Series Options",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "European Commission",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Lowers",
+      "rel_category": "GMM",
+      "obj": "Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Forecast",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Impact On",
+      "rel_category": "GMM",
+      "obj": "Major Sectors",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Dow Jones Industrial Average",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Stumbles To Intraday Low Of",
+      "rel_category": "SSI",
+      "obj": "1552218",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Dow Jones Industrial Average",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Eases Losses To",
+      "rel_category": "SSI",
+      "obj": "209 Points",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nokia-pinned-at-neutral-analyst-blog-2013-11-05": [
+    {
+      "sub": "ShoreTel Inc",
+      "sub_type": "COMPANY",
+      "rel": "Warrants Consideration For",
+      "rel_category": "GMM",
+      "obj": "Investors",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Warrants Consideration For",
+      "rel_category": "GMM",
+      "obj": "Investors",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Novatel Wireless Inc",
+      "sub_type": "COMPANY",
+      "rel": "Warrants Consideration For",
+      "rel_category": "GMM",
+      "obj": "Investors",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/mid-afternoon-market-update-marvell-rises-kkr-stake-while-orbitz-gives-last-weeks-gains": [
+    {
+      "sub": "KKR",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Acquires Stake In",
+      "rel_category": "SSI",
+      "obj": "Marvell Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Endo Health Solutions",
+      "sub_type": "COMPANY",
+      "rel": "Announces Acquisition Of",
+      "rel_category": "SSI",
+      "obj": "Paladin Labs",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "GT Advanced Technologies",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Apple",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/micrel-incorporated-mcrl-ex-dividend-date-scheduled-november-06-2013-2013-11-05": [
+    {
+      "sub": "MCRL",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MCRL",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MCRL",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts",
+      "rel_category": "SSI",
+      "obj": "333 Earnings Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Average Earnings Growth Forecast",
+      "rel_category": "GFMK",
+      "obj": "97",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/altera-corporation-altr-ex-dividend-date-scheduled-november-07-2013-2013-11-06": [
+    {
+      "sub": "ALTR",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ALTR",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Publishes",
+      "rel_category": "SSI",
+      "obj": "Earnings Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ALTR",
+      "sub_type": "COMPANY",
+      "rel": "Forecasted Earnings Growth",
+      "rel_category": "SSI",
+      "obj": "2096",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Has Industry Average Earnings Growth",
+      "rel_category": "GFMK",
+      "obj": "01",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-earnings-report-november-6-2013-qcom-mdlz-pru-cbs-wfm-clr-ctl-rig-vale-cxo": [
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Quarterly Earnings",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Provides",
+      "rel_category": "GFMK",
+      "obj": "Price to Earnings Ratio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has Price to Earnings Ratio",
+      "rel_category": "GFMK",
+      "obj": "1721",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Industry",
+      "sub_type": "CONCEPT",
+      "rel": "Has Price to Earnings Ratio",
+      "rel_category": "GFMK",
+      "obj": "2750",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-nov-6-2013-qcom-aeo-bac-wfm-csco-tsm-msft-qqq-scty-t-aa-iag-2013": [
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Trades At",
+      "rel_category": "GMM",
+      "obj": "QCOM",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QCOM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Price Change Of",
+      "rel_category": "GMM",
+      "obj": "304",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QCOM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Volume Of",
+      "rel_category": "GMM",
+      "obj": "1791022",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Q4 Profit Up",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "American Eagle Outfitters Inc",
+      "sub_type": "COMPANY",
+      "rel": "Trades At",
+      "rel_category": "GMM",
+      "obj": "AEO",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AEO",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Price Change Of",
+      "rel_category": "GMM",
+      "obj": "185",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AEO",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Volume Of",
+      "rel_category": "GMM",
+      "obj": "1259055",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SolarCity",
+      "sub_type": "COMPANY",
+      "rel": "Holds",
+      "rel_category": "SSI",
+      "obj": "Q3 13 Earnings Conference Call At 500 PM ET",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ATT Inc",
+      "sub_type": "COMPANY",
+      "rel": "Trades At",
+      "rel_category": "GMM",
+      "obj": "T",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "T",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Price Change Of",
+      "rel_category": "GMM",
+      "obj": "002",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "T",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Volume Of",
+      "rel_category": "GMM",
+      "obj": "600348",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qualcomm-favors-longs-earnings-driven-after-hours-declines-and-shorts-gains-2013-11-06": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Q4 Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analysts",
+      "sub_type": "CONCEPT",
+      "rel": "Expect",
+      "rel_category": "SSI",
+      "obj": "Profit Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Profit Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Expected To Be",
+      "rel_category": "SSI",
+      "obj": "108 USD",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analysts",
+      "sub_type": "CONCEPT",
+      "rel": "Expect",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Revenue",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Expected To Be",
+      "rel_category": "SSI",
+      "obj": "634 Billion USD",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/google-crushes-dream-android-44-kitkat-2013-11-06": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "No Longer Supports",
+      "rel_category": "SSI",
+      "obj": "Chipset",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Hacker Community",
+      "sub_type": "CONCEPT",
+      "rel": "Proves",
+      "rel_category": "SSI",
+      "obj": "Compatibility",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Galaxy Nexus",
+      "sub_type": "PRODUCT",
+      "rel": "Runs",
+      "rel_category": "SSI",
+      "obj": "Android 44",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Google",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Refuses To Acknowledge",
+      "rel_category": "SSI",
+      "obj": "Support For Lowend Devices",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/analysis-shows-power-single-tweet-blackberry-stock-2013-11-06": [
+    {
+      "sub": "BlackBerry",
+      "sub_type": "COMPANY",
+      "rel": "Raises Funds",
+      "rel_category": "SSI",
+      "obj": "USD",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/stock-futures-rebound-ecb-rate-cut-shrugging-strong-gdp-focus-shifts-twitter-blockbuster": [
+    {
+      "sub": "European Central Bank",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Cuts",
+      "rel_category": "GMM",
+      "obj": "Key Lending Rates",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Key Lending Rates",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Positive Impact On",
+      "rel_category": "GMM",
+      "obj": "Global Equity Markets",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Third Quarter GDP",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Exceeds Expectations",
+      "rel_category": "SSI",
+      "obj": "US Economy",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "US Economy",
+      "sub_type": "CONCEPT",
+      "rel": "Influences",
+      "rel_category": "GMM",
+      "obj": "Federal Reserve",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Federal Reserve",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Considers",
+      "rel_category": "GMM",
+      "obj": "Tapering Asset Purchases",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IPO",
+      "sub_type": "EVENT",
+      "rel": "Scheduled For",
+      "rel_category": "SSI",
+      "obj": "Twitter",
+      "obj_type": "TWTR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qualcomm-misses-on-q4-earnings-analyst-blog-2013-11-07": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financial Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corp",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Qualcomm Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/pre-market-twitter-hikes-ipo-price-futures-rise-gdp-european-rate-cut-2013-11-07": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "European Central Bank",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Cuts",
+      "rel_category": "GMM",
+      "obj": "Key Interest Rate",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Key Interest Rate",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Positive Impact On",
+      "rel_category": "GMM",
+      "obj": "Stock Futures",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Twitter",
+      "sub_type": "COMPANY",
+      "rel": "Goes Public On",
+      "rel_category": "SSI",
+      "obj": "New York Stock Exchange",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/txn-launches-floating-switch-architecture-analyst-blog-2013-11-07": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Unveils",
+      "rel_category": "SSI",
+      "obj": "Floating Switch Architecture",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Floating Switch Architecture",
+      "sub_type": "CONCEPT",
+      "rel": "Derives Value From",
+      "rel_category": "SSI",
+      "obj": "TPS92411",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TPS92411",
+      "sub_type": "PRODUCT",
+      "rel": "Lowers",
+      "rel_category": "SSI",
+      "obj": "Cost",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TPS92411",
+      "sub_type": "PRODUCT",
+      "rel": "Simplifies",
+      "rel_category": "SSI",
+      "obj": "Design Process",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/pre-market-most-active-nov-7-2013-jcp-qqq-kar-bac-nok-abx-skm-armh-mspd-cldx-fb-mu-2013-11": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Trades At",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MU",
+      "sub_type": "STOCKTICKER",
+      "rel": "Derives Value From",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "Micron Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MU",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has Target Price",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "Target Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Target Price",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Is",
+      "rel_category": "GFMK",
+      "obj": "2075",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Current Last Sale",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Represents Percentage Of",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "Target Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Days To Cover",
+      "sub_type": "ECONINDicator",
+      "rel": "Is Calculated Based On",
+      "rel_category": "GFMK",
+      "obj": "Average Trading Volume",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-nov-8-2013-bac-cst-eca-sndk-vlo-qqq-csco-yelp-msft-ge-intc-amat": [
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Scheduled To Report",
+      "rel_category": "SSI",
+      "obj": "Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Cisco Systems",
+      "sub_type": "COMPANY",
+      "rel": "Scheduled To Report",
+      "rel_category": "SSI",
+      "obj": "Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/tesseras-q3-loss-wider-than-expected-analyst-blog-2013-11-08": [
+    {
+      "sub": "Episodic Revenues",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Decreases",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Royalty Revenues",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Absence Of",
+      "rel_category": "SSI",
+      "obj": "Micron Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Royalty Revenues",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Absence Of",
+      "rel_category": "SSI",
+      "obj": "PTI",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Image Enhancement Technologies",
+      "sub_type": "PRODUCT",
+      "rel": "Contributes To",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "OneTime Fee",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Recognized In",
+      "rel_category": "SSI",
+      "obj": "Quarter",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/bear-day-altera-altr-bear-day-2013-11-08": [
+    {
+      "sub": "Investors",
+      "sub_type": "CONCEPT",
+      "rel": "Consider",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductors",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductors",
+      "sub_type": "COMPANY",
+      "rel": "Represents",
+      "rel_category": "GFMK",
+      "obj": "Semiconductors Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductors",
+      "sub_type": "COMPANY",
+      "rel": "Has Rank",
+      "rel_category": "GFMK",
+      "obj": "Zacks Rank 1",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductors",
+      "sub_type": "COMPANY",
+      "rel": "Has Recommendation",
+      "rel_category": "GFMK",
+      "obj": "Outperform",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Altera Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Designs",
+      "rel_category": "GFMK",
+      "obj": "HighPerformance PLDs",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Altera Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures",
+      "rel_category": "GFMK",
+      "obj": "PLDs",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Altera Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Markets",
+      "rel_category": "GFMK",
+      "obj": "PLDs and Development Tools",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/weekly-52-week-highs-highlight-ups-noc-adi-cb-mck-2013-11-10": [
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reached",
+      "rel_category": "SSI",
+      "obj": "52Week High",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Market Cap",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Market Cap",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Equals",
+      "rel_category": "GFMK",
+      "obj": "1547 billion",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Traded At",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Stock Price",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Equals",
+      "rel_category": "GFMK",
+      "obj": "4980",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PE Ratio",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Is",
+      "rel_category": "GFMK",
+      "obj": "2380",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PS Ratio",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Is",
+      "rel_category": "GFMK",
+      "obj": "586",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Kurt P Kuehn",
+      "sub_type": "CONCEPT",
+      "rel": "Sold",
+      "rel_category": "SSI",
+      "obj": "UPS stock",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Darryl M Fraser",
+      "sub_type": "CONCEPT",
+      "rel": "Sold",
+      "rel_category": "SSI",
+      "obj": "NOC stock",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/our-favorite-tech-etf-low-cost-way-tap-mobile-computing-growth-2013-11-11": [
+    {
+      "sub": "Consumers and Businesses",
+      "sub_type": "CONCEPT",
+      "rel": "Adapt To",
+      "rel_category": "SSI",
+      "obj": "Smartphones",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Consumers and Businesses",
+      "sub_type": "CONCEPT",
+      "rel": "Adapt To",
+      "rel_category": "SSI",
+      "obj": "Tablets",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SPDR Portfolio",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Concentrated",
+      "rel_category": "GFMK",
+      "obj": "73 Names",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "iShares Offering",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Diversified",
+      "rel_category": "GFMK",
+      "obj": "142 Companies",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Morningstar",
+      "sub_type": "COMPANY",
+      "rel": "Receives Fees From",
+      "rel_category": "GFMK",
+      "obj": "Licensing Indexes",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/cirrus-logic-drops-on-apple-exit-analyst-blog-2013-11-12": [
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "STMicroelectronics NV",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Cirrus Logic",
+      "sub_type": "COMPANY",
+      "rel": "Supplies To",
+      "rel_category": "SSI",
+      "obj": "Apple",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New iPad Air",
+      "sub_type": "PRODUCT",
+      "rel": "Does Not Include",
+      "rel_category": "SSI",
+      "obj": "Audio Amplifiers",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Audio Amplifiers",
+      "sub_type": "PRODUCT",
+      "rel": "Manufactured By",
+      "rel_category": "SSI",
+      "obj": "Cirrus Logic",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Reportedly",
+      "sub_type": "CONCEPT",
+      "rel": "Triggers",
+      "rel_category": "SSI",
+      "obj": "Stock Price Slide",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/dts-posts-decent-q3-earnings-revs-up-analyst-blog-2013-11-12": [
+    {
+      "sub": "Dolby Laboratories",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Samsung",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Incorporates",
+      "rel_category": "SSI",
+      "obj": "DTS Technologies",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/snow-capital-update-richard-snow-sells-2013-11-13": [
+    {
+      "sub": "Snow Capital Management LP",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Sells Out",
+      "rel_category": "SSI",
+      "obj": "Sealed Air Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Snow Capital Management LP",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Sells Out",
+      "rel_category": "SSI",
+      "obj": "True Religion Apparel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Snow Capital Management LP",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Sells Out",
+      "rel_category": "SSI",
+      "obj": "Kindred Healthcare Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Snow Capital Management LP",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reduces Stake",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Cash And ShortTerm Investments",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Market Cap",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Inc",
+      "sub_type": "COMPANY",
+      "rel": "Trades With",
+      "rel_category": "GFMK",
+      "obj": "PE Ratio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/l-3-communications-holdings-inc-lll-ex-dividend-date-scheduled-november-14-2013-2013-11-13": [
+    {
+      "sub": "LLL",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NTT DOCOMO Inc",
+      "sub_type": "COMPANY",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LLL",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "GMM",
+      "obj": "Cash Dividend",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LLL",
+      "sub_type": "COMPANY",
+      "rel": "Experiences",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Industry Average Earnings Growth",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/seth-klarman-buys-micron-technology-theravance-pbf-energy-sells-bp-aig-yamana-gold-2013-11": [
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "Micron Technology Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "Theravance Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "PBF Energy Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "Idenix Pharmaceuticals Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "Chipmos Technologies Bermuda Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "BP PLC",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "American International Group Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Yamana Gold Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Central Pacific Financial Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Kinross Gold Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Ituran Location and Control Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Alliance One International Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seth Klarman",
+      "sub_type": "CONCEPT",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Pretium Resources Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/impending-yellen-confirmation-boosts-us-stocks-2013-11-13": [
+    {
+      "sub": "Agilent",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financials",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Nordstrom",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financials",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financials",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "WalMart",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financials",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Viacom",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Financials",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Chinese Government",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Does Not Announce",
+      "rel_category": "GMM",
+      "obj": "Fiscal Reforms",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "US Department of Health and Human Services",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Releases",
+      "rel_category": "GMM",
+      "obj": "Enrollment Data",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/texas-instruments-introduces-ti-designs-analyst-blog-2013-11-13": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "TI Designs",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Analog Products",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Embedded Processing Products",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Connectivity Products",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Targets",
+      "rel_category": "GFMK",
+      "obj": "Industrial Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Targets",
+      "rel_category": "GFMK",
+      "obj": "Automotive Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Targets",
+      "rel_category": "GFMK",
+      "obj": "Consumer Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Targets",
+      "rel_category": "GFMK",
+      "obj": "Communications Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TI Designs",
+      "sub_type": "PRODUCT",
+      "rel": "Targets",
+      "rel_category": "GFMK",
+      "obj": "Computing Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intersil-corporation-isil-ex-dividend-date-scheduled-november-15-2013-2013-11-14": [
+    {
+      "sub": "ISIL",
+      "sub_type": "COMPANY",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ISIL",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "GMM",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ISIL",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts",
+      "rel_category": "SSI",
+      "obj": "Revenue Growth",
+      "obj_type": "ECONINDicator",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Industry Average",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Has",
+      "rel_category": "GMM",
+      "obj": "Revenue Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/earnings-reaction-history-applied-materials-inc-364-follow-through-indicator-22-sensitive": [
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Issues",
+      "rel_category": "GMM",
+      "obj": "Quarterly Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Announcement",
+      "sub_type": "CONCEPT",
+      "rel": "Impacts",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Positive Price Reactions",
+      "sub_type": "CONCEPT",
+      "rel": "Increases",
+      "rel_category": "GMM",
+      "obj": "ExtendedHours Gains",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Negative Price Reactions",
+      "sub_type": "CONCEPT",
+      "rel": "Decreases",
+      "rel_category": "GMM",
+      "obj": "ExtendedHours Losses",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Stock Performance",
+      "sub_type": "CONCEPT",
+      "rel": "Correlates With",
+      "rel_category": "SSI",
+      "obj": "Average Next Regular Session Gain",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Stock Performance",
+      "sub_type": "CONCEPT",
+      "rel": "Correlates With",
+      "rel_category": "SSI",
+      "obj": "Average Next Regular Session Loss",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/applied-materials-sticks-pattern-reversing-earnings-driven-after-hours-trade-next-day": [
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analysts",
+      "sub_type": "CONCEPT",
+      "rel": "Expect",
+      "rel_category": "GMM",
+      "obj": "Applied Materials",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Expected To Report",
+      "rel_category": "SSI",
+      "obj": "Profit Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Expected To Generate Revenue",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Declined In Value",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Beat Sales Expectations",
+      "rel_category": "SSI",
+      "obj": "Sales",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Met Loss Estimates",
+      "rel_category": "SSI",
+      "obj": "Losses",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Issued Mixed Guidance",
+      "rel_category": "GMM",
+      "obj": "Future Earnings",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/wedgewood-investor-david-rolfe-buys-one-new-stock-2013-11-15": [
+    {
+      "sub": "Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Holds",
+      "rel_category": "SSI",
+      "obj": "Apple Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Holds",
+      "rel_category": "SSI",
+      "obj": "Qualcomm Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Holds",
+      "rel_category": "SSI",
+      "obj": "EMC Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Holds",
+      "rel_category": "SSI",
+      "obj": "Cognizant Technology Solutions Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "David Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Purchases",
+      "rel_category": "SSI",
+      "obj": "MT Bank Corp",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "David Rolfe",
+      "sub_type": "CONCEPT",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "MTB",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/applied-materials-inc-amat-ex-dividend-date-scheduled-november-19-2013-2013-11-18": [
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Eligible For",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend Payment",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reports",
+      "rel_category": "GMM",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Growth Forecast",
+      "sub_type": "CONCEPT",
+      "rel": "Outperforms",
+      "rel_category": "GMM",
+      "obj": "Industry Average Earnings Growth",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Held By",
+      "rel_category": "GFMK",
+      "obj": "iShares Goldman Sachs Semiconductor Index Fund",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Held By",
+      "rel_category": "GFMK",
+      "obj": "PowerShares Dynamic Semiconductors",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Held By",
+      "rel_category": "GFMK",
+      "obj": "ELEMENTS Exchange Traded Notes Morningstar Wide Moat Focus Tot",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Held By",
+      "rel_category": "GFMK",
+      "obj": "Columbia Select Large Cap Value ETF",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AMAT",
+      "sub_type": "STOCKTICKER",
+      "rel": "Held By",
+      "rel_category": "GFMK",
+      "obj": "streetTRACKS Morgan Stanley Technology Index Fund",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/microchip-technology-incorporated-mchp-ex-dividend-date-scheduled-november-19-2013-2013-11": [
+    {
+      "sub": "MCHP",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MCHP",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MCHP",
+      "sub_type": "COMPANY",
+      "rel": "Has Forecasted Earnings Growth Of",
+      "rel_category": "SSI",
+      "obj": "3103",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Average Earnings Growth Rate Is",
+      "rel_category": "GMM",
+      "obj": "96",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/will-marvell-mrvl-miss-earnings-estimates-analyst-blog-2013-11-18": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Fiscal 2014 Third Quarter Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Trina Solar Limited",
+      "sub_type": "COMPANY",
+      "rel": "Has Potential To",
+      "rel_category": "GMM",
+      "obj": "Post Earnings Beat",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TiVo Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has Potential To",
+      "rel_category": "GMM",
+      "obj": "Post Earnings Beat",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Delivers",
+      "rel_category": "SSI",
+      "obj": "Solid Second Quarter Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/maxim-integrated-products-inc-mxim-ex-dividend-date-scheduled-november-19-2013-2013-11-18": [
+    {
+      "sub": "MXIM",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MXIM",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MXIM",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts Decline In",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/tessera-technologies-inc-tsra-ex-dividend-date-scheduled-november-19-2013-2013-11-18": [
+    {
+      "sub": "TSRA",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSRA",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Publishes Forecast For",
+      "rel_category": "SSI",
+      "obj": "TSRA",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSRA",
+      "sub_type": "COMPANY",
+      "rel": "Forecasted Earnings Growth",
+      "rel_category": "SSI",
+      "obj": "45172",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Has Industry Average",
+      "rel_category": "GFMK",
+      "obj": "236",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nvidia-corporation-nvda-ex-dividend-date-scheduled-november-19-2013-2013-11-18": [
+    {
+      "sub": "NVDA",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVDA",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Forecasted Earnings Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/steven-cohens-top-five-holdings-2013-11-19": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Held By",
+      "rel_category": "SSI",
+      "obj": "The guru",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Has Market Cap Of",
+      "rel_category": "GFMK",
+      "obj": "2065 billion",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-nov-19-2013-ual-mrvl-elp-pg-csco-yhoo-wfc-ktos-ice-amwd-fitb-bac": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MRVL",
+      "sub_type": "STOCKTICKER",
+      "rel": "Derives Value From",
+      "rel_category": "SSI",
+      "obj": "Marvell Technology Group Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/is-this-the-top-for-marvell-technology-group-ltd.-mrvl-tale-of-the-tape-2013-11-19": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Moves Higher In Stock Price",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Enters Overbought Territory",
+      "rel_category": "GFMK",
+      "obj": "RSI Value",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qcom-starts-shipping-smartwatch-toq-analyst-blog-2013-11-19": [
+    {
+      "sub": "Connected Experiences",
+      "sub_type": "COMPANY",
+      "rel": "Ships",
+      "rel_category": "SSI",
+      "obj": "Toq Smartwatch",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Samsung",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "Galaxy Gear Smartwatch",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Toq Smartwatch",
+      "sub_type": "PRODUCT",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Galaxy Gear Smartwatch",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/risk-reward-balance-qualcomm-analyst-blog-2013-11-19": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Faces Competitive Threat From",
+      "rel_category": "SSI",
+      "obj": "Intel Corp",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "HighEnd Smartphones",
+      "sub_type": "CONCEPT",
+      "rel": "Experience Decreasing Growth Rate",
+      "rel_category": "GMM",
+      "obj": "Smartphone Chipset Segment",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/amats-4q-earnings-beat-estimates-analyst-blog-2013-11-19": [
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Exceeds",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Solar Segment",
+      "sub_type": "PRODUCT",
+      "rel": "Experience Overcapacity",
+      "rel_category": "GMM",
+      "obj": "Market Condition",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Cuts Investment In",
+      "rel_category": "SSI",
+      "obj": "Solar Segment",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/broadcom-corporation-brcm-ex-dividend-date-scheduled-november-21-2013-2013-11-20": [
+    {
+      "sub": "BRCM",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GMM",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "BRCM",
+      "sub_type": "COMPANY",
+      "rel": "Pays Dividend To",
+      "rel_category": "SSI",
+      "obj": "Shareholders",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "BRCM",
+      "sub_type": "COMPANY",
+      "rel": "Has Forecasted Earnings Growth",
+      "rel_category": "SSI",
+      "obj": "1155",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes Companies Such As",
+      "rel_category": "GFMK",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes Companies Such As",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-nov-21-2013-cx-qqq-p-fig-s-key-rst-intc-mu-csco-ctrp-rost-2013-11": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Price Of",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "2000",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Records",
+      "rel_category": "SSI",
+      "obj": "52Week High",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/shorts-maintain-advantage-trading-marvell-wake-evening-earnings-2013-11-21": [
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Results",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Stock Buyback Plan",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Guides Above",
+      "rel_category": "SSI",
+      "obj": "Street Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Exceeds Expectations",
+      "rel_category": "SSI",
+      "obj": "Revenue Guidance",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/earnings-reaction-history-marvell-technology-group-ltd-455-follow-through-indicator-55": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Announcement",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Announcement",
+      "sub_type": "CONCEPT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Announcement",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ExtendedHours Gains",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Correlates With",
+      "rel_category": "GMM",
+      "obj": "Additional Regular Session Gain",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ExtendedHours Losses",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Correlates With",
+      "rel_category": "GMM",
+      "obj": "Further Regular Session Loss",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/tech-stocks-moderately-higher-micron-tech-climbs-new-52-week-high-after-einhorn-reveals": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Rises",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "David Einhorn",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reveals Position In",
+      "rel_category": "SSI",
+      "obj": "Micron Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Greenlight Capital",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Takes Undisclosed Position In",
+      "rel_category": "SSI",
+      "obj": "Micron Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "KNDI",
+      "sub_type": "COMPANY",
+      "rel": "Announces Joint Venture With",
+      "rel_category": "SSI",
+      "obj": "Geely Automobile Holdings Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "KNDIGeely JV",
+      "sub_type": "CONCEPT",
+      "rel": "Produces",
+      "rel_category": "SSI",
+      "obj": "Components And Parts For Electric Vehicles",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/micron-technology-mu-jumps%3A-stock-adds-6.3-in-session-tale-of-the-tape-2013-11-22": [
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Increase In",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Sees Positive Revision",
+      "rel_category": "GMM",
+      "obj": "Analyst Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/johos-robert-karr-trims-top-holdings-2013-11-22": [
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Impacts",
+      "rel_category": "GMM",
+      "obj": "Portfolio",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Shares Owned",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Market Cap",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Traded At",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "PE Ratio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/dow-sp-500-notch-record-highs-and-weekly-gains-2013-11-22": [
+    {
+      "sub": "Dennis Lockhart",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Offers Reassurance To",
+      "rel_category": "GMM",
+      "obj": "Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Quarterly Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Quarterly Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Beat Estimates",
+      "rel_category": "SSI",
+      "obj": "Analyst Expectations",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TMobile US Inc",
+      "sub_type": "COMPANY",
+      "rel": "Receives",
+      "rel_category": "SSI",
+      "obj": "Downbeat Analyst Attention",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qcom-arm-enhances-4g-lte-connectivity-analyst-blog-2013-11-22": [
+    {
+      "sub": "Qualcomm Technologies",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "Gobi 9x35",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Technologies",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "WTR3925 RF Transceiver Chip",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Gobi 9x35",
+      "sub_type": "PRODUCT",
+      "rel": "Supports",
+      "rel_category": "SSI",
+      "obj": "4G LTE Advanced Mobile Broadband Connectivity",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/har-amat-key-fcea-third-avenue-management-sells-review-2013-11-24": [
+    {
+      "sub": "Applied Materials Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Net Income",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Net Income",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Amount",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials Inc",
+      "sub_type": "COMPANY",
+      "rel": "Impacts",
+      "rel_category": "GMM",
+      "obj": "Portfolio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Portfolio",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Decreases",
+      "rel_category": "GMM",
+      "obj": "Value",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qcom-samsung-join-forces-analyst-blog-2013-11-25": [
+    {
+      "sub": "Qualcomm Technologies Inc",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Samsung",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Chinese BeiDou Satellite Navigation System",
+      "sub_type": "CONCEPT",
+      "rel": "Integrates Into",
+      "rel_category": "SSI",
+      "obj": "Product Portfolio",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IZat location solution",
+      "sub_type": "PRODUCT",
+      "rel": "Powered By",
+      "rel_category": "SSI",
+      "obj": "Snapdragon 800 processors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IZat location solution",
+      "sub_type": "PRODUCT",
+      "rel": "Incorporates",
+      "rel_category": "SSI",
+      "obj": "BeiDou Satellite Navigation System",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Technologies Inc",
+      "sub_type": "COMPANY",
+      "rel": "Provides",
+      "rel_category": "SSI",
+      "obj": "LocationBased Information",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Samsung Galaxy Note 3 users in China",
+      "sub_type": "SECTOR",
+      "rel": "Benefit From",
+      "rel_category": "SSI",
+      "obj": "IZat location solution",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intels-analyst-day-update-analyst-blog-2013-11-25": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures For",
+      "rel_category": "SSI",
+      "obj": "Nvidia",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures For",
+      "rel_category": "SSI",
+      "obj": "Qualcomm",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Management",
+      "sub_type": "CONCEPT",
+      "rel": "States",
+      "rel_category": "GMM",
+      "obj": "Expansion Of Contract Manufacturing Business Will Drive LongTerm Growth",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/sector-update-technology-shares-mixed-pre-market-qualcomm-drops-2-2013-11-25": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Camtek",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-nov-25-2013-thc-ha-nihd-msft-yhoo-bac-ge-qcom-ebay-wpc-pfe-pg-2013": [
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Mean Recommendation",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks",
+      "sub_type": "CONCEPT",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Mean Recommendation",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Is Covered By",
+      "rel_category": "GMM",
+      "obj": "Short Interest Update",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/marvell-beats-on-q3-earnings-estimates-analyst-blog-2013-11-25": [
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Adjusted Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Adjusted Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Beats",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Mobile and Wireless end markets",
+      "sub_type": "SECTOR",
+      "rel": "Increase",
+      "rel_category": "SSI",
+      "obj": "63",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Customers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "WCDMA and TDSCDMA 3G products",
+      "sub_type": "PRODUCT",
+      "rel": "Increase In Unit Shipments",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/jeff-saut-9-stocks-should-be-investors-watch-lists-2013-11-25": [
+    {
+      "sub": "Baupost",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Takes Position In",
+      "rel_category": "SSI",
+      "obj": "Micron",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron",
+      "sub_type": "COMPANY",
+      "rel": "Rated By",
+      "rel_category": "SSI",
+      "obj": "Raymond James",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Ticker",
+      "rel_category": "GFMK",
+      "obj": "MU",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-earnings-report-november-26-2013-hpq-adi-blox-tivo-avav-zlc-game-qada-tlys": [
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Misses",
+      "rel_category": "SSI",
+      "obj": "Consensus Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Price to Earnings Ratio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Price to Earnings Ratio",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Is Higher Than",
+      "rel_category": "GMM",
+      "obj": "Industry Average Price to Earnings Ratio",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qualcomm-faces-chinese-probe-analyst-blog-2013-11-26": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Faces",
+      "rel_category": "SSI",
+      "obj": "AntiMonopoly Investigation",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "National",
+      "sub_type": "Development",
+      "rel": "and",
+      "rel_category": "Reform",
+      "obj": "Commission",
+      "obj_type": "NDRC",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Develops Chipsets For",
+      "rel_category": "SSI",
+      "obj": "TDLTE Network",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "China Mobile",
+      "sub_type": "COMPANY",
+      "rel": "Plans Deployment Of",
+      "rel_category": "SSI",
+      "obj": "TDLTE Network",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Sees Potential Growth In",
+      "rel_category": "SSI",
+      "obj": "China Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/mid-morning-market-update-markets-open-higher-hewlett-packard-profit-beats-estimates-2013": [
+    {
+      "sub": "GW Pharmaceuticals plc",
+      "sub_type": "COMPANY",
+      "rel": "Receives Approval For",
+      "rel_category": "SSI",
+      "obj": "Sativex",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Sativex",
+      "sub_type": "PRODUCT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infoblox",
+      "sub_type": "COMPANY",
+      "rel": "Issues",
+      "rel_category": "SSI",
+      "obj": "Weak Outlook",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Weak Outlook",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infoblox",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Downbeat Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Downbeat Revenue",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/pre-market-hp-surges-despite-falling-sales-sec-investigates-citigroup-morgan-stanley": [
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Forecasted",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Trails Expectations Of",
+      "rel_category": "SSI",
+      "obj": "Wall Street",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/stock-downgrades-tillys-total-turkey-2013-11-27": [
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Revenue",
+      "sub_type": "ECONINDicator",
+      "rel": "Falls Short Of",
+      "rel_category": "SSI",
+      "obj": "Analyst Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Drexel Hamilton",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Downgrades",
+      "rel_category": "SSI",
+      "obj": "Analog Devices",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Rated As",
+      "rel_category": "SSI",
+      "obj": "Hold",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analysts",
+      "sub_type": "CONCEPT",
+      "rel": "Expect",
+      "rel_category": "GMM",
+      "obj": "October Leading Indicators",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "October Leading Indicators",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Expected To Decline From",
+      "rel_category": "GMM",
+      "obj": "September Rate",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Rated As",
+      "rel_category": "SSI",
+      "obj": "Sector Perform",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "RBC Capital",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Downgrades",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/mid-day-market-update-infoblox-tumbles-weak-guidance-gw-pharma-shares-jump-2013-11-27": [
+    {
+      "sub": "GW Pharmaceuticals plc",
+      "sub_type": "COMPANY",
+      "rel": "Received Approval For",
+      "rel_category": "SSI",
+      "obj": "Sativex",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Sativex",
+      "sub_type": "PRODUCT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "GW Pharmaceuticals plc",
+      "sub_type": "COMPANY",
+      "rel": "Sees Increase In",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infoblox",
+      "sub_type": "COMPANY",
+      "rel": "Issues Weak Outlook For",
+      "rel_category": "SSI",
+      "obj": "Second Quarter",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Weak Outlook",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infoblox",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qcom-confirms-omnitracs-unit-sale-analyst-blog-2013-11-27": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Sells",
+      "rel_category": "SSI",
+      "obj": "Omnitracs Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Vista Equity Partners",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Buys",
+      "rel_category": "SSI",
+      "obj": "Omnitracs Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Receives Payment Of",
+      "rel_category": "SSI",
+      "obj": "Cash",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/analog-devices-beats-on-q4-earnings-analyst-blog-2013-11-27": [
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Beat",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Next Generation Safety Platforms",
+      "sub_type": "CONCEPT",
+      "rel": "See Higher Adoption Rates",
+      "rel_category": "SSI",
+      "obj": "Advanced Driver Assistance Systems Radar",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nokia-to-present-lumia-525-analyst-blog-2013-11-29": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Supplies",
+      "rel_category": "SSI",
+      "obj": "Processor",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Nokia CPADR A",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "New Device",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New Device",
+      "sub_type": "PRODUCT",
+      "rel": "Features",
+      "rel_category": "SSI",
+      "obj": "1 GHz DualCore S4 Processor",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New Device",
+      "sub_type": "PRODUCT",
+      "rel": "Features",
+      "rel_category": "SSI",
+      "obj": "8 GB Memory Space",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New Device",
+      "sub_type": "PRODUCT",
+      "rel": "Features",
+      "rel_category": "SSI",
+      "obj": "5 MP Camera Without Flash",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/seagate-reiterated-at-neutral-analyst-blog-2013-11-29": [
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Western Digital",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Hitachi",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Samsung",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "SanDisk",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Seagate",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Micron",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/company-news-for-november-29-2013-corporate-summary-2013-11-29": [
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Surpasses",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infoblox Inc",
+      "sub_type": "COMPANY",
+      "rel": "Posts",
+      "rel_category": "SSI",
+      "obj": "Loss Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Loss Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Wider Than",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AeroVironment Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Surpasses",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ship Finance International Limited",
+      "sub_type": "COMPANY",
+      "rel": "Posts",
+      "rel_category": "SSI",
+      "obj": "Earnings Per Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Lower Than",
+      "rel_category": "SSI",
+      "obj": "Zacks Consensus Estimate",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/micron-shares-hit-52-week-high-analyst-blog-2013-11-29": [
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Hits New High",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ]
+}
