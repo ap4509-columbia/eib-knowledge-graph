@@ -18,6 +18,14 @@
       "features": ["graph"]
     },
     {
+      "id": "report",
+      "label": "Project report (PDF)",
+      "description": "The full three-semester project report — data, pipeline, GAT, benchmarks, live corpus, factor model, and UI — as an in-app PDF.",
+      "kind": "report",
+      "available": true,
+      "features": ["report"]
+    },
+    {
       "id": "stoxx_600_factors",
       "label": "STOXX Europe 600 (Live)",
       "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",

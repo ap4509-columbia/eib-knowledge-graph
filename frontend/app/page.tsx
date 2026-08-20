@@ -36,7 +36,7 @@ import { DEFAULT_PHYSICS, type PhysicsSettings } from "@/components/GraphCanvas"
 import { PredictionsView } from "@/components/PredictionsPanel";
 import { FactorAnalysisView } from "@/components/FactorAnalysisPanel";
 
-type ActiveTab = "graph" | "predictions" | "factors";
+type ActiveTab = "graph" | "predictions" | "factors" | "report";
 
 const GraphCanvas = dynamic(
   () => import("@/components/GraphCanvas").then((m) => m.GraphCanvas),
@@ -218,6 +218,11 @@ export default function Home() {
     if (typeof window !== "undefined") {
       window.localStorage.setItem(ACTIVE_SOURCE_STORAGE_KEY, activeSourceId);
     }
+    // The report pseudo-source has no index/snapshots — it renders a PDF.
+    if (activeSourceId === "report") {
+      setLoading(false);
+      return;
+    }
     loadIndex(activeSourceId);
   }, [activeSourceId, loadIndex]);
 
@@ -229,7 +234,17 @@ export default function Home() {
     const currentSource = sources.sources.find((s) => s.id === activeSourceId);
     const features = new Set(currentSource?.features ?? ["graph"]);
     if (!features.has(activeTab)) {
-      setActiveTab(features.has("graph") ? "graph" : "predictions");
+      setActiveTab(
+        features.has("graph")
+          ? "graph"
+          : features.has("predictions")
+            ? "predictions"
+            : features.has("factors")
+              ? "factors"
+              : features.has("report")
+                ? "report"
+                : "graph"
+      );
     }
   }, [sources, activeSourceId, activeTab]);
 
@@ -572,6 +587,7 @@ export default function Home() {
               { id: "graph" as const, label: "Knowledge graph" },
               { id: "predictions" as const, label: "Predictions" },
               { id: "factors" as const, label: "Factor analysis" },
+              { id: "report" as const, label: "Report" },
             ].filter((t) => features.has(t.id));
           })().map((tab) => {
             const active = activeTab === tab.id;
@@ -602,7 +618,7 @@ export default function Home() {
             the whole precomputed bundle and none of the rail's controls
             apply to it. */}
         <div className="flex flex-1 overflow-hidden">
-          {activeTab !== "factors" && (
+          {activeTab !== "factors" && activeTab !== "report" && (
             <FilterRail
               snapshot={snapshot}
               visibleTypes={visibleTypes}
@@ -680,6 +696,29 @@ export default function Home() {
               activeSourceId && (
                 <FactorAnalysisView sourceId={activeSourceId} />
               )
+            ) : activeTab === "report" ? (
+              // Browser-native PDF viewer over the compiled project report,
+              // with an escape hatch for browsers that won't inline PDFs.
+              <div className="flex h-full flex-col">
+                <div className="flex shrink-0 items-center justify-between border-b border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
+                  <span>
+                    LLM and Graphs for Financial Texts — full project report
+                  </span>
+                  <a
+                    href="/report.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-border px-2 py-0.5 transition hover:text-foreground"
+                  >
+                    Open in new tab ↗
+                  </a>
+                </div>
+                <iframe
+                  src="/report.pdf"
+                  title="EIB Knowledge Graph — full project report"
+                  className="min-h-0 w-full flex-1 border-0"
+                />
+              </div>
             ) : null}
           </main>
         </div>
@@ -692,7 +731,7 @@ export default function Home() {
             gat.py). Hidden on Factor analysis: the factor bundle is
             always the latest rolling window, so the timeline would be a
             dead control there. */}
-        {activeTab !== "factors" && (
+        {activeTab !== "factors" && activeTab !== "report" && (
           <TimeSlider
             months={actualMonths}
             futureMonths={futureMonths}
