@@ -171,7 +171,7 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
  *  and how each column is derived. Collapses on click; the choice is
  *  remembered per browser via localStorage so returning users aren't
  *  re-lectured. */
-function AboutSection() {
+function AboutSection({ mrr }: { mrr?: number }) {
   // Default to COLLAPSED so the table (below) always has room. Users can
   // toggle to expand; choice is remembered per browser via localStorage.
   const [collapsed, setCollapsed] = useState(true);
@@ -257,11 +257,14 @@ function AboutSection() {
             </div>
             <div>
               On rolling monthly link-prediction tests the model's Mean
-              Reciprocal Rank is <span className="text-foreground">0.77</span>.
-              In plain English: when asked to rank the true co-mover of an
+              Reciprocal Rank is{" "}
+              <span className="text-foreground">
+                {(mrr ?? 0.77).toFixed(2)}
+              </span>
+              . In plain English: when asked to rank the true co-mover of an
               entity against 50 random alternatives, the correct one lands
-              around position 1.3 on average. Random guessing would place it
-              around position 26.
+              around position {(1 / (mrr ?? 0.77)).toFixed(1)} on average.
+              Random guessing would place it around position 26.
             </div>
           </div>
 
@@ -405,7 +408,7 @@ export function PredictionsView({
         )}
       </div>
 
-      <AboutSection />
+      <AboutSection mrr={data?.mrr} />
 
       {error && (
         <div className="px-6 py-6 text-xs text-destructive">

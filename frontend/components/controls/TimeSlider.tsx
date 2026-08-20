@@ -205,7 +205,7 @@ export function TimeSlider({
             </span>
             <span
               className="ml-auto text-muted-foreground/70"
-              title={`Window size fixed at ${predictionsContext!.trainingWindow} training months (1 quarter) per the rolling-window GAT — see scripts/compute_gat_predictions.py. Raw per-month prediction bundle: sources/fnspid-19-20-semis/predictions.json — hover to verify against the model.`}
+              title={`Window size fixed at ${predictionsContext!.trainingWindow} training months (1 quarter) per the rolling-window GAT — see scripts/compute_gat_predictions.py. Raw per-month prediction bundle: this source's predictions.json under /data/sources/ — hover to verify against the model.`}
             >
               drag the window · rolling window = {predictionsContext!.trainingWindow} months
             </span>
