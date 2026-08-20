@@ -9,8 +9,9 @@ name: Daily factor-model refresh
 # but staggering keeps the log noise separable.
 
 on:
-  schedule:
-    - cron: '30 7 * * *'
+  # Schedule moved to the GPU VM (cron 07:30 UTC, local Qwen backend —
+  # zero API cost; see ~/stoxx_daily.sh on eib-central1a). Manual dispatch
+  # kept as a Gemini-backed fallback if the VM is down.
   workflow_dispatch:
     inputs:
       articles_per_ticker:
