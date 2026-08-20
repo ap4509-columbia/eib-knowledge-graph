@@ -35,7 +35,7 @@
     {
       "id": "stoxx_600_factors",
       "label": "STOXX Europe 600 (Live)",
-      "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed daily via GitHub Actions.",
+      "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed every morning by the team GPU VM using local qwen2.5:14b \u2014 zero API cost.",
       "kind": "live",
       "available": true,
       "features": [
