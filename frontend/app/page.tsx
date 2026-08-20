@@ -514,16 +514,16 @@ export default function Home() {
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
-                  {sources.sources.map((s) => (
-                    <option
-                      key={s.id}
-                      value={s.id}
-                      disabled={!s.available}
-                      title={s.description}
-                    >
-                      {s.label}
-                    </option>
-                  ))}
+                  {/* Unavailable sources are hidden outright (not grayed):
+                      retiring a source is a one-flag change in
+                      sources.json — set "available": false. */}
+                  {sources.sources
+                    .filter((s) => s.available)
+                    .map((s) => (
+                      <option key={s.id} value={s.id} title={s.description}>
+                        {s.label}
+                      </option>
+                    ))}
                 </select>
               </label>
             )}
