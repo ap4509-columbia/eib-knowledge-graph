@@ -48,6 +48,20 @@ export function TimeSlider({
   const allMonths = [...months, ...futureMonths];
   const total = allMonths.length;
 
+  // Measured width of the label row — long corpora (15 years = 16 year
+  // labels) need adaptive thinning or the year numbers overlap.
+  // Hooks live above the early return to satisfy the rules of hooks.
+  const labelRowRef = useRef<HTMLDivElement>(null);
+  const [rowWidth, setRowWidth] = useState(0);
+  useEffect(() => {
+    const el = labelRowRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setRowWidth(el.clientWidth));
+    ro.observe(el);
+    setRowWidth(el.clientWidth);
+    return () => ro.disconnect();
+  }, []);
+
   if (total === 0) {
     return (
       <div className="border-t border-border px-6 py-4 font-mono text-xs text-muted-foreground">
@@ -113,6 +127,17 @@ export function TimeSlider({
       prevYear = y;
     }
   });
+  // Thin the year labels to what actually fits: ~40px per "2026"-style
+  // label, measured against the row's real width. Long corpora keep every
+  // Nth year instead of overlapping all of them.
+  const yearStride = Math.max(
+    1,
+    Math.ceil((yearTicks.length * 40) / Math.max(rowWidth, 240))
+  );
+  const yearTicksShown = yearTicks.filter((_, i) => i % yearStride === 0);
+  // Very dense axes (>96 months) drop the minor month ticks — January
+  // ticks alone carry the rhythm; minors become sub-5px noise.
+  const showMinorTicks = total <= 96;
 
   return (
     <div className="border-t border-border bg-background/80 px-6 pb-3 pt-3 backdrop-blur">
@@ -253,6 +278,7 @@ export function TimeSlider({
         <div className="pointer-events-none relative mt-1 h-2.5">
           {allMonths.map((m, i) => {
             const isJan = m.endsWith("-01");
+            if (!isJan && !showMinorTicks) return null;
             const isFutureTick = i >= months.length;
             const inRange = i >= fromIdx && i <= toIdx;
             return (
@@ -279,9 +305,9 @@ export function TimeSlider({
           />
         </div>
 
-        {/* Year labels along the bottom */}
-        <div className="relative mt-1 h-4">
-          {yearTicks.map(({ year, idx }) => (
+        {/* Year labels along the bottom — adaptively thinned to fit */}
+        <div ref={labelRowRef} className="relative mt-1 h-4">
+          {yearTicksShown.map(({ year, idx }) => (
             <span
               key={year}
               className="absolute -translate-x-1/2 font-mono text-[10px] tabular-nums text-muted-foreground"
