@@ -709,8 +709,8 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
         // never engage, and everything below the fold is silently clipped.
         // The scrubber lives outside the entity-count branch so an empty
         // date can never strand the user without a way to scrub back.
-        <div className="flex min-h-0 flex-1 overflow-hidden">
-          <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden md:flex-row">
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
             {data.entities.length > 0 ? (
               <div
                 className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4 transition-opacity duration-150"
@@ -736,7 +736,7 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
               />
             )}
           </div>
-          <div className="w-72 shrink-0 space-y-2 overflow-y-auto border-l border-border/60 px-4 py-4">
+          <div className="max-h-52 w-full shrink-0 space-y-2 overflow-y-auto border-t border-border/60 px-4 py-4 md:max-h-none md:w-72 md:border-l md:border-t-0">
             <div className="mb-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
               Archetype clusters
             </div>

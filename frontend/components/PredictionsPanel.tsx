@@ -445,7 +445,10 @@ export function PredictionsView({
       )}
 
       {period && (
-        <>
+        // overflow-x lets the wide leaderboard grid scroll sideways on
+        // phones; the inner min-w keeps header and rows column-aligned.
+        <div className="flex min-h-0 flex-1 flex-col overflow-x-auto">
+          <div className="flex min-h-0 min-w-[880px] flex-1 flex-col">
           <div
             className={`${COLS} shrink-0 border-b border-border bg-muted/40 px-6 py-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground`}
           >
@@ -483,7 +486,8 @@ export function PredictionsView({
               )}
             </div>
           </div>
-        </>
+          </div>
+        </div>
       )}
     </div>
   );

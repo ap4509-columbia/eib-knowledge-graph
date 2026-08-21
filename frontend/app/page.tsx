@@ -8,6 +8,8 @@ import {
   AlertCircle,
   Search as SearchIcon,
   Settings as SettingsIcon,
+  SlidersHorizontal,
+  X,
 } from "lucide-react";
 
 import {
@@ -123,6 +125,8 @@ export default function Home() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // Phone-width filter drawer (the rail is inline from md up).
+  const [mobileRailOpen, setMobileRailOpen] = useState(false);
   const [physics, setPhysics] = useState<PhysicsSettings>(DEFAULT_PHYSICS);
   const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
   // Types / causal-types the app has ever encountered under the current
@@ -484,12 +488,12 @@ export default function Home() {
     <>
       <div className="flex h-screen w-screen flex-col overflow-hidden bg-background text-foreground">
         {/* Header */}
-        <header className="flex shrink-0 items-center justify-between border-b border-border px-6 py-3">
-          <div className="flex items-baseline gap-3">
-            <h1 className="text-base font-semibold tracking-tight">
+        <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 sm:px-6 sm:py-3">
+          <div className="flex min-w-0 items-baseline gap-3">
+            <h1 className="whitespace-nowrap text-sm font-semibold tracking-tight sm:text-base">
               EIB Knowledge Graph
             </h1>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="hidden truncate font-mono text-xs text-muted-foreground sm:block">
               {snapshot
                 ? `${formatMonthRange(monthFrom, monthTo)}${
                     selectedMonths.length > 1
@@ -503,16 +507,16 @@ export default function Home() {
                   : "no data"}
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex w-full min-w-0 items-center gap-2 sm:w-auto">
             {sources &&
               activeSourceId &&
               sources.sources.find((s) => s.id === activeSourceId)?.kind ===
                 "live" && <LiveBadge sourceId={activeSourceId} />}
             {sources && (
-              <label className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <label className="flex min-w-0 flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:flex-initial">
                 <span className="hidden sm:inline">Data source</span>
                 <select
-                  className="rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring"
+                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto"
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
@@ -530,7 +534,7 @@ export default function Home() {
               </label>
             )}
             {index && (
-              <span className="mr-2 font-mono text-xs text-muted-foreground">
+              <span className="mr-2 hidden font-mono text-xs text-muted-foreground md:inline">
                 {index.months.length} months
               </span>
             )}
@@ -540,7 +544,7 @@ export default function Home() {
               className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-accent"
             >
               <SearchIcon className="h-3.5 w-3.5" />
-              Search
+              <span className="hidden sm:inline">Search</span>
               <kbd className="ml-1 hidden rounded border border-border bg-background px-1.5 font-mono text-[10px] text-muted-foreground sm:inline-block">
                 ⌘K
               </kbd>
@@ -610,7 +614,16 @@ export default function Home() {
               </button>
             );
           })}
-
+          {(activeTab === "graph" || activeTab === "predictions") && (
+            <button
+              type="button"
+              onClick={() => setMobileRailOpen(true)}
+              className="ml-auto mb-1 flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1.5 text-xs font-medium text-foreground md:hidden"
+            >
+              <SlidersHorizontal className="h-3.5 w-3.5" />
+              Filters
+            </button>
+          )}
         </div>
 
         {/* Body: filter rail | active tab content.
@@ -620,22 +633,56 @@ export default function Home() {
             the whole precomputed bundle and none of the rail's controls
             apply to it. */}
         <div className="flex flex-1 overflow-hidden">
-          {activeTab !== "factors" && activeTab !== "report" && (
-            <FilterRail
-              snapshot={snapshot}
-              visibleTypes={visibleTypes}
-              visibleCategories={visibleCategories}
-              minDegreePct={minDegreePct}
-              minDegree={minDegree}
-              maxDegree={maxDegree}
-              onToggleType={handleToggleType}
-              onToggleCategory={handleToggleCategory}
-              onMinDegreePctChange={handleMinDegreePctChange}
-              sectors={sectorCounts}
-              visibleSectors={visibleSectors}
-              onToggleSector={handleToggleSector}
-            />
-          )}
+          {activeTab !== "factors" &&
+            activeTab !== "report" &&
+            (() => {
+              const rail = (
+                <FilterRail
+                  snapshot={snapshot}
+                  visibleTypes={visibleTypes}
+                  visibleCategories={visibleCategories}
+                  minDegreePct={minDegreePct}
+                  minDegree={minDegree}
+                  maxDegree={maxDegree}
+                  onToggleType={handleToggleType}
+                  onToggleCategory={handleToggleCategory}
+                  onMinDegreePctChange={handleMinDegreePctChange}
+                  sectors={sectorCounts}
+                  visibleSectors={visibleSectors}
+                  onToggleSector={handleToggleSector}
+                />
+              );
+              return (
+                <>
+                  {/* Desktop: inline column. Phone: slide-over drawer
+                      behind the Filters button in the tab strip. */}
+                  <div className="hidden md:contents">{rail}</div>
+                  {mobileRailOpen && (
+                    <div className="fixed inset-0 z-40 md:hidden">
+                      <div
+                        className="absolute inset-0 bg-black/40"
+                        onClick={() => setMobileRailOpen(false)}
+                      />
+                      <div className="absolute inset-y-0 left-0 flex max-w-[85vw] flex-col bg-background shadow-xl">
+                        <div className="flex items-center justify-end border-b border-border px-2 py-1">
+                          <button
+                            type="button"
+                            aria-label="Close filters"
+                            onClick={() => setMobileRailOpen(false)}
+                            className="rounded-md p-2 text-muted-foreground transition hover:text-foreground"
+                          >
+                            <X className="h-4 w-4" />
+                          </button>
+                        </div>
+                        <div className="min-h-0 flex-1 overflow-hidden [&>aside]:h-full [&>aside]:border-r-0">
+                          {rail}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </>
+              );
+            })()}
 
           <main className="relative flex-1 overflow-hidden">
             {error && (
@@ -757,7 +804,7 @@ export default function Home() {
           />
         )}
 
-        <footer className="shrink-0 border-t border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
+        <footer className="shrink-0 truncate border-t border-border px-3 py-2 font-mono text-[10px] text-muted-foreground sm:px-6">
           IEOR 4737 · Sponsor: European Investment Bank · Summer 2026
         </footer>
       </div>
