@@ -26,6 +26,7 @@ import {
   inferNodeSectors,
   SECTOR_SOURCE_IDS,
 } from "@/lib/sectors";
+import { LiveBadge } from "@/components/LiveBadge";
 import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
@@ -503,6 +504,10 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-2">
+            {sources &&
+              activeSourceId &&
+              sources.sources.find((s) => s.id === activeSourceId)?.kind ===
+                "live" && <LiveBadge sourceId={activeSourceId} />}
             {sources && (
               <label className="flex items-center gap-1.5 text-xs text-muted-foreground">
                 <span className="hidden sm:inline">Data source</span>
