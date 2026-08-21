@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T07:35:08.155107+00:00",
+  "generated_at": "2026-08-21T17:21:22.674780+00:00",
   "min_articles": 2,
   "kept_factors": [
     "attention",
@@ -13,24 +13,20 @@
       "name": "ASML",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 1.3438522538683997,
-      "pc2": -0.2989054388671984,
-      "pc3": 0.9712485088824754,
+      "pc1": 1.0316222010506921,
+      "pc2": -0.2554617524432563,
+      "pc3": 1.186288739151926,
       "factors": {
-        "attention": 6.0,
-        "sentiment": 0.4833333333333334,
-        "consensus": 0.46953898457201504,
-        "novelty": 0.8333333333333334,
+        "attention": 5.0,
+        "sentiment": 0.44000000000000006,
+        "consensus": 0.42868572571657193,
+        "novelty": 0.8,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 5,
       "event_mix": [
         [
           "REGULATORY",
-          2
-        ],
-        [
-          "OTHER",
           2
         ],
         [
@@ -40,6 +36,10 @@
         [
           "MACRO",
           1
+        ],
+        [
+          "OTHER",
+          1
         ]
       ],
       "top_partners": [
@@ -47,17 +47,16 @@
         "China",
         "China's Semiconductor Policies",
         "Roaring Growth",
-        "Semiconductor",
-        "Share Price"
+        "Semiconductor"
       ]
     },
     {
       "name": "ASML Holding",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.07485400038105211,
-      "pc2": -0.8900511093209134,
-      "pc3": 1.2253315287837958,
+      "cluster": 2,
+      "pc1": 0.2954743795739965,
+      "pc2": -1.34337951730505,
+      "pc3": 0.9461777633407615,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.5,
@@ -84,10 +83,10 @@
     {
       "name": "ASML Holding N.V.",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.05844874782360103,
-      "pc2": -0.8576724030753898,
-      "pc3": 1.0449990096822637,
+      "cluster": 2,
+      "pc1": 0.20252705430505244,
+      "pc2": -1.2949280384511441,
+      "pc3": 0.736800205327948,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.45,
@@ -115,9 +114,9 @@
       "name": "Adyen",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 1.250931343563591,
-      "pc2": 0.057880840078503526,
-      "pc3": -0.11916217073554435,
+      "pc1": 0.993752380824599,
+      "pc2": 0.5925981285678403,
+      "pc3": 0.40079286921256974,
       "factors": {
         "attention": 6.0,
         "sentiment": 0.18333333333333335,
@@ -156,25 +155,21 @@
       "name": "AstraZeneca",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 2.0048916616725307,
-      "pc2": -0.331553333984996,
-      "pc3": 0.11610375168995817,
+      "pc1": 0.6561463485868722,
+      "pc2": 0.35716738400387943,
+      "pc3": 0.6223712160640463,
       "factors": {
-        "attention": 8.0,
-        "sentiment": 0.17500000000000004,
-        "consensus": 0.4174409901134478,
-        "novelty": 0.875,
+        "attention": 5.0,
+        "sentiment": 0.31999999999999995,
+        "consensus": 0.5980049751551644,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 5,
       "event_mix": [
         [
           "EARNINGS",
-          3
-        ],
-        [
-          "GUIDANCE",
-          1
+          2
         ],
         [
           "STRUCTURAL",
@@ -194,65 +189,61 @@
         "Cancer Diagnostics Deals",
         "LSE:AZN",
         "Oncology Drugs",
-        "Outlook",
-        "Profit",
-        "Rare Disease Drugs",
-        "a share price crash"
+        "Rare Disease Drugs"
       ]
     },
     {
       "name": "AstraZeneca PLC",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.09255795096293266,
-      "pc2": -0.8214589797922041,
-      "pc3": 0.3649704986500265,
+      "cluster": 3,
+      "pc1": -0.7041779843483159,
+      "pc2": 0.39255700421042844,
+      "pc3": -1.092626884563456,
       "factors": {
-        "attention": 3.0,
-        "sentiment": 0.2333333333333333,
-        "consensus": 0.65,
-        "novelty": 0.5,
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 2,
       "event_mix": [
         [
           "STRUCTURAL",
           2
-        ],
-        [
-          "GUIDANCE",
-          1
         ]
       ],
       "top_partners": [
-        "AZN.L",
-        "Potential Upside"
+        "AZN.L"
       ]
     },
     {
       "name": "BNP Paribas",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 1.3570532515543314,
-      "pc2": 0.047505150780248306,
-      "pc3": 0.3465591832381224,
+      "pc1": 1.0146579328633083,
+      "pc2": 0.717986481231593,
+      "pc3": 0.2496315482356279,
       "factors": {
-        "attention": 6.0,
-        "sentiment": 0.3333333333333333,
-        "consensus": 0.5285954792089682,
+        "attention": 7.0,
+        "sentiment": 0.14285714285714285,
+        "consensus": 0.6500728938881173,
         "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 7,
       "event_mix": [
         [
           "GUIDANCE",
           3
         ],
         [
-          "EARNINGS",
+          "OTHER",
           2
+        ],
+        [
+          "EARNINGS",
+          1
         ],
         [
           "STRUCTURAL",
@@ -265,31 +256,6 @@
         "Gold",
         "Ralph Lauren",
         "equity trading",
-        "profit"
-      ]
-    },
-    {
-      "name": "BNP Paribas AM",
-      "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.7841036979946607,
-      "pc2": 0.4075539051254863,
-      "pc3": -1.025149265596947,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
         "open-ended funds",
         "private asset allocations"
       ]
@@ -297,10 +263,10 @@
     {
       "name": "BP",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.6509234607543932,
-      "pc2": -0.5344026995217681,
-      "pc3": 0.3410907995692861,
+      "cluster": 2,
+      "pc1": -0.2738381388440802,
+      "pc2": -0.9075832065204845,
+      "pc3": -0.16231134324996283,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.3,
@@ -337,47 +303,40 @@
     {
       "name": "BP PLC",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 0.9944104070675921,
-      "pc2": 2.4707126921433327,
-      "pc3": 0.8494830261119127,
+      "cluster": 3,
+      "pc1": -0.145420669806145,
+      "pc2": 0.6602357831671883,
+      "pc3": -0.8563002483984188,
       "factors": {
-        "attention": 8.0,
-        "sentiment": 0.175,
-        "consensus": 0.6570714360103551,
-        "novelty": 0.8,
-        "materiality": 25.522027171994928
+        "attention": 5.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 5,
       "event_mix": [
         [
           "STRUCTURAL",
           4
         ],
         [
-          "GUIDANCE",
-          2
-        ],
-        [
           "EARNINGS",
-          2
+          1
         ]
       ],
       "top_partners": [
-        "15.51% Potential Upside",
         "BP.L",
-        "H1 Results",
-        "Half-Year 1 EPS of $0.49",
-        "Potential Upside"
+        "Half-Year 1 EPS of $0.49"
       ]
     },
     {
       "name": "BP p.l.c.",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.7991240279037237,
-      "pc2": -1.7667329425755078,
-      "pc3": 1.131489574844623,
+      "cluster": 2,
+      "pc1": 0.08681151500003748,
+      "pc2": -2.4494468137197516,
+      "pc3": 0.26307415707840626,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.35,
@@ -404,10 +363,10 @@
     {
       "name": "BPL",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8213012841744195,
-      "pc2": 2.038105248668101,
-      "pc3": -3.3607775621488956,
+      "cluster": 3,
+      "pc1": -1.386939956317275,
+      "pc2": 2.49852492468216,
+      "pc3": -2.569617454429163,
       "factors": {
         "attention": 2.0,
         "sentiment": -1.0,
@@ -434,10 +393,10 @@
     {
       "name": "Crux",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.5072864730341446,
-      "pc2": -1.5506117275167393,
-      "pc3": 1.0962153856238848,
+      "cluster": 2,
+      "pc1": -0.5765216916154905,
+      "pc2": -2.5235866761614756,
+      "pc3": -0.034853795613288496,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.4,
@@ -464,10 +423,10 @@
     {
       "name": "Deutsche Bank",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 0.1395897086190153,
-      "pc2": 0.14460550039669579,
-      "pc3": -1.8008410701622442,
+      "cluster": 3,
+      "pc1": 0.2969274236609492,
+      "pc2": 0.8535184715781498,
+      "pc3": -1.447452084308342,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.3333333333333333,
@@ -499,10 +458,10 @@
     {
       "name": "Eni",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 0.2411141996114599,
-      "pc2": 2.08862107294535,
-      "pc3": 0.9095246059261717,
+      "cluster": 0,
+      "pc1": -1.226343566561378,
+      "pc2": 1.2617846083080753,
+      "pc3": 1.5471114057551472,
       "factors": {
         "attention": 6.0,
         "sentiment": 0.3166666666666667,
@@ -538,9 +497,9 @@
       "name": "Equinor",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 1.9540541020167383,
-      "pc2": -0.4962278622088382,
-      "pc3": -0.4485927823156661,
+      "pc1": 1.9044767265311027,
+      "pc2": 0.5219646336642919,
+      "pc3": 0.2663885053923619,
       "factors": {
         "attention": 7.0,
         "sentiment": -0.04285714285714283,
@@ -575,10 +534,10 @@
     {
       "name": "Evexta Bio",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.2415458719901593,
-      "pc2": -0.8440977925273294,
-      "pc3": 0.4550119636818349,
+      "cluster": 2,
+      "pc1": -0.6229499781279032,
+      "pc2": -1.5031763034837973,
+      "pc3": -0.3381860781012926,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.3,
@@ -606,10 +565,10 @@
     {
       "name": "GRYPHLINE",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.4209190548277606,
-      "pc2": 0.4830224871859109,
-      "pc3": 0.45396211522384783,
+      "cluster": 3,
+      "pc1": -0.6626674084382156,
+      "pc2": 0.04368076232951184,
+      "pc3": 0.3131906018338543,
       "factors": {
         "attention": 4.0,
         "sentiment": 0.5,
@@ -634,50 +593,24 @@
       ]
     },
     {
-      "name": "HSBC",
-      "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.0887482948395355,
-      "pc2": -0.50449019708404,
-      "pc3": 1.804244323974357,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.8,
-        "consensus": 0.8999999999999999,
-        "novelty": 0.5,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "EARNINGS",
-          2
-        ]
-      ],
-      "top_partners": [
-        "Profit",
-        "Share Buybacks"
-      ]
-    },
-    {
       "name": "HSBC Holdings",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.2581734816654777,
-      "pc2": -0.5662640468656787,
-      "pc3": -0.5779936622315237,
+      "cluster": 3,
+      "pc1": -0.5179255461675923,
+      "pc2": 0.4817832638626817,
+      "pc3": -1.0138513391751103,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "STRUCTURAL",
-          1
+          2
         ],
         [
           "EARNINGS",
@@ -692,10 +625,10 @@
     {
       "name": "Harrisburg YMCA",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.8582652370515186,
-      "pc2": -0.6634001656022491,
-      "pc3": -0.03699610492692786,
+      "cluster": 2,
+      "pc1": -0.35515689730861105,
+      "pc2": -1.0042191653277082,
+      "pc3": -0.5194651427489313,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -722,10 +655,10 @@
     {
       "name": "Hershey brewery",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -0.42055574663794304,
-      "pc2": 1.6495318059840236,
-      "pc3": 0.9642502723316513,
+      "cluster": 0,
+      "pc1": -1.5089474216514482,
+      "pc2": 0.6469133024488823,
+      "pc3": 1.2352994305113854,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.5,
@@ -748,41 +681,40 @@
     {
       "name": "Inditex",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.04317953968381698,
-      "pc2": -1.2212904586190196,
-      "pc3": 0.274811104600474,
+      "cluster": 2,
+      "pc1": 0.016632403767164582,
+      "pc2": -1.1980250807433321,
+      "pc3": 0.3180450893023215,
       "factors": {
-        "attention": 3.0,
-        "sentiment": 0.13333333333333333,
-        "consensus": 0.5810064970007822,
-        "novelty": 0.3333333333333333,
+        "attention": 2.0,
+        "sentiment": 0.35,
+        "consensus": 0.65,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 2,
       "event_mix": [
         [
-          "EARNINGS",
-          2
+          "STRUCTURAL",
+          1
         ],
         [
-          "STRUCTURAL",
+          "EARNINGS",
           1
         ]
       ],
       "top_partners": [
         "BME:ITX",
-        "Cash Flow",
-        "Earnings"
+        "Cash Flow"
       ]
     },
     {
       "name": "Industria De Dise\u00f1o Textil",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.5916597406422127,
-      "pc2": -0.7281575780932961,
-      "pc3": 0.32366893327613605,
+      "cluster": 2,
+      "pc1": -0.1692622467707232,
+      "pc2": -1.1011221230355202,
+      "pc3": -0.10071002672330481,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.25,
@@ -809,10 +741,10 @@
     {
       "name": "JSS Sustainable Equity CH I CHF dist",
       "type": "FIN_INSTRUMENT_INFO",
-      "cluster": 2,
-      "pc1": -0.7841036979946607,
-      "pc2": 0.4075539051254863,
-      "pc3": -1.025149265596947,
+      "cluster": 3,
+      "pc1": -0.7041779843483159,
+      "pc2": 0.39255700421042844,
+      "pc3": -1.092626884563456,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -832,42 +764,12 @@
       ]
     },
     {
-      "name": "LVMH",
-      "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.2581734816654777,
-      "pc2": -0.5662640468656787,
-      "pc3": -0.5779936622315237,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 0.5,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "STRUCTURAL",
-          1
-        ],
-        [
-          "EARNINGS",
-          1
-        ]
-      ],
-      "top_partners": [
-        "MC.PA",
-        "Q2 FY2026 Earnings Call"
-      ]
-    },
-    {
       "name": "Mercedes",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 2.020780279788919,
-      "pc2": -0.4207791658888201,
-      "pc3": -0.306460237856046,
+      "pc1": 1.8167571219332568,
+      "pc2": 0.4781849495031553,
+      "pc3": 0.5983914844515715,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -894,10 +796,10 @@
     {
       "name": "Mercedes Benz Group",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.0657295243130296,
-      "pc2": -1.7019755300844608,
-      "pc3": 0.7708245366415591,
+      "cluster": 2,
+      "pc1": -0.09908313553785039,
+      "pc2": -2.3525438560119394,
+      "pc3": -0.15568095894722003,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.25,
@@ -924,10 +826,10 @@
     {
       "name": "Mercedes-Benz Group",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.1947040653660204,
-      "pc2": -0.8092886731608251,
-      "pc3": 0.03152803765300051,
+      "cluster": 2,
+      "pc1": 0.5828818352817096,
+      "pc2": -0.6926922755147338,
+      "pc3": -0.11693792385066845,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.12000000000000002,
@@ -964,10 +866,10 @@
     {
       "name": "Myricx Bio",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -0.9764730512275683,
-      "pc2": 2.852882556073862,
-      "pc3": 1.893713582697628,
+      "cluster": 0,
+      "pc1": -2.82017970472246,
+      "pc2": 0.970501492527904,
+      "pc3": 2.1877430946304264,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.75,
@@ -990,9 +892,9 @@
       "name": "Nestl\u00e9",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.8404417946399018,
-      "pc2": -0.3288999123977365,
-      "pc3": -0.08572064607009507,
+      "pc1": 0.854750624297079,
+      "pc2": 0.04818207530081144,
+      "pc3": 0.18546857069588824,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.13999999999999999,
@@ -1022,10 +924,10 @@
     {
       "name": "Nestl\u00e9 S.A.",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.5678041229885805,
-      "pc2": 0.40009845962973944,
-      "pc3": -1.0075839137589842,
+      "cluster": 3,
+      "pc1": -0.5179255461675923,
+      "pc2": 0.4817832638626817,
+      "pc3": -1.0138513391751103,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
@@ -1047,10 +949,10 @@
     {
       "name": "Novartis",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -1.1306001514857995,
-      "pc2": 2.9123751042349615,
-      "pc3": 2.1465752667395566,
+      "cluster": 0,
+      "pc1": -3.012425320126808,
+      "pc2": 0.8607543430261831,
+      "pc3": 2.3528454553037985,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.85,
@@ -1072,10 +974,10 @@
     {
       "name": "Novo Nordisk",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 4.13976063539381,
-      "pc2": -0.36957357885885805,
-      "pc3": 0.5093473808515864,
+      "cluster": 1,
+      "pc1": 3.585912809145713,
+      "pc2": 1.3231533701566356,
+      "pc3": 1.7295969980822206,
       "factors": {
         "attention": 19.0,
         "sentiment": 0.2578947368421053,
@@ -1120,54 +1022,28 @@
       ]
     },
     {
-      "name": "Novo Nordisk A/S",
+      "name": "Novo Nordisk B A/S",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.5678041229885805,
-      "pc2": 0.40009845962973944,
-      "pc3": -1.0075839137589842,
+      "cluster": 3,
+      "pc1": -0.09863459565089641,
+      "pc2": -0.17404537215042443,
+      "pc3": -0.8929475365476955,
       "factors": {
-        "attention": 3.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 5,
       "event_mix": [
         [
-          "REGULATORY",
+          "STRUCTURAL",
           2
         ],
         [
-          "STRUCTURAL",
-          1
-        ]
-      ],
-      "top_partners": [
-        "Novo Nordisk Shares",
-        "Novo Nordisk shares"
-      ]
-    },
-    {
-      "name": "Novo Nordisk B A/S",
-      "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.2581734816654777,
-      "pc2": -0.5662640468656787,
-      "pc3": -0.5779936622315237,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 0.5,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "STRUCTURAL",
-          1
+          "REGULATORY",
+          2
         ],
         [
           "EARNINGS",
@@ -1176,16 +1052,17 @@
       ],
       "top_partners": [
         "Earnings Call",
-        "NOVO-B.CO"
+        "NOVO-B.CO",
+        "Novo Nordisk Shares"
       ]
     },
     {
       "name": "Pa. Turnpike Commission",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.6183382908971293,
-      "pc2": -0.006612630381666929,
-      "pc3": -0.6658047517264963,
+      "pc1": 0.5562895687924706,
+      "pc2": 0.4353709768567919,
+      "pc3": -0.2471177000559421,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -1208,10 +1085,10 @@
     {
       "name": "Pennsylvania",
       "type": "FINANCIAL_ENTITY",
-      "cluster": 1,
-      "pc1": 0.4235595300484607,
-      "pc2": 2.247214812096971,
-      "pc3": -0.5451007458888323,
+      "cluster": 0,
+      "pc1": -1.0114360423492237,
+      "pc2": 1.9754391794891637,
+      "pc3": 0.542548992792593,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.19999999999999998,
@@ -1234,10 +1111,10 @@
     {
       "name": "Phase Ib trial",
       "type": "EVENT",
-      "cluster": 2,
-      "pc1": -0.7841036979946607,
-      "pc2": 0.4075539051254863,
-      "pc3": -1.025149265596947,
+      "cluster": 3,
+      "pc1": -0.7041779843483159,
+      "pc2": 0.39255700421042844,
+      "pc3": -1.092626884563456,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -1260,25 +1137,25 @@
     {
       "name": "Roche",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": 0.3085824715600344,
-      "pc2": -0.3970553455748639,
-      "pc3": 0.2133677545716975,
+      "cluster": 2,
+      "pc1": 0.16206495212119254,
+      "pc2": -0.5181552708192911,
+      "pc3": -0.20237316276851328,
       "factors": {
-        "attention": 6.0,
-        "sentiment": 0.25,
-        "consensus": 0.793844718719117,
-        "novelty": 0.6666666666666666,
+        "attention": 5.0,
+        "sentiment": 0.18,
+        "consensus": 0.8530306154330093,
+        "novelty": 0.6,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 5,
       "event_mix": [
         [
-          "PRODUCT",
-          3
+          "STRUCTURAL",
+          2
         ],
         [
-          "STRUCTURAL",
+          "PRODUCT",
           2
         ],
         [
@@ -1290,7 +1167,6 @@
         "Breast Cancer Trial",
         "Evexta Bio",
         "Phase Ib trial",
-        "Pipeline Growth",
         "ROG",
         "SWX:ROP"
       ]
@@ -1299,9 +1175,9 @@
       "name": "SAP",
       "type": "STOCK_TICKER",
       "cluster": 4,
-      "pc1": 0.2976011289405853,
-      "pc2": 0.20509136819693136,
-      "pc3": 0.4810212861372161,
+      "pc1": 0.027078870779941266,
+      "pc2": 0.0530207845305754,
+      "pc3": 0.6259871297554788,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.43333333333333335,
@@ -1325,10 +1201,10 @@
     {
       "name": "SAP SE",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.5678041229885805,
-      "pc2": 0.40009845962973944,
-      "pc3": -1.0075839137589842,
+      "cluster": 3,
+      "pc1": -0.5179255461675923,
+      "pc2": 0.4817832638626817,
+      "pc3": -1.0138513391751103,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
@@ -1354,50 +1230,20 @@
       ]
     },
     {
-      "name": "SCHNEIDER ELECTRIC SE",
-      "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.7841036979946607,
-      "pc2": 0.4075539051254863,
-      "pc3": -1.025149265596947,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "STRUCTURAL",
-          1
-        ],
-        [
-          "EARNINGS",
-          1
-        ]
-      ],
-      "top_partners": [
-        "Q2 FY2026 earnings call",
-        "SU.PA"
-      ]
-    },
-    {
       "name": "SIEMENS AG N",
       "type": "COMPANY",
       "cluster": 2,
-      "pc1": -0.6675510704297116,
-      "pc2": -0.2565689538601174,
-      "pc3": -0.6919148263440724,
+      "pc1": -0.4477464349347194,
+      "pc2": -0.7696384691137371,
+      "pc3": -1.0688222713990254,
       "factors": {
-        "attention": 4.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 4,
+      "n_articles": 3,
       "event_mix": [
         [
           "STRUCTURAL",
@@ -1405,12 +1251,11 @@
         ],
         [
           "EARNINGS",
-          2
+          1
         ]
       ],
       "top_partners": [
         "Earnings Call",
-        "Q3 FY2026 earnings call",
         "SIE.DE"
       ]
     },
@@ -1418,17 +1263,17 @@
       "name": "STMicroelectronics",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 1.8315401142377754,
-      "pc2": -0.27264612929155946,
-      "pc3": -0.1326435520316587,
+      "pc1": 1.4077605587163264,
+      "pc2": 0.5179524388098119,
+      "pc3": 0.08657536981018467,
       "factors": {
-        "attention": 9.0,
-        "sentiment": 0.11111111111111113,
-        "consensus": 0.5534857225127062,
-        "novelty": 0.8571428571428571,
+        "attention": 8.0,
+        "sentiment": 0.025000000000000022,
+        "consensus": 0.6082483085485118,
+        "novelty": 0.8333333333333334,
         "materiality": 0.0
       },
-      "n_articles": 9,
+      "n_articles": 8,
       "event_mix": [
         [
           "STRUCTURAL",
@@ -1452,7 +1297,6 @@
         ]
       ],
       "top_partners": [
-        "124% Return",
         "AI Revenue Ambitions",
         "ENXTPA:STMPA",
         "Fair Value",
@@ -1465,21 +1309,21 @@
       "name": "Schneider Electric",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.29297349515090104,
-      "pc2": 0.21111666640039262,
-      "pc3": 0.5772866646135405,
+      "pc1": 0.31895816889573897,
+      "pc2": 0.2318491715375932,
+      "pc3": 0.5305671123029281,
       "factors": {
-        "attention": 3.0,
-        "sentiment": 0.4666666666666666,
-        "consensus": 0.6700168354462779,
+        "attention": 4.0,
+        "sentiment": 0.35,
+        "consensus": 0.65,
         "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 4,
       "event_mix": [
         [
           "STRUCTURAL",
-          1
+          2
         ],
         [
           "M_AND_A",
@@ -1493,16 +1337,17 @@
       "top_partners": [
         "California SF6 Free Grid Deal",
         "Cognite",
-        "ENXTPA:SU"
+        "ENXTPA:SU",
+        "SU.PA"
       ]
     },
     {
       "name": "Shapiro Administration",
       "type": "FINANCIAL_ENTITY",
-      "cluster": 1,
-      "pc1": -1.0463181660207916,
-      "pc2": 2.23228344851488,
-      "pc3": 1.5142648577228452,
+      "cluster": 0,
+      "pc1": -2.4283441111258113,
+      "pc2": 0.6399553091337506,
+      "pc3": 1.6108203100484382,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.7,
@@ -1525,18 +1370,18 @@
     {
       "name": "Shell",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 3.3720649948759576,
-      "pc2": -0.6052991998040155,
-      "pc3": -0.19236201849492848,
+      "cluster": 1,
+      "pc1": 2.9707792084075892,
+      "pc2": 0.9136712998010029,
+      "pc3": 0.6740328283104223,
       "factors": {
-        "attention": 13.0,
-        "sentiment": -0.007692307692307716,
-        "consensus": 0.3054277895311708,
-        "novelty": 0.8181818181818182,
+        "attention": 12.0,
+        "sentiment": -0.0666666666666667,
+        "consensus": 0.3096892543065589,
+        "novelty": 0.8,
         "materiality": 0.0
       },
-      "n_articles": 13,
+      "n_articles": 12,
       "event_mix": [
         [
           "STRUCTURAL",
@@ -1569,16 +1414,16 @@
         "South Africa's top court",
         "Stock Price Increase",
         "Sustainable Growth",
-        "Valuation"
+        "Vietnam"
       ]
     },
     {
       "name": "Shell Oil",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.6869233884112965,
-      "pc2": 0.28102264285280054,
-      "pc3": -3.046722213599764,
+      "cluster": 3,
+      "pc1": -0.24078596371643018,
+      "pc2": 1.130817269870021,
+      "pc3": -2.8401998384323215,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.7,
@@ -1601,10 +1446,10 @@
     {
       "name": "Shell plc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.7991240279037237,
-      "pc2": -1.7667329425755078,
-      "pc3": 1.131489574844623,
+      "cluster": 2,
+      "pc1": 0.08681151500003748,
+      "pc2": -2.4494468137197516,
+      "pc3": 0.26307415707840626,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.35,
@@ -1632,9 +1477,9 @@
       "name": "Unilever",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.7516410391017825,
-      "pc2": -0.0389913366271904,
-      "pc3": -0.4854722326249644,
+      "pc1": 0.6492368940614146,
+      "pc2": 0.386919498002886,
+      "pc3": -0.037740142043128866,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.04999999999999999,
@@ -1662,25 +1507,21 @@
       "name": "Unilever PLC",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.994379281896864,
-      "pc2": 0.15693868373077308,
-      "pc3": 0.30235761199461364,
+      "pc1": 0.3843450308605272,
+      "pc2": 0.4147002374619639,
+      "pc3": 0.05982503740650462,
       "factors": {
-        "attention": 6.0,
-        "sentiment": 0.3499999999999999,
-        "consensus": 0.6570714360103551,
+        "attention": 4.0,
+        "sentiment": 0.175,
+        "consensus": 0.6700168354462779,
         "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 4,
       "event_mix": [
         [
           "STRUCTURAL",
           3
-        ],
-        [
-          "GUIDANCE",
-          2
         ],
         [
           "OTHER",
@@ -1688,8 +1529,6 @@
         ]
       ],
       "top_partners": [
-        "11% upside potential",
-        "12.49% Potential Upside",
         "DirectorsTalk Interviews",
         "ULVR.L"
       ]
@@ -1697,10 +1536,10 @@
     {
       "name": "Vietnam",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.3841954533807017,
-      "pc2": 0.3104177863889158,
-      "pc3": -0.484151708292351,
+      "cluster": 3,
+      "pc1": -0.42533600854148396,
+      "pc2": 0.24720256764871057,
+      "pc3": -0.46449421052501605,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -1727,22 +1566,22 @@
     {
       "name": "Volkswagen",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 2.0419568984402305,
-      "pc2": -0.2514474769287751,
-      "pc3": -0.7716324708479219,
+      "cluster": 1,
+      "pc1": 2.0700711043928224,
+      "pc2": 1.077977834781751,
+      "pc3": -0.06552023729897107,
       "factors": {
-        "attention": 11.0,
-        "sentiment": -0.1,
-        "consensus": 0.643147439409495,
+        "attention": 12.0,
+        "sentiment": -0.11666666666666665,
+        "consensus": 0.6769288004169979,
         "novelty": 0.8571428571428571,
         "materiality": 0.0
       },
-      "n_articles": 11,
+      "n_articles": 12,
       "event_mix": [
         [
           "STRUCTURAL",
-          5
+          7
         ],
         [
           "GUIDANCE",
@@ -1753,56 +1592,31 @@
           1
         ],
         [
-          "EARNINGS",
+          "MACRO",
           1
         ],
         [
-          "MACRO",
+          "OTHER",
           1
         ]
       ],
       "top_partners": [
         "Analyst Target Cuts",
         "Below Fair Value",
-        "Earnings",
         "JSW",
         "Market Read",
         "Sales Forecast",
+        "VOW3.DE",
         "XTRA:VOW3"
-      ]
-    },
-    {
-      "name": "Volkswagen AG",
-      "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.7322432653362947,
-      "pc2": -1.5400819988568433,
-      "pc3": -0.13083805886610073,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 0.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "STRUCTURAL",
-          2
-        ]
-      ],
-      "top_partners": [
-        "VOW3.DE"
       ]
     },
     {
       "name": "White Cap",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.5003674973020056,
-      "pc2": 0.44540463903851024,
-      "pc3": 0.37401071058155744,
+      "cluster": 3,
+      "pc1": -0.7080155393499875,
+      "pc2": -0.006353706525342629,
+      "pc3": 0.23091266712690323,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.4666666666666666,
@@ -1826,10 +1640,10 @@
     {
       "name": "Woodside Energy",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.2906863166151794,
-      "pc2": -1.6914458014245648,
-      "pc3": -0.45622890784842624,
+      "cluster": 2,
+      "pc1": -0.08638120580493011,
+      "pc2": -1.9392436415928733,
+      "pc3": -1.323395912345218,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.15,
@@ -1856,31 +1670,31 @@
   ],
   "pca": {
     "explained_variance": [
-      0.2976013131320767,
-      0.2519014005784692,
-      0.21455118665245024
+      0.2942089813143424,
+      0.24829181696273608,
+      0.21258335093140318
     ],
     "components": [
       [
-        0.686017387485116,
-        -0.04384277045087692,
-        -0.6525301742914179,
-        0.31056136191826683,
-        -0.07220780892653272
+        0.5871448596968432,
+        -0.21035937360926538,
+        -0.5822106524513792,
+        -0.04497357298141093,
+        -0.5196325447580411
       ],
       [
-        -0.02364574799273718,
-        0.057084414635685726,
-        0.1927039861475567,
-        0.6379445386479937,
-        0.7430169496987302
+        0.2812781417334399,
+        -0.3351373354098614,
+        -0.01977579739070887,
+        0.8019609489180299,
+        0.4062426954979199
       ],
       [
-        0.055710404321401924,
-        0.9120300098751944,
-        -0.16719631908043378,
-        -0.29292998194328645,
-        0.2265723471698543
+        0.2483331600722609,
+        0.793320418877866,
+        -0.3905411549382185,
+        0.03522756542220804,
+        0.39396697772011074
       ]
     ]
   },
@@ -1888,97 +1702,60 @@
     "k": 5,
     "centroids": [
       [
-        -0.42005096082358806,
-        0.33945661712039354,
-        0.0421295819331248,
-        -1.3518628674433508,
-        -0.394685873776276
+        -0.40429640921695786,
+        1.030496077788733,
+        0.37431281788503173,
+        0.634525617475773,
+        2.503035100911938
       ],
       [
-        -0.14698079475731904,
-        0.8599533578760366,
-        0.24319989192966304,
-        0.6507507314646328,
-        2.470930828829639
+        3.2965707213075017,
+        -0.4210536013403658,
+        -1.1299297923874558,
+        0.21592812057384497,
+        -0.39124662480976086
       ],
       [
-        -0.4304835990662653,
-        -0.7093367484505276,
-        0.9298146720120987,
-        0.48142544371667495,
-        -0.2512871745406101
+        -0.3831485970425324,
+        0.2979580749014585,
+        0.09836952713179088,
+        -1.3732562226940663,
+        -0.39124662480976097
       ],
       [
-        3.2912634955066324,
-        -0.3800533476756533,
-        -1.191619563128988,
-        0.3348789940358203,
-        -0.3946858737762759
+        -0.3212157185317149,
+        -0.7053167827862953,
+        0.9285003507597909,
+        0.6469101588042323,
+        -0.20639751688350286
       ],
       [
-        0.37100797386323264,
-        0.12485038483052678,
-        -1.0434616635183123,
-        0.5632629452535892,
-        -0.39468587377627595
+        0.21387040818932548,
+        0.03732678252115047,
+        -1.0254334882893648,
+        0.5451663885058121,
+        -0.39124662480976097
       ]
     ],
     "clusters": [
       {
         "cluster": 0,
-        "size": 16,
-        "signature": [
-          {
-            "factor": "novelty",
-            "loading": -1.3518628674433508
-          },
-          {
-            "factor": "attention",
-            "loading": -0.42005096082358806
-          },
-          {
-            "factor": "materiality",
-            "loading": -0.394685873776276
-          }
-        ],
-        "members": [
-          "ASML Holding",
-          "ASML Holding N.V.",
-          "AstraZeneca PLC",
-          "BP",
-          "BP p.l.c.",
-          "Crux",
-          "Evexta Bio",
-          "HSBC",
-          "Harrisburg YMCA",
-          "Inditex",
-          "Industria De Dise\u00f1o Textil",
-          "Mercedes Benz Group",
-          "Mercedes-Benz Group",
-          "Shell plc",
-          "Volkswagen AG",
-          "Woodside Energy"
-        ]
-      },
-      {
-        "cluster": 1,
-        "size": 7,
+        "size": 6,
         "signature": [
           {
             "factor": "materiality",
-            "loading": 2.470930828829639
+            "loading": 2.503035100911938
           },
           {
             "factor": "sentiment",
-            "loading": 0.8599533578760366
+            "loading": 1.030496077788733
           },
           {
             "factor": "novelty",
-            "loading": 0.6507507314646328
+            "loading": 0.634525617475773
           }
         ],
         "members": [
-          "BP PLC",
           "Eni",
           "Hershey brewery",
           "Myricx Bio",
@@ -1988,57 +1765,20 @@
         ]
       },
       {
-        "cluster": 2,
-        "size": 17,
-        "signature": [
-          {
-            "factor": "consensus",
-            "loading": 0.9298146720120987
-          },
-          {
-            "factor": "sentiment",
-            "loading": -0.7093367484505276
-          },
-          {
-            "factor": "novelty",
-            "loading": 0.48142544371667495
-          }
-        ],
-        "members": [
-          "BNP Paribas AM",
-          "BPL",
-          "Deutsche Bank",
-          "GRYPHLINE",
-          "HSBC Holdings",
-          "JSS Sustainable Equity CH I CHF dist",
-          "LVMH",
-          "Nestl\u00e9 S.A.",
-          "Novo Nordisk A/S",
-          "Novo Nordisk B A/S",
-          "Phase Ib trial",
-          "SAP SE",
-          "SCHNEIDER ELECTRIC SE",
-          "SIEMENS AG N",
-          "Shell Oil",
-          "Vietnam",
-          "White Cap"
-        ]
-      },
-      {
-        "cluster": 3,
+        "cluster": 1,
         "size": 3,
         "signature": [
           {
             "factor": "attention",
-            "loading": 3.2912634955066324
+            "loading": 3.2965707213075017
           },
           {
             "factor": "consensus",
-            "loading": -1.191619563128988
+            "loading": -1.1299297923874558
           },
           {
-            "factor": "materiality",
-            "loading": -0.3946858737762759
+            "factor": "sentiment",
+            "loading": -0.4210536013403658
           }
         ],
         "members": [
@@ -2048,20 +1788,89 @@
         ]
       },
       {
-        "cluster": 4,
+        "cluster": 2,
+        "size": 15,
+        "signature": [
+          {
+            "factor": "novelty",
+            "loading": -1.3732562226940663
+          },
+          {
+            "factor": "materiality",
+            "loading": -0.39124662480976097
+          },
+          {
+            "factor": "attention",
+            "loading": -0.3831485970425324
+          }
+        ],
+        "members": [
+          "ASML Holding",
+          "ASML Holding N.V.",
+          "BP",
+          "BP p.l.c.",
+          "Crux",
+          "Evexta Bio",
+          "Harrisburg YMCA",
+          "Inditex",
+          "Industria De Dise\u00f1o Textil",
+          "Mercedes Benz Group",
+          "Mercedes-Benz Group",
+          "Roche",
+          "SIEMENS AG N",
+          "Shell plc",
+          "Woodside Energy"
+        ]
+      },
+      {
+        "cluster": 3,
         "size": 14,
         "signature": [
           {
             "factor": "consensus",
-            "loading": -1.0434616635183123
+            "loading": 0.9285003507597909
+          },
+          {
+            "factor": "sentiment",
+            "loading": -0.7053167827862953
           },
           {
             "factor": "novelty",
-            "loading": 0.5632629452535892
+            "loading": 0.6469101588042323
+          }
+        ],
+        "members": [
+          "AstraZeneca PLC",
+          "BP PLC",
+          "BPL",
+          "Deutsche Bank",
+          "GRYPHLINE",
+          "HSBC Holdings",
+          "JSS Sustainable Equity CH I CHF dist",
+          "Nestl\u00e9 S.A.",
+          "Novo Nordisk B A/S",
+          "Phase Ib trial",
+          "SAP SE",
+          "Shell Oil",
+          "Vietnam",
+          "White Cap"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 13,
+        "signature": [
+          {
+            "factor": "consensus",
+            "loading": -1.0254334882893648
+          },
+          {
+            "factor": "novelty",
+            "loading": 0.5451663885058121
           },
           {
             "factor": "materiality",
-            "loading": -0.39468587377627595
+            "loading": -0.39124662480976097
           }
         ],
         "members": [
@@ -2073,7 +1882,6 @@
           "Mercedes",
           "Nestl\u00e9",
           "Pa. Turnpike Commission",
-          "Roche",
           "SAP",
           "STMicroelectronics",
           "Schneider Electric",
