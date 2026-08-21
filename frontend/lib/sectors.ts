@@ -100,6 +100,19 @@ const SECTOR_CONFIGS: Record<string, SectorConfig> = {
         "alphabet", "google", "googl",
         "meta platforms", "meta", "facebook",
         "broadcom", "avgo",
+        "advanced micro devices", "amd",
+        "adobe", "adbe",
+        "salesforce",
+        "cisco", "csco",
+        "ibm", "international business machines",
+        "intel", "intc",
+        "intuit", "intu",
+        "servicenow",
+        "oracle", "orcl",
+        "palantir", "pltr",
+        "qualcomm", "qcom",
+        "texas instruments", "txn",
+        "accenture", "acn",
       ],
       Financials: [
         "jpmorgan", "jp morgan", "jpm", "chase",
@@ -107,6 +120,20 @@ const SECTOR_CONFIGS: Record<string, SectorConfig> = {
         "goldman sachs", "goldman",
         "berkshire", "brk",
         "visa",
+        "mastercard",
+        "american express", "amex", "axp",
+        "blackrock", "blk",
+        "bny mellon", "bank of new york", "bny",
+        "citigroup", "citi", "citibank",
+        "capital one",
+        "metlife",
+        "morgan stanley",
+        "schwab", "schw",
+        "u.s. bancorp", "us bancorp",
+        "wells fargo", "wfc",
+        "american international group", "aig",
+        "simon property", "spg",
+        "paypal", "pypl",
       ],
       Healthcare: [
         "eli lilly", "lilly", "lly",
@@ -114,6 +141,16 @@ const SECTOR_CONFIGS: Record<string, SectorConfig> = {
         "johnson & johnson", "johnson and johnson", "jnj",
         "pfizer", "pfe",
         "merck", "mrk",
+        "abbvie", "abbv",
+        "abbott", "abt",
+        "amgen", "amgn",
+        "bristol-myers", "bristol myers", "bmy",
+        "cvs",
+        "danaher", "dhr",
+        "gilead", "gild",
+        "intuitive surgical", "isrg",
+        "medtronic", "mdt",
+        "thermo fisher",
       ],
       Consumer: [
         "amazon", "amzn",
@@ -122,18 +159,52 @@ const SECTOR_CONFIGS: Record<string, SectorConfig> = {
         "procter", "gamble",
         "coca-cola", "coca cola",
         "mcdonald", "mcdonald's", "mcd",
+        "booking holdings", "bkng",
+        "colgate",
+        "costco",
+        "home depot",
+        "lowe's", "lowes",
+        "mondelez", "mdlz",
+        "altria",
+        "nike", "nke",
+        "pepsico", "pepsi",
+        "philip morris",
+        "starbucks", "sbux",
+        "tgt",
+        "general motors", "gm",
       ],
       "Energy & industrials": [
         "exxon", "exxonmobil", "xom",
         "chevron", "cvx",
+        "conocophillips",
         "caterpillar",
         "boeing",
         "general electric", "ge aerospace",
+        "ge vernova", "gev",
+        "deere",
+        "emerson", "emr",
+        "fedex", "fdx",
+        "general dynamics",
+        "honeywell",
+        "lockheed", "lmt",
+        "3m", "mmm",
+        "raytheon", "rtx",
+        "union pacific", "unp",
+        "united parcel",
+        "duke energy",
+        "nextera",
+        "southern company",
+        "linde",
       ],
       "Communications & media": [
         "netflix", "nflx",
         "disney",
         "at&t",
+        "charter communications", "chtr",
+        "comcast", "cmcsa",
+        "t-mobile", "tmobile", "tmus",
+        "verizon",
+        "american tower",
       ],
     },
   },
@@ -150,14 +221,24 @@ export function getDefaultCheckedSectors(sourceId: string): Set<string> {
   return new Set(SECTOR_CONFIGS[sourceId]?.defaultChecked ?? []);
 }
 
+// Both sides are normalized to space-joined tokens so punctuation never
+// blocks a match: "Coca-Cola", "Lowe's", and "Bristol-Myers Squibb" all
+// hit their keywords. Multi-token keywords match on token boundaries
+// (padded substring), single tokens on whole-word membership.
+function normalizeTokens(s: string): string[] {
+  return s.toLowerCase().split(/[^a-z0-9&]+/).filter(Boolean);
+}
+
 function matchSector(entityId: string, config: SectorConfig): string | null {
-  const lower = entityId.toLowerCase();
-  const words = new Set(lower.split(/[^a-z0-9&]+/).filter(Boolean));
+  const tokens = normalizeTokens(entityId);
+  const words = new Set(tokens);
+  const padded = ` ${tokens.join(" ")} `;
   for (const [sector, keywords] of Object.entries(config.keywords)) {
     for (const kw of keywords) {
-      if (kw.includes(" ")) {
-        if (lower.includes(kw)) return sector;
-      } else if (words.has(kw)) {
+      const kwTokens = normalizeTokens(kw);
+      if (kwTokens.length > 1) {
+        if (padded.includes(` ${kwTokens.join(" ")} `)) return sector;
+      } else if (kwTokens.length === 1 && words.has(kwTokens[0])) {
         return sector;
       }
     }

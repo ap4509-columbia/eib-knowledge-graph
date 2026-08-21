@@ -60,7 +60,7 @@
     {
       "id": "sp100_factors",
       "label": "S&P 100 (Live)",
-      "description": "Curated 30-ticker S&P 100 subset — US mega-caps across six sectors — with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans; GAT predictions once months accumulate. Refreshed every morning by the team GPU VM using local qwen2.5:14b — zero API cost.",
+      "description": "Full S&P 100 constituent list (~101 tickers across six sectors) with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans; GAT predictions once months accumulate. Refreshed every morning by the team GPU VM using local qwen2.5:14b — zero API cost.",
       "kind": "live",
       "available": true,
       "features": [

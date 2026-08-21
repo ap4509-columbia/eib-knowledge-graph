@@ -1,16 +1,16 @@
 corpus: sp100_factors
 description: |
   Factor-model live corpus — US counterpart of stoxx_600_factors.
-  Curated 30-ticker subset of the S&P 100 (mega-caps across six sectors),
-  same design budget as the STOXX list: 3 articles/ticker/day, enriched
-  extraction (sentiment / materiality / event_type per triplet), daily
-  factor loadings + PCA + KMeans, GAT predictions once months accumulate.
+  Full S&P 100 constituent list (~101 tickers; GOOG dual-class dropped in
+  favor of GOOGL), same design budget as the STOXX list: 3 articles per
+  ticker per day, enriched extraction (sentiment / materiality /
+  event_type per triplet), daily factor loadings + PCA + KMeans, GAT
+  predictions once months accumulate.
   Keep frontend/lib/sectors.ts in sync when editing this list.
 
 sources:
   - google_news
 
-# 30 tickers, ~5 per sector.
 tickers:
   # Tech
   - AAPL           # Apple
@@ -19,18 +19,55 @@ tickers:
   - GOOGL          # Alphabet
   - META           # Meta Platforms
   - AVGO           # Broadcom
+  - AMD            # Advanced Micro Devices
+  - ADBE           # Adobe
+  - CRM            # Salesforce
+  - CSCO           # Cisco
+  - IBM            # IBM
+  - INTC           # Intel
+  - INTU           # Intuit
+  - NOW            # ServiceNow
+  - ORCL           # Oracle
+  - PLTR           # Palantir
+  - QCOM           # Qualcomm
+  - TXN            # Texas Instruments
+  - ACN            # Accenture
   # Financials
   - JPM            # JPMorgan Chase
   - BAC            # Bank of America
   - GS             # Goldman Sachs
   - BRK.B          # Berkshire Hathaway
   - V              # Visa
+  - MA             # Mastercard
+  - AXP            # American Express
+  - BLK            # BlackRock
+  - BK             # BNY Mellon
+  - C              # Citigroup
+  - COF            # Capital One
+  - MET            # MetLife
+  - MS             # Morgan Stanley
+  - SCHW           # Charles Schwab
+  - USB            # U.S. Bancorp
+  - WFC            # Wells Fargo
+  - AIG            # American International Group
+  - SPG            # Simon Property Group
+  - PYPL           # PayPal
   # Healthcare
   - LLY            # Eli Lilly
   - UNH            # UnitedHealth
   - JNJ            # Johnson & Johnson
   - PFE            # Pfizer
   - MRK            # Merck
+  - ABBV           # AbbVie
+  - ABT            # Abbott Laboratories
+  - AMGN           # Amgen
+  - BMY            # Bristol-Myers Squibb
+  - CVS            # CVS Health
+  - DHR            # Danaher
+  - GILD           # Gilead Sciences
+  - ISRG           # Intuitive Surgical
+  - MDT            # Medtronic
+  - TMO            # Thermo Fisher Scientific
   # Consumer
   - AMZN           # Amazon
   - TSLA           # Tesla
@@ -38,13 +75,47 @@ tickers:
   - PG             # Procter & Gamble
   - KO             # Coca-Cola
   - MCD            # McDonald's
+  - BKNG           # Booking Holdings
+  - CL             # Colgate-Palmolive
+  - COST           # Costco
+  - HD             # Home Depot
+  - LOW            # Lowe's
+  - MDLZ           # Mondelez
+  - MO             # Altria
+  - NKE            # Nike
+  - PEP            # PepsiCo
+  - PM             # Philip Morris
+  - SBUX           # Starbucks
+  - TGT            # Target
+  - GM             # General Motors
   # Energy & industrials
   - XOM            # ExxonMobil
   - CVX            # Chevron
+  - COP            # ConocoPhillips
   - CAT            # Caterpillar
   - BA             # Boeing
   - GE             # GE Aerospace
+  - GEV            # GE Vernova
+  - DE             # Deere
+  - EMR            # Emerson Electric
+  - FDX            # FedEx
+  - GD             # General Dynamics
+  - HON            # Honeywell
+  - LMT            # Lockheed Martin
+  - MMM            # 3M
+  - RTX            # RTX (Raytheon)
+  - UNP            # Union Pacific
+  - UPS            # United Parcel Service
+  - DUK            # Duke Energy
+  - NEE            # NextEra Energy
+  - SO             # Southern Company
+  - LIN            # Linde
   # Communications & media
   - NFLX           # Netflix
   - DIS            # Disney
   - T              # AT&T
+  - CHTR           # Charter Communications
+  - CMCSA          # Comcast
+  - TMUS           # T-Mobile US
+  - VZ             # Verizon
+  - AMT            # American Tower
