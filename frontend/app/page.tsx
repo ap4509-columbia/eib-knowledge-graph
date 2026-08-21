@@ -507,7 +507,7 @@ export default function Home() {
                   : "no data"}
             </p>
           </div>
-          <div className="flex w-full min-w-0 items-center gap-2 sm:w-auto">
+          <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5 sm:w-auto sm:flex-nowrap">
             {sources &&
               activeSourceId &&
               sources.sources.find((s) => s.id === activeSourceId)?.kind ===
@@ -516,7 +516,7 @@ export default function Home() {
               <label className="flex min-w-0 flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:flex-initial">
                 <span className="hidden sm:inline">Data source</span>
                 <select
-                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto"
+                  className="w-full min-w-[8rem] rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto sm:min-w-0"
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
