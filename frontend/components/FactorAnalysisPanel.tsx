@@ -551,7 +551,7 @@ function DateScrubber({
             if (e.key === "ArrowRight" && idx < dates.length - 1)
               onChange(dates[idx + 1]);
           }}
-          className="relative h-4 flex-1 cursor-pointer overflow-hidden rounded-full border border-border bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="relative h-4 w-full shrink-0 cursor-pointer overflow-hidden rounded-full border border-border bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
           style={{ touchAction: "none" }}
         >
           {showMinorTicks &&
