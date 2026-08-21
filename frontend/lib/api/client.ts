@@ -80,6 +80,12 @@ export async function fetchIndex(sourceId: string): Promise<Index> {
   const res = await fetch(`${sourceBase(sourceId)}/index.json`, {
     cache: "no-store",
   });
+  // A live source can be registered in sources.json hours before its first
+  // scrape pushes data (e.g. a freshly added corpus waiting on the VM's
+  // bootstrap run) — render it as an empty corpus, not an error banner.
+  if (res.status === 404) {
+    return { months: [], latest: null, hasScores: [], source: sourceId };
+  }
   return jsonOrThrow<Index>(res);
 }
 
