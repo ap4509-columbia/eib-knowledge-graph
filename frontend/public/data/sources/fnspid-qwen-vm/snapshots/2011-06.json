@@ -14,7 +14,7 @@
       "y": 99.18865636301412
     },
     {
-      "id": "Company",
+      "id": "SSI",
       "type": "COMPANY",
       "degree": 1,
       "x": 862.9388588865246,
@@ -22,7 +22,7 @@
     },
     {
       "id": "Federal Reserve Chairman Ben Bernanke",
-      "type": "FINANCIALENTITY",
+      "type": "FINANCIAL_ENTITY",
       "degree": 1,
       "x": -764.0162045745366,
       "y": 213.83745776036307
@@ -36,7 +36,7 @@
     },
     {
       "id": "Trade Gap",
-      "type": "MACROINDICATOR",
+      "type": "MACRO_INDICATOR",
       "degree": 1,
       "x": -459.16305200700566,
       "y": 601.3364681070763
@@ -107,11 +107,11 @@
   ],
   "edges": [
     {
-      "id": "Texas Instruments||Planned Acquisition Of||Company",
+      "id": "Texas Instruments||Planned Acquisition Of||SSI",
       "source": "Texas Instruments",
-      "target": "Company",
+      "target": "SSI",
       "rel": "Planned Acquisition Of",
-      "rel_cat": "SSI",
+      "rel_cat": "GFMK",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",

@@ -15,7 +15,7 @@
     },
     {
       "id": "Analysts",
-      "type": "CONCEPT",
+      "type": "FINANCIAL_ENTITY",
       "degree": 2,
       "x": 527.7194054139587,
       "y": 426.0760586685707
@@ -50,14 +50,14 @@
     },
     {
       "id": "Cheaper Drug Prices",
-      "type": "CONCEPT",
+      "type": "ECON_INDICATOR",
       "degree": 1,
       "x": 579.5781999296695,
       "y": -299.72689360834426
     },
     {
       "id": "Healthcare Costs",
-      "type": "CONCEPT",
+      "type": "MACRO_INDICATOR",
       "degree": 1,
       "x": -752.4489004557389,
       "y": -423.385465151399
@@ -240,12 +240,12 @@
   ],
   "edges": [
     {
-      "id": "Apple||Is Covered By||Analysts",
+      "id": "Apple||Has Buy Recommendation||Analysts",
       "source": "Apple",
       "target": "Analysts",
-      "rel": "Is Covered By",
+      "rel": "Has Buy Recommendation",
       "rel_cat": "GFMK",
-      "causal_type": "OTHER",
+      "causal_type": "CORPORATE_ACTION",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -256,12 +256,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Google||Is Covered By||Analysts",
+      "id": "Google||Has Buy Recommendation||Analysts",
       "source": "Google",
       "target": "Analysts",
-      "rel": "Is Covered By",
+      "rel": "Has Buy Recommendation",
       "rel_cat": "GFMK",
-      "causal_type": "OTHER",
+      "causal_type": "CORPORATE_ACTION",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
