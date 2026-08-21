@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 193,
-    "edges": 162,
+    "nodes": 207,
+    "edges": 173,
     "scored_edges": 0
   },
   "nodes": [
@@ -1356,6 +1356,104 @@
       "degree": 1,
       "x": -312.2291216618222,
       "y": 652.6516181767769
+    },
+    {
+      "id": "US",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -78.36997680706004,
+      "y": 284.36655883672364
+    },
+    {
+      "id": "Netherlands",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": -151.78871072384763,
+      "y": 310.8457768745532
+    },
+    {
+      "id": "China",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -440.1685611352671,
+      "y": 321.4294095295737
+    },
+    {
+      "id": "Nvidia",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -58.433451075914405,
+      "y": 522.2071956626933
+    },
+    {
+      "id": "Roaring Growth",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -103.10725312871227,
+      "y": 636.6078375339912
+    },
+    {
+      "id": "Adyen",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -43.05960962664163,
+      "y": -653.7195577724791
+    },
+    {
+      "id": "Nicole Olbe",
+      "type": "PERSON",
+      "degree": 1,
+      "x": -111.63774464578148,
+      "y": -693.0589081479267
+    },
+    {
+      "id": "BNP.PA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -319.0714883535705,
+      "y": -228.8062625226476
+    },
+    {
+      "id": "Pa. State Police",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -292.62444364435476,
+      "y": -397.2803768618747
+    },
+    {
+      "id": "Small Plane",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -377.2077137050984,
+      "y": -395.85380268217494
+    },
+    {
+      "id": "SLB",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -392.790227320528,
+      "y": -47.96484432618896
+    },
+    {
+      "id": "Brunei Shell Petroleum",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -486.58996211888694,
+      "y": -67.78189517461846
+    },
+    {
+      "id": "Corruption",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 853.6434819196204,
+      "y": -97.78564583656951
+    },
+    {
+      "id": "BERENBERG",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 710.8251243498058,
+      "y": 211.20111986662786
     }
   ],
   "edges": [
@@ -3950,6 +4048,182 @@
       "materiality_usd": 20000000.0,
       "materiality_log": 16.811,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "US||Prepares to Force||Netherlands",
+      "source": "US",
+      "target": "Netherlands",
+      "rel": "Prepares to Force",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Netherlands||Forced to Ban||ASML",
+      "source": "Netherlands",
+      "target": "ASML",
+      "rel": "Forced to Ban",
+      "rel_cat": "GMM",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "ASML||Prevented From Selling To||China",
+      "source": "ASML",
+      "target": "China",
+      "rel": "Prevented From Selling To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Nvidia||Has EPS Consistency Score||Roaring Growth",
+      "source": "Nvidia",
+      "target": "Roaring Growth",
+      "rel": "Has EPS Consistency Score",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Has EPS Consistency Score||Roaring Growth",
+      "source": "ASML",
+      "target": "Roaring Growth",
+      "rel": "Has EPS Consistency Score",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Adyen||Hires||Nicole Olbe",
+      "source": "Adyen",
+      "target": "Nicole Olbe",
+      "rel": "Hires",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "BNP Paribas||Has Ticker||BNP.PA",
+      "source": "BNP Paribas",
+      "target": "BNP.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Pa. State Police||Collided With||Small Plane",
+      "source": "Pa. State Police",
+      "target": "Small Plane",
+      "rel": "Collided With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SLB||Supports Restoration of Production for||Brunei Shell Petroleum",
+      "source": "SLB",
+      "target": "Brunei Shell Petroleum",
+      "rel": "Supports Restoration of Production for",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BPL||Faced Allegations Of||Corruption",
+      "source": "BPL",
+      "target": "Corruption",
+      "rel": "Faced Allegations Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "BERENBERG||Raises Target Price For||BP",
+      "source": "BERENBERG",
+      "target": "BP",
+      "rel": "Raises Target Price For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }
