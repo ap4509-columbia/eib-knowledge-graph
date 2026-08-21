@@ -746,6 +746,12 @@ export default function Home() {
                 ? { predictionMonth: monthTo, trainingWindow: 3 }
                 : undefined
             }
+            endNote={(() => {
+              const src = sources?.sources.find((s) => s.id === activeSourceId);
+              return src?.end_note && src?.end_note_month
+                ? { text: src.end_note, month: src.end_note_month }
+                : undefined;
+            })()}
           />
         )}
 

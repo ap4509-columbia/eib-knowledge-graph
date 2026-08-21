@@ -98,12 +98,17 @@ export interface DataSource {
   id: string;
   label: string;
   description: string;
-  kind: "historical" | "live";
+  kind: "historical" | "live" | "report";
   /** false = "coming soon" placeholder; the dropdown disables the option. */
   available: boolean;
   /** Optional capability tags. "factors" ⇒ the Factor Analysis tab is
    *  enabled for this source (it reads factors/latest.json). */
   features?: string[];
+  /** Optional dataset-boundary annotation shown on the timeline once
+   *  end_note_month is present in the source's month index (e.g. "FNSPID
+   *  dataset ends here" at 2024-01). */
+  end_note?: string;
+  end_note_month?: string;
 }
 
 export interface SourcesFile {

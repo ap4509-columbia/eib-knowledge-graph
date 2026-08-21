@@ -24,6 +24,9 @@ export interface TimeSliderProps {
      *  predictionMonth as training data. */
     trainingWindow: number;
   };
+  /** Dataset-boundary annotation: rendered at endNote.month's cell once
+   *  that month exists on the axis (e.g. "FNSPID dataset ends here"). */
+  endNote?: { text: string; month: string };
 }
 
 type Preset = { label: string; span: number | "all"; title: string };
@@ -44,6 +47,7 @@ export function TimeSlider({
   monthTo,
   onChange,
   predictionsContext,
+  endNote,
 }: TimeSliderProps) {
   const allMonths = [...months, ...futureMonths];
   const total = allMonths.length;
@@ -304,6 +308,16 @@ export function TimeSlider({
             style={{ left: "100%" }}
           />
         </div>
+
+        {/* Dataset-boundary note — appears once its month is on the axis */}
+        {endNote && allMonths.includes(endNote.month) && (
+          <div
+            className="pointer-events-none absolute -top-1 z-10 -translate-x-full whitespace-nowrap rounded-sm bg-muted/90 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-muted-foreground"
+            style={{ left: `${cellStart(allMonths.indexOf(endNote.month) + 1)}%` }}
+          >
+            {endNote.text} ⇥
+          </div>
+        )}
 
         {/* Year labels along the bottom — adaptively thinned to fit */}
         <div ref={labelRowRef} className="relative mt-1 h-4">
