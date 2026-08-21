@@ -111,16 +111,36 @@ export async function fetchPredictions(
 const FACTORS_CACHE = new Map<string, FactorsFile>();
 
 export async function fetchFactorsLatest(
-  sourceId: string
+  sourceId: string,
+  date?: string
 ): Promise<FactorsFile> {
-  const cached = FACTORS_CACHE.get(sourceId);
+  const key = `${sourceId}:${date ?? "latest"}`;
+  const cached = FACTORS_CACHE.get(key);
   if (cached) return cached;
-  const res = await fetch(`${sourceBase(sourceId)}/factors/latest.json`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `${sourceBase(sourceId)}/factors/${date ?? "latest"}.json`,
+    { cache: "no-store" }
+  );
   const data = await jsonOrThrow<FactorsFile>(res);
-  FACTORS_CACHE.set(sourceId, data);
+  FACTORS_CACHE.set(key, data);
   return data;
+}
+
+/** Dated factor bundles available for the history scrubber. Returns an
+ *  empty list when the source has no index (older corpora). */
+export async function fetchFactorsIndex(
+  sourceId: string
+): Promise<string[]> {
+  try {
+    const res = await fetch(`${sourceBase(sourceId)}/factors/index.json`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return [];
+    const data = (await res.json()) as { dates?: string[] };
+    return Array.isArray(data.dates) ? data.dates : [];
+  } catch {
+    return [];
+  }
 }
 
 // ── Article search (browser-side) ──────────────────────────────────────

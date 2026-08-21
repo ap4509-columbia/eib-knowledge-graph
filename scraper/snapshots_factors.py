@@ -324,6 +324,22 @@ def update_corpus_enriched(
     # knowing today's date first.
     _write_json(corpus_root / "factors" / "latest.json", factors_bundle)
 
+    # Maintain factors/index.json — the dated bundles with real content,
+    # so the UI can offer a draggable history timeline. Empty bundles
+    # (early warm-up days) are excluded.
+    fdir = corpus_root / "factors"
+    dates = []
+    for fp in sorted(fdir.glob("*.json")):
+        if fp.stem in ("latest", "index"):
+            continue
+        try:
+            b = _load_json(fp, {})
+        except Exception:
+            continue
+        if b.get("entities"):
+            dates.append(fp.stem)
+    _write_json(fdir / "index.json", {"dates": dates})
+
     summary["factors_written"] = today
     summary["entities_in_factors"] = len(factors_bundle.get("entities", []))
     return summary

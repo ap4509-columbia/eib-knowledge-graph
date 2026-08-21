@@ -10,7 +10,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Loader2 } from "lucide-react";
 
-import { fetchFactorsLatest } from "@/lib/api/client";
+import { fetchFactorsIndex, fetchFactorsLatest } from "@/lib/api/client";
 import type { FactorEntity, FactorsFile } from "@/lib/api/types";
 import { ENTITY_COLORS } from "@/components/graphStyles";
 
@@ -303,7 +303,10 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
   }, [entities, b, zs]);
 
   return (
-    <div className="relative">
+    <div
+      className="relative max-h-full max-w-full"
+      style={{ aspectRatio: `${W} / ${H}`, width: "100%" }}
+    >
       <div className="pointer-events-none absolute right-2 top-1 z-10 flex items-center gap-2">
         <span className="font-mono text-[9px] text-muted-foreground/70">
           scroll to zoom{isZoomed ? " · drag to pan" : ""}
@@ -321,7 +324,7 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
     <svg
       ref={svgRef}
       viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
-      className="w-full max-w-full"
+      className="h-full w-full"
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
@@ -469,18 +472,113 @@ function ClusterCard({
   );
 }
 
+/** Draggable single-value date scrubber over the dated factor bundles. */
+function DateScrubber({
+  dates,
+  value,
+  onChange,
+}: {
+  dates: string[];
+  value: string;
+  onChange: (d: string) => void;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const draggingRef = useRef(false);
+  const idx = Math.max(0, dates.indexOf(value));
+  const cellW = 100 / dates.length;
+
+  const pick = (clientX: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const i = Math.min(
+      dates.length - 1,
+      Math.max(0, Math.floor(((clientX - r.left) / r.width) * dates.length))
+    );
+    if (dates[i] !== value) onChange(dates[i]);
+  };
+
+  return (
+    <div className="flex shrink-0 items-center gap-3 border-t border-border/60 px-6 py-2.5">
+      <button
+        type="button"
+        aria-label="Previous day"
+        onClick={() => idx > 0 && onChange(dates[idx - 1])}
+        className="rounded border border-border px-1.5 font-mono text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-30"
+        disabled={idx === 0}
+      >
+        ‹
+      </button>
+      <div
+        ref={trackRef}
+        role="slider"
+        tabIndex={0}
+        aria-valuemin={0}
+        aria-valuemax={dates.length - 1}
+        aria-valuenow={idx}
+        aria-valuetext={value}
+        onPointerDown={(e) => {
+          (e.target as Element).setPointerCapture?.(e.pointerId);
+          draggingRef.current = true;
+          pick(e.clientX);
+        }}
+        onPointerMove={(e) => draggingRef.current && pick(e.clientX)}
+        onPointerUp={(e) => {
+          draggingRef.current = false;
+          (e.target as Element).releasePointerCapture?.(e.pointerId);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowLeft" && idx > 0) onChange(dates[idx - 1]);
+          if (e.key === "ArrowRight" && idx < dates.length - 1)
+            onChange(dates[idx + 1]);
+        }}
+        className="relative h-4 flex-1 cursor-pointer overflow-hidden rounded-full border border-border bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        style={{ touchAction: "none" }}
+      >
+        <div
+          className="absolute top-0 h-full rounded-full border border-foreground/40 bg-foreground/15 transition-[left] duration-100"
+          style={{ left: `${idx * cellW}%`, width: `${cellW}%` }}
+        />
+      </div>
+      <button
+        type="button"
+        aria-label="Next day"
+        onClick={() => idx < dates.length - 1 && onChange(dates[idx + 1])}
+        className="rounded border border-border px-1.5 font-mono text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-30"
+        disabled={idx === dates.length - 1}
+      >
+        ›
+      </button>
+      <span className="w-24 shrink-0 text-right font-mono text-xs tabular-nums text-muted-foreground">
+        {value}
+      </span>
+    </div>
+  );
+}
+
 export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
   const [data, setData] = useState<FactorsFile | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // History scrubber: dated bundles from factors/index.json; null date =
+  // latest.
+  const [dates, setDates] = useState<string[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!sourceId) return;
+    setDates([]);
+    setSelectedDate(null);
+    fetchFactorsIndex(sourceId).then(setDates);
+  }, [sourceId]);
 
   useEffect(() => {
     if (!sourceId) return;
     setData(null);
     setError(null);
-    fetchFactorsLatest(sourceId)
+    fetchFactorsLatest(sourceId, selectedDate ?? undefined)
       .then(setData)
       .catch((e) => setError(e instanceof Error ? e.message : String(e)));
-  }, [sourceId]);
+  }, [sourceId, selectedDate]);
 
   return (
     <div className="flex h-full flex-col overflow-hidden bg-background">
@@ -536,8 +634,19 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
         // shrink below its content height, the inner overflow scrollbars
         // never engage, and everything below the fold is silently clipped.
         <div className="flex min-h-0 flex-1 overflow-hidden">
-          <div className="min-w-0 flex-1 overflow-auto p-4">
-            <Scatter entities={data.entities} />
+          <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+            <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4">
+              <Scatter entities={data.entities} />
+            </div>
+            {dates.length > 1 && (
+              <DateScrubber
+                dates={dates}
+                value={selectedDate ?? dates[dates.length - 1]}
+                onChange={(d) =>
+                  setSelectedDate(d === dates[dates.length - 1] ? null : d)
+                }
+              />
+            )}
           </div>
           <div className="w-72 shrink-0 space-y-2 overflow-y-auto border-l border-border/60 px-4 py-4">
             <div className="mb-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
