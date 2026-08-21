@@ -513,10 +513,10 @@ export default function Home() {
               sources.sources.find((s) => s.id === activeSourceId)?.kind ===
                 "live" && <LiveBadge sourceId={activeSourceId} />}
             {sources && (
-              <label className="flex min-w-0 flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:flex-initial">
+              <label className="flex min-w-[8.5rem] flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:min-w-0 sm:flex-initial">
                 <span className="hidden sm:inline">Data source</span>
                 <select
-                  className="w-full min-w-[8rem] rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto sm:min-w-0"
+                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto"
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
