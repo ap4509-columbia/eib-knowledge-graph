@@ -1,0 +1,50 @@
+corpus: sp100_factors
+description: |
+  Factor-model live corpus — US counterpart of stoxx_600_factors.
+  Curated 30-ticker subset of the S&P 100 (mega-caps across six sectors),
+  same design budget as the STOXX list: 3 articles/ticker/day, enriched
+  extraction (sentiment / materiality / event_type per triplet), daily
+  factor loadings + PCA + KMeans, GAT predictions once months accumulate.
+  Keep frontend/lib/sectors.ts in sync when editing this list.
+
+sources:
+  - google_news
+
+# 30 tickers, ~5 per sector.
+tickers:
+  # Tech
+  - AAPL           # Apple
+  - MSFT           # Microsoft
+  - NVDA           # Nvidia
+  - GOOGL          # Alphabet
+  - META           # Meta Platforms
+  - AVGO           # Broadcom
+  # Financials
+  - JPM            # JPMorgan Chase
+  - BAC            # Bank of America
+  - GS             # Goldman Sachs
+  - BRK.B          # Berkshire Hathaway
+  - V              # Visa
+  # Healthcare
+  - LLY            # Eli Lilly
+  - UNH            # UnitedHealth
+  - JNJ            # Johnson & Johnson
+  - PFE            # Pfizer
+  - MRK            # Merck
+  # Consumer
+  - AMZN           # Amazon
+  - TSLA           # Tesla
+  - WMT            # Walmart
+  - PG             # Procter & Gamble
+  - KO             # Coca-Cola
+  - MCD            # McDonald's
+  # Energy & industrials
+  - XOM            # ExxonMobil
+  - CVX            # Chevron
+  - CAT            # Caterpillar
+  - BA             # Boeing
+  - GE             # GE Aerospace
+  # Communications & media
+  - NFLX           # Netflix
+  - DIS            # Disney
+  - T              # AT&T

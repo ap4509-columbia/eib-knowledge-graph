@@ -21,8 +21,9 @@ import type { Index, Snapshot, SourcesFile } from "@/lib/api/types";
 import { mergeSnapshots } from "@/lib/mergeSnapshots";
 import { formatMonthRange, monthsBetween } from "@/lib/months";
 import {
+  getDefaultCheckedSectors,
+  getSectorOrder,
   inferNodeSectors,
-  SECTOR_ORDER,
   SECTOR_SOURCE_IDS,
 } from "@/lib/sectors";
 import { TimeSlider } from "@/components/controls/TimeSlider";
@@ -53,11 +54,6 @@ function currentMonthYYYYMM(): string {
 // entities tagged FININSTRUMENTINFO — they're rarely useful to an analyst
 // on first look, so we ship them hidden by default. Toggleable via the rail.
 const DEFAULT_HIDDEN_TYPES = new Set(["FININSTRUMENTINFO", "FIN_INSTRUMENT_INFO"]);
-
-// Industry filter default: only these sectors start checked on a fresh
-// source load, so the first STOXX view opens on one industry instead of
-// the full 300-node swarm. Everything stays one click away in the rail.
-const DEFAULT_CHECKED_SECTORS = new Set(["Pharma"]);
 
 const ACTIVE_SOURCE_STORAGE_KEY = "eibkg.activeSource";
 
@@ -378,7 +374,7 @@ export default function Home() {
   const nodeSectors = useMemo(() => {
     if (!snapshot || !activeSourceId || !SECTOR_SOURCE_IDS.has(activeSourceId))
       return null;
-    return inferNodeSectors(snapshot);
+    return inferNodeSectors(snapshot, activeSourceId);
   }, [snapshot, activeSourceId]);
 
   const sectorCounts = useMemo(() => {
@@ -387,18 +383,19 @@ export default function Home() {
     for (const sector of nodeSectors.values()) {
       counts.set(sector, (counts.get(sector) ?? 0) + 1);
     }
-    // Stable order from SECTOR_ORDER; drop sectors absent from this view.
-    return SECTOR_ORDER.filter((s) => counts.has(s)).map(
+    // Stable per-source order; drop sectors absent from this view.
+    return getSectorOrder(activeSourceId ?? "").filter((s) => counts.has(s)).map(
       (s) => [s, counts.get(s) as number] as const
     );
-  }, [nodeSectors]);
+  }, [nodeSectors, activeSourceId]);
 
-  // Same maintenance rule as types, but only DEFAULT_CHECKED_SECTORS start
-  // checked — the rest ship unchecked so the first view is one industry,
-  // not the whole swarm. The user's later checks/unchecks stay put across
-  // timeline scrubs.
+  // Same maintenance rule as types, but only the source's default sectors
+  // start checked — the rest ship unchecked so the first view is one
+  // industry, not the whole swarm. The user's later checks/unchecks stay
+  // put across timeline scrubs.
   useEffect(() => {
-    if (!nodeSectors) return;
+    if (!nodeSectors || !activeSourceId) return;
+    const defaults = getDefaultCheckedSectors(activeSourceId);
     const fresh: string[] = [];
     for (const sector of new Set(nodeSectors.values())) {
       if (!knownSectorsRef.current.has(sector)) fresh.push(sector);
@@ -408,11 +405,11 @@ export default function Home() {
     setVisibleSectors((prev) => {
       const next = new Set(prev);
       for (const s of fresh) {
-        if (DEFAULT_CHECKED_SECTORS.has(s)) next.add(s);
+        if (defaults.has(s)) next.add(s);
       }
       return next;
     });
-  }, [nodeSectors]);
+  }, [nodeSectors, activeSourceId]);
 
   const handleToggleSector = useCallback((sector: string) => {
     setVisibleSectors((prev) => {
