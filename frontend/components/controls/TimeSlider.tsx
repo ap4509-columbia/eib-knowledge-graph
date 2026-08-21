@@ -144,12 +144,12 @@ export function TimeSlider({
   const showMinorTicks = total <= 96;
 
   return (
-    <div className="border-t border-border bg-background/80 px-6 pb-3 pt-3 backdrop-blur">
-      {/* Label row: date chip pinned left, preset chips pinned right, with a
-          gap between them so the chip can never overlap the presets even at
-          the far edges of the range. min-w-0 lets the chip truncate rather
-          than push into the preset zone if the corpus/format ever grows. */}
-      <div className="mb-2 flex h-6 items-start gap-3">
+    <div className="border-t border-border bg-background/80 px-3 pb-3 pt-3 backdrop-blur sm:px-6">
+      {/* Label row: date chip pinned left, preset chips pinned right. The
+          row wraps (chip above, presets below) rather than letting the
+          nowrap chip run under the presets on narrow phones; the
+          "(N months)" suffix is dropped below sm for the same reason. */}
+      <div className="mb-2 flex min-h-6 flex-wrap items-start gap-3 gap-y-1">
         <div className="min-w-0 shrink">
           <span
             className={cn(
@@ -171,7 +171,7 @@ export function TimeSlider({
                 {formatMonth(monthFrom)}
                 <span className="text-muted-foreground">→</span>
                 {formatMonth(monthTo)}
-                <span className="font-normal text-muted-foreground">
+                <span className="hidden font-normal text-muted-foreground sm:inline">
                   ({span} months)
                 </span>
               </>
@@ -223,17 +223,17 @@ export function TimeSlider({
         const trainEndMo = allMonths[Math.max(trainStartIdx, trainEndIdx)];
         const predMo = predictionsContext!.predictionMonth;
         return (
-          <div className="mb-2 flex select-none items-center gap-x-4 gap-y-0.5 font-mono text-[10px] text-muted-foreground">
-            <span className="flex items-center gap-1.5">
+          <div className="mb-2 flex select-none flex-wrap items-center gap-x-4 gap-y-0.5 font-mono text-[10px] text-muted-foreground">
+            <span className="flex items-center gap-1.5 whitespace-nowrap">
               <span className="inline-block h-2 w-3 rounded-sm border border-amber-600/50 bg-amber-500/40 dark:border-amber-500/50 dark:bg-amber-400/30" />
               trained on <span className="text-foreground">{trainStartMo} → {trainEndMo}</span>
             </span>
-            <span className="flex items-center gap-1.5">
+            <span className="flex items-center gap-1.5 whitespace-nowrap">
               <span className="inline-block h-2 w-2 rounded-sm border border-emerald-700/60 bg-emerald-600/50 dark:border-emerald-500/60 dark:bg-emerald-400/40" />
               predicts <span className="text-foreground">{predMo}</span>
             </span>
             <span
-              className="ml-auto text-muted-foreground/70"
+              className="ml-auto hidden text-muted-foreground/70 lg:inline"
               title={`Window size fixed at ${predictionsContext!.trainingWindow} training months (1 quarter) per the rolling-window GAT — see scripts/compute_gat_predictions.py. Raw per-month prediction bundle: this source's predictions.json under /data/sources/ — hover to verify against the model.`}
             >
               drag the window · rolling window = {predictionsContext!.trainingWindow} months
