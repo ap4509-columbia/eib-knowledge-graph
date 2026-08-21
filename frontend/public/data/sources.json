@@ -1,12 +1,12 @@
 {
-  "default": "fnspid-19-20-semis",
+  "default": "stoxx_600_factors",
   "sources": [
     {
       "id": "fnspid-19-20-semis",
       "label": "FNSPID — US semiconductors (2019–2020)",
       "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
       "kind": "historical",
-      "available": true,
+      "available": false,
       "features": [
         "graph",
         "predictions"

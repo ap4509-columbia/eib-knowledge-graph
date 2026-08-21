@@ -473,6 +473,11 @@ function ClusterCard({
 }
 
 /** Draggable single-value date scrubber over the dated factor bundles. */
+const MONTH_ABBR = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
 function DateScrubber({
   dates,
   value,
@@ -484,6 +489,9 @@ function DateScrubber({
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const draggingRef = useRef(false);
+  // While dragging, the thumb follows the pointer continuously and snaps
+  // to its cell on release — same feel as the main timeline scrubber.
+  const [livePct, setLivePct] = useState<number | null>(null);
   const idx = Math.max(0, dates.indexOf(value));
   const cellW = 100 / dates.length;
 
@@ -491,12 +499,24 @@ function DateScrubber({
     const el = trackRef.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const i = Math.min(
-      dates.length - 1,
-      Math.max(0, Math.floor(((clientX - r.left) / r.width) * dates.length))
-    );
+    const frac = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+    setLivePct(Math.min(100 - cellW, Math.max(0, frac * 100 - cellW / 2)));
+    const i = Math.min(dates.length - 1, Math.floor(frac * dates.length));
     if (dates[i] !== value) onChange(dates[i]);
   };
+
+  const endDrag = (e: React.PointerEvent) => {
+    draggingRef.current = false;
+    setLivePct(null);
+    (e.target as Element).releasePointerCapture?.(e.pointerId);
+  };
+
+  // First date of each month gets a full-height tick + a label; every
+  // date gets a minor tick while the axis is sparse enough to read them.
+  const monthStarts = dates
+    .map((d, i) => ({ d, i }))
+    .filter(({ d }, j) => j === 0 || dates[j - 1].slice(0, 7) !== d.slice(0, 7));
+  const showMinorTicks = dates.length <= 90;
 
   return (
     <div className="flex shrink-0 items-center gap-3 border-t border-border/60 px-6 py-2.5">
@@ -509,36 +529,73 @@ function DateScrubber({
       >
         ‹
       </button>
-      <div
-        ref={trackRef}
-        role="slider"
-        tabIndex={0}
-        aria-valuemin={0}
-        aria-valuemax={dates.length - 1}
-        aria-valuenow={idx}
-        aria-valuetext={value}
-        onPointerDown={(e) => {
-          (e.target as Element).setPointerCapture?.(e.pointerId);
-          draggingRef.current = true;
-          pick(e.clientX);
-        }}
-        onPointerMove={(e) => draggingRef.current && pick(e.clientX)}
-        onPointerUp={(e) => {
-          draggingRef.current = false;
-          (e.target as Element).releasePointerCapture?.(e.pointerId);
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "ArrowLeft" && idx > 0) onChange(dates[idx - 1]);
-          if (e.key === "ArrowRight" && idx < dates.length - 1)
-            onChange(dates[idx + 1]);
-        }}
-        className="relative h-4 flex-1 cursor-pointer overflow-hidden rounded-full border border-border bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
-        style={{ touchAction: "none" }}
-      >
+      <div className="flex min-w-0 flex-1 flex-col gap-0.5">
         <div
-          className="absolute top-0 h-full rounded-full border border-foreground/40 bg-foreground/15 transition-[left] duration-100"
-          style={{ left: `${idx * cellW}%`, width: `${cellW}%` }}
-        />
+          ref={trackRef}
+          role="slider"
+          tabIndex={0}
+          aria-valuemin={0}
+          aria-valuemax={dates.length - 1}
+          aria-valuenow={idx}
+          aria-valuetext={value}
+          onPointerDown={(e) => {
+            (e.target as Element).setPointerCapture?.(e.pointerId);
+            draggingRef.current = true;
+            pick(e.clientX);
+          }}
+          onPointerMove={(e) => draggingRef.current && pick(e.clientX)}
+          onPointerUp={endDrag}
+          onPointerCancel={endDrag}
+          onKeyDown={(e) => {
+            if (e.key === "ArrowLeft" && idx > 0) onChange(dates[idx - 1]);
+            if (e.key === "ArrowRight" && idx < dates.length - 1)
+              onChange(dates[idx + 1]);
+          }}
+          className="relative h-4 flex-1 cursor-pointer overflow-hidden rounded-full border border-border bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          style={{ touchAction: "none" }}
+        >
+          {showMinorTicks &&
+            dates.map((d, i) =>
+              i === 0 ? null : (
+                <div
+                  key={d}
+                  className="pointer-events-none absolute bottom-0 h-1 w-px bg-border"
+                  style={{ left: `${i * cellW}%` }}
+                />
+              )
+            )}
+          {monthStarts.map(({ d, i }) =>
+            i === 0 ? null : (
+              <div
+                key={`m-${d}`}
+                className="pointer-events-none absolute top-0 h-full w-px bg-foreground/25"
+                style={{ left: `${i * cellW}%` }}
+              />
+            )
+          )}
+          <div
+            className={`absolute top-0 h-full rounded-full border border-foreground/40 bg-foreground/15 ${
+              livePct === null ? "transition-[left] duration-100" : ""
+            }`}
+            style={{
+              left: `${livePct ?? idx * cellW}%`,
+              width: `${cellW}%`,
+            }}
+          />
+        </div>
+        <div className="pointer-events-none relative h-3 overflow-hidden font-mono text-[9px] leading-3 text-muted-foreground">
+          {monthStarts.map(({ d, i }, j) => (
+            <span
+              key={`l-${d}`}
+              className="absolute whitespace-nowrap"
+              style={{ left: `${i * cellW}%` }}
+            >
+              {MONTH_ABBR[parseInt(d.slice(5, 7), 10) - 1]}
+              {(j === 0 || d.slice(0, 4) !== monthStarts[j - 1].d.slice(0, 4)) &&
+                ` ${d.slice(0, 4)}`}
+            </span>
+          ))}
+        </div>
       </div>
       <button
         type="button"
@@ -571,13 +628,35 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
     fetchFactorsIndex(sourceId).then(setDates);
   }, [sourceId]);
 
+  // Stale-while-revalidate: scrubbing dates keeps the current chart on
+  // screen while the next bundle loads (bundles are cached client-side,
+  // so revisited dates swap in instantly). Only a source switch blanks
+  // the panel — the old corpus's chart would be plain wrong. The seq
+  // counter drops out-of-order responses from fast scrubs.
+  const seqRef = useRef(0);
+  const prevSourceRef = useRef<string | null>(null);
+  const [isFetching, setIsFetching] = useState(false);
+
   useEffect(() => {
     if (!sourceId) return;
-    setData(null);
+    const seq = ++seqRef.current;
+    if (prevSourceRef.current !== sourceId) {
+      prevSourceRef.current = sourceId;
+      setData(null);
+    }
+    setIsFetching(true);
     setError(null);
     fetchFactorsLatest(sourceId, selectedDate ?? undefined)
-      .then(setData)
-      .catch((e) => setError(e instanceof Error ? e.message : String(e)));
+      .then((d) => {
+        if (seqRef.current === seq) setData(d);
+      })
+      .catch((e) => {
+        if (seqRef.current === seq)
+          setError(e instanceof Error ? e.message : String(e));
+      })
+      .finally(() => {
+        if (seqRef.current === seq) setIsFetching(false);
+      });
   }, [sourceId, selectedDate]);
 
   return (
@@ -590,6 +669,9 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
               <span className="text-foreground">{data.date}</span>
               {" — "}
               {data.entities.length} entities, k={data.kmeans.k}
+              {isFetching && (
+                <Loader2 className="ml-2 inline h-3 w-3 animate-spin align-[-2px]" />
+              )}
             </>
           ) : (
             "Loading factor bundle…"
@@ -621,23 +703,29 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
         </div>
       )}
 
-      {data && data.entities.length === 0 && (
-        <div className="px-6 py-6 text-xs text-muted-foreground">
-          Factor bundle exists but no entities passed the min-articles
-          threshold. Wait for a busier news day, or reduce the threshold in{" "}
-          <span className="font-mono">run_daily_factors.py</span>.
-        </div>
-      )}
-
-      {data && data.entities.length > 0 && (
+      {data && (
         // min-h-0 is load-bearing: without it this flex-1 row refuses to
         // shrink below its content height, the inner overflow scrollbars
         // never engage, and everything below the fold is silently clipped.
+        // The scrubber lives outside the entity-count branch so an empty
+        // date can never strand the user without a way to scrub back.
         <div className="flex min-h-0 flex-1 overflow-hidden">
           <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-            <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4">
-              <Scatter entities={data.entities} />
-            </div>
+            {data.entities.length > 0 ? (
+              <div
+                className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4 transition-opacity duration-150"
+                style={{ opacity: isFetching ? 0.7 : 1 }}
+              >
+                <Scatter entities={data.entities} />
+              </div>
+            ) : (
+              <div className="flex flex-1 items-center px-6 text-xs text-muted-foreground">
+                Factor bundle exists but no entities passed the min-articles
+                threshold. Wait for a busier news day, or reduce the
+                threshold in{" "}
+                <span className="font-mono">run_daily_factors.py</span>.
+              </div>
+            )}
             {dates.length > 1 && (
               <DateScrubber
                 dates={dates}
