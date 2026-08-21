@@ -1,0 +1,798 @@
+{
+  "generated_at": "2026-08-21T18:29:16.845476+00:00",
+  "min_articles": 2,
+  "kept_factors": [
+    "attention",
+    "sentiment",
+    "consensus",
+    "novelty",
+    "materiality"
+  ],
+  "entities": [
+    {
+      "name": "Amazon.com",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.02416649893994111,
+      "pc2": 0.22105594864643827,
+      "pc3": 0.1365979903024932,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.35,
+        "consensus": 0.65,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "500 US Cities And Towns",
+        "AMZN"
+      ]
+    },
+    {
+      "name": "Apple Inc.",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": -0.7674311604655409,
+      "pc2": -0.6466369582370278,
+      "pc3": -0.4016621917628449,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.15,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AAPL:NASDAQ",
+        "AI"
+      ]
+    },
+    {
+      "name": "Bank of America Corporation",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 1.1629999539042168,
+      "pc2": -1.2708040133182448,
+      "pc3": -1.4865586025427346,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.09999999999999998,
+        "consensus": 0.5679506201061426,
+        "novelty": 0.3333333333333333,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "PRODUCT",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Apple Inc.",
+        "Digital Mortgage",
+        "Series GG"
+      ]
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.6217528511988125,
+      "pc2": -0.4358598428894161,
+      "pc3": 1.1047957262620436,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.10000000000000002,
+        "consensus": 0.9183503419072274,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          3
+        ]
+      ],
+      "top_partners": [
+        "Berkshire Hathaway Inc.",
+        "Increased Investments and Share Buybacks",
+        "Q2"
+      ]
+    },
+    {
+      "name": "British Airways",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.5756257990289964,
+      "pc2": -0.5579875138675681,
+      "pc3": 0.7001331448663723,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.65,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          1
+        ],
+        [
+          "LEGAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Kamala Harris's close friend",
+        "Nonstop Route"
+      ]
+    },
+    {
+      "name": "Eli Lilly",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 1.3907566487224747,
+      "pc2": -0.05446106589981572,
+      "pc3": -0.15053040672421247,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.3,
+        "consensus": 0.55,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "$1 Trillion",
+        "Eli Lilly and Company"
+      ]
+    },
+    {
+      "name": "ExxonMobil",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": -0.3319416462644808,
+      "pc2": -0.31594867016366235,
+      "pc3": 1.189793788898517,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.1,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "MACRO",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Kashagan Peak Output",
+        "XOM"
+      ]
+    },
+    {
+      "name": "Johnson & Johnson Inc.",
+      "type": "COMPANY",
+      "cluster": 4,
+      "pc1": 0.6997554551879904,
+      "pc2": 2.423292101608219,
+      "pc3": -0.39302602429804845,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6,
+        "consensus": 0.9183503419072274,
+        "novelty": 1.0,
+        "materiality": 18.261685024185237
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "REGULATORY",
+          1
+        ],
+        [
+          "PARTNERSHIP",
+          1
+        ],
+        [
+          "M_AND_A",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Delix Therapeutics",
+        "MONARCH QUEST 3 Update",
+        "Rutgers University"
+      ]
+    },
+    {
+      "name": "MRK/MRNA",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.7506030688072032,
+      "pc2": 1.151983361342551,
+      "pc3": 0.3938361744789475,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.8,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Personalized Cancer Therapy"
+      ]
+    },
+    {
+      "name": "McCumbee McAleer Racing",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.9213138979420542,
+      "pc2": 0.26220865308664315,
+      "pc3": 0.9045220126015078,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.25,
+        "consensus": 0.95,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Finn Wiebelhaus",
+        "Ford GT4"
+      ]
+    },
+    {
+      "name": "Microsoft Corporation",
+      "type": "STOCK_TICKER",
+      "cluster": 3,
+      "pc1": -1.8470621329953862,
+      "pc2": -0.42170664644053774,
+      "pc3": -2.195611775044168,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.725,
+        "consensus": 0.875,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "August"
+      ]
+    },
+    {
+      "name": "Morgan Stanley Company",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": -1.4272075244171294,
+      "pc2": -0.9670370702003421,
+      "pc3": -1.8011371668494527,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.375,
+        "consensus": 0.875,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "GUIDANCE",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Chevron Corporation",
+        "Walt Disney Company (The)"
+      ]
+    },
+    {
+      "name": "NVIDIA Corporation",
+      "type": "COMPANY",
+      "cluster": 4,
+      "pc1": 2.9988807441733174,
+      "pc2": 2.4258612362642764,
+      "pc3": -1.1126702307165302,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.16666666666666666,
+        "consensus": 0.5357203907605294,
+        "novelty": 1.0,
+        "materiality": 27.85416466724356
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "M_AND_A",
+          1
+        ]
+      ],
+      "top_partners": [
+        "NVDA",
+        "Retail Investors",
+        "SpaceX"
+      ]
+    },
+    {
+      "name": "Pfizer Inc.",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": -0.7909353920569018,
+      "pc2": -0.09448617867985896,
+      "pc3": 1.295492421781154,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "NYSE:PFE",
+        "PFE"
+      ]
+    },
+    {
+      "name": "Seeking Alpha",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 1,
+      "pc1": -1.5211061959109924,
+      "pc2": 1.0412521156006496,
+      "pc3": 0.34098685803762885,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.75,
+        "consensus": 0.95,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "GE Vernova",
+        "Pfizer Inc."
+      ]
+    },
+    {
+      "name": "Tesla",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 2.2266813951430446,
+      "pc2": -0.9556813566164871,
+      "pc3": -0.24073226649271515,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": -0.024999999999999994,
+        "consensus": 0.6730825792344495,
+        "novelty": 0.75,
+        "materiality": 0.0
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "PRODUCT",
+          3
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "China",
+        "CyberCab",
+        "Driver Monitoring",
+        "Tesla Inc."
+      ]
+    },
+    {
+      "name": "US teen",
+      "type": "CONCEPT",
+      "cluster": 0,
+      "pc1": 0.3814412795140789,
+      "pc2": -1.1521265387286925,
+      "pc3": 0.7082135515106568,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.3,
+        "consensus": 1.0,
+        "novelty": 0.6666666666666666,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "LEGAL",
+          3
+        ]
+      ],
+      "top_partners": [
+        "Alphabet Inc.",
+        "Meta",
+        "Snap Inc."
+      ]
+    },
+    {
+      "name": "University of Georgia",
+      "type": "ORGANIZATION",
+      "cluster": 1,
+      "pc1": -1.6906238390103097,
+      "pc2": 1.0740790150911508,
+      "pc3": 0.4501896899353353,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.75,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "JMU",
+        "NCAA Attendance"
+      ]
+    },
+    {
+      "name": "Walmart",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.7819283904025482,
+      "pc2": -1.080359618361247,
+      "pc3": 0.959029497518895,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.4166666666666667,
+        "consensus": 0.6881952177688382,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "GUIDANCE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Multiple Price-Target Cuts After Q2 Earnings",
+        "Wall Street",
+        "Walmart Inc."
+      ]
+    },
+    {
+      "name": "Walt Disney",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": -0.7674311604655408,
+      "pc2": -0.6466369582370278,
+      "pc3": -0.4016621917628445,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.15,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Disney+ Asia Pacific Commerce Head",
+        "Walt Disney Company (The)"
+      ]
+    }
+  ],
+  "pca": {
+    "explained_variance": [
+      0.38214726816720007,
+      0.2302484296152688,
+      0.19607286310271865
+    ],
+    "components": [
+      [
+        0.5988693061875958,
+        -0.42400968563999686,
+        -0.5419245785740942,
+        0.20307334951115896,
+        0.3558796235322661
+      ],
+      [
+        -0.07778860622694081,
+        0.55072726802098,
+        0.10494308053741258,
+        0.45750297019366754,
+        0.6858034639098202
+      ],
+      [
+        -0.0737313612044393,
+        -0.3983785129333094,
+        0.34910642676048925,
+        0.7990096043607744,
+        -0.2748938008427033
+      ]
+    ]
+  },
+  "kmeans": {
+    "k": 5,
+    "centroids": [
+      [
+        0.0848188929679968,
+        -1.1218343122651282,
+        0.24612748686902547,
+        0.4716077004618772,
+        -0.32559863455368815
+      ],
+      [
+        -0.7633700367119742,
+        1.0220283874611553,
+        0.5625361013118089,
+        0.6385484793864354,
+        -0.3255986345536882
+      ],
+      [
+        1.4984671091012816,
+        -0.2652322804829988,
+        -1.3955646540257531,
+        -0.2796258046986345,
+        -0.3255986345536882
+      ],
+      [
+        -0.7633700367119741,
+        0.3713251926761982,
+        0.26536972925302177,
+        -1.6151520360951,
+        -0.3255986345536882
+      ],
+      [
+        0.9330078226479677,
+        0.46563000351459777,
+        -0.5821151913540097,
+        0.6385484793864353,
+        2.9303877109831937
+      ]
+    ],
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 6,
+        "signature": [
+          {
+            "factor": "sentiment",
+            "loading": -1.1218343122651282
+          },
+          {
+            "factor": "novelty",
+            "loading": 0.4716077004618772
+          },
+          {
+            "factor": "materiality",
+            "loading": -0.32559863455368815
+          }
+        ],
+        "members": [
+          "Berkshire Hathaway",
+          "British Airways",
+          "ExxonMobil",
+          "Pfizer Inc.",
+          "US teen",
+          "Walmart"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 5,
+        "signature": [
+          {
+            "factor": "sentiment",
+            "loading": 1.0220283874611553
+          },
+          {
+            "factor": "attention",
+            "loading": -0.7633700367119742
+          },
+          {
+            "factor": "novelty",
+            "loading": 0.6385484793864354
+          }
+        ],
+        "members": [
+          "Amazon.com",
+          "MRK/MRNA",
+          "McCumbee McAleer Racing",
+          "Seeking Alpha",
+          "University of Georgia"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 3,
+        "signature": [
+          {
+            "factor": "attention",
+            "loading": 1.4984671091012816
+          },
+          {
+            "factor": "consensus",
+            "loading": -1.3955646540257531
+          },
+          {
+            "factor": "materiality",
+            "loading": -0.3255986345536882
+          }
+        ],
+        "members": [
+          "Bank of America Corporation",
+          "Eli Lilly",
+          "Tesla"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 4,
+        "signature": [
+          {
+            "factor": "novelty",
+            "loading": -1.6151520360951
+          },
+          {
+            "factor": "attention",
+            "loading": -0.7633700367119741
+          },
+          {
+            "factor": "sentiment",
+            "loading": 0.3713251926761982
+          }
+        ],
+        "members": [
+          "Apple Inc.",
+          "Microsoft Corporation",
+          "Morgan Stanley Company",
+          "Walt Disney"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 2,
+        "signature": [
+          {
+            "factor": "materiality",
+            "loading": 2.9303877109831937
+          },
+          {
+            "factor": "attention",
+            "loading": 0.9330078226479677
+          },
+          {
+            "factor": "novelty",
+            "loading": 0.6385484793864353
+          }
+        ],
+        "members": [
+          "Johnson & Johnson Inc.",
+          "NVIDIA Corporation"
+        ]
+      }
+    ]
+  },
+  "window_months": [
+    "2026-07",
+    "2026-08"
+  ],
+  "corpus": "sp100_factors",
+  "date": "2026-08-21"
+}

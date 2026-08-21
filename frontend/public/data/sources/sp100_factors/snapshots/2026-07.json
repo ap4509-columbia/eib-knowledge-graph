@@ -1,0 +1,42 @@
+{
+  "month": "2026-07",
+  "stats": {
+    "nodes": 2,
+    "edges": 1,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "XOM",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Second-Quarter 2026 Results",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    }
+  ],
+  "edges": [
+    {
+      "id": "XOM||Reports Earnings||Second-Quarter 2026 Results",
+      "source": "XOM",
+      "target": "Second-Quarter 2026 Results",
+      "rel": "Reports Earnings",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    }
+  ]
+}
