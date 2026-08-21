@@ -3,8 +3,8 @@
   "sources": [
     {
       "id": "fnspid-19-20-semis",
-      "label": "FNSPID \u2014 US semiconductors (2019\u20132020)",
-      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid \u2192 Covid-shock \u2192 recovery arc. Static; does not update.",
+      "label": "FNSPID — US semiconductors (2019–2020)",
+      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
       "kind": "historical",
       "available": true,
       "features": [
@@ -14,8 +14,18 @@
     },
     {
       "id": "fnspid-qwen-vm",
-      "label": "FNSPID \u2014 Full corpus (VM pipeline, updating)",
-      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009\u20132024), extracted by our automated pipeline on the team GPU VM: qwen2.5:14b extraction \u2192 Judge LLM \u2192 third-LLM refinement \u2192 published chunk by chunk as the run progresses. Currently covers 2009\u20132021; remaining years land automatically.",
+      "label": "FNSPID — Full corpus (our pipeline, updating)",
+      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009–2024), built by our automated VM pipeline the correct way: qwen2.5:14b extraction → Judge LLM → third-LLM refinement, published chunk by chunk. Predictions appear once the rolling-window GAT trains on the finished refined corpus.",
+      "kind": "historical",
+      "available": true,
+      "features": [
+        "graph"
+      ]
+    },
+    {
+      "id": "fnspid-pierre",
+      "label": "FNSPID — Pierre’s run (2019–2021)",
+      "description": "Pierre’s standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
       "kind": "historical",
       "available": true,
       "features": [
@@ -26,7 +36,7 @@
     {
       "id": "report",
       "label": "Project report (PDF)",
-      "description": "The full three-semester project report \u2014 data, pipeline, GAT, benchmarks, live corpus, factor model, and UI \u2014 as an in-app PDF.",
+      "description": "The full three-semester project report — data, pipeline, GAT, benchmarks, live corpus, factor model, and UI — as an in-app PDF.",
       "kind": "report",
       "available": true,
       "features": [
@@ -36,7 +46,7 @@
     {
       "id": "stoxx_600_factors",
       "label": "STOXX Europe 600 (Live)",
-      "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed every morning by the team GPU VM using local qwen2.5:14b \u2014 zero API cost.",
+      "description": "Curated 30-ticker STOXX Europe 600 subset with enriched extraction (sentiment / materiality / event type per triplet). Daily factor rollup + PCA + KMeans clustering. Refreshed every morning by the team GPU VM using local qwen2.5:14b — zero API cost.",
       "kind": "live",
       "available": true,
       "features": [
