@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T02:40:13.674937+00:00",
+  "generated_at": "2026-08-21T16:25:18.079304+00:00",
   "min_articles": 2,
   "kept_factors": [
     "attention",
@@ -9,9 +9,9 @@
     {
       "name": "100 Strike Call Option",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -35,9 +35,9 @@
     {
       "name": "10500 Strike",
       "type": "DERIVATIVE",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -61,9 +61,9 @@
     {
       "name": "10700 Strike Call Option",
       "type": "DERIVATIVE",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -88,9 +88,9 @@
     {
       "name": "140 Strike Put Option",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -112,17 +112,17 @@
       ]
     },
     {
-      "name": "155 Strike Call Option",
+      "name": "165 Strike Call Option",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -133,15 +133,16 @@
         ]
       ],
       "top_partners": [
+        "Out-of-the-Money By 1%",
         "QCOM"
       ]
     },
     {
       "name": "4800 Strike",
       "type": "DERIVATIVE",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -166,15 +167,15 @@
     {
       "name": "5500 Strike Call Option",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -185,16 +186,16 @@
         ]
       ],
       "top_partners": [
-        "9",
+        "9%",
         "Intel Corp"
       ]
     },
     {
       "name": "5Gconnected Factory Floor",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -218,15 +219,15 @@
     {
       "name": "7500 Strike Call Option",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -244,9 +245,9 @@
     {
       "name": "ADI",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -269,10 +270,10 @@
     },
     {
       "name": "AMAT Stock",
-      "type": "STOCKTICKER",
+      "type": "STOCK_TICKER",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -289,50 +290,50 @@
         ]
       ],
       "top_partners": [
-        "2008 Recession",
+        "2007-08 Crisis",
         "Market Performance"
       ]
     },
     {
       "name": "AMD",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 3.684470641754191,
-      "pc2": -3.370655231518575,
+      "cluster": 2,
+      "pc1": 3.815855556264912,
+      "pc2": -3.378048513187059,
       "pc3": 0.0,
       "factors": {
-        "attention": 33.0,
+        "attention": 35.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5172413793103449,
+        "novelty": 0.5483870967741935,
         "materiality": 0.0
       },
-      "n_articles": 33,
+      "n_articles": 35,
       "event_mix": [
         [
           "OTHER",
-          33
+          35
         ]
       ],
       "top_partners": [
+        "270,832 Contracts",
         "7",
         "7nm Processors",
         "95 Strike Call Option",
         "AMAT",
         "AllTime High",
+        "Chipmaking",
         "Cloud Products",
         "Design Pipelines",
-        "EPYC Server CPUs",
-        "Epyc CPUs",
-        "GPUs"
+        "EPYC Server CPUs"
       ]
     },
     {
       "name": "AMD Stock",
-      "type": "STOCKTICKER",
+      "type": "STOCK_TICKER",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -354,24 +355,50 @@
       ]
     },
     {
-      "name": "APPLIED MATERIALS INC",
-      "type": "COMPANY",
+      "name": "AMD Stock Options",
+      "type": "FIN_INSTRUMENT_INFO",
       "cluster": 0,
-      "pc1": 0.08619936866818895,
-      "pc2": -1.0691696767806673,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
-        "attention": 9.0,
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Average Daily Trading Volume",
+        "Underlying Shares"
+      ]
+    },
+    {
+      "name": "APPLIED MATERIALS INC",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": 0.4097463132083381,
+      "pc2": -1.3893046032545107,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 12.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.16666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 9,
+      "n_articles": 12,
       "event_mix": [
         [
           "OTHER",
-          9
+          12
         ]
       ],
       "top_partners": [
@@ -385,10 +412,10 @@
     },
     {
       "name": "ASML",
-      "type": "STOCKTICKER",
+      "type": "STOCK_TICKER",
       "cluster": 4,
-      "pc1": 0.08814605154188465,
-      "pc2": 0.1618930118896851,
+      "pc1": 0.09036063474445476,
+      "pc2": 0.1677803801908761,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -410,38 +437,63 @@
       ]
     },
     {
-      "name": "ATT Inc",
+      "name": "AT&T Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
-        "attention": 4.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.0,
         "materiality": 0.0
       },
-      "n_articles": 4,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          4
+          2
+        ]
+      ],
+      "top_partners": [
+        "SPLG",
+        "Stock Price"
+      ]
+    },
+    {
+      "name": "ATT Inc",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
         ]
       ],
       "top_partners": [
         "Revenue",
-        "SPLG",
         "Stock Price"
       ]
     },
     {
       "name": "Activists",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 1.2587262813592524,
-      "pc2": 0.8408268393884041,
+      "cluster": 1,
+      "pc1": 1.2531939462192445,
+      "pc2": 0.8614960261883615,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -469,9 +521,9 @@
     {
       "name": "Addex Therapeutics Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -494,9 +546,9 @@
     {
       "name": "Adobe Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -519,61 +571,60 @@
     {
       "name": "Advanced Micro Devices",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 4.741583772837023,
-      "pc2": -4.7717741120290444,
+      "cluster": 2,
+      "pc1": 4.546978456778981,
+      "pc2": -4.2888374418435955,
       "pc3": 0.0,
       "factors": {
-        "attention": 43.0,
+        "attention": 42.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.42424242424242425,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 43,
+      "n_articles": 42,
       "event_mix": [
         [
           "OTHER",
-          43
+          42
         ]
       ],
       "top_partners": [
         "182",
         "2021",
         "Alphabet Inc",
-        "Amazoncom",
-        "Apple",
         "Blockbuster Acquisition",
+        "Cloud Computing",
         "Consumer Products",
         "EPYC Processors",
         "Forward PriceEarnings Ratio",
-        "Forward PriceSales Ratio"
+        "Forward PriceSales Ratio",
+        "Graphics Cards"
       ]
     },
     {
       "name": "Advanced Micro Devices Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.33396925270121597,
-      "pc2": -0.08393018926964332,
+      "pc1": 0.5170648773591612,
+      "pc2": 0.3599257900669285,
       "pc3": 0.0,
       "factors": {
-        "attention": 6.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 5,
       "event_mix": [
         [
           "OTHER",
-          6
+          5
         ]
       ],
       "top_partners": [
         "04",
-        "Chipmaking",
         "Stock Price",
         "Xilinx Inc"
       ]
@@ -581,9 +632,9 @@
     {
       "name": "AeroCentury",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -606,9 +657,9 @@
     {
       "name": "Alphabet Inc GOOGLO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -631,15 +682,15 @@
     {
       "name": "Amazon",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 4,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
       "n_articles": 3,
@@ -651,16 +702,16 @@
       ],
       "top_partners": [
         "Ecommerce Growth",
-        "Share Price",
-        "Similar Initiatives"
+        "Similar Initiatives",
+        "Stock Price"
       ]
     },
     {
       "name": "American Airlines",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -683,9 +734,9 @@
     {
       "name": "American Airlines Group Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -708,9 +759,9 @@
     {
       "name": "Analog Devices",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.8109817110250565,
-      "pc2": -0.09856413326446,
+      "cluster": 3,
+      "pc1": 0.791546919905806,
+      "pc2": -0.06926866560240122,
       "pc3": 0.0,
       "factors": {
         "attention": 8.0,
@@ -741,8 +792,8 @@
       "name": "Analog Devices Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5505245658709028,
-      "pc2": 0.6242715262187088,
+      "pc1": 0.5544978741125199,
+      "pc2": 0.631917619558947,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -768,9 +819,9 @@
     {
       "name": "Ansys",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -796,8 +847,8 @@
       "name": "Anworth Mortgage Asset Corp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -821,9 +872,9 @@
     {
       "name": "Apache Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -846,9 +897,9 @@
     {
       "name": "Apartment Investment and Management co",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -871,22 +922,22 @@
     {
       "name": "Apple",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 3.950182114040568,
-      "pc2": -3.842413362710188,
+      "cluster": 2,
+      "pc1": 3.7260225421936735,
+      "pc2": -3.4678815272582986,
       "pc3": 0.0,
       "factors": {
-        "attention": 36.0,
+        "attention": 35.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.46153846153846156,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 36,
+      "n_articles": 35,
       "event_mix": [
         [
           "OTHER",
-          36
+          35
         ]
       ],
       "top_partners": [
@@ -897,35 +948,36 @@
         "Cellular Modems",
         "Consumer Products",
         "Corellium Violated Copyright Law",
-        "Custom Computer Chips",
         "Fabrication Plants",
-        "InHouse Cellular Modem"
+        "InHouse Cellular Modem",
+        "Intel"
       ]
     },
     {
       "name": "Apple Inc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.968688075217206,
-      "pc2": -0.9241505737096338,
+      "cluster": 3,
+      "pc1": 1.1458753820684215,
+      "pc2": -0.8877343671330774,
       "pc3": 0.0,
       "factors": {
-        "attention": 12.0,
+        "attention": 13.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.4444444444444444,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 12,
+      "n_articles": 13,
       "event_mix": [
         [
           "OTHER",
-          12
+          13
         ]
       ],
       "top_partners": [
         "Cellular Modem",
         "Industry Shakeup",
+        "Intel Corp",
         "International Markets",
         "Microprocessor",
         "New Mac Processors",
@@ -938,9 +990,9 @@
     {
       "name": "Apple Inc AAPLO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -963,43 +1015,43 @@
     {
       "name": "Applied Materials",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.8644584348124503,
-      "pc2": -0.7825570129550596,
+      "cluster": 3,
+      "pc1": 1.028595965699092,
+      "pc2": -0.7704549507637494,
       "pc3": 0.0,
       "factors": {
-        "attention": 11.0,
+        "attention": 12.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.45454545454545453,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 11,
+      "n_articles": 12,
       "event_mix": [
         [
           "OTHER",
-          11
+          12
         ]
       ],
       "top_partners": [
         "177 Times Earnings Estimates",
+        "2008 Recession",
         "AMAT",
+        "Advanced Chips",
         "Broader Market",
         "Fourth Quarter Results",
         "Free Cash Flow",
         "Investors",
         "Revenue",
-        "Semiconductor Equipment Manufacturer",
-        "Stock Market",
-        "Stock Price"
+        "Semiconductor Equipment Manufacturer"
       ]
     },
     {
       "name": "Applied Materials Inc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.7027040544402131,
-      "pc2": -0.452664991008636,
+      "cluster": 3,
+      "pc1": 0.6767577165911028,
+      "pc2": -0.41861670165576487,
       "pc3": 0.0,
       "factors": {
         "attention": 9.0,
@@ -1029,9 +1081,9 @@
     {
       "name": "Aprea Therapeutics Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1054,9 +1106,9 @@
     {
       "name": "Ashford Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1079,9 +1131,9 @@
     {
       "name": "Big Lots",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.012903080199921,
-      "pc2": 1.0866500405477324,
+      "cluster": 1,
+      "pc1": 1.0186351134805853,
+      "pc2": 1.0960548589270178,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -1108,8 +1160,8 @@
       "name": "BioNTech",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1133,9 +1185,9 @@
     {
       "name": "BioNTech SE",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1158,9 +1210,9 @@
     {
       "name": "BioRad Laboratories Inc",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1186,8 +1238,8 @@
       "name": "BlackBerry",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1212,9 +1264,9 @@
     {
       "name": "BlackBerry Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1238,25 +1290,26 @@
     {
       "name": "Boeing",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.3737766046236105,
+      "pc2": -0.2963568591771948,
       "pc3": 0.0,
       "factors": {
-        "attention": 3.0,
+        "attention": 4.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.25,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 4,
       "event_mix": [
         [
           "OTHER",
-          3
+          4
         ]
       ],
       "top_partners": [
+        "2.3%",
         "Dow Jones Industrial Average",
         "Dow Jones Industrial Average Components",
         "Stock Price"
@@ -1265,9 +1318,9 @@
     {
       "name": "Boston Scientific Corporation",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1291,9 +1344,9 @@
     {
       "name": "Brands",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1317,29 +1370,28 @@
     {
       "name": "Broadcom",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.8109817110250565,
-      "pc2": -0.09856413326446,
+      "cluster": 4,
+      "pc1": 0.5748095236718908,
+      "pc2": -0.05144722909765974,
       "pc3": 0.0,
       "factors": {
-        "attention": 8.0,
+        "attention": 7.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.625,
+        "novelty": 0.5714285714285714,
         "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 7,
       "event_mix": [
         [
           "OTHER",
-          8
+          7
         ]
       ],
       "top_partners": [
         "Apple iPhone 12",
         "Brocade",
         "CA Technologies",
-        "NortonLifeLock",
         "Revenue",
         "Stock Price",
         "Supportive Fundamental And Macroeconomic Backdrop",
@@ -1349,9 +1401,9 @@
     {
       "name": "Broadcom Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -1374,9 +1426,9 @@
     {
       "name": "CEO",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1400,9 +1452,9 @@
     {
       "name": "CHINA MOBILE LTD",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1424,11 +1476,37 @@
       ]
     },
     {
+      "name": "COST",
+      "type": "STOCK_TICKER",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Stock Price",
+        "TQQQ"
+      ]
+    },
+    {
       "name": "COVID19 Pandemic",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1453,35 +1531,34 @@
       "name": "COVID19 Restrictions",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
-        "attention": 3.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          3
+          2
         ]
       ],
       "top_partners": [
         "Economic Impact Of Pandemic",
-        "Economy",
-        "United States"
+        "Economy"
       ]
     },
     {
       "name": "Cabot Oil  Gas Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1503,35 +1580,36 @@
     },
     {
       "name": "Call Option Volume",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 4,
+      "pc1": 0.2076400511137844,
+      "pc2": 0.050500963821547895,
       "pc3": 0.0,
       "factors": {
-        "attention": 3.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 5,
       "event_mix": [
         [
           "OTHER",
-          3
+          5
         ]
       ],
       "top_partners": [
+        "27.1 Million Shares",
         "Bullish Sentiment"
       ]
     },
     {
       "name": "Callon Petroleum Co",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1555,8 +1633,8 @@
       "name": "Carnival Corporation",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1580,9 +1658,9 @@
     {
       "name": "Catbasis Pharmaceuticals",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1606,8 +1684,8 @@
       "name": "Cellular Modem",
       "type": "PRODUCT",
       "cluster": 4,
-      "pc1": 0.5193099950075624,
-      "pc2": 0.3472337541960365,
+      "pc1": 0.5170648773591612,
+      "pc2": 0.3599257900669285,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -1632,9 +1710,9 @@
     {
       "name": "Chevron Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1657,9 +1735,9 @@
     {
       "name": "China",
       "type": "MACROINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1683,9 +1761,9 @@
     {
       "name": "Chinese Internet Firms",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1708,16 +1786,16 @@
     },
     {
       "name": "Chip Sales",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 1.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -1728,16 +1806,16 @@
         ]
       ],
       "top_partners": [
-        "1",
-        "6"
+        "1%",
+        "6%"
       ]
     },
     {
       "name": "Cloud Services",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1762,9 +1840,9 @@
     {
       "name": "Cloud Spending",
       "type": "ECONINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1788,9 +1866,9 @@
     {
       "name": "Cloudera",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.2587262813592524,
-      "pc2": 0.8408268393884041,
+      "cluster": 1,
+      "pc1": 1.2531939462192445,
+      "pc2": 0.8614960261883615,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -1819,8 +1897,8 @@
       "name": "Cloudleaf",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1846,8 +1924,8 @@
       "name": "Cohu Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1869,17 +1947,43 @@
       ]
     },
     {
+      "name": "Companies Offering Multiple Services",
+      "type": "CONCEPT",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Customers",
+        "Investors"
+      ]
+    },
+    {
       "name": "Company",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.5033814727943664,
-      "pc2": -0.14363397497313599,
+      "cluster": 3,
+      "pc1": 1.2826263408242145,
+      "pc2": -0.28186574289996463,
       "pc3": 0.0,
       "factors": {
         "attention": 11.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.8,
+        "novelty": 0.7,
         "materiality": 0.0
       },
       "n_articles": 11,
@@ -1905,9 +2009,9 @@
     {
       "name": "Company A",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1924,17 +2028,17 @@
         ]
       ],
       "top_partners": [
-        "1025 Million USD",
-        "9 YearOverYear Decline",
-        "Stable Sales"
+        "102.5 Million USD",
+        "9 YearOverYear",
+        "Auto Revenue"
       ]
     },
     {
       "name": "Components",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -1957,9 +2061,9 @@
     {
       "name": "Computer Chips",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -1982,9 +2086,9 @@
     {
       "name": "Coronavirus Cases",
       "type": "MACROINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2008,36 +2112,35 @@
       "name": "Corsair Gaming",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5505245658709028,
-      "pc2": 0.6242715262187088,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
-        "attention": 4.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.75,
+        "novelty": 0.3333333333333333,
         "materiality": 0.0
       },
-      "n_articles": 4,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          4
+          3
         ]
       ],
       "top_partners": [
-        "Aggressive Pricing Strategy",
-        "Increase in Demand For Graphics Cards",
+        "AMD and NVIDIA",
         "Increased Demand For Gaming PCs",
-        "Upgrade Cycle"
+        "NVIDIA"
       ]
     },
     {
       "name": "Coupa Software Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2060,36 +2163,35 @@
     {
       "name": "Credit Suisse Group AG",
       "type": "FINANCIALENTITY",
-      "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
-        "attention": 3.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          3
+          2
         ]
       ],
       "top_partners": [
-        "Advanced Micro Devices Inc",
         "InPerson Meetings",
-        "Meetings In Responsible Way"
+        "Remote Due Diligence"
       ]
     },
     {
       "name": "Cristiano Amon",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2114,36 +2216,35 @@
     {
       "name": "Cryptocurrency Miners",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
-        "attention": 3.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.0,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          3
+          2
         ]
       ],
       "top_partners": [
-        "AMD",
-        "GPUs",
-        "NVIDIA"
+        "AMD and NVIDIA",
+        "GPUs"
       ]
     },
     {
       "name": "Curis Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.39639839442789665,
-      "pc2": 0.47014535477570074,
+      "pc1": 0.39978546098983153,
+      "pc2": 0.4772052064362567,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -2168,9 +2269,9 @@
     {
       "name": "Daily Semiconductor Bull 3X Shares",
       "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2195,8 +2296,8 @@
       "name": "Dan Loeb",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2220,9 +2321,9 @@
     {
       "name": "Democratic Representative Jim McGovern",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2247,8 +2348,8 @@
       "name": "Dolby",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2273,9 +2374,9 @@
     {
       "name": "Dow Jones Industrial Average",
       "type": "FININSTRUMENTINFO",
-      "cluster": 2,
-      "pc1": -0.37423246278713346,
-      "pc2": -0.3004855024393386,
+      "cluster": 0,
+      "pc1": -0.3737766046236105,
+      "pc2": -0.2963568591771948,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -2301,22 +2402,22 @@
     {
       "name": "ESGU",
       "type": "FININSTRUMENTINFO",
-      "cluster": 0,
-      "pc1": 0.8109817110250565,
-      "pc2": -0.09856413326446,
+      "cluster": 3,
+      "pc1": 0.9088263362751355,
+      "pc2": -0.18654808197172942,
       "pc3": 0.0,
       "factors": {
-        "attention": 8.0,
+        "attention": 9.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.625,
         "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 9,
       "event_mix": [
         [
           "OTHER",
-          8
+          9
         ]
       ],
       "top_partners": [
@@ -2334,8 +2435,8 @@
       "name": "ETF Channel",
       "type": "FININSTRUMENTINFO",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2357,37 +2458,11 @@
       ]
     },
     {
-      "name": "Earnings Per Share",
-      "type": "ECONINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
-        "304 to 417",
-        "Analysts Estimates"
-      ]
-    },
-    {
       "name": "Eastman Kodak Co",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.33396925270121597,
-      "pc2": -0.08393018926964332,
+      "pc1": 0.324919467483114,
+      "pc2": -0.06677845254778028,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -2411,9 +2486,9 @@
     {
       "name": "Ebang International EBONO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2436,9 +2511,9 @@
     {
       "name": "Enphase Energy ENPHO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2462,8 +2537,8 @@
       "name": "Equifax Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2487,10 +2562,10 @@
     },
     {
       "name": "Equity Allocation",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2516,8 +2591,8 @@
       "name": "Ericsson",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2542,9 +2617,9 @@
     {
       "name": "Etsy Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2568,9 +2643,9 @@
     {
       "name": "Exxon Mobil Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2593,9 +2668,9 @@
     {
       "name": "Exxon XOMN",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2618,9 +2693,9 @@
     {
       "name": "Fat Brands Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2644,8 +2719,8 @@
       "name": "Fate Therapeutics Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2669,9 +2744,9 @@
     {
       "name": "Foot Locker Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2694,9 +2769,9 @@
     {
       "name": "Foreign Investors",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2720,9 +2795,9 @@
     {
       "name": "Forum Merger III Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2745,9 +2820,9 @@
     {
       "name": "Forward PriceEarnings Ratio",
       "type": "ECONINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2771,9 +2846,9 @@
     {
       "name": "Forward PriceSales Ratio",
       "type": "ECONINDICATOR",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2797,9 +2872,9 @@
     {
       "name": "Free Cash Flow",
       "type": "ECONINDICATOR",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2824,9 +2899,9 @@
     {
       "name": "Fubotv Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.7136993765364859,
-      "pc2": -0.8857756173480263,
+      "cluster": 0,
+      "pc1": -0.7206344276223461,
+      "pc2": -0.8777735149145939,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -2851,8 +2926,8 @@
       "name": "Fuelcell Energy",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5189206584328233,
-      "pc2": 0.1010212164619661,
+      "pc1": 0.51057436323034,
+      "pc2": 0.11887644319944803,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -2880,8 +2955,8 @@
       "name": "GIII Apparel Group",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -2907,8 +2982,8 @@
       "name": "GPUs",
       "type": "PRODUCT",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2932,9 +3007,9 @@
     {
       "name": "General Motors Co",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2957,9 +3032,9 @@
     {
       "name": "Genuine Parts Co",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -2982,9 +3057,9 @@
     {
       "name": "GigCapital3 Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3005,11 +3080,37 @@
       ]
     },
     {
+      "name": "Gilead Sciences",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Remdesivir",
+        "Vaccines Availability"
+      ]
+    },
+    {
       "name": "GreenPro Capital Corp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -3033,9 +3134,9 @@
     {
       "name": "Greenland Technologies Holding Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3059,8 +3160,8 @@
       "name": "Habana Labs",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3084,9 +3185,9 @@
     {
       "name": "Halliburton Co",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3109,9 +3210,9 @@
     {
       "name": "Hasbro Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3135,8 +3236,8 @@
       "name": "HighPeak Energy Equity Warrants",
       "type": "DERIVATIVE",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3161,8 +3262,8 @@
       "name": "Higher Demand",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3186,9 +3287,9 @@
     {
       "name": "Hollysys Automation Technologies",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -3213,8 +3314,8 @@
       "name": "Honeywell International Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -3239,9 +3340,9 @@
     {
       "name": "Hoth Therapeutics",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3265,8 +3366,8 @@
       "name": "IBM",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3290,9 +3391,9 @@
     {
       "name": "IMV IMVO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3315,9 +3416,9 @@
     {
       "name": "INTC",
       "type": "STOCKTICKER",
-      "cluster": 2,
-      "pc1": -0.37423246278713346,
-      "pc2": -0.3004855024393386,
+      "cluster": 0,
+      "pc1": -0.3737766046236105,
+      "pc2": -0.2963568591771948,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -3341,37 +3442,11 @@
       ]
     },
     {
-      "name": "INTC stock",
-      "type": "STOCKTICKER",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
-        "IBM",
-        "Income"
-      ]
-    },
-    {
       "name": "INTEL CORPORATION",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.22088496449360567,
-      "pc2": -0.6387844064644715,
+      "cluster": 0,
+      "pc1": -0.23204521975856424,
+      "pc2": -0.6237431397894653,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -3398,9 +3473,9 @@
     {
       "name": "IXUS",
       "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3424,9 +3499,9 @@
     {
       "name": "Ian Bezek",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.9504739384732402,
-      "pc2": 0.5325744965023883,
+      "cluster": 1,
+      "pc1": 0.9437691199738677,
+      "pc2": 0.552071199942981,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -3454,43 +3529,43 @@
     {
       "name": "Intel",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 6.356637681104834,
-      "pc2": -6.106598617673189,
+      "cluster": 2,
+      "pc1": 7.12111511477637,
+      "pc2": -6.171318605880701,
       "pc3": 0.0,
       "factors": {
-        "attention": 55.0,
+        "attention": 61.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.6862745098039216,
         "materiality": 0.0
       },
-      "n_articles": 55,
+      "n_articles": 61,
       "event_mix": [
         [
           "OTHER",
-          55
+          61
         ]
       ],
       "top_partners": [
+        "3.4%",
         "314 million Cloudera shares",
+        "9",
         "AMD",
         "Acquired Companies",
-        "Advanced Micro Devices Inc",
-        "Alphabet Inc",
         "Amazoncom",
         "Apple",
         "AsiaBased Rivals And Former Customers Like Apple",
-        "CPU Market",
-        "Capital Expenditure"
+        "Balance Sheet",
+        "Bob Swan"
       ]
     },
     {
       "name": "Intel Board",
       "type": "FINANCIALENTITY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3514,43 +3589,43 @@
     {
       "name": "Intel Corp",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 3.181096885651188,
-      "pc2": -3.1365593841435895,
+      "cluster": 2,
+      "pc1": 3.6087431258243434,
+      "pc2": -3.35060211088897,
       "pc3": 0.0,
       "factors": {
-        "attention": 30.0,
+        "attention": 34.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.4444444444444444,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 30,
+      "n_articles": 34,
       "event_mix": [
         [
           "OTHER",
-          30
+          34
         ]
       ],
       "top_partners": [
+        "$55.00 Strike",
+        "19.9 Million Shares",
         "266",
         "3258B",
         "AI Portfolio",
-        "Apple Inc",
+        "Apple Inc New Mac Processors",
+        "Apple Plans",
         "Chips",
         "Computer Chips",
-        "Dividend Giant",
-        "DividendRank",
-        "Habana Labs",
-        "Integrated Device Manufacturer Status"
+        "Dividend Giant"
       ]
     },
     {
       "name": "Intel Corporation",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.6951934054490208,
-      "pc2": -1.180938048115136,
+      "cluster": 3,
+      "pc1": 1.6303242709958576,
+      "pc2": -1.1069619764216134,
       "pc3": 0.0,
       "factors": {
         "attention": 16.0,
@@ -3582,9 +3657,9 @@
     {
       "name": "International Business Machines",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3608,9 +3683,9 @@
     {
       "name": "Intrepid Potash Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3634,8 +3709,8 @@
       "name": "Invesco SP 500 Equal Weight Technology ETF",
       "type": "FININSTRUMENTINFO",
       "cluster": 4,
-      "pc1": 0.08814605154188465,
-      "pc2": 0.1618930118896851,
+      "pc1": 0.09036063474445476,
+      "pc2": 0.1677803801908761,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -3661,9 +3736,9 @@
     {
       "name": "Investor",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3687,26 +3762,25 @@
     {
       "name": "Investors",
       "type": "CONCEPT",
-      "cluster": 0,
-      "pc1": 1.959409699351317,
-      "pc2": -0.9167217542128366,
+      "cluster": 3,
+      "pc1": 1.7272920378058163,
+      "pc2": -0.5408765441343347,
       "pc3": 0.0,
       "factors": {
-        "attention": 16.0,
+        "attention": 14.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.7142857142857143,
+        "novelty": 0.75,
         "materiality": 0.0
       },
-      "n_articles": 16,
+      "n_articles": 14,
       "event_mix": [
         [
           "OTHER",
-          16
+          14
         ]
       ],
       "top_partners": [
-        "5500 Strike Call Option",
         "COVID19 Relief Package Negotiations",
         "Fiscal Relief",
         "Intel Corp",
@@ -3715,15 +3789,16 @@
         "Path Of Reopening Economy",
         "Premium Collected",
         "Qualcomm",
-        "Stimulus Package Effectiveness"
+        "Stimulus Package Effectiveness",
+        "Technology Stocks"
       ]
     },
     {
       "name": "Jack Henry  Associates Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3748,8 +3823,8 @@
       "name": "JetBlue",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3773,9 +3848,9 @@
     {
       "name": "Johnson  Johnson",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3799,35 +3874,36 @@
     {
       "name": "KFConsole",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
-        "1terabyte SSD",
+        "1-terabyte SSD",
+        "Chicken",
         "Intel Nuc9 Extreme Compute Element"
       ]
     },
     {
       "name": "KeyBanc",
       "type": "FINANCIALENTITY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3850,9 +3926,9 @@
     {
       "name": "Kingsway Financial Services",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -3875,9 +3951,9 @@
     {
       "name": "Lam Research",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.46787617537715454,
-      "pc2": -1.1315988185073549,
+      "cluster": 0,
+      "pc1": -0.48607559488368685,
+      "pc2": -1.1123323476532503,
       "pc3": 0.0,
       "factors": {
         "attention": 7.0,
@@ -3904,8 +3980,8 @@
       "name": "Lexicon Pharmaceuticals Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.08814605154188465,
-      "pc2": 0.1618930118896851,
+      "pc1": 0.09036063474445476,
+      "pc2": 0.1677803801908761,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -3929,9 +4005,9 @@
     {
       "name": "LightInTheBox Holding Co Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -3956,8 +4032,8 @@
       "name": "Lisa Su",
       "type": "PERSON",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -3982,9 +4058,9 @@
     {
       "name": "Logistical Hurdles",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4008,28 +4084,31 @@
     {
       "name": "Luminar",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.7647438595921546,
-      "pc2": -0.14480198469736236,
+      "cluster": 3,
+      "pc1": 1.1433851690137948,
+      "pc2": -0.4211069147103858,
       "pc3": 0.0,
       "factors": {
-        "attention": 8.0,
+        "attention": 11.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6,
+        "novelty": 0.625,
         "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 11,
       "event_mix": [
         [
           "OTHER",
-          8
+          11
         ]
       ],
       "top_partners": [
         "Daimler Truck AG",
+        "Intel",
+        "Intel Corp Mobileye",
         "Intel Unit Mobileye",
         "Lidar Units",
+        "Mobileye In-house LiDAR",
         "SPAC",
         "Volvo"
       ]
@@ -4037,9 +4116,9 @@
     {
       "name": "Luminar Technologies",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.7651331961668938,
-      "pc2": 0.10141055303670814,
+      "cluster": 4,
+      "pc1": 0.7516237100978204,
+      "pc2": 0.12536695732827208,
       "pc3": 0.0,
       "factors": {
         "attention": 7.0,
@@ -4067,9 +4146,9 @@
     {
       "name": "Lyft Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4092,36 +4171,64 @@
     },
     {
       "name": "MRVL",
-      "type": "STOCKTICKER",
+      "type": "STOCK_TICKER",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
-        "122220",
+        "$16.45",
+        "$47.50",
         "Marvell Technology Group Ltd"
+      ]
+    },
+    {
+      "name": "MU",
+      "type": "STOCKTICKER",
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          3
+        ]
+      ],
+      "top_partners": [
+        "March 2021 Expiration",
+        "PreCrisis Peak S&P500",
+        "S&P 500 Bottoming"
       ]
     },
     {
       "name": "Marathon Oil Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4144,9 +4251,9 @@
     {
       "name": "Marinus Pharmaceuticals Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4170,9 +4277,9 @@
     {
       "name": "Marvell",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.012903080199921,
-      "pc2": 1.0866500405477324,
+      "cluster": 1,
+      "pc1": 1.0186351134805853,
+      "pc2": 1.0960548589270178,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -4199,8 +4306,8 @@
       "name": "Marvell Technology",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4225,8 +4332,8 @@
       "name": "Marvell Technology Group",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.39600905785315754,
-      "pc2": 0.2239328170416303,
+      "pc1": 0.3932949468610104,
+      "pc2": 0.23615585956877622,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -4253,25 +4360,27 @@
     {
       "name": "Marvell Technology Group Ltd",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.1555076769663042,
-      "pc2": -0.7373309719605333,
+      "cluster": 3,
+      "pc1": 1.4773719858383967,
+      "pc2": -0.7907965961017575,
       "pc3": 0.0,
       "factors": {
-        "attention": 12.0,
+        "attention": 14.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5454545454545454,
+        "novelty": 0.6153846153846154,
         "materiality": 0.0
       },
-      "n_articles": 12,
+      "n_articles": 14,
       "event_mix": [
         [
           "OTHER",
-          12
+          14
         ]
       ],
       "top_partners": [
+        "59,526 Contracts",
+        "9.5 Million Shares",
         "Analyst Expectations",
         "Competitors",
         "Conference Call",
@@ -4279,17 +4388,15 @@
         "EPS Guidance",
         "Earnings",
         "Industry Average",
-        "Quarterly Dividend",
-        "Quarterly Earnings",
-        "Russell 3000 Index"
+        "Quarterly Dividend"
       ]
     },
     {
       "name": "Mastercard Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4314,8 +4421,8 @@
       "name": "Medigus",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4339,9 +4446,9 @@
     {
       "name": "Meten Edtechx Education Group Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4365,8 +4472,8 @@
       "name": "MicroStrategy",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5505245658709028,
-      "pc2": 0.6242715262187088,
+      "pc1": 0.5544978741125199,
+      "pc2": 0.631917619558947,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -4392,9 +4499,9 @@
     {
       "name": "Micron",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4419,25 +4526,26 @@
     {
       "name": "Micron Technology",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 3.690740759222728,
-      "pc2": -2.626915510572043,
+      "cluster": 2,
+      "pc1": 3.613933522384097,
+      "pc2": -2.6417352161132386,
       "pc3": 0.0,
       "factors": {
-        "attention": 30.0,
+        "attention": 31.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.72,
+        "novelty": 0.6923076923076923,
         "materiality": 0.0
       },
-      "n_articles": 30,
+      "n_articles": 31,
       "event_mix": [
         [
           "OTHER",
-          30
+          31
         ]
       ],
       "top_partners": [
+        "CFO David Zinsner",
         "Compute and Networking Business Unit",
         "Continued Tailwinds",
         "DRAM Memory Factory",
@@ -4446,22 +4554,21 @@
         "Earnings Forecast",
         "Earnings Guidance",
         "Graphics Memory",
-        "Gross Margins",
-        "Guidance Targets"
+        "Gross Margins"
       ]
     },
     {
       "name": "Micron Technology Inc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.2331932365514473,
-      "pc2": -1.151291814694052,
+      "cluster": 3,
+      "pc1": 1.1084423853150627,
+      "pc2": -1.1597261966250958,
       "pc3": 0.0,
       "factors": {
         "attention": 14.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.45454545454545453,
+        "novelty": 0.4166666666666667,
         "materiality": 0.0
       },
       "n_articles": 14,
@@ -4479,130 +4586,109 @@
         "Earnings Per Share",
         "Gross Margin Forecast",
         "Gross Margins",
+        "MU",
         "Revenue",
-        "Revenue Forecast",
-        "Stock Price"
+        "Revenue Forecast"
       ]
     },
     {
       "name": "Microsoft",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.379691199065222,
-      "pc2": -0.5131474498616128,
+      "cluster": 3,
+      "pc1": 1.1084423853150627,
+      "pc2": -1.1597261966250958,
       "pc3": 0.0,
       "factors": {
-        "attention": 12.0,
+        "attention": 14.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 0.4166666666666667,
         "materiality": 0.0
       },
-      "n_articles": 12,
+      "n_articles": 14,
       "event_mix": [
         [
           "OTHER",
-          12
+          14
         ]
       ],
       "top_partners": [
-        "Advanced Micro Devices Inc AMDO",
-        "Azure cloud computing services",
-        "Custom Computer Chips",
+        "AMD",
+        "Customers",
         "Design",
         "Hardware",
         "Intel",
         "Manufacturing",
         "Modern Tech Stack",
         "Proprietary Chips",
-        "Surface PCs"
+        "Semiconductors",
+        "Software And Devices"
       ]
     },
     {
       "name": "Mobileye",
-      "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.1358146807795868,
-      "pc2": 0.9637384399680683,
+      "type": "SUBSIDIARY",
+      "cluster": 1,
+      "pc1": 0.9437691199738677,
+      "pc2": 0.552071199942981,
       "pc3": 0.0,
       "factors": {
-        "attention": 5.0,
+        "attention": 6.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.8333333333333334,
         "materiality": 0.0
       },
-      "n_articles": 5,
+      "n_articles": 6,
       "event_mix": [
         [
           "OTHER",
-          5
+          6
         ]
       ],
       "top_partners": [
+        "HouseBuilt Lidar Sensors",
         "Lidar Sensor",
+        "Luminar",
         "Luminar LiDAR",
         "Luminar Technologies",
         "SelfDriving Car System"
       ]
     },
     {
-      "name": "Modern Tech Stack",
-      "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 3.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 3,
-      "event_mix": [
-        [
-          "OTHER",
-          3
-        ]
-      ],
-      "top_partners": [
-        "Customers"
-      ]
-    },
-    {
       "name": "Moderna",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -0.3737766046236105,
+      "pc2": -0.2963568591771948,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 4.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.25,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 4,
       "event_mix": [
         [
           "OTHER",
-          2
+          4
         ]
       ],
       "top_partners": [
+        "January $125/$110 bear put spread",
         "Nasdaq 100",
-        "Stock Price"
+        "Stock Price",
+        "Year to Date Performance"
       ]
     },
     {
       "name": "Moderna Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.46787617537715454,
-      "pc2": -1.1315988185073549,
+      "cluster": 0,
+      "pc1": -0.48607559488368685,
+      "pc2": -1.1123323476532503,
       "pc3": 0.0,
       "factors": {
         "attention": 7.0,
@@ -4623,11 +4709,37 @@
       ]
     },
     {
+      "name": "Momo",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Core App",
+        "Triple-Digit Revenue Growth"
+      ]
+    },
+    {
       "name": "Mosesmann",
       "type": "FINANCIALENTITY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4649,17 +4761,17 @@
       ]
     },
     {
-      "name": "Myovant Sciences MYOVN",
-      "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "name": "NFLX",
+      "type": "STOCK_TICKER",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -4670,49 +4782,46 @@
         ]
       ],
       "top_partners": [
-        "Pfizer",
-        "Pfizer Inc"
+        "Stock Price",
+        "TQQQ"
       ]
     },
     {
       "name": "NVIDIA",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.599953273478209,
-      "pc2": -0.5554157719706413,
+      "cluster": 4,
+      "pc1": 0.6343442937284908,
+      "pc2": 0.24264637369760028,
       "pc3": 0.0,
       "factors": {
-        "attention": 9.0,
+        "attention": 6.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.4444444444444444,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 9,
+      "n_articles": 6,
       "event_mix": [
         [
           "OTHER",
-          9
+          6
         ]
       ],
       "top_partners": [
         "Decrease in Gross Margin",
         "Growth in Net Income",
         "Hardware Upgrade Cycle",
-        "HighEnd Hardware",
-        "Increase in Demand",
         "Licensing Of Technology",
-        "New Processors",
         "Supply Chain Disruption",
         "Upgrade Cycle"
       ]
     },
     {
       "name": "NXPI",
-      "type": "STOCKTICKER",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "type": "STOCK_TICKER",
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -4734,29 +4843,56 @@
       ]
     },
     {
-      "name": "Nasdaq",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 2,
-      "pc1": -0.34379656507327133,
-      "pc2": -0.5158728058848074,
+      "name": "NXTG",
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
-        "attention": 5.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.2,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 5,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          5
+          2
+        ]
+      ],
+      "top_partners": [
+        "784 Million USD",
+        "Taiwan Semiconductor"
+      ]
+    },
+    {
+      "name": "Nasdaq",
+      "type": "FININSTRUMENTINFO",
+      "cluster": 0,
+      "pc1": -0.2939301850076397,
+      "pc2": -0.6856281050385415,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 6.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.16666666666666666,
+        "materiality": 0.0
+      },
+      "n_articles": 6,
+      "event_mix": [
+        [
+          "OTHER",
+          6
         ]
       ],
       "top_partners": [
         "Equities Market",
         "FAANG Names",
+        "Investor Sentiment",
         "Market Index Value",
         "Solid Gains",
         "Stock Market Index"
@@ -4765,9 +4901,9 @@
     {
       "name": "NeoGenomics Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4791,8 +4927,8 @@
       "name": "NetApp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4817,9 +4953,9 @@
     {
       "name": "Netflix Inc NFLXO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4842,9 +4978,9 @@
     {
       "name": "New Flagship Smartphone Chip",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4869,8 +5005,8 @@
       "name": "New Shows",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4895,9 +5031,9 @@
     {
       "name": "NextEra Energy Inc",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4921,9 +5057,9 @@
     {
       "name": "Northland",
       "type": "FINANCIALENTITY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4948,8 +5084,8 @@
       "name": "Norwegian Cruise Line Holdings",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -4973,9 +5109,9 @@
     {
       "name": "Novavax Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -4998,9 +5134,9 @@
     {
       "name": "Nucor",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -5025,28 +5161,29 @@
     {
       "name": "Nvidia",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.20365988147485853,
-      "pc2": -0.8673825246050556,
+      "cluster": 3,
+      "pc1": 0.09534106085370805,
+      "pc2": -0.7654745246545076,
       "pc3": 0.0,
       "factors": {
-        "attention": 7.0,
+        "attention": 8.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.14285714285714285,
+        "novelty": 0.25,
         "materiality": 0.0
       },
-      "n_articles": 7,
+      "n_articles": 8,
       "event_mix": [
         [
           "OTHER",
-          7
+          8
         ]
       ],
       "top_partners": [
+        "AMD",
         "Advanced Micro Devices",
         "Chipmaking",
-        "Fourth Quarter Results",
+        "Fourth Quarter Guidance",
         "Intel",
         "NASDAQ",
         "Semiconductor Sector",
@@ -5056,35 +5193,36 @@
     {
       "name": "Nvidia Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.0,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
         "Computer Chips",
+        "Human Rights Concerns",
         "US Government Regulation"
       ]
     },
     {
       "name": "ON Semiconductor",
       "type": "COMPETITIVEPOSITIONING",
-      "cluster": 3,
-      "pc1": 1.1358146807795868,
-      "pc2": 0.9637384399680683,
+      "cluster": 1,
+      "pc1": 1.135914529849915,
+      "pc2": 0.9787754425576897,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -5111,9 +5249,9 @@
     {
       "name": "ON Semiconductor Corp",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.1962971396325717,
-      "pc2": 0.28675129534305976,
+      "cluster": 1,
+      "pc1": 1.178327952712527,
+      "pc2": 0.31751236720432463,
       "pc3": 0.0,
       "factors": {
         "attention": 8.0,
@@ -5141,9 +5279,9 @@
     {
       "name": "Occidental Petroleum Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5166,9 +5304,9 @@
     {
       "name": "Option Care Health Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5191,9 +5329,9 @@
     {
       "name": "Oracle Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5216,9 +5354,9 @@
     {
       "name": "Orbital Energy Group OEGO",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5242,8 +5380,8 @@
       "name": "Ovid Therapeutics Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -5266,37 +5404,11 @@
       ]
     },
     {
-      "name": "PS Multiple",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
-        "26x",
-        "8x to 7x"
-      ]
-    },
-    {
       "name": "Palantir Technologies Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5321,8 +5433,8 @@
       "name": "Palo Alto Networks",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5346,9 +5458,9 @@
     {
       "name": "Peabody Energy Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5372,8 +5484,8 @@
       "name": "Pennsylvania REIT",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5397,9 +5509,9 @@
     {
       "name": "Pennsylvania Real Estate Investment Trust",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5422,9 +5534,9 @@
     {
       "name": "Penumbra Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5448,24 +5560,25 @@
       "name": "Pfizer",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
+        "E.U.",
         "Stock Price",
         "US FDA"
       ]
@@ -5473,9 +5586,9 @@
     {
       "name": "Pfizer Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.7136993765364859,
-      "pc2": -0.8857756173480263,
+      "cluster": 0,
+      "pc1": -0.7206344276223461,
+      "pc2": -0.8777735149145939,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -5498,15 +5611,15 @@
     {
       "name": "Philip Morris International Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -5517,21 +5630,22 @@
         ]
       ],
       "top_partners": [
+        "PM",
         "Stock Price"
       ]
     },
     {
       "name": "Price Target",
       "type": "FININSTRUMENTINFO",
-      "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 1.0,
         "materiality": 0.0
       },
       "n_articles": 3,
@@ -5549,75 +5663,78 @@
     },
     {
       "name": "QCOM",
-      "type": "STOCKTICKER",
-      "cluster": 0,
-      "pc1": 0.06055641242743755,
-      "pc2": -0.6031662307027564,
+      "type": "STOCK_TICKER",
+      "cluster": 3,
+      "pc1": 0.9113165493297621,
+      "pc2": -0.6531755343944213,
       "pc3": 0.0,
       "factors": {
-        "attention": 7.0,
+        "attention": 11.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.2857142857142857,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 7,
+      "n_articles": 11,
       "event_mix": [
         [
           "OTHER",
-          7
+          11
         ]
       ],
       "top_partners": [
+        "59716 Contracts",
+        "6 Million Shares",
         "Apple InHouse Modem Development",
+        "Earnings Growth",
         "Ericsson",
         "Motorola Solutions Inc",
         "Qualcomm Inc",
-        "Revenue",
         "Stock Price",
+        "TQQQ",
         "Technology Sector"
       ]
     },
     {
       "name": "Qualcomm",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": 3.399885911450484,
-      "pc2": -2.426123956025629,
+      "cluster": 2,
+      "pc1": 3.7038518479596765,
+      "pc2": -2.551816890537658,
       "pc3": 0.0,
       "factors": {
-        "attention": 28.0,
+        "attention": 31.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6956521739130435,
+        "novelty": 0.7407407407407407,
         "materiality": 0.0
       },
-      "n_articles": 28,
+      "n_articles": 31,
       "event_mix": [
         [
           "OTHER",
-          28
+          31
         ]
       ],
       "top_partners": [
-        "39",
+        "21",
+        "39%",
         "5G Revolution",
         "5G Smartphone Chipsets Demand",
         "5G Technology",
-        "70",
-        "77",
+        "7.7%",
+        "70%",
         "Apple InHouse Modem Development",
         "Automotive Sector",
-        "Blowout Earnings",
-        "Cellular Modems"
+        "Blowout Earnings"
       ]
     },
     {
       "name": "Qualcomm Inc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.9485272555995445,
-      "pc2": -0.6984881921679644,
+      "cluster": 3,
+      "pc1": 0.9113165493297621,
+      "pc2": -0.6531755343944213,
       "pc3": 0.0,
       "factors": {
         "attention": 11.0,
@@ -5636,16 +5753,16 @@
       "top_partners": [
         "Chips",
         "New Flagship Smartphone Chip",
-        "Samsung Electronics Co Ltd",
-        "Stock Price"
+        "Stock Price",
+        "Taiwan Semiconductor Manufacturing Co"
       ]
     },
     {
       "name": "QuantumScape Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5669,9 +5786,9 @@
     {
       "name": "Quantumscape Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5694,15 +5811,15 @@
     {
       "name": "Quinn Bolton",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -5720,9 +5837,9 @@
     {
       "name": "RFID Chips",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 1.012903080199921,
-      "pc2": 1.0866500405477324,
+      "cluster": 1,
+      "pc1": 1.0186351134805853,
+      "pc2": 1.0960548589270178,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -5749,8 +5866,8 @@
       "name": "Reata Pharma",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5774,9 +5891,9 @@
     {
       "name": "Regional Health Properties Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5800,8 +5917,8 @@
       "name": "Regulators",
       "type": "FINANCIALENTITY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5825,9 +5942,9 @@
     {
       "name": "Renesola Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5850,9 +5967,9 @@
     {
       "name": "Republican Senator Marco Rubio",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5875,10 +5992,10 @@
     },
     {
       "name": "Retailers",
-      "type": "CONCEPT",
+      "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5902,9 +6019,9 @@
     {
       "name": "Romeo Power Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5928,8 +6045,8 @@
       "name": "Root Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -5954,8 +6071,8 @@
       "name": "SBA Communications",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -5979,10 +6096,10 @@
     },
     {
       "name": "SMH",
-      "type": "FININSTRUMENTINFO",
-      "cluster": 0,
-      "pc1": 1.2403331886162876,
-      "pc2": 0.33078734432677614,
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 1,
+      "pc1": 1.2225314993190093,
+      "pc2": 0.36171591381080737,
       "pc3": 0.0,
       "factors": {
         "attention": 8.0,
@@ -6011,9 +6128,9 @@
     {
       "name": "SOXX",
       "type": "FININSTRUMENTINFO",
-      "cluster": 0,
-      "pc1": 0.8457764746375405,
-      "pc2": -0.8012389731299697,
+      "cluster": 3,
+      "pc1": 0.8081749405813031,
+      "pc2": -0.7563171431428816,
       "pc3": 0.0,
       "factors": {
         "attention": 11.0,
@@ -6044,31 +6161,29 @@
     {
       "name": "SP 500",
       "type": "FININSTRUMENTINFO",
-      "cluster": 0,
-      "pc1": 1.1338679979058908,
-      "pc2": -0.26732424870228455,
+      "cluster": 3,
+      "pc1": 0.6920889400412203,
+      "pc2": -0.16872664546698796,
       "pc3": 0.0,
       "factors": {
-        "attention": 10.0,
+        "attention": 8.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6666666666666666,
+        "novelty": 0.5714285714285714,
         "materiality": 0.0
       },
-      "n_articles": 10,
+      "n_articles": 8,
       "event_mix": [
         [
           "OTHER",
-          10
+          8
         ]
       ],
       "top_partners": [
         "All Sectors",
         "Communication Services Sector",
         "Equities Market",
-        "March 2009",
         "Market Index Value",
-        "September 2007",
         "Solid Gains",
         "Unprecedented Stimulus",
         "Vaccine Rollouts"
@@ -6077,9 +6192,9 @@
     {
       "name": "SPAC",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6101,11 +6216,11 @@
       ]
     },
     {
-      "name": "SPDRSP500 Fossil Fuel Reserves Free ETF",
-      "type": "FININSTRUMENTINFO",
+      "name": "SPDR S&P 500 Fossil Fuel Reserves Free ETF",
+      "type": "FIN_INSTRUMENT_INFO",
       "cluster": 4,
-      "pc1": 0.273486793848231,
-      "pc2": 0.5930569553553651,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6130,9 +6245,9 @@
     {
       "name": "SPLG",
       "type": "STOCKTICKER",
-      "cluster": 0,
-      "pc1": 0.5889890002320297,
-      "pc2": -0.074733642898158,
+      "cluster": 4,
+      "pc1": 0.5748095236718908,
+      "pc2": -0.05144722909765974,
       "pc3": 0.0,
       "factors": {
         "attention": 7.0,
@@ -6161,9 +6276,9 @@
     {
       "name": "Salesforce",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.1358146807795868,
-      "pc2": 0.9637384399680683,
+      "cluster": 1,
+      "pc1": 1.135914529849915,
+      "pc2": 0.9787754425576897,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -6190,9 +6305,9 @@
     {
       "name": "Salesforcecom Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6213,11 +6328,37 @@
       ]
     },
     {
+      "name": "Samsung Electronics Co Ltd",
+      "type": "FINANCIALENTITY",
+      "cluster": 4,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "5Nanometer Process",
+        "Qualcomm Inc"
+      ]
+    },
+    {
       "name": "Sanctions",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6240,9 +6381,9 @@
     {
       "name": "Schlumberger NV",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6265,9 +6406,9 @@
     {
       "name": "Sea Ltd",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6288,17 +6429,17 @@
       ]
     },
     {
-      "name": "SelfDriving Car System",
-      "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "name": "Seagen",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -6309,16 +6450,16 @@
         ]
       ],
       "top_partners": [
-        "Few Thousand Dollars",
-        "HouseBuilt Lidar Sensors"
+        "Nasdaq 100",
+        "Year To Date Performance"
       ]
     },
     {
       "name": "Sellas Life Sciences Group Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6341,38 +6482,37 @@
     {
       "name": "Semiconductors",
       "type": "SECTOR",
-      "cluster": 3,
-      "pc1": 0.7659118693163722,
-      "pc2": 0.5938356285048493,
+      "cluster": 1,
+      "pc1": 1.0186351134805853,
+      "pc2": 1.0960548589270178,
       "pc3": 0.0,
       "factors": {
-        "attention": 5.0,
+        "attention": 4.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.8,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 5,
+      "n_articles": 4,
       "event_mix": [
         [
           "OTHER",
-          5
+          4
         ]
       ],
       "top_partners": [
         "HighSpeed Computers",
         "Internet Access",
         "Memory",
-        "Microsoft",
         "Thermostats"
       ]
     },
     {
       "name": "Senate",
       "type": "FINANCIALENTITY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6396,9 +6536,9 @@
     {
       "name": "Sensors",
       "type": "PRODUCT",
-      "cluster": 3,
-      "pc1": 1.2587262813592524,
-      "pc2": 0.8408268393884041,
+      "cluster": 1,
+      "pc1": 1.2531939462192445,
+      "pc2": 0.8614960261883615,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -6424,17 +6564,17 @@
       ]
     },
     {
-      "name": "Shopify",
-      "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "name": "Shareholders",
+      "type": "CONCEPT",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 1.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -6445,16 +6585,15 @@
         ]
       ],
       "top_partners": [
-        "Gross Merchandise Volume",
-        "NASDAQ"
+        "Cash Dividend Payment"
       ]
     },
     {
       "name": "Slack Technologies Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -6477,9 +6616,9 @@
     {
       "name": "Smartsheet Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6501,37 +6640,11 @@
       ]
     },
     {
-      "name": "Soligenix SNGXO",
-      "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 0.5,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
-        "COVID19 Vaccine",
-        "NIH"
-      ]
-    },
-    {
       "name": "Sonoma Pharmaceuticals Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6554,9 +6667,9 @@
     {
       "name": "Sony",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.012903080199921,
-      "pc2": 1.0866500405477324,
+      "cluster": 1,
+      "pc1": 1.0186351134805853,
+      "pc2": 1.0960548589270178,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -6581,9 +6694,9 @@
     {
       "name": "Stitch Fix Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6606,9 +6719,9 @@
     {
       "name": "Stock Market",
       "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6632,40 +6745,63 @@
     {
       "name": "Stock Price",
       "type": "FININSTRUMENTINFO",
-      "cluster": 0,
-      "pc1": 0.5889890002320297,
-      "pc2": -0.074733642898158,
+      "cluster": 4,
+      "pc1": 0.3932949468610104,
+      "pc2": 0.23615585956877622,
       "pc3": 0.0,
       "factors": {
-        "attention": 7.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5714285714285714,
+        "novelty": 0.6,
         "materiality": 0.0
       },
-      "n_articles": 7,
+      "n_articles": 5,
       "event_mix": [
         [
           "OTHER",
-          7
+          5
         ]
       ],
       "top_partners": [
         "75",
         "Attractive Valuation",
-        "Forward Earnings Multiple",
         "Historical Data",
-        "Initial Level",
-        "Market Performance",
+        "P/S Multiple",
         "PS Multiple"
+      ]
+    },
+    {
+      "name": "Stock Price Of Gores Metropoulos",
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Initial Level"
       ]
     },
     {
       "name": "Strong Demand",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.8899914796202554,
-      "pc2": 1.2095616411273966,
+      "cluster": 1,
+      "pc1": 0.9013556971112555,
+      "pc2": 1.213334275296346,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6691,8 +6827,8 @@
       "name": "Sundial Growers Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6714,17 +6850,17 @@
       ]
     },
     {
-      "name": "Sundial Growers SNDLO",
-      "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "name": "Sustainability Initiatives",
+      "type": "CONCEPT",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -6735,15 +6871,16 @@
         ]
       ],
       "top_partners": [
-        "Simply Solventless"
+        "Customers",
+        "Investors"
       ]
     },
     {
       "name": "TPG Pace Beneficial Finance Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6765,39 +6902,36 @@
     },
     {
       "name": "TQQQ",
-      "type": "FININSTRUMENTINFO",
+      "type": "DERIVATIVE",
       "cluster": 4,
-      "pc1": 0.39600905785315754,
-      "pc2": 0.2239328170416303,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
-        "attention": 5.0,
+        "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.6,
+        "novelty": 0.5,
         "materiality": 0.0
       },
-      "n_articles": 5,
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
-          5
+          2
         ]
       ],
       "top_partners": [
-        "COST",
         "Investor Demand",
-        "NFLX",
-        "QCOM",
         "Shares Outstanding"
       ]
     },
     {
       "name": "TSM",
       "type": "STOCKTICKER",
-      "cluster": 0,
-      "pc1": 0.14784983724539139,
-      "pc2": -1.0075192082034643,
+      "cluster": 3,
+      "pc1": 0.11979302934942464,
+      "pc2": -0.9755813888974499,
       "pc3": 0.0,
       "factors": {
         "attention": 9.0,
@@ -6824,22 +6958,22 @@
     {
       "name": "TSMC",
       "type": "FINANCIALENTITY",
-      "cluster": 2,
-      "pc1": -0.2825354330708081,
-      "pc2": -0.7004348750416748,
+      "cluster": 0,
+      "pc1": -0.7206344276223461,
+      "pc2": -0.8777735149145939,
       "pc3": 0.0,
       "factors": {
-        "attention": 6.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.16666666666666666,
+        "novelty": 0.0,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 5,
       "event_mix": [
         [
           "OTHER",
-          6
+          5
         ]
       ],
       "top_partners": [
@@ -6847,22 +6981,21 @@
         "Apple",
         "Chips",
         "NVIDIA",
-        "Qualcomm",
-        "Semiconductor Market"
+        "Qualcomm"
       ]
     },
     {
       "name": "TXN",
       "type": "STOCKTICKER",
-      "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 1.0,
         "materiality": 0.0
       },
       "n_articles": 2,
@@ -6878,11 +7011,37 @@
       ]
     },
     {
+      "name": "TXN Options",
+      "type": "FIN_INSTRUMENT_INFO",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Average Daily Trading Volume",
+        "Texas Instruments Inc"
+      ]
+    },
+    {
       "name": "Tailwinds",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -6907,24 +7066,25 @@
       "name": "Taiwan Semiconductor",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5505245658709028,
-      "pc2": 0.6242715262187088,
+      "pc1": 0.3932949468610104,
+      "pc2": 0.23615585956877622,
       "pc3": 0.0,
       "factors": {
-        "attention": 4.0,
+        "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.75,
+        "novelty": 0.6,
         "materiality": 0.0
       },
-      "n_articles": 4,
+      "n_articles": 5,
       "event_mix": [
         [
           "OTHER",
-          4
+          5
         ]
       ],
       "top_partners": [
+        "Annual Revenue",
         "NXTG",
         "NYSE",
         "Process Race",
@@ -6934,9 +7094,9 @@
     {
       "name": "Taiwan Semiconductor Manufacturing",
       "type": "FINANCIALENTITY",
-      "cluster": 0,
-      "pc1": 0.5173633121338667,
-      "pc2": -0.883828934474316,
+      "cluster": 3,
+      "pc1": 0.48461230671505573,
+      "pc2": -0.8453209442704737,
       "pc3": 0.0,
       "factors": {
         "attention": 10.0,
@@ -6955,7 +7115,7 @@
       "top_partners": [
         "AMD",
         "Apple",
-        "Custom Chip",
+        "Custom Chip For Autonomous Cars",
         "Glu Mobile",
         "LeadingEdge Chipmaking Capabilities",
         "Microsoft",
@@ -6968,8 +7128,8 @@
       "name": "Taiwan Semiconductor Manufacturing Co Ltd",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -6995,8 +7155,8 @@
       "name": "Taiwan Semiconductor Manufacturing Company Ltd",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7020,9 +7180,9 @@
     {
       "name": "Tarena International Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7045,9 +7205,9 @@
     {
       "name": "TechnipFMC PLC",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -7070,9 +7230,9 @@
     {
       "name": "Tekkorp Digital Acquisition Equity Warrant",
       "type": "DERIVATIVE",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7096,9 +7256,9 @@
     {
       "name": "Tesla",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.8366109771161515,
-      "pc2": -0.7628640167683621,
+      "cluster": 0,
+      "pc1": -0.8379138439916757,
+      "pc2": -0.7604940985452657,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -7115,7 +7275,7 @@
         ]
       ],
       "top_partners": [
-        "Custom Chip",
+        "Custom Chip For Autonomous Cars",
         "Stock Price",
         "Year To Date Performance"
       ]
@@ -7123,27 +7283,26 @@
     {
       "name": "Tesla Inc",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.0421709681895657,
-      "pc2": 0.1326251239000519,
+      "cluster": 4,
+      "pc1": 0.7516237100978204,
+      "pc2": 0.12536695732827208,
       "pc3": 0.0,
       "factors": {
-        "attention": 8.0,
+        "attention": 7.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.75,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 8,
+      "n_articles": 7,
       "event_mix": [
         [
           "OTHER",
-          8
+          7
         ]
       ],
       "top_partners": [
         "5 bln",
-        "Nasdaq Composite",
         "Shares Worth Up to 5 bln",
         "Stock Price"
       ]
@@ -7151,9 +7310,9 @@
     {
       "name": "Texas Instruments",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.9778027920942816,
-      "pc2": -0.4066822591512089,
+      "cluster": 3,
+      "pc1": 1.9262079975349868,
+      "pc2": -0.3419605844051616,
       "pc3": 0.0,
       "factors": {
         "attention": 14.0,
@@ -7186,14 +7345,14 @@
       "name": "Texas Instruments Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.09719469076446177,
-      "pc2": -0.2692709315759949,
+      "pc1": 0.2076400511137844,
+      "pc2": 0.050500963821547895,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.3333333333333333,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 5,
@@ -7205,16 +7364,15 @@
       ],
       "top_partners": [
         "05",
-        "Stock Price",
         "TXN"
       ]
     },
     {
       "name": "Third Point LLC",
       "type": "FINANCIALENTITY",
-      "cluster": 0,
-      "pc1": 0.5173633121338667,
-      "pc2": -0.883828934474316,
+      "cluster": 3,
+      "pc1": 0.48461230671505573,
+      "pc2": -0.8453209442704737,
       "pc3": 0.0,
       "factors": {
         "attention": 10.0,
@@ -7242,9 +7400,9 @@
     {
       "name": "Timkensteel Corp",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7268,8 +7426,8 @@
       "name": "Tonix Pharmaceuticals Holding Corp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -7292,10 +7450,10 @@
     },
     {
       "name": "Traders",
-      "type": "CONCEPT",
-      "cluster": 0,
-      "pc1": 1.2403331886162876,
-      "pc2": 0.33078734432677614,
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 1,
+      "pc1": 1.2225314993190093,
+      "pc2": 0.36171591381080737,
       "pc3": 0.0,
       "factors": {
         "attention": 8.0,
@@ -7314,19 +7472,19 @@
       "top_partners": [
         "100 Strike Call Option",
         "15250 Strike Call Option",
-        "165 Strike Call Option",
+        "33 Strike Call Option",
         "50 Strike Call Option",
-        "55 Strike Call Option",
         "85 Strike Call Option",
-        "95 Strike Call Option"
+        "95 Strike Call Option",
+        "WYNN Options"
       ]
     },
     {
       "name": "Tredegar Corp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.21105765212155034,
-      "pc2": 0.03898141131002087,
+      "pc1": 0.2076400511137844,
+      "pc2": 0.050500963821547895,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -7348,11 +7506,37 @@
       ]
     },
     {
+      "name": "UMC",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
+      "pc3": 0.0,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Annual Revenue",
+        "Chips"
+      ]
+    },
+    {
       "name": "US Congress",
       "type": "FINANCIALENTITY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7376,9 +7560,9 @@
     {
       "name": "US Lawmakers",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7402,9 +7586,9 @@
     {
       "name": "US Stocks",
       "type": "FININSTRUMENTINFO",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7428,9 +7612,9 @@
     {
       "name": "US Well Services Equity Warrants",
       "type": "DERIVATIVE",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7453,9 +7637,9 @@
     {
       "name": "US lawmakers",
       "type": "CONCEPT",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7477,36 +7661,11 @@
       ]
     },
     {
-      "name": "UTStarcom Holdings UTSIO",
-      "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
-      "pc3": 0.0,
-      "factors": {
-        "attention": 2.0,
-        "sentiment": 0.0,
-        "consensus": 1.0,
-        "novelty": 1.0,
-        "materiality": 0.0
-      },
-      "n_articles": 2,
-      "event_mix": [
-        [
-          "OTHER",
-          2
-        ]
-      ],
-      "top_partners": [
-        "Network Agreement"
-      ]
-    },
-    {
       "name": "United States Steel Corp",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7531,8 +7690,8 @@
       "name": "UnitedHealth Group Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7556,9 +7715,9 @@
     {
       "name": "VGT",
       "type": "STOCKTICKER",
-      "cluster": 2,
-      "pc1": -0.37423246278713346,
-      "pc2": -0.3004855024393386,
+      "cluster": 0,
+      "pc1": -0.3737766046236105,
+      "pc2": -0.2963568591771948,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -7585,8 +7744,8 @@
       "name": "VLUE",
       "type": "PRODUCT",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7611,8 +7770,8 @@
       "name": "Vanda Pharmaceuticals",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7636,35 +7795,36 @@
     {
       "name": "Visa",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 4,
+      "pc1": 0.2825060446205019,
+      "pc2": 0.5944846228055849,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 1.0,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
+        "Broader Market",
         "Global Recovery",
-        "SP 500 Index"
+        "S&P 500 Index"
       ]
     },
     {
       "name": "Volvo",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7689,8 +7849,8 @@
       "name": "Walt Disney",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.5189206584328233,
-      "pc2": 0.1010212164619661,
+      "pc1": 0.51057436323034,
+      "pc2": 0.11887644319944803,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -7707,7 +7867,7 @@
         ]
       ],
       "top_partners": [
-        "13",
+        "13%",
         "Citigroup PT Raise",
         "Dow Jones Industrial Average Components",
         "Percentage Gain",
@@ -7717,9 +7877,9 @@
     {
       "name": "Walt Disney Co",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 1.1338679979058908,
-      "pc2": -0.26732424870228455,
+      "cluster": 3,
+      "pc1": 1.1034619592058095,
+      "pc2": -0.22647129177971248,
       "pc3": 0.0,
       "factors": {
         "attention": 10.0,
@@ -7748,8 +7908,8 @@
       "name": "Washington",
       "type": "FINANCIALENTITY",
       "cluster": 4,
-      "pc1": -0.3430178919237931,
-      "pc2": -0.02344773041666648,
+      "pc1": -0.33634360787025175,
+      "pc2": -0.024365029685176356,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -7774,9 +7934,9 @@
     {
       "name": "Wells Fargo",
       "type": "FINANCIALENTITY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -7801,9 +7961,9 @@
     {
       "name": "Western Digital",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -7827,8 +7987,8 @@
       "name": "XEROX HOLDINGS CORP",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.08814605154188465,
-      "pc2": 0.1618930118896851,
+      "pc1": 0.09036063474445476,
+      "pc2": 0.1677803801908761,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
@@ -7855,14 +8015,14 @@
       "name": "Xilinx",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.08814605154188465,
-      "pc2": 0.1618930118896851,
+      "pc1": 0.5544978741125199,
+      "pc2": 0.631917619558947,
       "pc3": 0.0,
       "factors": {
         "attention": 4.0,
         "sentiment": 0.0,
         "consensus": 1.0,
-        "novelty": 0.5,
+        "novelty": 0.75,
         "materiality": 0.0
       },
       "n_articles": 4,
@@ -7875,16 +8035,16 @@
       "top_partners": [
         "Revenue",
         "Semiconductor Devices",
-        "Stock Price",
-        "Weak Q2 2021 Numbers"
+        "Weak Q2 2021 Numbers",
+        "XLNX"
       ]
     },
     {
       "name": "Zacks",
       "type": "CONCEPT",
       "cluster": 4,
-      "pc1": -0.034765549037781035,
-      "pc2": 0.2848046124693493,
+      "pc1": -0.02691878162487487,
+      "pc2": 0.2850597965602043,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -7907,10 +8067,10 @@
     },
     {
       "name": "Zacks Investment Research",
-      "type": "FINANCIALENTITY",
-      "cluster": 3,
-      "pc1": 1.1358146807795868,
-      "pc2": 0.9637384399680683,
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 1,
+      "pc1": 1.135914529849915,
+      "pc2": 0.9787754425576897,
       "pc3": 0.0,
       "factors": {
         "attention": 5.0,
@@ -7934,35 +8094,36 @@
     {
       "name": "Zoom Video Communications",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
-        "attention": 2.0,
+        "attention": 3.0,
         "sentiment": 0.0,
         "consensus": 1.0,
         "novelty": 0.0,
         "materiality": 0.0
       },
-      "n_articles": 2,
+      "n_articles": 3,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ]
       ],
       "top_partners": [
         "Nasdaq 100",
-        "Stock Price"
+        "Stock Price",
+        "Year to Date Performance"
       ]
     },
     {
       "name": "Zoom Video Communications Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": 0.33396925270121597,
-      "pc2": -0.08393018926964332,
+      "pc1": 0.324919467483114,
+      "pc2": -0.06677845254778028,
       "pc3": 0.0,
       "factors": {
         "attention": 6.0,
@@ -7989,8 +8150,8 @@
       "name": "ZoomInfo Technologies Inc",
       "type": "COMPANY",
       "cluster": 4,
-      "pc1": -0.15767714961744672,
-      "pc2": 0.4077162130490135,
+      "pc1": -0.1441981979942045,
+      "pc2": 0.4023392129295325,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -8014,9 +8175,9 @@
     {
       "name": "fuboTV",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -0.9595225776958172,
-      "pc2": -0.6399524161886979,
+      "cluster": 0,
+      "pc1": -0.9551932603610054,
+      "pc2": -0.6432146821759375,
       "pc3": 0.0,
       "factors": {
         "attention": 3.0,
@@ -8040,9 +8201,9 @@
     {
       "name": "iShares",
       "type": "Global",
-      "cluster": 3,
-      "pc1": 0.7670798790405897,
-      "pc2": 1.3324732417070608,
+      "cluster": 1,
+      "pc1": 0.7840762807419259,
+      "pc2": 1.3306136916656743,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -8065,9 +8226,9 @@
     {
       "name": "scPharmaceuticals Inc",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": -1.082434178275483,
-      "pc2": -0.5170408156090337,
+      "cluster": 0,
+      "pc1": -1.0724726767303348,
+      "pc2": -0.5259352658066093,
       "pc3": 0.0,
       "factors": {
         "attention": 2.0,
@@ -8090,17 +8251,17 @@
   ],
   "pca": {
     "explained_variance": [
-      0.550962169308293,
-      0.4490378306917071
+      0.5628039282853143,
+      0.43719607171468566
     ],
     "components": [
       [
-        0.7071067811865518,
-        0.7071067811865434
+        0.7071067811865519,
+        0.7071067811865432
       ],
       [
-        -0.7071067811865434,
-        0.7071067811865518
+        -0.7071067811865432,
+        0.7071067811865519
       ]
     ]
   },
@@ -8108,117 +8269,46 @@
     "k": 5,
     "centroids": [
       [
-        0.9795781359347385,
-        0.3566844294008609
+        -0.2908810416165156,
+        -1.0942734849112576
       ],
       [
-        5.584692784302399,
-        0.27512086311755085
+        -0.20803715752137059,
+        1.464054992038668
       ],
       [
-        -0.29096500964090277,
-        -1.0978035975281062
+        5.655514834886554,
+        0.43297763046679877
       ],
       [
-        -0.25632031997514576,
-        1.4693851345916638
+        1.1495303027010098,
+        0.2017297795786117
       ],
       [
-        -0.23631685043994866,
-        0.2463462724191387
+        -0.19536288586054193,
+        0.269847971754351
       ]
     ],
     "clusters": [
       {
         "cluster": 0,
-        "size": 31,
-        "signature": [
-          {
-            "factor": "attention",
-            "loading": 0.9795781359347385
-          },
-          {
-            "factor": "novelty",
-            "loading": 0.3566844294008609
-          }
-        ],
-        "members": [
-          "APPLIED MATERIALS INC",
-          "Analog Devices",
-          "Apple Inc",
-          "Applied Materials",
-          "Applied Materials Inc",
-          "Broadcom",
-          "Company",
-          "ESGU",
-          "Intel Corporation",
-          "Investors",
-          "Luminar",
-          "Luminar Technologies",
-          "Marvell Technology Group Ltd",
-          "Micron Technology Inc",
-          "Microsoft",
-          "NVIDIA",
-          "ON Semiconductor Corp",
-          "QCOM",
-          "Qualcomm Inc",
-          "SMH",
-          "SOXX",
-          "SP 500",
-          "SPLG",
-          "Stock Price",
-          "TSM",
-          "Taiwan Semiconductor Manufacturing",
-          "Tesla Inc",
-          "Texas Instruments",
-          "Third Point LLC",
-          "Traders",
-          "Walt Disney Co"
-        ]
-      },
-      {
-        "cluster": 1,
-        "size": 7,
-        "signature": [
-          {
-            "factor": "attention",
-            "loading": 5.584692784302399
-          },
-          {
-            "factor": "novelty",
-            "loading": 0.27512086311755085
-          }
-        ],
-        "members": [
-          "AMD",
-          "Advanced Micro Devices",
-          "Apple",
-          "Intel",
-          "Intel Corp",
-          "Micron Technology",
-          "Qualcomm"
-        ]
-      },
-      {
-        "cluster": 2,
-        "size": 115,
+        "size": 118,
         "signature": [
           {
             "factor": "novelty",
-            "loading": -1.0978035975281062
+            "loading": -1.0942734849112576
           },
           {
             "factor": "attention",
-            "loading": -0.29096500964090277
+            "loading": -0.2908810416165156
           }
         ],
         "members": [
           "100 Strike Call Option",
           "140 Strike Put Option",
-          "155 Strike Call Option",
-          "5500 Strike Call Option",
-          "7500 Strike Call Option",
           "ADI",
+          "AMD Stock Options",
+          "AT&T Inc",
           "ATT Inc",
           "Addex Therapeutics Ltd",
           "Adobe Inc",
@@ -8236,11 +8326,12 @@
           "Boeing",
           "Broadcom Inc",
           "CHINA MOBILE LTD",
+          "COST",
           "Cabot Oil  Gas Corp",
-          "Call Option Volume",
           "Callon Petroleum Co",
           "Catbasis Pharmaceuticals",
           "Chevron Corp",
+          "Companies Offering Multiple Services",
           "Components",
           "Coupa Software Inc",
           "Cryptocurrency Miners",
@@ -8282,12 +8373,12 @@
           "Moderna",
           "Moderna Inc",
           "Mosesmann",
+          "NFLX",
           "NXPI",
           "Nasdaq",
           "NeoGenomics Inc",
           "Netflix Inc NFLXO",
           "Novavax Inc",
-          "Nvidia",
           "Nvidia Corp",
           "Occidental Petroleum Corp",
           "Option Care Health Inc",
@@ -8297,7 +8388,6 @@
           "Pennsylvania Real Estate Investment Trust",
           "Penumbra Inc",
           "Pfizer Inc",
-          "Philip Morris International Inc",
           "QuantumScape Corp",
           "Quantumscape Corp",
           "Regional Health Properties Inc",
@@ -8308,17 +8398,21 @@
           "Sanctions",
           "Schlumberger NV",
           "Sea Ltd",
+          "Seagen",
           "Sellas Life Sciences Group Inc",
           "Slack Technologies Inc",
           "Smartsheet Inc",
           "Sonoma Pharmaceuticals Inc",
           "Stitch Fix Inc",
+          "Sustainability Initiatives",
           "TPG Pace Beneficial Finance Corp",
           "TSMC",
+          "TXN Options",
           "Tarena International Inc",
           "TechnipFMC PLC",
           "Tesla",
           "Timkensteel Corp",
+          "UMC",
           "US Lawmakers",
           "US Well Services Equity Warrants",
           "US lawmakers",
@@ -8331,16 +8425,16 @@
         ]
       },
       {
-        "cluster": 3,
-        "size": 63,
+        "cluster": 1,
+        "size": 66,
         "signature": [
           {
             "factor": "novelty",
-            "loading": 1.4693851345916638
+            "loading": 1.464054992038668
           },
           {
             "factor": "attention",
-            "loading": -0.25632031997514576
+            "loading": -0.20803715752137059
           }
         ],
         "members": [
@@ -8349,7 +8443,6 @@
           "4800 Strike",
           "5Gconnected Factory Floor",
           "Activists",
-          "Amazon",
           "Ansys",
           "Big Lots",
           "BioRad Laboratories Inc",
@@ -8358,88 +8451,158 @@
           "CEO",
           "China",
           "Chinese Internet Firms",
+          "Chip Sales",
           "Cloud Services",
           "Cloud Spending",
           "Cloudera",
           "Company A",
           "Computer Chips",
           "Coronavirus Cases",
+          "Credit Suisse Group AG",
           "Cristiano Amon",
           "Daily Semiconductor Bull 3X Shares",
-          "Earnings Per Share",
           "Equity Allocation",
           "Foreign Investors",
           "Forward PriceEarnings Ratio",
           "Forward PriceSales Ratio",
           "Free Cash Flow",
-          "INTC stock",
+          "Gilead Sciences",
           "IXUS",
           "Ian Bezek",
           "Investor",
           "KFConsole",
           "Logistical Hurdles",
+          "MU",
           "Marvell",
           "Mobileye",
-          "Modern Tech Stack",
+          "Momo",
+          "NXTG",
           "New Flagship Smartphone Chip",
           "NextEra Energy Inc",
           "Northland",
           "Nucor",
           "ON Semiconductor",
-          "PS Multiple",
-          "Quinn Bolton",
+          "ON Semiconductor Corp",
+          "Price Target",
           "RFID Chips",
+          "SMH",
           "SPAC",
           "Salesforce",
-          "SelfDriving Car System",
           "Semiconductors",
           "Senate",
           "Sensors",
+          "Shareholders",
           "Sony",
           "Stock Market",
+          "Stock Price Of Gores Metropoulos",
           "Strong Demand",
-          "Sundial Growers SNDLO",
+          "TXN",
           "Tailwinds",
           "Tekkorp Digital Acquisition Equity Warrant",
+          "Traders",
           "US Stocks",
-          "UTStarcom Holdings UTSIO",
-          "Visa",
           "Volvo",
           "Zacks Investment Research",
           "iShares"
         ]
       },
       {
-        "cluster": 4,
-        "size": 84,
+        "cluster": 2,
+        "size": 7,
         "signature": [
           {
-            "factor": "novelty",
-            "loading": 0.2463462724191387
+            "factor": "attention",
+            "loading": 5.655514834886554
           },
           {
-            "factor": "attention",
-            "loading": -0.23631685043994866
+            "factor": "novelty",
+            "loading": 0.43297763046679877
           }
         ],
         "members": [
+          "AMD",
+          "Advanced Micro Devices",
+          "Apple",
+          "Intel",
+          "Intel Corp",
+          "Micron Technology",
+          "Qualcomm"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 23,
+        "signature": [
+          {
+            "factor": "attention",
+            "loading": 1.1495303027010098
+          },
+          {
+            "factor": "novelty",
+            "loading": 0.2017297795786117
+          }
+        ],
+        "members": [
+          "APPLIED MATERIALS INC",
+          "Analog Devices",
+          "Apple Inc",
+          "Applied Materials",
+          "Applied Materials Inc",
+          "Company",
+          "ESGU",
+          "Intel Corporation",
+          "Investors",
+          "Luminar",
+          "Marvell Technology Group Ltd",
+          "Micron Technology Inc",
+          "Microsoft",
+          "Nvidia",
+          "QCOM",
+          "Qualcomm Inc",
+          "SOXX",
+          "SP 500",
+          "TSM",
+          "Taiwan Semiconductor Manufacturing",
+          "Texas Instruments",
+          "Third Point LLC",
+          "Walt Disney Co"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 92,
+        "signature": [
+          {
+            "factor": "novelty",
+            "loading": 0.269847971754351
+          },
+          {
+            "factor": "attention",
+            "loading": -0.19536288586054193
+          }
+        ],
+        "members": [
+          "165 Strike Call Option",
+          "5500 Strike Call Option",
+          "7500 Strike Call Option",
           "AMAT Stock",
           "AMD Stock",
           "ASML",
           "Advanced Micro Devices Inc",
+          "Amazon",
           "Analog Devices Inc",
           "Anworth Mortgage Asset Corp",
           "BioNTech",
           "BlackBerry",
+          "Broadcom",
           "COVID19 Pandemic",
           "COVID19 Restrictions",
+          "Call Option Volume",
           "Carnival Corporation",
           "Cellular Modem",
-          "Chip Sales",
           "Cloudleaf",
           "Cohu Inc",
           "Corsair Gaming",
-          "Credit Suisse Group AG",
           "Curis Inc",
           "Dan Loeb",
           "Dolby",
@@ -8463,12 +8626,13 @@
           "JetBlue",
           "Lexicon Pharmaceuticals Inc",
           "Lisa Su",
+          "Luminar Technologies",
           "MRVL",
           "Marvell Technology",
           "Marvell Technology Group",
           "Medigus",
           "MicroStrategy",
-          "Myovant Sciences MYOVN",
+          "NVIDIA",
           "NetApp",
           "New Shows",
           "Norwegian Cruise Line Holdings",
@@ -8477,21 +8641,23 @@
           "Palo Alto Networks",
           "Pennsylvania REIT",
           "Pfizer",
-          "Price Target",
+          "Philip Morris International Inc",
+          "Quinn Bolton",
           "Reata Pharma",
           "Regulators",
           "Retailers",
           "Root Inc",
           "SBA Communications",
-          "SPDRSP500 Fossil Fuel Reserves Free ETF",
-          "Shopify",
-          "Soligenix SNGXO",
+          "SPDR S&P 500 Fossil Fuel Reserves Free ETF",
+          "SPLG",
+          "Samsung Electronics Co Ltd",
+          "Stock Price",
           "Sundial Growers Inc",
           "TQQQ",
-          "TXN",
           "Taiwan Semiconductor",
           "Taiwan Semiconductor Manufacturing Co Ltd",
           "Taiwan Semiconductor Manufacturing Company Ltd",
+          "Tesla Inc",
           "Texas Instruments Inc",
           "Tonix Pharmaceuticals Holding Corp",
           "Tredegar Corp",
@@ -8500,6 +8666,7 @@
           "UnitedHealth Group Inc",
           "VLUE",
           "Vanda Pharmaceuticals",
+          "Visa",
           "Walt Disney",
           "Washington",
           "XEROX HOLDINGS CORP",
