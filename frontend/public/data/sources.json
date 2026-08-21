@@ -14,8 +14,8 @@
     },
     {
       "id": "fnspid-qwen-vm",
-      "label": "FNSPID — Full corpus (our pipeline, updating)",
-      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009–2024), built by our automated VM pipeline the correct way: qwen2.5:14b extraction → Judge LLM → third-LLM refinement, published chunk by chunk. Predictions appear once the rolling-window GAT trains on the finished refined corpus.",
+      "label": "FNSPID — Full corpus · Qwen (free)",
+      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009–2024), extracted with local Qwen 2.5 14B at zero API cost, through the full quality chain: Judge LLM → third-LLM refinement → corpus canonicalization. Historical dataset backfilling chunk by chunk; predictions appear when the rolling-window GAT trains on the finished refined corpus.",
       "kind": "historical",
       "available": true,
       "features": [
@@ -24,8 +24,8 @@
     },
     {
       "id": "fnspid-pierre",
-      "label": "FNSPID — Pierre’s run (2019–2021)",
-      "description": "Pierre’s standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
+      "label": "FNSPID — Pierre's run · Qwen 2.5 (2019–2021)",
+      "description": "Pierre's standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
       "kind": "historical",
       "available": true,
       "features": [
