@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T18:29:16.845476+00:00",
+  "generated_at": "2026-08-21T19:55:14.920799+00:00",
   "min_articles": 2,
   "kept_factors": [
     "attention",
@@ -10,12 +10,153 @@
   ],
   "entities": [
     {
-      "name": "Amazon.com",
+      "name": "3M",
       "type": "COMPANY",
       "cluster": 1,
-      "pc1": -0.02416649893994111,
-      "pc2": 0.22105594864643827,
-      "pc3": 0.1365979903024932,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "MMM"
+      ]
+    },
+    {
+      "name": "AbbVie",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.252971191842027,
+      "pc2": 0.6951712782704974,
+      "pc3": -0.8860968747281558,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.3,
+        "consensus": 0.5101020514433643,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "PRODUCT",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Frontline NSCLC Combination",
+        "Market",
+        "WCLC 2026"
+      ]
+    },
+    {
+      "name": "Abbott",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 0.7189513082099946,
+      "pc2": -0.8235342559440533,
+      "pc3": -0.797207262132165,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.425,
+        "consensus": 0.575,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EARNINGS",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Abbott Laboratories",
+        "Q2"
+      ]
+    },
+    {
+      "name": "Accenture",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.35597121924081526,
+      "pc2": 1.49844351646997,
+      "pc3": -1.124675516634452,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.25,
+        "consensus": 0.625,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Accenture PLC",
+        "Dead Money"
+      ]
+    },
+    {
+      "name": "Adobe",
+      "type": "COMPANY",
+      "cluster": 4,
+      "pc1": -0.893064624280044,
+      "pc2": -1.7701172397240468,
+      "pc3": -0.3877565986387233,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Adobe Inc."
+      ]
+    },
+    {
+      "name": "Amazon.com",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 0.17166255028669855,
+      "pc2": 0.24715023475297718,
+      "pc3": -0.12803696552022026,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.35,
@@ -40,12 +181,38 @@
       ]
     },
     {
+      "name": "Amgen",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.5240836561971864,
+      "pc2": 0.690146579519081,
+      "pc3": 0.4033989846145384,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.2,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Incyte Corporation",
+        "NeoGenomics Inc."
+      ]
+    },
+    {
       "name": "Apple Inc.",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": -0.7674311604655409,
-      "pc2": -0.6466369582370278,
-      "pc3": -0.4016621917628449,
+      "cluster": 2,
+      "pc1": -0.46866627151733925,
+      "pc2": -0.7552784271396829,
+      "pc3": -0.20396573407420257,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -72,22 +239,22 @@
     {
       "name": "Bank of America Corporation",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 1.1629999539042168,
-      "pc2": -1.2708040133182448,
-      "pc3": -1.4865586025427346,
+      "cluster": 0,
+      "pc1": 1.7423696002268712,
+      "pc2": -0.6334245348514597,
+      "pc3": -1.712170048175717,
       "factors": {
-        "attention": 3.0,
-        "sentiment": 0.09999999999999998,
-        "consensus": 0.5679506201061426,
-        "novelty": 0.3333333333333333,
+        "attention": 4.0,
+        "sentiment": 0.14999999999999997,
+        "consensus": 0.6159427126065695,
+        "novelty": 0.25,
         "materiality": 0.0
       },
-      "n_articles": 3,
+      "n_articles": 4,
       "event_mix": [
         [
           "OTHER",
-          2
+          3
         ],
         [
           "PRODUCT",
@@ -97,21 +264,22 @@
       "top_partners": [
         "Apple Inc.",
         "Digital Mortgage",
-        "Series GG"
+        "Series GG",
+        "WMT Stock"
       ]
     },
     {
       "name": "Berkshire Hathaway",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.6217528511988125,
-      "pc2": -0.4358598428894161,
-      "pc3": 1.1047957262620436,
+      "cluster": 1,
+      "pc1": -0.3535669688365561,
+      "pc2": 0.08043310041914313,
+      "pc3": -0.3344364477197101,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.10000000000000002,
         "consensus": 0.9183503419072274,
-        "novelty": 1.0,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
       "n_articles": 3,
@@ -128,24 +296,110 @@
       ]
     },
     {
-      "name": "British Airways",
-      "type": "COMPANY",
-      "cluster": 0,
-      "pc1": 0.5756257990289964,
-      "pc2": -0.5579875138675681,
-      "pc3": 0.7001331448663723,
+      "name": "Blu-ray Burner",
+      "type": "PRODUCT",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
       "factors": {
         "attention": 2.0,
-        "sentiment": -0.15,
-        "consensus": 0.65,
+        "sentiment": 0.0,
+        "consensus": 1.0,
         "novelty": 1.0,
         "materiality": 0.0
       },
       "n_articles": 2,
       "event_mix": [
         [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Card Reader",
+        "USB Hub"
+      ]
+    },
+    {
+      "name": "Booking Holdings Inc.",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": 1.296184454058345,
+      "pc2": 0.1398523295212477,
+      "pc3": 3.2989080635965893,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.6,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 20.36659089443625
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "EARNINGS",
+          1
+        ],
+        [
           "PRODUCT",
           1
+        ]
+      ],
+      "top_partners": [
+        "AI Sector",
+        "Q4"
+      ]
+    },
+    {
+      "name": "Bristol Myers Squibb",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": -0.2601983877959682,
+      "pc2": 0.27197053613638467,
+      "pc3": 0.08768722650085688,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.25,
+        "consensus": 0.75,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "PARTNERSHIP",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI Technology",
+        "Bristol-Myers Squibb Co"
+      ]
+    },
+    {
+      "name": "British Airways",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.16521185692511334,
+      "pc2": 1.4124011706363067,
+      "pc3": -0.9407779452649788,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.25,
+        "consensus": 0.6811478921715168,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "PRODUCT",
+          2
         ],
         [
           "LEGAL",
@@ -154,16 +408,238 @@
       ],
       "top_partners": [
         "Kamala Harris's close friend",
-        "Nonstop Route"
+        "Nonstop Route",
+        "US Route"
+      ]
+    },
+    {
+      "name": "Broadcom Inc.",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 3,
+      "pc1": 4.9177344065413156,
+      "pc2": 0.7031139354122461,
+      "pc3": 1.3255914332094134,
+      "factors": {
+        "attention": 6.0,
+        "sentiment": 0.2833333333333334,
+        "consensus": 0.6976940475463824,
+        "novelty": 0.5,
+        "materiality": 24.971761079010054
+      },
+      "n_articles": 6,
+      "event_mix": [
+        [
+          "OTHER",
+          4
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "FINANCIAL_ENTITY",
+          1
+        ]
+      ],
+      "top_partners": [
+        "$60 billion",
+        "AI Glasses",
+        "AI chip",
+        "AVGO",
+        "Gartner's Best Automation And Orchestration Platforms Of 2026",
+        "NVIDIA"
+      ]
+    },
+    {
+      "name": "Charter Communications",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": 3.414779067401703,
+      "pc2": 1.042338074222366,
+      "pc3": 1.8706450623205892,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": 0.48749999999999993,
+        "consensus": 0.6387954180800028,
+        "novelty": 1.0,
+        "materiality": 20.72466485885872
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "M_AND_A",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Cox Communications",
+        "Cox Communications Acquisition",
+        "Margin Loans",
+        "Unknown Insider"
+      ]
+    },
+    {
+      "name": "Cisco",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 0,
+      "pc1": 0.9824280960215015,
+      "pc2": -0.32037169778704566,
+      "pc3": -1.4022605850670289,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.25,
+        "consensus": 0.44999999999999996,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "MACRO",
+          1
+        ]
+      ],
+      "top_partners": [
+        "115%",
+        "Margin Headwinds"
+      ]
+    },
+    {
+      "name": "Cisco Systems Inc.",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.2405243070302767,
+      "pc2": -0.42667201619797157,
+      "pc3": -1.1995511872218494,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.2833333333333333,
+        "consensus": 0.575,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "PRODUCT",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "Cisco"
+      ]
+    },
+    {
+      "name": "Colgate",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.7755564510422446,
+      "pc2": -1.2498617952413478,
+      "pc3": -0.9432345228803719,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": 0.5249999999999999,
+        "consensus": 0.6968911086754466,
+        "novelty": 0.3333333333333333,
+        "materiality": 0.0
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "EARNINGS",
+          2
+        ],
+        [
+          "GUIDANCE",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "CL",
+        "Q2",
+        "Second-Quarter 2026 Results"
+      ]
+    },
+    {
+      "name": "Comcast",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": -0.36070103699667244,
+      "pc2": -0.7614835024855346,
+      "pc3": -0.257896782079472,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.175,
+        "consensus": 0.825,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "PRODUCT",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Comcast Corporation",
+        "Home Security"
+      ]
+    },
+    {
+      "name": "El Ni\u00f1o",
+      "type": "MACRO_INDICATOR",
+      "cluster": 1,
+      "pc1": -1.1164576786413394,
+      "pc2": -0.7180479750645719,
+      "pc3": 0.1196205539574134,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "MACRO",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Autumn Rain and Storms in UK",
+        "S&P 500 reaching 8000"
       ]
     },
     {
       "name": "Eli Lilly",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 1.3907566487224747,
-      "pc2": -0.05446106589981572,
-      "pc3": -0.15053040672421247,
+      "cluster": 0,
+      "pc1": 1.1174201153898742,
+      "pc2": 0.6340307268624921,
+      "pc3": -0.7554216960451074,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.3,
@@ -188,12 +664,42 @@
       ]
     },
     {
+      "name": "Emerson Electric",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.9079897949199686,
+      "pc2": 0.3092009882114958,
+      "pc3": 0.41127351453247285,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.1,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "BP",
+        "EMR"
+      ]
+    },
+    {
       "name": "ExxonMobil",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.3319416462644808,
-      "pc2": -0.31594867016366235,
-      "pc3": 1.189793788898517,
+      "cluster": 1,
+      "pc1": -1.0922227181145194,
+      "pc2": 0.6653262781356736,
+      "pc3": 0.18767479259346123,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.1,
@@ -218,12 +724,444 @@
       ]
     },
     {
+      "name": "FedEx",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.2638522778368805,
+      "pc2": 1.035861090653636,
+      "pc3": -0.35997905473191877,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.16666666666666666,
+        "consensus": 0.8300326828802405,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "MACRO",
+          1
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "34%",
+        "California",
+        "FDX"
+      ]
+    },
+    {
+      "name": "GD Power Development Co., Ltd.",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.5528050261008972,
+      "pc2": 1.5556395029461183,
+      "pc3": -0.3713220122540678,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.6,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "EARNINGS",
+          1
+        ],
+        [
+          "M_AND_A",
+          1
+        ]
+      ],
+      "top_partners": [
+        "18%",
+        "7"
+      ]
+    },
+    {
+      "name": "GM",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.25243323312868193,
+      "pc2": 1.7963582946337762,
+      "pc3": -1.0915628680085165,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": -0.475,
+        "consensus": 0.7863999063670617,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "REGULATORY",
+          2
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Controversial Employee Evaluation Program",
+        "NHTSA",
+        "Nearly One Million Vehicles",
+        "bigger vehicles"
+      ]
+    },
+    {
+      "name": "General Dynamics",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": -0.46866627151733925,
+      "pc2": -0.7552784271396829,
+      "pc3": -0.20396573407420257,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.15,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Danny Deep",
+        "GD"
+      ]
+    },
+    {
+      "name": "Gilead",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.6282809786179422,
+      "pc2": 0.5654332390445065,
+      "pc3": -0.47859799475554526,
+      "factors": {
+        "attention": 5.0,
+        "sentiment": 0.3,
+        "consensus": 0.7834936490538904,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 5,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          3
+        ],
+        [
+          "PARTNERSHIP",
+          1
+        ],
+        [
+          "LEGAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "GILD",
+        "HIV Import Block",
+        "Nucleai",
+        "Oncology"
+      ]
+    },
+    {
+      "name": "Great Lakes Advisors LLC",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 1,
+      "pc1": 0.06295005427854039,
+      "pc2": 0.7106786566090522,
+      "pc3": 1.7080030571807014,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.1,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 11.341377662299669
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "M_AND_A",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Mondelez International Inc."
+      ]
+    },
+    {
+      "name": "HYDRA Tool",
+      "type": "PRODUCT",
+      "cluster": 1,
+      "pc1": -0.7798958751834888,
+      "pc2": 0.6566907606067811,
+      "pc3": 0.271236848534493,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.10000000000000002,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "PRODUCT",
+          3
+        ]
+      ],
+      "top_partners": [
+        "125% Power Limits",
+        "36 Gbps",
+        "NVIDIA RTX 50 VRAM"
+      ]
+    },
+    {
+      "name": "Honeywell",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.0922227181145194,
+      "pc2": 0.6653262781356736,
+      "pc3": 0.18767479259346123,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.1,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Core Divisions",
+        "HON"
+      ]
+    },
+    {
+      "name": "IBM",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 0.49431930529195794,
+      "pc2": -1.074409863282016,
+      "pc3": 0.25239268962103706,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6,
+        "consensus": 0.8585786437626906,
+        "novelty": 0.6666666666666666,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "PRODUCT",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Gartner's Best Automation And Orchestration Platforms Of 2026",
+        "Next-generation Quantum Computers",
+        "Ultra-cold Modular System"
+      ]
+    },
+    {
+      "name": "Insiders",
+      "type": "CONCEPT",
+      "cluster": 0,
+      "pc1": 0.6249922719561576,
+      "pc2": 0.009386113929676329,
+      "pc3": -0.8097239539785468,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.13333333333333333,
+        "consensus": 0.6935870614858294,
+        "novelty": 0.6666666666666666,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          3
+        ]
+      ],
+      "top_partners": [
+        "Intel",
+        "Opendoor",
+        "Rival"
+      ]
+    },
+    {
+      "name": "Intel",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "INTC"
+      ]
+    },
+    {
+      "name": "International Business Machines Corporation",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.9684087106704616,
+      "pc2": 0.8309787724060589,
+      "pc3": -0.03198666438658333,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.85,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "IBM",
+        "NVIDIA Corporation"
+      ]
+    },
+    {
+      "name": "Intuit",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.1651400711414632,
+      "pc2": 0.3017613083769954,
+      "pc3": -1.3271479886161266,
+      "factors": {
+        "attention": 5.0,
+        "sentiment": -0.2,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 5,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "LEGAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "Analysts",
+        "INTU",
+        "Mailchimp"
+      ]
+    },
+    {
+      "name": "Intuitive Surgical",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.3206173035464613,
+      "pc2": 0.7937483203309477,
+      "pc3": -0.35557295241819925,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 0.7,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "MACRO",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Fell",
+        "Widening"
+      ]
+    },
+    {
       "name": "Johnson & Johnson Inc.",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": 0.6997554551879904,
-      "pc2": 2.423292101608219,
-      "pc3": -0.39302602429804845,
+      "cluster": 3,
+      "pc1": 1.7057096723005916,
+      "pc2": 0.1818263116544766,
+      "pc3": 2.874381409246682,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.6,
@@ -253,12 +1191,73 @@
       ]
     },
     {
+      "name": "Judge",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 1,
+      "pc1": -1.6751309455734193,
+      "pc2": 1.9945910400054887,
+      "pc3": -0.7047514626831016,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.825,
+        "consensus": 0.875,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "LEGAL",
+          1
+        ],
+        [
+          "REGULATORY",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AIG",
+        "Missouri Proposal for Ballot Slot Limitation"
+      ]
+    },
+    {
+      "name": "Lockheed Martin",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.2015837833960106,
+      "pc2": 0.5224818080458322,
+      "pc3": -0.45190370590884626,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": 0.3,
+        "consensus": 0.717157287525381,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "PRODUCT",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Cheaper Missile Interceptor",
+        "LMT",
+        "New Counter-Drone Weapon"
+      ]
+    },
+    {
       "name": "MRK/MRNA",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -1.7506030688072032,
-      "pc2": 1.151983361342551,
-      "pc3": 0.3938361744789475,
+      "cluster": 2,
+      "pc1": -0.6029190402244309,
+      "pc2": -1.0904798701018084,
+      "pc3": 1.5213925943095965,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.8,
@@ -278,12 +1277,96 @@
       ]
     },
     {
+      "name": "MS NOW",
+      "type": "PRODUCT",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "$7.99 per Month",
+        "Sept. 9"
+      ]
+    },
+    {
+      "name": "MSFT",
+      "type": "STOCK_TICKER",
+      "cluster": 4,
+      "pc1": -0.24824939309911506,
+      "pc2": -3.016555754458669,
+      "pc3": 0.3948389281478172,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.7,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "August"
+      ]
+    },
+    {
+      "name": "Madison Asset Management LLC",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 4,
+      "pc1": -0.893064624280044,
+      "pc2": -1.7701172397240468,
+      "pc3": -0.3877565986387233,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Comcast Corporation"
+      ]
+    },
+    {
       "name": "McCumbee McAleer Racing",
       "type": "COMPANY",
       "cluster": 1,
-      "pc1": -0.9213138979420542,
-      "pc2": 0.26220865308664315,
-      "pc3": 0.9045220126015078,
+      "pc1": -0.9396873407667506,
+      "pc2": -0.03451415102097831,
+      "pc3": 0.7427343324820227,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.25,
@@ -308,12 +1391,72 @@
       ]
     },
     {
+      "name": "Mercury Systems",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": -0.2601983877959682,
+      "pc2": 0.27197053613638467,
+      "pc3": 0.08768722650085688,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.25,
+        "consensus": 0.75,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "PARTNERSHIP",
+          1
+        ]
+      ],
+      "top_partners": [
+        "MRCY",
+        "Palantir Technologies"
+      ]
+    },
+    {
+      "name": "Met Office",
+      "type": "ORGANIZATION",
+      "cluster": 1,
+      "pc1": -0.720780695782346,
+      "pc2": 1.1622837609468293,
+      "pc3": -0.47130957834667214,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.25,
+        "consensus": 0.75,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "GUIDANCE",
+          1
+        ],
+        [
+          "REGULATORY",
+          1
+        ]
+      ],
+      "top_partners": [
+        "El Nino Impacting UK",
+        "El Ni\u00f1o"
+      ]
+    },
+    {
       "name": "Microsoft Corporation",
       "type": "STOCK_TICKER",
-      "cluster": 3,
-      "pc1": -1.8470621329953862,
-      "pc2": -0.42170664644053774,
-      "pc3": -2.195611775044168,
+      "cluster": 4,
+      "pc1": 0.199460317906943,
+      "pc2": -2.8695184862258394,
+      "pc3": 0.013384327151964847,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.725,
@@ -334,12 +1477,38 @@
       ]
     },
     {
+      "name": "Morgan Stanley",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.712332353489707,
+      "pc2": 1.0385608487487727,
+      "pc3": 0.7062596891029924,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.2,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 5.5134287461649825
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "DUK",
+        "NEE"
+      ]
+    },
+    {
       "name": "Morgan Stanley Company",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": -1.4272075244171294,
-      "pc2": -0.9670370702003421,
-      "pc3": -1.8011371668494527,
+      "cluster": 4,
+      "pc1": -0.12294729768352138,
+      "pc2": -2.246299228858528,
+      "pc3": -0.3779134362413054,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.375,
@@ -364,20 +1533,227 @@
       ]
     },
     {
+      "name": "Morningstar",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 0.5979291250868226,
+      "pc2": -1.4119535034192943,
+      "pc3": 0.05516989323902262,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6,
+        "consensus": 0.8500000000000001,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "MACRO",
+          3
+        ]
+      ],
+      "top_partners": [
+        "S&P 500",
+        "S&P 500 reaching 8000"
+      ]
+    },
+    {
+      "name": "NHTSA",
+      "type": "EVENT",
+      "cluster": 1,
+      "pc1": -1.800433040989013,
+      "pc2": 1.224334514405348,
+      "pc3": 0.06800090170602104,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.5,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "REGULATORY",
+          2
+        ]
+      ],
+      "top_partners": [
+        "GM V-8 Trucks and SUVs",
+        "GM's 6.2-Liter V8 Engines"
+      ]
+    },
+    {
+      "name": "NOW",
+      "type": "STOCK_TICKER",
+      "cluster": 4,
+      "pc1": 0.5429886773609112,
+      "pc2": -2.7359735416321764,
+      "pc3": -0.050150799053527664,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6666666666666666,
+        "consensus": 0.95,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          3
+        ]
+      ],
+      "top_partners": [
+        "August"
+      ]
+    },
+    {
       "name": "NVIDIA Corporation",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": 2.9988807441733174,
-      "pc2": 2.4258612362642764,
-      "pc3": -1.1126702307165302,
+      "cluster": 3,
+      "pc1": 5.057446358113362,
+      "pc2": 1.512071559019937,
+      "pc3": 1.4929640870910168,
+      "factors": {
+        "attention": 5.0,
+        "sentiment": 0.27,
+        "consensus": 0.5007818613071036,
+        "novelty": 0.75,
+        "materiality": 27.85416466724356
+      },
+      "n_articles": 5,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ],
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "M_AND_A",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "NVDA",
+        "Retail Investors",
+        "SpaceX"
+      ]
+    },
+    {
+      "name": "Navy",
+      "type": "ORGANIZATION",
+      "cluster": 1,
+      "pc1": -0.8356440299349059,
+      "pc2": 0.5615761840384286,
+      "pc3": -1.2042540853613037,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.525,
+        "consensus": 0.775,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "REGULATORY",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Carrier",
+        "Trump"
+      ]
+    },
+    {
+      "name": "Nike",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.2702791604554017,
+      "pc2": 0.8865542759748033,
+      "pc3": -0.22004848095138163,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.09999999999999999,
+        "consensus": 0.85,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "NKE",
+        "small neighborhood store"
+      ]
+    },
+    {
+      "name": "Ninepoint Partners LP",
+      "type": "FINANCIAL_ENTITY",
+      "cluster": 3,
+      "pc1": 1.125363027930445,
+      "pc2": 0.8840122849812929,
+      "pc3": 1.8114416209143116,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.16666666666666666,
-        "consensus": 0.5357203907605294,
+        "consensus": 0.8752780871075353,
         "novelty": 1.0,
-        "materiality": 27.85416466724356
+        "materiality": 14.436087583323648
       },
       "n_articles": 3,
+      "event_mix": [
+        [
+          "PARTNERSHIP",
+          1
+        ],
+        [
+          "INVESTMENT",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "American Tower Corporation",
+        "Union Pacific Corporation"
+      ]
+    },
+    {
+      "name": "Oracle",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.7450156563091659,
+      "pc2": -0.22109049225341598,
+      "pc3": -0.53936381698272,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
       "event_mix": [
         [
           "OTHER",
@@ -386,25 +1762,85 @@
         [
           "STRUCTURAL",
           1
+        ]
+      ],
+      "top_partners": [
+        "Oracle Corporation",
+        "Wall Street"
+      ]
+    },
+    {
+      "name": "Palantir",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.9684087106704616,
+      "pc2": 0.8309787724060589,
+      "pc3": -0.03198666438658333,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.85,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
         ],
         [
-          "M_AND_A",
+          "OTHER",
           1
         ]
       ],
       "top_partners": [
-        "NVDA",
-        "Retail Investors",
-        "SpaceX"
+        "PLTR.US",
+        "Trefis"
+      ]
+    },
+    {
+      "name": "PayPal",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.5138504984151528,
+      "pc2": 0.7064053585917232,
+      "pc3": -0.24026401745432852,
+      "factors": {
+        "attention": 4.0,
+        "sentiment": 0.075,
+        "consensus": 0.8585786437626906,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 4,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "EARNINGS",
+          1
+        ],
+        [
+          "MACRO",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Between The High Forties And The High Seventies",
+        "Business Performance",
+        "PYPL"
       ]
     },
     {
       "name": "Pfizer Inc.",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -0.7909353920569018,
-      "pc2": -0.09448617867985896,
-      "pc3": 1.295492421781154,
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -425,12 +1861,177 @@
       ]
     },
     {
+      "name": "Qualcomm",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 2.843136299382899,
+      "pc2": 0.9822296314528658,
+      "pc3": -1.7302104473641404,
+      "factors": {
+        "attention": 6.0,
+        "sentiment": 0.11666666666666665,
+        "consensus": 0.5900542041250385,
+        "novelty": 0.8333333333333334,
+        "materiality": 0.0
+      },
+      "n_articles": 6,
+      "event_mix": [
+        [
+          "OTHER",
+          4
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "Auto Sector",
+        "Handset Sector",
+        "QCOM",
+        "Sergio Buniac",
+        "Snapdragon C"
+      ]
+    },
+    {
+      "name": "Radeon",
+      "type": "PRODUCT",
+      "cluster": 1,
+      "pc1": -1.155617809808084,
+      "pc2": -0.022104000329274717,
+      "pc3": 0.8505964284925618,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.2,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PRODUCT",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Call of Duty",
+        "Star Wars Zero Company"
+      ]
+    },
+    {
+      "name": "Radeon RX 9050",
+      "type": "PRODUCT",
+      "cluster": 1,
+      "pc1": -0.9684087106704616,
+      "pc2": 0.8309787724060589,
+      "pc3": -0.03198666438658333,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.85,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "4 GB Memory",
+        "Previous Model"
+      ]
+    },
+    {
+      "name": "S&P 500",
+      "type": "MACRO_INDICATOR",
+      "cluster": 4,
+      "pc1": 0.8213221794481183,
+      "pc2": -2.464022768078769,
+      "pc3": -0.4522072593571141,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6,
+        "consensus": 0.8500000000000001,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "MACRO",
+          3
+        ]
+      ],
+      "top_partners": [
+        "S&P 500 reaching 8000"
+      ]
+    },
+    {
+      "name": "Salesforce",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Salesforce.com, inc."
+      ]
+    },
+    {
+      "name": "Salesforce.com, inc.",
+      "type": "STOCK_TICKER",
+      "cluster": 4,
+      "pc1": 0.5429886773609112,
+      "pc2": -2.7359735416321764,
+      "pc3": -0.050150799053527664,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6666666666666666,
+        "consensus": 0.95,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          3
+        ]
+      ],
+      "top_partners": [
+        "August"
+      ]
+    },
+    {
       "name": "Seeking Alpha",
       "type": "FINANCIAL_ENTITY",
-      "cluster": 1,
-      "pc1": -1.5211061959109924,
-      "pc2": 1.0412521156006496,
-      "pc3": 0.34098685803762885,
+      "cluster": 2,
+      "pc1": -0.4791050327803728,
+      "pc2": -0.9248273758314232,
+      "pc3": 1.301731137329552,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.75,
@@ -451,12 +2052,101 @@
       ]
     },
     {
+      "name": "Silvant Capital Management LLC",
+      "type": "COMPANY",
+      "cluster": 4,
+      "pc1": 0.4237108647179167,
+      "pc2": -1.764918302979627,
+      "pc3": -0.8713076243851684,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.19999999999999998,
+        "consensus": 0.8585786437626906,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "M_AND_A",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "American Express Company",
+        "Booking Holdings Inc."
+      ]
+    },
+    {
+      "name": "Starbucks",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 0.7162646645062992,
+      "pc2": 0.5994968132585365,
+      "pc3": -0.5024310503675282,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.2333333333333333,
+        "consensus": 0.65,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Coffeehouse Investments",
+        "SBUX"
+      ]
+    },
+    {
+      "name": "T Mobile",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "TMUS"
+      ]
+    },
+    {
       "name": "Tesla",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 2.2266813951430446,
-      "pc2": -0.9556813566164871,
-      "pc3": -0.24073226649271515,
+      "cluster": 0,
+      "pc1": 1.1636431973310015,
+      "pc2": 0.6426918877533746,
+      "pc3": -1.2132952559225025,
       "factors": {
         "attention": 4.0,
         "sentiment": -0.024999999999999994,
@@ -483,12 +2173,209 @@
       ]
     },
     {
+      "name": "Texas Instruments",
+      "type": "COMPANY",
+      "cluster": 0,
+      "pc1": 1.512485869799171,
+      "pc2": 0.7757115568739104,
+      "pc3": -1.9996307653055185,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": -0.03333333333333336,
+        "consensus": 0.3871741229716589,
+        "novelty": 0.6666666666666666,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EARNINGS",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "AI",
+        "Last Earnings Report",
+        "TXN"
+      ]
+    },
+    {
+      "name": "The Charles Schwab Corporation",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "SCHW"
+      ]
+    },
+    {
+      "name": "Thermo Fisher",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.7450156563091659,
+      "pc2": -0.22109049225341598,
+      "pc3": -0.53936381698272,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.15,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "EXECUTIVE_CHANGE",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Li",
+        "TMO"
+      ]
+    },
+    {
+      "name": "Thermo Fisher Scientific",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": 0.39505560464799433,
+      "pc2": -0.8049190299064978,
+      "pc3": -0.635414118116357,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.35,
+        "consensus": 0.65,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          1
+        ],
+        [
+          "OTHER",
+          1
+        ]
+      ],
+      "top_partners": [
+        "TMO",
+        "Up Today"
+      ]
+    },
+    {
+      "name": "Trefis",
+      "type": "COMPANY",
+      "cluster": 2,
+      "pc1": -0.008083963530961457,
+      "pc2": -1.6455916519501277,
+      "pc3": 0.3550310707733265,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.65,
+        "consensus": 0.85,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "BKNG",
+        "INTU"
+      ]
+    },
+    {
+      "name": "Tropical Depression Two-C",
+      "type": "EVENT",
+      "cluster": 1,
+      "pc1": -1.184339179711795,
+      "pc2": 0.8433889230977625,
+      "pc3": 0.0758754316239554,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.2,
+        "consensus": 0.9,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "MACRO",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Hawaii Islands",
+        "Kaua\u02bbi"
+      ]
+    },
+    {
+      "name": "UPS",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.7543748101903751,
+      "pc2": 1.1353031919243033,
+      "pc3": 0.123900582190774,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.45,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "PARTNERSHIP",
+          2
+        ]
+      ],
+      "top_partners": [
+        "Amazon"
+      ]
+    },
+    {
       "name": "US teen",
       "type": "CONCEPT",
-      "cluster": 0,
-      "pc1": 0.3814412795140789,
-      "pc2": -1.1521265387286925,
-      "pc3": 0.7082135515106568,
+      "cluster": 1,
+      "pc1": -0.8152000954705094,
+      "pc2": 0.3114365407579757,
+      "pc3": -0.2906133084686097,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.3,
@@ -510,12 +2397,42 @@
       ]
     },
     {
+      "name": "Union Pacific",
+      "type": "COMPANY",
+      "cluster": 3,
+      "pc1": 1.6801714603489495,
+      "pc2": 1.4176700454606235,
+      "pc3": 1.5240695908880013,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.1,
+        "consensus": 0.6,
+        "novelty": 1.0,
+        "materiality": 18.326370075470134
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "EARNINGS",
+          1
+        ],
+        [
+          "REGULATORY",
+          1
+        ]
+      ],
+      "top_partners": [
+        "$91M Fuel Surcharge",
+        "Norfolk Southern"
+      ]
+    },
+    {
       "name": "University of Georgia",
       "type": "ORGANIZATION",
-      "cluster": 1,
-      "pc1": -1.6906238390103097,
-      "pc2": 1.0740790150911508,
-      "pc3": 0.4501896899353353,
+      "cluster": 2,
+      "pc1": -0.6489772710230687,
+      "pc2": -1.001448547620764,
+      "pc3": 1.4654929138248436,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.75,
@@ -536,17 +2453,149 @@
       ]
     },
     {
+      "name": "Value Investors",
+      "type": "CONCEPT",
+      "cluster": 2,
+      "pc1": -0.6558753706549618,
+      "pc2": -1.6083611998750167,
+      "pc3": 0.6786173588049426,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.5,
+        "consensus": 1.0,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "American Express Company",
+        "IFS"
+      ]
+    },
+    {
+      "name": "Verizon",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -1.3398507330026352,
+      "pc2": 0.33402128959490324,
+      "pc3": 0.62699770655355,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.0,
+        "consensus": 1.0,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "STRUCTURAL",
+          2
+        ]
+      ],
+      "top_partners": [
+        "VZ"
+      ]
+    },
+    {
+      "name": "Vise Technologies Inc.",
+      "type": "COMPANY",
+      "cluster": 1,
+      "pc1": -0.6920593258786351,
+      "pc2": 0.29679083751979213,
+      "pc3": 0.3034114185219341,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": 0.15,
+        "consensus": 0.85,
+        "novelty": 1.0,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          2
+        ]
+      ],
+      "top_partners": [
+        "General Dynamics Corporation",
+        "Thermo Fisher Scientific Inc."
+      ]
+    },
+    {
+      "name": "WDAY",
+      "type": "STOCK_TICKER",
+      "cluster": 4,
+      "pc1": 0.5429886773609112,
+      "pc2": -2.7359735416321764,
+      "pc3": -0.050150799053527664,
+      "factors": {
+        "attention": 3.0,
+        "sentiment": 0.6666666666666666,
+        "consensus": 0.95,
+        "novelty": 0.0,
+        "materiality": 0.0
+      },
+      "n_articles": 3,
+      "event_mix": [
+        [
+          "OTHER",
+          3
+        ]
+      ],
+      "top_partners": [
+        "August"
+      ]
+    },
+    {
+      "name": "WMT",
+      "type": "STOCK_TICKER",
+      "cluster": 0,
+      "pc1": -0.24975962653293454,
+      "pc2": 0.44151948482812486,
+      "pc3": -1.4180096449028976,
+      "factors": {
+        "attention": 2.0,
+        "sentiment": -0.35,
+        "consensus": 0.65,
+        "novelty": 0.5,
+        "materiality": 0.0
+      },
+      "n_articles": 2,
+      "event_mix": [
+        [
+          "OTHER",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
+        ]
+      ],
+      "top_partners": [
+        "Walmart",
+        "Worst Day In Four Years"
+      ]
+    },
+    {
       "name": "Walmart",
       "type": "COMPANY",
       "cluster": 0,
-      "pc1": 1.7819283904025482,
-      "pc2": -1.080359618361247,
-      "pc3": 0.959029497518895,
+      "pc1": 0.13667022438034418,
+      "pc2": 0.9969932488951827,
+      "pc3": -1.442279997424418,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.4166666666666667,
         "consensus": 0.6881952177688382,
-        "novelty": 1.0,
+        "novelty": 0.6666666666666666,
         "materiality": 0.0
       },
       "n_articles": 3,
@@ -569,10 +2618,10 @@
     {
       "name": "Walt Disney",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": -0.7674311604655408,
-      "pc2": -0.6466369582370278,
-      "pc3": -0.4016621917628445,
+      "cluster": 2,
+      "pc1": -0.46866627151733925,
+      "pc2": -0.7552784271396829,
+      "pc3": -0.20396573407420257,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -599,31 +2648,31 @@
   ],
   "pca": {
     "explained_variance": [
-      0.38214726816720007,
-      0.2302484296152688,
-      0.19607286310271865
+      0.34055456033842396,
+      0.26452285533083825,
+      0.18166001986908778
     ],
     "components": [
       [
-        0.5988693061875958,
-        -0.42400968563999686,
-        -0.5419245785740942,
-        0.20307334951115896,
-        0.3558796235322661
+        0.605486834749845,
+        0.3164499701857335,
+        -0.5164325695754018,
+        -0.15192144904638308,
+        0.4934190751434901
       ],
       [
-        -0.07778860622694081,
-        0.55072726802098,
-        0.10494308053741258,
-        0.45750297019366754,
-        0.6858034639098202
+        0.13427600138351223,
+        -0.6117030301901267,
+        -0.23293781868297128,
+        0.7154738433619001,
+        0.20402575916006735
       ],
       [
-        -0.0737313612044393,
-        -0.3983785129333094,
-        0.34910642676048925,
-        0.7990096043607744,
-        -0.2748938008427033
+        -0.2265326970392838,
+        0.38406712364026085,
+        0.49785601172140065,
+        0.3450486518294714,
+        0.6589811842339125
       ]
     ]
   },
@@ -631,160 +2680,230 @@
     "k": 5,
     "centroids": [
       [
-        0.0848188929679968,
-        -1.1218343122651282,
-        0.24612748686902547,
-        0.4716077004618772,
-        -0.32559863455368815
+        1.023090376030277,
+        -0.19268758331817207,
+        -1.1794197741193904,
+        0.04356892001823935,
+        -0.311914956543912
       ],
       [
-        -0.7633700367119742,
-        1.0220283874611553,
-        0.5625361013118089,
-        0.6385484793864354,
-        -0.3255986345536882
+        -0.5006302835766933,
+        -0.7005273561627219,
+        0.5878522042088259,
+        0.54233001961893,
+        -0.23287756062684054
       ],
       [
-        1.4984671091012816,
-        -0.2652322804829988,
-        -1.3955646540257531,
-        -0.2796258046986345,
-        -0.3255986345536882
+        -0.5115451880151386,
+        0.9219571233712955,
+        -0.014527307462518605,
+        -0.13411058193114356,
+        -0.3119149565439119
       ],
       [
-        -0.7633700367119741,
-        0.3713251926761982,
-        0.26536972925302177,
-        -1.6151520360951,
-        -0.3255986345536882
+        1.0461676025572755,
+        0.7093550628850561,
+        -0.6439457399034525,
+        0.4391902741124319,
+        3.280651106316148
       ],
       [
-        0.9330078226479677,
-        0.46563000351459777,
-        -0.5821151913540097,
-        0.6385484793864353,
-        2.9303877109831937
+        -0.10769372379266083,
+        1.0056464430248029,
+        0.6577921025385765,
+        -2.1866151734153942,
+        -0.3119149565439118
       ]
     ],
     "clusters": [
       {
         "cluster": 0,
-        "size": 6,
+        "size": 20,
         "signature": [
           {
-            "factor": "sentiment",
-            "loading": -1.1218343122651282
+            "factor": "consensus",
+            "loading": -1.1794197741193904
           },
           {
-            "factor": "novelty",
-            "loading": 0.4716077004618772
+            "factor": "attention",
+            "loading": 1.023090376030277
           },
           {
             "factor": "materiality",
-            "loading": -0.32559863455368815
+            "loading": -0.311914956543912
           }
         ],
         "members": [
-          "Berkshire Hathaway",
+          "AbbVie",
+          "Accenture",
+          "Bank of America Corporation",
           "British Airways",
-          "ExxonMobil",
-          "Pfizer Inc.",
-          "US teen",
+          "Cisco",
+          "Cisco Systems Inc.",
+          "Colgate",
+          "Eli Lilly",
+          "GM",
+          "Gilead",
+          "Insiders",
+          "Intuit",
+          "Lockheed Martin",
+          "PayPal",
+          "Qualcomm",
+          "Starbucks",
+          "Tesla",
+          "Texas Instruments",
+          "WMT",
           "Walmart"
         ]
       },
       {
         "cluster": 1,
-        "size": 5,
+        "size": 37,
         "signature": [
           {
             "factor": "sentiment",
-            "loading": 1.0220283874611553
+            "loading": -0.7005273561627219
           },
           {
-            "factor": "attention",
-            "loading": -0.7633700367119742
+            "factor": "consensus",
+            "loading": 0.5878522042088259
           },
           {
             "factor": "novelty",
-            "loading": 0.6385484793864354
+            "loading": 0.54233001961893
           }
         ],
         "members": [
-          "Amazon.com",
-          "MRK/MRNA",
+          "3M",
+          "Amgen",
+          "Berkshire Hathaway",
+          "Blu-ray Burner",
+          "El Ni\u00f1o",
+          "Emerson Electric",
+          "ExxonMobil",
+          "FedEx",
+          "GD Power Development Co., Ltd.",
+          "Great Lakes Advisors LLC",
+          "HYDRA Tool",
+          "Honeywell",
+          "Intel",
+          "International Business Machines Corporation",
+          "Intuitive Surgical",
+          "Judge",
+          "MS NOW",
           "McCumbee McAleer Racing",
-          "Seeking Alpha",
-          "University of Georgia"
+          "Met Office",
+          "Morgan Stanley",
+          "NHTSA",
+          "Navy",
+          "Nike",
+          "Oracle",
+          "Palantir",
+          "Pfizer Inc.",
+          "Radeon",
+          "Radeon RX 9050",
+          "Salesforce",
+          "T Mobile",
+          "The Charles Schwab Corporation",
+          "Thermo Fisher",
+          "Tropical Depression Two-C",
+          "UPS",
+          "US teen",
+          "Verizon",
+          "Vise Technologies Inc."
         ]
       },
       {
         "cluster": 2,
-        "size": 3,
+        "size": 16,
         "signature": [
           {
-            "factor": "attention",
-            "loading": 1.4984671091012816
+            "factor": "sentiment",
+            "loading": 0.9219571233712955
           },
           {
-            "factor": "consensus",
-            "loading": -1.3955646540257531
+            "factor": "attention",
+            "loading": -0.5115451880151386
           },
           {
             "factor": "materiality",
-            "loading": -0.3255986345536882
+            "loading": -0.3119149565439119
           }
         ],
         "members": [
-          "Bank of America Corporation",
-          "Eli Lilly",
-          "Tesla"
-        ]
-      },
-      {
-        "cluster": 3,
-        "size": 4,
-        "signature": [
-          {
-            "factor": "novelty",
-            "loading": -1.6151520360951
-          },
-          {
-            "factor": "attention",
-            "loading": -0.7633700367119741
-          },
-          {
-            "factor": "sentiment",
-            "loading": 0.3713251926761982
-          }
-        ],
-        "members": [
+          "Abbott",
+          "Amazon.com",
           "Apple Inc.",
-          "Microsoft Corporation",
-          "Morgan Stanley Company",
+          "Bristol Myers Squibb",
+          "Comcast",
+          "General Dynamics",
+          "IBM",
+          "MRK/MRNA",
+          "Mercury Systems",
+          "Morningstar",
+          "Seeking Alpha",
+          "Thermo Fisher Scientific",
+          "Trefis",
+          "University of Georgia",
+          "Value Investors",
           "Walt Disney"
         ]
       },
       {
-        "cluster": 4,
-        "size": 2,
+        "cluster": 3,
+        "size": 7,
         "signature": [
           {
             "factor": "materiality",
-            "loading": 2.9303877109831937
+            "loading": 3.280651106316148
           },
           {
             "factor": "attention",
-            "loading": 0.9330078226479677
+            "loading": 1.0461676025572755
           },
           {
-            "factor": "novelty",
-            "loading": 0.6385484793864353
+            "factor": "sentiment",
+            "loading": 0.7093550628850561
           }
         ],
         "members": [
+          "Booking Holdings Inc.",
+          "Broadcom Inc.",
+          "Charter Communications",
           "Johnson & Johnson Inc.",
-          "NVIDIA Corporation"
+          "NVIDIA Corporation",
+          "Ninepoint Partners LP",
+          "Union Pacific"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 10,
+        "signature": [
+          {
+            "factor": "novelty",
+            "loading": -2.1866151734153942
+          },
+          {
+            "factor": "sentiment",
+            "loading": 1.0056464430248029
+          },
+          {
+            "factor": "consensus",
+            "loading": 0.6577921025385765
+          }
+        ],
+        "members": [
+          "Adobe",
+          "MSFT",
+          "Madison Asset Management LLC",
+          "Microsoft Corporation",
+          "Morgan Stanley Company",
+          "NOW",
+          "S&P 500",
+          "Salesforce.com, inc.",
+          "Silvant Capital Management LLC",
+          "WDAY"
         ]
       }
     ]
