@@ -1,15 +1,15 @@
 {
   "month": "2026-03",
   "stats": {
-    "nodes": 13,
-    "edges": 8,
+    "nodes": 12,
+    "edges": 7,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Roche Holding",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": 110.2273106306769,
       "y": -14.21063081625791
     },
@@ -26,13 +26,6 @@
       "degree": 1,
       "x": -348.0819740794889,
       "y": -422.1271386797053
-    },
-    {
-      "id": "Valuation",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -472.94140699995404,
-      "y": 181.68379964737588
     },
     {
       "id": "German Church",
@@ -130,22 +123,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "GUIDANCE"
-    },
-    {
-      "id": "Roche Holding||Is Impacted By||Valuation",
-      "source": "Roche Holding",
-      "target": "Valuation",
-      "rel": "Is Impacted By",
-      "rel_cat": "SSI",
-      "causal_type": "CAUSAL",
-      "polarity": "negative",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": -0.5,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
     },
     {
       "id": "German Church||Experiences Decline in||Member Exits",

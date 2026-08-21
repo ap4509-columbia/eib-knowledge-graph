@@ -1,7 +1,7 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 37,
+    "nodes": 36,
     "edges": 26,
     "scored_edges": 0
   },
@@ -51,7 +51,7 @@
     {
       "id": "Eni",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": -85.84151291924898,
       "y": -588.0602464346622
     },
@@ -91,9 +91,9 @@
       "y": 191.6122750504461
     },
     {
-      "id": "Novartis AG",
+      "id": "Novartis",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 5,
       "x": -127.65867500701997,
       "y": 3.7527973331050033
     },
@@ -114,7 +114,7 @@
     {
       "id": "SAN",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 54.79134357425542,
       "y": 652.0658983457588
     },
@@ -187,13 +187,6 @@
       "degree": 1,
       "x": 385.07246111800123,
       "y": -900.0
-    },
-    {
-      "id": "Novartis",
-      "type": "COMPANY",
-      "degree": 3,
-      "x": 4.707462965621628,
-      "y": 8.249004258830876
     },
     {
       "id": "SWX:NOVN",
@@ -412,8 +405,8 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Novartis AG||Has Ticker||NVS",
-      "source": "Novartis AG",
+      "id": "Novartis||Has Ticker||NVS",
+      "source": "Novartis",
       "target": "NVS",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
@@ -428,8 +421,8 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "Novartis AG||Is Classified As||Longevity and Anti-Aging Stock",
-      "source": "Novartis AG",
+      "id": "Novartis||Is Classified As||Longevity and Anti-Aging Stock",
+      "source": "Novartis",
       "target": "Longevity and Anti-Aging Stock",
       "rel": "Is Classified As",
       "rel_cat": "GFMK",

@@ -1,15 +1,15 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 31,
-    "edges": 22,
+    "nodes": 30,
+    "edges": 21,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": 4.936619387199892,
       "y": 8.920441407663747
     },
@@ -19,13 +19,6 @@
       "degree": 1,
       "x": 900.0,
       "y": 111.85197510139093
-    },
-    {
-      "id": "Q1 Sales",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -308.91771690373673,
-      "y": -793.1356792514842
     },
     {
       "id": "Recovery Plan",
@@ -240,22 +233,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Nestl\u00e9||Reports Sales Beat||Q1 Sales",
-      "source": "Nestl\u00e9",
-      "target": "Q1 Sales",
-      "rel": "Reports Sales Beat",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
     },
     {
       "id": "Nestl\u00e9||Makes Progress On||Recovery Plan",

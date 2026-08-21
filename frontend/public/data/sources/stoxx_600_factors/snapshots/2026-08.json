@@ -1,29 +1,29 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 207,
-    "edges": 173,
+    "nodes": 187,
+    "edges": 155,
     "scored_edges": 0
   },
   "nodes": [
     {
-      "id": "Novo Nordisk A/S",
+      "id": "Novo Nordisk B A/S",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 5,
       "x": 632.7727290426664,
       "y": 517.6097914022037
     },
     {
-      "id": "Novo Nordisk shares",
+      "id": "Novo Nordisk Shares",
       "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
+      "degree": 3,
       "x": 680.163381985366,
       "y": 530.9583917901996
     },
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 6,
       "x": 105.07419128947642,
       "y": 144.03975365033625
     },
@@ -44,7 +44,7 @@
     {
       "id": "Evexta Bio",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 4,
       "x": 505.0429319313232,
       "y": -189.37451036733026
     },
@@ -79,16 +79,9 @@
     {
       "id": "AZN.L",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": 391.266969574076,
       "y": -694.3018957517228
-    },
-    {
-      "id": "Potential Upside",
-      "type": "CONCEPT",
-      "degree": 2,
-      "x": -676.4113966599849,
-      "y": -256.30652908824226
     },
     {
       "id": "SAP SE",
@@ -107,7 +100,7 @@
     {
       "id": "White Cap",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": 163.3008838111518,
       "y": 138.98488119296155
     },
@@ -142,7 +135,7 @@
     {
       "id": "STMicroelectronics",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": -429.0437493522472,
       "y": 465.1829454069357
     },
@@ -161,16 +154,9 @@
       "y": 786.7951993216242
     },
     {
-      "id": "124% Return",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -14.266466186978773,
-      "y": 792.7366190498213
-    },
-    {
       "id": "BNP Paribas",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 7,
       "x": 216.22511547923153,
       "y": -606.6415490462904
     },
@@ -182,39 +168,18 @@
       "y": -725.0658433419566
     },
     {
-      "id": "HSBC Holdings PLC",
+      "id": "HSBC Holdings",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": 517.2565079415256,
       "y": 754.7733398974681
     },
     {
       "id": "HSBA.L",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": 520.2959311691613,
       "y": 800.9406154309323
-    },
-    {
-      "id": "HSBC",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -534.5923557989069,
-      "y": -205.36806510449335
-    },
-    {
-      "id": "Share Buybacks",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -691.8043970281326,
-      "y": -405.16155068064387
-    },
-    {
-      "id": "Profit",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -787.4427442976839,
-      "y": -173.00010432512823
     },
     {
       "id": "Telef\u00f3nica, S.A.",
@@ -247,23 +212,16 @@
     {
       "id": "SIEMENS AG N",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -33.71778239811949,
       "y": 3.999604869094745
     },
     {
       "id": "SIE.DE",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": 624.1856717385285,
       "y": -544.6229310865464
-    },
-    {
-      "id": "Q3 FY2026 earnings call",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -691.1204098209996,
-      "y": 551.7642267352787
     },
     {
       "id": "PA",
@@ -296,21 +254,21 @@
     {
       "id": "VOW3.DE",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 3,
       "x": -85.51722801230596,
       "y": -786.3704814622556
     },
     {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 10,
       "x": 591.7998280050487,
       "y": 399.5435251561496
     },
     {
       "id": "XTRA:VOW3",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 4,
       "x": 339.39346161345594,
       "y": 776.9631307972409
     },
@@ -338,7 +296,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 13,
       "x": 576.3270756428893,
       "y": -491.8391989915021
     },
@@ -401,14 +359,14 @@
     {
       "id": "BP PLC",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 5,
       "x": -232.91582957123285,
       "y": 310.04734530269684
     },
     {
       "id": "BP.L",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 4,
       "x": 209.11542501061936,
       "y": 876.5369337580809
     },
@@ -429,21 +387,21 @@
     {
       "id": "Nestl\u00e9 S.A.",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": -166.53763695490457,
       "y": -483.23246239770003
     },
     {
       "id": "NESN.SW",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 3,
       "x": -227.53295064461778,
       "y": -739.691954988496
     },
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 14,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -488,13 +446,6 @@
       "degree": 1,
       "x": 612.3131617542608,
       "y": -568.44301322023
-    },
-    {
-      "id": "Novo Nordisk B A/S",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -27.086970380011298,
-      "y": -8.117528031947343
     },
     {
       "id": "NOVO-B.CO",
@@ -562,16 +513,9 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 5,
       "x": -19.50858368839895,
       "y": 86.96879071954797
-    },
-    {
-      "id": "Share Price",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -304.6095506081614,
-      "y": 765.5678783257057
     },
     {
       "id": "AI Demand",
@@ -595,13 +539,6 @@
       "y": 776.924898119518
     },
     {
-      "id": "BNP Paribas AM",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -579.5240085777,
-      "y": -201.71719655336483
-    },
-    {
       "id": "open-ended funds",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
@@ -616,13 +553,6 @@
       "y": -175.03076161409052
     },
     {
-      "id": "HSBC Holdings",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 78.28161005209103,
-      "y": 137.8486970792563
-    },
-    {
       "id": "Earnings Per Share",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
@@ -632,16 +562,9 @@
     {
       "id": "LSE:SHEL",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": -790.0604237337589,
       "y": 429.02754748367005
-    },
-    {
-      "id": "Valuation",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 254.53527564122018,
-      "y": 804.440460783671
     },
     {
       "id": "Share Buyback Program",
@@ -653,7 +576,7 @@
     {
       "id": "SHEL",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": -74.23635685458545,
       "y": -793.648565458503
     },
@@ -672,13 +595,6 @@
       "y": -786.349128852781
     },
     {
-      "id": "15.51% Potential Upside",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 839.3591441650561,
-      "y": 129.42721905647633
-    },
-    {
       "id": "Woodside Energy",
       "type": "COMPANY",
       "degree": 2,
@@ -695,7 +611,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 6,
       "x": 655.3263306034597,
       "y": -265.0840341957245
     },
@@ -716,42 +632,28 @@
     {
       "id": "MC.PA",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": -836.1125871541688,
       "y": 208.3493172644774
     },
     {
       "id": "Unilever PLC",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": 79.50015926207227,
       "y": -46.6694198750027
     },
     {
       "id": "ULVR.L",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": 768.7291047221663,
       "y": -380.8482934224292
     },
     {
-      "id": "12.49% Potential Upside",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": 54.4764989847903,
-      "y": 831.3866825612931
-    },
-    {
-      "id": "11% upside potential",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -519.4795452068297,
-      "y": -649.9802842283596
-    },
-    {
       "id": "CPSE:NOVO B",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 3,
       "x": 830.6636219188688,
       "y": 330.8093530438645
     },
@@ -770,25 +672,11 @@
       "y": 596.5372199735644
     },
     {
-      "id": "Novo Nordisk Shares",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -386.9292506454901,
-      "y": 814.2669633847539
-    },
-    {
       "id": "ROG",
       "type": "STOCK_TICKER",
       "degree": 1,
       "x": -494.0844597718841,
       "y": -549.2705620289192
-    },
-    {
-      "id": "Pipeline Growth",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -359.52444467720113,
-      "y": 584.0789556701287
     },
     {
       "id": "SAP",
@@ -919,7 +807,7 @@
     {
       "id": "Ormen Lange",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": 900.0,
       "y": 68.82723778379057
     },
@@ -987,13 +875,6 @@
       "y": 283.3614627542345
     },
     {
-      "id": "Volkswagen AG",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -393.4118229657845,
-      "y": 705.1657373244825
-    },
-    {
       "id": "U.S. Treasury",
       "type": "FINANCIAL_ENTITY",
       "degree": 2,
@@ -1043,13 +924,6 @@
       "y": -144.54335265755313
     },
     {
-      "id": "H1 Results",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -577.1790093473841,
-      "y": -695.3382823261842
-    },
-    {
       "id": "Industria De Dise\u00f1o Textil",
       "type": "COMPANY",
       "degree": 2,
@@ -1073,7 +947,7 @@
     {
       "id": "Inditex",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": -269.0516576298946,
       "y": -50.706798656269875
     },
@@ -1083,13 +957,6 @@
       "degree": 1,
       "x": 149.3094867601459,
       "y": 706.4239339833441
-    },
-    {
-      "id": "Earnings",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -289.1445184376203,
-      "y": -786.9509465208038
     },
     {
       "id": "Obesity Race",
@@ -1192,23 +1059,16 @@
     {
       "id": "JSS Sustainable Equity CH I CHF dist",
       "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
+      "degree": 2,
       "x": 721.8764366866957,
       "y": 225.48523789260994
     },
     {
       "id": "0P0001LJB7.SW",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": 817.4982510963539,
       "y": 241.17699623289607
-    },
-    {
-      "id": "a share price crash",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -859.9099797147295,
-      "y": 217.519855953785
     },
     {
       "id": "Below Fair Value",
@@ -1318,7 +1178,7 @@
     {
       "id": "Venezuela",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": 692.0663362575863,
       "y": -105.68860493655757
     },
@@ -1346,7 +1206,7 @@
     {
       "id": "BPL",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -168.09108607936977,
       "y": 523.6824020086793
     },
@@ -1458,9 +1318,9 @@
   ],
   "edges": [
     {
-      "id": "Novo Nordisk A/S||Has Issued Shares Named||Novo Nordisk shares",
-      "source": "Novo Nordisk A/S",
-      "target": "Novo Nordisk shares",
+      "id": "Novo Nordisk B A/S||Has Issued Shares Named||Novo Nordisk Shares",
+      "source": "Novo Nordisk B A/S",
+      "target": "Novo Nordisk Shares",
       "rel": "Has Issued Shares Named",
       "rel_cat": "GFMK",
       "causal_type": "REGULATORY",
@@ -1474,15 +1334,15 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "Novo Nordisk A/S||Reports Insider Trading In||Novo Nordisk shares",
-      "source": "Novo Nordisk A/S",
-      "target": "Novo Nordisk shares",
+      "id": "Novo Nordisk B A/S||Reports Insider Trading In||Novo Nordisk Shares",
+      "source": "Novo Nordisk B A/S",
+      "target": "Novo Nordisk Shares",
       "rel": "Reports Insider Trading In",
       "rel_cat": "GMM",
       "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1602,22 +1462,6 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "AstraZeneca PLC||Is Forecast to Have||Potential Upside",
-      "source": "AstraZeneca PLC",
-      "target": "Potential Upside",
-      "rel": "Is Forecast to Have",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "GUIDANCE"
-    },
-    {
       "id": "SAP SE||Has Ticker||SAP.DE",
       "source": "SAP SE",
       "target": "SAP.DE",
@@ -1714,22 +1558,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "STMicroelectronics||Maintains Strong||124% Return",
-      "source": "STMicroelectronics",
-      "target": "124% Return",
-      "rel": "Maintains Strong",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.8,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
-    },
-    {
       "id": "BNP Paribas||Forecasts price increase for||Gold",
       "source": "BNP Paribas",
       "target": "Gold",
@@ -1746,52 +1574,20 @@
       "event_type": "GUIDANCE"
     },
     {
-      "id": "HSBC Holdings PLC||Has Ticker||HSBA.L",
-      "source": "HSBC Holdings PLC",
+      "id": "HSBC Holdings||Has Ticker||HSBA.L",
+      "source": "HSBC Holdings",
       "target": "HSBA.L",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "HSBC||Resumes||Share Buybacks",
-      "source": "HSBC",
-      "target": "Share Buybacks",
-      "rel": "Resumes",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
-    },
-    {
-      "id": "HSBC||Reports Surging||Profit",
-      "source": "HSBC",
-      "target": "Profit",
-      "rel": "Reports Surging",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.9,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
     },
     {
       "id": "Telef\u00f3nica, S.A.||Has Ticker||TEF.MC",
@@ -1840,22 +1636,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "SIEMENS AG N||Held||Q3 FY2026 earnings call",
-      "source": "SIEMENS AG N",
-      "target": "Q3 FY2026 earnings call",
-      "rel": "Held",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
     },
     {
       "id": "PA||Awards Grant To||Hershey brewery",
@@ -2080,22 +1860,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "BP PLC||Is Projected To Have||Potential Upside",
-      "source": "BP PLC",
-      "target": "Potential Upside",
-      "rel": "Is Projected To Have",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "GUIDANCE"
     },
     {
       "id": "Energy Market||Has||Volatility",
@@ -2418,22 +2182,6 @@
       "event_type": "M_AND_A"
     },
     {
-      "id": "ASML||Sees Increase In||Share Price",
-      "source": "ASML",
-      "target": "Share Price",
-      "rel": "Sees Increase In",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "AI Demand||Shows Growth In||AI Adoption",
       "source": "AI Demand",
       "target": "AI Adoption",
@@ -2482,8 +2230,8 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "BNP Paribas AM||Manages illiquidity in||open-ended funds",
-      "source": "BNP Paribas AM",
+      "id": "BNP Paribas||Manages illiquidity in||open-ended funds",
+      "source": "BNP Paribas",
       "target": "open-ended funds",
       "rel": "Manages illiquidity in",
       "rel_cat": "SSI",
@@ -2498,8 +2246,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "BNP Paribas AM||Employs||private asset allocations",
-      "source": "BNP Paribas AM",
+      "id": "BNP Paribas||Employs||private asset allocations",
+      "source": "BNP Paribas",
       "target": "private asset allocations",
       "rel": "Employs",
       "rel_cat": "SSI",
@@ -2512,22 +2260,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
-    },
-    {
-      "id": "HSBC Holdings||Has Ticker||HSBA.L",
-      "source": "HSBC Holdings",
-      "target": "HSBA.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "HSBC Holdings||Reports Half-Year Earnings Per Share Of||Earnings Per Share",
@@ -2576,22 +2308,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Shell||Has Below-Market||Valuation",
-      "source": "Shell",
-      "target": "Valuation",
-      "rel": "Has Below-Market",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
     },
     {
       "id": "Shell||Valuation Supported By||Share Buyback Program",
@@ -2656,22 +2372,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
-    },
-    {
-      "id": "BP PLC||Has Projected Upside Of||15.51% Potential Upside",
-      "source": "BP PLC",
-      "target": "15.51% Potential Upside",
-      "rel": "Has Projected Upside Of",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "GUIDANCE"
     },
     {
       "id": "Woodside Energy||Sells||Calypso stake",
@@ -2770,38 +2470,6 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "Unilever PLC||Is Subject To Forecast Of||12.49% Potential Upside",
-      "source": "Unilever PLC",
-      "target": "12.49% Potential Upside",
-      "rel": "Is Subject To Forecast Of",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "GUIDANCE"
-    },
-    {
-      "id": "Unilever PLC||Is assessed to have||11% upside potential",
-      "source": "Unilever PLC",
-      "target": "11% upside potential",
-      "rel": "Is assessed to have",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.7,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "GUIDANCE"
-    },
-    {
       "id": "Novo Nordisk||Has Ticker||CPSE:NOVO B",
       "source": "Novo Nordisk",
       "target": "CPSE:NOVO B",
@@ -2850,22 +2518,6 @@
       "event_type": "REGULATORY"
     },
     {
-      "id": "Novo Nordisk A/S||Reports Insider Trading In||Novo Nordisk Shares",
-      "source": "Novo Nordisk A/S",
-      "target": "Novo Nordisk Shares",
-      "rel": "Reports Insider Trading In",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "REGULATORY"
-    },
-    {
       "id": "Roche||Has Ticker||ROG",
       "source": "Roche",
       "target": "ROG",
@@ -2880,22 +2532,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Roche||Benefits From||Pipeline Growth",
-      "source": "Roche",
-      "target": "Pipeline Growth",
-      "rel": "Benefits From",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.6,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "PRODUCT"
     },
     {
       "id": "SAP||Reduces||Outstanding Shares",
@@ -3250,8 +2886,8 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Volkswagen AG||Has Ticker||VOW3.DE",
-      "source": "Volkswagen AG",
+      "id": "Volkswagen||Has Ticker||VOW3.DE",
+      "source": "Volkswagen",
       "target": "VOW3.DE",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
@@ -3410,22 +3046,6 @@
       "event_type": "MACRO"
     },
     {
-      "id": "BP PLC||Reports||H1 Results",
-      "source": "BP PLC",
-      "target": "H1 Results",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 121360000000.0,
-      "materiality_log": 25.522,
-      "event_type": "EARNINGS"
-    },
-    {
       "id": "Industria De Dise\u00f1o Textil||Has Ticker||BME:ITX",
       "source": "Industria De Dise\u00f1o Textil",
       "target": "BME:ITX",
@@ -3490,22 +3110,6 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "Inditex||Is Fully Priced On||Earnings",
-      "source": "Inditex",
-      "target": "Earnings",
-      "rel": "Is Fully Priced On",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "negative",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": -0.3,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
-    },
-    {
       "id": "Novo Nordisk||Reframes||Obesity Race",
       "source": "Novo Nordisk",
       "target": "Obesity Race",
@@ -3536,22 +3140,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Volkswagen||Has Reasonable Stock Performance Based On||Earnings",
-      "source": "Volkswagen",
-      "target": "Earnings",
-      "rel": "Has Reasonable Stock Performance Based On",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.3,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "EARNINGS"
     },
     {
       "id": "Volkswagen||Experiences Weakness Based On||Market Read",
@@ -3744,22 +3332,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "AstraZeneca||was impacted by||a share price crash",
-      "source": "AstraZeneca",
-      "target": "a share price crash",
-      "rel": "was impacted by",
-      "rel_cat": "SSI",
-      "causal_type": "CAUSAL",
-      "polarity": "negative",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": -1.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
     },
     {
       "id": "Volkswagen||Is Valued||Below Fair Value",
