@@ -1,0 +1,5680 @@
+{
+  "model": "CE (No Edge Feats)",
+  "strategy": "stoxx",
+  "mrr": 0.908,
+  "periods": {
+    "2026-04": {
+      "period": "2026-04",
+      "total_entities": 31,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "ENXTPA:STMPA",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "all-time high",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Market Research Future",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "DAX",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "STMicroelectronics",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "all-time high",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Market Research Future",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "DAX",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "Space Radiation Testing",
+          "entity_type": "EVENT",
+          "novelty_z": 0.501,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "first-quarter profit",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "all-time high",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "SWX:NESN",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Rising Sales",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Product Recall",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "InGaAs Infrared Camera",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "first-quarter profit",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "all-time high",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Rising Sales",
+          "entity_type": "EVENT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Product Recall",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "Nestl\u00e9",
+          "entity_type": "COMPANY",
+          "novelty_z": 4.133,
+          "trend_3m": [
+            0,
+            0,
+            6
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Rising Sales",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Product Recall",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Coffee and Snacks",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Rising Sales",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Product Recall",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Recovery Plan",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Rising Sales",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Product Recall",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Planned Cost Cuts",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "New Debt Issuances",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Market Research Future",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "SAP",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "first-quarter profit",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "CEO Pay Boost",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "Product Recall",
+          "entity_type": "EVENT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Rising Sales",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Market Research Future",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "CEO Pay Boost",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "CEO Pay Boost",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "XTRA:DBK",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "New Debt Issuances",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Tender Offer",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "XTRA:SIE",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Siemens",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Bond Tender Offer",
+          "entity_type": "EVENT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "New Debt Issuances",
+              "type": "EVENT"
+            },
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "BitFlow",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "BitFlow Frame Grabber",
+          "entity_type": "PRODUCT",
+          "novelty_z": 2.317,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "Volkswagen",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.501,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "Siemens",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "XTRA:SIE",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "NASA",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.501,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "New Debt Issuances",
+          "entity_type": "EVENT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Bond Tender Offer",
+              "type": "EVENT"
+            },
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "all-time high",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "DAX",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "first-quarter profit",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "Deutsche Bank",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.409,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "New Debt Issuances",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Tender Offer",
+              "type": "EVENT"
+            },
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "First-Quarter Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "DAX",
+          "entity_type": "MACRO_INDICATOR",
+          "novelty_z": -0.407,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "all-time high",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Market Research Future",
+              "type": "COMPANY"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-05": {
+      "period": "2026-05",
+      "total_entities": 26,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "Industria de Dise\u00f1o Textil",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.728,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Schneider Electric",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.989,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "Strong Multi-Year Stock Performance",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "ENXTPA:SU",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Optimistic Future Growth Expectations",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "BME:ITX",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Retail Optimism",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "XTB",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Valuation Discount",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Market Sell-off",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Equinor",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.728,
+          "trend_3m": [
+            1,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "American Academy of Physician Associates",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "2026 Diversity Award",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "SAP",
+          "entity_type": "COMPANY",
+          "novelty_z": 3.25,
+          "trend_3m": [
+            0,
+            1,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Valuation Discount",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Market Sell-off",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Europe gas stocks",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": 0.728,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Shootout",
+          "entity_type": "EVENT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ETR:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Valuation Discount",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Market Sell-off",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Hormuz shut",
+          "entity_type": "EVENT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "Capital",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BlackRock",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "Wawa",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ETR:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "Market Sell-off",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Valuation Discount",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria de Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.728,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "American Academy of Physician Associates",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "2026 Diversity Award",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Eni BlackRock CCUS JV",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.989,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BlackRock",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "BlackRock",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "2026 Diversity Award",
+          "entity_type": "EVENT",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "American Academy of Physician Associates",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "XTB",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "ASML Holding N.V.",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ASML",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "ASML",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ASML Holding N.V.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ETR:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "ETR:DBK",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BlackRock",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "Deutsche Bank Aktiengesellschaft",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.534,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ETR:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BlackRock",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-06": {
+      "period": "2026-06",
+      "total_entities": 37,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "Three Locations",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "A Fourth Location",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Japanese Dining Experience",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "A Fourth Location",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "STMicroelectronics",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            1,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "ENXTPA:STMPA",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            1,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Industria De Dise\u00f1o Textil",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "BME:ITX",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Analyst Targets",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "A Fourth Location",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Stock Value",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "OB:EQNR",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "OB:EQNR",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Sushi by the pound",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "A Fourth Location",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Equinor",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            1,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "OB:EQNR",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Supa!",
+          "entity_type": "COMPANY",
+          "novelty_z": 3.656,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "The Spokesman-Review",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Iran war concerns",
+          "entity_type": "EVENT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "Inditex",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "Baleine Oil And Gas Growth",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": 3.656,
+          "trend_3m": [
+            1,
+            1,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "North America chief",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Adyen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "A Fourth Location",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "The Spokesman-Review",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Supa!",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "HSBC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "HSBA",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Adyen",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "North America chief",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "OB:EQNR",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "NVS",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Novartis AG",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "NVS",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "Zara",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "OB:EQNR",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "HSBC",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "HSBA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "The Spokesman-Review",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Supa!",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "European Battery Expansion",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "OB:EQNR",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "Acquisition",
+          "entity_type": "EVENT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "SAN",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Stock Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NVS",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "environmental hub",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Hera",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "Longevity and Anti-Aging Stock",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "NVS",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "Disability Access",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NOVN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "HSBA",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "HSBC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "The Spokesman-Review",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Supa!",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "SAN",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Acquisition",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NOVN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "AI-Powered Commerce",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAN",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NOVN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "Hera",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "BME:ITX",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "SWX:NOVN",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "entity": "Banco Santander",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.522,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SAN",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NOVN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "entity": "Antares Cancer",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.522,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NOVN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-07": {
+      "period": "2026-07",
+      "total_entities": 98,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "SWX:NESN",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.9,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Undervalued",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "Nestl\u00e9",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "LVMH",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "MC.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "CPSE:NOVO B",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Hungary Plant",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "MC.PA",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Myricx Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Wegovy",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "CPSE:NOVO B",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "Revenue Guidance",
+          "entity_type": "EVENT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Mercedes",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Johan Castberg",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Skrugard North Tub\u00e5en",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "MC.PA",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "NESN",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Wegovy Pill",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "CPSE:NOVO B",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Crux",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.268,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "CPSE:NOVO B",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Novo Nordisk",
+          "entity_type": "COMPANY",
+          "novelty_z": 3.87,
+          "trend_3m": [
+            0,
+            0,
+            6
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "CPSE:NOVO B",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Sales Forecast",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "XTRA:VOW3",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MC.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "Deutsche Bank",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.033,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "GRYPHLINE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "Appreciation",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SWX:NESN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "NESN",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "XTRA:DBK",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.9,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "GRYPHLINE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Unilever",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "Mercedes",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Upbeat Q2 Performance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "US Sales Ban",
+          "entity_type": "EVENT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mercedes",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Upbeat Q2 Performance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "CPSE:NOVO B",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "Lead Reporting Standard in Schools",
+          "entity_type": "EVENT",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Regulatory Compliance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Johan Castberg",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "XTRA:VOW3",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Regulatory Compliance",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "TechnipFMC",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "Bond Funding",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "XTRA:DBK",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "GRYPHLINE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Arknights: Endfield",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "Volkswagen",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Sales Forecast",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "XTRA:VOW3",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "LVMH",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MC.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Pennsylvania",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "Baleine Phase 3 Development",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "TechnipFMC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "XTRA:VOW3",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sales Forecast",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Pennsylvania",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "Pennsylvania Budget",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Johan Castberg",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Regulatory Compliance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "XTRA:VOW3",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "Upbeat Q2 Performance",
+          "entity_type": "EVENT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mercedes",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "BNP Paribas",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "equity trading",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Mercedes",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "budget hole",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "electric bills",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SU.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "SCHNEIDER ELECTRIC SE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "Vehicle Positioning Solution",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "FocalPoint",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:STMPA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Fair Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "AI Revenue Ambitions",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "California SF6 Free Grid Deal",
+          "entity_type": "EVENT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cognite",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP SE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "ENXTPA:SU",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": 0.401,
+          "trend_3m": [
+            1,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cognite",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Regulatory Compliance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SAP SE",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "entity": "Cognite",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SAP SE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "entity": "Semiconductor",
+          "entity_type": "SECTOR",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "China's Semiconductor Policies",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ASML",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Market Value",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "ASML Holding",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 37,
+          "entity": "XTRA:MBG",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mercedes-Benz Group",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Mixed Q2 Earnings",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Disney",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ASML Holding",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "the unique potential of animation",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "equity trading",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Mercedes",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US Sales Ban",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 39,
+          "entity": "Schneider Electric",
+          "entity_type": "COMPANY",
+          "novelty_z": 3.87,
+          "trend_3m": [
+            3,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ENXTPA:SU",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cognite",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP SE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "entity": "Tokyo Office",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.466,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Offshore Wind Operations in Japan",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oil",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Skrugard North Tub\u00e5en",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "EQNR",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-08": {
+      "period": "2026-08",
+      "total_entities": 207,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "Novo Nordisk A/S",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.358,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk shares",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Commerzbank AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BNP Paribas AM",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Breast Cancer Trial",
+          "entity_type": "EVENT",
+          "novelty_z": 0.358,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "Shell",
+          "entity_type": "COMPANY",
+          "novelty_z": 4.655,
+          "trend_3m": [
+            0,
+            0,
+            13
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "Vietnam",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.358,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Pipeline Growth",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "H1 Results",
+          "entity_type": "EVENT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "15.51% Potential Upside",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BP.L",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Half-Year 1 EPS of $0.49",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Potential Upside",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "BP PLC",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.217,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "15.51% Potential Upside",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "H1 Results",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BP.L",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Half-Year 1 EPS of $0.49",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Potential Upside",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "Second LNG Term Contract",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Phase Ib trial",
+          "entity_type": "EVENT",
+          "novelty_z": 0.788,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Evexta Bio",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.788,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Roche",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.077,
+          "trend_3m": [
+            0,
+            0,
+            7
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Novo Nordisk Shares",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk A/S",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Commerzbank AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "JSS Sustainable Equity CH I CHF dist",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "0P0001LJB7.SW",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "15.51% Potential Upside",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "H1 Results",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BP.L",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Half-Year 1 EPS of $0.49",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Potential Upside",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Ormen Lange",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.072,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Valuation",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "ROG",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "SWX:ROP",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "Half-Year 1 EPS of $0.49",
+          "entity_type": "FIN_INSTRUMENT_INFO",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "15.51% Potential Upside",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "H1 Results",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BP.L",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Potential Upside",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "BP.L",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "15.51% Potential Upside",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "H1 Results",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Half-Year 1 EPS of $0.49",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Potential Upside",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "Dividend Quality",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Commerzbank AG",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "CBK.DE",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Novo Nordisk A/S",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "HSBC Holdings PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novo Nordisk shares",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "White Cap",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.358,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Enterprise Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Share Buyback",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Pennsylvania Distribution Center",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "White Cap",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Enterprise Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Share Buyback",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "South Africa's top court",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.072,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Valuation",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "Enterprise Distribution Center",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "White Cap",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Share Buyback",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "Valuation",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.645,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "giredestrant",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "Sustainable Growth",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "rupitasertib",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "giredestrant",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "Treasury",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.072,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "shell companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "reporting rules for shell companies",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "Pennsylvania Distribution Hub",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "White Cap",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Enterprise Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Share Buyback",
+              "type": "EVENT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "shell companies",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Treasury",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "HSBC Holdings PLC",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Commerzbank AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "15.51% Potential Upside",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "H1 Results",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Half-Year 1 EPS of $0.49",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "Europe Stocks",
+          "entity_type": "SECTOR",
+          "novelty_z": -0.072,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ralph Lauren",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BNP.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Gold",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Novo Nordisk A/S",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "Corruption",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BPL",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Overtime Bill",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Volkswagen Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BNP Paribas AM",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novo Nordisk A/S",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "entity": "Stock Price Increase",
+          "entity_type": "EVENT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Dividend Quality",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Shell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "entity": "LVMH MOET HENNESSY LOUIS VUI",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "MC.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Novo Nordisk A/S",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "shell companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Commerzbank AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novo Nordisk shares",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 37,
+          "entity": "Pa. Turnpike Commission's finances",
+          "entity_type": "CONCEPT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "New audit",
+              "type": "EVENT"
+            },
+            {
+              "entity": "U.S. Treasury",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "U.S. Shell Companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "ROG",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "Ralph Lauren",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.072,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Gold",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "BNP.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 39,
+          "entity": "BNP Paribas",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.077,
+          "trend_3m": [
+            0,
+            2,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Ralph Lauren",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Gold",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "BNP.PA",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "BP PLC",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "entity": "Two Drug Candidates",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.501,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Breast Cancer Trial",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Roche",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Evexta Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pipeline Growth",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Phase Ib trial",
+              "type": "EVENT"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
