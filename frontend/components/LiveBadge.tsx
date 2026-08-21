@@ -28,7 +28,7 @@ export function LiveBadge({ sourceId }: { sourceId: string }) {
 
   return (
     <span
-      className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400"
+      className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400"
       title={`Refreshed every morning (07:30 UTC) by the AI pipeline on the team GPU VM — qwen2.5:14b extraction, judge and refinement LLMs${
         lastRun ? ` · last run ${lastRun}` : " · awaiting first run"
       }`}
