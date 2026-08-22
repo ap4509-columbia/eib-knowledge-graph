@@ -1,8 +1,8 @@
 {
   "month": "2011-06",
   "stats": {
-    "nodes": 14,
-    "edges": 8,
+    "nodes": 5,
+    "edges": 3,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,99 +10,36 @@
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": 710.4538466908408,
-      "y": 99.18865636301412
+      "x": 708.634628640245,
+      "y": -430.62241451915423
     },
     {
       "id": "SSI",
       "type": "COMPANY",
       "degree": 1,
-      "x": 862.9388588865246,
-      "y": 85.78489647062638
-    },
-    {
-      "id": "Federal Reserve Chairman Ben Bernanke",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": -764.0162045745366,
-      "y": 213.83745776036307
-    },
-    {
-      "id": "Downbeat Speech",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -900.0,
-      "y": 280.16297716321986
-    },
-    {
-      "id": "Trade Gap",
-      "type": "MACRO_INDICATOR",
-      "degree": 1,
-      "x": -459.16305200700566,
-      "y": 601.3364681070763
-    },
-    {
-      "id": "Economic Health",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -580.5446691130214,
-      "y": 775.200512957865
-    },
-    {
-      "id": "Crude Futures",
-      "type": "DERIVATIVE",
-      "degree": 1,
-      "x": -445.01015082550595,
-      "y": -610.5374081750698
-    },
-    {
-      "id": "Currencies and Commodities",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -581.3051614602701,
-      "y": -690.9914134126584
+      "x": 900.0,
+      "y": -657.3954801712202
     },
     {
       "id": "TSM",
       "type": "STOCKTICKER",
-      "degree": 3,
-      "x": 498.61430353216775,
-      "y": -523.7720512062731
+      "degree": 2,
+      "x": -527.3965687563649,
+      "y": 359.04436647574107
     },
     {
       "id": "Unusual Option Activity",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 511.8288142577374,
-      "y": -670.01668868312
+      "x": -596.8072657422043,
+      "y": 652.9234191379853
     },
     {
       "id": "Option Volume",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 420.8067545020625,
-      "y": -607.4574648363126
-    },
-    {
-      "id": "Short Position",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 139.72230819606574,
-      "y": 638.6754262017299
-    },
-    {
-      "id": "October 250 Contracts",
-      "type": "DERIVATIVE",
-      "degree": 1,
-      "x": 192.96109971572398,
-      "y": 797.233339014416
-    },
-    {
-      "id": "July 3 Puts",
-      "type": "DERIVATIVE",
-      "degree": 1,
-      "x": 392.71325219921715,
-      "y": -388.64470772487584
+      "x": -484.43079414167585,
+      "y": 76.05010907664818
     }
   ],
   "edges": [
@@ -112,54 +49,6 @@
       "target": "SSI",
       "rel": "Planned Acquisition Of",
       "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Federal Reserve Chairman Ben Bernanke||Delivers||Downbeat Speech",
-      "source": "Federal Reserve Chairman Ben Bernanke",
-      "target": "Downbeat Speech",
-      "rel": "Delivers",
-      "rel_cat": "GMM",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Trade Gap||Narrows||Economic Health",
-      "source": "Trade Gap",
-      "target": "Economic Health",
-      "rel": "Narrows",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Crude Futures||Slips||Currencies and Commodities",
-      "source": "Crude Futures",
-      "target": "Currencies and Commodities",
-      "rel": "Slips",
-      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -191,38 +80,6 @@
       "source": "Option Volume",
       "target": "TSM",
       "rel": "Is Above Average For",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Short Position||Rolled To||October 250 Contracts",
-      "source": "Short Position",
-      "target": "October 250 Contracts",
-      "rel": "Rolled To",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "July 3 Puts||Derives Value From||TSM",
-      "source": "July 3 Puts",
-      "target": "TSM",
-      "rel": "Derives Value From",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",

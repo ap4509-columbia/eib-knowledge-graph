@@ -1,625 +1,401 @@
 {
   "month": "2011-03",
   "stats": {
-    "nodes": 87,
-    "edges": 76,
+    "nodes": 55,
+    "edges": 54,
     "scored_edges": 0
   },
   "nodes": [
     {
-      "id": "Nvidia",
+      "id": "NVIDIA",
       "type": "COMPANY",
       "degree": 2,
-      "x": -223.12410699776567,
-      "y": -320.20873332788995
+      "x": -253.15611736529243,
+      "y": -295.09934962450745
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
-      "degree": 10,
-      "x": -85.68646551790661,
-      "y": -171.25061509291587
+      "degree": 9,
+      "x": -79.835769261766,
+      "y": -37.09409104580071
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
-      "degree": 7,
-      "x": -451.6995307400447,
-      "y": -600.3901328738523
+      "degree": 6,
+      "x": -496.9803578590973,
+      "y": -718.3021425723717
     },
     {
       "id": "Xilinx",
       "type": "COMPANY",
       "degree": 2,
-      "x": -361.7758172986466,
-      "y": -472.76245955081896
+      "x": -426.69108089461776,
+      "y": -557.6348794512929
     },
     {
       "id": "Oil Prices",
       "type": "MACROINDICATOR",
       "degree": 2,
-      "x": -393.23730640042277,
-      "y": 584.5566646160618
+      "x": -559.6877155261393,
+      "y": 511.0122525338381
     },
     {
       "id": "Market Sentiment",
       "type": "CONCEPT",
-      "degree": 2,
-      "x": -495.51525310053853,
-      "y": 712.1118049789894
-    },
-    {
-      "id": "Gold Prices",
-      "type": "MACROINDICATOR",
       "degree": 1,
-      "x": -307.0938007628407,
-      "y": 474.0476929024223
+      "x": -708.8027693906121,
+      "y": 625.9886357437841
     },
     {
       "id": "Marvell",
       "type": "COMPANY",
       "degree": 6,
-      "x": -369.26334133194797,
-      "y": 129.8461121366511
+      "x": -210.80381632504728,
+      "y": -377.30195208142504
     },
     {
       "id": "Forward PE",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 3,
-      "x": -450.746083495265,
-      "y": 554.5485028524777
+      "x": -752.1769914766885,
+      "y": -321.94055588523645
     },
     {
       "id": "STMicro",
       "type": "COMPANY",
       "degree": 2,
-      "x": -387.6353728976638,
-      "y": 494.28608624090555
+      "x": -674.6801452498537,
+      "y": -302.35155728009426
     },
     {
       "id": "Research In Motion",
       "type": "COMPANY",
-      "degree": 2,
-      "x": -538.1717426819215,
-      "y": -291.20017407724674
-    },
-    {
-      "id": "Older Generation Blackberry",
-      "type": "PRODUCT",
       "degree": 1,
-      "x": -585.8197524119237,
-      "y": -319.69394087519566
+      "x": 443.60485823090715,
+      "y": -647.8468501563488
     },
     {
       "id": "Hitachi",
       "type": "COMPANY",
       "degree": 1,
-      "x": -368.40730387327386,
-      "y": 161.10891320584636
+      "x": -198.00832038558832,
+      "y": -423.70819440885555
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 9,
-      "x": 319.1985145038866,
-      "y": -77.4211176766694
+      "x": -5.631112357291835,
+      "y": 313.2116000762905
     },
     {
       "id": "Broadcom",
       "type": "COMPANY",
-      "degree": 2,
-      "x": 778.7562768211228,
-      "y": -269.72331527610197
+      "degree": 1,
+      "x": 182.59058045425925,
+      "y": 825.9540347581112
     },
     {
       "id": "Infineon",
       "type": "COMPANY",
       "degree": 1,
-      "x": -242.55316988217655,
-      "y": 555.9579586008954
+      "x": 267.5851199890878,
+      "y": -659.006185549758
     },
     {
       "id": "Intel",
       "type": "COMPANY",
       "degree": 1,
-      "x": -356.4793125988782,
-      "y": 788.7618404675899
+      "x": 344.2258899633967,
+      "y": -820.2911665029708
     },
     {
       "id": "Cellular Basebands",
       "type": "PRODUCT",
       "degree": 2,
-      "x": -42.62273593647084,
-      "y": -516.27444807026
+      "x": -267.1548926355333,
+      "y": 590.6488753257902
     },
     {
       "id": "Mobile Phones",
-      "type": "CONCEPT",
+      "type": "PRODUCT",
       "degree": 1,
-      "x": -71.71178141364953,
-      "y": -756.563399114972
-    },
-    {
-      "id": "Qualcomm Inc",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -491.9467904075618,
-      "y": 346.7276852623817
+      "x": -350.4038557804834,
+      "y": 858.5389129286277
     },
     {
       "id": "Dividend",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -688.7115344361905,
-      "y": 255.31446303859946
-    },
-    {
-      "id": "Annual Payout",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -605.5409020363838,
-      "y": 578.334176900438
+      "x": 787.861154989448,
+      "y": 526.7037866101193
     },
     {
       "id": "Quarterly Dividend",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 207.35385199657316,
-      "y": -85.35046501667954
+      "x": 94.90061891077292,
+      "y": 31.873437496303378
     },
     {
       "id": "Dividend Yield",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "FININSTRUMENTINFO",
       "degree": 4,
-      "x": 179.95872701375973,
-      "y": -113.55614610685716
+      "x": 63.43241948749307,
+      "y": 1.8278284298705245
     },
     {
       "id": "Dividend Payout",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 322.9950517688583,
-      "y": -702.4822844661841
+      "x": -736.8937071928051,
+      "y": 344.4894052684536
     },
     {
-      "id": "Wall Street Analyst",
+      "id": "Wall Street Analysts",
       "type": "CONCEPT",
-      "degree": 1,
-      "x": 357.37235033965106,
-      "y": -58.475384449612605
+      "degree": 3,
+      "x": 30.541564335403137,
+      "y": 307.38440065772704
     },
     {
       "id": "Shares",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 290.20616098666,
-      "y": 841.7520735600262
+      "x": 470.2938333970749,
+      "y": 435.3958392710518
     },
     {
-      "id": "Analyst Downgrade",
+      "id": "Analyst Downgrades",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 253.7086981706096,
-      "y": 842.5596605025339
-    },
-    {
-      "id": "Conservative Investors",
-      "type": "CONCEPT",
-      "degree": 2,
-      "x": -331.1411133613776,
-      "y": -415.09582870427283
-    },
-    {
-      "id": "Low Interest Rate Savings Accounts",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -735.4459197485361,
-      "y": -127.44044146622383
-    },
-    {
-      "id": "CDs",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 71.96536936287451,
-      "y": -705.5900700291521
-    },
-    {
-      "id": "DividendPaying Stocks",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": -429.96678269799946,
-      "y": 361.37790723832927
-    },
-    {
-      "id": "Portfolio Cushion Against",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": -560.9608220379386,
-      "y": 444.3202933100761
-    },
-    {
-      "id": "Inflation",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": -181.862566347623,
-      "y": 802.422787333412
-    },
-    {
-      "id": "Investment Portfolio",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -191.72775277319604,
-      "y": 858.5416417473614
+      "x": 533.1829682447974,
+      "y": 478.02776236302054
     },
     {
       "id": "Cautious Comments",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -359.4763713870531,
-      "y": -503.6541799294833
-    },
-    {
-      "id": "Cheniere Energy",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 524.8487801217342,
-      "y": 494.23848407234476
-    },
-    {
-      "id": "Senior Debt Notes",
-      "type": "BOND",
-      "degree": 1,
-      "x": 628.5732265892087,
-      "y": 596.5226824409953
+      "x": -446.856886432227,
+      "y": -656.3016700445125
     },
     {
       "id": "First Quarter Earnings",
-      "type": "ECON_INDICATOR",
-      "degree": 2,
-      "x": 581.5907604325541,
-      "y": -630.6738340619718
-    },
-    {
-      "id": "Slower Demand For Chips In PCs",
-      "type": "EVENT",
+      "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 522.9153458022524,
-      "y": -568.4032412533384
+      "x": 900.0,
+      "y": 263.65819350595694
     },
     {
       "id": "Closing Stock Price",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": 812.374354771014,
-      "y": 373.468899510356
+      "x": 624.2565068621442,
+      "y": 721.6589856663802
     },
     {
       "id": "Investors",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -297.5264902294928,
-      "y": 490.03314591851995
+      "x": -524.3385849627003,
+      "y": 487.0955748783956
     },
     {
       "id": "optionMONSTER",
-      "type": "FINANCIALENTITY",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 238.29380079904732,
-      "y": -240.471099911928
+      "x": -606.6874147137552,
+      "y": -609.0640752474853
     },
     {
       "id": "Put Buying",
       "type": "DERIVATIVE",
       "degree": 3,
-      "x": 209.03392707965799,
-      "y": -213.3554924104879
+      "x": -555.7198103892277,
+      "y": -577.8427324677998
     },
     {
       "id": "Bearish Sentiment",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 870.5950806342804,
-      "y": 173.7832024275881
+      "x": -600.5576711185007,
+      "y": -431.52391448449066
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 1,
-      "x": -382.3338585678848,
-      "y": -497.1480959056452
-    },
-    {
-      "id": "ChipMaking Customers",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -327.5743147852266,
-      "y": -450.09494148168994
-    },
-    {
-      "id": "Bearish Option Activity",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 587.9458164054449,
-      "y": -477.4399997310716
-    },
-    {
-      "id": "Negative Sentiment",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 548.5866854802886,
-      "y": -478.6338955546325
-    },
-    {
-      "id": "Manufacturing Site In Miho Japan",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -588.9809654571164,
-      "y": -514.9568133702148
+      "x": -398.13188833592653,
+      "y": -565.807765617394
     },
     {
       "id": "Earthquake",
-      "type": "MACROINDICATOR",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -677.8089744108178,
-      "y": 61.944589351106565
+      "x": -479.5530115860147,
+      "y": 634.3415864583562
     },
     {
       "id": "Texas Instruments Manufacturing Site",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -632.6991299717265,
-      "y": 58.105826808330086
+      "x": -524.9941287483209,
+      "y": 710.1604750056057
     },
     {
       "id": "Michael Eisner",
-      "type": "CONCEPT",
+      "type": "PERSON",
       "degree": 1,
-      "x": -1.1412905769126798,
-      "y": 638.5661372726812
+      "x": 503.58727464927415,
+      "y": -278.1074288677372
     },
     {
       "id": "IACInteractiveCorp",
       "type": "COMPANY",
       "degree": 2,
-      "x": -15.108110187846068,
-      "y": 807.3408085976686
-    },
-    {
-      "id": "General Electric Co",
-      "type": "COMPANY",
-      "degree": 3,
-      "x": -105.64606028768098,
-      "y": -597.8404340829829
-    },
-    {
-      "id": "Reactor Supplied To Japan 40 Years Ago",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -301.891457647572,
-      "y": -667.6139391790504
+      "x": 783.5664048184894,
+      "y": -396.2539403781455
     },
     {
       "id": "Manufacturing Site",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 582.5378137872167,
-      "y": -318.4476202230324
+      "x": 386.4791342960512,
+      "y": 613.9018326011868
     },
     {
       "id": "Miho",
       "type": "CONCEPT",
-      "degree": 2,
-      "x": 593.4488202260956,
-      "y": -354.75296563577905
-    },
-    {
-      "id": "Tokyo",
-      "type": "CONCEPT",
       "degree": 1,
-      "x": 735.7332400480524,
-      "y": -443.4086859160927
+      "x": 444.0054795296207,
+      "y": 739.0027511975952
     },
     {
       "id": "Walt Disney Co",
       "type": "COMPANY",
       "degree": 1,
-      "x": -8.393082180548465,
-      "y": 710.8105701110269
+      "x": 772.1558969437162,
+      "y": -445.51628472311154
+    },
+    {
+      "id": "General Electric",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 38.417617383120586,
+      "y": -658.5151623488529
     },
     {
       "id": "Reactor",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 92.46234600236045,
-      "y": -529.4731032120909
+      "x": 1.4853485885394866,
+      "y": -683.0703923145416
     },
     {
       "id": "Japan",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 131.07976558521077,
-      "y": -754.577806571886
-    },
-    {
-      "id": "Containment System",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -81.97260999211761,
-      "y": -580.57569575122
-    },
-    {
-      "id": "Investor",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -526.9670789305512,
-      "y": 109.25519598238027
-    },
-    {
-      "id": "Collar Strategy",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -749.0855137090678,
-      "y": 138.4071447013571
+      "x": 19.98658108493285,
+      "y": -872.1196300978409
     },
     {
       "id": "QCOM",
       "type": "STOCKTICKER",
       "degree": 3,
-      "x": 117.39871518153534,
-      "y": -97.94541127853442
+      "x": 503.6042175675613,
+      "y": 182.63637730594044
     },
     {
       "id": "32",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -691.4776497887805,
-      "y": -218.11544734495186
+      "x": 755.4750461340585,
+      "y": 400.64128911870483
     },
     {
-      "id": "5984",
+      "id": "5984 USD",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 900.0,
-      "y": 19.498135779014792
+      "x": 885.9649774549667,
+      "y": -110.3916126223526
     },
     {
       "id": "Trader",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 90.22110114179164,
-      "y": 791.7273077068476
+      "x": 662.5155495745154,
+      "y": 68.00503074133267
     },
     {
       "id": "Rally",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 99.96133916524005,
-      "y": 864.5394909141038
-    },
-    {
-      "id": "Wall Street Analysts",
-      "type": "CONCEPT",
-      "degree": 2,
-      "x": 898.2517371952708,
-      "y": -127.86442734079932
+      "x": 854.2256341153451,
+      "y": 72.3589534773553
     },
     {
       "id": "Target",
       "type": "COMPANY",
       "degree": 1,
-      "x": 770.0087777261657,
-      "y": -116.34402550769995
-    },
-    {
-      "id": "Mastering Your Money",
-      "type": "PRODUCT",
-      "degree": 2,
-      "x": 61.207792432702895,
-      "y": -85.53264856106874
-    },
-    {
-      "id": "Individuals",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 788.3354092667038,
-      "y": 169.14893666667913
-    },
-    {
-      "id": "Business Owners",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -665.5754570808687,
-      "y": -342.00527396365
-    },
-    {
-      "id": "Financial Freedom Highway",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -506.14934505743275,
-      "y": -19.37306766307058
-    },
-    {
-      "id": "Path To Financial Independence",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -713.696062842765,
-      "y": -36.00904846871747
-    },
-    {
-      "id": "GSM based GPS components",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 858.4612777819486,
-      "y": -297.00762852167026
-    },
-    {
-      "id": "CDMAbased GPS components",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 502.11557971982955,
-      "y": 700.1770998346838
+      "x": 51.18483896139232,
+      "y": 359.0635526375114
     },
     {
       "id": "Apple",
       "type": "COMPANY",
       "degree": 1,
-      "x": 616.5303055055094,
-      "y": 330.22160902573836
+      "x": -658.7088646807254,
+      "y": 189.12153460473465
     },
     {
       "id": "iPad 2",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 671.1443729354522,
-      "y": 367.33408331170557
+      "x": -781.466701846793,
+      "y": 250.62092422601543
     },
     {
       "id": "Units",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 711.1419174590609,
-      "y": 399.34181923167756
+      "x": -831.0453191763108,
+      "y": 289.8757916950118
     },
     {
       "id": "Samsung",
       "type": "COMPANY",
-      "degree": 4,
-      "x": -38.26640375683683,
-      "y": -295.9795195927171
+      "degree": 3,
+      "x": 152.6339112273496,
+      "y": -71.6271903731901
     },
     {
-      "id": "NAND Flash memory",
+      "id": "NAND Flash Memory",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -177.33300147905115,
-      "y": -712.4855348469471
+      "x": 863.3398870842251,
+      "y": -299.91125413378404
     },
     {
       "id": "DRAM",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -676.6331431164076,
-      "y": 366.775234429284
+      "x": -71.54898642615225,
+      "y": 833.5964794548537
     },
     {
-      "id": "A5 processor",
+      "id": "A5 Processor",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 389.7123831246192,
-      "y": -741.2674690538638
-    },
-    {
-      "id": "LCD timing controller",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 558.5579592676571,
-      "y": -532.886366487896
+      "x": -220.58739416046953,
+      "y": -850.1661257580246
     }
   ],
   "edges": [
     {
-      "id": "Nvidia||Competes With||Texas Instruments",
-      "source": "Nvidia",
+      "id": "NVIDIA||Competes With||Texas Instruments",
+      "source": "NVIDIA",
       "target": "Texas Instruments",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -650,8 +426,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Nvidia||Competes With||Xilinx",
-      "source": "Nvidia",
+      "id": "NVIDIA||Competes With||Xilinx",
+      "source": "NVIDIA",
       "target": "Xilinx",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -684,22 +460,6 @@
     {
       "id": "Oil Prices||Impacts||Market Sentiment",
       "source": "Oil Prices",
-      "target": "Market Sentiment",
-      "rel": "Impacts",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Gold Prices||Impacts||Market Sentiment",
-      "source": "Gold Prices",
       "target": "Market Sentiment",
       "rel": "Impacts",
       "rel_cat": "GMM",
@@ -752,22 +512,6 @@
       "rel": "Has",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Research In Motion||Uses||Older Generation Blackberry",
-      "source": "Research In Motion",
-      "target": "Older Generation Blackberry",
-      "rel": "Uses",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -922,27 +666,11 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Inc||Raises||Dividend",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Raises||Dividend",
+      "source": "Qualcomm",
       "target": "Dividend",
       "rel": "Raises",
       "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Boosts||Annual Payout",
-      "source": "Qualcomm Inc",
-      "target": "Annual Payout",
-      "rel": "Boosts",
-      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -1018,8 +746,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Wall Street Analyst||Downgrades||Qualcomm",
-      "source": "Wall Street Analyst",
+      "id": "Wall Street Analysts||Downgrades||Qualcomm",
+      "source": "Wall Street Analysts",
       "target": "Qualcomm",
       "rel": "Downgrades",
       "rel_cat": "SSI",
@@ -1034,75 +762,11 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Shares||Close Lower After||Analyst Downgrade",
+      "id": "Shares||Close Lower After||Analyst Downgrades",
       "source": "Shares",
-      "target": "Analyst Downgrade",
+      "target": "Analyst Downgrades",
       "rel": "Close Lower After",
       "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Conservative Investors||Invest In||Low Interest Rate Savings Accounts",
-      "source": "Conservative Investors",
-      "target": "Low Interest Rate Savings Accounts",
-      "rel": "Invest In",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Conservative Investors||Invest In||CDs",
-      "source": "Conservative Investors",
-      "target": "CDs",
-      "rel": "Invest In",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "DividendPaying Stocks||Increase Exposure To||Portfolio Cushion Against",
-      "source": "DividendPaying Stocks",
-      "target": "Portfolio Cushion Against",
-      "rel": "Increase Exposure To",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Inflation||Crushing Blow On||Investment Portfolio",
-      "source": "Inflation",
-      "target": "Investment Portfolio",
-      "rel": "Crushing Blow On",
-      "rel_cat": "GMM",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -1146,44 +810,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Cheniere Energy||Subsidiary Possibly In Default||Senior Debt Notes",
-      "source": "Cheniere Energy",
-      "target": "Senior Debt Notes",
-      "rel": "Subsidiary Possibly In Default",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Texas Instruments||Cuts Guidance On||First Quarter Earnings",
       "source": "Texas Instruments",
       "target": "First Quarter Earnings",
       "rel": "Cuts Guidance On",
       "rel_cat": "GFMK",
       "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Slower Demand For Chips In PCs||Impacts||First Quarter Earnings",
-      "source": "Slower Demand For Chips In PCs",
-      "target": "First Quarter Earnings",
-      "rel": "Impacts",
-      "rel_cat": "SSI",
-      "causal_type": "CAUSAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1306,58 +938,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "ChipMaking Customers||Experiences Price Drop||Stock Price",
-      "source": "ChipMaking Customers",
-      "target": "Stock Price",
-      "rel": "Experiences Price Drop",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Investors||Concerned About||Oil Prices",
       "source": "Investors",
       "target": "Oil Prices",
       "rel": "Concerned About",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Bearish Option Activity||Signifies||Negative Sentiment",
-      "source": "Bearish Option Activity",
-      "target": "Negative Sentiment",
-      "rel": "Signifies",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments||Discloses Damage To||Manufacturing Site In Miho Japan",
-      "source": "Texas Instruments",
-      "target": "Manufacturing Site In Miho Japan",
-      "rel": "Discloses Damage To",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1402,22 +986,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "General Electric Co||Defends Design Of||Reactor Supplied To Japan 40 Years Ago",
-      "source": "General Electric Co",
-      "target": "Reactor Supplied To Japan 40 Years Ago",
-      "rel": "Defends Design Of",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Texas Instruments||Suffers Damage At||Manufacturing Site",
       "source": "Texas Instruments",
       "target": "Manufacturing Site",
@@ -1438,22 +1006,6 @@
       "source": "Manufacturing Site",
       "target": "Miho",
       "rel": "Located In",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Miho||Near||Tokyo",
-      "source": "Miho",
-      "target": "Tokyo",
-      "rel": "Near",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1498,8 +1050,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "General Electric Co||Defends Design Of||Reactor",
-      "source": "General Electric Co",
+      "id": "General Electric||Defends Design Of||Reactor",
+      "source": "General Electric",
       "target": "Reactor",
       "rel": "Defends Design Of",
       "rel_cat": "SSI",
@@ -1520,38 +1072,6 @@
       "rel": "Supplied To",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Containment System||Considered Safe And Reliable By||General Electric Co",
-      "source": "Containment System",
-      "target": "General Electric Co",
-      "rel": "Considered Safe And Reliable By",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Investor||Uses||Collar Strategy",
-      "source": "Investor",
-      "target": "Collar Strategy",
-      "rel": "Uses",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1594,10 +1114,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "QCOM||Peaks At||5984",
+      "id": "QCOM||Speaks At||5984 USD",
       "source": "QCOM",
-      "target": "5984",
-      "rel": "Peaks At",
+      "target": "5984 USD",
+      "rel": "Speaks At",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1658,86 +1178,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Mastering Your Money||Educates||Individuals",
-      "source": "Mastering Your Money",
-      "target": "Individuals",
-      "rel": "Educates",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Mastering Your Money||Educates||Business Owners",
-      "source": "Mastering Your Money",
-      "target": "Business Owners",
-      "rel": "Educates",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Financial Freedom Highway||Symbolizes||Path To Financial Independence",
-      "source": "Financial Freedom Highway",
-      "target": "Path To Financial Independence",
-      "rel": "Symbolizes",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Broadcom||Supplies||GSM based GPS components",
-      "source": "Broadcom",
-      "target": "GSM based GPS components",
-      "rel": "Supplies",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm||Supplies||CDMAbased GPS components",
-      "source": "Qualcomm",
-      "target": "CDMAbased GPS components",
-      "rel": "Supplies",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Apple||Launches||iPad 2",
       "source": "Apple",
       "target": "iPad 2",
@@ -1770,9 +1210,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Samsung||Supplies||NAND Flash memory",
+      "id": "Samsung||Supplies||NAND Flash Memory",
       "source": "Samsung",
-      "target": "NAND Flash memory",
+      "target": "NAND Flash Memory",
       "rel": "Supplies",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1802,25 +1242,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Samsung||Supplies||A5 processor",
+      "id": "Samsung||Supplies||A5 Processor",
       "source": "Samsung",
-      "target": "A5 processor",
-      "rel": "Supplies",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Samsung||Supplies||LCD timing controller",
-      "source": "Samsung",
-      "target": "LCD timing controller",
+      "target": "A5 Processor",
       "rel": "Supplies",
       "rel_cat": "SSI",
       "causal_type": "OTHER",

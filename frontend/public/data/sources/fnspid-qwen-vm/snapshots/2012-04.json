@@ -1,931 +1,579 @@
 {
   "month": "2012-04",
   "stats": {
-    "nodes": 128,
-    "edges": 114,
+    "nodes": 80,
+    "edges": 77,
     "scored_edges": 0
   },
   "nodes": [
     {
-      "id": "Bank of AmericaMerrill Lynch",
+      "id": "Bank of America Merrill Lynch",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 670.2194527827605,
-      "y": 271.67224479730254
+      "x": 538.1172151130596,
+      "y": -247.01062155349314
     },
     {
       "id": "Earnings Estimates",
-      "type": "ECONINDICATOR",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 743.721065864795,
-      "y": 303.4923333617225
+      "x": 635.5117647840766,
+      "y": -316.99767258154014
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 13,
-      "x": -97.14179226447409,
-      "y": -37.78005374106367
-    },
-    {
-      "id": "Global Handset Growth",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -780.2296076143475,
-      "y": 495.23037730635923
+      "x": -116.26045483942366,
+      "y": -213.59454908244086
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
-      "degree": 6,
-      "x": -299.47996343468515,
-      "y": -93.82917938947656
+      "degree": 5,
+      "x": 302.8466773578359,
+      "y": -37.83904845182402
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
-      "degree": 9,
-      "x": 95.63055889335273,
-      "y": 437.166695552864
+      "degree": 5,
+      "x": 232.80403536456674,
+      "y": 648.3266014199664
     },
     {
       "id": "UBS",
       "type": "FINANCIALENTITY",
       "degree": 3,
-      "x": 42.68653436163237,
-      "y": -445.14301770038486
+      "x": 5.828543872842393,
+      "y": -284.74001325737106
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
-      "degree": 10,
-      "x": -8.225265241234316,
-      "y": -171.2128010368444
-    },
-    {
-      "id": "2.02%",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -805.4503628924764,
-      "y": -75.20017832293333
-    },
-    {
-      "id": "33.61",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -282.4972053882943,
-      "y": -756.8319592236212
+      "degree": 6,
+      "x": 250.77795126400437,
+      "y": -57.90025813707894
     },
     {
       "id": "35",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 88.7512612409057,
-      "y": -857.2328590371877
+      "x": -612.0288441594772,
+      "y": -689.1084249064775
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
-      "degree": 6,
-      "x": -209.64532905039448,
-      "y": 13.19170370608247
+      "degree": 5,
+      "x": -247.0524679083602,
+      "y": 28.37463329342763
     },
     {
-      "id": "Semiconductor Sector",
+      "id": "Semiconductors",
       "type": "SECTOR",
       "degree": 2,
-      "x": -116.15864401858519,
-      "y": 814.0465143837423
+      "x": -297.95717418590766,
+      "y": -749.9695125241459
     },
     {
-      "id": "Xilinx Inc",
+      "id": "Xilinx",
       "type": "COMPANY",
       "degree": 1,
-      "x": -95.05952942098212,
-      "y": 735.859802966117
+      "x": -302.1842590141775,
+      "y": -791.1472422207175
     },
     {
       "id": "Intel Corporation",
       "type": "COMPANY",
-      "degree": 2,
-      "x": 5.540304241282636,
-      "y": -203.4731572718778
-    },
-    {
-      "id": "Ratings",
-      "type": "CONCEPT",
       "degree": 1,
-      "x": -84.13055773609534,
-      "y": -841.8313675223817
+      "x": 193.744038414564,
+      "y": 533.4107019738467
     },
     {
       "id": "QUALCOMM Incorporated",
       "type": "COMPANY",
       "degree": 3,
-      "x": -210.32366753020992,
-      "y": 443.8502591891995
+      "x": 313.79333876768584,
+      "y": 526.9807914753035
     },
     {
       "id": "Mean Recommendation",
       "type": "ECONINDICATOR",
       "degree": 3,
-      "x": -516.7429273111716,
-      "y": 453.09884380705745
+      "x": 390.9126564986737,
+      "y": 403.56401355701263
     },
     {
       "id": "Zacks",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -362.15282598123446,
-      "y": 444.89983133600225
-    },
-    {
-      "id": "Northeast Utilities",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 65.1498823991774,
-      "y": 455.5560673687234
+      "x": 291.2809824111012,
+      "y": 393.5375372280629
     },
     {
       "id": "WIN",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": -564.3393563519613,
-      "y": 596.9321748120651
+      "x": -523.4011940397351,
+      "y": 337.26848537591496
     },
     {
       "id": "Short Interest Update",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": -631.6323812362086,
-      "y": 684.9778744358036
+      "x": -732.9731327801672,
+      "y": 486.6730183921227
     },
     {
       "id": "150",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -482.10178786792045,
-      "y": 671.8299714063678
+      "x": 670.6359324408481,
+      "y": 408.63341056839005
     },
     {
-      "id": "6650",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -705.3866286420629,
-      "y": 316.26160399097876
-    },
-    {
-      "id": "Oppenheimer  Co",
+      "id": "Oppenheimer",
       "type": "FINANCIALENTITY",
       "degree": 2,
-      "x": -129.22445433067452,
-      "y": -36.682753621428255
+      "x": -136.17604387080715,
+      "y": -250.00949142512113
     },
     {
       "id": "Rating",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 549.4680526335619,
-      "y": 676.7886363376527
+      "x": -709.9939046783271,
+      "y": -94.70663983232409
     },
     {
       "id": "Outperform",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 542.5171377789334,
-      "y": 721.9543609354457
+      "x": -865.50728830157,
+      "y": -112.80854822875608
     },
     {
-      "id": "Price Target",
+      "id": "Target Price",
       "type": "FININSTRUMENTINFO",
       "degree": 3,
-      "x": -573.2035417357341,
-      "y": -344.1582529127985
+      "x": -565.9671521462291,
+      "y": 396.64855496450207
     },
     {
       "id": "70",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -681.3146188726527,
-      "y": -606.7722893104881
+      "x": -743.3699263543035,
+      "y": 257.73113911911804
     },
     {
       "id": "75",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -844.308859735024,
-      "y": -331.0238958150625
+      "x": -392.755756123392,
+      "y": 541.0738075689342
     },
     {
       "id": "Stock",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 3,
-      "x": -160.98597106732754,
-      "y": 33.925309991954045
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": 585.51909111244,
+      "y": 174.2003403520611
     },
     {
       "id": "Applied Materials Stock Price",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 790.4123522756382,
-      "y": -295.020159609271
-    },
-    {
-      "id": "Novellus Stock Price",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -805.9785854985165,
-      "y": 167.32839385899098
-    },
-    {
-      "id": "ASM International",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -456.4027020699274,
-      "y": 749.8911362754932
-    },
-    {
-      "id": "Share Price",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 2,
-      "x": -483.97740428753474,
-      "y": 800.4322509097104
+      "x": 750.7628019208867,
+      "y": 235.79468211522862
     },
     {
       "id": "Seagate Technology",
       "type": "COMPANY",
       "degree": 1,
-      "x": -338.9747537195865,
-      "y": 532.5269999480611
+      "x": -35.320238336385785,
+      "y": 743.0121381076716
     },
     {
-      "id": "Rivals Performance",
+      "id": "Share Price",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": -858.5873690217675,
-      "y": 352.8644858333545
+      "x": -73.09416928341984,
+      "y": 751.9637999874477
     },
     {
       "id": "Credit Suisse",
       "type": "FINANCIALENTITY",
       "degree": 3,
-      "x": -334.1661023527304,
-      "y": -189.89721687938234
+      "x": -341.22724454812686,
+      "y": 91.51159873915161
     },
     {
       "id": "Dividend",
-      "type": "CONCEPT",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 548.6658964165536,
-      "y": -704.5818934466859
-    },
-    {
-      "id": "151",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -284.44795734358934,
-      "y": -822.4703993291694
-    },
-    {
-      "id": "6623",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 749.4353817434433,
-      "y": 390.0055722898831
-    },
-    {
-      "id": "Qualcomm Inc",
-      "type": "COMPANY",
-      "degree": 5,
-      "x": -1.6337282856304516,
-      "y": -140.8670426179945
-    },
-    {
-      "id": "Power Management Processors",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -565.8553463536556,
-      "y": -602.0629799479908
-    },
-    {
-      "id": "Cellular Connectivity Processors",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 416.5197906700786,
-      "y": 686.3095217606649
-    },
-    {
-      "id": "Kilroy Realty Corporation",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -585.7600281832525,
-      "y": 284.65995518761997
+      "x": -875.0534377127927,
+      "y": -261.47416059672963
     },
     {
       "id": "10445 Pacific Center Court building",
       "type": "PRODUCT",
-      "degree": 2,
-      "x": -795.6457471036713,
-      "y": 389.7914782119845
+      "degree": 1,
+      "x": -475.87079314017126,
+      "y": -723.0516191139787
     },
     {
       "id": "Atmel",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 2,
-      "x": -42.09402249369302,
-      "y": 34.73834401121506
+      "x": -296.8720000258249,
+      "y": -411.49410325765274
     },
     {
       "id": "Touch Screen Controller",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 806.5886417758373,
-      "y": -81.63857747393479
+      "x": -804.6588226623643,
+      "y": 12.462903579609254
     },
     {
       "id": "Corning",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 2,
-      "x": 103.6052606394792,
-      "y": -475.9564398494669
+      "x": -4.936921139024004,
+      "y": 548.7733262561958
     },
     {
       "id": "Gorilla Glass",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -625.1413521968489,
-      "y": -702.567448030824
+      "x": -553.656546704139,
+      "y": 663.0163795663874
     },
     {
       "id": "ATML",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 1,
-      "x": -890.9065727662625,
-      "y": 150.22620499611517
+      "x": 210.97940691726453,
+      "y": -835.8062798377798
     },
     {
       "id": "TXN",
       "type": "STOCKTICKER",
       "degree": 1,
-      "x": -690.7407523394334,
-      "y": -379.8184600832362
+      "x": -854.124744942668,
+      "y": 270.92452777448443
     },
     {
       "id": "GLW",
       "type": "STOCKTICKER",
       "degree": 1,
-      "x": 833.0183386721202,
-      "y": -249.123149746069
-    },
-    {
-      "id": "Universal Display Co",
-      "type": "STOCKTICKER",
-      "degree": 1,
-      "x": -349.31910826845586,
-      "y": -613.8113316421843
-    },
-    {
-      "id": "PANL",
-      "type": "STOCKTICKER",
-      "degree": 1,
-      "x": -431.2278655638422,
-      "y": -797.8619777956945
+      "x": 544.1363855672923,
+      "y": 435.5670599450948
     },
     {
       "id": "149",
-      "type": "CONCEPT",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -493.10102351259405,
-      "y": -727.243351604446
-    },
-    {
-      "id": "6699",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 530.0685069389987,
-      "y": 695.3662244661973
+      "x": 113.55883073754102,
+      "y": -882.3783159014156
     },
     {
       "id": "Earnings",
-      "type": "ECONINDICATOR",
-      "degree": 10,
-      "x": 27.389848304497082,
-      "y": -135.4816768270942
+      "type": "CONCEPT",
+      "degree": 8,
+      "x": 572.9448173078458,
+      "y": 52.9493272068218
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
-      "degree": 3,
-      "x": 558.7825692648726,
-      "y": -672.1050424513874
+      "degree": 2,
+      "x": 749.1764381052827,
+      "y": 66.98626556917043
     },
     {
-      "id": "Third Quarter Adjusted Earnings",
+      "id": "Adjusted ThirdQuarter Earnings",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 843.936968715036,
-      "y": 104.48522806835285
-    },
-    {
-      "id": "Adjusted Earnings Forecast",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": 443.33668431580566,
-      "y": -535.2786926578334
+      "x": -138.18406647839666,
+      "y": -900.0
     },
     {
       "id": "Wells Fargo  Company",
       "type": "COMPANY",
       "degree": 1,
-      "x": 126.90386799491188,
-      "y": 425.5648137884306
+      "x": 206.1332467429575,
+      "y": 515.3039110279287
     },
     {
       "id": "VeriSign Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 262.80852038446056,
-      "y": 618.5775331488425
+      "x": 691.3081670151064,
+      "y": -190.4606001689546
     },
     {
       "id": "52Week High",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 320.7785694290332,
-      "y": 806.7610488918913
+      "x": 753.3988139948148,
+      "y": -206.91276764959431
     },
     {
       "id": "Earnings Report",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -900.0,
-      "y": -108.86836105681186
+      "x": -852.5747375919809,
+      "y": 123.77435403116098
     },
     {
       "id": "28nm parts",
       "type": "PRODUCT",
       "degree": 2,
-      "x": -711.433195049422,
-      "y": -405.0236959925548
+      "x": 477.67337815384735,
+      "y": -519.8775081222902
     },
     {
       "id": "Supply Chain Disruption",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -769.9558762108059,
-      "y": -435.6921929830566
-    },
-    {
-      "id": "Intel",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 44.7982243147527,
-      "y": 663.6826561340393
-    },
-    {
-      "id": "Revenue and Margins",
-      "type": "ECON_INDICATOR",
-      "degree": 1,
-      "x": 70.55878056680979,
-      "y": 791.9808327020877
-    },
-    {
-      "id": "Input Costs",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": 578.2575510509765,
-      "y": -264.3328051352766
-    },
-    {
-      "id": "Profitability",
-      "type": "ECON_INDICATOR",
-      "degree": 1,
-      "x": 810.4446440369782,
-      "y": -376.0080786569572
+      "x": 478.21311972966026,
+      "y": -561.3125810064954
     },
     {
       "id": "Financial Results",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": 30.46105637069519,
-      "y": -798.4208815006467
-    },
-    {
-      "id": "HighEnd 3G Smartphones and Tablets",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -42.89755576855296,
-      "y": -155.18404615044258
-    },
-    {
-      "id": "Supply Shortages",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 4.843921676026994,
-      "y": -104.85465034353005
+      "x": 422.8548983447984,
+      "y": 285.88257220399436
+    },
+    {
+      "id": "Supply Shortage",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -156.35434600546267,
+      "y": -203.31036211255105
     },
     {
       "id": "Advanced Micro Devices",
       "type": "COMPANY",
       "degree": 1,
-      "x": 518.0699523915223,
-      "y": -409.65505901094815
+      "x": -663.892605944796,
+      "y": -507.979811191408
     },
     {
-      "id": "Globalfoundries",
+      "id": "GlobalFoundries",
       "type": "COMPANY",
       "degree": 1,
-      "x": 704.2095068912854,
-      "y": -533.8543798365566
+      "x": -627.6498162278997,
+      "y": -493.49478261731684
     },
     {
       "id": "Intel Corp",
       "type": "COMPANY",
       "degree": 2,
-      "x": 552.1897544114082,
-      "y": -342.0985695211724
+      "x": -261.59239226442185,
+      "y": 493.3263375084161
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
-      "degree": 3,
-      "x": 772.547428596337,
-      "y": -465.8325956652481
+      "degree": 2,
+      "x": -349.8368440227475,
+      "y": 655.2129934887448
     },
     {
-      "id": "Microsoft Corp",
+      "id": "Microsoft",
       "type": "COMPANY",
       "degree": 2,
-      "x": 630.0647021823693,
-      "y": -385.0181655534587
+      "x": -281.5692820941276,
+      "y": 495.7654362991098
     },
     {
       "id": "Hard Disk Drive Shortage",
       "type": "CONCEPT",
       "degree": 2,
-      "x": 537.5940366078647,
-      "y": -327.36628456513426
-    },
-    {
-      "id": "PC Market Channel Build Rates",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 592.6874605442126,
-      "y": 395.2810523081
-    },
-    {
-      "id": "Sales",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": 634.3992796169025,
-      "y": 429.1925749565655
+      "x": -242.02288853741575,
+      "y": 426.06779524287646
     },
     {
       "id": "Buy",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -684.1995386871957,
-      "y": 598.9080048725509
-    },
-    {
-      "id": "Netflix",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -435.0745801887429,
-      "y": -44.126886168528976
-    },
-    {
-      "id": "Q1 Loss",
-      "type": "ECONINDicator",
-      "degree": 1,
-      "x": -896.9096541623499,
-      "y": 49.16549985375546
+      "x": 520.8128177480255,
+      "y": 563.916948482674
     },
     {
       "id": "First Quarter Earnings",
       "type": "ECONINDICATOR",
       "degree": 2,
-      "x": 534.151817794438,
-      "y": -710.9150582335353
+      "x": 681.5744344816143,
+      "y": 66.07524867683424
     },
     {
       "id": "Second Quarter Earnings",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -169.75600884252688,
-      "y": -813.8056298491206
+      "x": 330.7972906896376,
+      "y": -792.7683571373204
+    },
+    {
+      "id": "Netflix",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 565.351089833262,
+      "y": 12.707127656617002
     },
     {
       "id": "ConocoPhillips",
       "type": "COMPANY",
       "degree": 1,
-      "x": 51.62686742298611,
-      "y": -173.91567322682354
+      "x": 525.17434586012,
+      "y": 50.51940387945904
     },
     {
-      "id": "DJIA",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": 583.8295707843808,
-      "y": -558.436784078124
-    },
-    {
-      "id": "Market Mood",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 659.8782862909646,
-      "y": -628.025570953317
-    },
-    {
-      "id": "Global Economic Concerns",
-      "type": "MACRO_INDICATOR",
-      "degree": 1,
-      "x": 322.4994007704756,
-      "y": 521.0620041987665
-    },
-    {
-      "id": "Wall Street Sentiment",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 438.93607687300073,
-      "y": 776.9222581128795
-    },
-    {
-      "id": "Futures",
-      "type": "DERIVATIVE",
-      "degree": 1,
-      "x": 655.3968020324938,
-      "y": 138.67738665813738
-    },
-    {
-      "id": "Major Market Indexes",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": 809.9064486259299,
-      "y": 176.04774838553507
-    },
-    {
-      "id": "Xerox",
+      "id": "Xerox Corp",
       "type": "COMPANY",
       "degree": 1,
-      "x": 71.15919084627072,
-      "y": -147.50875180189362
+      "x": 457.18990330143777,
+      "y": 20.600124532846387
     },
     {
       "id": "Eaton Corp",
       "type": "COMPANY",
       "degree": 1,
-      "x": 62.27276359789362,
-      "y": -112.72020676313907
+      "x": 446.2607174443985,
+      "y": 40.776325121431746
     },
     {
       "id": "TSM",
       "type": "STOCKTICKER",
       "degree": 2,
-      "x": 107.04771361510537,
-      "y": 468.94284044642376
+      "x": 247.86185379223988,
+      "y": 694.5421804938784
     },
     {
       "id": "Call Options",
       "type": "DERIVATIVE",
       "degree": 1,
-      "x": 120.4420360114269,
-      "y": 505.7686828107166
+      "x": 180.35837096501595,
+      "y": 522.5395944695624
     },
     {
       "id": "Trader",
       "type": "CONCEPT",
       "degree": 2,
-      "x": 448.8672092724518,
-      "y": -178.63606959419067
+      "x": -46.12815878537517,
+      "y": -385.12707043094736
     },
     {
       "id": "Credit",
-      "type": "FININSTRUMENTINFO",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 713.6694806312054,
-      "y": 502.04663908177844
+      "x": -814.9897896007363,
+      "y": -381.8403737834503
     },
     {
       "id": "Income",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 184.78618649126102,
-      "y": -860.3495464144103
-    },
-    {
-      "id": "184",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -333.91383202174666,
-      "y": 824.7678412361674
-    },
-    {
-      "id": "286",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -11.902384288469934,
-      "y": -898.7006372660327
+      "x": 722.680180785038,
+      "y": -387.70799593730885
     },
     {
       "id": "Consumer Buying Power",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -849.9306986735443,
-      "y": 250.5206760767087
-    },
-    {
-      "id": "Economic Issues In Japan And China",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -776.5984763310948,
-      "y": -528.8557740373242
+      "x": -139.89879785599334,
+      "y": 684.2549376555577
     },
     {
       "id": "Analysts",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 187.5211982366348,
-      "y": 774.0370614531563
+      "x": -280.0727189970764,
+      "y": 747.563625784976
     },
     {
       "id": "Analyst Expectations",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 365.9784556605084,
-      "y": -750.2230786774547
-    },
-    {
-      "id": "213",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": 561.7530735655779,
-      "y": -628.3629544970822
-    },
-    {
-      "id": "3189",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": -277.5231314813532,
-      "y": 780.1361044449111
+      "x": 667.3714504236755,
+      "y": -521.6851533594908
     },
     {
       "id": "KLATencor",
       "type": "COMPANY",
-      "degree": 5,
-      "x": 221.35409010915674,
-      "y": 48.29289180675514
+      "degree": 4,
+      "x": -8.753761640041956,
+      "y": -379.5994197799208
     },
     {
       "id": "Gross Margins",
-      "type": "ECON_INDICATOR",
-      "degree": 1,
-      "x": 551.7609206114788,
-      "y": 551.2566680182351
-    },
-    {
-      "id": "Applied Materials Inc",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": -862.7775176306035,
-      "y": -213.08136974937105
-    },
-    {
-      "id": "Novellus Systems",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 663.804028722131,
-      "y": -132.57397854634323
-    },
-    {
-      "id": "Hitachi HighTechnologies Corporation",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 874.7644887110532,
-      "y": -39.04128844381438
-    },
-    {
-      "id": "Revenue Decline",
-      "type": "ECON_INDICATOR",
-      "degree": 1,
-      "x": 814.6775810096143,
-      "y": 260.78579170446795
-    },
-    {
-      "id": "Supply Chain Capacity",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 820.374868808212,
-      "y": 33.32314086258784
-    },
-    {
-      "id": "iPhone",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -589.2127293780935,
-      "y": 440.5706649023114
-    },
-    {
-      "id": "Chip Demand",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -694.7449034561175,
-      "y": 516.1511431374578
-    },
-    {
-      "id": "Apple",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 278.04077295793576,
-      "y": -779.2249561595889
-    },
-    {
-      "id": "Revenue Growth Shortfall",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 305.4798286874311,
-      "y": -795.0412738348813
-    },
-    {
-      "id": "Mac Line",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": 645.6011282706974,
-      "y": -382.9111313889962
-    },
-    {
-      "id": "Equipment Providers",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 849.248105791758,
-      "y": -156.48382507013534
+      "x": -388.029888529831,
+      "y": -853.3730239254662
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 1,
-      "x": -7.803568487963554,
-      "y": 844.6414715818595
+      "x": 577.8237353935476,
+      "y": 308.53185130563236
     },
     {
-      "id": "Solar Sector Exposure",
+      "id": "Novellus Systems",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -747.1129594924041,
+      "y": -553.7058581676546
+    },
+    {
+      "id": "Revenue Decline",
+      "type": "ECON_INDICATOR",
+      "degree": 1,
+      "x": 444.58777894828023,
+      "y": -731.5017843612011
+    },
+    {
+      "id": "iPhone",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 419.73393992123937,
+      "y": -477.0803540814213
+    },
+    {
+      "id": "Chip Demand",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 5.300023179533793,
-      "y": 878.010969742267
+      "x": 571.9241081877383,
+      "y": -647.1449203778191
     },
     {
       "id": "KLATencor Corporation",
       "type": "COMPANY",
       "degree": 1,
-      "x": -576.0207408622512,
-      "y": -168.7152631781553
+      "x": -559.9861393498661,
+      "y": 442.35135848980246
     },
     {
       "id": "Zacks Consensus Estimate",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -786.787374305561,
-      "y": -241.08049431832714
-    },
-    {
-      "id": "Orders",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": -651.3781872817552,
-      "y": 3.1494838730120014
-    },
-    {
-      "id": "Investor Excitement",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -854.6745101844243,
-      "y": -1.6823135728832932
+      "x": -623.3228393988966,
+      "y": 495.82205463203593
     }
   ],
   "edges": [
     {
-      "id": "Bank of AmericaMerrill Lynch||Boosts||Earnings Estimates",
-      "source": "Bank of AmericaMerrill Lynch",
+      "id": "Bank of America Merrill Lynch||Boosts||Earnings Estimates",
+      "source": "Bank of America Merrill Lynch",
       "target": "Earnings Estimates",
       "rel": "Boosts",
       "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm||Leveraged To||Global Handset Growth",
-      "source": "Qualcomm",
-      "target": "Global Handset Growth",
-      "rel": "Leveraged To",
-      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -985,42 +633,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments Incorporated||Has Dividend Yield||2.02%",
-      "source": "Texas Instruments Incorporated",
-      "target": "2.02%",
-      "rel": "Has Dividend Yield",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments Incorporated||Has Stock Price||33.61",
-      "source": "Texas Instruments Incorporated",
-      "target": "33.61",
-      "rel": "Has Stock Price",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "UBS||Sets Price Target||35",
+      "id": "UBS||Sets Price Target Of||35",
       "source": "UBS",
       "target": "35",
-      "rel": "Sets Price Target",
+      "rel": "Sets Price Target Of",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1033,9 +649,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments||Has Positive ShortTerm Edge||Semiconductor Sector",
+      "id": "Texas Instruments||Has Positive ShortTerm Edge||Semiconductors",
       "source": "Texas Instruments",
-      "target": "Semiconductor Sector",
+      "target": "Semiconductors",
       "rel": "Has Positive ShortTerm Edge",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1049,9 +665,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Xilinx Inc||Has Positive ShortTerm Edge||Semiconductor Sector",
-      "source": "Xilinx Inc",
-      "target": "Semiconductor Sector",
+      "id": "Xilinx||Has Positive ShortTerm Edge||Semiconductors",
+      "source": "Xilinx",
+      "target": "Semiconductors",
       "rel": "Has Positive ShortTerm Edge",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1069,22 +685,6 @@
       "source": "Intel Corporation",
       "target": "Stock Price",
       "rel": "Trades Lower",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Intel Corporation||Earns Ratings Upgrade||Ratings",
-      "source": "Intel Corporation",
-      "target": "Ratings",
-      "rel": "Earns Ratings Upgrade",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1135,22 +735,6 @@
       "rel": "Reports",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Northeast Utilities||Has||Stock Price",
-      "source": "Northeast Utilities",
-      "target": "Stock Price",
-      "rel": "Has",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1225,25 +809,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Stock Price||Closes At||6650",
-      "source": "Stock Price",
-      "target": "6650",
-      "rel": "Closes At",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm||Receives Positive Commentary From||Oppenheimer  Co",
+      "id": "Qualcomm||Receives Positive Commentary From||Oppenheimer",
       "source": "Qualcomm",
-      "target": "Oppenheimer  Co",
+      "target": "Oppenheimer",
       "rel": "Receives Positive Commentary From",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1257,8 +825,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Oppenheimer  Co||Maintains Rating On||Qualcomm",
-      "source": "Oppenheimer  Co",
+      "id": "Oppenheimer||Maintains Rating On||Qualcomm",
+      "source": "Oppenheimer",
       "target": "Qualcomm",
       "rel": "Maintains Rating On",
       "rel_cat": "SSI",
@@ -1289,8 +857,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Price Target||Increases From||70",
-      "source": "Price Target",
+      "id": "Target Price||Increases From||70",
+      "source": "Target Price",
       "target": "70",
       "rel": "Increases From",
       "rel_cat": "SSI",
@@ -1305,8 +873,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Price Target||Updates To||75",
-      "source": "Price Target",
+      "id": "Target Price||Updates To||75",
+      "source": "Target Price",
       "target": "75",
       "rel": "Updates To",
       "rel_cat": "SSI",
@@ -1337,58 +905,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Stock||Outperforms||Novellus Stock Price",
-      "source": "Stock",
-      "target": "Novellus Stock Price",
-      "rel": "Outperforms",
-      "rel_cat": "SSI",
-      "causal_type": "COMPETITIVE",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "ASM International||Increases||Share Price",
-      "source": "ASM International",
-      "target": "Share Price",
-      "rel": "Increases",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Seagate Technology||Increases||Share Price",
       "source": "Seagate Technology",
       "target": "Share Price",
       "rel": "Increases",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Stock||Surpass||Rivals Performance",
-      "source": "Stock",
-      "target": "Rivals Performance",
-      "rel": "Surpass",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1433,38 +953,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Dividend Yield||Equals||151",
-      "source": "Dividend Yield",
-      "target": "151",
-      "rel": "Equals",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Stock Price||Equals||6623",
-      "source": "Stock Price",
-      "target": "6623",
-      "rel": "Equals",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Credit Suisse||Maintains Rating On||Qualcomm",
       "source": "Credit Suisse",
       "target": "Qualcomm",
@@ -1481,58 +969,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Credit Suisse||Increases||Price Target",
+      "id": "Credit Suisse||Increases||Target Price",
       "source": "Credit Suisse",
-      "target": "Price Target",
+      "target": "Target Price",
       "rel": "Increases",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Produces||Power Management Processors",
-      "source": "Qualcomm Inc",
-      "target": "Power Management Processors",
-      "rel": "Produces",
-      "rel_cat": "GFMK",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Produces||Cellular Connectivity Processors",
-      "source": "Qualcomm Inc",
-      "target": "Cellular Connectivity Processors",
-      "rel": "Produces",
-      "rel_cat": "GFMK",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Kilroy Realty Corporation||Leases||10445 Pacific Center Court building",
-      "source": "Kilroy Realty Corporation",
-      "target": "10445 Pacific Center Court building",
-      "rel": "Leases",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1657,41 +1097,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Universal Display Co||Is Ticker For||PANL",
-      "source": "Universal Display Co",
-      "target": "PANL",
-      "rel": "Is Ticker For",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Dividend Yield||Equals||149",
       "source": "Dividend Yield",
       "target": "149",
-      "rel": "Equals",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Stock Price||Equals||6699",
-      "source": "Stock Price",
-      "target": "6699",
       "rel": "Equals",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
@@ -1737,28 +1145,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm||Forecasts||Third Quarter Adjusted Earnings",
+      "id": "Qualcomm||Forecasts||Adjusted ThirdQuarter Earnings",
       "source": "Qualcomm",
-      "target": "Third Quarter Adjusted Earnings",
+      "target": "Adjusted ThirdQuarter Earnings",
       "rel": "Forecasts",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Adjusted Earnings Forecast||Misses||Analyst Estimates",
-      "source": "Adjusted Earnings Forecast",
-      "target": "Analyst Estimates",
-      "rel": "Misses",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1849,38 +1241,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Intel||Reports||Revenue and Margins",
-      "source": "Intel",
-      "target": "Revenue and Margins",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Input Costs||Increase||Profitability",
-      "source": "Input Costs",
-      "target": "Profitability",
-      "rel": "Increase",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Qualcomm||Impacts||28nm parts",
       "source": "Qualcomm",
       "target": "28nm parts",
@@ -1897,8 +1257,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Inc||Reports||Financial Results",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Reports||Financial Results",
+      "source": "Qualcomm",
       "target": "Financial Results",
       "rel": "Reports",
       "rel_cat": "SSI",
@@ -1913,10 +1273,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "HighEnd 3G Smartphones and Tablets||Drive Demand For||Qualcomm Inc",
-      "source": "HighEnd 3G Smartphones and Tablets",
-      "target": "Qualcomm Inc",
-      "rel": "Drive Demand For",
+      "id": "Supply Shortage||Affects||Qualcomm",
+      "source": "Supply Shortage",
+      "target": "Qualcomm",
+      "rel": "Affects",
       "rel_cat": "SSI",
       "causal_type": "CAUSAL",
       "polarity": "neutral",
@@ -1929,25 +1289,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Supply Shortages||Affect||Qualcomm Inc",
-      "source": "Supply Shortages",
-      "target": "Qualcomm Inc",
-      "rel": "Affect",
-      "rel_cat": "SSI",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Advanced Micro Devices||Divests||Globalfoundries",
+      "id": "Advanced Micro Devices||Divests||GlobalFoundries",
       "source": "Advanced Micro Devices",
-      "target": "Globalfoundries",
+      "target": "GlobalFoundries",
       "rel": "Divests",
       "rel_cat": "SSI",
       "causal_type": "CORPORATE_ACTION",
@@ -1977,8 +1321,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Microsoft Corp||Reports Positive Surprise||Revenue",
-      "source": "Microsoft Corp",
+      "id": "Microsoft||Reports Positive Surprise||Revenue",
+      "source": "Microsoft",
       "target": "Revenue",
       "rel": "Reports Positive Surprise",
       "rel_cat": "SSI",
@@ -2009,28 +1353,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Hard Disk Drive Shortage||Has Less Impact Than Expected On||Microsoft Corp",
+      "id": "Hard Disk Drive Shortage||Has Less Impact Than Expected On||Microsoft",
       "source": "Hard Disk Drive Shortage",
-      "target": "Microsoft Corp",
+      "target": "Microsoft",
       "rel": "Has Less Impact Than Expected On",
       "rel_cat": "GMM",
       "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "PC Market Channel Build Rates||On The Rise||Sales",
-      "source": "PC Market Channel Build Rates",
-      "target": "Sales",
-      "rel": "On The Rise",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -2063,22 +1391,6 @@
       "rel": "Is In Range",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Netflix||Reports||Q1 Loss",
-      "source": "Netflix",
-      "target": "Q1 Loss",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -2217,56 +1529,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "DJIA||Expected To Drop||Market Mood",
-      "source": "DJIA",
-      "target": "Market Mood",
-      "rel": "Expected To Drop",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Global Economic Concerns||Negative Impact On||Wall Street Sentiment",
-      "source": "Global Economic Concerns",
-      "target": "Wall Street Sentiment",
-      "rel": "Negative Impact On",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Futures||Trade Lower||Major Market Indexes",
-      "source": "Futures",
-      "target": "Major Market Indexes",
-      "rel": "Trade Lower",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Xerox||Reports||Earnings",
-      "source": "Xerox",
+      "id": "Xerox Corp||Reports||Earnings",
+      "source": "Xerox Corp",
       "target": "Earnings",
       "rel": "Reports",
       "rel_cat": "SSI",
@@ -2361,38 +1625,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Earnings||Decreases Sequentially||184",
-      "source": "Earnings",
-      "target": "184",
-      "rel": "Decreases Sequentially",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Earnings||Decreases Year Over Year||286",
-      "source": "Earnings",
-      "target": "286",
-      "rel": "Decreases Year Over Year",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Texas Instruments||Is Affected By||Consumer Buying Power",
       "source": "Texas Instruments",
       "target": "Consumer Buying Power",
@@ -2409,26 +1641,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments||Is Affected By||Economic Issues In Japan And China",
-      "source": "Texas Instruments",
-      "target": "Economic Issues In Japan And China",
-      "rel": "Is Affected By",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments Incorporated||Received Positive Commentary From||Analysts",
+      "id": "Texas Instruments Incorporated||Receives Positive Commentary From||Analysts",
       "source": "Texas Instruments Incorporated",
       "target": "Analysts",
-      "rel": "Received Positive Commentary From",
+      "rel": "Receives Positive Commentary From",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -2489,38 +1705,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments Incorporated||Has Dividend Yield Of||213",
-      "source": "Texas Instruments Incorporated",
-      "target": "213",
-      "rel": "Has Dividend Yield Of",
-      "rel_cat": "FININSTRUMENTINFO",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments Incorporated||Has Stock Price Of||3189",
-      "source": "Texas Instruments Incorporated",
-      "target": "3189",
-      "rel": "Has Stock Price Of",
-      "rel_cat": "FININSTRUMENTINFO",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "KLATencor||Reports||Gross Margins",
       "source": "KLATencor",
       "target": "Gross Margins",
@@ -2537,9 +1721,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "KLATencor||Competes With||Applied Materials Inc",
+      "id": "KLATencor||Competes With||Applied Materials",
       "source": "KLATencor",
-      "target": "Applied Materials Inc",
+      "target": "Applied Materials",
       "rel": "Competes With",
       "rel_cat": "SSI",
       "causal_type": "COMPETITIVE",
@@ -2569,44 +1753,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "KLATencor||Competes With||Hitachi HighTechnologies Corporation",
-      "source": "KLATencor",
-      "target": "Hitachi HighTechnologies Corporation",
-      "rel": "Competes With",
-      "rel_cat": "SSI",
-      "causal_type": "COMPETITIVE",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "KLATencor||Reports||Revenue Decline",
       "source": "KLATencor",
       "target": "Revenue Decline",
       "rel": "Reports",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm||Faces Questioning About||Supply Chain Capacity",
-      "source": "Qualcomm",
-      "target": "Supply Chain Capacity",
-      "rel": "Faces Questioning About",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -2633,90 +1785,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Apple||Experiences||Revenue Growth Shortfall",
-      "source": "Apple",
-      "target": "Revenue Growth Shortfall",
-      "rel": "Experiences",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Mac Line||Underperforms||Revenue",
-      "source": "Mac Line",
-      "target": "Revenue",
-      "rel": "Underperforms",
-      "rel_cat": "SSI",
-      "causal_type": "COMPETITIVE",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Novellus Systems||Is Positive About||Equipment Providers",
-      "source": "Novellus Systems",
-      "target": "Equipment Providers",
-      "rel": "Is Positive About",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Applied Materials||Is Less Positive About||Solar Sector Exposure",
-      "source": "Applied Materials",
-      "target": "Solar Sector Exposure",
-      "rel": "Is Less Positive About",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "KLATencor Corporation||Exceeds||Zacks Consensus Estimate",
       "source": "KLATencor Corporation",
       "target": "Zacks Consensus Estimate",
       "rel": "Exceeds",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Orders||Decrease||Investor Excitement",
-      "source": "Orders",
-      "target": "Investor Excitement",
-      "rel": "Decrease",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",

@@ -1,535 +1,325 @@
 {
   "month": "2012-01",
   "stats": {
-    "nodes": 75,
-    "edges": 61,
+    "nodes": 45,
+    "edges": 40,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "AMAT",
-      "type": "STOCK_TICKER",
+      "type": "COMPANY",
       "degree": 2,
-      "x": -16.141504658760326,
-      "y": 427.58591087615883
+      "x": -73.67003146333052,
+      "y": -65.71603128649464
     },
     {
       "id": "Stock Price",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "FININSTRUMENTINFO",
       "degree": 3,
-      "x": 625.3439127128443,
-      "y": 432.99593660599584
+      "x": 670.6585260862843,
+      "y": 189.7102016459235
     },
     {
       "id": "Investor",
       "type": "CONCEPT",
-      "degree": 2,
-      "x": -658.100630968536,
-      "y": 422.46375240213143
-    },
-    {
-      "id": "Long Position",
-      "type": "CONCEPT",
       "degree": 1,
-      "x": -801.5385091631674,
-      "y": 519.5428746521972
+      "x": -817.5472449874347,
+      "y": -324.63590677675705
     },
     {
       "id": "Broadcom CorpA",
       "type": "COMPANY",
-      "degree": 3,
-      "x": -327.04077676548974,
-      "y": -237.06163641992114
+      "degree": 1,
+      "x": 131.94668154664356,
+      "y": 743.226148972245
     },
     {
       "id": "Qualcomm Atheros Inc",
       "type": "FINANCIALENTITY",
-      "degree": 2,
-      "x": 351.71050555682115,
-      "y": -411.646126512211
-    },
-    {
-      "id": "HomePlug Technology Solutions",
-      "type": "PRODUCT",
       "degree": 1,
-      "x": 563.2772301251958,
-      "y": -670.474477180814
+      "x": 158.126753740822,
+      "y": 801.6627636242105
     },
     {
-      "id": "MoCA 20Integrated HD Set Top Boxes",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -659.9758439550909,
-      "y": -631.727869486056
-    },
-    {
-      "id": "Hybrid IP Gateway Solutions",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -783.5625929439007,
-      "y": 249.94377106504254
-    },
-    {
-      "id": "Marvell Technology Group",
+      "id": "Marvell Technology Group Ltd",
       "type": "COMPANY",
       "degree": 1,
-      "x": 246.09330448610459,
-      "y": -763.3473286843368
+      "x": 381.2328727906272,
+      "y": -160.60762028190751
     },
     {
       "id": "Stock Market",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": 267.7431147591285,
-      "y": -827.4543678509855
-    },
-    {
-      "id": "MRVL",
-      "type": "STOCKTICKER",
-      "degree": 3,
-      "x": -137.29621584920076,
-      "y": 31.50714321133659
-    },
-    {
-      "id": "Overbought Conditions",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 162.04410924834377,
-      "y": 817.6003101247262
+      "x": 655.8571645124404,
+      "y": -291.94314559541033
     },
     {
-      "id": "Seven Days In A Row",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -798.7973891010466,
-      "y": 336.69391918535786
-    },
-    {
-      "id": "Technical Levels",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 105.30244406181123,
-      "y": -894.537450020596
-    },
-    {
-      "id": "Nasdaq Stocks",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": -398.58277711977155,
-      "y": 542.1449796123859
-    },
-    {
-      "id": "Sectors",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": -548.8064914879445,
-      "y": 788.2456846646338
-    },
-    {
-      "id": "Qualcomm Inc",
+      "id": "Qualcomm",
       "type": "COMPANY",
-      "degree": 4,
-      "x": -34.946442792925154,
-      "y": 187.1224628280829
+      "degree": 3,
+      "x": 11.440326678318208,
+      "y": -89.224418461327
     },
     {
       "id": "Snapdragon S4 processor",
       "type": "PRODUCT",
       "degree": 3,
-      "x": -479.1280803796409,
-      "y": 367.08586064152064
+      "x": 104.65196997855136,
+      "y": -583.4677209712763
     },
     {
       "id": "Microsoft Corporation",
       "type": "COMPANY",
       "degree": 2,
-      "x": -56.877606697343076,
-      "y": 681.0144523031357
-    },
-    {
-      "id": "Windows 8 operating system",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -899.9048714659764,
-      "y": 53.023162703649945
-    },
-    {
-      "id": "Snapdragon Usage",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -698.4083583015532,
-      "y": 667.8802160313782
-    },
-    {
-      "id": "Snapdragon S4 Processor",
-      "type": "PRODUCT",
-      "degree": 2,
-      "x": -68.37038732845272,
-      "y": 736.6649817515769
+      "x": 119.41830649354927,
+      "y": -648.527516564081
     },
     {
       "id": "Windows 8 Operating System",
       "type": "PRODUCT",
       "degree": 2,
-      "x": -23.449262237429203,
-      "y": 719.97911500798
+      "x": 138.3350771463139,
+      "y": -711.9178281186454
     },
     {
       "id": "Shares",
       "type": "FININSTRUMENTINFO",
       "degree": 3,
-      "x": 346.44299677262893,
-      "y": 429.96929839230586
+      "x": -550.9973529947706,
+      "y": 408.6663876585021
     },
     {
       "id": "Altera Corp",
       "type": "COMPANY",
       "degree": 1,
-      "x": 722.2698885385861,
-      "y": 529.42420484093
+      "x": -398.267506698987,
+      "y": 768.074337449632
     },
     {
       "id": "Analog Devices",
       "type": "COMPANY",
       "degree": 1,
-      "x": 438.8832224525693,
-      "y": 800.8163902535921
+      "x": -867.6372143403684,
+      "y": 214.420939838013
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
-      "degree": 8,
-      "x": -8.139699827047476,
-      "y": 71.91693878712763
+      "degree": 7,
+      "x": -356.217185592061,
+      "y": 180.99834841664855
     },
     {
       "id": "CSX Corp",
       "type": "COMPANY",
       "degree": 2,
-      "x": -425.85526099116635,
-      "y": -170.43965051131784
+      "x": -344.66182126608317,
+      "y": 247.89250069023797
     },
     {
       "id": "Earnings Report",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "CONCEPT",
       "degree": 2,
-      "x": -871.0706904389262,
-      "y": -328.9339393563448
+      "x": -697.5795471025408,
+      "y": 703.7490082748736
     },
     {
       "id": "Quantitative Easing",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 615.2909163500971,
-      "y": -401.5276609325458
+      "x": -427.98797758782155,
+      "y": -372.22256105788125
     },
     {
       "id": "Yield Curve",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "MACRO_INDICATOR",
       "degree": 1,
-      "x": 710.8385936688354,
-      "y": -458.63565471023065
+      "x": -620.4384321281743,
+      "y": -567.0337297669864
     },
     {
-      "id": "VMware",
+      "id": "VMware Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 52.21002053871472,
-      "y": -58.45625368877617
+      "x": 31.315584533138228,
+      "y": -261.10441571895376
     },
     {
       "id": "Earnings",
-      "type": "ECONINDICATOR",
-      "degree": 10,
-      "x": 18.83554485149526,
-      "y": -13.381643648675755
+      "type": "CONCEPT",
+      "degree": 8,
+      "x": 7.65499997866253,
+      "y": -210.2338688695926
     },
     {
       "id": "Western Digital",
       "type": "COMPANY",
       "degree": 1,
-      "x": 72.29456216532513,
-      "y": -13.79920374727549
-    },
-    {
-      "id": "Zions Bancorp",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 5.518966714090637,
-      "y": -68.57319046225231
-    },
-    {
-      "id": "Kansas City Southern",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 41.06166433593019,
-      "y": 26.819435132443306
-    },
-    {
-      "id": "Eurozone finance ministers",
-      "type": "FINANCIALENTITY",
-      "degree": 1,
-      "x": 351.28651983399334,
-      "y": -624.4796532586164
-    },
-    {
-      "id": "Fiscal Struggles",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 442.7550456475798,
-      "y": -788.971694577009
-    },
-    {
-      "id": "Federal Open Market Committee",
-      "type": "FINANCIALENTITY",
-      "degree": 1,
-      "x": 568.1321767805812,
-      "y": 298.8070841154822
-    },
-    {
-      "id": "Interestrate Decision",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": 753.1942852720701,
-      "y": 399.75824473827527
-    },
-    {
-      "id": "Ben Bernanke",
-      "type": "FINANCIALENTITY",
-      "degree": 1,
-      "x": -669.2328753697055,
-      "y": -455.522504000017
-    },
-    {
-      "id": "FOMC Meeting",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -713.7286852152082,
-      "y": -454.9878604184103
-    },
-    {
-      "id": "Economic Reports",
-      "type": "MACRO_INDICATOR",
-      "degree": 1,
-      "x": 761.3876022628694,
-      "y": -121.9804182197233
-    },
-    {
-      "id": "Expectations",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 843.438103816412,
-      "y": -134.76904131791468
+      "x": -49.875486053797424,
+      "y": -198.4646877064187
     },
     {
       "id": "Earnings Decrease",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 2,
-      "x": 553.1383885169573,
-      "y": -229.47979846135894
+      "x": -174.8022627223903,
+      "y": -580.3009424841547
     },
     {
       "id": "Consumer Buying Power",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 754.8212972011899,
-      "y": 282.91383140250457
-    },
-    {
-      "id": "Issues in Japan and China",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 772.7206000241436,
-      "y": 191.79529723914314
+      "x": -188.27785781675686,
+      "y": 616.6318444420416
     },
     {
       "id": "Revenue",
-      "type": "ECON_INDICATOR",
+      "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 685.7871051280621,
-      "y": -286.83442239874927
+      "x": -203.31419340994566,
+      "y": -710.5009992519805
     },
     {
       "id": "DuPont",
       "type": "COMPANY",
       "degree": 1,
-      "x": -29.621919155783527,
-      "y": -30.424231666621402
+      "x": -33.85943626584819,
+      "y": -257.67799778628483
     },
     {
       "id": "FourthQuarter Profit",
       "type": "ECONINDICATOR",
       "degree": 2,
-      "x": -805.8665482805459,
-      "y": 86.48037673970536
+      "x": -161.0129538993631,
+      "y": 840.7520248244008
     },
     {
       "id": "68",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -755.5676395057517,
-      "y": 75.28812731904284
+      "x": -213.39354064668427,
+      "y": 849.4069670572761
     },
     {
       "id": "FirstQuarter Earnings",
       "type": "ECONINDICATOR",
-      "degree": 2,
-      "x": -230.41920487260262,
-      "y": 602.0432981553384
-    },
-    {
-      "id": "16 Cents To 24 Cents Per Share",
-      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -309.28519863425345,
-      "y": 754.9455088113999
+      "x": -900.0,
+      "y": -112.17575412759234
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
       "degree": 2,
-      "x": 329.77398364976057,
-      "y": 231.16731825680648
+      "x": 261.4531996007258,
+      "y": -23.378339630362966
     },
     {
       "id": "Profitability",
-      "type": "ECONINDICATOR",
+      "type": "ECON_INDICATOR",
       "degree": 1,
-      "x": -528.8122772418667,
-      "y": -723.3098342650663
+      "x": -690.2465998999922,
+      "y": -376.66178183262355
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 565.2295432077882,
-      "y": 695.4745972206629
+      "x": 705.9735175433867,
+      "y": -45.05559610908207
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 640.5209021552994,
-      "y": 475.21172811701285
-    },
-    {
-      "id": "Samsung",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 790.1382468738339,
-      "y": 116.94107502663705
-    },
-    {
-      "id": "Foundry Capex",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": 843.9629172268077,
-      "y": 140.45925230655232
+      "x": 515.8404025750345,
+      "y": 158.70483776759093
     },
     {
       "id": "Analysts",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -620.7485644147635,
-      "y": -127.7499855462612
+      "x": 202.03420053728328,
+      "y": -177.69514883902056
     },
     {
-      "id": "Taiwan Semiconductor Manufacturing Company",
+      "id": "Taiwan Semiconductor Manufacturing Company Ltd",
       "type": "COMPANY",
       "degree": 2,
-      "x": -815.316427904224,
-      "y": -145.12946371550242
+      "x": 301.92715247350293,
+      "y": -282.6452333944725
     },
     {
       "id": "Proposed Spending",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -856.8778077661485,
-      "y": -127.61130080598579
+      "x": 517.9641026009399,
+      "y": -486.7575115956839
     },
     {
       "id": "Global Foundries",
       "type": "COMPANY",
       "degree": 1,
-      "x": -658.3535681099577,
-      "y": -97.14362992600387
-    },
-    {
-      "id": "Process Control Tools",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -39.62125559062191,
-      "y": -737.7757512977757
-    },
-    {
-      "id": "Foundry Industry",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": -42.51054963929247,
-      "y": -847.7313171708311
+      "x": 302.40217999219425,
+      "y": -309.5415565696286
     },
     {
       "id": "KLA-Tencor Corporation",
       "type": "COMPANY",
       "degree": 2,
-      "x": 614.4560108621322,
-      "y": 33.53742572177857
+      "x": 523.9574036611443,
+      "y": -228.08254618182193
     },
     {
       "id": "Zacks Consensus Estimate",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 825.0696045699931,
-      "y": -314.22137525507424
+      "x": 374.59713140001696,
+      "y": -645.4020772007223
     },
     {
       "id": "Novellus Systems",
       "type": "COMPANY",
       "degree": 1,
-      "x": -126.03379867399869,
-      "y": 813.7273761645127
+      "x": 478.53928557976934,
+      "y": 319.32662643683426
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 1,
-      "x": -138.2942124387028,
-      "y": 900.0
+      "x": 642.47136172247,
+      "y": 421.6364267796017
     },
     {
       "id": "First Quarter Results",
-      "type": "ECON_INDICATOR",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 701.4764394959532,
-      "y": -559.1164352608441
+      "x": -427.0014733024781,
+      "y": -692.0524068422598
     },
     {
       "id": "BROADCOM CORP-A",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": -263.9929220281086,
-      "y": -784.7256190081604
+      "x": 273.3391476245385,
+      "y": 573.365382154354
     },
     {
       "id": "Free Stock Analysis Report",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 3,
-      "x": -298.2004623331727,
-      "y": -875.770569003464
-    },
-    {
-      "id": "QUALCOMM INC",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -250.2359473626125,
-      "y": -714.5159131440722
+      "x": 333.307779390456,
+      "y": 712.4878056688535
     },
     {
       "id": "TEXAS INSTRS",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": -293.73651285326315,
-      "y": -806.744070478737
+      "x": 352.34298999201775,
+      "y": 662.3147913201815
     }
   ],
   "edges": [
@@ -539,22 +329,6 @@
       "target": "Stock Price",
       "rel": "Increases",
       "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Investor||Hedges||Long Position",
-      "source": "Investor",
-      "target": "Long Position",
-      "rel": "Hedges",
-      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -598,58 +372,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Atheros Inc||Develops||HomePlug Technology Solutions",
-      "source": "Qualcomm Atheros Inc",
-      "target": "HomePlug Technology Solutions",
-      "rel": "Develops",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Broadcom CorpA||Launches||MoCA 20Integrated HD Set Top Boxes",
-      "source": "Broadcom CorpA",
-      "target": "MoCA 20Integrated HD Set Top Boxes",
-      "rel": "Launches",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Broadcom CorpA||Launches||Hybrid IP Gateway Solutions",
-      "source": "Broadcom CorpA",
-      "target": "Hybrid IP Gateway Solutions",
-      "rel": "Launches",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Marvell Technology Group||Experiences SellOff In||Stock Market",
-      "source": "Marvell Technology Group",
+      "id": "Marvell Technology Group Ltd||Experiences SellOff||Stock Market",
+      "source": "Marvell Technology Group Ltd",
       "target": "Stock Market",
-      "rel": "Experiences SellOff In",
+      "rel": "Experiences SellOff",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -662,79 +388,15 @@
       "event_type": "OTHER"
     },
     {
-      "id": "MRVL||Pullback Due To||Overbought Conditions",
-      "source": "MRVL",
-      "target": "Overbought Conditions",
-      "rel": "Pullback Due To",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "MRVL||Closes Higher For||Seven Days In A Row",
-      "source": "MRVL",
-      "target": "Seven Days In A Row",
-      "rel": "Closes Higher For",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "MRVL||Reaches Bull Market Territory||Technical Levels",
-      "source": "MRVL",
-      "target": "Technical Levels",
-      "rel": "Reaches Bull Market Territory",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Nasdaq Stocks||Show Biggest Edges In||Sectors",
-      "source": "Nasdaq Stocks",
-      "target": "Sectors",
-      "rel": "Show Biggest Edges In",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Unveils||Snapdragon S4 processor",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Unveils||Snapdragon S4 processor",
+      "source": "Qualcomm",
       "target": "Snapdragon S4 processor",
       "rel": "Unveils",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -758,56 +420,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Snapdragon S4 processor||Designed For||Windows 8 operating system",
+      "id": "Snapdragon S4 processor||Powered By||Windows 8 Operating System",
       "source": "Snapdragon S4 processor",
-      "target": "Windows 8 operating system",
-      "rel": "Designed For",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Enhances||Snapdragon Usage",
-      "source": "Qualcomm Inc",
-      "target": "Snapdragon Usage",
-      "rel": "Enhances",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Qualcomm Inc||Unveils||Snapdragon S4 Processor",
-      "source": "Qualcomm Inc",
-      "target": "Snapdragon S4 Processor",
-      "rel": "Unveils",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Snapdragon S4 Processor||Powered By||Windows 8 Operating System",
-      "source": "Snapdragon S4 Processor",
       "target": "Windows 8 Operating System",
       "rel": "Powered By",
       "rel_cat": "SSI",
@@ -934,8 +548,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "VMware||Reports||Earnings",
-      "source": "VMware",
+      "id": "VMware Inc||Reports||Earnings",
+      "source": "VMware Inc",
       "target": "Earnings",
       "rel": "Reports",
       "rel_cat": "SSI",
@@ -982,38 +596,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Zions Bancorp||Reports||Earnings",
-      "source": "Zions Bancorp",
-      "target": "Earnings",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Kansas City Southern||Reports||Earnings",
-      "source": "Kansas City Southern",
-      "target": "Earnings",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "CSX Corp||Reports||Earnings",
       "source": "CSX Corp",
       "target": "Earnings",
@@ -1023,70 +605,6 @@
       "polarity": "neutral",
       "origin": "news",
       "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Eurozone finance ministers||Hold Meeting On||Fiscal Struggles",
-      "source": "Eurozone finance ministers",
-      "target": "Fiscal Struggles",
-      "rel": "Hold Meeting On",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Federal Open Market Committee||Releases||Interestrate Decision",
-      "source": "Federal Open Market Committee",
-      "target": "Interestrate Decision",
-      "rel": "Releases",
-      "rel_cat": "GMM",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Ben Bernanke||Delivers Speech On||FOMC Meeting",
-      "source": "Ben Bernanke",
-      "target": "FOMC Meeting",
-      "rel": "Delivers Speech On",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Economic Reports||Influences||Expectations",
-      "source": "Economic Reports",
-      "target": "Expectations",
-      "rel": "Influences",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1113,22 +631,6 @@
       "id": "Texas Instruments||Is Affected By||Consumer Buying Power",
       "source": "Texas Instruments",
       "target": "Consumer Buying Power",
-      "rel": "Is Affected By",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments||Is Affected By||Issues in Japan and China",
-      "source": "Texas Instruments",
-      "target": "Issues in Japan and China",
       "rel": "Is Affected By",
       "rel_cat": "GMM",
       "causal_type": "CAUSAL",
@@ -1222,22 +724,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "FirstQuarter Earnings||Ranges From||16 Cents To 24 Cents Per Share",
-      "source": "FirstQuarter Earnings",
-      "target": "16 Cents To 24 Cents Per Share",
-      "rel": "Ranges From",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Texas Instruments Incorporated||Reports||Earnings",
       "source": "Texas Instruments Incorporated",
       "target": "Earnings",
@@ -1318,25 +804,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Samsung||Doubles||Foundry Capex",
-      "source": "Samsung",
-      "target": "Foundry Capex",
-      "rel": "Doubles",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Analysts||Expect||Taiwan Semiconductor Manufacturing Company",
+      "id": "Analysts||Expect||Taiwan Semiconductor Manufacturing Company Ltd",
       "source": "Analysts",
-      "target": "Taiwan Semiconductor Manufacturing Company",
+      "target": "Taiwan Semiconductor Manufacturing Company Ltd",
       "rel": "Expect",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
@@ -1350,8 +820,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Taiwan Semiconductor Manufacturing Company||Increases||Proposed Spending",
-      "source": "Taiwan Semiconductor Manufacturing Company",
+      "id": "Taiwan Semiconductor Manufacturing Company Ltd||Increases||Proposed Spending",
+      "source": "Taiwan Semiconductor Manufacturing Company Ltd",
       "target": "Proposed Spending",
       "rel": "Increases",
       "rel_cat": "SSI",
@@ -1370,22 +840,6 @@
       "source": "Global Foundries",
       "target": "Proposed Spending",
       "rel": "Increases",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Process Control Tools||See Increase In Orders For||Foundry Industry",
-      "source": "Process Control Tools",
-      "target": "Foundry Industry",
-      "rel": "See Increase In Orders For",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1446,8 +900,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Inc||Reports||First Quarter Results",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Reports||First Quarter Results",
+      "source": "Qualcomm",
       "target": "First Quarter Results",
       "rel": "Reports",
       "rel_cat": "SSI",
@@ -1478,8 +932,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "QUALCOMM INC||Analyst Report Available For||Free Stock Analysis Report",
-      "source": "QUALCOMM INC",
+      "id": "Qualcomm||Analyst Report Available For||Free Stock Analysis Report",
+      "source": "Qualcomm",
       "target": "Free Stock Analysis Report",
       "rel": "Analyst Report Available For",
       "rel_cat": "GFMK",

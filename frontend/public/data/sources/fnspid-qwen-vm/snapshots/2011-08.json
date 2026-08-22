@@ -1,673 +1,426 @@
 {
   "month": "2011-08",
   "stats": {
-    "nodes": 92,
-    "edges": 79,
+    "nodes": 59,
+    "edges": 57,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "ISM Index",
       "type": "MACROINDICATOR",
-      "degree": 2,
-      "x": -46.74343405724669,
-      "y": 24.33916079609697
-    },
-    {
-      "id": "Forecasts",
-      "type": "CONCEPT",
       "degree": 1,
-      "x": 690.3487051842554,
-      "y": 422.58123009863584
+      "x": 749.2719786651514,
+      "y": 158.41083914328146
     },
     {
       "id": "Manufacturing Sector",
       "type": "SECTOR",
-      "degree": 2,
-      "x": -781.8107233179851,
-      "y": -374.0304077443692
+      "degree": 1,
+      "x": 833.650282595379,
+      "y": 174.60621704356763
     },
     {
       "id": "Analog Devices",
       "type": "COMPANY",
-      "degree": 11,
-      "x": -186.39535107987035,
-      "y": 179.96745667387694
+      "degree": 8,
+      "x": -107.19353325341626,
+      "y": 194.02123111550563
     },
     {
       "id": "Stock Price Drop",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 66.56209078428546,
-      "y": 875.4746197623443
+      "x": -654.1240429911364,
+      "y": 470.79140978232937
     },
     {
       "id": "Fiscal Second Quarter Results",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -637.9505053503034,
-      "y": 790.8461254789755
+      "x": 331.70061379346646,
+      "y": 684.651268168478
     },
     {
       "id": "Full Year Guidance",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 744.5844790212202,
-      "y": -343.0749241696478
+      "x": -363.92710625268603,
+      "y": 736.1833501258022
     },
     {
       "id": "Sterne Agee",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": -137.15385392677447,
-      "y": -624.8602043688425
+      "x": -498.90970858900846,
+      "y": 80.79847098329026
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
-      "degree": 4,
-      "x": -141.09172088147548,
-      "y": -582.9754392804607
-    },
-    {
-      "id": "Weakening Industrial Markets",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -40.279774935751995,
-      "y": -726.4291354135538
-    },
-    {
-      "id": "Weakening Consumer Markets",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 244.37351269287237,
-      "y": -743.7692747812355
+      "degree": 2,
+      "x": -601.4763251806544,
+      "y": 214.75022323991436
     },
     {
       "id": "Dividend Yield",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "FININSTRUMENTINFO",
       "degree": 6,
-      "x": -541.0025417841107,
-      "y": -380.10157004534017
+      "x": -536.4076683944306,
+      "y": 224.896800215318
     },
     {
       "id": "Stock Price",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 9,
-      "x": -512.8953221454021,
-      "y": -409.0318624300898
+      "type": "FININSTRUMENTINFO",
+      "degree": 8,
+      "x": -497.1193065116272,
+      "y": 244.33844363519532
     },
     {
       "id": "Companies",
       "type": "COMPANY",
       "degree": 1,
-      "x": 51.83641692011586,
-      "y": -648.737336398109
+      "x": -445.68640593146694,
+      "y": -611.8325643850967
     },
     {
       "id": "Credit",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 64.09999192514807,
-      "y": -806.7282639003234
-    },
-    {
-      "id": "Firms",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -352.28217330722725,
-      "y": 631.1369282515845
-    },
-    {
-      "id": "Debt",
-      "type": "BOND",
-      "degree": 1,
-      "x": -473.62027213434715,
-      "y": 880.6313649639199
+      "x": -494.8023609740652,
+      "y": -614.7147095043115
     },
     {
       "id": "Consumer Spending",
       "type": "MACRO_INDICATOR",
       "degree": 1,
-      "x": -334.51231639679605,
-      "y": -437.30238273037946
+      "x": -647.3511196805894,
+      "y": -125.16639181452435
     },
     {
       "id": "Market Conditions",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -507.67141807497825,
-      "y": -659.3440408209807
+      "x": -738.3740090517865,
+      "y": -157.9214303948017
     },
     {
-      "id": "Price Target Lowered By Citigroup",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": 698.6778720651644,
-      "y": -251.02234078475377
-    },
-    {
-      "id": "Earnings Estimates Lowered By Citigroup",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": -791.7256007489461,
-      "y": 417.82546991859147
-    },
-    {
-      "id": "Dividend Yield Based On Stock Price",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": -790.8380349961271,
-      "y": 598.0440591112944
-    },
-    {
-      "id": "Saks",
+      "id": "Saks Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -276.4612194239788,
-      "y": 792.5577432156035
+      "x": 575.8742199370772,
+      "y": -732.3830030594961
     },
     {
       "id": "Earnings Report",
-      "type": "EVENT",
-      "degree": 7,
-      "x": -238.86447487078945,
-      "y": 769.1920753970784
+      "type": "CONCEPT",
+      "degree": 6,
+      "x": 599.7991705804384,
+      "y": -685.3716484889528
     },
     {
       "id": "TJX Companies",
       "type": "COMPANY",
       "degree": 1,
-      "x": -197.97589983557558,
-      "y": 678.4452726658635
+      "x": 399.25250593923744,
+      "y": -501.0209639814181
     },
     {
       "id": "Dell",
       "type": "COMPANY",
       "degree": 4,
-      "x": 78.75712239240221,
-      "y": 33.62112006880231
+      "x": 244.06431051643327,
+      "y": 2.3329489741056846
     },
     {
       "id": "JinkoSolar",
       "type": "COMPANY",
       "degree": 1,
-      "x": -210.54583659858827,
-      "y": 803.9778899456456
-    },
-    {
-      "id": "Perrigo",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -249.0982068877739,
-      "y": 822.9403425158018
-    },
-    {
-      "id": "Existing Home Sales",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": -885.1166515966552,
-      "y": -51.60592981230463
-    },
-    {
-      "id": "Real Estate Market",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": -900.0,
-      "y": -16.52240988523663
-    },
-    {
-      "id": "August Philadelphia Fed index",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": -712.7420075589176,
-      "y": -346.63607176167534
+      "x": 540.9963616039691,
+      "y": -674.24497548652
     },
     {
       "id": "Third Quarter Earnings",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -423.25351827446434,
-      "y": -356.2407356175929
+      "x": -409.7842430008164,
+      "y": 134.66957008891904
     },
     {
       "id": "FullYear Forecast",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -591.5379353036498,
-      "y": 637.2312703914718
+      "x": -452.004966180749,
+      "y": 538.0496549320359
     },
     {
       "id": "Analyst Expectations",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -654.5110791550959,
-      "y": 693.2499046843702
-    },
-    {
-      "id": "Fourth Quarter Profits Forecast",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 309.8879488499261,
-      "y": -374.7337915263653
-    },
-    {
-      "id": "60 cents to 68 cents per share",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": 488.108514138516,
-      "y": -626.7011958990287
-    },
-    {
-      "id": "Fourth Quarter Revenue Forecast",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 340.54890062484077,
-      "y": 672.3356542531602
-    },
-    {
-      "id": "715 million to 755 million",
-      "type": "FININSTRUMENTINFO",
-      "degree": 1,
-      "x": 408.8097409422752,
-      "y": 787.5048828426768
+      "x": -512.6217812406624,
+      "y": 629.5588703267645
     },
     {
       "id": "Revenue Growth",
       "type": "ECONINDICATOR",
       "degree": 2,
-      "x": -216.32186012684465,
-      "y": -748.1260366432454
+      "x": 327.3118688117974,
+      "y": 577.8265013798949
     },
     {
       "id": "GDP",
       "type": "MACROINDICATOR",
       "degree": 1,
-      "x": -253.7231466909383,
-      "y": -744.058988230988
-    },
-    {
-      "id": "Weak Government Spending",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -233.04026480764344,
-      "y": -569.2369374728474
-    },
-    {
-      "id": "Corporate Spending",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -318.90185306554025,
-      "y": -758.4899176419882
+      "x": 350.7121053613288,
+      "y": 536.3741622727101
     },
     {
       "id": "HewlettPackard",
       "type": "COMPANY",
       "degree": 3,
-      "x": 121.36156141067839,
-      "y": -41.399961482519586
+      "x": -537.550218220958,
+      "y": -208.16329179034244
     },
     {
       "id": "Royal Bank of Canada",
       "type": "FINANCIALENTITY",
       "degree": 2,
-      "x": 782.0085196303886,
-      "y": 130.87360918381935
+      "x": 687.8063017791941,
+      "y": 536.8106415773009
     },
     {
       "id": "Target Price",
       "type": "FININSTRUMENTINFO",
-      "degree": 2,
-      "x": 834.4428853750666,
-      "y": 130.8698002295152
+      "degree": 3,
+      "x": 677.8499641209891,
+      "y": 588.4618697498231
     },
     {
       "id": "Bank of America Merrill Lynch",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 609.0367490594751,
-      "y": 117.18690525394483
+      "x": 631.1697773770783,
+      "y": 542.9359677917125
     },
     {
       "id": "Earnings Call",
       "type": "EVENT",
       "degree": 1,
-      "x": 754.9728677581835,
-      "y": 325.5235135016447
-    },
-    {
-      "id": "HNZ",
-      "type": "STOCKTICKER",
-      "degree": 1,
-      "x": 713.3881033657211,
-      "y": 195.77760425936066
-    },
-    {
-      "id": "HJ Heinz",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 678.1475179348328,
-      "y": 210.38768918613147
+      "x": -576.4766177914939,
+      "y": -659.6803259436698
     },
     {
       "id": "AMAT",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 1,
-      "x": 59.90360884951846,
-      "y": -93.06082959734123
+      "x": 19.474397324020785,
+      "y": -147.60034757728664
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 5,
-      "x": 88.86483552117119,
-      "y": -77.94563053910555
-    },
-    {
-      "id": "HRL",
-      "type": "STOCKTICKER",
-      "degree": 1,
-      "x": 636.6782302724339,
-      "y": -138.4900083368135
-    },
-    {
-      "id": "Hormel Foods",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 810.0387494616018,
-      "y": -196.5463764448206
+      "x": -13.403053066304816,
+      "y": -114.67326082221444
     },
     {
       "id": "Japanese Yen",
       "type": "CURRENCY",
       "degree": 1,
-      "x": -492.3546276298758,
-      "y": -450.03264063839964
+      "x": -419.45774100976223,
+      "y": 326.83583921194884
     },
     {
       "id": "US Dollar",
       "type": "CURRENCY",
       "degree": 1,
-      "x": -631.7287224045441,
-      "y": -581.1588914560256
+      "x": -525.2925323900955,
+      "y": 439.8345383542009
     },
     {
       "id": "Motorola Mobility",
       "type": "COMPANY",
       "degree": 1,
-      "x": 462.34346571119664,
-      "y": 481.7925311867074
+      "x": -129.5976620418978,
+      "y": 741.4445086522057
     },
     {
       "id": "Google",
       "type": "COMPANY",
       "degree": 1,
-      "x": 659.5484336178059,
-      "y": 662.3797135095867
+      "x": -132.5848892321162,
+      "y": 802.4070570675191
     },
     {
       "id": "National Semiconductor",
       "type": "COMPANY",
       "degree": 1,
-      "x": 498.6094849413483,
-      "y": -378.00203420387516
+      "x": -511.35614040669907,
+      "y": 165.71433013254497
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": 639.1682335767299,
-      "y": -498.5684394842951
+      "x": -773.9297882890851,
+      "y": 255.1052467322723
     },
     {
       "id": "Gold",
       "type": "CURRENCY",
       "degree": 1,
-      "x": 283.72345999484367,
-      "y": 802.8385282400961
+      "x": 564.8695024810672,
+      "y": -566.1464915072294
     },
     {
       "id": "Newmont Mining",
       "type": "COMPANY",
       "degree": 1,
-      "x": 307.0392074548791,
-      "y": 894.2061295416453
+      "x": 698.1372715160871,
+      "y": -660.4182625981159
     },
     {
       "id": "David Tepper",
-      "type": "CONCEPT",
+      "type": "FINANCIAL_ENTITY",
       "degree": 1,
-      "x": -798.9486508208589,
-      "y": 145.66720404525037
+      "x": 717.0291075044411,
+      "y": -13.944647667742464
     },
     {
       "id": "Mosaic",
       "type": "COMPANY",
       "degree": 3,
-      "x": -830.5203944793485,
-      "y": 171.46459242822093
+      "x": 900.0,
+      "y": -21.939615642735124
     },
     {
       "id": "Morgan Stanley",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": -658.2395077530342,
-      "y": 122.2629534397482
+      "x": 717.1353808218715,
+      "y": -35.25273368357023
     },
     {
       "id": "Goldman Sachs",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": -878.7799131394246,
-      "y": 179.44305387356985
+      "x": 722.7973696118837,
+      "y": 6.510774250342554
     },
     {
       "id": "American Eagle Outfitters",
       "type": "COMPANY",
       "degree": 1,
-      "x": 277.09536927954025,
-      "y": 489.1864367924691
+      "x": -351.67692996297825,
+      "y": -321.146295726538
     },
     {
       "id": "Earnings",
-      "type": "ECONINDICATOR",
-      "degree": 6,
-      "x": 363.85789859295005,
-      "y": 574.7417822919695
-    },
-    {
-      "id": "Collective Brands",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 300.67185193654944,
-      "y": 491.8976532278679
+      "type": "CONCEPT",
+      "degree": 5,
+      "x": -465.2497549944561,
+      "y": -383.07098072096613
     },
     {
       "id": "Express",
       "type": "COMPANY",
       "degree": 1,
-      "x": 337.31978869649834,
-      "y": 546.0172007191715
+      "x": -381.7803656030571,
+      "y": -320.92080464082244
     },
     {
-      "id": "Guess",
+      "id": "Guess Inc",
       "type": "COMPANY",
-      "degree": 1,
-      "x": 304.16655833455206,
-      "y": 555.2923992065992
-    },
-    {
-      "id": "Doug Yearley",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 525.2361902073485,
-      "y": -546.9832632776024
-    },
-    {
-      "id": "Future",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 491.6980926600828,
-      "y": -517.0703058290361
-    },
-    {
-      "id": "Historic Low Interest Rates",
-      "type": "MACROINDICATOR",
-      "degree": 1,
-      "x": 480.3637116637402,
-      "y": 419.7172849692506
-    },
-    {
-      "id": "Housing Industry",
-      "type": "SECTOR",
       "degree": 2,
-      "x": 598.1070286418868,
-      "y": 525.4996300359813
-    },
-    {
-      "id": "DemographicsDriven Demand",
-      "type": "ECONINDICATOR",
-      "degree": 1,
-      "x": 460.6763538847532,
-      "y": 422.18795103505283
-    },
-    {
-      "id": "Fed Chairman Ben Bernanke",
-      "type": "FINANCIALENTITY",
-      "degree": 1,
-      "x": -618.4853112857157,
-      "y": 204.2732568546259
-    },
-    {
-      "id": "Near and LongTerm Prospects for the US",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -825.1355833335117,
-      "y": 303.09945483844945
+      "x": 181.4713309499222,
+      "y": -354.3072426712982
     },
     {
       "id": "Investors",
       "type": "CONCEPT",
       "degree": 3,
-      "x": 831.8775570033939,
-      "y": -230.06241539138733
+      "x": 828.3721228319366,
+      "y": -325.28592678227955
     },
     {
-      "id": "Guess Inc",
+      "id": "Hormel Foods",
       "type": "COMPANY",
       "degree": 1,
-      "x": 691.5001355803555,
-      "y": -178.7295687723591
+      "x": 748.1241608515195,
+      "y": -291.3535527100373
     },
     {
       "id": "Bank of America",
       "type": "COMPANY",
       "degree": 2,
-      "x": -426.5050455382358,
-      "y": -336.6306494819586
+      "x": -523.2457734707214,
+      "y": 186.00925517097434
     },
     {
       "id": "Investment",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -362.41757266051144,
-      "y": -260.03013224689687
+      "x": -561.3577327262863,
+      "y": 123.92528056153569
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 454.32450858380383,
-      "y": 686.2258342974242
+      "x": -557.7718585094906,
+      "y": -450.4713654183562
     },
     {
       "id": "Forecast",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -448.24403529881886,
-      "y": -311.0247286989504
-    },
-    {
-      "id": "Aftermarket Trading",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -633.2285310689313,
-      "y": -507.1920184538756
+      "x": -384.50002476452056,
+      "y": 134.93296309061543
     },
     {
       "id": "QCOM",
       "type": "STOCKTICKER",
-      "degree": 4,
-      "x": 97.72948928371434,
-      "y": -176.9310607379038
-    },
-    {
-      "id": "16567 Percent",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 336.40700875119165,
-      "y": -751.6184366966531
+      "degree": 3,
+      "x": 115.805750084757,
+      "y": -711.5348851238651
     },
     {
       "id": "5984 USD",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 134.69217854516833,
-      "y": -738.7985781342446
+      "x": -261.81755380343577,
+      "y": -875.2709265102342
     },
     {
       "id": "Outlook",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 394.675562052041,
-      "y": -667.6383918594207
+      "x": -79.33327558887967,
+      "y": -874.4115844458463
     },
     {
       "id": "Credit Suisse",
-      "type": "FINANCIAL_ENTITY",
+      "type": "FINANCIALENTITY",
       "degree": 2,
-      "x": 157.24915789729317,
-      "y": -576.4191074919888
+      "x": 716.0424309423012,
+      "y": 466.9862664477834
     },
     {
       "id": "Earnings Estimates",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 724.0931663830468,
-      "y": -452.4890709510685
+      "x": 739.5914915266591,
+      "y": 343.00665031083525
     },
     {
-      "id": "Price Target",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
-      "x": -409.4971954624305,
-      "y": -701.4525477453833
-    },
-    {
-      "id": "Qualcomm Inc",
+      "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 2,
-      "x": -435.4607292457662,
-      "y": -312.68099787262065
+      "x": -472.1452884226728,
+      "y": 175.06707856953884
     }
   ],
   "edges": [
-    {
-      "id": "ISM Index||Falls Short Of||Forecasts",
-      "source": "ISM Index",
-      "target": "Forecasts",
-      "rel": "Falls Short Of",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
     {
       "id": "ISM Index||Negative Impact On||Manufacturing Sector",
       "source": "ISM Index",
@@ -749,38 +502,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments Incorporated||Faces||Weakening Industrial Markets",
-      "source": "Texas Instruments Incorporated",
-      "target": "Weakening Industrial Markets",
-      "rel": "Faces",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Texas Instruments Incorporated||Faces||Weakening Consumer Markets",
-      "source": "Texas Instruments Incorporated",
-      "target": "Weakening Consumer Markets",
-      "rel": "Faces",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Texas Instruments Incorporated||Has||Dividend Yield",
       "source": "Texas Instruments Incorporated",
       "target": "Dividend Yield",
@@ -829,22 +550,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Firms||Carry||Debt",
-      "source": "Firms",
-      "target": "Debt",
-      "rel": "Carry",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Consumer Spending||Evaporates Due To||Market Conditions",
       "source": "Consumer Spending",
       "target": "Market Conditions",
@@ -861,56 +566,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices||Sees||Price Target Lowered By Citigroup",
-      "source": "Analog Devices",
-      "target": "Price Target Lowered By Citigroup",
-      "rel": "Sees",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Analog Devices||Sees||Earnings Estimates Lowered By Citigroup",
-      "source": "Analog Devices",
-      "target": "Earnings Estimates Lowered By Citigroup",
-      "rel": "Sees",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Analog Devices||Pays||Dividend Yield Based On Stock Price",
-      "source": "Analog Devices",
-      "target": "Dividend Yield Based On Stock Price",
-      "rel": "Pays",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Saks||Releases||Earnings Report",
-      "source": "Saks",
+      "id": "Saks Inc||Releases||Earnings Report",
+      "source": "Saks Inc",
       "target": "Earnings Report",
       "rel": "Releases",
       "rel_cat": "SSI",
@@ -979,54 +636,6 @@
       "rel": "Releases",
       "rel_cat": "SSI",
       "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Perrigo||Releases||Earnings Report",
-      "source": "Perrigo",
-      "target": "Earnings Report",
-      "rel": "Releases",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Existing Home Sales||Announced||Real Estate Market",
-      "source": "Existing Home Sales",
-      "target": "Real Estate Market",
-      "rel": "Announced",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "August Philadelphia Fed index||Announced||Manufacturing Sector",
-      "source": "August Philadelphia Fed index",
-      "target": "Manufacturing Sector",
-      "rel": "Announced",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1149,38 +758,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Fourth Quarter Profits Forecast||Ranges From||60 cents to 68 cents per share",
-      "source": "Fourth Quarter Profits Forecast",
-      "target": "60 cents to 68 cents per share",
-      "rel": "Ranges From",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Fourth Quarter Revenue Forecast||Ranges From||715 million to 755 million",
-      "source": "Fourth Quarter Revenue Forecast",
-      "target": "715 million to 755 million",
-      "rel": "Ranges From",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Dell||Forecasts||Revenue Growth",
       "source": "Dell",
       "target": "Revenue Growth",
@@ -1203,22 +780,6 @@
       "rel": "Decreases",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Weak Government Spending||Negative Impact On||Corporate Spending",
-      "source": "Weak Government Spending",
-      "target": "Corporate Spending",
-      "rel": "Negative Impact On",
-      "rel_cat": "GMM",
-      "causal_type": "CAUSAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1325,41 +886,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "HNZ||Belongs To||HJ Heinz",
-      "source": "HNZ",
-      "target": "HJ Heinz",
-      "rel": "Belongs To",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "AMAT||Belongs To||Applied Materials",
       "source": "AMAT",
       "target": "Applied Materials",
-      "rel": "Belongs To",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "HRL||Belongs To||Hormel Foods",
-      "source": "HRL",
-      "target": "Hormel Foods",
       "rel": "Belongs To",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
@@ -1517,22 +1046,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Collective Brands||Reports||Earnings",
-      "source": "Collective Brands",
-      "target": "Earnings",
-      "rel": "Reports",
-      "rel_cat": "SSI",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Express||Reports||Earnings",
       "source": "Express",
       "target": "Earnings",
@@ -1549,76 +1062,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Guess||Reports||Earnings",
-      "source": "Guess",
+      "id": "Guess Inc||Reports||Earnings",
+      "source": "Guess Inc",
       "target": "Earnings",
       "rel": "Reports",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Doug Yearley||Remains Upbeat About||Future",
-      "source": "Doug Yearley",
-      "target": "Future",
-      "rel": "Remains Upbeat About",
-      "rel_cat": "GMM",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Historic Low Interest Rates||Bode Well For||Housing Industry",
-      "source": "Historic Low Interest Rates",
-      "target": "Housing Industry",
-      "rel": "Bode Well For",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "DemographicsDriven Demand||Bodes Well For||Housing Industry",
-      "source": "DemographicsDriven Demand",
-      "target": "Housing Industry",
-      "rel": "Bodes Well For",
-      "rel_cat": "GMM",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "Fed Chairman Ben Bernanke||Delivers Speech On||Near and LongTerm Prospects for the US",
-      "source": "Fed Chairman Ben Bernanke",
-      "target": "Near and LongTerm Prospects for the US",
-      "rel": "Delivers Speech On",
-      "rel_cat": "SSI",
-      "causal_type": "OPERATIONAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1757,42 +1206,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Stock Price||Declines||Aftermarket Trading",
-      "source": "Stock Price",
-      "target": "Aftermarket Trading",
-      "rel": "Declines",
-      "rel_cat": "SSI",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Applied Materials||Pays||Dividend Yield",
       "source": "Applied Materials",
       "target": "Dividend Yield",
       "rel": "Pays",
-      "rel_cat": "GFMK",
-      "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
-      "id": "QCOM||Potential Profit Of||16567 Percent",
-      "source": "QCOM",
-      "target": "16567 Percent",
-      "rel": "Potential Profit Of",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -1821,10 +1238,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "QCOM||Beat Expectations||Earnings Report",
+      "id": "QCOM||Beats Expectations||Earnings Report",
       "source": "QCOM",
       "target": "Earnings Report",
-      "rel": "Beat Expectations",
+      "rel": "Beats Expectations",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
@@ -1869,9 +1286,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Credit Suisse||Lowers||Price Target",
+      "id": "Credit Suisse||Lowers||Target Price",
       "source": "Credit Suisse",
-      "target": "Price Target",
+      "target": "Target Price",
       "rel": "Lowers",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1885,8 +1302,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Inc||Has||Dividend Yield",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Has||Dividend Yield",
+      "source": "Qualcomm",
       "target": "Dividend Yield",
       "rel": "Has",
       "rel_cat": "GFMK",
@@ -1901,8 +1318,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm Inc||Based On||Stock Price",
-      "source": "Qualcomm Inc",
+      "id": "Qualcomm||Based On||Stock Price",
+      "source": "Qualcomm",
       "target": "Stock Price",
       "rel": "Based On",
       "rel_cat": "GFMK",
