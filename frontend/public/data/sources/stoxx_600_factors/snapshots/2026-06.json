@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 36,
-    "edges": 26,
+    "nodes": 38,
+    "edges": 27,
     "scored_edges": 0
   },
   "nodes": [
@@ -257,6 +257,20 @@
       "degree": 1,
       "x": 506.51646964947713,
       "y": 384.60442399798944
+    },
+    {
+      "id": "PlayStation Studios",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Sony Interactive Entertainment",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -675,6 +689,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "GUIDANCE"
+    },
+    {
+      "id": "PlayStation Studios||Belongs To||Sony Interactive Entertainment",
+      "source": "PlayStation Studios",
+      "target": "Sony Interactive Entertainment",
+      "rel": "Belongs To",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }

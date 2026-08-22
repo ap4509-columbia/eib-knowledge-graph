@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 187,
-    "edges": 155,
+    "nodes": 190,
+    "edges": 158,
     "scored_edges": 0
   },
   "nodes": [
@@ -1314,6 +1314,27 @@
       "degree": 1,
       "x": 710.8251243498058,
       "y": 211.20111986662786
+    },
+    {
+      "id": "Pilot",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -584.8544796246703,
+      "y": -98.85058517219552
+    },
+    {
+      "id": "Mid-Air Collision With Pennsylvania Police Helicopter",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -600.6539526326633,
+      "y": 80.71481970201974
+    },
+    {
+      "id": "INDYCAR",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -163.92143083444103,
+      "y": 469.5561683062746
     }
   ],
   "edges": [
@@ -3796,6 +3817,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "STMicroelectronics N.V.||Has Ticker||ENXTPA:STMPA",
+      "source": "STMicroelectronics N.V.",
+      "target": "ENXTPA:STMPA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Pilot||Dies In||Mid-Air Collision With Pennsylvania Police Helicopter",
+      "source": "Pilot",
+      "target": "Mid-Air Collision With Pennsylvania Police Helicopter",
+      "rel": "Dies In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "INDYCAR||Will Introduce||Shell",
+      "source": "INDYCAR",
+      "target": "Shell",
+      "rel": "Will Introduce",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

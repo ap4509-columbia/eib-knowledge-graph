@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 26,
-    "edges": 17,
+    "nodes": 28,
+    "edges": 18,
     "scored_edges": 0
   },
   "nodes": [
@@ -187,6 +187,20 @@
       "degree": 1,
       "x": -900.0,
       "y": 317.93244021586355
+    },
+    {
+      "id": "Nestl\u00e9 S.A.",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "SWX:NESN",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -461,6 +475,22 @@
       "materiality_usd": 582000000.0,
       "materiality_log": 20.182,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Nestl\u00e9 S.A.||Has Ticker||SWX:NESN",
+      "source": "Nestl\u00e9 S.A.",
+      "target": "SWX:NESN",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }

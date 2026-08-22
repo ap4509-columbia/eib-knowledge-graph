@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 2,
-    "edges": 1,
+    "nodes": 6,
+    "edges": 3,
     "scored_edges": 0
   },
   "nodes": [
@@ -19,6 +19,34 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Jim Cramer",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 705.8331725319806,
+      "y": -558.2402493711152
+    },
+    {
+      "id": "3M Company",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 861.0412429866086,
+      "y": -881.8922617596519
+    },
+    {
+      "id": "Comcast",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -750.3159712270452,
+      "y": 540.1325111307669
+    },
+    {
+      "id": "CMCSA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
     }
   ],
   "edges": [
@@ -37,6 +65,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "Jim Cramer||Recommends||3M Company",
+      "source": "Jim Cramer",
+      "target": "3M Company",
+      "rel": "Recommends",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Comcast||Has Ticker||CMCSA",
+      "source": "Comcast",
+      "target": "CMCSA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
