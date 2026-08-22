@@ -1,0 +1,4773 @@
+{
+  "https://www.nasdaq.com/articles/broker-darlings-dow-intel-corp-ranks-top-15-analyst-pick-2015-03-02": [
+    {
+      "sub": "INTC",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "Intel Corp",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSM",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TXN",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "INTC",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "TSM",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "INTC",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "TXN",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corp",
+      "sub_type": "COMPANY",
+      "rel": "Operates In",
+      "rel_category": "GFMK",
+      "obj": "Semiconductors",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "Semiconductors",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Inc",
+      "sub_type": "COMPANY",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "Semiconductors",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSM",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TXN",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corp",
+      "sub_type": "COMPANY",
+      "rel": "Is Ranked",
+      "rel_category": "GMM",
+      "obj": "15th",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/arm-holdings-plc-thinks-it-can-grab-big-pieces-server-and-networking-chip-markets-2015-03": [
+    {
+      "sub": "ARM Holdings",
+      "sub_type": "COMPANY",
+      "rel": "Designs",
+      "rel_category": "GFMK",
+      "obj": "Processors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Processors",
+      "sub_type": "PRODUCT",
+      "rel": "Power",
+      "rel_category": "GFMK",
+      "obj": "Smartphones and Tablets",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Outperforms",
+      "rel_category": "SSI",
+      "obj": "ARM Holdings",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARM Server Players",
+      "sub_type": "COMPANY",
+      "rel": "Generate Less Revenue Than",
+      "rel_category": "GMM",
+      "obj": "2 Billion USD",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/new-focus-drives-integrated-device-technology-rebound-2015-03-02": [
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Linear Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Infineon Technologies",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Formulates Plan For",
+      "rel_category": "SSI",
+      "obj": "Consistently Strong Growth",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures",
+      "rel_category": "SSI",
+      "obj": "Memory Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures",
+      "rel_category": "SSI",
+      "obj": "Logic Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Manufactures",
+      "rel_category": "SSI",
+      "obj": "Telecom Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Serves Market",
+      "rel_category": "SSI",
+      "obj": "Consumer Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Serves Market",
+      "rel_category": "SSI",
+      "obj": "Computer Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Serves Market",
+      "rel_category": "SSI",
+      "obj": "Communications Infrastructure Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Expected To Book",
+      "rel_category": "SSI",
+      "obj": "Order Inflow For New Products",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDT",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts Increase",
+      "rel_category": "SSI",
+      "obj": "Margins",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/alcatel-lucent-offers-small-cell-solution-to-telus-analyst-blog-2015-03-03": [
+    {
+      "sub": "AlcatelLucent",
+      "sub_type": "COMPANY",
+      "rel": "Collaborates With",
+      "rel_category": "SSI",
+      "obj": "Qualcomm Technologies Inc",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AlcatelLucent",
+      "sub_type": "COMPANY",
+      "rel": "Aids",
+      "rel_category": "GMM",
+      "obj": "TELUS CORP",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AlcatelLucent",
+      "sub_type": "COMPANY",
+      "rel": "Provides",
+      "rel_category": "GMM",
+      "obj": "LTE Connectivity",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AlcatelLucent",
+      "sub_type": "COMPANY",
+      "rel": "Provides",
+      "rel_category": "GMM",
+      "obj": "3G Connectivity",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "AlcatelLucent",
+      "sub_type": "COMPANY",
+      "rel": "Provides",
+      "rel_category": "GMM",
+      "obj": "WiFi Capacity",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-outs-cherry-trail-atom-x5-and-atom-x7-heres-what-you-need-know-2015-03-03": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Next Generation Tablet Platform",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Next Generation Tablet Platform",
+      "sub_type": "PRODUCT",
+      "rel": "Built On",
+      "rel_category": "GFMK",
+      "obj": "14Nanometer Manufacturing Technology",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Next Generation Tablet Platform",
+      "sub_type": "PRODUCT",
+      "rel": "Based On",
+      "rel_category": "GFMK",
+      "obj": "Microsoft Windows Operating System",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Next Generation Tablet Platform",
+      "sub_type": "PRODUCT",
+      "rel": "Based On",
+      "rel_category": "GFMK",
+      "obj": "Googles Android",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Next Generation Tablet Platform",
+      "sub_type": "PRODUCT",
+      "rel": "Improves Performance Of",
+      "rel_category": "SSI",
+      "obj": "Graphics Processing",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Graphics Processing",
+      "sub_type": "CONCEPT",
+      "rel": "Enables",
+      "rel_category": "SSI",
+      "obj": "3D Games",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-corporation-launches-new-lte-and-connectivity-solutions-heres-what-you-need-know": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Strives For",
+      "rel_category": "SSI",
+      "obj": "Connectivity Chip Suite",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Connectivity Chip Suite",
+      "sub_type": "PRODUCT",
+      "rel": "Boosts",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Improves",
+      "rel_category": "SSI",
+      "obj": "Competitiveness",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Mobile Market Competitors",
+      "sub_type": "FINANCIAL_ENTITY",
+      "rel": "Hurt By",
+      "rel_category": "GMM",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/1-potential-problem-intel-corporations-broxton-chip-2015-03-03": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Qualcomm",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Aims To",
+      "rel_category": "SSI",
+      "obj": "Increase Average Selling Prices",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Increase Average Selling Prices",
+      "sub_type": "CONCEPT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Increase Average Selling Prices",
+      "sub_type": "CONCEPT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Gross Profit Dollars",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/sandisk-unveils-200gb-microsd-card-64gb-inand-device-analyst-blog-2015-03-03": [
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "SanDisk Corp",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Currency Fluctuations",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Negative Impact On",
+      "rel_category": "GMM",
+      "obj": "SanDisk Corp",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SanDisk Corp",
+      "sub_type": "COMPANY",
+      "rel": "Unveils",
+      "rel_category": "SSI",
+      "obj": "Ultra microSDXC UHSI Premium Edition",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/microchip-mchp-expands-dac-product-family-for-new-usage-analyst-blog-2015-03-04": [
+    {
+      "sub": "Microchip Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Expands",
+      "rel_category": "SSI",
+      "obj": "DigitaltoAnalog Converter Product Line",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "DigitaltoAnalog Converter Product Line",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "NonVolatile Memory",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "DigitaltoAnalog Converter Product Line",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "I2 Compatible Serial Interface",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Inphi Corp",
+      "sub_type": "COMPANY",
+      "rel": "Rated As",
+      "rel_category": "SSI",
+      "obj": "Buy",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Rated As",
+      "rel_category": "SSI",
+      "obj": "Buy",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MACom Technology Solutions Holdings Inc",
+      "sub_type": "COMPANY",
+      "rel": "Rated As",
+      "rel_category": "SSI",
+      "obj": "Buy",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/a-comprehensive-guide-to-semiconductor-etf-investing-etf-news-and-commentary-2015-03-04": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "ETF",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corp",
+      "sub_type": "COMPANy",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "ETF",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "ETF",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Applied Materials",
+      "sub_type": "COMPANY",
+      "rel": "Is Included In",
+      "rel_category": "GFMK",
+      "obj": "ETF",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Manufacturing Operations",
+      "sub_type": "CONCEPT",
+      "rel": "Shifts To",
+      "rel_category": "SSI",
+      "obj": "Asia",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Innovation",
+      "sub_type": "CONCEPT",
+      "rel": "Remains Within",
+      "rel_category": "GMM",
+      "obj": "Country",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Semiconductor Sector",
+      "sub_type": "SECTOR",
+      "rel": "Employs Labor",
+      "rel_category": "GMM",
+      "obj": "Labor Force",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Industrial Automation",
+      "sub_type": "PRODUCT",
+      "rel": "Consumes",
+      "rel_category": "SSI",
+      "obj": "Semiconductors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Automotive Industry",
+      "sub_type": "SECTOR",
+      "rel": "Consumes",
+      "rel_category": "SSI",
+      "obj": "Semiconductors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Aerospace And Defense",
+      "sub_type": "SECTOR",
+      "rel": "Consumes",
+      "rel_category": "SSI",
+      "obj": "Semiconductors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Infotainment Systems",
+      "sub_type": "PRODUCT",
+      "rel": "Drives Consumption Of",
+      "rel_category": "GMM",
+      "obj": "Automotive Semiconductors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/notable-etf-inflow-detected-smh-tsm-asml-armh-2015-03-04": [
+    {
+      "sub": "TSM",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Decreases",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Decreases",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARMH",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Decreases",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Tracks Performance Of",
+      "rel_category": "GFMK",
+      "obj": "List of Holdings",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSM",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "ASML Holding NV",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARMH",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Belongs To",
+      "rel_category": "GFMK",
+      "obj": "Arm Holdings plc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Has 200 Day Moving Average",
+      "rel_category": "GFMK",
+      "obj": "Price Level",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Has Low Point In Year",
+      "rel_category": "GFMK",
+      "obj": "Low Point",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Has High Point In Year",
+      "rel_category": "GFMK",
+      "obj": "High Point",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qld-altr-aal-adi-large-outflows-detected-etf-2015-03-04": [
+    {
+      "sub": "Altera Corp",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "American Airlines Group Inc",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ProShares Ultra QQQ",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Witnesses Outflow",
+      "rel_category": "GMM",
+      "obj": "Investor Demand",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Outflow",
+      "sub_type": "CONCEPT",
+      "rel": "Decreases",
+      "rel_category": "GMM",
+      "obj": "ETF Shares Outstanding",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-mar-5-2015-emc-bac-grmn-rio-ge-qqq-klac-mu-dnr-ms-gild-aapl-2015": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Has Recommendation In",
+      "rel_category": "GFMK",
+      "obj": "Zacks",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Traded At",
+      "rel_category": "GMM",
+      "obj": "29.32 USD",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Garmin Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Days To Cover",
+      "rel_category": "GMM",
+      "obj": "15.500908",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/heres-how-qualcomm-making-smartphones-smarter-2015-03-05": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Develops",
+      "rel_category": "SSI",
+      "obj": "Zeroth",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zeroth",
+      "sub_type": "PRODUCT",
+      "rel": "Includes",
+      "rel_category": "SSI",
+      "obj": "Snapdragon 820 Processor",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zeroth",
+      "sub_type": "PRODUCT",
+      "rel": "Enhances",
+      "rel_category": "SSI",
+      "obj": "Visual Perception",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts Growth In",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Licensing Cognitive Learning",
+      "rel_category": "SSI",
+      "obj": "Ongoing Revenue Source",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/will-qualcomm-inc-keep-using-arm-holdings-plcs-biglittle-2015-03-06": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Samsung",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Apple",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Offers",
+      "rel_category": "GFMK",
+      "obj": "BestInClass Power Consumption and Performance",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/facebook-stock-gets-likes-zuckerberg-connects-world-2015-03-06": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Includes As Member",
+      "rel_category": "SSI",
+      "obj": "Founding Members",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Samsung",
+      "sub_type": "COMPANY",
+      "rel": "Includes As Member",
+      "rel_category": "SSI",
+      "obj": "Founding Members",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Facebook",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Team Of Engineers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Team Of Engineers",
+      "sub_type": "CONCEPT",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Flying Drones And Satellites",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Flying Drones And Satellites",
+      "sub_type": "PRODUCT",
+      "rel": "Provides",
+      "rel_category": "SSI",
+      "obj": "Internet Connections",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Facebook",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Quarterly Earnings",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Quarterly Earnings",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Beat",
+      "rel_category": "SSI",
+      "obj": "Mobile Monetization",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nvidia-nvda-brings-12gb-geforce-titan-x-graphics-card-analyst-blog-2015-03-09": [
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "QUALCOMM Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New Product Offering",
+      "sub_type": "CONCEPT",
+      "rel": "Boosts",
+      "rel_category": "SSI",
+      "obj": "NVIDIA Sales",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "New Product Offering",
+      "sub_type": "CONCEPT",
+      "rel": "Attracts",
+      "rel_category": "SSI",
+      "obj": "New Users",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Releases",
+      "rel_category": "SSI",
+      "obj": "SHIELD SetTop Box",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SHIELD SetTop Box",
+      "sub_type": "PRODUCT",
+      "rel": "Runs On",
+      "rel_category": "GFMK",
+      "obj": "Android Operating System",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Unveils",
+      "rel_category": "SSI",
+      "obj": "GeForce Titan X GPU",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/marvell-technology-group-ltd-mrvl-ex-dividend-date-scheduled-march-10-2015-2015-03-09": [
+    {
+      "sub": "Marvell Technology",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "GMM",
+      "obj": "Cash Dividend",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIAL_ENTITY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology",
+      "sub_type": "COMPANY",
+      "rel": "Underperforms",
+      "rel_category": "SSI",
+      "obj": "Industry Average",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Shareholders",
+      "sub_type": "STOCKHOLDER",
+      "rel": "Eligible For",
+      "rel_category": "GMM",
+      "obj": "Cash Dividend Payment",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/look-stocks-howard-marks-keeps-buying-2015-03-09": [
+    {
+      "sub": "Howard Marks",
+      "sub_type": "FINANCIAL_ENTITY",
+      "rel": "Works For",
+      "rel_category": "GFMK",
+      "obj": "Oaktree Capital Management LP",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Howard Marks",
+      "sub_type": "FINANCIAL_ENTITY",
+      "rel": "Expresses Opinion On",
+      "rel_category": "GFMK",
+      "obj": "Anything Can Be A Good Idea At One Price And Time",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/what-arm-holdings-plc-calling-its-post-cortex-a72-core-2015-03-09": [
+    {
+      "sub": "David Lutz",
+      "sub_type": "FINANCIAL_ENTITY",
+      "rel": "Highlights",
+      "rel_category": "SSI",
+      "obj": "Ares core",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ares core",
+      "sub_type": "PRODUCT",
+      "rel": "Improves",
+      "rel_category": "SSI",
+      "obj": "FloatingPoint Performance",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "A72",
+      "sub_type": "PRODUCT",
+      "rel": "Features",
+      "rel_category": "SSI",
+      "obj": "Redesigned FloatingPoint Unit",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-mar-9-2015-ge-vale-bac-dow-pfe-qcom-pbr-qqq-msft-csco-aapl-intc": [
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Price Of",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "7455",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Traded Volume Is",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "1217195",
+      "obj_type": "INTEGER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks",
+      "sub_type": "CONCEPT",
+      "rel": "Provides Recommendation For",
+      "rel_category": "GFMK",
+      "obj": "QUALCOMM Incorporated",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "General Electric Company",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Price Of",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "2564",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "General Electric Company",
+      "sub_type": "COMPANY",
+      "rel": "Traded Volume Is",
+      "rel_category": "FININSTRUMENTINFO",
+      "obj": "2611496",
+      "obj_type": "INTEGER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/us-stocks-eye-lower-open-dollar-strengthens-expected-rate-hike-greece-china-inflation": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Approves",
+      "rel_category": "SSI",
+      "obj": "Share Buyback Program",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Annual Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "US Federal Reserve",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Expected To Hike",
+      "rel_category": "GMM",
+      "obj": "Interest Rates",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Interest Rates",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Negative Impact On",
+      "rel_category": "GMM",
+      "obj": "Stock Futures",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Inflation Data",
+      "sub_type": "CONCEPT",
+      "rel": "Disappoints",
+      "rel_category": "GMM",
+      "obj": "China",
+      "obj_type": "COUNTRY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Inflation Data",
+      "sub_type": "CONCEPT",
+      "rel": "Negatively Impacts",
+      "rel_category": "GMM",
+      "obj": "Overseas Markets",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Greece",
+      "sub_type": "CONCEPT",
+      "rel": "Renewed Concerns About",
+      "rel_category": "GMM",
+      "obj": "Eurozone Partners",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/3-cheap-dividend-stocks-you-can-buy-right-now-2015-03-10": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Holds Market Share In",
+      "rel_category": "SSI",
+      "obj": "Global Baseband Processing Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "China",
+      "sub_type": "CONCEPT",
+      "rel": "Begins Rollout Of",
+      "rel_category": "GMM",
+      "obj": "3G4G LTE Technology",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Takes Advantage Of",
+      "rel_category": "SSI",
+      "obj": "FirstTime Cellular Sales",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Serves Suburban Markets",
+      "rel_category": "SSI",
+      "obj": "Consumer Upgrades To LTECapable Devices",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has Low PEG Ratio",
+      "rel_category": "GFMK",
+      "obj": "PEG Ratio",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has Forward PE Ratio",
+      "rel_category": "GFMK",
+      "obj": "Forward PE",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Pays Dividend Yield",
+      "rel_category": "GFMK",
+      "obj": "Dividend Yield",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/notable-etf-inflow-detected-iwb-qcom-cvs-amgn-2015-03-10": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "CVS Health Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Decreases",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Amgen Inc",
+      "sub_type": "COMPANY",
+      "rel": "Decreases",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IWB",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Tracks",
+      "rel_category": "GFMK",
+      "obj": "Sector Holdings",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IWB",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Has 52 Week Range",
+      "rel_category": "GFMK",
+      "obj": "10136  11879",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IWB Units",
+      "sub_type": "PRODUCT",
+      "rel": "Can Be Created Or Destroyed",
+      "rel_category": "GMM",
+      "obj": "To Accommodate Investor Demand",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/much-needed-apple-inc-ipad-mini-upgrade-coming-soon-2015-03-10": [
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Saves Resources For",
+      "rel_category": "SSI",
+      "obj": "Future Device",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Reduces Cost",
+      "rel_category": "GMM",
+      "obj": "Manufacturing Costs",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "iPad Sales",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Increases Due To",
+      "rel_category": "GMM",
+      "obj": "Product Strategy",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-showcases-new-mobile-technology-2015-mobile-world-congress-2015-03-10": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Improves",
+      "rel_category": "SSI",
+      "obj": "Profitability",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Reduces",
+      "rel_category": "SSI",
+      "obj": "Building Material Cost",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Building Material Cost",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Impacts",
+      "rel_category": "SSI",
+      "obj": "Gross Margins",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/us-futures-echo-world-market-sentiment-amid-renewed-greece-concerns-weak-china-inflation": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Approves",
+      "rel_category": "SSI",
+      "obj": "15 billion Share Buyback Program",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Annual Dividend",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "US Stock Futures",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Point To Decrease",
+      "rel_category": "GMM",
+      "obj": "Stock Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "European Central Bank",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Increases Pressure On",
+      "rel_category": "GMM",
+      "obj": "Greece",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "China",
+      "sub_type": "COMPANY",
+      "rel": "Producer Price Index",
+      "rel_category": "SSI",
+      "obj": "Falls For 36th Month",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Wholesale Inventories",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Expected To Edge Up",
+      "rel_category": "GFMK",
+      "obj": "01",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/qualcomm-approves-%2415b-buyback-raises-dividend-stock-up-analyst-blog-2015-03-10": [
+    {
+      "sub": "Qualcomm Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Share Buyback Program",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Purchases",
+      "rel_category": "SSI",
+      "obj": "Shares",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Previous Share Repurchase Program",
+      "sub_type": "CONCEPT",
+      "rel": "Replaced By",
+      "rel_category": "GMM",
+      "obj": "Latest Share Buyback Program",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/motorola-solutions-inc-msi-ex-dividend-date-scheduled-march-11-2015-2015-03-10": [
+    {
+      "sub": "MSI",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "QUALCOMM Incorporated",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology sector",
+      "sub_type": "SECTOR",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "NTT DOCOMO Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MSI",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts",
+      "rel_category": "GMM",
+      "obj": "Earnings Growth",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Industry Average",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Is",
+      "rel_category": "GMM",
+      "obj": "Earnings Growth",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MSI",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "GFMK",
+      "obj": "Dividend",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/pre-market-most-active-mar-10-2015-tvix-htz-qqq-aapl-asx-cpe-nok-qcom-rdsa-xiv-bac-gain": [
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Is Traded At",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "QUALCOMM Incorporated",
+      "sub_type": "COMPANY",
+      "rel": "Has Recommendation Of",
+      "rel_category": "GMM",
+      "obj": "Buy Range",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "VelocityShares Daily 2x VIX Short Term ETN",
+      "sub_type": "DERIVATIVE",
+      "rel": "Is Traded At",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nasdaq-100-movers-vip-nvda-2015-03-10": [
+    {
+      "sub": "Electronic Arts",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Drop",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Price Gain",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA Corp",
+      "sub_type": "COMPANY",
+      "rel": "Top Performer In",
+      "rel_category": "GMM",
+      "obj": "Nasdaq 100 index",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "VimpelCom",
+      "sub_type": "COMPANY",
+      "rel": "Worst Performing In",
+      "rel_category": "GMM",
+      "obj": "Nasdaq 100 index",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/maxim-mxim-hits-a-52-week-high%3A-should-you-invest-now-analyst-blog-2015-03-10": [
+    {
+      "sub": "Microchip Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "GMM",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NXP Semiconductors NV",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "GMM",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "GMM",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-corporation-has-one-more-shot-mobile-2015-03-11": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Smartphone Growth",
+      "sub_type": "PRODUCT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Intel Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Tablet Growth",
+      "sub_type": "PRODUCT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Intel Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PC Business Health",
+      "sub_type": "CONCEPT",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Intel Stock Performance",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Worse PC Market",
+      "sub_type": "CONCEPT",
+      "rel": "Negative Scenario For",
+      "rel_category": "SSI",
+      "obj": "Intel Stock Performance",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Mobile Segment Success",
+      "sub_type": "CONCEPT",
+      "rel": "Necessary For",
+      "rel_category": "SSI",
+      "obj": "Intel Growth Path",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "14nm Manufacturing",
+      "sub_type": "PRODUCT",
+      "rel": "Critical To",
+      "rel_category": "SSI",
+      "obj": "Intel Mobile Group Success",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/ixn-ma-ebay-txn-etf-inflow-alert-2015-03-11": [
+    {
+      "sub": "MasterCard Inc",
+      "sub_type": "COMPANY",
+      "rel": "Decreases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "eBay Inc",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments Inc",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IXN",
+      "sub_type": "DERIVATIVE",
+      "rel": "Below 200 Day Moving Average",
+      "rel_category": "GMM",
+      "obj": "Price Performance",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IXN",
+      "sub_type": "DERIVATIVE",
+      "rel": "Within 52 Week Range",
+      "rel_category": "SSI",
+      "obj": "Price Level",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/3-cheap-growth-stocks-you-can-buy-right-now-2015-03-11": [
+    {
+      "sub": "SodaStream International",
+      "sub_type": "COMPANY",
+      "rel": "Disappoints",
+      "rel_category": "GFMK",
+      "obj": "Consumers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SodaStream International",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "CocaCola",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SodaStream International",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "PepsiCo",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SodaStream International",
+      "sub_type": "COMPANY",
+      "rel": "Impacts",
+      "rel_category": "GFMK",
+      "obj": "Sales",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Consumers",
+      "sub_type": "CONCEPT",
+      "rel": "Loses Trust In",
+      "rel_category": "GFMK",
+      "obj": "SodaStream International",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/atmel-corporation-atml-ex-dividend-date-scheduled-march-12-2015-2015-03-11": [
+    {
+      "sub": "ATML",
+      "sub_type": "COMPANY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Is Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ATML",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "GMM",
+      "obj": "Cash Dividend",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zacks Investment Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth Forecast",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ATML",
+      "sub_type": "COMPANY",
+      "rel": "Exceeds",
+      "rel_category": "SSI",
+      "obj": "Industry Average Earnings Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/may-1st-options-now-available-marvell-technology-group-mrvl-2015-03-12": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Has Trading History For",
+      "rel_category": "GFMK",
+      "obj": "MRVL",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "1650 Strike Call Option",
+      "sub_type": "DERIVATIVE",
+      "rel": "Derives Value From",
+      "rel_category": "GMM",
+      "obj": "MRVL",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "1650 Strike Call Option",
+      "sub_type": "DERIVATIVE",
+      "rel": "OutoftheMoney By",
+      "rel_category": "GMM",
+      "obj": "2%",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Investors",
+      "sub_type": "CONCEPT",
+      "rel": "Buy",
+      "rel_category": "SSI",
+      "obj": "1650 Strike Call Option",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Has Options Available For",
+      "rel_category": "GFMK",
+      "obj": "May 1st Expiration",
+      "obj_type": "EVENT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nvidia-adds-set-top-box-its-shield-family-2015-03-12": [
+    {
+      "sub": "SHIELD",
+      "sub_type": "PRODUCT",
+      "rel": "Upgraded To",
+      "rel_category": "SSI",
+      "obj": "Android 5.0 Lollipop",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Nvidia",
+      "sub_type": "COMPANY",
+      "rel": "Leverages Capability",
+      "rel_category": "SSI",
+      "obj": "PC Gaming Expertise",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Nvidia",
+      "sub_type": "COMPANY",
+      "rel": "Enters",
+      "rel_category": "SSI",
+      "obj": "Mobile Gaming Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/smh-tsm-asml-armh-etf-outflow-alert-2015-03-12": [
+    {
+      "sub": "TSM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Represents",
+      "rel_category": "SSI",
+      "obj": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCKTICKER",
+      "rel": "Represents",
+      "rel_category": "SSI",
+      "obj": "ASML Holding NV",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARMH",
+      "sub_type": "STOCKTICKER",
+      "rel": "Represents",
+      "rel_category": "SSI",
+      "obj": "Arm Holdings plc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Increases By",
+      "rel_category": "GMM",
+      "obj": "03",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCKTICKER",
+      "rel": "Decreases By",
+      "rel_category": "GMM",
+      "obj": "11",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARMH",
+      "sub_type": "STOCKTICKER",
+      "rel": "Decreases By",
+      "rel_category": "GMM",
+      "obj": "06",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has 52 Week Low",
+      "rel_category": "GFMK",
+      "obj": "4364",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "STOCKTICKER",
+      "rel": "Has 52 Week High",
+      "rel_category": "GFMK",
+      "obj": "5847",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "STOCKTICKER",
+      "rel": "Last Trade Price",
+      "rel_category": "GMM",
+      "obj": "5528",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/chipmaker-ambarella-shows-it-can-go-beyond-gopro-2015-03-12": [
+    {
+      "sub": "Ambarella",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Sony",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ambarella",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Panasonic",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ambarella",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ambarella",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Wall Street",
+      "sub_type": "CONCEPT",
+      "rel": "Focus On",
+      "rel_category": "GMM",
+      "obj": "Ambarella",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Ambarella",
+      "sub_type": "COMPANY",
+      "rel": "Supplies To",
+      "rel_category": "SSI",
+      "obj": "GoPro",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-corporation-reportedly-inside-next-apple-inc-iphone-2015-03-12": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Supplies Modem To",
+      "rel_category": "SSI",
+      "obj": "Apple",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "XMM 7360",
+      "sub_type": "PRODUCT",
+      "rel": "Used In Special Version Of iPhone",
+      "rel_category": "SSI",
+      "obj": "iPhone",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Special Version Of iPhone",
+      "sub_type": "PRODUCT",
+      "rel": "Targeted At Emerging Markets",
+      "rel_category": "SSI",
+      "obj": "Emerging Markets",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-rises-on-rumors-of-apple-contract-win-qualcomm-falls-analyst-blog-2015-03-12": [
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Supplies",
+      "rel_category": "SSI",
+      "obj": "Wireless Modem Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Previously Supplied",
+      "rel_category": "SSI",
+      "obj": "Wireless Modem Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Replaces",
+      "rel_category": "SSI",
+      "obj": "Qualcomm",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "XMM 7360",
+      "sub_type": "PRODUCT",
+      "rel": "Claims To Be",
+      "rel_category": "GFMK",
+      "obj": "Fastest and Most PowerEfficient LTE Modem",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/five-chipmakers-pursuing-chinas-hot-smartphone-market-2015-03-13": [
+    {
+      "sub": "Avago Technologies",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "SSI",
+      "obj": "Chipmakers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "SSI",
+      "obj": "Chipmakers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qorvo",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "SSI",
+      "obj": "Chipmakers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "SSI",
+      "obj": "Chipmakers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Skyworks Solutions",
+      "sub_type": "COMPANY",
+      "rel": "Includes In",
+      "rel_category": "SSI",
+      "obj": "Chipmakers",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IDC",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Forecasts",
+      "rel_category": "GMM",
+      "obj": "Smartphone Sales",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "China",
+      "sub_type": "CONCEPT",
+      "rel": "Expands",
+      "rel_category": "GMM",
+      "obj": "LTE Broadband Wireless Network",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Impacted By",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell Technology Group",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "MediaTek",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/american-woodmark-rio-tinto-intel-apple-and-qualcomm-highlighted-as-zacks-bull-and-bear-of": [
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Supplies",
+      "rel_category": "SSI",
+      "obj": "Wireless Modem Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Wireless Modem Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Loses Contract To",
+      "rel_category": "SSI",
+      "obj": "Intel Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/is-this-the-right-time-to-buy-cirrus-logic-crus-stock-analyst-blog-2015-03-13": [
+    {
+      "sub": "Company",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Texas Instruments Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Company",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "STMicroelectronics",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Company",
+      "sub_type": "COMPANY",
+      "rel": "Has Market Cap",
+      "rel_category": "GFMK",
+      "obj": "2.07 billion",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/texas-instruments-releases-80-v-10-a-gan-fet-module-analyst-blog-2015-03-16": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "LMG5200 GaN FET power stage",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET power stage",
+      "sub_type": "PRODUCT",
+      "rel": "Eliminates",
+      "rel_category": "SSI",
+      "obj": "Underfill Requirement",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET power stage",
+      "sub_type": "PRODUCT",
+      "rel": "Enhances",
+      "rel_category": "SSI",
+      "obj": "Board Manufacturability",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET power stage",
+      "sub_type": "PRODUCT",
+      "rel": "Reduces",
+      "rel_category": "SSI",
+      "obj": "Cost",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/new-report-says-taiwan-semiconductor-mfg-co-ltd-wins-most-apple-incs-a9-chips-2015-03-17": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has Exclusive Rights To",
+      "rel_category": "SSI",
+      "obj": "16nm TSMC Process",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSMC",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Aggressively Ramps",
+      "rel_category": "GMM",
+      "obj": "16nm Technology",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Will Build",
+      "rel_category": "SSI",
+      "obj": "Graphics Processors",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Graphics Processors",
+      "sub_type": "PRODUCT",
+      "rel": "Derives Value From",
+      "rel_category": "SSI",
+      "obj": "TSMC 16nm Technology",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/on-semiconductor-onnn-transphorm-develop-gan-products-analyst-blog-2015-03-17": [
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "SSI",
+      "obj": "LMG5200 GaN FET Power Stage",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Semiconductor Company",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET Power Stage",
+      "sub_type": "PRODUCT",
+      "rel": "Targeted For",
+      "rel_category": "SSI",
+      "obj": "High Power Industrial Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET Power Stage",
+      "sub_type": "PRODUCT",
+      "rel": "Targeted For",
+      "rel_category": "SSI",
+      "obj": "Computing Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET Power Stage",
+      "sub_type": "PRODUCT",
+      "rel": "Targeted For",
+      "rel_category": "SSI",
+      "obj": "Telecom Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "LMG5200 GaN FET Power Stage",
+      "sub_type": "PRODUCT",
+      "rel": "Targeted For",
+      "rel_category": "SSI",
+      "obj": "Networking Applications",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/how-intel-corporation-might-profit-apple-incs-new-iphone-2015-03-17": [
+    {
+      "sub": "Intel",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Offers",
+      "rel_category": "GMM",
+      "obj": "Subsidies",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Subsidies",
+      "sub_type": "CONCEPT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Comarketing Agreements",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Subsidies",
+      "sub_type": "CONCEPT",
+      "rel": "Includes",
+      "rel_category": "GFMK",
+      "obj": "Steeper Discounts",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Atom chips",
+      "sub_type": "PRODUCT",
+      "rel": "Discounted By",
+      "rel_category": "GMM",
+      "obj": "Intel",
+      "obj_type": "FINANCIALENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Logic boards",
+      "sub_type": "PRODUCT",
+      "rel": "Redesigning Assisted By",
+      "rel_category": "GMM",
+      "obj": "Financial Assistance",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Lenovo",
+      "sub_type": "COMPANY",
+      "rel": "Participates In",
+      "rel_category": "SSI",
+      "obj": "Subsidies Program",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Asus",
+      "sub_type": "COMPANY",
+      "rel": "Participates In",
+      "rel_category": "SSI",
+      "obj": "Subsidies Program",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Dell",
+      "sub_type": "COMPANY",
+      "rel": "Participates In",
+      "rel_category": "SSI",
+      "obj": "Subsidies Program",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Negotiates",
+      "rel_category": "GMM",
+      "obj": "Higher Levels Of Integration",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Aims For",
+      "rel_category": "GMM",
+      "obj": "LTE Chips In iPhones",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Apple",
+      "sub_type": "COMPANY",
+      "rel": "Incorporates",
+      "rel_category": "SSI",
+      "obj": "Intel LTE Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Negative Impact On",
+      "rel_category": "GMM",
+      "obj": "Revenue",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Smaller Players",
+      "sub_type": "CONCEPT",
+      "rel": "Impacts",
+      "rel_category": "SSI",
+      "obj": "Apple Growth",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/weeks-growth-income-stock-microchip-technology-mchp-video-blog-2015-03-17": [
+    {
+      "sub": "Microchip Technology",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Better Than Expected Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Sales",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Exceeds Estimates",
+      "rel_category": "SSI",
+      "obj": "Consensus Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Earnings Per Share",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Exceeds Estimates",
+      "rel_category": "SSI",
+      "obj": "Consensus Estimates",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/noteworthy-etf-outflows-pbp-qcom-yhoo-ctsh-2015-03-18": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Underperforms",
+      "rel_category": "GMM",
+      "obj": "Stock Market",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PBP",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Experiences Outflow",
+      "rel_category": "GMM",
+      "obj": "35.5 Million USD",
+      "obj_type": "CURRENCY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Outstanding Shares PBP",
+      "sub_type": "ECON_INDICATOR",
+      "rel": "Decreases By",
+      "rel_category": "GMM",
+      "obj": "9 Percent",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/why-qualcomms-dividend-increase-and-share-buyback-are-right-money-2015-03-18": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Generates",
+      "rel_category": "GFMK",
+      "obj": "Free Cash Flow",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Returns",
+      "rel_category": "GFMK",
+      "obj": "Dividends",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Returns",
+      "rel_category": "GFMK",
+      "obj": "Share Buybacks",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has",
+      "rel_category": "GFMK",
+      "obj": "Cash Stuffed Balance Sheet",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has Little Debt",
+      "rel_category": "GFMK",
+      "obj": "Debt",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/microsemi-to-boost-communications-suite-with-vitesse-buy-analyst-blog-2015-03-19": [
+    {
+      "sub": "Microchip Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "GMM",
+      "obj": "Stock Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NXP Semiconductors NV",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "GMM",
+      "obj": "Stock Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "GMM",
+      "obj": "Stock Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Microsemi Corp",
+      "sub_type": "COMPANY",
+      "rel": "Acquires",
+      "rel_category": "SSI",
+      "obj": "Vitesse Semiconductor Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Average Closing Price",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Determines",
+      "rel_category": "GFMK",
+      "obj": "Purchase Premium",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/upside-micron-despite-recent-price-volatility-2015-03-19": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Experiences Volatility In",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Reduces",
+      "rel_category": "GMM",
+      "obj": "Fully Diluted Shares",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Fully Diluted Shares Reduction",
+      "sub_type": "ECON_INDICATOR",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "EPS",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TVs",
+      "sub_type": "PRODUCT",
+      "rel": "Contributes To",
+      "rel_category": "SSI",
+      "obj": "Total Bit Demand",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PC Market",
+      "sub_type": "SECTOR",
+      "rel": "Comparably Smaller Than",
+      "rel_category": "SSI",
+      "obj": "TV Total Bit Demand",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/stmicroelectronics-nv-stm-ex-dividend-date-scheduled-march-23-2015-2015-03-20": [
+    {
+      "sub": "STM",
+      "sub_type": "COMPANY",
+      "rel": "Part Of",
+      "rel_category": "GFMK",
+      "obj": "Technology Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel Corporation",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "STM",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "STM",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "STM",
+      "sub_type": "COMPANY",
+      "rel": "Reports Forecast",
+      "rel_category": "SSI",
+      "obj": "Earnings Growth",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "STM",
+      "sub_type": "COMPANY",
+      "rel": "Surpasses Industry Average",
+      "rel_category": "GMM",
+      "obj": "Industry Average Earnings Growth",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/google-partners-with-intel-tag-heuer-for-luxury-smarwatch-analyst-blog-2015-03-20": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Will Use",
+      "rel_category": "SSI",
+      "obj": "Tag Heuer",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Android Wear",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Texas Instruments",
+      "sub_type": "COMPANY",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Android Wear",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Google",
+      "sub_type": "COMPANY",
+      "rel": "Launches",
+      "rel_category": "GMM",
+      "obj": "Android Wear",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Android Wear",
+      "sub_type": "CONCEPT",
+      "rel": "Offers",
+      "rel_category": "GMM",
+      "obj": "Lower Cost",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Qualcomm",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/cypress-semiconductor-corporation-cy-ex-dividend-date-scheduled-march-24-2015-2015-03-23": [
+    {
+      "sub": "CY",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Cash Dividend",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Shareholders",
+      "sub_type": "CONCEPT",
+      "rel": "Receive",
+      "rel_category": "SSI",
+      "obj": "Dividend Payment",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "CY",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "SSI",
+      "obj": "Industry Average Earnings Growth",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/forget-micron-mu-buy-these-semiconductor-stocks-instead-stocks-news-2015-03-23": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Flourishes",
+      "rel_category": "SSI",
+      "obj": "None",
+      "obj_type": "None",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Increases",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/latest-news-apple-incs-a9-2015-03-23": [
+    {
+      "sub": "Daiwa Securities",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Publishes Report On",
+      "rel_category": "SSI",
+      "obj": "TSMC",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Report",
+      "sub_type": "CONCEPT",
+      "rel": "Claims",
+      "rel_category": "SSI",
+      "obj": "Apple A9 Orders",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSMC",
+      "sub_type": "COMPANY",
+      "rel": "Secures",
+      "rel_category": "SSI",
+      "obj": "70 of Apple A9 Orders",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Bernstein Research",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Publishes Report On",
+      "rel_category": "SSI",
+      "obj": "Samsung",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Report",
+      "sub_type": "CONCEPT",
+      "rel": "Claims",
+      "rel_category": "SSI",
+      "obj": "Yield Difficulty",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Samsung",
+      "sub_type": "COMPANY",
+      "rel": "Experiences",
+      "rel_category": "SSI",
+      "obj": "Yield Difficulty",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSMC",
+      "sub_type": "COMPANY",
+      "rel": "Secures",
+      "rel_category": "SSI",
+      "obj": "40 of Apple A9 Business",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Stock Price",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Has Unlimited Room To Run For",
+      "rel_category": "GMM",
+      "obj": "Early InTheKnow Investors",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/does-intel-corporation-need-double-down-atom-2015-03-23": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Brings In Profits For",
+      "rel_category": "SSI",
+      "obj": "Core Line",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Atom",
+      "sub_type": "PRODUCT",
+      "rel": "Does Well For",
+      "rel_category": "SSI",
+      "obj": "Company",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Silvermont Atom Core",
+      "sub_type": "PRODUCT",
+      "rel": "Used To Great Effect By",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Low Cost PCs",
+      "sub_type": "PRODUCT",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Silvermont Atom Core",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Microservers",
+      "sub_type": "PRODUCT",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Silvermont Atom Core",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Tablets",
+      "sub_type": "PRODUCT",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Silvermont Atom Core",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/avago-launches-new-micro-itla-for-coherent-applications-analyst-blog-2015-03-24": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPETITOR",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Avago Technologies Limited",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qorvo",
+      "sub_type": "COMPETITOR",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Avago Technologies Limited",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Marvell",
+      "sub_type": "COMPETITOR",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Avago Technologies Limited",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Skyworks Solutions",
+      "sub_type": "COMPETITOR",
+      "rel": "Competes With",
+      "rel_category": "SSI",
+      "obj": "Avago Technologies Limited",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/smh-tsm-nxpi-asml-large-inflows-detected-etf-2015-03-24": [
+    {
+      "sub": "TSM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NXPI",
+      "sub_type": "STOCKTICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "NXP Semiconductors NV",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCKTICKER",
+      "rel": "Belongs To",
+      "rel_category": "SSI",
+      "obj": "ASML Holding NV",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Includes Holdings Of",
+      "rel_category": "GMM",
+      "obj": "TSM",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Includes Holdings Of",
+      "rel_category": "GMM",
+      "obj": "NXPI",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Includes Holdings Of",
+      "rel_category": "GMM",
+      "obj": "ASML",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSM",
+      "sub_type": "STOCKTICKER",
+      "rel": "Decreases In Value",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NXPI",
+      "sub_type": "STOCKTICKER",
+      "rel": "Decreases In Value",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ASML",
+      "sub_type": "STOCKTICKER",
+      "rel": "Increases In Value",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Tracks Performance Against",
+      "rel_category": "GMM",
+      "obj": "200 Day Moving Average",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Has 52 Week Low Of",
+      "rel_category": "SSI",
+      "obj": "4369",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Has 52 Week High Of",
+      "rel_category": "SSI",
+      "obj": "5847",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SMH",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Last Trade At",
+      "rel_category": "SSI",
+      "obj": "5702",
+      "obj_type": "MACROINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/how-intel-corporation-plans-reduce-its-mobile-losses-2015-03-25": [
+    {
+      "sub": "ARM Holdings",
+      "sub_type": "COMPANY",
+      "rel": "Outperforms",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARM Holdings",
+      "sub_type": "COMPANY",
+      "rel": "Licenses",
+      "rel_category": "SSI",
+      "obj": "Chip Designs",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Provides Discounts On",
+      "rel_category": "SSI",
+      "obj": "Atom Chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Forecasts Decline In",
+      "rel_category": "SSI",
+      "obj": "Revenue",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ARM Holdings",
+      "sub_type": "COMPANY",
+      "rel": "Crushes",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/agree-purchase-analog-devices-45-earn-53-using-options-2015-03-25": [
+    {
+      "sub": "Investors",
+      "sub_type": "CONCEPT",
+      "rel": "Consider Selling",
+      "rel_category": "SSI",
+      "obj": "Puts",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices Inc",
+      "sub_type": "COMPANY",
+      "rel": "Has Stock Symbol",
+      "rel_category": "GFMK",
+      "obj": "ADI",
+      "obj_type": "STOCKTICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ADI",
+      "sub_type": "STOCKTICKER",
+      "rel": "Trades At",
+      "rel_category": "GFMK",
+      "obj": "5974 USDshare",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Historical Volatility",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Calculates To",
+      "rel_category": "GFMK",
+      "obj": "22",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "January 2017 Put",
+      "sub_type": "DERIVATIVE",
+      "rel": "Derives Value From",
+      "rel_category": "SSI",
+      "obj": "Analog Devices Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "45 Strike Price",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Associated With",
+      "rel_category": "GFMK",
+      "obj": "Puts",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Historical Trading Data",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Guides",
+      "rel_category": "GMM",
+      "obj": "Investor Decisions",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/asia-adrs-lower-renewable-energy-stocks-slide-2015-03-25": [
+    {
+      "sub": "Taiwan Semiconductor Manufacturing",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Bank of New York Mellon Asia ADR Index",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Declines",
+      "rel_category": "GMM",
+      "obj": "American Depository Receipts Of Asian Stocks",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Yingli Green Energy",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ReneSola",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SouFun",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/better-dividend-stock-intel-corporation-or-qualcomm-inc-2015-03-26": [
+    {
+      "sub": "Qualcomm",
+      "sub_type": "COMPANY",
+      "rel": "Has Better",
+      "rel_category": "SSI",
+      "obj": "FREE_CASH_FLOW_COVERAGE",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/mrvl-may-8th-options-begin-trading-2015-03-26": [
+    {
+      "sub": "Marvell Technology Group Ltd",
+      "sub_type": "COMPANY",
+      "rel": "Issues New Options",
+      "rel_category": "GMM",
+      "obj": "Call Option",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MRVL",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Derives Value From",
+      "rel_category": "GFMK",
+      "obj": "Marvell Technology Group Ltd",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "1500 Strike",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Represents Out-of-the-Money Call Option",
+      "rel_category": "SSI",
+      "obj": "Call Option",
+      "obj_type": "DERIVATIVE",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MRVL",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Has Trading History",
+      "rel_category": "GMM",
+      "obj": "Trailing Twelve Month",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/intel-corporation-build-chips-nvidia-corporation-2015-03-27": [
+    {
+      "sub": "Freedman",
+      "sub_type": "CONCEPT",
+      "rel": "Expects",
+      "rel_category": "SSI",
+      "obj": "Taiwan Semiconductor",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Taiwan Semiconductor",
+      "sub_type": "COMPANY",
+      "rel": "Builds",
+      "rel_category": "SSI",
+      "obj": "NVIDIA chips",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Pays",
+      "rel_category": "SSI",
+      "obj": "Licensing Agreement",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Licensing Agreement",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Grosses",
+      "rel_category": "SSI",
+      "obj": "264 Million USD per Year",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/asian-adrs-lower-fall-e-payment-stock-mol-global-weighs-2015-03-27": [
+    {
+      "sub": "Taiwan Semiconductor Manufacturing",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "GMM",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MOL",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Financial Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "American depository receipts",
+      "sub_type": "PRODUCT",
+      "rel": "Trade At",
+      "rel_category": "GMM",
+      "obj": "0.3 Lower",
+      "obj_type": "MACRO_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Bank of New York Mellon Asia ADR Index",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Value Of",
+      "rel_category": "GMM",
+      "obj": "Asian Stocks",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MOL",
+      "sub_type": "COMPANY",
+      "rel": "Experience Price Drop",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/micron-technology-inc-and-intel-corporations-new-3d-memory-game-changer-2015-03-29": [
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Announces",
+      "rel_category": "SSI",
+      "obj": "Technology Improvement",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Improvement",
+      "sub_type": "CONCEPT",
+      "rel": "Increases",
+      "rel_category": "SSI",
+      "obj": "Density",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Technology Improvement",
+      "sub_type": "CONCEPT",
+      "rel": "Decreases",
+      "rel_category": "SSI",
+      "obj": "Cost",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron",
+      "sub_type": "COMPANY",
+      "rel": "Gains Share In",
+      "rel_category": "SSI",
+      "obj": "NAND Flash Market",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "SolidState Drives",
+      "sub_type": "PRODUCT",
+      "rel": "Based On",
+      "rel_category": "SSI",
+      "obj": "Technology Improvement",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/why-shares-analog-devices-are-surging-today-2015-03-30": [
+    {
+      "sub": "Barclays",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Believes",
+      "rel_category": "GMM",
+      "obj": "Analog Devices",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Secures Deal With",
+      "rel_category": "SSI",
+      "obj": "Apple",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analysts",
+      "sub_type": "CONCEPT",
+      "rel": "Expect",
+      "rel_category": "GMM",
+      "obj": "NonGAAP EPS",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NonGAAP EPS",
+      "sub_type": "ECONINDICATOR",
+      "rel": "Could Increase By",
+      "rel_category": "SSI",
+      "obj": "25",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/after-hours-most-active-mar-30-2015-znga-qqq-ddr-gm-bbd-gmcr-adsk-krft-pfe-bac-mu-bsmx": [
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "MU",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Derives Value From",
+      "rel_category": "GFMK",
+      "obj": "Micron Technology",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Zynga Inc",
+      "sub_type": "COMPANY",
+      "rel": "Is Unchanged",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "ZNGA",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Derives Value From",
+      "rel_category": "GFMK",
+      "obj": "Zynga Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Kraft Foods Group Inc",
+      "sub_type": "COMPANY",
+      "rel": "Is Unchanged",
+      "rel_category": "GFMK",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "KRFT",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Derives Value From",
+      "rel_category": "GFMK",
+      "obj": "Kraft Foods Group Inc",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology",
+      "sub_type": "COMPANY",
+      "rel": "Scheduled To Report",
+      "rel_category": "SSI",
+      "obj": "Earnings Report",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/sp-500-movers-altr-adi-2015-03-30": [
+    {
+      "sub": "Altera Corp",
+      "sub_type": "COMPANY",
+      "rel": "Trades Down",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Trades Up",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Mylan",
+      "sub_type": "COMPANY",
+      "rel": "Trades Down",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "UnitedHealth Group",
+      "sub_type": "COMPANY",
+      "rel": "Trades Up",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/softness-semis-weigh-markets-ahead-wall-street-2015-03-30": [
+    {
+      "sub": "Taiwan Semi",
+      "sub_type": "COMPANY",
+      "rel": "Issues",
+      "rel_category": "SSI",
+      "obj": "Profit Warning",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Intel",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "Profit Warning",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Tech Sector",
+      "sub_type": "SECTOR",
+      "rel": "Benefit From",
+      "rel_category": "GMM",
+      "obj": "Consumer Demand",
+      "obj_type": "ECON_INDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Business Capital Spending",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Negative Impact On",
+      "rel_category": "GMM",
+      "obj": "Tech Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/nasdaq-100-movers-altr-ctrx-2015-03-30": [
+    {
+      "sub": "Altera Corp",
+      "sub_type": "COMPANY",
+      "rel": "Trades Down",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Catamaran",
+      "sub_type": "COMPANY",
+      "rel": "Trades Up",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Mylan",
+      "sub_type": "COMPANY",
+      "rel": "Trades Down",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Trades Up",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/analog-devices-gains-as-barclays-ups-rating-target-price-analyst-blog-2015-03-31": [
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Upgrades",
+      "rel_category": "SSI",
+      "obj": "Barclays",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Positive Impact On",
+      "rel_category": "SSI",
+      "obj": "Stock Price",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Analog Devices",
+      "sub_type": "COMPANY",
+      "rel": "Supplies",
+      "rel_category": "GFMK",
+      "obj": "Analog and Digital Signal Processing Integrated Circuits",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/whats-in-store-for-micron-technology-mu-this-earnings-analyst-blog-2015-03-31": [
+    {
+      "sub": "Micron",
+      "sub_type": "COMPANY",
+      "rel": "Develops With",
+      "rel_category": "SSI",
+      "obj": "Intel",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Micron Technology Inc",
+      "sub_type": "COMPANY",
+      "rel": "Reports",
+      "rel_category": "SSI",
+      "obj": "SecondQuarter Fiscal Results",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/ibm-announces-%243b-iot-investment-for-enterprise-market-analyst-blog-2015-03-31": [
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Acquires",
+      "rel_category": "SSI",
+      "obj": "Companies",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Qualcomm Inc",
+      "sub_type": "COMPANY",
+      "rel": "Expands Presence In",
+      "rel_category": "SSI",
+      "obj": "IoT Market",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IBM",
+      "sub_type": "COMPANY",
+      "rel": "Invests In",
+      "rel_category": "GMM",
+      "obj": "Expansion Of IoT Ecosystem",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IBM",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "ATT",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IBM",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "ARM Holdings",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IBM",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "Semtech Corporation",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "IBM",
+      "sub_type": "COMPANY",
+      "rel": "Partners With",
+      "rel_category": "SSI",
+      "obj": "The Weather Company",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/taiwan-semiconductor-mfg-co-ltd-risk-factor-playing-out-2015-03-31": [
+    {
+      "sub": "TSMC",
+      "sub_type": "COMPANY",
+      "rel": "Considers Slashing",
+      "rel_category": "SSI",
+      "obj": "Wafer Prices",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Wafer Prices",
+      "sub_type": "FININSTRUMENTINFO",
+      "rel": "Negative Impact On",
+      "rel_category": "SSI",
+      "obj": "Gross Profit Margin",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Stronger US Dollar",
+      "sub_type": "MACROINDICATOR",
+      "rel": "Causes",
+      "rel_category": "GMM",
+      "obj": "Business Slowdown",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSMC",
+      "sub_type": "COMPANY",
+      "rel": "Experiences",
+      "rel_category": "GMM",
+      "obj": "Business Slowdown",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "TSMC",
+      "sub_type": "COMPANY",
+      "rel": "Gains",
+      "rel_category": "SSI",
+      "obj": "Market Share",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/what-manufacturing-technology-will-nvidia-corporation-use-pascal-and-volta-2015-03-31": [
+    {
+      "sub": "Taiwan Semiconductor",
+      "sub_type": "COMPANY",
+      "rel": "Mass Produces",
+      "rel_category": "SSI",
+      "obj": "16nanometer FinFET Technology",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Uses",
+      "rel_category": "SSI",
+      "obj": "Taiwan Semiconductor",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Plans To Use",
+      "rel_category": "SSI",
+      "obj": "10nanometer Technology",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Credit Suisse",
+      "sub_type": "FINANCIALENTITY",
+      "rel": "Notes",
+      "rel_category": "GMM",
+      "obj": "Cost of 10nanometer Technology",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "10nanometer Technology",
+      "sub_type": "PRODUCT",
+      "rel": "High Cost",
+      "rel_category": "GMM",
+      "obj": "Production Expense",
+      "obj_type": "ECONINDICATOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "NVIDIA",
+      "sub_type": "COMPANY",
+      "rel": "Needs To Ensure",
+      "rel_category": "SSI",
+      "obj": "Higher Selling Prices",
+      "obj_type": "FININSTRUMENTINFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ],
+  "https://www.nasdaq.com/articles/vig-kbwc-big-etf-outflows-2015-03-31": [
+    {
+      "sub": "Vanguard Dividend Appreciation ETF",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Decreases Units Outstanding",
+      "rel_category": "GMM",
+      "obj": "ETF Channel",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "PowerShares KBW Capital Markets Portfolio",
+      "sub_type": "FIN_INSTRUMENT_INFO",
+      "rel": "Loses Units Outstanding",
+      "rel_category": "GMM",
+      "obj": "KBWC",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    }
+  ]
+}
