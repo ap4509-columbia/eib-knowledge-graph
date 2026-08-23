@@ -493,6 +493,16 @@ export default function Home() {
             <h1 className="whitespace-nowrap text-sm font-semibold tracking-tight sm:text-base">
               EIB Knowledge Graph
             </h1>
+            {/* Live badge lives on the left so it can't shift the
+                right-pinned controls when a non-live source hides it. */}
+            {sources &&
+              activeSourceId &&
+              sources.sources.find((s) => s.id === activeSourceId)?.kind ===
+                "live" && (
+                <span className="self-center">
+                  <LiveBadge sourceId={activeSourceId} />
+                </span>
+              )}
             <p className="hidden truncate font-mono text-xs text-muted-foreground sm:block">
               {snapshot
                 ? `${formatMonthRange(monthFrom, monthTo)}${
@@ -508,15 +518,13 @@ export default function Home() {
             </p>
           </div>
           <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5 sm:w-auto sm:flex-nowrap">
-            {sources &&
-              activeSourceId &&
-              sources.sources.find((s) => s.id === activeSourceId)?.kind ===
-                "live" && <LiveBadge sourceId={activeSourceId} />}
             {sources && (
               <label className="flex min-w-[8.5rem] flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:min-w-0 sm:flex-initial">
                 <span className="hidden sm:inline">Data source</span>
+                {/* Fixed desktop width: sizing to the selected label made
+                    the whole control row shift on every source switch. */}
                 <select
-                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-auto"
+                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-[21.5rem]"
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
@@ -534,7 +542,7 @@ export default function Home() {
               </label>
             )}
             {index && (
-              <span className="mr-2 hidden font-mono text-xs text-muted-foreground md:inline">
+              <span className="mr-2 hidden w-[4.75rem] whitespace-nowrap text-right font-mono text-xs tabular-nums text-muted-foreground md:inline-block">
                 {index.months.length} months
               </span>
             )}
