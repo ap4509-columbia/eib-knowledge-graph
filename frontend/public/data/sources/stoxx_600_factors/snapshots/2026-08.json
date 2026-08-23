@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 190,
-    "edges": 158,
+    "nodes": 191,
+    "edges": 159,
     "scored_edges": 0
   },
   "nodes": [
@@ -1335,6 +1335,13 @@
       "degree": 1,
       "x": -163.92143083444103,
       "y": 469.5561683062746
+    },
+    {
+      "id": "Price Gouging",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -3865,6 +3872,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "Shell plc||Is Not Engaging In||Price Gouging",
+      "source": "Shell plc",
+      "target": "Price Gouging",
+      "rel": "Is Not Engaging In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 2,
+      "score": null,
+      "sentiment": -0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

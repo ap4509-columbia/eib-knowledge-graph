@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 92,
-    "edges": 78,
+    "nodes": 96,
+    "edges": 81,
     "scored_edges": 0
   },
   "nodes": [
@@ -649,6 +649,34 @@
       "degree": 2,
       "x": -579.2602179554608,
       "y": -27.796715777545398
+    },
+    {
+      "id": "AZN.L",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 359.14569454878375,
+      "y": -579.6843410298887
+    },
+    {
+      "id": "SIEMENS AG N",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -197.93736074497312,
+      "y": 312.7198920900006
+    },
+    {
+      "id": "SIE.DE",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -900.0,
+      "y": 232.54383858694828
+    },
+    {
+      "id": "AI-Focused Chip Design",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 506.51646964947713,
+      "y": 384.60442399798944
     }
   ],
   "edges": [
@@ -1899,6 +1927,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_AND_A"
+    },
+    {
+      "id": "AstraZeneca||Has Ticker||AZN.L",
+      "source": "AstraZeneca",
+      "target": "AZN.L",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "SIEMENS AG N||Has Ticker||SIE.DE",
+      "source": "SIEMENS AG N",
+      "target": "SIE.DE",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 2,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "SIEMENS AG N||Focuses On||AI-Focused Chip Design",
+      "source": "SIEMENS AG N",
+      "target": "AI-Focused Chip Design",
+      "rel": "Focuses On",
+      "rel_cat": "GMM",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

@@ -11,5 +11,42 @@
       "materiality_usd": null,
       "event_type": "STRUCTURAL"
     }
+  ],
+  "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZTlBdG5wbk5MeHNVeEdzdDJRdGhWZFd2ZmR3bFd4dTYwWHotX1Y3elVNRUk3eGpjdkp5Mi1aZFRXT29nWHZWNkVyeW1DY08tT0stcmtEbjdqWmZhdDJTS1NjZ2Z0dDdodGx1M3NuaURDZUJPZ2hINmgxTEM4c1J1YVZHT29BZTAwLTNpbU9BTVlXZDVJbjl1aERlVEtfc1MxWTJQbi1sNnRQSjFQTlVjVEFnd1d4b1dPa3ctdDRxRzN0dw?oc=5": [
+    {
+      "sub": "Government Digital Services",
+      "sub_type": "ORGANIZATION",
+      "rel": "Selects PSP For",
+      "rel_category": "SSI",
+      "obj": "GOV.UK Pay",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.7,
+      "materiality_usd": null,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "sub": "GOV.UK Pay",
+      "sub_type": "PRODUCT",
+      "rel": "Has PSP Provider",
+      "rel_category": "GMM",
+      "obj": "Adyen",
+      "obj_type": "COMPANY",
+      "sentiment": 0.7,
+      "materiality_usd": null,
+      "event_type": "PARTNERSHIP"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMimwFBVV95cUxNaThiU0ExMGpJUjZSNmZRQ3k3RFBBU3VidE9VQlk1ZFZPQkFfd3dTUXJEYk9FWWk5aU5fcGp0SlFibDViMTdYX0dEQU1YRk0zSVc3VEZEYjlMeFB6b3h6elY2UjJvQU9qd2xYMTd6bTVyS2NzV29vT3dRVGlGMG1HMkljVUE2ODRjUUJpN0xXWm9RT2s5Z2dSZWdvcw?oc=5": [
+    {
+      "sub": "SAN",
+      "sub_type": "COMPANY",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "SAN.PA",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 38,
-    "edges": 27,
+    "nodes": 41,
+    "edges": 30,
     "scored_edges": 0
   },
   "nodes": [
@@ -271,6 +271,27 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Government Digital Services",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -260.6443216033314,
+      "y": -200.95866540802893
+    },
+    {
+      "id": "GOV.UK Pay",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": -460.3715259988464,
+      "y": -363.4493818551081
+    },
+    {
+      "id": "SAN.PA",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": 549.649686163444
     }
   ],
   "edges": [
@@ -697,6 +718,54 @@
       "rel": "Belongs To",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Government Digital Services||Selects PSP For||GOV.UK Pay",
+      "source": "Government Digital Services",
+      "target": "GOV.UK Pay",
+      "rel": "Selects PSP For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "GOV.UK Pay||Has PSP Provider||Adyen",
+      "source": "GOV.UK Pay",
+      "target": "Adyen",
+      "rel": "Has PSP Provider",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "SAN||Has Ticker||SAN.PA",
+      "source": "SAN",
+      "target": "SAN.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,

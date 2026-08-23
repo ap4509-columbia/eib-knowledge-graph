@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 6,
-    "edges": 3,
+    "nodes": 8,
+    "edges": 4,
     "scored_edges": 0
   },
   "nodes": [
@@ -47,6 +47,20 @@
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
+    },
+    {
+      "id": "Oracle",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Google Cloud",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -97,6 +111,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Oracle||Collaborates With||Google Cloud",
+      "source": "Oracle",
+      "target": "Google Cloud",
+      "rel": "Collaborates With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
     }
   ]
 }
