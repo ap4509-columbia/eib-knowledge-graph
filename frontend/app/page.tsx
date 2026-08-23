@@ -524,7 +524,7 @@ export default function Home() {
                 {/* Fixed desktop width: sizing to the selected label made
                     the whole control row shift on every source switch. */}
                 <select
-                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-[21.5rem]"
+                  className="w-full min-w-0 rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-foreground transition hover:bg-accent focus:outline-none focus:ring-1 focus:ring-ring sm:w-72"
                   value={activeSourceId ?? sources.default}
                   onChange={(e) => setActiveSourceId(e.target.value)}
                 >
