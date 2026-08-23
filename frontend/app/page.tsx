@@ -488,7 +488,7 @@ export default function Home() {
     <>
       <div className="flex h-screen w-screen flex-col overflow-hidden bg-background text-foreground">
         {/* Header */}
-        <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 sm:px-6 sm:py-3">
+        <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 sm:flex-nowrap sm:px-6 sm:py-3">
           <div className="flex min-w-0 items-baseline gap-3">
             <h1 className="whitespace-nowrap text-sm font-semibold tracking-tight sm:text-base">
               EIB Knowledge Graph
@@ -517,7 +517,7 @@ export default function Home() {
                   : "no data"}
             </p>
           </div>
-          <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5 sm:w-auto sm:flex-nowrap">
+          <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5 sm:w-auto sm:shrink-0 sm:flex-nowrap">
             {sources && (
               <label className="flex min-w-[8.5rem] flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:min-w-0 sm:flex-initial">
                 <span className="hidden sm:inline">Data source</span>
