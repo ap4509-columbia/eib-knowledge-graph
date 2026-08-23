@@ -541,11 +541,11 @@ export default function Home() {
                 </select>
               </label>
             )}
-            {index && (
-              <span className="mr-2 hidden w-[4.75rem] whitespace-nowrap text-right font-mono text-xs tabular-nums text-muted-foreground md:inline-block">
-                {index.months.length} months
-              </span>
-            )}
+            {/* Fixed slot even when no index (e.g. the report source) so
+                the controls never shift when switching sources. */}
+            <span className="mr-2 hidden w-[4.75rem] whitespace-nowrap text-right font-mono text-xs tabular-nums text-muted-foreground md:inline-block">
+              {index ? `${index.months.length} months` : ""}
+            </span>
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
