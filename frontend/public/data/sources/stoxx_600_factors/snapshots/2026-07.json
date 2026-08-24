@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 96,
-    "edges": 81,
+    "nodes": 97,
+    "edges": 82,
     "scored_edges": 0
   },
   "nodes": [
@@ -677,6 +677,13 @@
       "degree": 1,
       "x": 506.51646964947713,
       "y": 384.60442399798944
+    },
+    {
+      "id": "DEP",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
     }
   ],
   "edges": [
@@ -1975,6 +1982,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "DEP||Declares Code Purple Alert For||Pennsylvania",
+      "source": "DEP",
+      "target": "Pennsylvania",
+      "rel": "Declares Code Purple Alert For",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
     }
   ]
 }

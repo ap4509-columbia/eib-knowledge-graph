@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 191,
-    "edges": 159,
+    "nodes": 197,
+    "edges": 166,
     "scored_edges": 0
   },
   "nodes": [
@@ -1342,6 +1342,48 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Ofgem",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -475.0633037137766,
+      "y": 430.173644783096
+    },
+    {
+      "id": "electric bills",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -526.5474925122803,
+      "y": 628.1982633007682
+    },
+    {
+      "id": "Exxon",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -99.03739392963418,
+      "y": -394.95448559397994
+    },
+    {
+      "id": "Lyondell",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -116.21576095499252,
+      "y": -651.5403907622023
+    },
+    {
+      "id": "Shell US chemical assets",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": -268.1182600380612,
+      "y": -616.5237859663084
+    },
+    {
+      "id": "US chemical assets",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": -79.54056238812974,
+      "y": 497.9695112123881
     }
   ],
   "edges": [
@@ -3888,6 +3930,118 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "AZN.L||Has Ticker||AstraZeneca",
+      "source": "AZN.L",
+      "target": "AstraZeneca",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Ofgem||Reveals New Cap On||electric bills",
+      "source": "Ofgem",
+      "target": "electric bills",
+      "rel": "Reveals New Cap On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Shell||Considers Sale To||Exxon",
+      "source": "Shell",
+      "target": "Exxon",
+      "rel": "Considers Sale To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 8000000000.0,
+      "materiality_log": 22.803,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Considers Sale To||Lyondell",
+      "source": "Shell",
+      "target": "Lyondell",
+      "rel": "Considers Sale To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 8000000000.0,
+      "materiality_log": 22.803,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Exxon||Considers Acquisition Of||Shell US chemical assets",
+      "source": "Exxon",
+      "target": "Shell US chemical assets",
+      "rel": "Considers Acquisition Of",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 8000000000.0,
+      "materiality_log": 22.803,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Lyondell||Considers Acquisition Of||Shell US chemical assets",
+      "source": "Lyondell",
+      "target": "Shell US chemical assets",
+      "rel": "Considers Acquisition Of",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 8000000000.0,
+      "materiality_log": 22.803,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Sells Assets Of Type||US chemical assets",
+      "source": "Shell",
+      "target": "US chemical assets",
+      "rel": "Sells Assets Of Type",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.25,
+      "materiality_usd": 8000000000.0,
+      "materiality_log": 22.803,
+      "event_type": "M_AND_A"
     }
   ]
 }

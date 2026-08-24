@@ -222,5 +222,90 @@
       "materiality_usd": null,
       "event_type": "OTHER"
     }
+  ],
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHMTRnWmRmMnVJZE9GZjhRY0FnSkw5MkZhczdvOE0xbGxWTm8xb0NVOUJQWkFxZ01FY3NRYlBzLVNINW1XaUlWNTNrdW9xdXdZQ2JHR3BwU25MQQ?oc=5": [
+    {
+      "sub": "AZN.L",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "AstraZeneca",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVWxfdnpDSkZCanVadEUySm12SHNHV2FRNUgxRGx4aXhFa1RnSGV4NkRqTjdhWl92Y3FHb1dVcDFNT3A2UU1IQWdRSVlnXy0xQXdUZVhVN0FnMHBCN1ZsdmpLQ1YzT25hSUJvSHNmaGZMSzhJUzRYSVZxdDhQZzVLM3BkUmFMdnd4SHlrdmxhS1BJYkxheWtKNjZxVG9ZN3FxVlExN19TZFRoWWpjX3BGQVVBRGF3MTNTQ3c?oc=5": [
+    {
+      "sub": "Ofgem",
+      "sub_type": "COMPANY",
+      "rel": "Reveals New Cap On",
+      "rel_category": "SSI",
+      "obj": "electric bills",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "REGULATORY"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYTBGM3lpaTNrakZuLTdyZGZvVXV2WWlEbV85bTctbzQ1WElhSFlRRkVMeDhkSm9XelBqSW5fTVdHV1NKbnZKRWF3VGxxdmtPczZPTnFqY3I0WWNrYmtud1c2MTlNT0RaU05OSkREMk1xTG9wVVlYY0ZtTXZVc1RoVnRsLVhXVjY1MHFoU3ZZT3BvVmMzNWtROTBiU2dUbFBrTnB4cU14LUtqRVJLME9yYncyZEFkNkdjalJEcnI4N1hoNko0djNqSA?oc=5": [
+    {
+      "sub": "Shell",
+      "sub_type": "COMPANY",
+      "rel": "Considers Sale To",
+      "rel_category": "GMM",
+      "obj": "Exxon",
+      "obj_type": "COMPANY",
+      "sentiment": -0.3,
+      "materiality_usd": 8000000000.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "sub": "Shell",
+      "sub_type": "COMPANY",
+      "rel": "Considers Sale To",
+      "rel_category": "GMM",
+      "obj": "Lyondell",
+      "obj_type": "COMPANY",
+      "sentiment": -0.3,
+      "materiality_usd": 8000000000.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "sub": "Exxon",
+      "sub_type": "COMPANY",
+      "rel": "Considers Acquisition Of",
+      "rel_category": "GMM",
+      "obj": "Shell US chemical assets",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.2,
+      "materiality_usd": 8000000000.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "sub": "Lyondell",
+      "sub_type": "COMPANY",
+      "rel": "Considers Acquisition Of",
+      "rel_category": "GMM",
+      "obj": "Shell US chemical assets",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.2,
+      "materiality_usd": 8000000000.0,
+      "event_type": "M_AND_A"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxQd1d0ZG5mZUZhQkpGTDZDbUxCbnFGUXV4OVE0VktDOWY5YWR1SktoR0JiZVZiWmNKOGhpOTEwYV9EZ3V0QW9KOUNYM3NkbjVSbmpiV3NVa0hGNnJaSExkbXFVZ1lzRkdubzFZa1ktT1d4N2xvRUtZOHktX0k3T2g4Q3ViQ2o?oc=5": [
+    {
+      "sub": "Shell",
+      "sub_type": "COMPANY",
+      "rel": "Sells Assets Of Type",
+      "rel_category": "SSI",
+      "obj": "US chemical assets",
+      "obj_type": "FIN_INSTRUMENT_INFO",
+      "sentiment": -0.25,
+      "materiality_usd": 8000000000.0,
+      "event_type": "M_AND_A"
+    }
   ]
 }

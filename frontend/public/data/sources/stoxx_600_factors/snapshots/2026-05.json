@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 28,
-    "edges": 18,
+    "nodes": 30,
+    "edges": 19,
     "scored_edges": 0
   },
   "nodes": [
@@ -198,6 +198,20 @@
     {
       "id": "SWX:NESN",
       "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    },
+    {
+      "id": "SSON",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "SAP Modernization",
+      "type": "CONCEPT",
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
@@ -491,6 +505,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "SSON||Publishes Article On||SAP Modernization",
+      "source": "SSON",
+      "target": "SAP Modernization",
+      "rel": "Publishes Article On",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }
