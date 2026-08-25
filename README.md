@@ -1,73 +1,92 @@
-# EIB Knowledge Graph Viewer
+# EIB Knowledge Graph
 
-Risk-analyst-facing UI for the EIB sponsor project (IEOR 4737, Columbia).
-Reads the existing model pipeline's output and renders it as an interactive,
-time-sliced knowledge graph with entity search, filters, and a refresh trigger
-that re-runs the data pipeline.
+**Live site: https://eib-knowledge-graph.vercel.app**
 
-This project is the UI layer. The underlying model pipeline (triplet extraction
-via LLM, Judge LLM quality scoring, GAT-based link prediction) lives in the
-Spring 2026 team's deliverables and is not duplicated here.
+Financial news → knowledge graphs → predictions, end to end, for the EIB
+sponsor project (IEOR 4737, Columbia — Summer 2026 team: Alexandra Paiz,
+Pierre Pujol, Ruiwen Wang; five-semester project lineage documented in
+the in-app report).
 
----
+Every article passes a **three-LLM chain** — triplet extraction, Judge
+LLM quality scoring, flagged-triplet refinement — running entirely on a
+locally hosted Qwen 2.5 14B (benchmarked at parity with GPT-5.5, at $0
+API cost), followed by corpus-level canonicalization, monthly graph
+snapshots, and rolling-window GAT link prediction.
 
-## Structure
+## What's on the site
+
+| Data source | What it is |
+| --- | --- |
+| FNSPID — Full corpus | The complete 15-year semiconductor corpus (54,563 articles, 2009–2024) through the full pipeline; GAT predictions live (MRR 0.654 over 83 backtest months for the finalized half) |
+| FNSPID — Pierre's run | Independent judged run + 10-config GAT sweep (CE No-Edge-Feats, MRR 0.7558) |
+| STOXX Europe 600 (Live) | Refreshed every morning by a VM cron; industry filters, news factor model, monthly GAT retrain |
+| S&P 100 (Live) | Full ~101-constituent US corpus, same daily pipeline |
+| Project report | This project's full LaTeX report, viewable in-app |
+
+Tabs per source: interactive **knowledge graph** (force layout, entity/
+industry filters, time scrubber), **predictions** (FinDKG-style monthly
+leaderboards from real GAT weights), **factor analysis** (five news
+factors — attention, sentiment, consensus, novelty, materiality — with
+PCA + KMeans archetype clusters and a daily history scrubber).
+
+## Ask Claude about the data (MCP)
+
+The deployment exposes an MCP endpoint so analysts can connect Claude
+directly to the corpus and interrogate the news behind any node, factor,
+or prediction:
 
 ```
-eib-knowledge-graph/
-  frontend/                 # Next.js + Cytoscape.js, deploys to Vercel
-  backend/                  # FastAPI service that wraps the model code
-  README.md
-  .gitignore
+https://eib-knowledge-graph.vercel.app/api/mcp
 ```
 
-## Quick start (any teammate's laptop)
+Seven read-only tools (news search, entity lookups, graphs, factors,
+predictions). Setup + example prompts: [docs/MCP_CONNECTOR.md](docs/MCP_CONNECTOR.md).
 
-**One command:**
+## Repository map
+
+```
+frontend/            Next.js app (static export + /api/mcp) — deploys to Vercel
+scraper/             Live-corpus pipeline: watchlists, enriched extraction,
+                     judge/refine, factor model, LLM backend switch (Qwen/Gemini)
+scripts/             Corpus canonicalization, snapshot cleanup, GAT training
+                     wrapper, predictions computation, VM→site publisher
+scripts/vm/          Orchestration scripts that run on the GPU VM
+                     (daily cron, corpus lanes, finalization)
+docs/report/         Full project report (LaTeX + compiled PDF)
+docs/HANDOVER.md     Two-tier handover runbook (maintain vs. full rerun)
+docs/MCP_CONNECTOR.md  Analyst MCP setup
+backend/             Optional local FastAPI wrapper for development only —
+                     production is fully static + serverless
+```
+
+The original team pipeline (extraction/judge/GAT components) is **not
+duplicated here** — the VM runs it unmodified; everything in this repo
+wraps or extends it.
+
+## Running the frontend locally
 
 ```bash
-git clone https://github.com/ap4509-columbia/eib-knowledge-graph
-cd eib-knowledge-graph
-./dev.sh
+cd frontend
+npm install
+npm run dev
 ```
 
-Then open **http://localhost:3000**.
+Open http://localhost:3000. All data ships as static JSON in
+`frontend/public/data/`, so the app works fully offline — no backend, no
+keys.
 
-The first run installs Python + Node deps (~2 minutes) and creates a venv in
-`backend/.venv`. Subsequent runs skip setup and boot in seconds. Ctrl-C in the
-terminal stops both servers.
+## Operations
 
-**Requirements:** Python 3.10+ and Node 20+ on `PATH`. On macOS:
-`brew install python node`.
+- **Live refresh**: cron on the team GPU VM, 07:30 UTC daily
+  (`scripts/vm/daily_factors.sh`) — scrape → three-LLM chain → factors →
+  GAT → push (the push triggers the Vercel redeploy). Zero API cost.
+- **Adding a corpus**: a watchlist YAML in `scraper/watchlists/` + an
+  entry in `frontend/public/data/sources.json` + a sector map in
+  `frontend/lib/sectors.ts`. No pipeline code changes.
+- **Taking the project over** (accounts, keys, infrastructure):
+  [docs/HANDOVER.md](docs/HANDOVER.md). Short version: production needs
+  no API keys at all, and the site degrades gracefully to a permanent
+  static archive if unmaintained.
 
-The repo includes cached snapshot JSONs (`backend/data/`), so the app works
-out of the box without the source CSV. The `/api/run` "refresh data" endpoint
-will only succeed for whoever has the source CSV at the expected path
-(see `backend/runner.py`).
-
-## Architecture
-
-```
-┌─────────────────────────┐         ┌──────────────────────────┐
-│  Next.js (Vercel)       │  HTTP   │  FastAPI (local laptop)  │
-│  ─────────────────      │ ──────► │  ─────────────────       │
-│  · time slider (range)  │ ◄────── │  · GET  /api/index       │
-│  · search + filters     │  JSON   │  · GET  /api/snapshot/   │
-│  · detail panel         │         │  · POST /api/run         │
-│  · refresh button       │         │                          │
-└─────────────────────────┘         └────────────┬─────────────┘
-                                                 │ reads (unmodified)
-                                                 ▼
-                                  Spring 2026 team's existing pipeline
-                                  · triplet CSVs
-                                  · GAT model weights
-                                  · inference code
-
-```
-
-The runner reads the model team's outputs without modifying their code.
-Frontend deploys to Vercel; backend runs locally with ngrok for sponsor demos.
-
-## Status
-
-In active development — Summer 2026.
+Sponsor: European Investment Bank · Advisors: G. Bonavolontá,
+O. Reichmann (EIB); Dr. A. Hirsa, M. Wang (Columbia)
