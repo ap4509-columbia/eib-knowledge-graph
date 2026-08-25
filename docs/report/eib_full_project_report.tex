@@ -197,6 +197,11 @@ Entropy Ratio & 0.735 & 0.679 \\
   \item Built a \textbf{news factor model} (five factors + PCA + KMeans archetype clustering) over the live corpus, exposed as a dedicated UI tab (Section~\ref{sec:factors}).
   \item Brought the extraction up to the three-LLM standard of the team pipeline: judge-and-refine pass plus cross-article entity canonicalisation (Section~\ref{sec:refinement}).
   \item Built the \textbf{VM-to-UI publishing pipeline} and used it to ship the full 2-year Qwen extraction (5{,}358 articles / 30{,}861 triplets) to the public UI (Section~\ref{sec:vmpipe}).
+  \item Launched the \textbf{full 15-year FNSPID corpus run} (54{,}563 articles, 2009--2024) through the complete three-LLM chain on the team GPU VM at zero API cost, in parallel checkpointed lanes; finalised the first half (2009--2016) end to end --- canonicalisation, strict graph, CE GAT, live predictions at MRR 0.654 over 83 backtest months (Section~\ref{sec:vmpipe}).
+  \item Migrated the live corpora from Gemini to \textbf{local Qwen on the VM's daily cron} (zero marginal cost) and added a second live corpus: the \textbf{full S\&P 100} (Section~\ref{sec:sp100}).
+  \item Added monthly \textbf{GAT retraining and predictions for the live corpora} (STOXX MRR 0.905 over its first backtest months).
+  \item Shipped an \textbf{analyst MCP connector} --- Claude can be pointed at the deployed corpus and interrogate the news behind any node, factor or prediction (Section~\ref{sec:mcp}).
+  \item Team parallel tracks: Pierre judged the full 2-year corpus and ran the 10-configuration GAT sweep on the VM (CE No-Edge-Feats winner, MRR 0.7558); Ruiwen built a GPT-5.5 judge-and-refinement variant (V7) over the 2019--2020 slice via the OpenAI Responses API (\(\approx\)\$150 / 8 h), giving the team a paid-frontier vs.\ free-local comparison on identical data.
 \end{itemize}
 
 % =====================================================================
@@ -211,8 +216,9 @@ Entropy Ratio & 0.735 & 0.679 \\
 
 \subsection{Working subset for this project}
 \begin{itemize}
-  \item \textbf{Semiconductor slice} used throughout: \(\approx\) 2{,}300 articles across 2019--2020, chosen for its coverage of a full pre-shock / shock / post-shock cycle (Covid-19).
+  \item \textbf{Semiconductor slice} used through Spring 2026: \(\approx\) 2{,}300 articles across 2019--2020, chosen for its coverage of a full pre-shock / shock / post-shock cycle (Covid-19).
   \item Second slice used for the Spring 2026 causal study: \(\approx\) 2021--2022, spanning the Russia--Ukraine invasion.
+  \item \textbf{Full working corpus (late Summer 2026):} the complete semiconductor extract of FNSPID --- 54{,}563 articles, Dec 2009 -- Jan 2024, 11 tickers (NVDA, AMD, INTC, QCOM, MU, TSM, TXN, AMAT, ADI, MRVL, ON) --- now processed end to end on the team VM (Section~\ref{sec:vmpipe}). Note the upstream FNSPID release is a static research artefact: its news ends 9 Jan 2024 and the Hugging Face repository has had no commits since the paper's release, which is why the live corpora (Sections~\ref{sec:stoxx}, \ref{sec:sp100}) exist as the project's forward-moving data.
 \end{itemize}
 
 \subsection{Extracted knowledge graph}
@@ -267,6 +273,7 @@ Four sequential stages, unchanged in intent since Fall 2025, refined in every se
 \end{itemize}
 
 \subsection{Multi-LLM benchmark (Summer 2026)}
+\label{sec:benchmark}
 \begin{itemize}
   \item \textbf{Design.} Same 127-article slice of the corpus fed to each model; identical prompt; identical Judge LLM (Qwen 2.5 14B) scoring the outputs. Fully apples-to-apples.
   \item \textbf{Cost + speed.}
@@ -604,6 +611,11 @@ Edge features      & rel\_emb(16) + cat\_emb(16) + \(\log(1+w)\)(1) = 33-dim \\
   \item \textbf{Factor analysis tab.} As described in Section~\ref{sec:factors}.
   \item \textbf{Dead-control hygiene.} Controls that do not affect a given tab are hidden there (Factor analysis shows neither the filter rail nor the timeline).
   \item \textbf{Report tab.} This report, viewable in-app as an embedded PDF.
+  \item \textbf{Factor history scrubber.} The factor tab gained its own daily timeline: a draggable scrubber with per-date ticks, month-boundary ticks and labels, and a thumb that follows the pointer. Scrubbing is stale-while-revalidate --- the current chart stays on screen (dimmed) while the next date's bundle loads, out-of-order responses are dropped, and revisited dates swap in instantly from cache.
+  \item \textbf{Live badges.} Live corpora show a pulsing badge whose date is the \emph{last actual pipeline run} (read from the factor index, not a clock) --- a stalled cron is visible at a glance; the tooltip names the model chain.
+  \item \textbf{Phone support.} At phone widths the filter rail becomes a slide-over drawer behind a Filters button, the factor tab stacks (scatter above, cluster cards below), the predictions leaderboard scrolls horizontally with aligned columns, and the header wraps into stable rows.
+  \item \textbf{Layout stability.} Switching data sources moves nothing: the source dropdown has a fixed width, the badge lives on the left, the months counter has a reserved slot, and the header never wraps on desktop (verified pixel-identical control positions across all sources).
+  \item \textbf{Source lifecycle.} The superseded 2019--2020 FNSPID source was retired behind its \texttt{available} flag once the VM corpus covered it; the default source is now the live STOXX corpus.
 \end{itemize}
 
 \subsection{Data flow diagram}
@@ -633,13 +645,30 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
 
 \subsection{Daily pipeline (fully automated)}
 \begin{itemize}
-  \item GitHub Actions cron, 07:30 UTC daily. No human in the loop; verified self-healing over multiple days (auto-commit with pull-rebase retry when other pushes land mid-run).
-  \item Steps: fetch Google News RSS per ticker \(\to\) drop stale republished articles (\(>\)120 days old --- these previously spawned junk one-article months as far back as 2019) \(\to\) dedupe against a URL ledger \(\to\) Gemini 2.5 Flash extraction \(\to\) refinement passes (Section~\ref{sec:refinement}) \(\to\) merge into monthly snapshots \(\to\) recompute factor bundle \(\to\) commit. The commit triggers the Vercel redeploy.
+  \item Cron on the team GPU VM (\texttt{daily\_factors.sh}, 07:30 UTC daily), one loop over every live corpus. No human in the loop; verified self-healing over multiple days (auto-commit with pull-rebase retry when other pushes land mid-run). Initially a GitHub Actions job with Gemini 2.5 Flash; migrated to the VM so extraction runs on \textbf{local Qwen 2.5 14B at zero marginal cost} (the Actions workflow is retained as a manual Gemini fallback).
+  \item Steps: fetch Google News RSS per ticker \(\to\) drop stale republished articles (\(>\)120 days old --- these previously spawned junk one-article months as far back as 2019) \(\to\) dedupe against a URL ledger \(\to\) LLM extraction \(\to\) refinement passes (Section~\ref{sec:refinement}) \(\to\) merge into monthly snapshots \(\to\) recompute factor bundle \(\to\) GAT retrain + predictions (below) \(\to\) commit. The commit triggers the Vercel redeploy.
   \item \textbf{Enriched extraction schema.} Each triplet carries three extra fields beyond subject/relation/object: sentiment \([-1,1]\), materiality (US-dollar magnitude mentioned with the fact), and an event-type tag. These feed the factor model.
   \item \textbf{Raw triplet persistence.} Every article's exact triplet list is stored per month before aggregation (\texttt{triplets/YYYY-MM.json}) --- article-level provenance, exact factor recomputation, and a future retraining dataset.
   \item Index hygiene: months whose snapshot holds fewer than 3 edges are excluded from the timeline (stray misdated articles cannot pollute the axis).
-  \item Cost: on the order of cents per day (Gemini 2.5 Flash over \(\approx\)90 title-length articles). Runs until the API key is retired; the site then simply stops updating and keeps serving the last state.
   \item Known limitation: Google News RSS supplies titles only (\(\approx\)60 characters of signal per article) and no deep history --- the corpus accumulates forward from activation.
+\end{itemize}
+
+\subsection{Retroactive snapshot cleanup and live GAT}
+\begin{itemize}
+  \item Weeks of pre-refinement extraction had left junk entities and name variants baked into the immutable month snapshots. A one-off cleaner (\texttt{scripts/clean\_snapshots.py}) rewrote them in place: junk-pattern and generic-phrase removal, TF-IDF canonical merging with a numeric-literal guard, edge rewrite with weight summation, degree recompute (19 junk entities removed, 8 variant merges on the STOXX corpus).
+  \item Once three month snapshots existed, the daily cron gained a GAT stage: month snapshots are converted to the trainer's CSV shape (one aggregate row per month, weights preserved), a single CE No-Edge-Feats configuration is retrained over all accumulated months, and a fresh predictions leaderboard is published. First STOXX backtest: \textbf{MRR 0.905} (few validation months so far; the number will regress toward the FNSPID range as the corpus grows).
+  \item The same stage activates automatically for any live corpus when it crosses the 3-month threshold.
+\end{itemize}
+
+% =====================================================================
+\section{Live corpus --- S\&P 100 (Summer 2026)}
+\label{sec:sp100}
+
+\begin{itemize}
+  \item US counterpart of the STOXX corpus, added once the live pipeline proved stable: the \textbf{full S\&P 100 constituent list} (\(\approx\)101 tickers; GOOG dual-class dropped in favour of GOOGL) across six sectors --- Tech, Financials, Healthcare, Consumer, Energy \& industrials, Communications \& media.
+  \item Same daily chain as STOXX (Google News RSS \(\to\) enriched Qwen extraction \(\to\) judge/refine \(\to\) snapshots \(\to\) factors \(\to\) GAT once \(\ge\)3 month snapshots exist), driven by the same VM cron loop --- adding the corpus was configuration, not new code: a watchlist YAML, a source-catalogue entry, and a sector keyword map.
+  \item The Industry filter became \textbf{per-source}: each live corpus declares its own sector order, keyword map and default-checked sector (STOXX opens on Pharma, S\&P on Tech). Sector inference runs per news cluster via union-find majority vote; keyword matching normalises punctuation so names like Coca-Cola, Lowe's and T-Mobile resolve, and ambiguous short tickers (V, T, GE, KO~\ldots) are matched by company name instead of symbol.
+  \item First full-list run captured \(\approx\)485 entities / 365 relationships for its opening month.
 \end{itemize}
 
 % =====================================================================
@@ -655,6 +684,8 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
     \item \textbf{Cross-article entity canonicalisation} (one call per run). Maps name variants onto one canonical name each, preferring names already in the corpus so new edges merge into existing nodes instead of duplicating them. Tickers are never merged into companies.
   \end{itemize}
   \item Both passes \emph{fail open}: an API or parse failure keeps the first-pass triplets, so a flaky call degrades quality for a day rather than losing data.
+  \item \textbf{Backend abstraction (late Summer 2026).} All LLM stages of the live pipeline route through one module (\texttt{scraper/llm.py}) switchable by environment variable between Gemini and local Ollama models. The production cron runs everything on local Qwen 2.5 14B --- the full three-LLM chain at zero marginal cost --- with Gemini retained as a fallback backend.
+  \item \textbf{Paid-frontier comparison (Ruiwen).} In parallel, a GPT-5.5 judge-and-refinement variant (``V7'', OpenAI Responses API with structured outputs, 64 resumable shards, billing-safe request cache, hard quality gates with a human-review route) was built over the same 2019--2020 slice: \(\approx\)\$150 and 8 hours for the two years, versus \$0 for the local-Qwen chain. Together with the extraction benchmark (Section~\ref{sec:benchmark}, Qwen 0.843 vs.\ GPT-5.5 0.846 judge score), this gives the project a measured cost--quality frontier on identical data.
 \end{itemize}
 
 % =====================================================================
@@ -695,6 +726,28 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
   \item Documented one-time VM setup (write-scoped deploy key + one cron line) in \texttt{docs/VM\_PUBLISHING.md}; alternatively a repository-side mirror workflow can poll the public pipeline repo for new outputs, requiring nothing from the VM at all.
 \end{itemize}
 
+\subsection{Full 15-year corpus run (late Summer 2026)}
+\begin{itemize}
+  \item Goal: put the \emph{entire} FNSPID working corpus (54{,}563 articles, Dec 2009 -- Jan 2024) through the complete three-LLM chain --- extraction, Judge, flagged-triplet refinement --- on the VM's single L4 GPU, at zero API cost, using the benchmark-validated Qwen 2.5 14B for every stage.
+  \item \textbf{Chunked parallel lanes.} The corpus is split into date chunks (e.g.\ 2014--2016, 2022-H1) processed by two independent lanes sharing the GPU via \texttt{OLLAMA\_NUM\_PARALLEL=2}, each in its own working copy of the team pipeline (the per-workdir ontology SQLite store forbids sharing). Per chunk: extract (\(\approx\)9 s/article) \(\to\) slice the self-checkpointing master CSV \(\to\) judge + refine (\(\approx\)25 s/article, the bottleneck) \(\to\) publish to the UI source. Every stage checkpoints per article, so crashes and pauses lose nothing. A third stream judges the previously extracted 2019--2021 slice concurrently rather than serialising it at the end. Lane drivers are in \texttt{scripts/vm/}.
+  \item \textbf{Corpus canonicalisation} (\texttt{scripts/canonicalize\_corpus.py}). Cross-chunk entity unification: character n-gram TF-IDF + cosine-radius nearest neighbours + union--find, merging only same-type entities that share an anchor word, with a numeric-literal guard (so ``10 nm'' never merges into ``7 nm''); relation consolidation by fuzzy match; frequency filtering. Two grades: UI grade (min-freq 2) for the browsable graph, and \texttt{--strict} (min-freq 5, judge-gated rows only) for GAT input.
+  \item \textbf{Half-corpus finalisation (22 Aug).} To deliver predictions early, the fully judged first half (2009--2016) was finalised on its own: canonicalise \(\to\) republish \(\to\) strict GAT input (9{,}918 canonical triplets) \(\to\) single-configuration CE No-Edge-Feats rolling-window training \(\to\) predictions. Result: \textbf{MRR 0.654, Hits@1 0.556, Hits@3 0.693 over 83 backtest months} (2010-02 to 2016-12) --- a deliberately harder, longer backtest than the 23-month 2019--2020 evaluation. The Predictions tab for the source went live the same night; the remaining half re-finalises over everything when it completes.
+  \item Training uses \texttt{scripts/run\_gat\_single.py}, which imports the team's \texttt{run\_experiment\_case} unchanged but trains only the winning configuration (the stock sweep trains all ten --- a 10\(\times\) saving in production).
+  \item Chunk-level progress publishes incrementally, so the public graph grew from 60 to 100+ browsable months over the run's lifetime rather than appearing all at once.
+\end{itemize}
+
+% =====================================================================
+\section{Analyst MCP connector (Summer 2026)}
+\label{sec:mcp}
+
+\begin{itemize}
+  \item The deployed app exposes a Model Context Protocol endpoint (\texttt{/api/mcp}) so an analyst can connect Claude (claude.ai custom connector, Claude Desktop or Claude Code) directly to the corpus and interrogate, in natural language, the news behind anything the UI shows.
+  \item Seven read-only tools: source catalogue, timelines, monthly graph (entities + relationships with sentiment / event type / materiality), full-text news search, per-entity news lookup, daily factor bundles, and GAT predictions.
+  \item Implementation is a dependency-free stateless JSON-RPC route handler inside the Next.js app --- no SDK, no database, no auth (the data is already public). Tools fetch the same static JSON the frontend renders, so answers always match the site; the endpoint redeploys with every push.
+  \item Cost model matches the project's constraint: the \emph{analyst's own} Claude does the reasoning, so serving the connector costs the project nothing at inference time.
+  \item Example session: ``Why is Novo Nordisk in the attention+ cluster this week? Show me the articles.'' Claude calls \texttt{get\_factors}, then \texttt{get\_entity\_news}, reads the coverage and answers with cited headlines. Connection instructions and example prompts: \texttt{docs/MCP\_CONNECTOR.md}.
+\end{itemize}
+
 % =====================================================================
 \section{Deployment and infrastructure}
 
@@ -702,12 +755,12 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
   \item \textbf{Repository.} \url{https://github.com/ap4509-columbia/eib-knowledge-graph} (team collaborators: SigmaWave, Ruiwen04).
   \item \textbf{Vercel project.} \texttt{eib-knowledge-graph}. Auto-deploy on push to \texttt{main}. Aliased domains: \texttt{eib-knowledge-graph.vercel.app} + Git-branch preview URLs.
   \item \textbf{Static-only production build.} No backend at runtime. All data ships as JSON files served from the CDN.
-  \item \textbf{Self-updating scraper} (live in production for the STOXX corpus --- Section~\ref{sec:stoxx}).
+  \item \textbf{Self-updating scraper} (live in production for the STOXX and S\&P corpora --- Sections~\ref{sec:stoxx}, \ref{sec:sp100}).
     \begin{itemize}
       \item Sources: Google News RSS (per-corpus watchlists), ECB / ESMA / BoE regulator RSS feeds.
-      \item Per-corpus watchlists: US semiconductors, EU utilities, EU banks, EU regulators, STOXX Europe 600 (30-ticker curated subset in production).
+      \item Per-corpus watchlists: US semiconductors, EU utilities, EU banks, EU regulators, STOXX Europe 600 (curated subset), full S\&P 100 (both in production).
       \item Deduplication ledger prevents re-processing.
-      \item Runs daily as a GitHub Actions cron and auto-commits new snapshots; each commit triggers the Vercel redeploy.
+      \item Runs daily as a cron on the team GPU VM (local Qwen, zero API cost) and auto-commits new snapshots; each commit triggers the Vercel redeploy. The original GitHub Actions workflow remains as a manual Gemini-backed fallback.
     \end{itemize}
   \item \textbf{Local backend} (optional). FastAPI + uvicorn on port 8000 for pipeline re-runs and chat during development.
 \end{itemize}
@@ -737,11 +790,15 @@ Spring 2026 & Xixi Chen, Xinyi Chen, Yi Yang & \begin{itemize}
 \midrule
 Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
     \item Multi-model LLM benchmark (Claude / GPT / Qwen / Gemini)
-    \item Interactive web application (Next.js + Cytoscape)
+    \item Interactive web application (Next.js + Cytoscape) and Vercel deployment
     \item FinDKG-style predictions leaderboard
     \item GAT retraining with fixed rolling window (MRR 0.7746)
-    \item Self-updating scraper framework
-    \item Vercel deployment
+    \item Full 15-year FNSPID corpus through the three-LLM chain on the GPU VM at \$0 API cost; half-corpus GAT live (MRR 0.654 / 83 months)
+    \item Corpus canonicalisation + strict GAT-input pipeline
+    \item Live corpora (STOXX Europe 600, full S\&P 100) with news factor model and monthly GAT retrain, on a daily VM cron
+    \item Analyst MCP connector over the deployed corpus
+    \item Pierre: full 2-year corpus judged on the VM; 10-configuration GAT sweep (CE No-Edge-Feats winner, MRR 0.7558); predictions source
+    \item Ruiwen: GPT-5.5 judge-and-refinement V7 (Responses API, sharded + billing-safe, hard quality gates; \(\approx\)\$150 / 8 h for 2019--2020)
   \end{itemize} \\
 \bottomrule
 \end{longtable}
@@ -768,11 +825,14 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
 \subsection{Summer 2026}
 \begin{itemize}
   \item Deployed web application: \url{https://eib-knowledge-graph.vercel.app}.
-  \item Source repository (private).
+  \item Source repository: \url{https://github.com/ap4509-columbia/eib-knowledge-graph} (public; VM orchestration scripts under \texttt{scripts/vm/}).
   \item Multi-LLM benchmark: 4-model comparison + Judge LLM stats.
   \item Retrained GAT: 230 checkpoints + leaderboard CSV.
-  \item Predictions JSON: 23 monthly leaderboards, 446 KB.
-  \item Self-updating scraper framework + per-corpus watchlists.
+  \item Full-corpus VM run: judged + refined + canonicalised FNSPID chunks (2009--2016 finalised; remainder in flight), master extraction CSVs, canonical UI corpus, strict GAT input.
+  \item Predictions JSON: 23 monthly leaderboards (2019--2020 corpus) + 83 monthly leaderboards (2009--2016 corpus, MRR 0.654) + live STOXX leaderboards (MRR 0.905).
+  \item Live corpora: STOXX Europe 600 and full S\&P 100, daily VM cron, factor bundles + raw triplet provenance.
+  \item Analyst MCP endpoint (\texttt{/api/mcp}) + \texttt{docs/MCP\_CONNECTOR.md}.
+  \item Ruiwen's GPT-5.5 judge/refinement bundle (V7) for the paid-frontier comparison.
   \item This report.
 \end{itemize}
 
@@ -781,10 +841,8 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
 
 \subsection{Corpus extension}
 \begin{itemize}
-  \item Currently 2 years of triplets (2019--2020). The underlying FNSPID dataset extends 1999--2023 with \(\approx\) 15M articles.
-  \item Extending to 5 years: \(\approx\)\$30 in LLM extraction cost, 2--3 days of processing.
-  \item Extending to full 15 years: \(\approx\)\$200.
-  \item Blocker: team budget decision, pending.
+  \item \emph{Resolved at \$0.} The full 15-year working corpus (2009--2024) is running through the local-Qwen three-LLM chain on the team VM (Section~\ref{sec:vmpipe}); 2009--2016 is finalised and live, the remainder completes within days of writing. The earlier \(\approx\)\$200 API estimate became unnecessary.
+  \item Beyond that: the upstream FNSPID release extends to 1999 and \(\approx\)15M articles across all industries --- the same chunked-lane machinery scales to any slice of it, GPU-time permitting.
 \end{itemize}
 
 \subsection{Cross-industry expansion}
