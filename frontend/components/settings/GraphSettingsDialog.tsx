@@ -161,6 +161,29 @@ export function GraphSettingsDialog({
               </p>
             </div>
           </div>
+
+          {/* Ops & handover — read-only pointers, not editable settings.
+              The site is static and public, so credentials can never be
+              entered here; this section tells a successor where each
+              account binding lives instead. */}
+          <div className="space-y-1.5 rounded-md border border-border bg-muted/40 px-3 py-2.5">
+            <Label className="text-sm">Ops &amp; handover</Label>
+            <p className="text-[11px] leading-snug text-muted-foreground">
+              This system runs on swappable account bindings: the GitHub
+              repository (code + all data), a Vercel project (site + MCP
+              endpoint), and a GPU VM cron (live corpora, local Qwen, no
+              API keys). To take it over with your own accounts, follow
+              the step-by-step runbook:
+            </p>
+            <a
+              href="https://github.com/ap4509-columbia/eib-knowledge-graph/blob/main/docs/HANDOVER.md"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block font-mono text-[11px] text-foreground underline underline-offset-2 hover:text-muted-foreground"
+            >
+              docs/HANDOVER.md
+            </a>
+          </div>
         </div>
 
         <DialogFooter className="flex justify-between sm:justify-between">

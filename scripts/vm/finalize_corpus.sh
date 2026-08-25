@@ -38,7 +38,8 @@ python3 -m scripts.run_gat_single --csv ~/eib/output/gat_input.csv --eib-root ~/
 # 4. Predictions JSON for the source + flip the Predictions tab on
 MRR=$(python3 - <<'PYEOF'
 import json, re
-txt = open("/home/alexandrapaiz/gat_single_metrics.json").read()
+import os
+txt = open(os.path.expanduser("~/gat_single_metrics.json")).read()
 m = re.search(r"\{[^{}]*\"MRR\"[^{}]*\}", txt, re.S)
 print(json.loads(m.group(0)).get("MRR", 0) if m else 0)
 PYEOF

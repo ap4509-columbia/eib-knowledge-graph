@@ -5,7 +5,7 @@
 # finalize_corpus.sh re-runs everything when half 2 (2017-2024) lands.
 LOG=~/finalize_half.log
 set -x
-CSVS="--csv /home/alexandrapaiz/eib/output/chunk_2009_2013_JudgeLLM_metrics_computation.csv --csv /home/alexandrapaiz/eib/output/chunk_2014_2016_JudgeLLM_metrics_computation.csv"
+CSVS="--csv $HOME/eib/output/chunk_2009_2013_JudgeLLM_metrics_computation.csv --csv $HOME/eib/output/chunk_2014_2016_JudgeLLM_metrics_computation.csv"
 
 cd ~/eib-knowledge-graph && git pull --rebase origin main
 python3 -m scripts.canonicalize_corpus $CSVS --out ~/eib/output/canonical_half_ui.csv --min-freq 2 >> $LOG 2>&1
@@ -18,7 +18,7 @@ python3 -m scripts.run_gat_single --csv ~/eib/output/gat_input_half.csv --eib-ro
 
 MRR=$(python3 - <<PYEOF
 import json, re
-txt = open("/home/alexandrapaiz/gat_half_metrics.json").read()
+txt = open("$HOME/gat_half_metrics.json").read()
 m = re.search(r"\{[^{}]*\"MRR\"[^{}]*\}", txt, re.S)
 print(json.loads(m.group(0)).get("MRR", 0) if m else 0)
 PYEOF
