@@ -91,6 +91,26 @@ SOURCE_TYPES = {
 # Impacted-target types — same wide set; caller filters client-side.
 IMPACTED_TYPES = set(SOURCE_TYPES)
 
+# Types that may OCCUPY leaderboard ranking slots. Hub concepts ("Earnings
+# Report") touch everything, so ranking by connectivity floats them to the
+# top where they carry zero analyst meaning — and they crowd concrete
+# entities out of the fixed top-N. Concepts, events, and instrument
+# boilerplate still appear as predicted co-movers (informative there:
+# "NVDA → AI chip demand"), just never as ranked rows.
+RANKED_TYPES = {
+    "COMPANY",
+    "STOCKTICKER",
+    "STOCK_TICKER",
+    "FINANCIALENTITY",
+    "FINANCIAL_ENTITY",
+    "SECTOR",
+    "INSTITUTION",
+    "PERSON",
+    "COUNTRY",
+    "LOCATION",
+    "PRODUCT",
+}
+
 # Regex families for junk entities the LLM extractor emits.
 JUNK_PATTERNS = [
     re.compile(r"^\d+$"),                                    # "50", "1840"
@@ -129,7 +149,22 @@ GENERIC_NAME_BLOCKLIST = {
     "value", "year to date performance", "annualized total return",
     # Generic sector names
     "chip stocks", "tech stocks", "semiconductor stocks",
+    # Earnings/reporting boilerplate (surfaced by the 2009-2016 corpus)
+    "earnings report", "earnings reports", "earnings beat", "earnings miss",
+    "earnings call", "earnings growth", "earnings growth forecast",
+    "quarterly results", "financial results", "results", "h1 results",
+    "shareholder value", "dividend quality", "potential upside",
+    "buy range", "price target", "price targets", "mean recommendation",
+    "industry average", "outlook", "activity", "analysts", "investors",
+    "retail investors", "wall street", "wall street analyst",
+    "wall street analysts",
 }
+
+# Pattern-shaped boilerplate ("Zacks Rank 2", "52-Week High").
+GENERIC_NAME_PATTERNS = [
+    re.compile(r"^zacks\s+rank\b", re.I),
+    re.compile(r"^\d+-?\s*week\s+(high|low)s?$", re.I),
+]
 
 
 def is_junk_entity(name: str) -> bool:
@@ -138,6 +173,9 @@ def is_junk_entity(name: str) -> bool:
         return True
     if name.lower() in GENERIC_NAME_BLOCKLIST:
         return True
+    for p in GENERIC_NAME_PATTERNS:
+        if p.match(name.strip()):
+            return True
     for p in JUNK_PATTERNS:
         if p.match(name.strip()):
             return True
@@ -316,7 +354,7 @@ def compute_period_predictions(
             break
         name = nodes_list[i]
         t = node_map.get(name, "UNK")
-        if t not in SOURCE_TYPES:
+        if t not in RANKED_TYPES:
             continue
         if is_junk_entity(name):
             continue
