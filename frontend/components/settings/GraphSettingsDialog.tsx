@@ -162,6 +162,30 @@ export function GraphSettingsDialog({
             </div>
           </div>
 
+          {/* Analyst MCP connector — the URL is the whole setup: public
+              read-only data, so no password, token, or OAuth exists. */}
+          <div className="space-y-1.5 rounded-md border border-border bg-muted/40 px-3 py-2.5">
+            <Label className="text-sm">Ask Claude about this data (MCP)</Label>
+            <p className="text-[11px] leading-snug text-muted-foreground">
+              Add this URL as a custom connector in Claude
+              (Settings&nbsp;→&nbsp;Connectors) and ask about the news
+              behind any node, factor, or prediction. URL only — no
+              password or key; the connector is read-only over this
+              site&apos;s public data.
+            </p>
+            <code className="block select-all break-all rounded bg-background px-2 py-1 font-mono text-[11px] text-foreground">
+              https://eib-knowledge-graph.vercel.app/api/mcp
+            </code>
+            <a
+              href="https://github.com/ap4509-columbia/eib-knowledge-graph/blob/main/docs/MCP_CONNECTOR.md"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block font-mono text-[11px] text-foreground underline underline-offset-2 hover:text-muted-foreground"
+            >
+              docs/MCP_CONNECTOR.md
+            </a>
+          </div>
+
           {/* Ops & handover — read-only pointers, not editable settings.
               The site is static and public, so credentials can never be
               entered here; this section tells a successor where each
