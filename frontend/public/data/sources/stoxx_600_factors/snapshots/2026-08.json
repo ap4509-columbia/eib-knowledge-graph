@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 197,
-    "edges": 166,
+    "nodes": 207,
+    "edges": 176,
     "scored_edges": 0
   },
   "nodes": [
@@ -1384,6 +1384,76 @@
       "degree": 1,
       "x": -79.54056238812974,
       "y": 497.9695112123881
+    },
+    {
+      "id": "DEP",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": 516.4148241400068,
+      "y": 296.90734463322764
+    },
+    {
+      "id": "Air Permit For Montour CT Natural Gas Power Plant Expansion In Montour County To Feed Data Centers",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 638.3890803792401,
+      "y": 292.53294726902726
+    },
+    {
+      "id": "Montour CT Natural Gas Power Plant",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": -272.99216195564867,
+      "y": 650.9052112190474
+    },
+    {
+      "id": "Montour County",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -792.9561260642481,
+      "y": 668.7533133239042
+    },
+    {
+      "id": "Data Centers",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 224.8167103480092,
+      "y": 753.1299004718466
+    },
+    {
+      "id": "Shell's Chemicals Business",
+      "type": "PRODUCT",
+      "degree": 3,
+      "x": 625.1815391591573,
+      "y": -310.99083470654256
+    },
+    {
+      "id": "LYB",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 461.0025752895804,
+      "y": -187.14345176311386
+    },
+    {
+      "id": "Baleine Phase 3 Development",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -356.6270812819128,
+      "y": -563.402429798248
+    },
+    {
+      "id": "Norway",
+      "type": "COUNTRY",
+      "degree": 1,
+      "x": -755.2990479781847,
+      "y": 20.311044564083918
+    },
+    {
+      "id": "Arctic Oil and Gas Drilling",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -900.0,
+      "y": -44.00670221479742
     }
   ],
   "edges": [
@@ -4042,6 +4112,166 @@
       "materiality_usd": 8000000000.0,
       "materiality_log": 22.803,
       "event_type": "M_AND_A"
+    },
+    {
+      "id": "DEP||Invites Comments On||Air Permit For Montour CT Natural Gas Power Plant Expansion In Montour County To Feed Data Centers",
+      "source": "DEP",
+      "target": "Air Permit For Montour CT Natural Gas Power Plant Expansion In Montour County To Feed Data Centers",
+      "rel": "Invites Comments On",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Montour CT Natural Gas Power Plant||Located In||Montour County",
+      "source": "Montour CT Natural Gas Power Plant",
+      "target": "Montour County",
+      "rel": "Located In",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Montour CT Natural Gas Power Plant||Expands To Feed||Data Centers",
+      "source": "Montour CT Natural Gas Power Plant",
+      "target": "Data Centers",
+      "rel": "Expands To Feed",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Shell||Sells Stake In||Shell's Chemicals Business",
+      "source": "Shell",
+      "target": "Shell's Chemicals Business",
+      "rel": "Sells Stake In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.25,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Exxon||Expresses Interest In||Shell's Chemicals Business",
+      "source": "Exxon",
+      "target": "Shell's Chemicals Business",
+      "rel": "Expresses Interest In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "LYB||Expresses Interest In||Shell's Chemicals Business",
+      "source": "LYB",
+      "target": "Shell's Chemicals Business",
+      "rel": "Expresses Interest In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Shell||Shelves Project||Baleine Phase 3 Development",
+      "source": "Shell",
+      "target": "Baleine Phase 3 Development",
+      "rel": "Shelves Project",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Shell||Operates In||Trinidad and Tobago",
+      "source": "Shell",
+      "target": "Trinidad and Tobago",
+      "rel": "Operates In",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Shell Oil||Is Listed For Sale By||Shell",
+      "source": "Shell Oil",
+      "target": "Shell",
+      "rel": "Is Listed For Sale By",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.1,
+      "materiality_usd": 325000000.0,
+      "materiality_log": 19.599,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Norway||Stands Firm On||Arctic Oil and Gas Drilling",
+      "source": "Norway",
+      "target": "Arctic Oil and Gas Drilling",
+      "rel": "Stands Firm On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
     }
   ]
 }

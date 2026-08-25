@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 41,
-    "edges": 30,
+    "nodes": 42,
+    "edges": 31,
     "scored_edges": 0
   },
   "nodes": [
@@ -292,6 +292,13 @@
       "degree": 1,
       "x": 900.0,
       "y": 549.649686163444
+    },
+    {
+      "id": "STMicroelectronics N.V.",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
     }
   ],
   "edges": [
@@ -763,6 +770,22 @@
       "id": "SAN||Has Ticker||SAN.PA",
       "source": "SAN",
       "target": "SAN.PA",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "STMicroelectronics N.V.||Has Ticker||ENXTPA:STMPA",
+      "source": "STMicroelectronics N.V.",
+      "target": "ENXTPA:STMPA",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",

@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 97,
-    "edges": 82,
+    "nodes": 100,
+    "edges": 84,
     "scored_edges": 0
   },
   "nodes": [
@@ -684,6 +684,27 @@
       "degree": 1,
       "x": -899.9999999999992,
       "y": 886.4088719606856
+    },
+    {
+      "id": "InGaAs Camera Market",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 743.7995474024391,
+      "y": -449.99762728200704
+    },
+    {
+      "id": "$372.81 Million",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -634.9407301306794
+    },
+    {
+      "id": "UK Shares",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -163.92143083444103,
+      "y": 469.5561683062746
     }
   ],
   "edges": [
@@ -936,7 +957,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1998,6 +2019,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "InGaAs Camera Market||Project to Exceed Size of||$372.81 Million",
+      "source": "InGaAs Camera Market",
+      "target": "$372.81 Million",
+      "rel": "Project to Exceed Size of",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 372810000.0,
+      "materiality_log": 19.737,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "UK Shares||Are Affected By||Mixed Q2 Earnings",
+      "source": "UK Shares",
+      "target": "Mixed Q2 Earnings",
+      "rel": "Are Affected By",
+      "rel_cat": "GMM",
+      "causal_type": "CAUSAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
     }
   ]
 }
