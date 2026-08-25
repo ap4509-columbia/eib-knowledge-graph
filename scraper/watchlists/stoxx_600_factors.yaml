@@ -51,3 +51,38 @@ tickers:
   - ULVR.L         # Unilever · UK
   - ITX.MC         # Inditex · Spain
   - OR.PA          # L'Oréal · France
+
+# Ticker -> canonical company name. Used by scripts/clean_snapshots.py
+# to merge ticker-symbol nodes (AZN.L, LSE:AZN, plain AZN) into the
+# company node so the graph shows one entity per firm.
+companies:
+  NOVO-B.CO: Novo Nordisk
+  ROG.SW: Roche
+  NOVN.SW: Novartis
+  SAN.PA: Sanofi
+  AZN.L: AstraZeneca
+  SAP.DE: SAP
+  ASML.AS: ASML
+  ADYEN.AS: Adyen
+  CAP.PA: Capgemini
+  STMPA.PA: STMicroelectronics
+  BNP.PA: BNP Paribas
+  HSBA.L: HSBC
+  SAN.MC: Santander
+  DBK.DE: Deutsche Bank
+  INGA.AS: ING Groep
+  SIE.DE: Siemens
+  AIR.PA: Airbus
+  SU.PA: Schneider Electric
+  VOW3.DE: Volkswagen
+  MBG.DE: Mercedes-Benz
+  SHEL.L: Shell
+  TTE.PA: TotalEnergies
+  BP.L: BP
+  EQNR.OL: Equinor
+  ENI.MI: Eni
+  NESN.SW: Nestlé
+  MC.PA: LVMH
+  ULVR.L: Unilever
+  ITX.MC: Inditex
+  OR.PA: "L'Oréal"

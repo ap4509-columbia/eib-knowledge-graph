@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 42,
-    "edges": 31,
+    "nodes": 33,
+    "edges": 25,
     "scored_edges": 0
   },
   "nodes": [
@@ -72,7 +72,7 @@
     {
       "id": "Inditex",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": 18.684114682944738,
       "y": -141.0978812353436
     },
@@ -93,7 +93,7 @@
     {
       "id": "Novartis",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 4,
       "x": -127.65867500701997,
       "y": 3.7527973331050033
     },
@@ -112,13 +112,6 @@
       "y": -269.86666770791163
     },
     {
-      "id": "SAN",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 54.79134357425542,
-      "y": 652.0658983457588
-    },
-    {
       "id": "Acquisition",
       "type": "EVENT",
       "degree": 1,
@@ -128,16 +121,9 @@
     {
       "id": "Equinor",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 1,
       "x": 25.004178676843487,
       "y": -370.51528998763666
-    },
-    {
-      "id": "OB:EQNR",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 520.1938578565771,
-      "y": -474.4581486842251
     },
     {
       "id": "Stock Value",
@@ -149,7 +135,7 @@
     {
       "id": "Adyen",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 670.8343865515608,
       "y": -117.35832056378464
     },
@@ -159,20 +145,6 @@
       "degree": 1,
       "x": 822.4518618965345,
       "y": -226.93306278962308
-    },
-    {
-      "id": "HSBC",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -744.7035570356556,
-      "y": 170.35841568659512
-    },
-    {
-      "id": "HSBA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -776.8107795784468,
-      "y": 339.9473920700442
     },
     {
       "id": "European Battery Expansion",
@@ -187,13 +159,6 @@
       "degree": 1,
       "x": 385.07246111800123,
       "y": -900.0
-    },
-    {
-      "id": "SWX:NOVN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": 112.0244246274341
     },
     {
       "id": "Antares Cancer",
@@ -224,32 +189,11 @@
       "y": -564.386748910195
     },
     {
-      "id": "STMicroelectronics",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 232.2751965467121,
-      "y": -350.1838136450497
-    },
-    {
-      "id": "ENXTPA:STMPA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 359.14569454878375,
-      "y": -579.6843410298887
-    },
-    {
       "id": "Industria De Dise\u00f1o Textil",
       "type": "COMPANY",
       "degree": 2,
       "x": -197.93736074497312,
       "y": 312.7198920900006
-    },
-    {
-      "id": "BME:ITX",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -900.0,
-      "y": 232.54383858694828
     },
     {
       "id": "Analyst Targets",
@@ -287,18 +231,11 @@
       "y": -363.4493818551081
     },
     {
-      "id": "SAN.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": 549.649686163444
-    },
-    {
-      "id": "STMicroelectronics N.V.",
+      "id": "Sanofi",
       "type": "COMPANY",
-      "degree": 1,
-      "x": -899.9999999999992,
-      "y": 886.4088719606856
+      "degree": 2,
+      "x": 54.79134357425542,
+      "y": 652.0658983457588
     }
   ],
   "edges": [
@@ -479,8 +416,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "SAN||Is Integrating||Acquisition",
-      "source": "SAN",
+      "id": "Sanofi||Is Integrating||Acquisition",
+      "source": "Sanofi",
       "target": "Acquisition",
       "rel": "Is Integrating",
       "rel_cat": "SSI",
@@ -493,22 +430,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_AND_A"
-    },
-    {
-      "id": "Equinor||Has Ticker||OB:EQNR",
-      "source": "Equinor",
-      "target": "OB:EQNR",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Equinor||Saw 31% Year-to-Date Increase In||Stock Value",
@@ -543,22 +464,6 @@
       "event_type": "EXECUTIVE_CHANGE"
     },
     {
-      "id": "HSBC||Has Ticker||HSBA",
-      "source": "HSBC",
-      "target": "HSBA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Eni||Pursues||European Battery Expansion",
       "source": "Eni",
       "target": "European Battery Expansion",
@@ -589,22 +494,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "Novartis||Has Ticker||SWX:NOVN",
-      "source": "Novartis",
-      "target": "SWX:NOVN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Novartis||Forms Partnership With||Antares Cancer",
@@ -639,9 +528,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Banco Santander||Has Ticker||SAN",
+      "id": "Banco Santander||Has Ticker||Sanofi",
       "source": "Banco Santander",
-      "target": "SAN",
+      "target": "Sanofi",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -671,25 +560,9 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Industria De Dise\u00f1o Textil||Has Ticker||BME:ITX",
+      "id": "Industria De Dise\u00f1o Textil||Has Ticker||Inditex",
       "source": "Industria De Dise\u00f1o Textil",
-      "target": "BME:ITX",
+      "target": "Inditex",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -765,38 +638,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
-    },
-    {
-      "id": "SAN||Has Ticker||SAN.PA",
-      "source": "SAN",
-      "target": "SAN.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "STMicroelectronics N.V.||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics N.V.",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     }
   ]
 }

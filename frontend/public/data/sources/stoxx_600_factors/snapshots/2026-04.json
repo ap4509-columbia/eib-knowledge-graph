@@ -1,24 +1,17 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 30,
-    "edges": 21,
+    "nodes": 24,
+    "edges": 17,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 4,
       "x": 4.936619387199892,
       "y": 8.920441407663747
-    },
-    {
-      "id": "SWX:NESN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": 111.85197510139093
     },
     {
       "id": "Recovery Plan",
@@ -40,20 +33,6 @@
       "degree": 1,
       "x": 858.5427848845799,
       "y": -33.47037309108202
-    },
-    {
-      "id": "Siemens",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -740.2816155088669,
-      "y": 294.6835669050942
-    },
-    {
-      "id": "XTRA:SIE",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -819.4025301755288,
-      "y": 442.7638947573005
     },
     {
       "id": "Rising Sales",
@@ -79,16 +58,9 @@
     {
       "id": "Deutsche Bank",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": 53.15517276584287,
       "y": -56.416805285251606
-    },
-    {
-      "id": "XTRA:DBK",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 899.9999999999999,
-      "y": 179.07266628342697
     },
     {
       "id": "Bond Tender Offer",
@@ -201,39 +173,9 @@
       "degree": 1,
       "x": 258.9372925168498,
       "y": -854.4242046249101
-    },
-    {
-      "id": "STMicroelectronics",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -899.9999999999992,
-      "y": 886.4088719606856
-    },
-    {
-      "id": "ENXTPA:STMPA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": -886.4088719606855
     }
   ],
   "edges": [
-    {
-      "id": "Nestl\u00e9||Has Ticker||SWX:NESN",
-      "source": "Nestl\u00e9",
-      "target": "SWX:NESN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
     {
       "id": "Nestl\u00e9||Makes Progress On||Recovery Plan",
       "source": "Nestl\u00e9",
@@ -265,22 +207,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
-    },
-    {
-      "id": "Siemens||Has Ticker||XTRA:SIE",
-      "source": "Siemens",
-      "target": "XTRA:SIE",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Nestl\u00e9||Reports||Rising Sales",
@@ -329,22 +255,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "Deutsche Bank||Has Ticker||XTRA:DBK",
-      "source": "Deutsche Bank",
-      "target": "XTRA:DBK",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Deutsche Bank||Conducted||Bond Tender Offer",
@@ -537,22 +447,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
-    },
-    {
-      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     }
   ]
 }

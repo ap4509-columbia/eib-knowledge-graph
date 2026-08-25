@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 30,
-    "edges": 19,
+    "nodes": 25,
+    "edges": 16,
     "scored_edges": 0
   },
   "nodes": [
@@ -77,13 +77,6 @@
       "y": -455.11792037553903
     },
     {
-      "id": "BME:ITX",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 558.5312566046167,
-      "y": -576.0996808351955
-    },
-    {
       "id": "Retail Optimism",
       "type": "CONCEPT",
       "degree": 1,
@@ -107,16 +100,9 @@
     {
       "id": "Schneider Electric",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": 4.707462965621628,
       "y": 8.249004258830876
-    },
-    {
-      "id": "ENXTPA:SU",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": 112.0244246274341
     },
     {
       "id": "Strong Multi-Year Stock Performance",
@@ -133,32 +119,11 @@
       "y": 672.6931809962693
     },
     {
-      "id": "ASML Holding N.V.",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 705.8331725319806,
-      "y": -558.2402493711152
-    },
-    {
-      "id": "ASML",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 861.0412429866086,
-      "y": -881.8922617596519
-    },
-    {
       "id": "Deutsche Bank Aktiengesellschaft",
       "type": "COMPANY",
       "degree": 1,
       "x": -750.3159712270452,
       "y": 540.1325111307669
-    },
-    {
-      "id": "ETR:DBK",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -816.5584442915442,
-      "y": 900.0
     },
     {
       "id": "Eni",
@@ -189,20 +154,6 @@
       "y": 317.93244021586355
     },
     {
-      "id": "Nestl\u00e9 S.A.",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -899.9999999999992,
-      "y": 886.4088719606856
-    },
-    {
-      "id": "SWX:NESN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": -886.4088719606855
-    },
-    {
       "id": "SSON",
       "type": "COMPANY",
       "degree": 1,
@@ -215,6 +166,20 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Inditex",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 558.5312566046167,
+      "y": -576.0996808351955
+    },
+    {
+      "id": "Deutsche Bank",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
     }
   ],
   "edges": [
@@ -315,9 +280,9 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "Industria De Dise\u00f1o Textil||Has Ticker||BME:ITX",
+      "id": "Industria De Dise\u00f1o Textil||Has Ticker||Inditex",
       "source": "Industria De Dise\u00f1o Textil",
-      "target": "BME:ITX",
+      "target": "Inditex",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -363,22 +328,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Schneider Electric||Has Ticker||ENXTPA:SU",
-      "source": "Schneider Electric",
-      "target": "ENXTPA:SU",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Schneider Electric||Experienced||Strong Multi-Year Stock Performance",
       "source": "Schneider Electric",
       "target": "Strong Multi-Year Stock Performance",
@@ -411,25 +360,9 @@
       "event_type": "GUIDANCE"
     },
     {
-      "id": "ASML Holding N.V.||Has Ticker||ASML",
-      "source": "ASML Holding N.V.",
-      "target": "ASML",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Deutsche Bank Aktiengesellschaft||Has Ticker||ETR:DBK",
+      "id": "Deutsche Bank Aktiengesellschaft||Has Ticker||Deutsche Bank",
       "source": "Deutsche Bank Aktiengesellschaft",
-      "target": "ETR:DBK",
+      "target": "Deutsche Bank",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -489,22 +422,6 @@
       "materiality_usd": 582000000.0,
       "materiality_log": 20.182,
       "event_type": "OTHER"
-    },
-    {
-      "id": "Nestl\u00e9 S.A.||Has Ticker||SWX:NESN",
-      "source": "Nestl\u00e9 S.A.",
-      "target": "SWX:NESN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "SSON||Publishes Article On||SAP Modernization",

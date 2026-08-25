@@ -1,25 +1,11 @@
 {
   "month": "2026-03",
   "stats": {
-    "nodes": 12,
-    "edges": 7,
+    "nodes": 9,
+    "edges": 5,
     "scored_edges": 0
   },
   "nodes": [
-    {
-      "id": "Roche Holding",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 110.2273106306769,
-      "y": -14.21063081625791
-    },
-    {
-      "id": "SWX:ROG",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 900.0,
-      "y": 145.63009801999814
-    },
     {
       "id": "Mixed Pipeline Signals",
       "type": "CONCEPT",
@@ -40,20 +26,6 @@
       "degree": 1,
       "x": -167.3433162953686,
       "y": 688.2773169023001
-    },
-    {
-      "id": "Equinor",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 84.33604607023908,
-      "y": -588.1802539913682
-    },
-    {
-      "id": "EQNR",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -38.208911652227854,
-      "y": -561.143332797549
     },
     {
       "id": "Unilever",
@@ -89,28 +61,19 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Roche",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 110.2273106306769,
+      "y": -14.21063081625791
     }
   ],
   "edges": [
     {
-      "id": "Roche Holding||Has Ticker||SWX:ROG",
-      "source": "Roche Holding",
-      "target": "SWX:ROG",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Roche Holding||Is Impacted By||Mixed Pipeline Signals",
-      "source": "Roche Holding",
+      "id": "Roche||Is Impacted By||Mixed Pipeline Signals",
+      "source": "Roche",
       "target": "Mixed Pipeline Signals",
       "rel": "Is Impacted By",
       "rel_cat": "SSI",
@@ -139,22 +102,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
-    },
-    {
-      "id": "Equinor||Has Ticker||EQNR",
-      "source": "Equinor",
-      "target": "EQNR",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Unilever||is in advanced negotiations for partial divestment of||Foods Division",

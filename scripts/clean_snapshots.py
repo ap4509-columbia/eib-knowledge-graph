@@ -60,10 +60,96 @@ def is_junk(name: str) -> bool:
     return any(p.match(n) for p in JUNK_PATTERNS)
 
 
+# Legal/corporate suffixes that never distinguish two real-world entities.
+# "Apple" vs "Apple Inc." sits below any safe TF-IDF threshold (short name,
+# big relative suffix), so these merge deterministically instead.
+CORP_SUFFIX = re.compile(
+    r"(,?\s+(inc|incorporated|corp|corporation|company|co|ltd|limited|plc"
+    r"|holdings?|group|n\.?v|s\.?a|a\/s|ag|se)\.?)+$",
+    re.I,
+)
+
+
+def _suffix_key(name: str) -> str:
+    """Case-folded name with trailing corporate suffixes stripped."""
+    n = name.strip().rstrip(".")
+    n = CORP_SUFFIX.sub("", n)
+    return n.lower().strip()
+
+
+_TICKER_TYPES = {"STOCK_TICKER", "STOCKTICKER", "TICKER", "STOCK TICKER"}
+_EXCH_SUFFIX = re.compile(r"\.[A-Z]{1,3}$")
+
+
+def build_ticker_alias_map(
+    watchlist: str, freq: Counter, type_of: dict[str, str]
+) -> dict[str, str]:
+    """Merge ticker-symbol nodes into their company node using the
+    watchlist's `companies:` map. Handles decorated forms: AZN.L, LSE:AZN,
+    AAPL:NASDAQ, plain AZN. Cores shorter than 3 chars (V, MA, MS…) only
+    merge when the node is actually typed as a ticker, so abbreviations
+    of other things can't be swallowed."""
+    import yaml
+
+    path = Path(__file__).resolve().parent.parent / "scraper" / "watchlists" / f"{watchlist}.yaml"
+    companies = (yaml.safe_load(path.read_text()) or {}).get("companies") or {}
+    alias: dict[str, str] = {}
+    for tick, comp in companies.items():
+        t = str(tick).upper()
+        alias[t] = comp
+        alias.setdefault(_EXCH_SUFFIX.sub("", t), comp)
+
+    mapping: dict[str, str] = {}
+    for name in freq:
+        u = name.upper().strip()
+        if " " in u or len(u) > 14:
+            continue
+        cands = {u}
+        if ":" in u:
+            a, b = u.split(":", 1)
+            cands |= {a, b}
+        cands |= {_EXCH_SUFFIX.sub("", c) for c in set(cands)}
+        for c in sorted(cands, key=len, reverse=True):
+            comp = alias.get(c)
+            if comp is None or name == comp:
+                continue
+            if len(c) < 3 and type_of.get(name, "UNK") not in _TICKER_TYPES:
+                continue
+            mapping[name] = comp
+            break
+    return mapping
+
+
+def build_suffix_canonical_map(
+    freq: Counter, type_of: dict[str, str]
+) -> dict[str, str]:
+    """Deterministic merges: same type + same suffix-stripped, case-folded
+    name. Canonical = the most frequent variant. Catches Apple/Apple Inc.
+    and 52-Week High/52-week High without any similarity guesswork."""
+    groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for name in freq:
+        key = _suffix_key(name)
+        if len(key) < 3:
+            continue  # too short to trust after stripping
+        groups[(key, type_of.get(name, "UNK"))].append(name)
+    mapping: dict[str, str] = {}
+    for members in groups.values():
+        if len(members) < 2:
+            continue
+        canonical = max(members, key=lambda m: freq[m])
+        for m in members:
+            if m != canonical:
+                mapping[m] = canonical
+    return mapping
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--corpus", required=True, type=Path)
     ap.add_argument("--sim", type=float, default=0.9)
+    ap.add_argument("--watchlist", default=None,
+                    help="Watchlist name whose companies: map merges ticker "
+                    "nodes (AZN.L, LSE:AZN) into their company node.")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -81,10 +167,36 @@ def main() -> None:
 
     junk = {e for e in freq if is_junk(e)}
     keep_freq = Counter({e: c for e, c in freq.items() if e not in junk})
-    mapping = build_entity_canonical_map(keep_freq, type_of, args.sim)
+
+    # Pass 0: ticker symbols -> company nodes (watchlist-driven).
+    # Pass 1: deterministic suffix/case merges. Pass 2: fuzzy TF-IDF on the
+    # survivors. Composed so a variant chained through several passes lands
+    # on the final canonical name.
+    ticker_map = (
+        build_ticker_alias_map(args.watchlist, keep_freq, type_of)
+        if args.watchlist
+        else {}
+    )
+    t_freq = Counter()
+    for e, c in keep_freq.items():
+        t_freq[ticker_map.get(e, e)] += c
+    suffix_map = build_suffix_canonical_map(t_freq, type_of)
+    merged_freq = Counter()
+    for e, c in t_freq.items():
+        merged_freq[suffix_map.get(e, e)] += c
+    fuzzy_map = build_entity_canonical_map(merged_freq, type_of, args.sim)
+    mapping: dict[str, str] = {}
+    for e in keep_freq:
+        step = ticker_map.get(e, e)
+        step = suffix_map.get(step, step)
+        final = fuzzy_map.get(step, step)
+        if final != e:
+            mapping[e] = final
     print(f"{len(freq)} entities · {len(junk)} junk removed · "
           f"{len(mapping)} variants merged "
-          f"(e.g. {list(mapping.items())[:3]})")
+          f"({len(ticker_map)} ticker->company, "
+          f"{len(suffix_map)} suffix/case, "
+          f"{len(fuzzy_map)} fuzzy; e.g. {list(mapping.items())[:3]})")
 
     total_dropped_edges = total_merged = 0
     for p, snap in snaps.items():
@@ -120,7 +232,14 @@ def main() -> None:
             degree[e["source"]] += w
             degree[e["target"]] += w
 
-        pos = {n["id"]: n for n in snap.get("nodes", [])}
+        # Nodes already bearing their canonical name go first, so a merged
+        # node keeps the company's attributes (type, position) rather than
+        # inheriting them from whichever ticker variant happened to come
+        # first in the file.
+        pos = {n["id"]: n for n in sorted(
+            snap.get("nodes", []),
+            key=lambda n: mapping.get(n["id"], n["id"]) != n["id"],
+        )}
         nodes = []
         seen: set[str] = set()
         for old_id, n in pos.items():

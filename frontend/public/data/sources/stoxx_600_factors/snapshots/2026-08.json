@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 207,
-    "edges": 176,
+    "nodes": 179,
+    "edges": 156,
     "scored_edges": 0
   },
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 5,
       "x": 105.07419128947642,
       "y": 144.03975365033625
     },
@@ -56,48 +56,6 @@
       "y": -337.95190345029727
     },
     {
-      "id": "Sanofi",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -649.0392819625741,
-      "y": 343.58933743641745
-    },
-    {
-      "id": "SAN.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -629.7411522847897,
-      "y": 378.2017194542889
-    },
-    {
-      "id": "AstraZeneca PLC",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -141.28160159172586,
-      "y": -473.87714551997993
-    },
-    {
-      "id": "AZN.L",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 391.266969574076,
-      "y": -694.3018957517228
-    },
-    {
-      "id": "SAP SE",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -621.0963949514808,
-      "y": 400.0220402064444
-    },
-    {
-      "id": "SAP.DE",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -689.4541299761676,
-      "y": 375.002367116792
-    },
-    {
       "id": "White Cap",
       "type": "COMPANY",
       "degree": 3,
@@ -119,32 +77,11 @@
       "y": 900.0
     },
     {
-      "id": "STMicroelectronics N.V.",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -201.7627652111941,
-      "y": -465.2886873160805
-    },
-    {
-      "id": "STMPA.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -362.2456402721481,
-      "y": -691.7204446297993
-    },
-    {
       "id": "STMicroelectronics",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 1,
       "x": -429.0437493522472,
       "y": 465.1829454069357
-    },
-    {
-      "id": "ENXTPA:STMPA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -781.522519723341,
-      "y": -5.918382168175433
     },
     {
       "id": "Overvaluation",
@@ -156,7 +93,7 @@
     {
       "id": "BNP Paribas",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 6,
       "x": 216.22511547923153,
       "y": -606.6415490462904
     },
@@ -166,20 +103,6 @@
       "degree": 1,
       "x": 255.15270084712338,
       "y": -725.0658433419566
-    },
-    {
-      "id": "HSBC Holdings",
-      "type": "COMPANY",
-      "degree": 3,
-      "x": 517.2565079415256,
-      "y": 754.7733398974681
-    },
-    {
-      "id": "HSBA.L",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 520.2959311691613,
-      "y": 800.9406154309323
     },
     {
       "id": "Telef\u00f3nica, S.A.",
@@ -217,13 +140,6 @@
       "y": 3.999604869094745
     },
     {
-      "id": "SIE.DE",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 624.1856717385285,
-      "y": -544.6229310865464
-    },
-    {
       "id": "PA",
       "type": "FINANCIAL_ENTITY",
       "degree": 2,
@@ -252,25 +168,11 @@
       "y": -593.9576656115931
     },
     {
-      "id": "VOW3.DE",
-      "type": "STOCK_TICKER",
-      "degree": 3,
-      "x": -85.51722801230596,
-      "y": -786.3704814622556
-    },
-    {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 10,
+      "degree": 5,
       "x": 591.7998280050487,
       "y": 399.5435251561496
-    },
-    {
-      "id": "XTRA:VOW3",
-      "type": "STOCK_TICKER",
-      "degree": 4,
-      "x": 339.39346161345594,
-      "y": 776.9631307972409
     },
     {
       "id": "JSW",
@@ -296,14 +198,14 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 21,
       "x": 576.3270756428893,
       "y": -491.8391989915021
     },
     {
       "id": "Stock Price Increase",
       "type": "EVENT",
-      "degree": 1,
+      "degree": 2,
       "x": 530.3650512501616,
       "y": -483.30082458023713
     },
@@ -313,13 +215,6 @@
       "degree": 2,
       "x": -740.1377596082793,
       "y": 245.14132286444757
-    },
-    {
-      "id": "Price Increase",
-      "type": "EVENT",
-      "degree": 1,
-      "x": -793.1169103418197,
-      "y": 271.26122261345006
     },
     {
       "id": "Geopolitical concerns over Strait of Hormuz",
@@ -338,7 +233,7 @@
     {
       "id": "Shell Oil",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -407.2698957973636,
       "y": -444.8076162131028
     },
@@ -364,13 +259,6 @@
       "y": 310.04734530269684
     },
     {
-      "id": "BP.L",
-      "type": "STOCK_TICKER",
-      "degree": 4,
-      "x": 209.11542501061936,
-      "y": 876.5369337580809
-    },
-    {
       "id": "Energy Market",
       "type": "SECTOR",
       "degree": 1,
@@ -385,23 +273,9 @@
       "y": 244.933193348248
     },
     {
-      "id": "Nestl\u00e9 S.A.",
-      "type": "COMPANY",
-      "degree": 3,
-      "x": -166.53763695490457,
-      "y": -483.23246239770003
-    },
-    {
-      "id": "NESN.SW",
-      "type": "STOCK_TICKER",
-      "degree": 3,
-      "x": -227.53295064461778,
-      "y": -739.691954988496
-    },
-    {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 14,
+      "degree": 15,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -448,13 +322,6 @@
       "y": -568.44301322023
     },
     {
-      "id": "NOVO-B.CO",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -76.43424087753505,
-      "y": 722.4628446928361
-    },
-    {
       "id": "Earnings Call",
       "type": "EVENT",
       "degree": 2,
@@ -485,16 +352,9 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 3,
       "x": 116.62188721766933,
       "y": -557.0797074222387
-    },
-    {
-      "id": "LSE:AZN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -375.6448942541104,
-      "y": -723.5363384444388
     },
     {
       "id": "Cancer Diagnostics Deals",
@@ -560,25 +420,11 @@
       "y": 448.2414097755111
     },
     {
-      "id": "LSE:SHEL",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -790.0604237337589,
-      "y": 429.02754748367005
-    },
-    {
       "id": "Share Buyback Program",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
       "x": 497.0305323571557,
       "y": -688.4157556787679
-    },
-    {
-      "id": "SHEL",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -74.23635685458545,
-      "y": -793.648565458503
     },
     {
       "id": "Dividend Quality",
@@ -611,14 +457,14 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 10,
       "x": 655.3263306034597,
       "y": -265.0840341957245
     },
     {
       "id": "Trinidad and Tobago",
       "type": "FINANCIAL_ENTITY",
-      "degree": 2,
+      "degree": 3,
       "x": 577.8123862564235,
       "y": -336.5948732422173
     },
@@ -628,27 +474,6 @@
       "degree": 1,
       "x": -793.349517222946,
       "y": 176.73232535425686
-    },
-    {
-      "id": "MC.PA",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -836.1125871541688,
-      "y": 208.3493172644774
-    },
-    {
-      "id": "Unilever PLC",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 79.50015926207227,
-      "y": -46.6694198750027
-    },
-    {
-      "id": "ULVR.L",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 768.7291047221663,
-      "y": -380.8482934224292
     },
     {
       "id": "CPSE:NOVO B",
@@ -670,13 +495,6 @@
       "degree": 1,
       "x": -593.578952121494,
       "y": 596.5372199735644
-    },
-    {
-      "id": "ROG",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -494.0844597718841,
-      "y": -549.2705620289192
     },
     {
       "id": "SAP",
@@ -705,13 +523,6 @@
       "degree": 1,
       "x": 293.05349025653214,
       "y": 819.6991248191357
-    },
-    {
-      "id": "ASML Holding N.V.",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 469.9107225339874,
-      "y": -487.48572147705966
     },
     {
       "id": "AI Chip Boom",
@@ -833,13 +644,6 @@
       "y": 361.0219577920225
     },
     {
-      "id": "Inditex Group",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 19.386921704904086,
-      "y": -558.2548001290497
-    },
-    {
       "id": "Bershka Brand",
       "type": "COMPANY",
       "degree": 2,
@@ -910,13 +714,6 @@
       "y": 361.7144226949373
     },
     {
-      "id": "Shell plc",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 546.5786713868926,
-      "y": -457.46194974850084
-    },
-    {
       "id": "Iran War",
       "type": "EVENT",
       "degree": 2,
@@ -931,13 +728,6 @@
       "y": 171.68400550281015
     },
     {
-      "id": "BME:ITX",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -842.6970124436184,
-      "y": -240.35646885938144
-    },
-    {
       "id": "Miami",
       "type": "CONCEPT",
       "degree": 1,
@@ -947,7 +737,7 @@
     {
       "id": "Inditex",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -269.0516576298946,
       "y": -50.706798656269875
     },
@@ -992,13 +782,6 @@
       "degree": 2,
       "x": -35.93181979766021,
       "y": -426.51037994302567
-    },
-    {
-      "id": "XTRA:MBG",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -584.1633790164575,
-      "y": -377.3758673444068
     },
     {
       "id": "Fleet Charging Deal",
@@ -1267,13 +1050,6 @@
       "y": -693.0589081479267
     },
     {
-      "id": "BNP.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -319.0714883535705,
-      "y": -228.8062625226476
-    },
-    {
       "id": "Pa. State Police",
       "type": "COMPANY",
       "degree": 1,
@@ -1339,7 +1115,7 @@
     {
       "id": "Price Gouging",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": 900.0,
       "y": -886.4088719606855
     },
@@ -1360,7 +1136,7 @@
     {
       "id": "Exxon",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -99.03739392963418,
       "y": -394.95448559397994
     },
@@ -1454,6 +1230,34 @@
       "degree": 1,
       "x": -900.0,
       "y": -44.00670221479742
+    },
+    {
+      "id": "HSBC",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 517.2565079415256,
+      "y": 754.7733398974681
+    },
+    {
+      "id": "Siemens",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": 624.1856717385285,
+      "y": -544.6229310865464
+    },
+    {
+      "id": "LVMH",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": -836.1125871541688,
+      "y": 208.3493172644774
+    },
+    {
+      "id": "Mercedes-Benz",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": -584.1633790164575,
+      "y": -377.3758673444068
     }
   ],
   "edges": [
@@ -1570,54 +1374,6 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Sanofi||Has Ticker||SAN.PA",
-      "source": "Sanofi",
-      "target": "SAN.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "AstraZeneca PLC||Has Ticker||AZN.L",
-      "source": "AstraZeneca PLC",
-      "target": "AZN.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "SAP SE||Has Ticker||SAP.DE",
-      "source": "SAP SE",
-      "target": "SAP.DE",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "White Cap||Adds||Pennsylvania Distribution Hub",
       "source": "White Cap",
       "target": "Pennsylvania Distribution Hub",
@@ -1648,38 +1404,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "STMicroelectronics N.V.||Has Ticker||STMPA.PA",
-      "source": "STMicroelectronics N.V.",
-      "target": "STMPA.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "STMicroelectronics||Is Assessed As Having||Overvaluation",
@@ -1714,22 +1438,6 @@
       "event_type": "GUIDANCE"
     },
     {
-      "id": "HSBC Holdings||Has Ticker||HSBA.L",
-      "source": "HSBC Holdings",
-      "target": "HSBA.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Telef\u00f3nica, S.A.||Has Ticker||TEF.MC",
       "source": "Telef\u00f3nica, S.A.",
       "target": "TEF.MC",
@@ -1762,9 +1470,9 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "SIEMENS AG N||Has Ticker||SIE.DE",
+      "id": "SIEMENS AG N||Has Ticker||Siemens",
       "source": "SIEMENS AG N",
-      "target": "SIE.DE",
+      "target": "Siemens",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -1826,31 +1534,15 @@
       "event_type": "REGULATORY"
     },
     {
-      "id": "Volkswagen Aktiengesellschaft||Has Ticker||VOW3.DE",
+      "id": "Volkswagen Aktiengesellschaft||Has Ticker||Volkswagen",
       "source": "Volkswagen Aktiengesellschaft",
-      "target": "VOW3.DE",
+      "target": "Volkswagen",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Volkswagen||Has Ticker||XTRA:VOW3",
-      "source": "Volkswagen",
-      "target": "XTRA:VOW3",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 4,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -1906,9 +1598,9 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Oil||experiences||Price Increase",
+      "id": "Oil||experiences||Stock Price Increase",
       "source": "Oil",
-      "target": "Price Increase",
+      "target": "Stock Price Increase",
       "rel": "experiences",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -1986,9 +1678,9 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "BP PLC||Has Ticker||BP.L",
+      "id": "BP PLC||Has Ticker||BP",
       "source": "BP PLC",
-      "target": "BP.L",
+      "target": "BP",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -2016,22 +1708,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
-    },
-    {
-      "id": "Nestl\u00e9 S.A.||Has Ticker||NESN.SW",
-      "source": "Nestl\u00e9 S.A.",
-      "target": "NESN.SW",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 3,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Novo Nordisk||Reports Sales Miss for||Wegovy",
@@ -2146,9 +1822,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Novo Nordisk B A/S||Has Ticker||NOVO-B.CO",
+      "id": "Novo Nordisk B A/S||Has Ticker||Novo Nordisk",
       "source": "Novo Nordisk B A/S",
-      "target": "NOVO-B.CO",
+      "target": "Novo Nordisk",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -2256,22 +1932,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "AstraZeneca||Has Ticker||LSE:AZN",
-      "source": "AstraZeneca",
-      "target": "LSE:AZN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "AstraZeneca||Signs||Cancer Diagnostics Deals",
@@ -2402,8 +2062,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "HSBC Holdings||Reports Half-Year Earnings Per Share Of||Earnings Per Share",
-      "source": "HSBC Holdings",
+      "id": "HSBC||Reports Half-Year Earnings Per Share Of||Earnings Per Share",
+      "source": "HSBC",
       "target": "Earnings Per Share",
       "rel": "Reports Half-Year Earnings Per Share Of",
       "rel_cat": "SSI",
@@ -2434,22 +2094,6 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "Shell||Has Ticker||LSE:SHEL",
-      "source": "Shell",
-      "target": "LSE:SHEL",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Shell||Valuation Supported By||Share Buyback Program",
       "source": "Shell",
       "target": "Share Buyback Program",
@@ -2461,22 +2105,6 @@
       "weight": 1,
       "score": null,
       "sentiment": 0.5,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Shell||Has Ticker||SHEL",
-      "source": "Shell",
-      "target": "SHEL",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
@@ -2578,31 +2206,15 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "LVMH MOET HENNESSY LOUIS VUI||Has Ticker||MC.PA",
+      "id": "LVMH MOET HENNESSY LOUIS VUI||Has Ticker||LVMH",
       "source": "LVMH MOET HENNESSY LOUIS VUI",
-      "target": "MC.PA",
+      "target": "LVMH",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Unilever PLC||Has Ticker||ULVR.L",
-      "source": "Unilever PLC",
-      "target": "ULVR.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -2658,22 +2270,6 @@
       "event_type": "REGULATORY"
     },
     {
-      "id": "Roche||Has Ticker||ROG",
-      "source": "Roche",
-      "target": "ROG",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "SAP||Reduces||Outstanding Shares",
       "source": "SAP",
       "target": "Outstanding Shares",
@@ -2722,24 +2318,8 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "ASML Holding N.V.||Has Ticker||ASML",
-      "source": "ASML Holding N.V.",
-      "target": "ASML",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "ASML Holding N.V.||Is a Durable Winner From||AI Chip Boom",
-      "source": "ASML Holding N.V.",
+      "id": "ASML||Is a Durable Winner From||AI Chip Boom",
+      "source": "ASML",
       "target": "AI Chip Boom",
       "rel": "Is a Durable Winner From",
       "rel_cat": "SSI",
@@ -2946,8 +2526,8 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "Inditex Group||Owns||Bershka Brand",
-      "source": "Inditex Group",
+      "id": "Inditex||Owns||Bershka Brand",
+      "source": "Inditex",
       "target": "Bershka Brand",
       "rel": "Owns",
       "rel_cat": "GFMK",
@@ -3024,22 +2604,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "Volkswagen||Has Ticker||VOW3.DE",
-      "source": "Volkswagen",
-      "target": "VOW3.DE",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "U.S. Treasury||Scales Back Scrutiny Of||U.S. Shell Companies",
@@ -3138,22 +2702,6 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "Shell plc||Has Ticker||SHEL",
-      "source": "Shell plc",
-      "target": "SHEL",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "BP p.l.c.||Benefits from||Iran War",
       "source": "BP p.l.c.",
       "target": "Iran War",
@@ -3170,8 +2718,8 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Shell plc||Benefits from||Iran War",
-      "source": "Shell plc",
+      "id": "Shell||Benefits from||Iran War",
+      "source": "Shell",
       "target": "Iran War",
       "rel": "Benefits from",
       "rel_cat": "SSI",
@@ -3186,9 +2734,9 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Industria De Dise\u00f1o Textil||Has Ticker||BME:ITX",
+      "id": "Industria De Dise\u00f1o Textil||Has Ticker||Inditex",
       "source": "Industria De Dise\u00f1o Textil",
-      "target": "BME:ITX",
+      "target": "Inditex",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -3216,22 +2764,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
-    },
-    {
-      "id": "Inditex||Has Ticker||BME:ITX",
-      "source": "Inditex",
-      "target": "BME:ITX",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Inditex||Looks Strong On||Cash Flow",
@@ -3298,9 +2830,9 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Mercedes Benz Group||Has Ticker||XTRA:MBG",
+      "id": "Mercedes Benz Group||Has Ticker||Mercedes-Benz",
       "source": "Mercedes Benz Group",
-      "target": "XTRA:MBG",
+      "target": "Mercedes-Benz",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -3330,9 +2862,9 @@
       "event_type": "PARTNERSHIP"
     },
     {
-      "id": "Mercedes-Benz Group||Has Ticker||XTRA:MBG",
+      "id": "Mercedes-Benz Group||Has Ticker||Mercedes-Benz",
       "source": "Mercedes-Benz Group",
-      "target": "XTRA:MBG",
+      "target": "Mercedes-Benz",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -3442,9 +2974,9 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne||Has Ticker||MC.PA",
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne||Has Ticker||LVMH",
       "source": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
-      "target": "MC.PA",
+      "target": "LVMH",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -3858,22 +3390,6 @@
       "event_type": "EXECUTIVE_CHANGE"
     },
     {
-      "id": "BNP Paribas||Has Ticker||BNP.PA",
-      "source": "BNP Paribas",
-      "target": "BNP.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Pa. State Police||Collided With||Small Plane",
       "source": "Pa. State Police",
       "target": "Small Plane",
@@ -3938,22 +3454,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "STMicroelectronics N.V.||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics N.V.",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Pilot||Dies In||Mid-Air Collision With Pennsylvania Police Helicopter",
       "source": "Pilot",
       "target": "Mid-Air Collision With Pennsylvania Police Helicopter",
@@ -3986,8 +3486,8 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Shell plc||Is Not Engaging In||Price Gouging",
-      "source": "Shell plc",
+      "id": "Shell||Is Not Engaging In||Price Gouging",
+      "source": "Shell",
       "target": "Price Gouging",
       "rel": "Is Not Engaging In",
       "rel_cat": "SSI",
@@ -4000,22 +3500,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
-    },
-    {
-      "id": "AZN.L||Has Ticker||AstraZeneca",
-      "source": "AZN.L",
-      "target": "AstraZeneca",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Ofgem||Reveals New Cap On||electric bills",

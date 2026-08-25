@@ -1,18 +1,11 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 8,
-    "edges": 4,
+    "nodes": 6,
+    "edges": 3,
     "scored_edges": 0
   },
   "nodes": [
-    {
-      "id": "XOM",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -899.9999999999992,
-      "y": 886.4088719606856
-    },
     {
       "id": "Second-Quarter 2026 Results",
       "type": "EVENT",
@@ -35,20 +28,6 @@
       "y": -881.8922617596519
     },
     {
-      "id": "Comcast",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": -750.3159712270452,
-      "y": 540.1325111307669
-    },
-    {
-      "id": "CMCSA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -816.5584442915442,
-      "y": 900.0
-    },
-    {
       "id": "Oracle",
       "type": "COMPANY",
       "degree": 1,
@@ -61,12 +40,19 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "ExxonMobil",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
     }
   ],
   "edges": [
     {
-      "id": "XOM||Reports Earnings||Second-Quarter 2026 Results",
-      "source": "XOM",
+      "id": "ExxonMobil||Reports Earnings||Second-Quarter 2026 Results",
+      "source": "ExxonMobil",
       "target": "Second-Quarter 2026 Results",
       "rel": "Reports Earnings",
       "rel_cat": "SSI",
@@ -95,22 +81,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
-    },
-    {
-      "id": "Comcast||Has Ticker||CMCSA",
-      "source": "Comcast",
-      "target": "CMCSA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Oracle||Collaborates With||Google Cloud",

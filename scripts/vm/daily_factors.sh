@@ -18,6 +18,14 @@ for PAIR in stoxx_600_factors:stoxx sp100_factors:sp100; do
   echo "--- $CORPUS: scrape + factors ---"
   python3 -m scraper.run_daily_factors --watchlist "$CORPUS" --articles-per-ticker 3
 
+  # Corpus-level canonicalization, daily: deterministic suffix/case merges
+  # + conservative fuzzy pass, then recompute factors from the cleaned
+  # snapshots. Keeps duplicate entities from accumulating between the
+  # per-run LLM canonicalization calls. GAT below trains on cleaned data.
+  echo "--- $CORPUS: canonicalize snapshots ---"
+  python3 -m scripts.clean_snapshots --corpus "frontend/public/data/sources/$CORPUS" --sim 0.85 --watchlist "$CORPUS"
+  python3 -m scraper.run_daily_factors --watchlist "$CORPUS" --factors-only
+
   SNAPS=$(ls "frontend/public/data/sources/$CORPUS/snapshots/"*.json 2>/dev/null | wc -l)
   # Rolling window trains on 3 months and predicts a 4th, so anything
   # under 4 snapshots yields zero training cases.

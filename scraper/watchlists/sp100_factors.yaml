@@ -119,3 +119,109 @@ tickers:
   - TMUS           # T-Mobile US
   - VZ             # Verizon
   - AMT            # American Tower
+
+# Ticker -> canonical company name. Used by scripts/clean_snapshots.py
+# to merge ticker-symbol nodes (AZN.L, LSE:AZN, plain AZN) into the
+# company node so the graph shows one entity per firm.
+companies:
+  AAPL: Apple
+  MSFT: Microsoft
+  NVDA: Nvidia
+  GOOGL: Alphabet
+  META: Meta Platforms
+  AVGO: Broadcom
+  AMD: Advanced Micro Devices
+  ADBE: Adobe
+  CRM: Salesforce
+  CSCO: Cisco
+  IBM: IBM
+  INTC: Intel
+  INTU: Intuit
+  NOW: ServiceNow
+  ORCL: Oracle
+  PLTR: Palantir
+  QCOM: Qualcomm
+  TXN: Texas Instruments
+  ACN: Accenture
+  JPM: JPMorgan Chase
+  BAC: Bank of America
+  GS: Goldman Sachs
+  BRK.B: Berkshire Hathaway
+  V: Visa
+  MA: Mastercard
+  AXP: American Express
+  BLK: BlackRock
+  BK: BNY Mellon
+  C: Citigroup
+  COF: Capital One
+  MET: MetLife
+  MS: Morgan Stanley
+  SCHW: Charles Schwab
+  USB: U.S. Bancorp
+  WFC: Wells Fargo
+  AIG: American International Group
+  SPG: Simon Property Group
+  PYPL: PayPal
+  LLY: Eli Lilly
+  UNH: UnitedHealth
+  JNJ: Johnson & Johnson
+  PFE: Pfizer
+  MRK: Merck
+  ABBV: AbbVie
+  ABT: Abbott Laboratories
+  AMGN: Amgen
+  BMY: Bristol-Myers Squibb
+  CVS: CVS Health
+  DHR: Danaher
+  GILD: Gilead Sciences
+  ISRG: Intuitive Surgical
+  MDT: Medtronic
+  TMO: Thermo Fisher Scientific
+  AMZN: Amazon
+  TSLA: Tesla
+  WMT: Walmart
+  PG: Procter & Gamble
+  KO: Coca-Cola
+  MCD: "McDonald's"
+  BKNG: Booking Holdings
+  CL: Colgate-Palmolive
+  COST: Costco
+  HD: Home Depot
+  LOW: "Lowe's"
+  MDLZ: Mondelez
+  MO: Altria
+  NKE: Nike
+  PEP: PepsiCo
+  PM: Philip Morris
+  SBUX: Starbucks
+  TGT: Target
+  GM: General Motors
+  XOM: ExxonMobil
+  CVX: Chevron
+  COP: ConocoPhillips
+  CAT: Caterpillar
+  BA: Boeing
+  GE: GE Aerospace
+  GEV: GE Vernova
+  DE: Deere
+  EMR: Emerson Electric
+  FDX: FedEx
+  GD: General Dynamics
+  HON: Honeywell
+  LMT: Lockheed Martin
+  MMM: 3M
+  RTX: RTX (Raytheon)
+  UNP: Union Pacific
+  UPS: United Parcel Service
+  DUK: Duke Energy
+  NEE: NextEra Energy
+  SO: Southern Company
+  LIN: Linde
+  NFLX: Netflix
+  DIS: Disney
+  T: AT&T
+  CHTR: Charter Communications
+  CMCSA: Comcast
+  TMUS: T-Mobile US
+  VZ: Verizon
+  AMT: American Tower

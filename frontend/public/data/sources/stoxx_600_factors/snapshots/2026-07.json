@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 100,
-    "edges": 84,
+    "nodes": 84,
+    "edges": 70,
     "scored_edges": 0
   },
   "nodes": [
@@ -72,16 +72,9 @@
     {
       "id": "Adyen",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 5,
       "x": -70.71219434735029,
       "y": -480.9011356956095
-    },
-    {
-      "id": "ENXTAM:ADYEN",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 546.3385889231778,
-      "y": -698.5660526361592
     },
     {
       "id": "Premium Growth Story",
@@ -121,21 +114,14 @@
     {
       "id": "Mercedes-Benz Group",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": 406.43619107395426,
       "y": -379.0577883587699
     },
     {
-      "id": "XTRA:MBG",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -49.600192017795045,
-      "y": -856.2674019152864
-    },
-    {
       "id": "Mixed Q2 Earnings",
       "type": "EVENT",
-      "degree": 1,
+      "degree": 2,
       "x": 862.2895104551035,
       "y": 97.66831211451931
     },
@@ -161,23 +147,9 @@
       "y": 752.1322382095717
     },
     {
-      "id": "LVMH",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 581.5284338608514,
-      "y": -215.41310108226278
-    },
-    {
-      "id": "MC.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 265.8189023963259,
-      "y": -805.1368522486916
-    },
-    {
       "id": "Unilever",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -132.1764795844071,
       "y": 210.4244086463802
     },
@@ -194,20 +166,6 @@
       "degree": 1,
       "x": -768.608617852454,
       "y": -351.484048999207
-    },
-    {
-      "id": "Unilever PLC",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 332.73357413728803,
-      "y": -470.1849846498115
-    },
-    {
-      "id": "ULVR.L",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -234.58857456627064,
-      "y": -758.7354165264811
     },
     {
       "id": "DirectorsTalk Interviews",
@@ -240,16 +198,9 @@
     {
       "id": "STMicroelectronics",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 4,
       "x": -328.88289326127637,
       "y": -618.5900280269389
-    },
-    {
-      "id": "ENXTPA:STMPA",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -695.2047268754579,
-      "y": -545.6186770199339
     },
     {
       "id": "FocalPoint",
@@ -268,16 +219,9 @@
     {
       "id": "Deutsche Bank",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 2,
       "x": -327.4559892561801,
       "y": 226.40659515774405
-    },
-    {
-      "id": "XTRA:DBK",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -759.0154987616218,
-      "y": -276.2968869165087
     },
     {
       "id": "Bond Funding",
@@ -296,16 +240,9 @@
     {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 1,
       "x": 184.65782142879445,
       "y": 216.36509985971057
-    },
-    {
-      "id": "XTRA:VOW3",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 668.6354402719599,
-      "y": -467.14639391435276
     },
     {
       "id": "Sales Forecast",
@@ -373,30 +310,16 @@
     {
       "id": "Schneider Electric",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 2,
       "x": 62.58848450030347,
       "y": 665.2007610957963
     },
     {
-      "id": "SU.PA",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 653.9828536138483,
-      "y": 586.5804404951456
-    },
-    {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 3,
       "x": -255.7766547971174,
       "y": -319.28362671511184
-    },
-    {
-      "id": "SWX:NESN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 169.20631391842377,
-      "y": -760.8775909689409
     },
     {
       "id": "Hungary Plant",
@@ -455,13 +378,6 @@
       "y": 523.7878560052959
     },
     {
-      "id": "ASML Holding",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -14.565728324840514,
-      "y": -440.76993279210353
-    },
-    {
       "id": "Market Value",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
@@ -471,7 +387,7 @@
     {
       "id": "Pennsylvania",
       "type": "FINANCIAL_ENTITY",
-      "degree": 2,
+      "degree": 3,
       "x": 132.06237673825453,
       "y": -693.1268825747378
     },
@@ -492,16 +408,9 @@
     {
       "id": "Equinor",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 6,
       "x": -214.41013119612532,
       "y": 24.695264219186022
-    },
-    {
-      "id": "EQNR",
-      "type": "STOCK_TICKER",
-      "degree": 3,
-      "x": -82.56969557948656,
-      "y": 887.6137065497508
     },
     {
       "id": "Offshore Wind Operations in Japan",
@@ -532,13 +441,6 @@
       "y": 591.8936015135065
     },
     {
-      "id": "NESN",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 807.5596504892727,
-      "y": -127.33084089106612
-    },
-    {
       "id": "Appreciation",
       "type": "CONCEPT",
       "degree": 1,
@@ -565,13 +467,6 @@
       "degree": 1,
       "x": -766.7379330006607,
       "y": 529.067776854481
-    },
-    {
-      "id": "SAP SE",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 261.9987117054793,
-      "y": 352.3305258887122
     },
     {
       "id": "SAP",
@@ -609,13 +504,6 @@
       "y": -607.7984227067839
     },
     {
-      "id": "ENXTPA:SU",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 896.4538702260878,
-      "y": 439.12640105071256
-    },
-    {
       "id": "Cognite",
       "type": "COMPANY",
       "degree": 1,
@@ -651,25 +539,11 @@
       "y": -27.796715777545398
     },
     {
-      "id": "AZN.L",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": 359.14569454878375,
-      "y": -579.6843410298887
-    },
-    {
       "id": "SIEMENS AG N",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -197.93736074497312,
       "y": 312.7198920900006
-    },
-    {
-      "id": "SIE.DE",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -900.0,
-      "y": 232.54383858694828
     },
     {
       "id": "AI-Focused Chip Design",
@@ -705,6 +579,20 @@
       "degree": 1,
       "x": -163.92143083444103,
       "y": 469.5561683062746
+    },
+    {
+      "id": "Mercedes-Benz",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": -49.600192017795045,
+      "y": -856.2674019152864
+    },
+    {
+      "id": "Siemens",
+      "type": "STOCK_TICKER",
+      "degree": 2,
+      "x": -900.0,
+      "y": 232.54383858694828
     }
   ],
   "edges": [
@@ -869,22 +757,6 @@
       "event_type": "REGULATORY"
     },
     {
-      "id": "Adyen||Has Ticker||ENXTAM:ADYEN",
-      "source": "Adyen",
-      "target": "ENXTAM:ADYEN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Adyen||Faces Reassessment of its||Premium Growth Story",
       "source": "Adyen",
       "target": "Premium Growth Story",
@@ -949,9 +821,9 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "Mercedes-Benz Group||Has Ticker||XTRA:MBG",
+      "id": "Mercedes-Benz Group||Has Ticker||Mercedes-Benz",
       "source": "Mercedes-Benz Group",
-      "target": "XTRA:MBG",
+      "target": "Mercedes-Benz",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
@@ -1013,22 +885,6 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "LVMH||Has Ticker||MC.PA",
-      "source": "LVMH",
-      "target": "MC.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Unilever||Upgrades||2026 Sales Outlook",
       "source": "Unilever",
       "target": "2026 Sales Outlook",
@@ -1061,24 +917,8 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "Unilever PLC||Has Ticker||ULVR.L",
-      "source": "Unilever PLC",
-      "target": "ULVR.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Unilever PLC||Receives Positive Stock Analysis From||DirectorsTalk Interviews",
-      "source": "Unilever PLC",
+      "id": "Unilever||Receives Positive Stock Analysis From||DirectorsTalk Interviews",
+      "source": "Unilever",
       "target": "DirectorsTalk Interviews",
       "rel": "Receives Positive Stock Analysis From",
       "rel_cat": "GFMK",
@@ -1141,22 +981,6 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "STMicroelectronics||Has Ticker||ENXTPA:STMPA",
-      "source": "STMicroelectronics",
-      "target": "ENXTPA:STMPA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "STMicroelectronics||Partners With||FocalPoint",
       "source": "STMicroelectronics",
       "target": "FocalPoint",
@@ -1205,22 +1029,6 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Deutsche Bank||Has Ticker||XTRA:DBK",
-      "source": "Deutsche Bank",
-      "target": "XTRA:DBK",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Deutsche Bank||Faces valuation questions due to||Bond Funding",
       "source": "Deutsche Bank",
       "target": "Bond Funding",
@@ -1251,22 +1059,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "GUIDANCE"
-    },
-    {
-      "id": "Volkswagen||Has Ticker||XTRA:VOW3",
-      "source": "Volkswagen",
-      "target": "XTRA:VOW3",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Volkswagen||Cut Sales Forecast||Sales Forecast",
@@ -1413,38 +1205,6 @@
       "event_type": "PARTNERSHIP"
     },
     {
-      "id": "Schneider Electric||Has Ticker||SU.PA",
-      "source": "Schneider Electric",
-      "target": "SU.PA",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Nestl\u00e9||Has Ticker||SWX:NESN",
-      "source": "Nestl\u00e9",
-      "target": "SWX:NESN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Nestl\u00e9||Closes||Hungary Plant",
       "source": "Nestl\u00e9",
       "target": "Hungary Plant",
@@ -1541,24 +1301,8 @@
       "event_type": "EARNINGS"
     },
     {
-      "id": "ASML Holding||Has Ticker||ASML",
-      "source": "ASML Holding",
-      "target": "ASML",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "ASML Holding||Experienced Significant Increase In||Market Value",
-      "source": "ASML Holding",
+      "id": "ASML||Experienced Significant Increase In||Market Value",
+      "source": "ASML",
       "target": "Market Value",
       "rel": "Experienced Significant Increase In",
       "rel_cat": "SSI",
@@ -1603,22 +1347,6 @@
       "materiality_usd": 1700000000.0,
       "materiality_log": 21.254,
       "event_type": "REGULATORY"
-    },
-    {
-      "id": "Equinor||Has Ticker||EQNR",
-      "source": "Equinor",
-      "target": "EQNR",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Equinor||Discontinues||Offshore Wind Operations in Japan",
@@ -1701,22 +1429,6 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Nestl\u00e9||Has Ticker||NESN",
-      "source": "Nestl\u00e9",
-      "target": "NESN",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "Nestl\u00e9||Experienced||Appreciation",
       "source": "Nestl\u00e9",
       "target": "Appreciation",
@@ -1781,24 +1493,8 @@
       "event_type": "PARTNERSHIP"
     },
     {
-      "id": "SAP SE||Has Ticker||SAP",
-      "source": "SAP SE",
-      "target": "SAP",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "SAP SE||Is Analyzed In Context Of||AI Transition Era",
-      "source": "SAP SE",
+      "id": "SAP||Is Analyzed In Context Of||AI Transition Era",
+      "source": "SAP",
       "target": "AI Transition Era",
       "rel": "Is Analyzed In Context Of",
       "rel_cat": "SSI",
@@ -1851,22 +1547,6 @@
       "rel": "Is Located Near",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Schneider Electric||Has Ticker||ENXTPA:SU",
-      "source": "Schneider Electric",
-      "target": "ENXTPA:SU",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -1941,8 +1621,8 @@
       "event_type": "M_AND_A"
     },
     {
-      "id": "EQNR||Acquires Stake In||Bay du Nord",
-      "source": "EQNR",
+      "id": "Equinor||Acquires Stake In||Bay du Nord",
+      "source": "Equinor",
       "target": "Bay du Nord",
       "rel": "Acquires Stake In",
       "rel_cat": "SSI",
@@ -1957,25 +1637,9 @@
       "event_type": "M_AND_A"
     },
     {
-      "id": "AstraZeneca||Has Ticker||AZN.L",
-      "source": "AstraZeneca",
-      "target": "AZN.L",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "SIEMENS AG N||Has Ticker||SIE.DE",
+      "id": "SIEMENS AG N||Has Ticker||Siemens",
       "source": "SIEMENS AG N",
-      "target": "SIE.DE",
+      "target": "Siemens",
       "rel": "Has Ticker",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
