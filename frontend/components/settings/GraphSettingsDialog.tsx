@@ -207,6 +207,27 @@ export function GraphSettingsDialog({
             >
               docs/HANDOVER.md
             </a>
+            <p className="pt-1 text-[11px] leading-snug text-muted-foreground">
+              Analysts can also connect Claude directly to this corpus: add
+              the URL below as a custom connector (claude.ai → Settings →
+              Connectors). Public read-only — no key, no password.
+            </p>
+            <div className="flex items-center gap-2">
+              <code className="min-w-0 flex-1 truncate rounded border border-border bg-background px-2 py-1 font-mono text-[10px] text-foreground">
+                https://eib-knowledge-graph.vercel.app/api/mcp
+              </code>
+              <button
+                type="button"
+                onClick={() =>
+                  navigator.clipboard?.writeText(
+                    "https://eib-knowledge-graph.vercel.app/api/mcp"
+                  )
+                }
+                className="shrink-0 rounded-md border border-border px-2 py-1 text-[10px] text-muted-foreground transition hover:bg-accent hover:text-foreground"
+              >
+                Copy
+              </button>
+            </div>
           </div>
         </div>
 
