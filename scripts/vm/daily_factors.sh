@@ -19,8 +19,10 @@ for PAIR in stoxx_600_factors:stoxx sp100_factors:sp100; do
   python3 -m scraper.run_daily_factors --watchlist "$CORPUS" --articles-per-ticker 3
 
   SNAPS=$(ls "frontend/public/data/sources/$CORPUS/snapshots/"*.json 2>/dev/null | wc -l)
-  if [ "$SNAPS" -lt 3 ]; then
-    echo "--- $CORPUS: only $SNAPS month snapshot(s) (<3), skipping GAT ---"
+  # Rolling window trains on 3 months and predicts a 4th, so anything
+  # under 4 snapshots yields zero training cases.
+  if [ "$SNAPS" -lt 4 ]; then
+    echo "--- $CORPUS: only $SNAPS month snapshot(s) (<4), skipping GAT ---"
     continue
   fi
 
