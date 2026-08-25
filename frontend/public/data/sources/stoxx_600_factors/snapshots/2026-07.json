@@ -1,24 +1,17 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 84,
-    "edges": 70,
+    "nodes": 83,
+    "edges": 69,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 5,
       "x": -79.45009442523828,
       "y": 407.23391859565197
-    },
-    {
-      "id": "CPSE:NOVO B",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": 720.2145258406194,
-      "y": 501.2328645158617
     },
     {
       "id": "Crux",
@@ -596,22 +589,6 @@
     }
   ],
   "edges": [
-    {
-      "id": "Novo Nordisk||Has Ticker||CPSE:NOVO B",
-      "source": "Novo Nordisk",
-      "target": "CPSE:NOVO B",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
     {
       "id": "Novo Nordisk||Partners With||Crux",
       "source": "Novo Nordisk",

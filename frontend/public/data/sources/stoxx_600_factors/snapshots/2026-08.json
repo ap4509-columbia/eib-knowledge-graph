@@ -1,25 +1,11 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 179,
-    "edges": 156,
+    "nodes": 176,
+    "edges": 152,
     "scored_edges": 0
   },
   "nodes": [
-    {
-      "id": "Novo Nordisk B A/S",
-      "type": "COMPANY",
-      "degree": 5,
-      "x": 632.7727290426664,
-      "y": 517.6097914022037
-    },
-    {
-      "id": "Novo Nordisk Shares",
-      "type": "FIN_INSTRUMENT_INFO",
-      "degree": 3,
-      "x": 680.163381985366,
-      "y": 530.9583917901996
-    },
     {
       "id": "Roche",
       "type": "COMPANY",
@@ -275,7 +261,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 15,
+      "degree": 12,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -474,13 +460,6 @@
       "degree": 1,
       "x": -793.349517222946,
       "y": 176.73232535425686
-    },
-    {
-      "id": "CPSE:NOVO B",
-      "type": "STOCK_TICKER",
-      "degree": 3,
-      "x": 830.6636219188688,
-      "y": 330.8093530438645
     },
     {
       "id": "Dutch Injunction",
@@ -1262,38 +1241,6 @@
   ],
   "edges": [
     {
-      "id": "Novo Nordisk B A/S||Has Issued Shares Named||Novo Nordisk Shares",
-      "source": "Novo Nordisk B A/S",
-      "target": "Novo Nordisk Shares",
-      "rel": "Has Issued Shares Named",
-      "rel_cat": "GFMK",
-      "causal_type": "REGULATORY",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Novo Nordisk B A/S||Reports Insider Trading In||Novo Nordisk Shares",
-      "source": "Novo Nordisk B A/S",
-      "target": "Novo Nordisk Shares",
-      "rel": "Reports Insider Trading In",
-      "rel_cat": "GMM",
-      "causal_type": "FINANCIAL_METRIC",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "REGULATORY"
-    },
-    {
       "id": "Roche||Has Ticker||SWX:ROP",
       "source": "Roche",
       "target": "SWX:ROP",
@@ -1822,24 +1769,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Novo Nordisk B A/S||Has Ticker||Novo Nordisk",
-      "source": "Novo Nordisk B A/S",
-      "target": "Novo Nordisk",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Novo Nordisk B A/S||Held||Earnings Call",
-      "source": "Novo Nordisk B A/S",
+      "id": "Novo Nordisk||Held||Earnings Call",
+      "source": "Novo Nordisk",
       "target": "Earnings Call",
       "rel": "Held",
       "rel_cat": "SSI",
@@ -2215,22 +2146,6 @@
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Novo Nordisk||Has Ticker||CPSE:NOVO B",
-      "source": "Novo Nordisk",
-      "target": "CPSE:NOVO B",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 3,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,

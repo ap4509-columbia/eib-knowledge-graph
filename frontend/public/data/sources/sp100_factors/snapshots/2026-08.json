@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 1095,
-    "edges": 969,
+    "nodes": 1087,
+    "edges": 967,
     "scored_edges": 0
   },
   "nodes": [
@@ -674,7 +674,7 @@
     {
       "id": "GE Vernova",
       "type": "COMPANY",
-      "degree": 8,
+      "degree": 7,
       "x": -446.7108174687819,
       "y": 406.7947989328101
     },
@@ -849,7 +849,7 @@
     {
       "id": "Adobe",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": -344.6357251320763,
       "y": -751.8008990946691
     },
@@ -859,13 +859,6 @@
       "degree": 6,
       "x": -319.36836072541064,
       "y": -767.5000293776363
-    },
-    {
-      "id": "Adobe Stock",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": -659.4371059873665,
-      "y": 38.518839036126074
     },
     {
       "id": "Up",
@@ -898,7 +891,7 @@
     {
       "id": "Cisco",
       "type": "FINANCIAL_ENTITY",
-      "degree": 6,
+      "degree": 7,
       "x": 480.41546324277095,
       "y": -263.28424852944073
     },
@@ -1059,7 +1052,7 @@
     {
       "id": "Palantir",
       "type": "COMPANY",
-      "degree": 11,
+      "degree": 10,
       "x": 105.57478113122833,
       "y": 588.114482196903
     },
@@ -2849,13 +2842,6 @@
       "y": -590.019928677432
     },
     {
-      "id": "Meta Platforms Inc.",
-      "type": "COMPANY",
-      "degree": 4,
-      "x": -256.7598810959985,
-      "y": -807.6847768075033
-    },
-    {
       "id": "States",
       "type": "CONCEPT",
       "degree": 1,
@@ -3250,7 +3236,7 @@
     {
       "id": "Merck",
       "type": "COMPANY",
-      "degree": 9,
+      "degree": 10,
       "x": 239.4503612137103,
       "y": -131.86222261605354
     },
@@ -3738,13 +3724,6 @@
       "y": -185.5028152111402
     },
     {
-      "id": "NYSE: GEV",
-      "type": "STOCK_TICKER",
-      "degree": 1,
-      "x": -773.4385132711168,
-      "y": 460.71385809426346
-    },
-    {
       "id": "Full-Year 2025 Data Center",
       "type": "PRODUCT",
       "degree": 1,
@@ -4086,13 +4065,6 @@
       "degree": 1,
       "x": -646.7700392877008,
       "y": 505.4631762007809
-    },
-    {
-      "id": "Cisco Stock",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 190.74709044503507,
-      "y": -277.4715852056584
     },
     {
       "id": "Dividend Stock",
@@ -5087,13 +5059,6 @@
       "degree": 1,
       "x": 787.6731312232007,
       "y": -273.94739762118985
-    },
-    {
-      "id": "Palantir Stock",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": -729.9817705821993,
-      "y": -575.9472069006362
     },
     {
       "id": "Tenstorrent",
@@ -6601,13 +6566,6 @@
       "y": -695.5022554300176
     },
     {
-      "id": "American International Group Inc.",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -35.82625317858783,
-      "y": 236.41161653687078
-    },
-    {
       "id": "Turner",
       "type": "COMPANY",
       "degree": 1,
@@ -6732,13 +6690,6 @@
       "degree": 1,
       "x": 352.12547991131817,
       "y": 666.4907791031621
-    },
-    {
-      "id": "Merck Stock",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": -364.2694073005166,
-      "y": 553.9621955394119
     },
     {
       "id": "35 Percent",
@@ -6939,7 +6890,7 @@
     {
       "id": "United Parcel Service Inc.",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 7,
       "x": -472.0381873427215,
       "y": 396.1203059178821
     },
@@ -7611,7 +7562,7 @@
     {
       "id": "Meta Platforms",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 11,
       "x": 673.8392377140256,
       "y": 254.43672888361505
     },
@@ -7639,16 +7590,9 @@
     {
       "id": "American International Group",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": -5.679775599229488,
       "y": -882.4305652833064
-    },
-    {
-      "id": "United Parcel Service",
-      "type": "COMPANY",
-      "degree": 3,
-      "x": 537.5352755733842,
-      "y": 515.9716713121123
     },
     {
       "id": "RTX (Raytheon)",
@@ -9306,8 +9250,8 @@
       "event_type": "STRUCTURAL"
     },
     {
-      "id": "Adobe Stock||Performance Indicator||Up",
-      "source": "Adobe Stock",
+      "id": "Adobe||Performance Indicator||Up",
+      "source": "Adobe",
       "target": "Up",
       "rel": "Performance Indicator",
       "rel_cat": "GMM",
@@ -11002,8 +10946,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "United Parcel Service||Terminates Relationship With||Amazon",
-      "source": "United Parcel Service",
+      "id": "United Parcel Service Inc.||Terminates Relationship With||Amazon",
+      "source": "United Parcel Service Inc.",
       "target": "Amazon",
       "rel": "Terminates Relationship With",
       "rel_cat": "SSI",
@@ -12858,9 +12802,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Arturo B\u00e9jar||Leads Testimony Against||Meta Platforms Inc.",
+      "id": "Arturo B\u00e9jar||Leads Testimony Against||Meta Platforms",
       "source": "Arturo B\u00e9jar",
-      "target": "Meta Platforms Inc.",
+      "target": "Meta Platforms",
       "rel": "Leads Testimony Against",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
@@ -12874,9 +12818,9 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "States||Sues||Meta Platforms Inc.",
+      "id": "States||Sues||Meta Platforms",
       "source": "States",
-      "target": "Meta Platforms Inc.",
+      "target": "Meta Platforms",
       "rel": "Sues",
       "rel_cat": "GMM",
       "causal_type": "REGULATORY",
@@ -12890,8 +12834,8 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "Meta Platforms Inc.||Faced With Legal Action Over||Child Social Media Addiction Claims",
-      "source": "Meta Platforms Inc.",
+      "id": "Meta Platforms||Faced With Legal Action Over||Child Social Media Addiction Claims",
+      "source": "Meta Platforms",
       "target": "Child Social Media Addiction Claims",
       "rel": "Faced With Legal Action Over",
       "rel_cat": "GMM",
@@ -14666,22 +14610,6 @@
       "event_type": "PARTNERSHIP"
     },
     {
-      "id": "GE Vernova||Has Ticker||NYSE: GEV",
-      "source": "GE Vernova",
-      "target": "NYSE: GEV",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
       "id": "GE Vernova||Surpasses Orders For||Full-Year 2025 Data Center",
       "source": "GE Vernova",
       "target": "Full-Year 2025 Data Center",
@@ -15434,8 +15362,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Cisco Stock||Increases By Percentage||Unknown",
-      "source": "Cisco Stock",
+      "id": "Cisco||Increases By Percentage||Unknown",
+      "source": "Cisco",
       "target": "Unknown",
       "rel": "Increases By Percentage",
       "rel_cat": "GMM",
@@ -17786,22 +17714,6 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Palantir||Flashes Buy Signal For||Palantir Stock",
-      "source": "Palantir",
-      "target": "Palantir Stock",
-      "rel": "Flashes Buy Signal For",
-      "rel_cat": "SSI",
-      "causal_type": "CORPORATE_ACTION",
-      "polarity": "positive",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.85,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "OTHER"
-    },
-    {
       "id": "Qualcomm||Reports Interest In Acquiring||Tenstorrent",
       "source": "Qualcomm",
       "target": "Tenstorrent",
@@ -19546,8 +19458,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "United Parcel Service||Refunds Tariffs To||American Customers",
-      "source": "United Parcel Service",
+      "id": "United Parcel Service Inc.||Refunds Tariffs To||American Customers",
+      "source": "United Parcel Service Inc.",
       "target": "American Customers",
       "rel": "Refunds Tariffs To",
       "rel_cat": "SSI",
@@ -19914,9 +19826,9 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Jim Cramer||Advocates Holding||Meta Platforms Inc.",
+      "id": "Jim Cramer||Advocates Holding||Meta Platforms",
       "source": "Jim Cramer",
-      "target": "Meta Platforms Inc.",
+      "target": "Meta Platforms",
       "rel": "Advocates Holding",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -20970,8 +20882,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "American International Group Inc.||Cannot Recover Payment From||Turner",
-      "source": "American International Group Inc.",
+      "id": "American International Group||Cannot Recover Payment From||Turner",
+      "source": "American International Group",
       "target": "Turner",
       "rel": "Cannot Recover Payment From",
       "rel_cat": "SSI",
@@ -20986,8 +20898,8 @@
       "event_type": "LEGAL"
     },
     {
-      "id": "American International Group Inc.||Owes Coverage For||$4.7M Ambulance Crash Deal",
-      "source": "American International Group Inc.",
+      "id": "American International Group||Owes Coverage For||$4.7M Ambulance Crash Deal",
+      "source": "American International Group",
       "target": "$4.7M Ambulance Crash Deal",
       "rel": "Owes Coverage For",
       "rel_cat": "SSI",
@@ -21258,8 +21170,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Merck Stock||May Be Undervalued By||35 Percent",
-      "source": "Merck Stock",
+      "id": "Merck||May Be Undervalued By||35 Percent",
+      "source": "Merck",
       "target": "35 Percent",
       "rel": "May Be Undervalued By",
       "rel_cat": "SSI",

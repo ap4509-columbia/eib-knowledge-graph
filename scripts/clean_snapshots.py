@@ -65,7 +65,8 @@ def is_junk(name: str) -> bool:
 # big relative suffix), so these merge deterministically instead.
 CORP_SUFFIX = re.compile(
     r"(,?\s+(inc|incorporated|corp|corporation|company|co|ltd|limited|plc"
-    r"|holdings?|group|n\.?v|s\.?a|a\/s|ag|se)\.?)+$",
+    r"|holdings?|group|n\.?v|s\.?a|a\/s|ag|se|shares?|stock"
+    r"|[ab]))+\.?$",
     re.I,
 )
 
@@ -96,19 +97,24 @@ def build_ticker_alias_map(
     alias: dict[str, str] = {}
     for tick, comp in companies.items():
         t = str(tick).upper()
-        alias[t] = comp
-        alias.setdefault(_EXCH_SUFFIX.sub("", t), comp)
+        core = _EXCH_SUFFIX.sub("", t)
+        for k in {t, core, re.sub(r"[-\s]", "", core)}:
+            alias.setdefault(k, comp)
 
     mapping: dict[str, str] = {}
     for name in freq:
         u = name.upper().strip()
-        if " " in u or len(u) > 14:
+        # Length guard only — the alias lookup itself is the filter, and
+        # decorated forms like "CPSE:NOVO B" legitimately contain spaces.
+        if len(u) > 16 or u != name.strip():
+            # lowercase letters => prose-like name, not a ticker symbol
             continue
         cands = {u}
         if ":" in u:
             a, b = u.split(":", 1)
             cands |= {a, b}
         cands |= {_EXCH_SUFFIX.sub("", c) for c in set(cands)}
+        cands |= {re.sub(r"[-\s]", "", c) for c in set(cands)}
         for c in sorted(cands, key=len, reverse=True):
             comp = alias.get(c)
             if comp is None or name == comp:
@@ -140,6 +146,20 @@ def build_suffix_canonical_map(
         for m in members:
             if m != canonical:
                 mapping[m] = canonical
+
+    # Cross-type exception: "X Shares" / "X Stock" merges into a node
+    # named X whatever its type — like tickers, these are the firm under
+    # a different hat, and splitting them fragments the graph.
+    by_name = {n.strip().lower(): n for n in freq}
+    shares_re = re.compile(r"^(.+?)\s+(shares?|stock)$", re.I)
+    for name in freq:
+        if name in mapping:
+            continue
+        m = shares_re.match(name.strip())
+        if m:
+            base = by_name.get(m.group(1).strip().lower())
+            if base and base != name:
+                mapping[name] = mapping.get(base, base)
     return mapping
 
 
