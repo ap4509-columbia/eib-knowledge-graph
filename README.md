@@ -17,7 +17,7 @@ snapshots, and rolling-window GAT link prediction.
 
 | Data source | What it is |
 | --- | --- |
-| FNSPID — Full corpus | The complete 15-year semiconductor corpus (54,563 articles, 2009–2024) through the full pipeline; GAT predictions live (MRR 0.654 over 83 backtest months for the finalized half) |
+| FNSPID — Full corpus | The complete 15-year semiconductor corpus (54,563 articles, 2009–2024) through the full pipeline, with rolling-window GAT predictions over the entire span |
 | FNSPID — Pierre's run | Independent judged run + 10-config GAT sweep (CE No-Edge-Feats, MRR 0.7558) |
 | STOXX Europe 600 (Live) | Refreshed every morning by a VM cron; industry filters, news factor model, monthly GAT retrain |
 | S&P 100 (Live) | Full ~101-constituent US corpus, same daily pipeline |

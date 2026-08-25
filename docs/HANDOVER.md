@@ -103,7 +103,7 @@ Everything in Part 1, plus:
 - Daily cron: 07:30 UTC on the VM, both live corpora, local Qwen,
   zero API cost.
 - STOXX cron scheduled for review/shutoff after Sep 12, 2026.
-- Full-corpus FNSPID run: 2009–2016 finalized and live; remaining
-  chunks in checkpointed tmux lanes on the VM.
+- Full-corpus FNSPID run: processed end to end (extraction, judge,
+  refinement, canonicalization) and served with GAT predictions.
 - MCP endpoint: `https://eib-knowledge-graph.vercel.app/api/mcp`
   (see `docs/MCP_CONNECTOR.md`).

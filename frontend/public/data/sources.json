@@ -15,7 +15,7 @@
     {
       "id": "fnspid-qwen-vm",
       "label": "FNSPID — Full corpus · Qwen (free)",
-      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009–2024), extracted with local Qwen 2.5 14B at zero API cost, through the full quality chain: Judge LLM → third-LLM refinement → corpus canonicalization. Historical dataset backfilling chunk by chunk; predictions appear when the rolling-window GAT trains on the finished refined corpus.",
+      "description": "The complete FNSPID semiconductor corpus (54,563 articles, 2009–2024), extracted with local Qwen 2.5 14B at zero API cost through the full quality chain: Judge LLM → third-LLM refinement → corpus canonicalization, with rolling-window GAT predictions over the entire span.",
       "kind": "historical",
       "available": true,
       "features": [
