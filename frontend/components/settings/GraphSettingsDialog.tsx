@@ -169,11 +169,11 @@ export function GraphSettingsDialog({
           <div className="space-y-1.5 rounded-md border border-border bg-muted/40 px-3 py-2.5">
             <Label className="text-sm">Ops &amp; handover</Label>
             <p className="text-[11px] leading-snug text-muted-foreground">
-              This system runs on swappable account bindings: the GitHub
-              repository (code + all data), a Vercel project (site + MCP
-              endpoint), and a GPU VM cron (live corpora, local Qwen, no
-              API keys). To take it over with your own accounts, follow
-              the step-by-step runbook:
+              This system runs on swappable account bindings and needs no
+              API keys in production (all LLM stages run on a local
+              model). The runbook has two tiers: a light one for
+              maintaining the site and the live corpora, and a full one
+              for rerunning the pipeline at scale:
             </p>
             <a
               href="https://github.com/ap4509-columbia/eib-knowledge-graph/blob/main/docs/HANDOVER.md"
