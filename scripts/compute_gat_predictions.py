@@ -430,10 +430,14 @@ def main():
     ap.add_argument("--model-label", default="CE (No Edge Feats)")
     ap.add_argument("--mrr", type=float, default=0.7746,
                     help="Headline MRR to display for this weight set.")
+    ap.add_argument("--edge-types", action="store_true",
+                    help="Load weights trained WITH edge features "
+                    "(Rel+Cat+NormW configs). Must match the checkpoint.")
     args = ap.parse_args()
     TRIPLETS_CSV = args.csv.expanduser()
     WEIGHTS_DIR = args.weights_dir.expanduser()
     STRATEGY = args.strategy
+    USE_EDGE_TYPES = args.edge_types
     OUTPUT_PATH = args.out
     if args.source_id:
         OUTPUT_PATH = (
