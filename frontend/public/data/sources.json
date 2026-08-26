@@ -30,6 +30,17 @@
       "label": "FNSPID — Pierre's run · Qwen (2019–21)",
       "description": "Pierre's standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
       "kind": "historical",
+      "available": false,
+      "features": [
+        "graph",
+        "predictions"
+      ]
+    },
+    {
+      "id": "fnspid-gpt55-v7",
+      "label": "FNSPID — GPT-5.5 refined (2019–20)",
+      "description": "The 2019–2020 corpus through the GPT-5.5 judge-and-refinement pipeline (V7: quality gates on coverage, semantic validity and uniqueness; rows failing after refinement routed to human review and excluded). Predictions from the 10-configuration GAT sweep winner, CE (Rel+Cat+NormW), trained on the refined edges. Combined work: GPT-5.5 refinement by Ruiwen Wang, GAT sweep by Pierre Pujol.",
+      "kind": "historical",
       "available": true,
       "features": [
         "graph",
