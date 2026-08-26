@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 6,
-    "edges": 3,
+    "nodes": 8,
+    "edges": 5,
     "scored_edges": 0
   },
   "nodes": [
@@ -16,7 +16,7 @@
     {
       "id": "Jim Cramer",
       "type": "FINANCIAL_ENTITY",
-      "degree": 1,
+      "degree": 3,
       "x": 705.8331725319806,
       "y": -558.2402493711152
     },
@@ -47,6 +47,20 @@
       "degree": 1,
       "x": -899.9999999999992,
       "y": 886.4088719606856
+    },
+    {
+      "id": "Apple",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -900.0,
+      "y": -564.3856739233361
+    },
+    {
+      "id": "T-Mobile US",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 899.783537190818,
+      "y": 564.2541526250698
     }
   ],
   "edges": [
@@ -97,6 +111,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Jim Cramer||Makes Prediction About||T-Mobile US",
+      "source": "Jim Cramer",
+      "target": "T-Mobile US",
+      "rel": "Makes Prediction About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Jim Cramer||Prediction Involves||Apple",
+      "source": "Jim Cramer",
+      "target": "Apple",
+      "rel": "Prediction Involves",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

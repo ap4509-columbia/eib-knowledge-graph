@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 176,
-    "edges": 152,
+    "nodes": 190,
+    "edges": 164,
     "scored_edges": 0
   },
   "nodes": [
@@ -79,7 +79,7 @@
     {
       "id": "BNP Paribas",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 9,
       "x": 216.22511547923153,
       "y": -606.6415490462904
     },
@@ -219,7 +219,7 @@
     {
       "id": "Shell Oil",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": -407.2698957973636,
       "y": -444.8076162131028
     },
@@ -772,7 +772,7 @@
     {
       "id": "Mercedes-Benz Group",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -31.996115277238353,
       "y": 52.09588194409073
     },
@@ -1101,7 +1101,7 @@
     {
       "id": "Ofgem",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -475.0633037137766,
       "y": 430.173644783096
     },
@@ -1237,6 +1237,104 @@
       "degree": 2,
       "x": -584.1633790164575,
       "y": -377.3758673444068
+    },
+    {
+      "id": "Households",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 682.814142975522,
+      "y": 226.46959029498046
+    },
+    {
+      "id": "Energy",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 759.15054654251,
+      "y": 196.13512208325136
+    },
+    {
+      "id": "October Price Cap",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -819.6953149592133,
+      "y": 176.16296372738958
+    },
+    {
+      "id": "Techcombank",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": -618.5207692752352,
+      "y": 610.1404412698656
+    },
+    {
+      "id": "KB Kookmin",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -397.61867466124824,
+      "y": 370.5367190999826
+    },
+    {
+      "id": "Saudi Regional Headquarters",
+      "type": "LOCATION",
+      "degree": 1,
+      "x": -557.113516560556,
+      "y": -575.0632781425967
+    },
+    {
+      "id": "Sudan Litigation",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -519.3926228138306,
+      "y": 481.3861596767505
+    },
+    {
+      "id": "EUR 45",
+      "type": "CURRENCY",
+      "degree": 1,
+      "x": 223.385995724638,
+      "y": 713.2636380713884
+    },
+    {
+      "id": "Houston",
+      "type": "MACRO_INDICATOR",
+      "degree": 2,
+      "x": 59.64994623683545,
+      "y": -900.0
+    },
+    {
+      "id": "LD Systems",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -72.13496148852677,
+      "y": 59.564495154339845
+    },
+    {
+      "id": "L-Acoustics A Series",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -221.46992726441897,
+      "y": 791.5010535575697
+    },
+    {
+      "id": "Shell Energy Stadium",
+      "type": "SECTOR",
+      "degree": 2,
+      "x": 76.73209334381828,
+      "y": -672.8277285115785
+    },
+    {
+      "id": "Pennsylvania Budget",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": 660.7472330696904,
+      "y": -145.12483878679117
+    },
+    {
+      "id": "PA 529 Day Promotion",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 781.7764070539231,
+      "y": -159.15860385202913
     }
   ],
   "edges": [
@@ -3671,6 +3769,198 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "Households||Faces Cost Increase For||Energy",
+      "source": "Households",
+      "target": "Energy",
+      "rel": "Faces Cost Increase For",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Ofgem||Reveals||October Price Cap",
+      "source": "Ofgem",
+      "target": "October Price Cap",
+      "rel": "Reveals",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "BNP Paribas||In Talks For Stake Purchase From||Techcombank",
+      "source": "BNP Paribas",
+      "target": "Techcombank",
+      "rel": "In Talks For Stake Purchase From",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 2000000000.0,
+      "materiality_log": 21.416,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "KB Kookmin||In Talks For Stake Purchase From||Techcombank",
+      "source": "KB Kookmin",
+      "target": "Techcombank",
+      "rel": "In Talks For Stake Purchase From",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 2000000000.0,
+      "materiality_log": 21.416,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "BNP Paribas||Receives Licence For||Saudi Regional Headquarters",
+      "source": "BNP Paribas",
+      "target": "Saudi Regional Headquarters",
+      "rel": "Receives Licence For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "BNP Paribas||Continues Appeal Against||Sudan Litigation",
+      "source": "BNP Paribas",
+      "target": "Sudan Litigation",
+      "rel": "Continues Appeal Against",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Mercedes-Benz Group||Stock Price Above||EUR 45",
+      "source": "Mercedes-Benz Group",
+      "target": "EUR 45",
+      "rel": "Stock Price Above",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Shell Oil||Has Campus In||Houston",
+      "source": "Shell Oil",
+      "target": "Houston",
+      "rel": "Has Campus In",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "LD Systems||Installs||L-Acoustics A Series",
+      "source": "LD Systems",
+      "target": "L-Acoustics A Series",
+      "rel": "Installs",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "LD Systems||Installs At||Shell Energy Stadium",
+      "source": "LD Systems",
+      "target": "Shell Energy Stadium",
+      "rel": "Installs At",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Shell Energy Stadium||Located In||Houston",
+      "source": "Shell Energy Stadium",
+      "target": "Houston",
+      "rel": "Located In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Pennsylvania Budget||Announces Winners Of||PA 529 Day Promotion",
+      "source": "Pennsylvania Budget",
+      "target": "PA 529 Day Promotion",
+      "rel": "Announces Winners Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

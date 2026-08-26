@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 33,
-    "edges": 25,
+    "nodes": 38,
+    "edges": 29,
     "scored_edges": 0
   },
   "nodes": [
@@ -51,7 +51,7 @@
     {
       "id": "Eni",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -85.84151291924898,
       "y": -588.0602464346622
     },
@@ -236,6 +236,41 @@
       "degree": 2,
       "x": 54.79134357425542,
       "y": 652.0658983457588
+    },
+    {
+      "id": "Volkswagen",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -259.2929455300867,
+      "y": 264.75605936573726
+    },
+    {
+      "id": "Europe",
+      "type": "COUNTRY",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": -194.43984026958887
+    },
+    {
+      "id": "Searah",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 248.83961672310403,
+      "y": -237.39600617674708
+    },
+    {
+      "id": "PETRONAS",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 127.72027883386406,
+      "y": 27.50511560036407
+    },
+    {
+      "id": "Southeast Asia",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 300.29705843406975,
+      "y": -427.0024052538452
     }
   ],
   "edges": [
@@ -638,6 +673,70 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Volkswagen||Plans To Close Plants In Country||Europe",
+      "source": "Volkswagen",
+      "target": "Europe",
+      "rel": "Plans To Close Plants In Country",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Eni||Launches||Searah",
+      "source": "Eni",
+      "target": "Searah",
+      "rel": "Launches",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "PETRONAS||Launches||Searah",
+      "source": "PETRONAS",
+      "target": "Searah",
+      "rel": "Launches",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Searah||Is Based In||Southeast Asia",
+      "source": "Searah",
+      "target": "Southeast Asia",
+      "rel": "Is Based In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
