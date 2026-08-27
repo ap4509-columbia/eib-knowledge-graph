@@ -175,7 +175,19 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
  *  and how each column is derived. Collapses on click; the choice is
  *  remembered per browser via localStorage so returning users aren't
  *  re-lectured. */
-function AboutSection({ mrr }: { mrr?: number }) {
+function AboutSection({
+  mrr,
+  hits1,
+  hits3,
+  hits10,
+  months,
+}: {
+  mrr?: number;
+  hits1?: number | null;
+  hits3?: number | null;
+  hits10?: number | null;
+  months?: number;
+}) {
   // Default to COLLAPSED so the table (below) always has room. Users can
   // toggle to expand; choice is remembered per browser via localStorage.
   const [collapsed, setCollapsed] = useState(true);
@@ -257,18 +269,45 @@ function AboutSection({ mrr }: { mrr?: number }) {
 
           <div>
             <div className="mb-1 font-medium text-foreground">
-              How accurate is it?
+              Reading the scorecard (the stats above the table)
             </div>
             <div>
-              On rolling monthly link-prediction tests the model's Mean
-              Reciprocal Rank is{" "}
+              The cards at the top are the model&apos;s test results,
+              measured by backtesting: for each validation month the model
+              trains only on earlier months, then is scored on how well it
+              ranks that month&apos;s true links against alternatives.{" "}
+              <span className="text-foreground">MRR</span> (mean reciprocal
+              rank, 0 to 1, higher is better) averages 1/rank of the true
+              answer: at{" "}
               <span className="text-foreground">
                 {(mrr ?? 0.77).toFixed(2)}
-              </span>
-              . In plain English: when asked to rank the true co-mover of an
-              entity against 50 random alternatives, the correct one lands
-              around position {(1 / (mrr ?? 0.77)).toFixed(1)} on average.
-              Random guessing would place it around position 26.
+              </span>{" "}
+              the correct co-mover lands around position{" "}
+              {(1 / (mrr ?? 0.77)).toFixed(1)} out of ~50 candidates, where
+              random guessing would put it around position 26.{" "}
+              <span className="text-foreground">Hits@k</span> is the share
+              of tests where the true answer appeared in the top k
+              {hits1 != null && hits3 != null ? (
+                <>
+                  {" "}
+                  (here: first try {(hits1 * 100).toFixed(0)}% of the time,
+                  top-3 {(hits3 * 100).toFixed(0)}%
+                  {hits10 != null && (
+                    <>, top-10 {(hits10 * 100).toFixed(0)}%</>
+                  )}
+                  )
+                </>
+              ) : null}
+              . <span className="text-foreground">Backtest months</span> is
+              how many held-out months the scores average over
+              {months != null && (
+                <>
+                  {" "}
+                  ({months} here)
+                </>
+              )}
+              : more months means a more trustworthy number, which is why
+              young live corpora carry a provisional-metrics note.
             </div>
           </div>
 
@@ -490,7 +529,13 @@ export function PredictionsView({
         </div>
       )}
 
-      <AboutSection mrr={data?.mrr} />
+      <AboutSection
+        mrr={data?.mrr}
+        hits1={data?.hits1}
+        hits3={data?.hits3}
+        hits10={data?.hits10}
+        months={data ? Object.keys(data.periods).length : undefined}
+      />
 
       {error && (
         <div className="px-6 py-6 text-xs text-destructive">
