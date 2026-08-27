@@ -429,19 +429,61 @@ export function PredictionsView({
             "Select a month below"
           )}
         </span>
-        {data && (
-          <span
-            title="Backtest metrics: for each validation month the model is trained on the preceding window and scored on how it ranks the month's true links. MRR = mean reciprocal rank of the true target; Hits@k = share of queries where the true target is in the top k."
-          >
-            {data.model} · MRR {data.mrr.toFixed(3)}
-            {data.hits1 != null && <> · H@1 {data.hits1.toFixed(3)}</>}
-            {data.hits3 != null && <> · H@3 {data.hits3.toFixed(3)}</>}
-            {data.hits10 != null && <> · H@10 {data.hits10.toFixed(3)}</>}
-            {" · "}
-            {Object.keys(data.periods).length} backtest months
-          </span>
-        )}
+        {data && <span>{data.model}</span>}
       </div>
+
+      {/* Backtest scorecard — the model's accuracy stats, front and
+          center rather than buried in the header. Renders only when the
+          selected source ships predictions (this panel only mounts
+          then), so historical-only sources never show it. */}
+      {data && (
+        <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-3">
+          <div
+            className="flex flex-wrap items-stretch gap-2"
+            title="Backtest: for each validation month the model trains on the preceding window and is scored on how it ranks the month's true links. MRR = mean reciprocal rank of the true target; Hits@k = share of queries where the true target lands in the top k."
+          >
+            {(
+              [
+                ["MRR", data.mrr],
+                ["Hits@1", data.hits1],
+                ["Hits@3", data.hits3],
+                ["Hits@10", data.hits10],
+              ] as const
+            )
+              .filter(([, v]) => v != null)
+              .map(([label, v]) => (
+                <div
+                  key={label}
+                  className="rounded-md border border-border bg-background px-3 py-1.5"
+                >
+                  <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
+                    {label}
+                  </div>
+                  <div className="text-base font-semibold tabular-nums text-foreground">
+                    {(v as number).toFixed(3)}
+                  </div>
+                </div>
+              ))}
+            <div className="rounded-md border border-border bg-background px-3 py-1.5">
+              <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
+                Backtest months
+              </div>
+              <div className="text-base font-semibold tabular-nums text-foreground">
+                {Object.keys(data.periods).length}
+              </div>
+            </div>
+          </div>
+          {Object.keys(data.periods).length < 12 && (
+            <p className="mt-2 text-[11px] leading-snug text-amber-700 dark:text-amber-500">
+              Early backtest: this live corpus has only{" "}
+              {Object.keys(data.periods).length} validation months so far,
+              and the earliest ones train on truncated windows. Treat these
+              metrics as provisional — they will stabilize as the corpus
+              accumulates history.
+            </p>
+          )}
+        </div>
+      )}
 
       <AboutSection mrr={data?.mrr} />
 
