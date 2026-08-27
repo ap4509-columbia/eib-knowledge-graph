@@ -454,21 +454,26 @@ export function PredictionsView({
               .map(([label, v]) => (
                 <div
                   key={label}
-                  className="rounded-md border border-border bg-background px-3 py-1.5"
+                  className={
+                    "min-w-[6.5rem] rounded-lg border px-4 py-2.5 " +
+                    (label === "MRR"
+                      ? "border-foreground/30 bg-background shadow-sm"
+                      : "border-border bg-background")
+                  }
                 >
-                  <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
+                  <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
                     {label}
                   </div>
-                  <div className="text-base font-semibold tabular-nums text-foreground">
+                  <div className="text-2xl font-semibold tabular-nums leading-tight text-foreground">
                     {(v as number).toFixed(3)}
                   </div>
                 </div>
               ))}
-            <div className="rounded-md border border-border bg-background px-3 py-1.5">
-              <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
+            <div className="min-w-[6.5rem] rounded-lg border border-border bg-background px-4 py-2.5">
+              <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
                 Backtest months
               </div>
-              <div className="text-base font-semibold tabular-nums text-foreground">
+              <div className="text-2xl font-semibold tabular-nums leading-tight text-foreground">
                 {Object.keys(data.periods).length}
               </div>
             </div>
