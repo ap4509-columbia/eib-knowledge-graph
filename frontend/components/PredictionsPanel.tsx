@@ -274,6 +274,30 @@ function AboutSection({ mrr }: { mrr?: number }) {
 
           <div>
             <div className="mb-1 font-medium text-foreground">
+              Activity vs. novelty z-score
+            </div>
+            <div>
+              The Activity column shows both. The number is the{" "}
+              <span className="text-foreground">novelty z-score</span>: how
+              unusual this entity's recent news volume is versus its own
+              history, in standard deviations (edges in the last 3 months
+              minus the entity's prior average, standardized across the
+              graph). The word is just that score bucketed into
+              plain-English bands: within ±1 is{" "}
+              <span className="text-foreground">Stable</span>, beyond ±1 is{" "}
+              <span className="text-foreground">Rising</span> /{" "}
+              <span className="text-foreground">Cooling</span>, and beyond
+              ±2 (a rare, two-sigma move) is{" "}
+              <span className="text-foreground">Spiking</span> /{" "}
+              <span className="text-foreground">Quiet</span>. So
+              &ldquo;Spiking +2.55&rdquo; means this entity is generating
+              far more news than its own normal — the label and the score
+              are one measurement, at two levels of precision.
+            </div>
+          </div>
+
+          <div>
+            <div className="mb-1 font-medium text-foreground">
               How is the ranking built?
             </div>
             <div>
