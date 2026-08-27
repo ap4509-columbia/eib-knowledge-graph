@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 190,
-    "edges": 164,
+    "nodes": 193,
+    "edges": 168,
     "scored_edges": 0
   },
   "nodes": [
@@ -44,7 +44,7 @@
     {
       "id": "White Cap",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": 163.3008838111518,
       "y": 138.98488119296155
     },
@@ -261,14 +261,14 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 12,
+      "degree": 14,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
     {
       "id": "Wegovy",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": 665.6916989237542,
       "y": 494.4707566980588
     },
@@ -380,7 +380,7 @@
     {
       "id": "Enterprise Distribution Center",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 3,
       "x": 506.67040245639305,
       "y": 776.924898119518
     },
@@ -1332,9 +1332,30 @@
     {
       "id": "PA 529 Day Promotion",
       "type": "EVENT",
-      "degree": 1,
+      "degree": 2,
       "x": 781.7764070539231,
       "y": -159.15860385202913
+    },
+    {
+      "id": "China drug regulator",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 900.0,
+      "y": 138.77785165046606
+    },
+    {
+      "id": "Bethlehem, PA",
+      "type": "LOCATION",
+      "degree": 1,
+      "x": -628.719348209166,
+      "y": 619.3217580325398
+    },
+    {
+      "id": "Treasurer Garrity",
+      "type": "EXECUTIVE",
+      "degree": 1,
+      "x": 367.66218428261726,
+      "y": 522.0160657250916
     }
   ],
   "edges": [
@@ -2051,9 +2072,9 @@
       "causal_type": "OTHER",
       "polarity": "positive",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
-      "sentiment": 0.5,
+      "sentiment": 0.45,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
@@ -3958,6 +3979,70 @@
       "weight": 1,
       "score": null,
       "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Novo Nordisk||Submits Application To||China drug regulator",
+      "source": "Novo Nordisk",
+      "target": "China drug regulator",
+      "rel": "Submits Application To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Develops||Wegovy",
+      "source": "Novo Nordisk",
+      "target": "Wegovy",
+      "rel": "Develops",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Enterprise Distribution Center||Located In||Bethlehem, PA",
+      "source": "Enterprise Distribution Center",
+      "target": "Bethlehem, PA",
+      "rel": "Located In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Treasurer Garrity||Announces Winners Of||PA 529 Day Promotion",
+      "source": "Treasurer Garrity",
+      "target": "PA 529 Day Promotion",
+      "rel": "Announces Winners Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
