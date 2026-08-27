@@ -107,9 +107,13 @@ function ActivityCell({ z }: { z: number }) {
   return (
     <span
       className={`text-xs ${cls}`}
-      title={`Activity z-score vs. this entity's own history: ${z.toFixed(2)}`}
+      title={`Novelty z-score vs. this entity's own history: ${z.toFixed(2)}`}
     >
       {label}
+      <span className="ml-1.5 font-mono text-[10px] tabular-nums text-muted-foreground">
+        {z >= 0 ? "+" : ""}
+        {z.toFixed(2)}
+      </span>
     </span>
   );
 }
@@ -402,8 +406,15 @@ export function PredictionsView({
           )}
         </span>
         {data && (
-          <span>
-            {data.model} · rolling-window MRR {data.mrr.toFixed(3)}
+          <span
+            title="Backtest metrics: for each validation month the model is trained on the preceding window and scored on how it ranks the month's true links. MRR = mean reciprocal rank of the true target; Hits@k = share of queries where the true target is in the top k."
+          >
+            {data.model} · MRR {data.mrr.toFixed(3)}
+            {data.hits1 != null && <> · H@1 {data.hits1.toFixed(3)}</>}
+            {data.hits3 != null && <> · H@3 {data.hits3.toFixed(3)}</>}
+            {data.hits10 != null && <> · H@10 {data.hits10.toFixed(3)}</>}
+            {" · "}
+            {Object.keys(data.periods).length} backtest months
           </span>
         )}
       </div>

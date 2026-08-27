@@ -36,11 +36,18 @@ for PAIR in stoxx_600_factors:stoxx sp100_factors:sp100; do
 
   echo "--- $CORPUS: GAT retrain + predictions ---"
   python3 -m scripts.stoxx_gat_prep --corpus "frontend/public/data/sources/$CORPUS" --out "/tmp/${TAG}_gat.csv"
-  MRR=$(python3 -m scripts.run_gat_single --csv "/tmp/${TAG}_gat.csv" --eib-root ~/eib --loss ce --strategy "$TAG" \
-    | python3 -c "import json,sys,re; m=re.search(r'\{.*\}', sys.stdin.read(), re.S); print(round(json.loads(m.group(0)).get('MRR',0),3) if m else 0)")
+  python3 -m scripts.run_gat_single --csv "/tmp/${TAG}_gat.csv" --eib-root ~/eib --loss ce --strategy "$TAG" \
+    > "/tmp/${TAG}_gat_metrics.log" 2>&1
+  read MRR H1 H3 H10 <<< $(python3 -c "
+import json, re
+txt = open('/tmp/${TAG}_gat_metrics.log').read()
+m = re.search(r'\{[^{}]*MRR[^{}]*\}', txt, re.S)
+d = json.loads(m.group(0)) if m else {}
+print(round(d.get('MRR',0),3), round(d.get('Hits@1',0),3), round(d.get('Hits@3',0),3), round(d.get('Hits@10',0),3))")
   EIB_ROOT=~/eib python3 -m scripts.compute_gat_predictions --csv "/tmp/${TAG}_gat.csv" \
     --weights-dir ~/eib/weights/"ce_noedge_${TAG}" --source-id "$CORPUS" \
-    --strategy "$TAG" --model-label "CE (No Edge Feats)" --mrr "$MRR"
+    --strategy "$TAG" --model-label "CE (No Edge Feats)" --mrr "$MRR" \
+    --hits1 "$H1" --hits3 "$H3" --hits10 "$H10"
 
   # Ensure the Predictions tab is on for this source once predictions exist.
   python3 - "$CORPUS" <<'PYEOF'

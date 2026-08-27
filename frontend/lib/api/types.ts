@@ -148,6 +148,10 @@ export interface PredictionsFile {
   model: string;
   strategy: string;
   mrr: number;
+  /** Backtest Hits@k, when the training run's metrics were harvested. */
+  hits1?: number;
+  hits3?: number;
+  hits10?: number;
   periods: Record<string, PredictionPeriod>;
 }
 

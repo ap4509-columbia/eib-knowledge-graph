@@ -433,6 +433,10 @@ def main():
     ap.add_argument("--edge-types", action="store_true",
                     help="Load weights trained WITH edge features "
                     "(Rel+Cat+NormW configs). Must match the checkpoint.")
+    ap.add_argument("--hits1", type=float, default=None,
+                    help="Backtest Hits@1 to display alongside MRR.")
+    ap.add_argument("--hits3", type=float, default=None)
+    ap.add_argument("--hits10", type=float, default=None)
     args = ap.parse_args()
     TRIPLETS_CSV = args.csv.expanduser()
     WEIGHTS_DIR = args.weights_dir.expanduser()
@@ -447,6 +451,8 @@ def main():
         )
     main.model_label = args.model_label
     main.mrr = args.mrr
+    main.hits = {k: getattr(args, k) for k in ("hits1", "hits3", "hits10")
+                 if getattr(args, k) is not None}
 
     print(f"Loading triplets from {TRIPLETS_CSV}")
     df = load_df_from_csv(TRIPLETS_CSV, strategy=STRATEGY)
@@ -488,6 +494,7 @@ def main():
                 "model": main.model_label,
                 "strategy": STRATEGY,
                 "mrr": main.mrr,
+                **getattr(main, "hits", {}),
                 "periods": results,
             },
             f,
