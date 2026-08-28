@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 193,
-    "edges": 168,
+    "nodes": 204,
+    "edges": 175,
     "scored_edges": 0
   },
   "nodes": [
@@ -184,7 +184,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 21,
+      "degree": 22,
       "x": 576.3270756428893,
       "y": -491.8391989915021
     },
@@ -338,7 +338,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": 116.62188721766933,
       "y": -557.0797074222387
     },
@@ -1211,13 +1211,6 @@
       "y": -44.00670221479742
     },
     {
-      "id": "HSBC",
-      "type": "COMPANY",
-      "degree": 1,
-      "x": 517.2565079415256,
-      "y": 754.7733398974681
-    },
-    {
       "id": "Siemens",
       "type": "STOCK_TICKER",
       "degree": 2,
@@ -1356,6 +1349,90 @@
       "degree": 1,
       "x": 367.66218428261726,
       "y": 522.0160657250916
+    },
+    {
+      "id": "UK Shares",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 711.3336462424242,
+      "y": -227.58292362668942
+    },
+    {
+      "id": "Global Tensions",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 879.339073634333,
+      "y": -277.6988087729312
+    },
+    {
+      "id": "Drop",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -750.8087788049929,
+      "y": 62.37435642016993
+    },
+    {
+      "id": "Unimot",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -366.16454945917116,
+      "y": 583.1482095616915
+    },
+    {
+      "id": "Potential Bidders",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -312.0143429520972,
+      "y": -26.659962246114066
+    },
+    {
+      "id": "Shell's US chemical assets",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -415.34415823590587,
+      "y": 140.6619460404576
+    },
+    {
+      "id": "Chemical Assets",
+      "type": "ASSET",
+      "degree": 1,
+      "x": -499.47355828253797,
+      "y": 243.2501380784244
+    },
+    {
+      "id": "Warren",
+      "type": "CITY_OR_REGION",
+      "degree": 1,
+      "x": 452.7448594814556,
+      "y": -867.1224892518228
+    },
+    {
+      "id": "Riverfront",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 567.5684537531555,
+      "y": -900.0
+    },
+    {
+      "id": "Italy",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": 299.31193811103265,
+      "y": 369.68425178339743
+    },
+    {
+      "id": "Windfall Tax",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 362.7000945266105,
+      "y": 510.89595615330427
+    },
+    {
+      "id": "HSBC Holdings",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 517.2565079415256,
+      "y": 754.7733398974681
     }
   ],
   "edges": [
@@ -2112,8 +2189,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "HSBC||Reports Half-Year Earnings Per Share Of||Earnings Per Share",
-      "source": "HSBC",
+      "id": "HSBC Holdings||Reports Half-Year Earnings Per Share Of||Earnings Per Share",
+      "source": "HSBC Holdings",
       "target": "Earnings Per Share",
       "rel": "Reports Half-Year Earnings Per Share Of",
       "rel_cat": "SSI",
@@ -4046,6 +4123,118 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "UK Shares||Affected By||Global Tensions",
+      "source": "UK Shares",
+      "target": "Global Tensions",
+      "rel": "Affected By",
+      "rel_cat": "GMM",
+      "causal_type": "CAUSAL",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "AstraZeneca||Experiences Stock Movement||Drop",
+      "source": "AstraZeneca",
+      "target": "Drop",
+      "rel": "Experiences Stock Movement",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Has Ended Talks With||Unimot",
+      "source": "Shell",
+      "target": "Unimot",
+      "rel": "Has Ended Talks With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Potential Bidders||Eyeing Acquisition Of||Shell's US chemical assets",
+      "source": "Potential Bidders",
+      "target": "Shell's US chemical assets",
+      "rel": "Eyeing Acquisition Of",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.25,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell's US chemical assets||Draws Bidders For||Chemical Assets",
+      "source": "Shell's US chemical assets",
+      "target": "Chemical Assets",
+      "rel": "Draws Bidders For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Warren||Advances Redevelopment Of||Riverfront",
+      "source": "Warren",
+      "target": "Riverfront",
+      "rel": "Advances Redevelopment Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Italy||Debate On||Windfall Tax",
+      "source": "Italy",
+      "target": "Windfall Tax",
+      "rel": "Debate On",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
     }
   ]
 }

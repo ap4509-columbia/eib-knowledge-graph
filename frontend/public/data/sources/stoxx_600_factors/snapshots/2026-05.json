@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 25,
-    "edges": 16,
+    "nodes": 27,
+    "edges": 17,
     "scored_edges": 0
   },
   "nodes": [
@@ -180,6 +180,20 @@
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
+    },
+    {
+      "id": "HSBC Holdings",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "$0.40",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -438,6 +452,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "HSBC Holdings||Reports EPS of||$0.40",
+      "source": "HSBC Holdings",
+      "target": "$0.40",
+      "rel": "Reports EPS of",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
     }
   ]
 }
