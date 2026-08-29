@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 204,
-    "edges": 175,
+    "nodes": 211,
+    "edges": 184,
     "scored_edges": 0
   },
   "nodes": [
@@ -184,7 +184,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 22,
+      "degree": 23,
       "x": 576.3270756428893,
       "y": -491.8391989915021
     },
@@ -443,7 +443,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 10,
+      "degree": 11,
       "x": 655.3263306034597,
       "y": -265.0840341957245
     },
@@ -695,7 +695,7 @@
     {
       "id": "Iran War",
       "type": "EVENT",
-      "degree": 2,
+      "degree": 3,
       "x": 831.60724743442,
       "y": -144.54335265755313
     },
@@ -1311,7 +1311,7 @@
     {
       "id": "Shell Energy Stadium",
       "type": "SECTOR",
-      "degree": 2,
+      "degree": 3,
       "x": 76.73209334381828,
       "y": -672.8277285115785
     },
@@ -1433,6 +1433,55 @@
       "degree": 1,
       "x": 517.2565079415256,
       "y": 754.7733398974681
+    },
+    {
+      "id": "TotalEnergies",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 147.65349977577156,
+      "y": 102.52786526932456
+    },
+    {
+      "id": "Shell Deal",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -318.981007271643,
+      "y": 468.2201153446437
+    },
+    {
+      "id": "Shell Beach Post Office",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": 58.98300389704747,
+      "y": 620.7914065692272
+    },
+    {
+      "id": "Friday",
+      "type": "DATE",
+      "degree": 1,
+      "x": 7.466990687221779,
+      "y": 729.4194640852011
+    },
+    {
+      "id": "Leagues Cup 2026 Semifinal",
+      "type": "EVENT",
+      "degree": 3,
+      "x": -55.19421061190866,
+      "y": -532.8686640858139
+    },
+    {
+      "id": "Toluca FC",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 5.725470877304089,
+      "y": -412.43553865600694
+    },
+    {
+      "id": "Club Le\u00f3n",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 36.40666806791986,
+      "y": -465.6677353060224
     }
   ],
   "edges": [
@@ -4235,6 +4284,150 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "TotalEnergies||Engages In Deal With||Shell",
+      "source": "TotalEnergies",
+      "target": "Shell",
+      "rel": "Engages In Deal With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "TotalEnergies||Expected To Grow Due To||Shell Deal",
+      "source": "TotalEnergies",
+      "target": "Shell Deal",
+      "rel": "Expected To Grow Due To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell Beach Post Office||Will Close Permanently On||Friday",
+      "source": "Shell Beach Post Office",
+      "target": "Friday",
+      "rel": "Will Close Permanently On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Shell Energy Stadium||Hosts||Leagues Cup 2026 Semifinal",
+      "source": "Shell Energy Stadium",
+      "target": "Leagues Cup 2026 Semifinal",
+      "rel": "Hosts",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Toluca FC||Plays Against||Club Le\u00f3n",
+      "source": "Toluca FC",
+      "target": "Club Le\u00f3n",
+      "rel": "Plays Against",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Toluca FC||Competes In||Leagues Cup 2026 Semifinal",
+      "source": "Toluca FC",
+      "target": "Leagues Cup 2026 Semifinal",
+      "rel": "Competes In",
+      "rel_cat": "GMM",
+      "causal_type": "COMPETITIVE",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Club Le\u00f3n||Plays Against||Toluca FC",
+      "source": "Club Le\u00f3n",
+      "target": "Toluca FC",
+      "rel": "Plays Against",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Club Le\u00f3n||Competes In||Leagues Cup 2026 Semifinal",
+      "source": "Club Le\u00f3n",
+      "target": "Leagues Cup 2026 Semifinal",
+      "rel": "Competes In",
+      "rel_cat": "GMM",
+      "causal_type": "COMPETITIVE",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BP||Earns During Conflict In||Iran War",
+      "source": "BP",
+      "target": "Iran War",
+      "rel": "Earns During Conflict In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
     }
   ]
 }
