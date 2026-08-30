@@ -1,8 +1,8 @@
 {
   "month": "2011-10",
   "stats": {
-    "nodes": 17,
-    "edges": 15,
+    "nodes": 20,
+    "edges": 17,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,120 +10,141 @@
       "id": "US Government",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": -350.5668676806275,
-      "y": -178.58476589491113
+      "x": -259.2600816585377,
+      "y": -350.3920807035518
     },
     {
       "id": "Legislation",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -554.2165136186652,
-      "y": -287.92120004019745
+      "x": -433.8545753016445,
+      "y": -520.7872786819919
     },
     {
       "id": "China",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -779.523788146335,
-      "y": -388.7443582180653
+      "x": -584.3949868346906,
+      "y": -693.7267307092558
     },
     {
       "id": "QUALCOMM Incorporated",
       "type": "COMPANY",
       "degree": 1,
-      "x": 495.1564560275616,
-      "y": 512.5838304956817
+      "x": 451.81001195173286,
+      "y": 623.4925830468014
     },
     {
       "id": "Semiconductor Industry",
       "type": "SECTOR",
       "degree": 1,
-      "x": 622.5554894975519,
-      "y": 598.653771209706
+      "x": 515.6765288057403,
+      "y": 718.9733168328183
     },
     {
       "id": "Luis Basenese",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 509.1939946823288,
-      "y": -49.71794986579956
+      "x": 562.6683837532328,
+      "y": -216.71470426460908
     },
     {
       "id": "TXN",
       "type": "STOCKTICKER",
       "degree": 1,
-      "x": 824.9160392027209,
-      "y": -93.19402694871053
+      "x": 893.0118024400049,
+      "y": -310.34720733038444
+    },
+    {
+      "id": "Analog Devices Inc",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -706.1735537858302,
+      "y": 206.66876411196074
+    },
+    {
+      "id": "Chips for Cars",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -625.5982115199511,
+      "y": 330.87965477116603
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 7,
-      "x": -72.5782299219592,
-      "y": -2.24418197501656
+      "x": 121.2679397425886,
+      "y": 49.32508101907738
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -220.8398825598351,
-      "y": -524.2948933970616
+      "x": -575.8089676326337,
+      "y": 184.26385960441928
     },
     {
       "id": "215",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -279.6938381983402,
-      "y": -677.9196559135495
+      "x": -691.488821281035,
+      "y": 240.41112997481756
     },
     {
       "id": "Third Quarter Profit",
       "type": "ECONINDICATOR",
+      "degree": 2,
+      "x": -646.012295557692,
+      "y": 128.50645096260786
+    },
+    {
+      "id": "Special Items",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": 473.69018429766874,
-      "y": -614.8442651124099
+      "x": -795.3737377860398,
+      "y": -8.963195438484775
     },
     {
       "id": "Fourth Quarter Earnings Guidance",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -16.194354692900742,
-      "y": 755.5373211402433
+      "x": 709.0810376323068,
+      "y": -537.653972732511
     },
     {
       "id": "Earnings Expectations",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 4.8434319825902925,
-      "y": 900.0
+      "x": 723.5338078458432,
+      "y": -449.38200167225284
     },
     {
       "id": "Fourth Quarter EPS",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -851.2435820711829,
-      "y": 258.2396947327594
+      "x": -313.6133873143269,
+      "y": 900.0
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 113.7368736880418,
-      "y": -793.7308456532772
+      "x": 866.3890893081888,
+      "y": 507.7853206083555
     },
     {
       "id": "Earnings",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 678.4478310953124,
-      "y": -252.92551917943558
+      "x": -86.92427510737231,
+      "y": -898.3563034686481
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -597.6832435839301,
-      "y": 839.1070446200439
+      "x": 875.0642923001158,
+      "y": 96.01731406966515
     }
   ],
   "edges": [
@@ -208,6 +229,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Analog Devices Inc||Produces||Chips for Cars",
+      "source": "Analog Devices Inc",
+      "target": "Chips for Cars",
+      "rel": "Produces",
+      "rel_cat": "GFMK",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Texas Instruments||Pays||Dividend Yield",
       "source": "Texas Instruments",
       "target": "Dividend Yield",
@@ -246,6 +283,22 @@
       "rel": "Reports",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Third Quarter Profit||Includes Special Items||Special Items",
+      "source": "Third Quarter Profit",
+      "target": "Special Items",
+      "rel": "Includes Special Items",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,

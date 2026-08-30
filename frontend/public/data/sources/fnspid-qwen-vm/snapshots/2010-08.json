@@ -1,384 +1,442 @@
 {
   "month": "2010-08",
   "stats": {
-    "nodes": 53,
-    "edges": 45,
+    "nodes": 59,
+    "edges": 50,
     "scored_edges": 0
   },
   "nodes": [
     {
+      "id": "BGFV",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 669.9716295580448,
+      "y": 380.60205460863284
+    },
+    {
+      "id": "20Day Moving Average",
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": 736.8609072153718,
+      "y": 404.68212213849074
+    },
+    {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 5,
-      "x": 4.441988967521264,
-      "y": 54.88429360992125
+      "x": 17.56826393472858,
+      "y": -123.88855168457431
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 4,
-      "x": 683.9560390725524,
-      "y": 282.77325889946064
+      "x": -818.5737952955554,
+      "y": 404.32715583788297
     },
     {
       "id": "Seagate Technology",
       "type": "COMPANY",
       "degree": 1,
-      "x": 501.89943388944135,
-      "y": 185.17845023863455
+      "x": -655.974594278858,
+      "y": 361.8821214198745
     },
     {
       "id": "Symantec",
       "type": "COMPANY",
       "degree": 1,
-      "x": 532.2834392658248,
-      "y": 217.9956583625638
+      "x": -803.3875075386848,
+      "y": 450.92353449648215
     },
     {
       "id": "Free Cash Flow",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 106.81217722375126,
-      "y": 704.6766898212869
+      "x": 751.6871137062448,
+      "y": -467.2935457900816
     },
     {
       "id": "Security Software Division",
       "type": "PRODUCT",
       "degree": 3,
-      "x": -373.92788444255655,
-      "y": 461.2922761513558
+      "x": -738.5985176498236,
+      "y": -349.17351452554504
     },
     {
       "id": "VeriSign Inc",
       "type": "COMPANY",
       "degree": 2,
-      "x": -345.498430266213,
-      "y": 427.2496215423873
+      "x": -697.4371771900616,
+      "y": -322.29844146361654
     },
     {
       "id": "VirNetX",
       "type": "COMPANY",
       "degree": 2,
-      "x": -30.605916862100365,
-      "y": -57.84514755895221
+      "x": -124.30980645061,
+      "y": -713.7956092247455
     },
     {
       "id": "Sony",
       "type": "COMPANY",
       "degree": 1,
-      "x": -723.092400967059,
-      "y": -10.951869959774347
+      "x": 210.29787691878786,
+      "y": -825.7717055117897
     },
     {
       "id": "Samsung",
       "type": "COMPANY",
       "degree": 2,
-      "x": 662.2568741844889,
-      "y": -103.75598668454523
+      "x": -459.85881630416867,
+      "y": -611.0126557912839
+    },
+    {
+      "id": "SPX",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": -730.6594115549984,
+      "y": 20.97388528863956
+    },
+    {
+      "id": "Fair Value",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -832.3828934861573,
+      "y": 24.93382709885635
     },
     {
       "id": "SP 500 Index",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -596.8954529785336,
-      "y": -527.0885658849892
+      "x": 560.4689235695312,
+      "y": -639.4097128135458
     },
     {
-      "id": "50day Moving Average",
-      "type": "CONCEPT",
+      "id": "50Day Moving Average",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -643.1570893222882,
-      "y": -557.8677220907422
+      "x": 585.6402447864059,
+      "y": -598.7943344377072
     },
     {
-      "id": "Abercrombie & Fitch",
+      "id": "Abercrombie  Fitch",
       "type": "COMPANY",
       "degree": 1,
-      "x": -734.6054167729017,
-      "y": 18.34504103556614
+      "x": 549.9269676390921,
+      "y": 457.19406220836373
     },
     {
       "id": "Qtrly Earnings Report",
       "type": "EVENT",
       "degree": 3,
-      "x": -833.5499288654028,
-      "y": -8.639150977884444
+      "x": 715.1264736649092,
+      "y": 603.2548900311452
     },
     {
       "id": "Saks Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -705.8159738133417,
-      "y": -49.18928805487363
+      "x": 510.18571203399796,
+      "y": 399.4155519925989
     },
     {
-      "id": "Analog Devices",
+      "id": "Analog Devices Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -697.073547501255,
-      "y": -17.7526081036772
+      "x": 622.5888083853204,
+      "y": 502.6698325672742
+    },
+    {
+      "id": "TGT",
+      "type": "STOCKTICKER",
+      "degree": 1,
+      "x": -532.4403655469656,
+      "y": 626.7222109227214
+    },
+    {
+      "id": "Quarterly Earnings Report",
+      "type": "CONCEPT",
+      "degree": 3,
+      "x": -568.2091124038801,
+      "y": 727.3655061751142
     },
     {
       "id": "AMAT",
       "type": "COMPANY",
       "degree": 1,
-      "x": 479.76477766051005,
-      "y": 383.75015509921707
-    },
-    {
-      "id": "Quarterly Earnings Report",
-      "type": "CONCEPT",
-      "degree": 2,
-      "x": 634.5370872168804,
-      "y": 512.111991035095
+      "x": -508.4292486725941,
+      "y": 663.8628653367107
     },
     {
       "id": "BRCD",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 432.62887239302574,
-      "y": 318.38691369298493
+      "x": -493.07027589999393,
+      "y": 611.8795815745497
     },
     {
       "id": "Profitability",
-      "type": "ECON_INDICATOR",
+      "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 497.2481178206715,
-      "y": -606.9225968816752
+      "x": 31.10039598516136,
+      "y": -833.9545652080313
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -834.9178465399568,
-      "y": -248.3542712515312
+      "x": 866.9112955301439,
+      "y": 330.4628056706393
     },
     {
       "id": "DJIA",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -303.81227157155973,
-      "y": 593.4448423243302
-    },
-    {
-      "id": "Fair Value",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": -504.49805211812674,
-      "y": 569.1137539154889
+      "x": -333.3187036439284,
+      "y": 454.6303288812423
     },
     {
       "id": "10300",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -104.8970254269498,
-      "y": 620.2015470019907
+      "x": 164.25774628648267,
+      "y": 884.6095040520845
     },
     {
       "id": "VIX",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 635.8783879055221,
-      "y": 138.01149541301825
+      "x": -855.6118009539504,
+      "y": -144.66724396739744
     },
     {
       "id": "200Day Moving Average",
-      "type": "FININSTRUMENTINFO",
+      "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": 807.2232041439843,
-      "y": 177.9925523620921
+      "x": -874.4199911772902,
+      "y": -100.29966979337904
     },
     {
       "id": "Intel",
       "type": "COMPANY",
-      "degree": 5,
-      "x": -306.02023803753394,
-      "y": 71.39086790252487
+      "degree": 6,
+      "x": 146.66621851126615,
+      "y": 8.009026330365717
     },
     {
       "id": "Acquisition",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 1.6822914267386182,
-      "y": 768.765951726736
+      "x": 850.606109746362,
+      "y": -166.49046129230064
     },
     {
-      "id": "McAfee Inc",
+      "id": "McAfee",
       "type": "COMPANY",
       "degree": 1,
-      "x": -725.8722049023645,
-      "y": -585.1578707467731
+      "x": -785.1096881867187,
+      "y": 190.23203420641835
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
-      "degree": 6,
-      "x": -54.03832824847058,
-      "y": -301.28426888889896
+      "degree": 7,
+      "x": 114.0054967996672,
+      "y": 101.90304860793168
     },
     {
       "id": "Chips",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -310.40945777849095,
-      "y": -791.3583082705906
+      "x": -265.2422843281999,
+      "y": 900.0
     },
     {
       "id": "Apple",
       "type": "COMPANY",
       "degree": 1,
-      "x": -577.3505501099036,
-      "y": 209.91837173406807
+      "x": -599.5202233492778,
+      "y": 208.22759025039545
     },
     {
       "id": "Chip",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -719.0760553849328,
-      "y": 293.5684686148854
+      "x": -874.0425520081809,
+      "y": 277.40026672239344
+    },
+    {
+      "id": "Integrated Graphics Processor Technology",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 316.2227868174625,
+      "y": 788.9366308557468
     },
     {
       "id": "Atom Chips",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -637.8468233030688,
-      "y": 528.2899832003133
+      "x": 434.0661058682755,
+      "y": -777.4248175565557
     },
     {
       "id": "Economic Data",
       "type": "MACROINDICATOR",
       "degree": 1,
-      "x": 260.8724535122503,
-      "y": -512.8978187055991
+      "x": 677.7294529686843,
+      "y": 132.1236468036714
     },
     {
       "id": "Tech Stocks",
-      "type": "FIN_INSTRUMENT_INFO",
+      "type": "SECTOR",
       "degree": 1,
-      "x": 390.7710341501372,
-      "y": -784.8189924380908
+      "x": 865.1774704391684,
+      "y": 158.2644001073153
     },
     {
       "id": "Marvell Technology Group Ltd",
       "type": "COMPANY",
       "degree": 2,
-      "x": 260.1617038768997,
-      "y": 540.5831698140552
+      "x": -312.79684259402205,
+      "y": -793.1188374884001
     },
     {
       "id": "Stocks",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 303.60860281607125,
-      "y": 662.0799681405613
+      "x": -299.2922623857667,
+      "y": -733.8221424569941
     },
     {
       "id": "MRVL",
       "type": "STOCKTICKER",
       "degree": 2,
-      "x": 94.52588773577818,
-      "y": -180.60315389589297
+      "x": 283.751506230625,
+      "y": -402.63024075295266
     },
     {
       "id": "Call Options",
       "type": "DERIVATIVE",
       "degree": 2,
-      "x": -71.22591716491871,
-      "y": -900.0
+      "x": 880.8391956554927,
+      "y": -12.308425438530683
     },
     {
       "id": "Intel Corporation",
       "type": "COMPANY",
       "degree": 1,
-      "x": -67.86420083156645,
-      "y": -732.4104935290549
+      "x": 642.1756358392178,
+      "y": -3.4492410425718445
     },
     {
       "id": "Susquehanna",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 491.5258117864727,
-      "y": 58.650357335205136
+      "x": 0.7738072487417214,
+      "y": -517.9824769082109
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
       "degree": 3,
-      "x": 601.29266123594,
-      "y": 111.30892148297173
+      "x": 1.6220961580641338,
+      "y": -469.7458722562907
     },
     {
       "id": "Buy",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 455.77670465357204,
-      "y": 550.2930113753915
+      "x": 693.0290915914773,
+      "y": -330.9282030303297
     },
     {
       "id": "Neutral",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 752.5411031683421,
-      "y": -323.39078992033296
+      "x": -690.0140667606787,
+      "y": -610.4129963426178
     },
     {
-      "id": "Infineon Technologies",
+      "id": "Infineon Technologies AG",
       "type": "COMPANY",
       "degree": 5,
-      "x": 131.89152993699724,
-      "y": -319.7608454302271
+      "x": 86.07368826870987,
+      "y": -53.49239120242166
     },
     {
-      "id": "Chip Technologies",
+      "id": "Technologies",
       "type": "CONCEPT",
       "degree": 2,
-      "x": 753.5356393452762,
-      "y": -117.65314437834236
+      "x": -411.77664869087994,
+      "y": -598.0028026026947
     },
     {
       "id": "Nokia",
       "type": "COMPANY",
       "degree": 1,
-      "x": 633.6060620818039,
-      "y": -465.7362492988025
+      "x": 840.6394679054094,
+      "y": -321.8903293893132
     },
     {
       "id": "Research In Motion",
       "type": "COMPANY",
       "degree": 1,
-      "x": 588.3503395917004,
-      "y": 281.9415079531588
+      "x": -27.474304667539204,
+      "y": 842.9647626096972
     },
     {
       "id": "LG",
       "type": "COMPANY",
       "degree": 1,
-      "x": -557.9094218739181,
-      "y": -780.3165013074449
+      "x": -478.47735858565255,
+      "y": -747.2705822235066
     },
     {
       "id": "Wireless Chip Division",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 138.95339711038503,
-      "y": -372.5139427152051
+      "x": 114.14620179045629,
+      "y": -87.93977504670224
     },
     {
       "id": "Digital Wireless Telecommunications Products and Services",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -693.328938132251,
-      "y": -375.85373306928966
+      "x": 511.9384625781087,
+      "y": 760.1491301395989
     },
     {
       "id": "QCOM",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 2,
-      "x": 315.2637510431263,
-      "y": -10.075799742076022
+      "x": -351.72450006122006,
+      "y": 252.84818316611185
+    },
+    {
+      "id": "Mobile Device Market",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 670.0975960342442,
+      "y": -574.1814148588578
     }
   ],
   "edges": [
+    {
+      "id": "BGFV||Falls Under Support At||20Day Moving Average",
+      "source": "BGFV",
+      "target": "20Day Moving Average",
+      "rel": "Falls Under Support At",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
     {
       "id": "Applied Materials||Hits 52Week Low||Stock Price",
       "source": "Applied Materials",
@@ -524,9 +582,25 @@
       "event_type": "OTHER"
     },
     {
-      "id": "SP 500 Index||Looks To Reclaim||50day Moving Average",
+      "id": "SPX||Trades Above||Fair Value",
+      "source": "SPX",
+      "target": "Fair Value",
+      "rel": "Trades Above",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SP 500 Index||Looks To Reclaim||50Day Moving Average",
       "source": "SP 500 Index",
-      "target": "50day Moving Average",
+      "target": "50Day Moving Average",
       "rel": "Looks To Reclaim",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
@@ -540,8 +614,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Abercrombie & Fitch||Scheduled To Release||Qtrly Earnings Report",
-      "source": "Abercrombie & Fitch",
+      "id": "Abercrombie  Fitch||Scheduled To Release||Qtrly Earnings Report",
+      "source": "Abercrombie  Fitch",
       "target": "Qtrly Earnings Report",
       "rel": "Scheduled To Release",
       "rel_cat": "SSI",
@@ -572,12 +646,28 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices||Scheduled To Release||Qtrly Earnings Report",
-      "source": "Analog Devices",
+      "id": "Analog Devices Inc||Scheduled To Release||Qtrly Earnings Report",
+      "source": "Analog Devices Inc",
       "target": "Qtrly Earnings Report",
       "rel": "Scheduled To Release",
       "rel_cat": "SSI",
       "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "TGT||Reports||Quarterly Earnings Report",
+      "source": "TGT",
+      "target": "Quarterly Earnings Report",
+      "rel": "Reports",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -716,9 +806,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Intel||Buys||McAfee Inc",
+      "id": "Intel||Buys||McAfee",
       "source": "Intel",
-      "target": "McAfee Inc",
+      "target": "McAfee",
       "rel": "Buys",
       "rel_cat": "SSI",
       "causal_type": "CORPORATE_ACTION",
@@ -754,6 +844,22 @@
       "rel": "Designs",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Intel||Produces||Integrated Graphics Processor Technology",
+      "source": "Intel",
+      "target": "Integrated Graphics Processor Technology",
+      "rel": "Produces",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -908,8 +1014,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Infineon Technologies||Competes With||Qualcomm",
-      "source": "Infineon Technologies",
+      "id": "Infineon Technologies AG||Competes With||Qualcomm",
+      "source": "Infineon Technologies AG",
       "target": "Qualcomm",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -924,9 +1030,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Qualcomm||Focuses On||Chip Technologies",
+      "id": "Qualcomm||Focuses On||Technologies",
       "source": "Qualcomm",
-      "target": "Chip Technologies",
+      "target": "Technologies",
       "rel": "Focuses On",
       "rel_cat": "GFMK",
       "causal_type": "OPERATIONAL",
@@ -940,9 +1046,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Samsung||Focuses On||Chip Technologies",
+      "id": "Samsung||Focuses On||Technologies",
       "source": "Samsung",
-      "target": "Chip Technologies",
+      "target": "Technologies",
       "rel": "Focuses On",
       "rel_cat": "GFMK",
       "causal_type": "OPERATIONAL",
@@ -956,8 +1062,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Infineon Technologies||Sells To||Nokia",
-      "source": "Infineon Technologies",
+      "id": "Infineon Technologies AG||Sells To||Nokia",
+      "source": "Infineon Technologies AG",
       "target": "Nokia",
       "rel": "Sells To",
       "rel_cat": "SSI",
@@ -972,8 +1078,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Infineon Technologies||Sells To||Research In Motion",
-      "source": "Infineon Technologies",
+      "id": "Infineon Technologies AG||Sells To||Research In Motion",
+      "source": "Infineon Technologies AG",
       "target": "Research In Motion",
       "rel": "Sells To",
       "rel_cat": "SSI",
@@ -988,8 +1094,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Infineon Technologies||Sells To||LG",
-      "source": "Infineon Technologies",
+      "id": "Infineon Technologies AG||Sells To||LG",
+      "source": "Infineon Technologies AG",
       "target": "LG",
       "rel": "Sells To",
       "rel_cat": "SSI",
@@ -1020,9 +1126,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Wireless Chip Division||Belongs To||Infineon Technologies",
+      "id": "Wireless Chip Division||Belongs To||Infineon Technologies AG",
       "source": "Wireless Chip Division",
-      "target": "Infineon Technologies",
+      "target": "Infineon Technologies AG",
       "rel": "Belongs To",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
@@ -1074,6 +1180,22 @@
       "rel": "Competes With",
       "rel_cat": "SSI",
       "causal_type": "COMPETITIVE",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Qualcomm||May Be At A Disadvantage On||Mobile Device Market",
+      "source": "Qualcomm",
+      "target": "Mobile Device Market",
+      "rel": "May Be At A Disadvantage On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,

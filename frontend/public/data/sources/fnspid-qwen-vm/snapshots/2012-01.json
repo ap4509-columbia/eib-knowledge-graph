@@ -1,8 +1,8 @@
 {
   "month": "2012-01",
   "stats": {
-    "nodes": 45,
-    "edges": 40,
+    "nodes": 53,
+    "edges": 45,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,316 +10,372 @@
       "id": "AMAT",
       "type": "COMPANY",
       "degree": 2,
-      "x": -73.67003146333052,
-      "y": -65.71603128649464
+      "x": -1.5643236285767654,
+      "y": 505.6343955453055
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 3,
-      "x": 670.6585260862843,
-      "y": 189.7102016459235
+      "x": 608.6000340201048,
+      "y": 591.6757145867782
     },
     {
       "id": "Investor",
       "type": "CONCEPT",
+      "degree": 2,
+      "x": -612.3035637920461,
+      "y": 420.50426130740175
+    },
+    {
+      "id": "LONG Position",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -817.5472449874347,
-      "y": -324.63590677675705
+      "x": -754.4489609297843,
+      "y": 502.0922624667399
     },
     {
       "id": "Broadcom CorpA",
       "type": "COMPANY",
       "degree": 1,
-      "x": 131.94668154664356,
-      "y": 743.226148972245
+      "x": -351.8401471527469,
+      "y": 697.8665149016415
     },
     {
       "id": "Qualcomm Atheros Inc",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 158.126753740822,
-      "y": 801.6627636242105
+      "x": -419.0314629708103,
+      "y": 843.2331049664407
     },
     {
       "id": "Marvell Technology Group Ltd",
       "type": "COMPANY",
       "degree": 1,
-      "x": 381.2328727906272,
-      "y": -160.60762028190751
+      "x": -335.32713301393096,
+      "y": -637.8376467278763
     },
     {
       "id": "Stock Market",
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": -395.2266274406959,
+      "y": -755.3756853982787
+    },
+    {
+      "id": "MRVL",
+      "type": "STOCKTICKER",
+      "degree": 1,
+      "x": 342.29780920473473,
+      "y": -556.5298005022145
+    },
+    {
+      "id": "Overbought Conditions",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 655.8571645124404,
-      "y": -291.94314559541033
+      "x": 428.99193888751506,
+      "y": -664.578871480762
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 3,
-      "x": 11.440326678318208,
-      "y": -89.224418461327
+      "x": -610.5542626869621,
+      "y": -336.50250354036734
     },
     {
       "id": "Snapdragon S4 processor",
       "type": "PRODUCT",
       "degree": 3,
-      "x": 104.65196997855136,
-      "y": -583.4677209712763
+      "x": -725.7015417762269,
+      "y": 55.37855882329044
     },
     {
       "id": "Microsoft Corporation",
       "type": "COMPANY",
       "degree": 2,
-      "x": 119.41830649354927,
-      "y": -648.527516564081
+      "x": -707.5146810675391,
+      "y": 26.827195707610567
     },
     {
       "id": "Windows 8 Operating System",
       "type": "PRODUCT",
       "degree": 2,
-      "x": 138.3350771463139,
-      "y": -711.9178281186454
+      "x": -807.8285836882857,
+      "y": 55.84832676892181
     },
     {
       "id": "Shares",
       "type": "FININSTRUMENTINFO",
       "degree": 3,
-      "x": -550.9973529947706,
-      "y": 408.6663876585021
+      "x": 75.47458556657318,
+      "y": 56.95250173176997
     },
     {
       "id": "Altera Corp",
       "type": "COMPANY",
       "degree": 1,
-      "x": -398.267506698987,
-      "y": 768.074337449632
+      "x": 335.05601663058326,
+      "y": -779.4995880657567
     },
     {
-      "id": "Analog Devices",
+      "id": "Analog Devices Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -867.6372143403684,
-      "y": 214.420939838013
+      "x": -184.83036242567923,
+      "y": 900.0
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 7,
-      "x": -356.217185592061,
-      "y": 180.99834841664855
+      "x": 98.52391970763226,
+      "y": -56.07801268675386
     },
     {
       "id": "CSX Corp",
       "type": "COMPANY",
       "degree": 2,
-      "x": -344.66182126608317,
-      "y": 247.89250069023797
+      "x": 491.19786490780456,
+      "y": -501.92207896348395
     },
     {
       "id": "Earnings Report",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -697.5795471025408,
-      "y": 703.7490082748736
+      "x": 771.3056981198264,
+      "y": -317.2997720322958
     },
     {
       "id": "Quantitative Easing",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -427.98797758782155,
-      "y": -372.22256105788125
+      "x": -543.448151854572,
+      "y": 606.5231722991856
     },
     {
       "id": "Yield Curve",
       "type": "MACRO_INDICATOR",
       "degree": 1,
-      "x": -620.4384321281743,
-      "y": -567.0337297669864
+      "x": -617.9133187979198,
+      "y": 692.9601657496585
     },
     {
       "id": "VMware Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 31.315584533138228,
-      "y": -261.10441571895376
+      "x": 148.16764841580732,
+      "y": -541.0256466168784
     },
     {
       "id": "Earnings",
       "type": "CONCEPT",
-      "degree": 8,
-      "x": 7.65499997866253,
-      "y": -210.2338688695926
+      "degree": 9,
+      "x": 209.39801360842606,
+      "y": -686.93411433882
     },
     {
       "id": "Western Digital",
       "type": "COMPANY",
       "degree": 1,
-      "x": -49.875486053797424,
-      "y": -198.4646877064187
+      "x": 166.40448480652194,
+      "y": -716.9244387150262
+    },
+    {
+      "id": "Kansas City Southern",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 186.38394248414238,
+      "y": -595.890446414554
+    },
+    {
+      "id": "Ben Bernanke",
+      "type": "FINANCIALENTITY",
+      "degree": 1,
+      "x": 78.17380639521569,
+      "y": 879.7906963840646
+    },
+    {
+      "id": "FOMC Meeting",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 26.626009283424914,
+      "y": 882.9885153967117
+    },
+    {
+      "id": "Economic Reports",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": -832.7277019458893,
+      "y": -158.84157179589448
+    },
+    {
+      "id": "Expectations",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -850.6104720380014,
+      "y": -110.66167028708146
     },
     {
       "id": "Earnings Decrease",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 2,
-      "x": -174.8022627223903,
-      "y": -580.3009424841547
+      "x": -369.85749220982757,
+      "y": 548.8274326542032
     },
     {
       "id": "Consumer Buying Power",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -188.27785781675686,
-      "y": 616.6318444420416
+      "x": 858.8882441113329,
+      "y": -210.72210878218195
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -203.31419340994566,
-      "y": -710.5009992519805
+      "x": -434.5364778825441,
+      "y": 650.2937596665507
     },
     {
       "id": "DuPont",
       "type": "COMPANY",
       "degree": 1,
-      "x": -33.85943626584819,
-      "y": -257.67799778628483
+      "x": 174.24051951611833,
+      "y": -523.5229224430165
     },
     {
       "id": "FourthQuarter Profit",
       "type": "ECONINDICATOR",
       "degree": 2,
-      "x": -161.0129538993631,
-      "y": 840.7520248244008
+      "x": 470.4965063080945,
+      "y": -333.5364525224713
     },
     {
       "id": "68",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -213.39354064668427,
-      "y": 849.4069670572761
+      "x": 725.1901936921505,
+      "y": -513.2866138976271
     },
     {
       "id": "FirstQuarter Earnings",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -900.0,
-      "y": -112.17575412759234
+      "x": -843.6972726751877,
+      "y": 313.40966012400753
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
       "degree": 2,
-      "x": 261.4531996007258,
-      "y": -23.378339630362966
+      "x": 434.43341623506603,
+      "y": -53.02076370675413
     },
     {
       "id": "Profitability",
-      "type": "ECON_INDICATOR",
+      "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -690.2465998999922,
-      "y": -376.66178183262355
+      "x": 572.9481799525677,
+      "y": -708.6777226888438
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 705.9735175433867,
-      "y": -45.05559610908207
+      "x": -111.16779888802148,
+      "y": -844.9575783899255
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 515.8404025750345,
-      "y": 158.70483776759093
+      "x": 659.11977180642,
+      "y": 581.4897876594251
     },
     {
       "id": "Analysts",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 202.03420053728328,
-      "y": -177.69514883902056
+      "x": 295.8594462043907,
+      "y": 441.3265500185516
     },
     {
       "id": "Taiwan Semiconductor Manufacturing Company Ltd",
       "type": "COMPANY",
       "degree": 2,
-      "x": 301.92715247350293,
-      "y": -282.6452333944725
+      "x": 364.4503339619468,
+      "y": 592.2583250921821
     },
     {
       "id": "Proposed Spending",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 517.9641026009399,
-      "y": -486.7575115956839
+      "x": 427.57721738755487,
+      "y": 736.8256691117999
     },
     {
       "id": "Global Foundries",
       "type": "COMPANY",
       "degree": 1,
-      "x": 302.40217999219425,
-      "y": -309.5415565696286
+      "x": 410.706155121293,
+      "y": 681.5951347372408
     },
     {
-      "id": "KLA-Tencor Corporation",
+      "id": "KLA-Tencor",
       "type": "COMPANY",
       "degree": 2,
-      "x": 523.9574036611443,
-      "y": -228.08254618182193
+      "x": 605.9750160178149,
+      "y": 331.8289223529902
     },
     {
       "id": "Zacks Consensus Estimate",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 374.59713140001696,
-      "y": -645.4020772007223
+      "x": 831.728127842732,
+      "y": 239.2157544950577
     },
     {
       "id": "Novellus Systems",
       "type": "COMPANY",
       "degree": 1,
-      "x": 478.53928557976934,
-      "y": 319.32662643683426
+      "x": 849.8078566368911,
+      "y": 31.335972903137186
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 1,
-      "x": 642.47136172247,
-      "y": 421.6364267796017
+      "x": 789.3533145489571,
+      "y": 25.249570814555597
     },
     {
       "id": "First Quarter Results",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -427.0014733024781,
-      "y": -692.0524068422598
+      "x": -660.843012642572,
+      "y": -616.3493791548599
     },
     {
       "id": "BROADCOM CORP-A",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 273.3391476245385,
-      "y": 573.365382154354
+      "x": -467.1973416357698,
+      "y": -579.7439232574327
     },
     {
       "id": "Free Stock Analysis Report",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 3,
-      "x": 333.307779390456,
-      "y": 712.4878056688535
+      "x": -416.24027526017926,
+      "y": -589.9346982736688
     },
     {
       "id": "TEXAS INSTRS",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 352.34298999201775,
-      "y": 662.3147913201815
+      "x": -382.96510497787284,
+      "y": -502.27791558239727
     }
   ],
   "edges": [
@@ -329,6 +385,22 @@
       "target": "Stock Price",
       "rel": "Increases",
       "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Investor||Hedges||LONG Position",
+      "source": "Investor",
+      "target": "LONG Position",
+      "rel": "Hedges",
+      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -377,6 +449,22 @@
       "target": "Stock Market",
       "rel": "Experiences SellOff",
       "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "MRVL||Pullback Due To||Overbought Conditions",
+      "source": "MRVL",
+      "target": "Overbought Conditions",
+      "rel": "Pullback Due To",
+      "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -468,9 +556,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Shares||Increase In Price Due To||Analog Devices",
+      "id": "Shares||Increase In Price Due To||Analog Devices Inc",
       "source": "Shares",
-      "target": "Analog Devices",
+      "target": "Analog Devices Inc",
       "rel": "Increase In Price Due To",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -596,6 +684,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Kansas City Southern||Reports||Earnings",
+      "source": "Kansas City Southern",
+      "target": "Earnings",
+      "rel": "Reports",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "CSX Corp||Reports||Earnings",
       "source": "CSX Corp",
       "target": "Earnings",
@@ -605,6 +709,38 @@
       "polarity": "neutral",
       "origin": "news",
       "weight": 2,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Ben Bernanke||Delivers Speech On||FOMC Meeting",
+      "source": "Ben Bernanke",
+      "target": "FOMC Meeting",
+      "rel": "Delivers Speech On",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Economic Reports||Influences||Expectations",
+      "source": "Economic Reports",
+      "target": "Expectations",
+      "rel": "Influences",
+      "rel_cat": "GMM",
+      "causal_type": "CAUSAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -804,10 +940,10 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analysts||Expect||Taiwan Semiconductor Manufacturing Company Ltd",
+      "id": "Analysts||Expects||Taiwan Semiconductor Manufacturing Company Ltd",
       "source": "Analysts",
       "target": "Taiwan Semiconductor Manufacturing Company Ltd",
-      "rel": "Expect",
+      "rel": "Expects",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -852,8 +988,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "KLA-Tencor Corporation||Exceeds||Zacks Consensus Estimate",
-      "source": "KLA-Tencor Corporation",
+      "id": "KLA-Tencor||Exceeds||Zacks Consensus Estimate",
+      "source": "KLA-Tencor",
       "target": "Zacks Consensus Estimate",
       "rel": "Exceeds",
       "rel_cat": "SSI",
@@ -868,8 +1004,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "KLA-Tencor Corporation||Increases||Stock Price",
-      "source": "KLA-Tencor Corporation",
+      "id": "KLA-Tencor||Increases||Stock Price",
+      "source": "KLA-Tencor",
       "target": "Stock Price",
       "rel": "Increases",
       "rel_cat": "SSI",

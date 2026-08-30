@@ -1,8 +1,8 @@
 {
   "month": "2011-09",
   "stats": {
-    "nodes": 15,
-    "edges": 12,
+    "nodes": 17,
+    "edges": 13,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,106 +10,120 @@
       "id": "JMP Securities",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 298.12293161616634,
-      "y": 85.5517656432575
+      "x": 272.9816829142675,
+      "y": -35.11343637450184
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
       "degree": 3,
-      "x": 240.50181349162634,
-      "y": 26.722006529181495
+      "x": 205.54200429973963,
+      "y": -57.63017825504504
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -416.275714727588,
-      "y": 329.3073763759019
+      "x": -486.8688074381269,
+      "y": 225.59648472448805
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -548.6939984390085,
-      "y": 432.31402133705996
+      "x": -596.6187408008296,
+      "y": 300.0612817906725
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": -139.32464749320505,
-      "y": 611.0685972465628
+      "x": -278.40753584002186,
+      "y": 488.30802368232804
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -185.2774664838205,
-      "y": 733.5497523574682
+      "x": -368.21431901515894,
+      "y": 622.9301963435977
     },
     {
       "id": "Earnings Outlook",
       "type": "CONCEPT",
       "degree": 1,
       "x": 900.0,
-      "y": -271.91427843648654
+      "y": -338.4449138309751
     },
     {
       "id": "QUALCOMM Incorporated",
       "type": "COMPANY",
       "degree": 3,
-      "x": 387.27234962614244,
-      "y": -179.96676532930255
+      "x": 485.1551918282579,
+      "y": -245.90619875248095
     },
     {
       "id": "Battery Life",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 349.29852947583464,
-      "y": 446.533309740212
+      "x": 550.4046482994039,
+      "y": 349.43740980944847
     },
     {
       "id": "Microsoft",
       "type": "COMPANY",
       "degree": 1,
-      "x": 455.0201744700713,
-      "y": -238.37576668009015
+      "x": 537.7292187058426,
+      "y": -308.85786386570095
     },
     {
-      "id": "Analog Devices",
+      "id": "Analog Devices Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -281.09132017270366,
-      "y": -500.59285022907113
+      "x": -340.19177494996393,
+      "y": -556.6785892330206
     },
     {
       "id": "Research And Development",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -365.27833694550253,
-      "y": -579.1399137860317
+      "x": -427.69611259322016,
+      "y": -554.9020640931403
     },
     {
       "id": "General Motors",
       "type": "COMPANY",
       "degree": 2,
-      "x": -538.9101889165445,
-      "y": 112.34333258095073
+      "x": -534.8382924758755,
+      "y": 14.303029851872969
     },
     {
       "id": "IPO",
-      "type": "EVENT",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -581.542056019601,
-      "y": -201.83976347942405
+      "x": -555.9053299131572,
+      "y": -272.62095142450215
     },
     {
       "id": "Digital Wireless Telecommunications Products and Services",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 426.1779305181328,
-      "y": -805.5608238701889
+      "x": 420.33794409752403,
+      "y": -842.2615355073419
+    },
+    {
+      "id": "Investors",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 90.44085498104837,
+      "y": 493.0266331847763
+    },
+    {
+      "id": "Return On Equity",
+      "type": "ECONINDICATOR",
+      "degree": 1,
+      "x": 126.14936790027049,
+      "y": 718.752671949525
     }
   ],
   "edges": [
@@ -242,8 +256,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices||Invests In||Research And Development",
-      "source": "Analog Devices",
+      "id": "Analog Devices Inc||Invests In||Research And Development",
+      "source": "Analog Devices Inc",
       "target": "Research And Development",
       "rel": "Invests In",
       "rel_cat": "GFMK",
@@ -294,6 +308,22 @@
       "source": "QUALCOMM Incorporated",
       "target": "Digital Wireless Telecommunications Products and Services",
       "rel": "Develops",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Investors||Consider ROE As Indicator Of Health||Return On Equity",
+      "source": "Investors",
+      "target": "Return On Equity",
+      "rel": "Consider ROE As Indicator Of Health",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
       "polarity": "neutral",

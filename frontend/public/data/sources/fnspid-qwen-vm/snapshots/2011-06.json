@@ -1,8 +1,8 @@
 {
   "month": "2011-06",
   "stats": {
-    "nodes": 5,
-    "edges": 3,
+    "nodes": 7,
+    "edges": 4,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,36 +10,50 @@
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": 708.634628640245,
-      "y": -430.62241451915423
+      "x": 758.5231627254551,
+      "y": -365.13129328247385
     },
     {
       "id": "SSI",
-      "type": "COMPANY",
+      "type": "CONCEPT",
       "degree": 1,
       "x": 900.0,
-      "y": -657.3954801712202
+      "y": -503.51992089962835
+    },
+    {
+      "id": "Trade Gap",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": -561.1673347784674,
+      "y": -176.20640253885114
+    },
+    {
+      "id": "Economic Health",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -585.1242538604346,
+      "y": -22.23314454050847
     },
     {
       "id": "TSM",
       "type": "STOCKTICKER",
       "degree": 2,
-      "x": -527.3965687563649,
-      "y": 359.04436647574107
+      "x": -178.52848045339766,
+      "y": 367.8346922634998
     },
     {
-      "id": "Unusual Option Activity",
+      "id": "Unusual Call Options Activity",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -596.8072657422043,
-      "y": 652.9234191379853
+      "x": -295.7379800833594,
+      "y": 517.2564636133498
     },
     {
-      "id": "Option Volume",
+      "id": "Put Option Volume",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -484.43079414167585,
-      "y": 76.05010907664818
+      "x": -37.96511354979623,
+      "y": 181.9996053846122
     }
   ],
   "edges": [
@@ -60,9 +74,25 @@
       "event_type": "OTHER"
     },
     {
-      "id": "TSM||Shows||Unusual Option Activity",
+      "id": "Trade Gap||Narrows||Economic Health",
+      "source": "Trade Gap",
+      "target": "Economic Health",
+      "rel": "Narrows",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "TSM||Shows||Unusual Call Options Activity",
       "source": "TSM",
-      "target": "Unusual Option Activity",
+      "target": "Unusual Call Options Activity",
       "rel": "Shows",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -76,8 +106,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Option Volume||Is Above Average For||TSM",
-      "source": "Option Volume",
+      "id": "Put Option Volume||Is Above Average For||TSM",
+      "source": "Put Option Volume",
       "target": "TSM",
       "rel": "Is Above Average For",
       "rel_cat": "SSI",

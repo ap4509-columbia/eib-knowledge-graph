@@ -1,8 +1,8 @@
 {
   "month": "2010-02",
   "stats": {
-    "nodes": 16,
-    "edges": 16,
+    "nodes": 20,
+    "edges": 18,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,113 +10,141 @@
       "id": "Dodson",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 339.67145937578783,
-      "y": -229.41171042204192
+      "x": 475.811451476128,
+      "y": -190.38243509102895
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 4,
-      "x": 424.40589881094513,
-      "y": -314.40289301330284
+      "x": 414.54060349525946,
+      "y": -208.23793544066194
     },
     {
       "id": "Marvell Technology Group Ltd",
       "type": "COMPANY",
       "degree": 2,
-      "x": -669.4310372014575,
-      "y": 462.81738223784834
+      "x": -773.5465549558079,
+      "y": 129.85405311145044
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -818.8053789071427,
-      "y": 550.0473077317814
+      "x": -900.0,
+      "y": 153.15985254182502
     },
     {
       "id": "Quarterly Earnings Surprise",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -635.2666871692333,
-      "y": 512.5260934747395
+      "x": -724.3673814745339,
+      "y": 155.84129463026628
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 3,
-      "x": 128.53810999961732,
-      "y": -60.70669811043302
+      "x": 100.22377122864836,
+      "y": 81.8447864913443
     },
     {
       "id": "Smartphone Segment",
       "type": "CONCEPT",
       "degree": 3,
-      "x": 729.7708708494149,
-      "y": 105.60424611229968
+      "x": 498.2559848301702,
+      "y": -604.9595448012442
     },
     {
       "id": "Intel Corporation",
       "type": "COMPANY",
       "degree": 4,
-      "x": 515.3070178069802,
-      "y": -208.06407686898552
+      "x": 523.1832957066101,
+      "y": -40.75723691940912
     },
     {
       "id": "TXN",
       "type": "STOCKTICKER",
       "degree": 1,
-      "x": -533.2383221769279,
-      "y": 124.34200910760698
+      "x": -667.8610271636702,
+      "y": 394.3903528863498
     },
     {
       "id": "INTC",
       "type": "STOCKTICKER",
       "degree": 2,
-      "x": 434.2918697996361,
-      "y": -152.26303698771156
+      "x": 386.28918327571955,
+      "y": -16.87748961368967
     },
     {
       "id": "QCOM",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 1,
-      "x": 136.4618887707383,
-      "y": -662.8785501087561
+      "x": 160.79549057668558,
+      "y": -792.9671211862715
     },
     {
       "id": "AAPL",
-      "type": "STOCKTICKER",
+      "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 30.247022481752733,
-      "y": 748.8665277699583
+      "x": -0.43039583328898157,
+      "y": 618.2722130918967
     },
     {
       "id": "Apple Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 57.26665587155108,
-      "y": 900.0
+      "x": 26.17090460441539,
+      "y": 747.7894554155588
     },
     {
       "id": "GOOG",
-      "type": "STOCK_TICKER",
+      "type": "STOCKTICKER",
       "degree": 1,
-      "x": -202.1838676126935,
-      "y": -561.9369203994463
+      "x": -168.5214080545756,
+      "y": -714.9518365469631
     },
     {
       "id": "Alphabet Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -234.24653256761442,
-      "y": -685.5362780291274
+      "x": -200.921986236896,
+      "y": -837.1414916461988
+    },
+    {
+      "id": "CHL",
+      "type": "STOCKTICKER",
+      "degree": 1,
+      "x": -395.7461422310444,
+      "y": 488.1994193006932
+    },
+    {
+      "id": "China Mobile Ltd",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -520.4828154414877,
+      "y": 723.7617272223742
     },
     {
       "id": "Wireless Carriers",
       "type": "CONCEPT",
       "degree": 3,
-      "x": 297.21103186864605,
-      "y": -529.0034024944292
+      "x": 594.1424705713353,
+      "y": 513.5426805705663
+    },
+    {
+      "id": "Handset Manufacturers",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 537.7079533640466,
+      "y": -312.4488460651665
+    },
+    {
+      "id": "Carriers",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 634.7566022622868,
+      "y": -287.9318979516908
     }
   ],
   "edges": [
@@ -329,6 +357,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "CHL||Is Symbol Of||China Mobile Ltd",
+      "source": "CHL",
+      "target": "China Mobile Ltd",
+      "rel": "Is Symbol Of",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Texas Instruments||Partners With||Wireless Carriers",
       "source": "Texas Instruments",
       "target": "Wireless Carriers",
@@ -365,6 +409,22 @@
       "source": "Intel Corporation",
       "target": "Wireless Carriers",
       "rel": "Partners With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Handset Manufacturers||Collaborates With||Carriers",
+      "source": "Handset Manufacturers",
+      "target": "Carriers",
+      "rel": "Collaborates With",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",

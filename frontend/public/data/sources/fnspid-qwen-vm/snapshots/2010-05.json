@@ -1,8 +1,8 @@
 {
   "month": "2010-05",
   "stats": {
-    "nodes": 50,
-    "edges": 43,
+    "nodes": 66,
+    "edges": 55,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,351 +10,463 @@
       "id": "Apple",
       "type": "COMPANY",
       "degree": 1,
-      "x": 649.1719380757193,
-      "y": 104.02241218348368
+      "x": 649.2172222189126,
+      "y": 233.49566902662949
     },
     {
       "id": "Chip",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 764.9833342363671,
-      "y": 99.03284401940022
+      "x": 698.9870971852107,
+      "y": 257.18434308369615
     },
     {
       "id": "Intel",
       "type": "COMPANY",
       "degree": 4,
-      "x": 252.42072342350258,
-      "y": 211.80361544539437
+      "x": 198.07567691591393,
+      "y": 17.409739910237516
     },
     {
       "id": "Atom processors",
       "type": "PRODUCT",
       "degree": 3,
-      "x": -216.78881307834567,
-      "y": 811.7964187280315
+      "x": -94.50745884425878,
+      "y": 727.8426201477348
     },
     {
       "id": "Smartphones",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 114.09900473096003,
-      "y": 807.4236528480795
+      "x": 304.44068793380103,
+      "y": 703.7709647544831
     },
     {
       "id": "Tablets",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -547.5139822527104,
-      "y": 819.516892919285
+      "x": -493.1656446608378,
+      "y": 758.8521557361724
     },
     {
       "id": "Power Consumption",
       "type": "ECON_INDICATOR",
       "degree": 1,
-      "x": 722.5808889037921,
-      "y": -387.9547838447275
+      "x": 490.20673994155413,
+      "y": -694.2115989920397
     },
     {
-      "id": "NVIDIA",
+      "id": "Nvidia",
       "type": "COMPANY",
       "degree": 1,
-      "x": 210.42462117857747,
-      "y": 178.4439783328862
+      "x": 155.95019450643096,
+      "y": 3.426166763110419
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 3,
-      "x": 257.7677401989088,
-      "y": 258.1132209358969
+      "x": 217.83302552584476,
+      "y": -21.83400456216084
     },
     {
       "id": "optionMONSTER",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -329.9206287273693,
-      "y": 54.93169548297891
+      "x": -239.49382476149486,
+      "y": -344.7521898312184
     },
     {
       "id": "Heavy Short Activity",
       "type": "CONCEPT",
       "degree": 3,
-      "x": -278.0758638187524,
-      "y": 43.494723867464025
+      "x": -210.92172526788804,
+      "y": -303.79140625367774
     },
     {
       "id": "Time Warner Cable",
       "type": "COMPANY",
       "degree": 1,
-      "x": -815.359273544596,
-      "y": -171.7237059142073
+      "x": -640.2825925136833,
+      "y": -587.0258498313129
+    },
+    {
+      "id": "HIG",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -693.7760122340793,
+      "y": -282.04910491647894
+    },
+    {
+      "id": "Investor",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -776.4327517564456,
+      "y": -334.4181681204223
+    },
+    {
+      "id": "Rescue Package",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 273.35526995349676,
+      "y": -893.0547288079391
+    },
+    {
+      "id": "European Shares",
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": 280.92137980455834,
+      "y": -848.223542756382
     },
     {
       "id": "Dow Jones Industrial Average",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -778.7559417135408,
-      "y": 231.4249159920243
+      "x": 518.3246333878244,
+      "y": 398.03740779804684
     },
     {
       "id": "Fair Value",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -839.3535923100511,
-      "y": 229.79887851485736
+      "x": 683.0516743474382,
+      "y": 543.8727986760557
     },
     {
       "id": "SP 500 Futures",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -684.6677167991176,
-      "y": 191.72436428091862
+      "x": 478.39946338306083,
+      "y": 338.464848929212
     },
     {
       "id": "ADI",
       "type": "COMPANY",
-      "degree": 5,
-      "x": -158.94033026778715,
-      "y": 63.87026988658139
+      "degree": 6,
+      "x": 21.110977893673162,
+      "y": 187.81840099667085
     },
     {
       "id": "200Day Moving Average",
-      "type": "FININSTRUMENTINFO",
+      "type": "FIN_INSTRUMENT_INFO",
       "degree": 2,
-      "x": 505.18143812478195,
-      "y": 474.3919793937308
+      "x": -667.6417223910822,
+      "y": 476.05274648035834
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
-      "degree": 7,
-      "x": 694.5661038845988,
-      "y": 579.7711336977711
+      "degree": 13,
+      "x": -734.6578464712109,
+      "y": 558.6676128066125
+    },
+    {
+      "id": "319",
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": -632.8419417769879,
+      "y": 502.18083292899087
     },
     {
       "id": "Second Quarter Earnings",
-      "type": "ECONINDICATOR",
+      "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": -566.2448596626189,
-      "y": -644.219919177516
+      "x": 111.35581937646998,
+      "y": 669.4228372906674
     },
     {
       "id": "Quarterly Dividend",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 723.8930300294693,
-      "y": -155.83285654883193
+      "x": -17.29505394706714,
+      "y": -895.9057751613296
     },
     {
       "id": "Third Quarter",
-      "type": "EVENT",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -887.0105447544241,
-      "y": 14.837476029675415
+      "x": 800.9042883778561,
+      "y": 353.4081409883953
     },
     {
       "id": "24",
-      "type": "FININSTRUMENTINFO",
+      "type": "CONCEPT",
       "degree": 1,
-      "x": -711.9230051395754,
-      "y": 666.4712276630014
+      "x": 530.5436996413866,
+      "y": 695.6883571445914
+    },
+    {
+      "id": "Analog Devices Inc",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -697.4304200861754,
+      "y": -64.28758603969774
+    },
+    {
+      "id": "Q2 Numbers",
+      "type": "ECONINDICATOR",
+      "degree": 1,
+      "x": -659.920219700285,
+      "y": -686.725334155762
     },
     {
       "id": "Hormel Foods",
       "type": "COMPANY",
       "degree": 1,
-      "x": 538.7209826451152,
-      "y": 453.76723124985256
+      "x": -658.4504500567132,
+      "y": 451.6796049170852
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 3,
-      "x": 285.9169103664061,
-      "y": 169.03039768008202
+      "x": 13.830736516558547,
+      "y": 273.4980821029728
     },
     {
       "id": "Quarterly Earnings Report",
       "type": "CONCEPT",
       "degree": 10,
-      "x": 267.5488257494395,
-      "y": -731.4003980942964
+      "x": 802.801383153901,
+      "y": -317.89750762812923
     },
     {
       "id": "Hot Topic Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 254.75314410168016,
-      "y": -588.7213590045042
+      "x": 635.4664114132743,
+      "y": -255.0207191890952
     },
     {
       "id": "Limited Brands",
       "type": "COMPANY",
       "degree": 1,
-      "x": 232.1682550082071,
-      "y": -552.4871086591784
+      "x": 573.899213244165,
+      "y": -239.431553803885
     },
     {
       "id": "Second Quarter Profit",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 0.5887303759455759,
-      "y": 899.9999999999999
+      "x": -271.4613211633982,
+      "y": 834.651524181398
+    },
+    {
+      "id": "Revenue",
+      "type": "ECONINDICATOR",
+      "degree": 1,
+      "x": -630.7088559025926,
+      "y": 117.7141211787438
+    },
+    {
+      "id": "Strong Demand For Tech Products",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": 129.4153929613123
     },
     {
       "id": "Dollar Tree",
       "type": "COMPANY",
       "degree": 1,
-      "x": 202.59731833115916,
-      "y": -671.1721900911781
+      "x": 725.188721153706,
+      "y": -284.6583295971767
     },
     {
       "id": "GameStop Corp",
       "type": "COMPANY",
       "degree": 1,
-      "x": 227.99273434108994,
-      "y": -627.6067025421282
+      "x": 758.5119790637344,
+      "y": -348.8537971032661
     },
     {
       "id": "Ross Stores",
       "type": "COMPANY",
       "degree": 1,
-      "x": 264.3509568418945,
-      "y": -668.2041286739935
+      "x": 682.753619062763,
+      "y": -276.64741321639946
     },
     {
       "id": "Brocade Communications Systems",
       "type": "COMPANY",
       "degree": 1,
-      "x": 322.60091085480354,
-      "y": -693.430942482649
+      "x": 801.798581665898,
+      "y": -262.01768035437067
     },
     {
       "id": "Dell Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 196.15853351311299,
-      "y": -570.8325463623986
+      "x": 672.795435352709,
+      "y": -307.34304524828684
     },
     {
       "id": "Salesforce.com",
       "type": "COMPANY",
       "degree": 1,
-      "x": 190.96039414755472,
-      "y": -530.8471357549612
+      "x": 662.8538502459818,
+      "y": -261.2965059194958
     },
     {
       "id": "Marvell Technology Group Ltd",
       "type": "COMPANY",
       "degree": 1,
-      "x": 170.5450797953979,
-      "y": -478.59711191614826
+      "x": 749.3028233330957,
+      "y": -252.9652483811439
     },
     {
-      "id": "Sears Holdings",
+      "id": "Sears Holdings Corp",
       "type": "COMPANY",
       "degree": 2,
-      "x": -253.04735978861154,
-      "y": 621.1218068088345
+      "x": -25.508232763689644,
+      "y": 153.77734994108934
     },
     {
       "id": "Profit",
-      "type": "ECON_INDICATOR",
+      "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -832.6613469778745,
-      "y": 476.39403077668493
+      "x": -843.9722598429231,
+      "y": 209.31898139526237
     },
     {
       "id": "Margins",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 322.3677681398029,
-      "y": 780.410225843549
+      "x": 793.3568065760326,
+      "y": 99.11812065113439
+    },
+    {
+      "id": "High Volatility",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": 445.26670727688065,
+      "y": -576.9814537590905
+    },
+    {
+      "id": "Rebound",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 436.2290184509403,
+      "y": -527.3451008931848
     },
     {
       "id": "Marvell Semiconductors",
       "type": "COMPANY",
       "degree": 2,
-      "x": -196.45314268622556,
-      "y": -686.6553577697803
+      "x": -164.47402760155086,
+      "y": -276.08453329189734
     },
     {
       "id": "Stock Market",
-      "type": "CONCEPT",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -131.7354530070038,
-      "y": -807.9380388599568
+      "x": -895.968430923135,
+      "y": -111.91068142224024
     },
     {
       "id": "Quarterly Results",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -270.44799515321114,
-      "y": -578.7705282886934
+      "x": 565.8405472030847,
+      "y": -441.5740744762342
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -374.1803674700377,
-      "y": -763.519144024341
+      "x": 702.6446974189072,
+      "y": -566.6414962702052
     },
     {
-      "id": "Advance Auto Parts Inc",
+      "id": "Advance Auto Parts",
       "type": "COMPANY",
       "degree": 1,
-      "x": 512.5693947191576,
-      "y": 421.27742248943593
+      "x": -618.1776677256378,
+      "y": 515.4460942850008
     },
     {
-      "id": "Analog Devices",
+      "id": "Universal Health Services Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 614.3358514408642,
-      "y": 539.2346588077386
+      "x": -587.2967761564062,
+      "y": 391.13320897006514
     },
     {
-      "id": "Suntrust Banks Inc",
+      "id": "Illinois Tool Works",
       "type": "COMPANY",
       "degree": 1,
-      "x": 648.4168120757918,
-      "y": 505.56520830427456
+      "x": -569.1326944603866,
+      "y": 416.1087771066515
+    },
+    {
+      "id": "Newmont Mining Corporation",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -534.000276253002,
+      "y": 419.41356698048605
+    },
+    {
+      "id": "SunTrust Banks Inc",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -607.9972291660997,
+      "y": 471.0166484713362
+    },
+    {
+      "id": "Peabody Energy Corp",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -492.70500312338226,
+      "y": 352.42195000554443
+    },
+    {
+      "id": "U.S. Steel Corporation",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -518.3782699661975,
+      "y": 389.85032649164077
     },
     {
       "id": "Consol Energy",
       "type": "COMPANY",
       "degree": 1,
-      "x": 505.9242364129374,
-      "y": 448.1146801130407
+      "x": -570.4465456441623,
+      "y": 449.5399143090774
+    },
+    {
+      "id": "Fidelity National Information Services Inc",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -565.2816786833465,
+      "y": 395.69136236645215
     },
     {
       "id": "Rambus",
       "type": "COMPANY",
       "degree": 1,
-      "x": 213.59509218242493,
-      "y": 300.7608796171502
+      "x": 262.6022608555526,
+      "y": 9.917311226130769
     },
     {
       "id": "Samsung",
       "type": "COMPANY",
       "degree": 1,
-      "x": -533.561234049508,
-      "y": -306.28874836603575
+      "x": -187.492075490739,
+      "y": -610.0768894989128
     },
     {
       "id": "Royalty Deal",
       "type": "CONCEPT",
       "degree": 2,
-      "x": -654.2567032226208,
-      "y": -376.28268939563225
+      "x": -236.7084339104737,
+      "y": -780.8364652097439
     },
     {
       "id": "Technology Sector",
       "type": "SECTOR",
       "degree": 1,
-      "x": -806.3025994054788,
-      "y": -464.0608461409434
+      "x": -261.2931991352833,
+      "y": -851.4461963118697
     }
   ],
   "edges": [
@@ -439,8 +551,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Competes With||Intel",
-      "source": "NVIDIA",
+      "id": "Nvidia||Competes With||Intel",
+      "source": "Nvidia",
       "target": "Intel",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -519,6 +631,38 @@
       "event_type": "OTHER"
     },
     {
+      "id": "HIG||Experiences Large Trade In Puts||Investor",
+      "source": "HIG",
+      "target": "Investor",
+      "rel": "Experiences Large Trade In Puts",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Rescue Package||Positive Impact On||European Shares",
+      "source": "Rescue Package",
+      "target": "European Shares",
+      "rel": "Positive Impact On",
+      "rel_cat": "GMM",
+      "causal_type": "CAUSAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Dow Jones Industrial Average||Trading Above||Fair Value",
       "source": "Dow Jones Industrial Average",
       "target": "Fair Value",
@@ -583,6 +727,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "ADI||Pays Dividend To||319",
+      "source": "ADI",
+      "target": "319",
+      "rel": "Pays Dividend To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "ADI||Reports Better Than Expected||Second Quarter Earnings",
       "source": "ADI",
       "target": "Second Quarter Earnings",
@@ -637,6 +797,22 @@
       "rel": "Increases By",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Analog Devices Inc||Reports||Q2 Numbers",
+      "source": "Analog Devices Inc",
+      "target": "Q2 Numbers",
+      "rel": "Reports",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -717,6 +893,22 @@
       "rel": "Reports",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Revenue||Increases By More Than Double||Strong Demand For Tech Products",
+      "source": "Revenue",
+      "target": "Strong Demand For Tech Products",
+      "rel": "Increases By More Than Double",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -855,8 +1047,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Sears Holdings||Declines||Profit",
-      "source": "Sears Holdings",
+      "id": "Sears Holdings Corp||Declines||Profit",
+      "source": "Sears Holdings Corp",
       "target": "Profit",
       "rel": "Declines",
       "rel_cat": "SSI",
@@ -871,11 +1063,27 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Sears Holdings||Reduces||Margins",
-      "source": "Sears Holdings",
+      "id": "Sears Holdings Corp||Reduces||Margins",
+      "source": "Sears Holdings Corp",
       "target": "Margins",
       "rel": "Reduces",
       "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "High Volatility||Temperates||Rebound",
+      "source": "High Volatility",
+      "target": "Rebound",
+      "rel": "Temperates",
+      "rel_cat": "GMM",
       "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
@@ -935,8 +1143,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Advance Auto Parts Inc||Reports Positive Stock Price Change||Stock Price",
-      "source": "Advance Auto Parts Inc",
+      "id": "Advance Auto Parts||Reports Positive Stock Price Change||Stock Price",
+      "source": "Advance Auto Parts",
       "target": "Stock Price",
       "rel": "Reports Positive Stock Price Change",
       "rel_cat": "GFMK",
@@ -951,8 +1159,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices||Reports Positive Stock Price Change||Stock Price",
-      "source": "Analog Devices",
+      "id": "Universal Health Services Inc||Reports Positive Stock Price Change||Stock Price",
+      "source": "Universal Health Services Inc",
       "target": "Stock Price",
       "rel": "Reports Positive Stock Price Change",
       "rel_cat": "GFMK",
@@ -967,8 +1175,88 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Suntrust Banks Inc||Experiences Negative Stock Price Change||Stock Price",
-      "source": "Suntrust Banks Inc",
+      "id": "Analog Devices Inc||Reports Positive Stock Price Change||Stock Price",
+      "source": "Analog Devices Inc",
+      "target": "Stock Price",
+      "rel": "Reports Positive Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Illinois Tool Works||Experiences Negative Stock Price Change||Stock Price",
+      "source": "Illinois Tool Works",
+      "target": "Stock Price",
+      "rel": "Experiences Negative Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Newmont Mining Corporation||Experiences Negative Stock Price Change||Stock Price",
+      "source": "Newmont Mining Corporation",
+      "target": "Stock Price",
+      "rel": "Experiences Negative Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SunTrust Banks Inc||Experiences Negative Stock Price Change||Stock Price",
+      "source": "SunTrust Banks Inc",
+      "target": "Stock Price",
+      "rel": "Experiences Negative Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Peabody Energy Corp||Experiences Negative Stock Price Change||Stock Price",
+      "source": "Peabody Energy Corp",
+      "target": "Stock Price",
+      "rel": "Experiences Negative Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "U.S. Steel Corporation||Experiences Negative Stock Price Change||Stock Price",
+      "source": "U.S. Steel Corporation",
       "target": "Stock Price",
       "rel": "Experiences Negative Stock Price Change",
       "rel_cat": "GFMK",
@@ -985,6 +1273,22 @@
     {
       "id": "Consol Energy||Experiences Negative Stock Price Change||Stock Price",
       "source": "Consol Energy",
+      "target": "Stock Price",
+      "rel": "Experiences Negative Stock Price Change",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Fidelity National Information Services Inc||Experiences Negative Stock Price Change||Stock Price",
+      "source": "Fidelity National Information Services Inc",
       "target": "Stock Price",
       "rel": "Experiences Negative Stock Price Change",
       "rel_cat": "GFMK",

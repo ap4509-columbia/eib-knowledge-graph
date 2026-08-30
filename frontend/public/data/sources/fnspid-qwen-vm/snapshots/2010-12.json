@@ -1,276 +1,355 @@
 {
   "month": "2010-12",
   "stats": {
-    "nodes": 37,
-    "edges": 41,
+    "nodes": 46,
+    "edges": 48,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Sterne Agee",
       "type": "FINANCIALENTITY",
-      "degree": 2,
-      "x": 126.06535654656122,
-      "y": -153.2199592007065
+      "degree": 3,
+      "x": 139.03429261277185,
+      "y": 381.22778990389855
     },
     {
-      "id": "Analog Devices",
+      "id": "40 Price Target",
+      "type": "FININSTRUMENTINFO",
+      "degree": 1,
+      "x": 578.9677684517401,
+      "y": 589.7391275793958
+    },
+    {
+      "id": "Analog Devices Inc",
       "type": "COMPANY",
       "degree": 2,
-      "x": 808.1670069029329,
-      "y": 314.8729956295644
+      "x": 642.630125702076,
+      "y": -147.25089503913307
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
       "degree": 1,
-      "x": -556.1695844055336,
-      "y": -622.4151375960448
+      "x": -584.7950091224533,
+      "y": 733.6247492921995
     },
     {
       "id": "Broadcom",
       "type": "COMPANY",
       "degree": 3,
-      "x": -137.41138562053695,
-      "y": -322.05707422590376
+      "x": -142.56135365027714,
+      "y": -85.71102303839758
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
-      "degree": 9,
-      "x": -77.88420096237876,
-      "y": -294.5068863543998
+      "degree": 10,
+      "x": -193.4692876610665,
+      "y": -63.66104328715666
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 6,
-      "x": 208.39877820536856,
-      "y": -444.734315859395
+      "x": -446.5090137853565,
+      "y": -213.6626189295545
     },
     {
       "id": "Infineon Wireless",
       "type": "COMPANY",
       "degree": 1,
-      "x": -166.14230342660795,
-      "y": 114.17225336134122
+      "x": -322.80091177091145,
+      "y": 246.5549888583016
     },
     {
       "id": "Intel",
       "type": "COMPANY",
       "degree": 6,
-      "x": -177.5676575151184,
-      "y": 64.1413208558435
+      "x": -302.9139590735715,
+      "y": 186.34620496484973
+    },
+    {
+      "id": "Emerging Markets",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 241.72046678876202,
+      "y": -602.5346202801088
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 260.0668878646674,
-      "y": -579.4320663792662
+      "x": -646.4222388630334,
+      "y": -181.82203590972725
     },
     {
       "id": "DARS Rating",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 494.37281184651664,
-      "y": -538.2313771790033
+      "x": -577.633546608489,
+      "y": -419.6980980708937
     },
     {
-      "id": "NVIDIA",
+      "id": "Nvidia",
       "type": "COMPANY",
       "degree": 6,
-      "x": 41.719436401611354,
-      "y": -352.795335158629
+      "x": -482.97606577241794,
+      "y": 1.340254449193248
     },
     {
       "id": "Infineon",
       "type": "COMPANY",
       "degree": 1,
-      "x": -645.6756953140673,
-      "y": -376.57592421836483
+      "x": -771.1379060558102,
+      "y": 233.3519460013947
     },
     {
       "id": "Smartphones",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -634.3166009271247,
-      "y": 49.51783928725827
+      "x": 526.4014363257155,
+      "y": -589.3227353295476
     },
     {
       "id": "Mobile Computing Chips",
       "type": "PRODUCT",
-      "degree": 2,
-      "x": -806.7439916172882,
-      "y": 35.438582729664255
+      "degree": 3,
+      "x": 547.0340464385926,
+      "y": -537.7324346659525
     },
     {
       "id": "Gaming Consoles",
       "type": "PRODUCT",
       "degree": 1,
-      "x": -684.1688030442165,
-      "y": 19.1468464976978
+      "x": 360.6951464304845,
+      "y": -345.85000505053796
+    },
+    {
+      "id": "Tablet PCs",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 462.7509706127259,
+      "y": -460.7159853236278
+    },
+    {
+      "id": "Sony PlayStation",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 673.98661964274,
+      "y": 53.270573657459565
+    },
+    {
+      "id": "Nvidia Tegra Chip",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 810.4266850233046,
+      "y": 60.84988408214388
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 742.1941651788986,
-      "y": -322.38880176573053
+      "x": -805.747008339096,
+      "y": 30.595817546037793
     },
     {
       "id": "AMD",
       "type": "COMPANY",
       "degree": 1,
-      "x": -375.3396184695732,
-      "y": 886.473485712861
+      "x": -416.36195520505026,
+      "y": 861.3838268743419
     },
     {
       "id": "Atom processors",
       "type": "PRODUCT",
       "degree": 2,
-      "x": -133.55709132627234,
-      "y": -536.489218940058
+      "x": -146.49885060851088,
+      "y": -391.81050839964576
     },
     {
       "id": "Market Share Growth",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -241.37209230112373,
-      "y": -779.8432668518485
+      "x": -161.91019522767766,
+      "y": -509.07362992817434
     },
     {
       "id": "optionMONSTER",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 150.28311070723737,
-      "y": -60.034279156656815
+      "x": -165.3417697205661,
+      "y": 18.31725051031465
     },
     {
       "id": "Purchase",
       "type": "CONCEPT",
       "degree": 2,
-      "x": 226.1746204495742,
-      "y": -132.83347380018807
+      "x": -256.5080151869985,
+      "y": -83.79265152338175
     },
     {
       "id": "5700 February 30 Puts",
       "type": "DERIVATIVE",
       "degree": 2,
-      "x": 319.36717796309057,
-      "y": -248.84661689976062
+      "x": -350.3700433630122,
+      "y": -195.63944791431263
     },
     {
       "id": "Semiconductors HOLDRS",
       "type": "FININSTRUMENTINFO",
-      "degree": 5,
-      "x": 251.4414962548059,
-      "y": -250.1214974197558
+      "degree": 6,
+      "x": -434.15780386914884,
+      "y": -281.8426650635141
     },
     {
       "id": "Applied Materials",
       "type": "COMPANY",
       "degree": 1,
-      "x": 673.9768899537183,
-      "y": -38.25819462180127
+      "x": -543.5419855577144,
+      "y": -565.7439240253661
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 327.8190424310262,
-      "y": -724.9015502252446
+      "x": -782.8194924599297,
+      "y": -227.60936386938792
+    },
+    {
+      "id": "Broader Technology Sector",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -219.6733821120924,
+      "y": -660.429660773147
     },
     {
       "id": "Electronic Equipment",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 881.3793571593776,
-      "y": 339.32136494174796
+      "x": 811.6245673564534,
+      "y": -197.65610792526633
     },
     {
       "id": "QCOM",
-      "type": "STOCKTICKER",
+      "type": "COMPANY",
       "degree": 1,
-      "x": 207.63842627972312,
-      "y": 900.0
+      "x": -137.4513374805849,
+      "y": 787.0861627129069
     },
     {
       "id": "Option Trade",
       "type": "DERIVATIVE",
       "degree": 1,
-      "x": 144.48824142694258,
-      "y": 895.1289489060807
+      "x": -132.47947762093906,
+      "y": 900.0
     },
     {
       "id": "ATT Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": -261.3215855610833,
-      "y": 261.80769561837076
+      "x": 229.3478528575963,
+      "y": -335.81353947049655
     },
     {
       "id": "Spectrum Licenses",
       "type": "PRODUCT",
       "degree": 5,
-      "x": -230.33300610216378,
-      "y": 202.98275588939728
+      "x": 228.3471171963696,
+      "y": -285.501382923229
     },
     {
       "id": "Shareholders",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -96.39711409821122,
-      "y": -753.0314458746509
+      "x": -717.9554167281847,
+      "y": 571.1892088302956
     },
     {
       "id": "ATT",
       "type": "COMPANY",
       "degree": 2,
-      "x": -504.2095534229183,
-      "y": 351.90631153422214
+      "x": -265.7997157737322,
+      "y": 66.39804114651868
     },
     {
       "id": "Lower 700 MHz Frequency Band",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -383.00434250105855,
-      "y": 700.0149691452589
+      "x": 650.8337326231779,
+      "y": -511.2033701907732
+    },
+    {
+      "id": "Geopolitical Events",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 558.5463327759683,
+      "y": 425.83257554247746
+    },
+    {
+      "id": "Korea",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 712.0413230608259,
+      "y": 558.1815915537568
     },
     {
       "id": "Regeneron Pharmaceuticals",
       "type": "COMPANY",
       "degree": 2,
-      "x": 382.7094543548932,
-      "y": 656.2871902926164
+      "x": 568.9308478485397,
+      "y": 163.32975739813094
     },
     {
       "id": "Drug For Retinal Disorders",
       "type": "PRODUCT",
-      "degree": 2,
-      "x": 339.51372809667174,
-      "y": 626.210196344886
+      "degree": 3,
+      "x": 660.6213560459944,
+      "y": 196.39043131690426
     },
     {
       "id": "Bayer",
-      "type": "FINANCIALENTITY",
+      "type": "COMPANY",
       "degree": 2,
-      "x": 301.0061731116216,
-      "y": 614.8167940477605
+      "x": 515.9239927134865,
+      "y": 175.72846405957446
+    },
+    {
+      "id": "LateStage Study",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 846.8867796294815,
+      "y": 236.77645182551
     },
     {
       "id": "Stocks",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -775.1675345199625,
-      "y": 498.47687093283736
+      "x": -758.9157185201818,
+      "y": 416.56264882572594
     }
   ],
   "edges": [
     {
-      "id": "Sterne Agee||Upgrades To||Analog Devices",
+      "id": "Sterne Agee||Sets||40 Price Target",
       "source": "Sterne Agee",
-      "target": "Analog Devices",
+      "target": "40 Price Target",
+      "rel": "Sets",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Sterne Agee||Upgrades To||Analog Devices Inc",
+      "source": "Sterne Agee",
+      "target": "Analog Devices Inc",
       "rel": "Upgrades To",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -348,6 +427,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Qualcomm||Designs For||Emerging Markets",
+      "source": "Qualcomm",
+      "target": "Emerging Markets",
+      "rel": "Designs For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Texas Instruments||Pays||Dividend Yield",
       "source": "Texas Instruments",
       "target": "Dividend Yield",
@@ -380,8 +475,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Competes With||Qualcomm",
-      "source": "NVIDIA",
+      "id": "Nvidia||Competes With||Qualcomm",
+      "source": "Nvidia",
       "target": "Qualcomm",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -396,8 +491,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Competes With||Texas Instruments",
-      "source": "NVIDIA",
+      "id": "Nvidia||Competes With||Texas Instruments",
+      "source": "Nvidia",
       "target": "Texas Instruments",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -412,8 +507,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Competes With||Infineon",
-      "source": "NVIDIA",
+      "id": "Nvidia||Competes With||Infineon",
+      "source": "Nvidia",
       "target": "Infineon",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -428,8 +523,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Competes With||Broadcom",
-      "source": "NVIDIA",
+      "id": "Nvidia||Competes With||Broadcom",
+      "source": "Nvidia",
       "target": "Broadcom",
       "rel": "Competes With",
       "rel_cat": "SSI",
@@ -476,8 +571,40 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NVIDIA||Grows||Revenue",
-      "source": "NVIDIA",
+      "id": "Tablet PCs||Drives Growth Of||Mobile Computing Chips",
+      "source": "Tablet PCs",
+      "target": "Mobile Computing Chips",
+      "rel": "Drives Growth Of",
+      "rel_cat": "SSI",
+      "causal_type": "CAUSAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Sony PlayStation||Uses||Nvidia Tegra Chip",
+      "source": "Sony PlayStation",
+      "target": "Nvidia Tegra Chip",
+      "rel": "Uses",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Nvidia||Grows||Revenue",
+      "source": "Nvidia",
       "target": "Revenue",
       "rel": "Grows",
       "rel_cat": "SSI",
@@ -524,9 +651,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Intel||Competes With||NVIDIA",
+      "id": "Intel||Competes With||Nvidia",
       "source": "Intel",
-      "target": "NVIDIA",
+      "target": "Nvidia",
       "rel": "Competes With",
       "rel_cat": "SSI",
       "causal_type": "COMPETITIVE",
@@ -684,8 +811,24 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices||Manufactures||Electronic Equipment",
-      "source": "Analog Devices",
+      "id": "Semiconductors HOLDRS||Outperforms||Broader Technology Sector",
+      "source": "Semiconductors HOLDRS",
+      "target": "Broader Technology Sector",
+      "rel": "Outperforms",
+      "rel_cat": "GMM",
+      "causal_type": "COMPETITIVE",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Analog Devices Inc||Manufactures||Electronic Equipment",
+      "source": "Analog Devices Inc",
       "target": "Electronic Equipment",
       "rel": "Manufactures",
       "rel_cat": "SSI",
@@ -812,6 +955,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Geopolitical Events||Cause Negative Sentiment||Korea",
+      "source": "Geopolitical Events",
+      "target": "Korea",
+      "rel": "Cause Negative Sentiment",
+      "rel_cat": "GMM",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Regeneron Pharmaceuticals||Announces||Drug For Retinal Disorders",
       "source": "Regeneron Pharmaceuticals",
       "target": "Drug For Retinal Disorders",
@@ -832,6 +991,22 @@
       "source": "Bayer",
       "target": "Regeneron Pharmaceuticals",
       "rel": "Partners With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Drug For Retinal Disorders||Meets Goal Of||LateStage Study",
+      "source": "Drug For Retinal Disorders",
+      "target": "LateStage Study",
+      "rel": "Meets Goal Of",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "neutral",

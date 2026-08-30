@@ -1,101 +1,108 @@
 {
   "month": "2009-12",
   "stats": {
-    "nodes": 13,
-    "edges": 12,
+    "nodes": 14,
+    "edges": 13,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Apple",
       "type": "COMPANY",
-      "degree": 12,
-      "x": 12.966413981155096,
-      "y": 12.154951016729692
+      "degree": 13,
+      "x": 8.898785413028948,
+      "y": 2.0355989611206224
     },
     {
       "id": "Coca-Cola",
       "type": "COMPANY",
       "degree": 1,
-      "x": 881.8386696679305,
-      "y": 198.25823080013237
+      "x": 895.4102695942736,
+      "y": 159.3574098326066
     },
     {
       "id": "Boeing",
       "type": "COMPANY",
       "degree": 1,
-      "x": -614.7423489047303,
-      "y": -619.4342981621502
+      "x": -558.0691542064997,
+      "y": -709.4072380242676
     },
     {
       "id": "Nike",
       "type": "COMPANY",
       "degree": 1,
-      "x": -740.7662273538166,
-      "y": 535.608750218657
+      "x": -781.976475549663,
+      "y": 496.7117745190081
     },
     {
       "id": "Kraft Foods Group Inc",
       "type": "COMPANY",
       "degree": 1,
-      "x": 638.3258631689837,
-      "y": 621.1689759441324
+      "x": 679.1121898035435,
+      "y": 573.1498120849851
     },
     {
       "id": "Nokia",
       "type": "COMPANY",
       "degree": 1,
-      "x": -367.5584374417472,
-      "y": 900.0
+      "x": -433.55556069044314,
+      "y": 872.7652812473813
     },
     {
       "id": "Disney",
       "type": "COMPANY",
       "degree": 1,
-      "x": 891.7741880180511,
-      "y": -316.8951552726743
+      "x": 900.0,
+      "y": -341.36069269855415
     },
     {
       "id": "Intel",
       "type": "COMPANY",
       "degree": 1,
-      "x": -217.43676246172205,
-      "y": -774.6070569958008
+      "x": -151.4865590895119,
+      "y": -828.4406460937735
     },
     {
       "id": "PepsiCo",
       "type": "COMPANY",
       "degree": 1,
-      "x": -717.304695928554,
-      "y": 237.25910595904662
+      "x": -149.15428014875917,
+      "y": 713.8681777293727
     },
     {
       "id": "ConocoPhillips",
       "type": "COMPANY",
       "degree": 1,
-      "x": 198.84624407896874,
-      "y": -781.9924215664333
+      "x": 244.73580554505745,
+      "y": -790.7451090007745
     },
     {
       "id": "Hewlett Packard",
       "type": "COMPANY",
       "degree": 1,
-      "x": 581.7543702255565,
-      "y": -679.3908963593798
+      "x": 594.7665338860041,
+      "y": -696.948683399629
+    },
+    {
+      "id": "3M Company",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -715.2953619793049,
+      "y": -341.8592397882208
     },
     {
       "id": "Cisco Systems",
       "type": "COMPANY",
       "degree": 1,
-      "x": -751.9592292621342,
-      "y": -192.25301453583737
+      "x": 287.41581705364575,
+      "y": 832.2932968937515
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": 204.2619522120581,
-      "y": 860.1228289535776
+      "x": -820.8020096313718,
+      "y": 58.5802577369941
     }
   ],
   "edges": [
@@ -247,6 +254,22 @@
       "id": "Apple||Equivalent To In Investment Value||Hewlett Packard",
       "source": "Apple",
       "target": "Hewlett Packard",
+      "rel": "Equivalent To In Investment Value",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Apple||Equivalent To In Investment Value||3M Company",
+      "source": "Apple",
+      "target": "3M Company",
       "rel": "Equivalent To In Investment Value",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
