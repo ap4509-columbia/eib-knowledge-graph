@@ -1,0 +1,42 @@
+{
+  "month": "2026-06",
+  "stats": {
+    "nodes": 2,
+    "edges": 1,
+    "scored_edges": 0
+  },
+  "nodes": [
+    {
+      "id": "Tanya B. Dorff",
+      "type": "PERSON",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "AbbVie",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    }
+  ],
+  "edges": [
+    {
+      "id": "Tanya B. Dorff||Highlights Data On||AbbVie",
+      "source": "Tanya B. Dorff",
+      "target": "AbbVie",
+      "rel": "Highlights Data On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    }
+  ]
+}

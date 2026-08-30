@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 211,
-    "edges": 184,
+    "nodes": 215,
+    "edges": 186,
     "scored_edges": 0
   },
   "nodes": [
@@ -1482,6 +1482,34 @@
       "degree": 3,
       "x": 36.40666806791986,
       "y": -465.6677353060224
+    },
+    {
+      "id": "Roger Federer",
+      "type": "PERSON",
+      "degree": 1,
+      "x": 705.8331725319806,
+      "y": -558.2402493711152
+    },
+    {
+      "id": "Hall of Fame",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 861.0412429866086,
+      "y": -881.8922617596519
+    },
+    {
+      "id": "Boeing",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -750.3159712270452,
+      "y": 540.1325111307669
+    },
+    {
+      "id": "Ryan L Shedd",
+      "type": "EXECUTIVE",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
     }
   ],
   "edges": [
@@ -4428,6 +4456,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
+    },
+    {
+      "id": "Roger Federer||Inducted Into||Hall of Fame",
+      "source": "Roger Federer",
+      "target": "Hall of Fame",
+      "rel": "Inducted Into",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Boeing||Hires||Ryan L Shedd",
+      "source": "Boeing",
+      "target": "Ryan L Shedd",
+      "rel": "Hires",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
     }
   ]
 }
