@@ -1,0 +1,75 @@
+\contentsline {section}{\numberline {1}Executive summary}{4}{section.1}%
+\contentsline {section}{\numberline {2}Project timeline}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Spring 2025 --- First triplets, canonicalisation, first GNNs}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Summer 2025 --- Metrics, Judge LLMs, regeneration}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Fall 2025 --- FNSPID, local Qwen, unified pipeline}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Spring 2026 --- Robustness and causality}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Summer 2026 --- Comparison, UI, deployment}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Data}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Source corpus}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Working subset for this project}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Extracted knowledge graph}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Pipeline overview}{11}{section.4}%
+\contentsline {section}{\numberline {5}Stage 1 --- Triplet extraction}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The triplet as unit of knowledge}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Prompt engineering}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Models used across semesters}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Multi-LLM benchmark (Summer 2026)}{12}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Stage 2 --- Judge LLM quality evaluation}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Motivation}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}The four dimensions}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Three filtering strategies}{13}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Cross-model results (Summer 2026 benchmark)}{13}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Stage 3 --- Knowledge graph construction}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}From triplets to graph}{13}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Temporal snapshots}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Text vs.\ summary --- Spring 2026 finding}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Static layout (Summer 2026)}{14}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Stage 4 --- Graph Attention Network}{14}{section.8}%
+\contentsline {subsection}{\numberline {8.1}What the model is doing, in plain English}{14}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Architecture}{15}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Loss functions compared}{15}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Rolling-window evaluation}{15}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Spring 2026 data-leakage fix}{15}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Spring 2026 window-size ablation}{16}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Spring 2026 causal augmentation}{16}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Causal augmentation results}{16}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}Summer 2026 rerun}{16}{subsection.8.9}%
+\contentsline {section}{\numberline {9}Predictions layer (Summer 2026)}{17}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Design}{17}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Columns}{17}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Pipeline}{18}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Reality check on the data}{18}{subsection.9.4}%
+\contentsline {section}{\numberline {10}User interface (Summer 2026)}{18}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Design goals}{18}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Architecture}{18}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Features}{19}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Recent UI iterations (Summer 2026, chronological)}{19}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Late-Summer 2026 overhaul}{20}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Data flow diagram}{21}{subsection.10.6}%
+\contentsline {section}{\numberline {11}Live corpus --- STOXX Europe 600 pipeline (Summer 2026)}{21}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Motivation}{21}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Daily pipeline (fully automated)}{21}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Retroactive snapshot cleanup and live GAT}{22}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Live corpus --- S\&P 100 (Summer 2026)}{22}{section.12}%
+\contentsline {section}{\numberline {13}Extraction refinement --- three-LLM parity (Summer 2026)}{22}{section.13}%
+\contentsline {section}{\numberline {14}News factor model (Summer 2026)}{23}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Idea}{23}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Method}{24}{subsection.14.2}%
+\contentsline {section}{\numberline {15}VM-to-UI publishing pipeline (Summer 2026)}{24}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Full 15-year corpus run (late Summer 2026)}{24}{subsection.15.1}%
+\contentsline {section}{\numberline {16}Analyst MCP connector (Summer 2026)}{25}{section.16}%
+\contentsline {section}{\numberline {17}Deployment and infrastructure}{26}{section.17}%
+\contentsline {section}{\numberline {18}Team contributions summary}{26}{section.18}%
+\contentsline {section}{\numberline {19}Deliverables}{27}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Fall 2025}{27}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}Spring 2026}{28}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3}Summer 2026}{28}{subsection.19.3}%
+\contentsline {section}{\numberline {20}Future work}{28}{section.20}%
+\contentsline {subsection}{\numberline {20.1}Corpus extension}{28}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}Cross-industry expansion}{28}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Sponsor-facing improvements}{29}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}Model integration}{29}{subsection.20.4}%
+\contentsline {subsection}{\numberline {20.5}Additional event studies}{29}{subsection.20.5}%
+\contentsline {section}{\numberline {A}Metric definitions --- quick reference}{29}{appendix.A}%
+\contentsline {section}{\numberline {B}Software stack --- full list}{30}{appendix.B}%

@@ -731,7 +731,7 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
   \item Goal: put the \emph{entire} FNSPID working corpus (54{,}563 articles, Dec 2009 -- Jan 2024) through the complete three-LLM chain --- extraction, Judge, flagged-triplet refinement --- on the VM's single L4 GPU, at zero API cost, using the benchmark-validated Qwen 2.5 14B for every stage.
   \item \textbf{Chunked parallel lanes.} The corpus is split into date chunks (e.g.\ 2014--2016, 2022-H1) processed by two independent lanes sharing the GPU via \texttt{OLLAMA\_NUM\_PARALLEL=2}, each in its own working copy of the team pipeline (the per-workdir ontology SQLite store forbids sharing). Per chunk: extract (\(\approx\)9 s/article) \(\to\) slice the self-checkpointing master CSV \(\to\) judge + refine (\(\approx\)25 s/article, the bottleneck) \(\to\) publish to the UI source. Every stage checkpoints per article, so crashes and pauses lose nothing. A third stream judges the previously extracted 2019--2021 slice concurrently rather than serialising it at the end. Lane drivers are in \texttt{scripts/vm/}.
   \item \textbf{Corpus canonicalisation} (\texttt{scripts/canonicalize\_corpus.py}). Cross-chunk entity unification: character n-gram TF-IDF + cosine-radius nearest neighbours + union--find, merging only same-type entities that share an anchor word, with a numeric-literal guard (so ``10 nm'' never merges into ``7 nm''); relation consolidation by fuzzy match; frequency filtering. Two grades: UI grade (min-freq 2) for the browsable graph, and \texttt{--strict} (min-freq 5, judge-gated rows only) for GAT input.
-  \item \textbf{Corpus finalisation.} Once judged, the corpus is finalised in one chain: canonicalise \(\to\) republish the browsable graph \(\to\) strict GAT input \(\to\) single-configuration CE No-Edge-Feats rolling-window training \(\to\) predictions, with the Predictions tab enabled automatically. The production backtest spans every rolling month of the corpus --- an order of magnitude longer than the 23-month 2019--2020 evaluation, and correspondingly harder.
+  \item \textbf{Corpus finalisation.} Once judged, the corpus is finalised in one chain: canonicalise \(\to\) republish the browsable graph \(\to\) strict GAT input \(\to\) single-configuration CE No-Edge-Feats rolling-window training \(\to\) predictions, with the Predictions tab enabled automatically. The production backtest spans every rolling month of the corpus: \textbf{MRR 0.631, Hits@1 0.512, Hits@3 0.685, Hits@10 0.888 over 168 validation months} (2010-02 to 2024-01), ranking against \(\approx\)466 candidate entities per query (random \(\approx\)0.013) --- an evaluation seven times longer and an order of magnitude harder than the 23-month, \(\approx\)50-candidate 2019--2020 studies. Unseen-entity MRR of 0.681 confirms the inductive generalisation Fall 2025 designed for.
   \item Training uses \texttt{scripts/run\_gat\_single.py}, which imports the team's \texttt{run\_experiment\_case} unchanged but trains only the winning configuration (the stock sweep trains all ten --- a 10\(\times\) saving in production).
   \item Chunk-level progress publishes incrementally, so the public graph grew from 60 to 100+ browsable months over the run's lifetime rather than appearing all at once.
 \end{itemize}
@@ -793,7 +793,7 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
     \item Interactive web application (Next.js + Cytoscape) and Vercel deployment
     \item FinDKG-style predictions leaderboard
     \item GAT retraining with fixed rolling window (MRR 0.7746)
-    \item Full 15-year FNSPID corpus through the three-LLM chain on the GPU VM at \$0 API cost, with rolling-window GAT predictions served
+    \item Full 15-year FNSPID corpus through the three-LLM chain on the GPU VM at \$0 API cost; GAT predictions over 168 backtest months (MRR 0.631)
     \item Corpus canonicalisation + strict GAT-input pipeline
     \item Live corpora (STOXX Europe 600, full S\&P 100) with news factor model and monthly GAT retrain, on a daily VM cron
     \item Analyst MCP connector over the deployed corpus
@@ -829,7 +829,7 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
   \item Multi-LLM benchmark: 4-model comparison + Judge LLM stats.
   \item Retrained GAT: 230 checkpoints + leaderboard CSV.
   \item Full-corpus VM run: judged + refined + canonicalised FNSPID chunks, master extraction CSVs, canonical UI corpus, strict GAT input.
-  \item Predictions JSON: 23 monthly leaderboards (2019--2020 corpus) + 83 monthly leaderboards (2009--2016 corpus, MRR 0.654) + live STOXX leaderboards (MRR 0.905).
+  \item Predictions JSON: 168 monthly leaderboards for the full corpus (2010-02 to 2024-01, MRR 0.631, Hits@1 0.512, Hits@3 0.685, Hits@10 0.888, \(\approx\)466 candidates per query), 23 for the GPT-5.5 refined corpus (MRR 0.863), and live STOXX leaderboards.
   \item Live corpora: STOXX Europe 600 and full S\&P 100, daily VM cron, factor bundles + raw triplet provenance.
   \item Analyst MCP endpoint (\texttt{/api/mcp}) + \texttt{docs/MCP\_CONNECTOR.md}.
   \item Ruiwen's GPT-5.5 judge/refinement bundle (V7) for the paid-frontier comparison.
