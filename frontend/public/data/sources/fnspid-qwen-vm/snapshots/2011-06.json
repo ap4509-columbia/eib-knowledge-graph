@@ -42,14 +42,14 @@
       "y": 367.8346922634998
     },
     {
-      "id": "Unusual Call Options Activity",
+      "id": "Unusual Options Activity",
       "type": "CONCEPT",
       "degree": 1,
       "x": -295.7379800833594,
       "y": 517.2564636133498
     },
     {
-      "id": "Put Option Volume",
+      "id": "Option Volume",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
       "x": -37.96511354979623,
@@ -90,9 +90,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "TSM||Shows||Unusual Call Options Activity",
+      "id": "TSM||Shows||Unusual Options Activity",
       "source": "TSM",
-      "target": "Unusual Call Options Activity",
+      "target": "Unusual Options Activity",
       "rel": "Shows",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -106,8 +106,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Put Option Volume||Is Above Average For||TSM",
-      "source": "Put Option Volume",
+      "id": "Option Volume||Is Above Average For||TSM",
+      "source": "Option Volume",
       "target": "TSM",
       "rel": "Is Above Average For",
       "rel_cat": "SSI",

@@ -28,7 +28,7 @@
       "y": 420.50426130740175
     },
     {
-      "id": "LONG Position",
+      "id": "Long Positions",
       "type": "CONCEPT",
       "degree": 1,
       "x": -754.4489609297843,
@@ -119,7 +119,7 @@
       "y": -779.4995880657567
     },
     {
-      "id": "Analog Devices Inc",
+      "id": "Analog Devices",
       "type": "COMPANY",
       "degree": 1,
       "x": -184.83036242567923,
@@ -161,7 +161,7 @@
       "y": 692.9601657496585
     },
     {
-      "id": "VMware Inc",
+      "id": "VMware",
       "type": "COMPANY",
       "degree": 1,
       "x": 148.16764841580732,
@@ -301,7 +301,7 @@
       "y": 441.3265500185516
     },
     {
-      "id": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "id": "Taiwan Semiconductor Manufacturing",
       "type": "COMPANY",
       "degree": 2,
       "x": 364.4503339619468,
@@ -396,9 +396,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Investor||Hedges||LONG Position",
+      "id": "Investor||Hedges||Long Positions",
       "source": "Investor",
-      "target": "LONG Position",
+      "target": "Long Positions",
       "rel": "Hedges",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -556,9 +556,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Shares||Increase In Price Due To||Analog Devices Inc",
+      "id": "Shares||Increase In Price Due To||Analog Devices",
       "source": "Shares",
-      "target": "Analog Devices Inc",
+      "target": "Analog Devices",
       "rel": "Increase In Price Due To",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -636,8 +636,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "VMware Inc||Reports||Earnings",
-      "source": "VMware Inc",
+      "id": "VMware||Reports||Earnings",
+      "source": "VMware",
       "target": "Earnings",
       "rel": "Reports",
       "rel_cat": "SSI",
@@ -940,9 +940,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analysts||Expects||Taiwan Semiconductor Manufacturing Company Ltd",
+      "id": "Analysts||Expects||Taiwan Semiconductor Manufacturing",
       "source": "Analysts",
-      "target": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "target": "Taiwan Semiconductor Manufacturing",
       "rel": "Expects",
       "rel_cat": "GMM",
       "causal_type": "OTHER",
@@ -956,8 +956,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Taiwan Semiconductor Manufacturing Company Ltd||Increases||Proposed Spending",
-      "source": "Taiwan Semiconductor Manufacturing Company Ltd",
+      "id": "Taiwan Semiconductor Manufacturing||Increases||Proposed Spending",
+      "source": "Taiwan Semiconductor Manufacturing",
       "target": "Proposed Spending",
       "rel": "Increases",
       "rel_cat": "SSI",

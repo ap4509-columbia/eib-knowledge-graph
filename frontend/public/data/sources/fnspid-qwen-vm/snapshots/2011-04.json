@@ -287,7 +287,7 @@
       "y": -819.6281528418436
     },
     {
-      "id": "Analog Devices Inc",
+      "id": "Analog Devices",
       "type": "COMPANY",
       "degree": 1,
       "x": 56.978868478396144,
@@ -309,7 +309,7 @@
     },
     {
       "id": "149",
-      "type": "ECONINDICATOR",
+      "type": "CONCEPT",
       "degree": 1,
       "x": 664.017589288545,
       "y": 552.1820201307052
@@ -1021,8 +1021,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices Inc||Has Exposure To||Japan Market",
-      "source": "Analog Devices Inc",
+      "id": "Analog Devices||Has Exposure To||Japan Market",
+      "source": "Analog Devices",
       "target": "Japan Market",
       "rel": "Has Exposure To",
       "rel_cat": "SSI",
@@ -1053,12 +1053,12 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Texas Instruments Incorporated||Posts Lower Than Expected||First Quarter Earnings",
+      "id": "Texas Instruments Incorporated||Reports Lower Than Expected||First Quarter Earnings",
       "source": "Texas Instruments Incorporated",
       "target": "First Quarter Earnings",
-      "rel": "Posts Lower Than Expected",
+      "rel": "Reports Lower Than Expected",
       "rel_cat": "SSI",
-      "causal_type": "OTHER",
+      "causal_type": "FINANCIAL_METRIC",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,

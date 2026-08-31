@@ -1,8 +1,8 @@
 {
   "month": "2011-09",
   "stats": {
-    "nodes": 17,
-    "edges": 13,
+    "nodes": 21,
+    "edges": 16,
     "scored_edges": 0
   },
   "nodes": [
@@ -10,120 +10,148 @@
       "id": "JMP Securities",
       "type": "FINANCIALENTITY",
       "degree": 1,
-      "x": 272.9816829142675,
-      "y": -35.11343637450184
+      "x": 146.58034422858506,
+      "y": 117.19610017364947
     },
     {
       "id": "Texas Instruments Incorporated",
       "type": "COMPANY",
-      "degree": 3,
-      "x": 205.54200429973963,
-      "y": -57.63017825504504
+      "degree": 4,
+      "x": 76.51016503281419,
+      "y": 106.02612666941992
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -486.8688074381269,
-      "y": 225.59648472448805
+      "x": -405.91197214377183,
+      "y": 405.8253233283538
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": -596.6187408008296,
-      "y": 300.0612817906725
+      "x": -527.7016732818199,
+      "y": 496.8892038485773
     },
     {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 1,
-      "x": -278.40753584002186,
-      "y": 488.30802368232804
+      "x": -130.6104679199961,
+      "y": 678.0290688340568
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": -368.21431901515894,
-      "y": 622.9301963435977
+      "x": -180.08773654031725,
+      "y": 805.1235636184942
+    },
+    {
+      "id": "Group of Seven Summit",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -301.76718180769944,
+      "y": -403.92045948901256
+    },
+    {
+      "id": "Market Sentiment",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -393.9705189593016,
+      "y": -482.8983386624276
     },
     {
       "id": "Earnings Outlook",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 900.0,
-      "y": -338.4449138309751
+      "x": -258.84108685110124,
+      "y": 602.6231013822887
+    },
+    {
+      "id": "Slowdown",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 659.7008455093785,
+      "y": -466.06383995004086
     },
     {
       "id": "QUALCOMM Incorporated",
       "type": "COMPANY",
       "degree": 3,
-      "x": 485.1551918282579,
-      "y": -245.90619875248095
+      "x": -214.6501442018059,
+      "y": -498.5222534180366
     },
     {
       "id": "Battery Life",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 550.4046482994039,
-      "y": 349.43740980944847
+      "x": -529.718699822342,
+      "y": -228.09294988568143
     },
     {
       "id": "Microsoft",
       "type": "COMPANY",
       "degree": 1,
-      "x": 537.7292187058426,
-      "y": -308.85786386570095
+      "x": -138.62136324585083,
+      "y": -435.1956333505324
     },
     {
-      "id": "Analog Devices Inc",
+      "id": "Analog Devices",
       "type": "COMPANY",
-      "degree": 1,
-      "x": -340.19177494996393,
-      "y": -556.6785892330206
+      "degree": 2,
+      "x": 666.7465606855599,
+      "y": -336.3344685897022
     },
     {
       "id": "Research And Development",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -427.69611259322016,
-      "y": -554.9020640931403
+      "x": 533.7795770058078,
+      "y": -700.5176683182866
+    },
+    {
+      "id": "Margin Performance",
+      "type": "ECONINDICATOR",
+      "degree": 1,
+      "x": 880.8089195835753,
+      "y": -16.25553714623293
     },
     {
       "id": "General Motors",
       "type": "COMPANY",
       "degree": 2,
-      "x": -534.8382924758755,
-      "y": 14.303029851872969
+      "x": 187.26026031173652,
+      "y": 485.13520854645435
     },
     {
       "id": "IPO",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -555.9053299131572,
-      "y": -272.62095142450215
+      "x": 900.0,
+      "y": 471.3404602301883
     },
     {
-      "id": "Digital Wireless Telecommunications Products and Services",
+      "id": "Wireless Telecommunications Products And Services",
       "type": "PRODUCT",
       "degree": 1,
-      "x": 420.33794409752403,
-      "y": -842.2615355073419
+      "x": 102.97825056782274,
+      "y": -760.1953398558851
     },
     {
       "id": "Investors",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 90.44085498104837,
-      "y": 493.0266331847763
+      "x": -455.9871932547832,
+      "y": 76.01489176827045
     },
     {
       "id": "Return On Equity",
       "type": "ECONINDICATOR",
       "degree": 1,
-      "x": 126.14936790027049,
-      "y": 718.752671949525
+      "x": -616.4968848964907,
+      "y": 83.79344026608442
     }
   ],
   "edges": [
@@ -192,12 +220,44 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Group of Seven Summit||Weighs On||Market Sentiment",
+      "source": "Group of Seven Summit",
+      "target": "Market Sentiment",
+      "rel": "Weighs On",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Texas Instruments Incorporated||Cuts Guidance||Earnings Outlook",
       "source": "Texas Instruments Incorporated",
       "target": "Earnings Outlook",
       "rel": "Cuts Guidance",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Texas Instruments Incorporated||Experiences||Slowdown",
+      "source": "Texas Instruments Incorporated",
+      "target": "Slowdown",
+      "rel": "Experiences",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
       "polarity": "neutral",
       "origin": "news",
       "weight": 1,
@@ -256,10 +316,26 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Analog Devices Inc||Invests In||Research And Development",
-      "source": "Analog Devices Inc",
+      "id": "Analog Devices||Invests In||Research And Development",
+      "source": "Analog Devices",
       "target": "Research And Development",
       "rel": "Invests In",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Analog Devices||Improves||Margin Performance",
+      "source": "Analog Devices",
+      "target": "Margin Performance",
+      "rel": "Improves",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
       "polarity": "neutral",
@@ -304,9 +380,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "QUALCOMM Incorporated||Develops||Digital Wireless Telecommunications Products and Services",
+      "id": "QUALCOMM Incorporated||Develops||Wireless Telecommunications Products And Services",
       "source": "QUALCOMM Incorporated",
-      "target": "Digital Wireless Telecommunications Products and Services",
+      "target": "Wireless Telecommunications Products And Services",
       "rel": "Develops",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",

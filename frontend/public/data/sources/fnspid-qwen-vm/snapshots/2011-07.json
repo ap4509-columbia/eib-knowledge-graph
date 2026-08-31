@@ -1,241 +1,278 @@
 {
   "month": "2011-07",
   "stats": {
-    "nodes": 32,
-    "edges": 27,
+    "nodes": 35,
+    "edges": 29,
     "scored_edges": 0
   },
   "nodes": [
     {
+      "id": "Traditional CPI Calculation",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 607.6933201552421,
+      "y": -29.72219710633597
+    },
+    {
+      "id": "CPI",
+      "type": "MACROINDICATOR",
+      "degree": 1,
+      "x": 712.7809353382977,
+      "y": -30.38948868386028
+    },
+    {
       "id": "Texas Instruments",
       "type": "COMPANY",
       "degree": 2,
-      "x": 158.2304188300109,
-      "y": 193.95248110966176
+      "x": -449.6059327062396,
+      "y": -23.76742521579376
     },
     {
-      "id": "Analog Devices Inc",
+      "id": "Analog Devices",
       "type": "COMPANY",
       "degree": 1,
-      "x": 405.0952927641078,
-      "y": 479.5520759218795
+      "x": -878.0160856383908,
+      "y": -4.759570970506348
     },
     {
       "id": "Qualcomm",
       "type": "COMPANY",
       "degree": 10,
-      "x": -84.40926598031011,
-      "y": -96.08786720010846
+      "x": -20.715896851995865,
+      "y": -42.91273001516082
     },
     {
       "id": "Taiwan Semiconductor",
       "type": "COMPANY",
       "degree": 2,
-      "x": -430.08447237758406,
-      "y": 658.1435594998908
+      "x": 10.721998425821262,
+      "y": -634.7615342018229
     },
     {
-      "id": "Put Option Volume",
+      "id": "Option Volume",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -143.54320052654174,
-      "y": 702.0873230055498
+      "x": 495.57357176263,
+      "y": -714.9687807135541
     },
     {
       "id": "Stock Price",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -719.1396738768492,
-      "y": 621.1012816577293
+      "x": -448.5946996035491,
+      "y": -828.0339776416909
     },
     {
       "id": "Earnings Estimates",
       "type": "CONCEPT",
       "degree": 2,
-      "x": 434.8644632906401,
-      "y": -475.47864245721547
+      "x": -695.4325075716949,
+      "y": -395.10715775754124
     },
     {
       "id": "Analysts",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 335.6533935157007,
-      "y": -378.6240799948928
+      "x": -599.5976124477214,
+      "y": -354.73224482190443
     },
     {
       "id": "Market Share",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -743.5052083874496,
-      "y": 374.6344519603184
+      "x": 13.370948105120778,
+      "y": -900.0
     },
     {
       "id": "Dividend Yield",
       "type": "FININSTRUMENTINFO",
       "degree": 2,
-      "x": 142.326078997687,
-      "y": -534.9076963348042
+      "x": 522.0107827213741,
+      "y": 159.0594026844033
     },
     {
       "id": "Nvidia",
       "type": "COMPANY",
       "degree": 1,
-      "x": -38.9892935392619,
-      "y": -693.4943408229711
+      "x": 170.9108448629663,
+      "y": 624.1617391809224
     },
     {
       "id": "Increasing Competition",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -140.1017099146181,
-      "y": -100.66859961032355
+      "x": -56.11313568593562,
+      "y": -7.5477514900734635
     },
     {
       "id": "Profits",
       "type": "ECONINDICATOR",
       "degree": 3,
-      "x": -544.6246694901232,
-      "y": -280.74561048729555
+      "x": -241.9143325911798,
+      "y": -202.18345945287626
     },
     {
       "id": "35",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -855.1548180335467,
-      "y": 155.04176642445788
+      "x": 260.51890334127324,
+      "y": -814.7340394010893
     },
     {
       "id": "Analyst Estimates",
       "type": "CONCEPT",
       "degree": 1,
-      "x": -234.23877366269917,
-      "y": -716.1324394155574
+      "x": -742.8789688108455,
+      "y": 410.91313297122
     },
     {
       "id": "150",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 171.44004787473375,
-      "y": -604.9774674403792
+      "x": 728.7259344372458,
+      "y": 246.37110996006817
+    },
+    {
+      "id": "Greek Debt",
+      "type": "MACRO_INDICATOR",
+      "degree": 2,
+      "x": 579.4358228272836,
+      "y": -273.97278377391143
+    },
+    {
+      "id": "Asian Stock Markets",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 677.4094605045577,
+      "y": -300.0094856651012
     },
     {
       "id": "Moody's",
       "type": "FINANCIAL_ENTITY",
       "degree": 1,
-      "x": 307.5246538135709,
-      "y": 451.85860225733177
-    },
-    {
-      "id": "Greek Debt",
-      "type": "MACRO_INDICATOR",
-      "degree": 1,
-      "x": 422.38031458239516,
-      "y": 581.9222592326621
+      "x": 416.09150022576796,
+      "y": -252.67771979874277
     },
     {
       "id": "Shanghai Composite",
-      "type": "STOCK_TICKER",
+      "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 438.46623425015866,
-      "y": 48.186631061023974
+      "x": -141.01073079818298,
+      "y": 645.8772917256844
     },
     {
       "id": "Greek Debt Downgrade",
       "type": "MACRO_INDICATOR",
       "degree": 4,
-      "x": 550.1911693434799,
-      "y": 134.56251864902669
+      "x": -78.35580017479938,
+      "y": 633.3732040181741
     },
     {
       "id": "Kospi",
       "type": "STOCK_TICKER",
       "degree": 1,
-      "x": 405.92411761622645,
-      "y": 95.70275437993253
+      "x": -121.59447872691536,
+      "y": 553.0144140483028
     },
     {
       "id": "Nikkei",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": 373.0364468334613,
-      "y": 104.37629378752185
+      "x": -102.09597648126345,
+      "y": 486.34659390504476
     },
     {
       "id": "Hang Seng",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": 439.3424577772039,
-      "y": 142.9084734389006
+      "x": -46.03459999046544,
+      "y": 579.6760968230421
     },
     {
       "id": "Revenue",
       "type": "ECONINDICATOR",
       "degree": 2,
-      "x": 448.0430084556035,
-      "y": 71.91903817653171
+      "x": 581.6608578703213,
+      "y": 490.63152555932317
     },
     {
       "id": "Higher Average Selling Prices",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": -443.0117575503516,
-      "y": -599.4439737605367
+      "x": 350.23108974306666,
+      "y": 607.767221101511
     },
     {
       "id": "Smartphone Demand",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 500.01207121968514,
-      "y": 30.39067386157389
+      "x": 348.69321369263474,
+      "y": 279.0823601762818
     },
     {
       "id": "Average Selling Prices",
       "type": "FININSTRUMENTINFO",
       "degree": 1,
-      "x": 156.81207276786537,
-      "y": 750.8780998729734
+      "x": -764.1757565284438,
+      "y": -542.9616766424136
     },
     {
       "id": "HSBC PMI",
       "type": "MACRO_INDICATOR",
       "degree": 2,
-      "x": -661.2095994837097,
-      "y": -196.68400498887522
+      "x": -62.24482244318898,
+      "y": -200.512634629583
     },
     {
       "id": "489",
       "type": "FIN_INSTRUMENT_INFO",
       "degree": 1,
-      "x": -779.0643735733499,
-      "y": -422.22247458700923
+      "x": 626.3156969263475,
+      "y": -512.0510683900957
     },
     {
-      "id": "Communication Equipment Industry",
+      "id": "Communications Equipment Industry",
       "type": "SECTOR",
       "degree": 1,
-      "x": -900.0,
-      "y": -115.50744461489803
+      "x": -751.3702368125864,
+      "y": 113.47142226860407
     },
     {
       "id": "Governmental Policies",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 461.3087766833586,
-      "y": -175.18897005130134
+      "x": -433.02417554281084,
+      "y": 579.4137885465509
     },
     {
       "id": "Overinvestment",
       "type": "CONCEPT",
       "degree": 1,
-      "x": 566.4257977805067,
-      "y": -207.05467253079763
+      "x": -469.3691315337403,
+      "y": 656.6464234029233
     }
   ],
   "edges": [
     {
-      "id": "Texas Instruments||Competes With||Analog Devices Inc",
+      "id": "Traditional CPI Calculation||Skepticism Towards||CPI",
+      "source": "Traditional CPI Calculation",
+      "target": "CPI",
+      "rel": "Skepticism Towards",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Texas Instruments||Competes With||Analog Devices",
       "source": "Texas Instruments",
-      "target": "Analog Devices Inc",
+      "target": "Analog Devices",
       "rel": "Competes With",
       "rel_cat": "SSI",
       "causal_type": "COMPETITIVE",
@@ -265,9 +302,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Taiwan Semiconductor||Has||Put Option Volume",
+      "id": "Taiwan Semiconductor||Has||Option Volume",
       "source": "Taiwan Semiconductor",
-      "target": "Put Option Volume",
+      "target": "Option Volume",
       "rel": "Has",
       "rel_cat": "FININSTRUMENTINFO",
       "causal_type": "OTHER",
@@ -473,6 +510,22 @@
       "event_type": "OTHER"
     },
     {
+      "id": "Greek Debt||Downgrades Impact||Asian Stock Markets",
+      "source": "Greek Debt",
+      "target": "Asian Stock Markets",
+      "rel": "Downgrades Impact",
+      "rel_cat": "GMM",
+      "causal_type": "CAUSAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
       "id": "Moody's||Issues Downgrade To Ca||Greek Debt",
       "source": "Moody's",
       "target": "Greek Debt",
@@ -633,9 +686,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "HSBC PMI||Impacts||Communication Equipment Industry",
+      "id": "HSBC PMI||Impacts||Communications Equipment Industry",
       "source": "HSBC PMI",
-      "target": "Communication Equipment Industry",
+      "target": "Communications Equipment Industry",
       "rel": "Impacts",
       "rel_cat": "SSI",
       "causal_type": "CAUSAL",

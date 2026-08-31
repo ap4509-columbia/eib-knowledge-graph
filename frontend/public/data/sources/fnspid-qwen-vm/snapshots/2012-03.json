@@ -43,7 +43,7 @@
     },
     {
       "id": "161",
-      "type": "ECONINDICATOR",
+      "type": "CONCEPT",
       "degree": 1,
       "x": -343.7073149325655,
       "y": 831.1139097754202
@@ -238,7 +238,7 @@
       "y": -63.92748086728565
     },
     {
-      "id": "AT&T",
+      "id": "AT&T Inc",
       "type": "COMPANY",
       "degree": 1,
       "x": -677.59578865905,
@@ -274,7 +274,7 @@
     },
     {
       "id": "None",
-      "type": "NONE",
+      "type": "None",
       "degree": 1,
       "x": 552.9937445202502,
       "y": -679.4816824481575
@@ -308,7 +308,7 @@
       "y": 568.1271574751111
     },
     {
-      "id": "Licensing Agreements",
+      "id": "Licensing Agreement",
       "type": "CONCEPT",
       "degree": 1,
       "x": 461.6275541285818,
@@ -844,8 +844,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "AT&T||Provides Services To||Apple Inc.",
-      "source": "AT&T",
+      "id": "AT&T Inc||Provides Services To||Apple Inc.",
+      "source": "AT&T Inc",
       "target": "Apple Inc.",
       "rel": "Provides Services To",
       "rel_cat": "GFMK",
@@ -972,9 +972,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Samsung||Has||Licensing Agreements",
+      "id": "Samsung||Has||Licensing Agreement",
       "source": "Samsung",
-      "target": "Licensing Agreements",
+      "target": "Licensing Agreement",
       "rel": "Has",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
