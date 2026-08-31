@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 38,
-    "edges": 29,
+    "nodes": 40,
+    "edges": 30,
     "scored_edges": 0
   },
   "nodes": [
@@ -271,6 +271,20 @@
       "degree": 1,
       "x": 300.29705843406975,
       "y": -427.0024052538452
+    },
+    {
+      "id": "STMicroelectronics",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 0.21646280918210573,
+      "y": 0.13152129826633455
+    },
+    {
+      "id": "Data Center Revenue",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -900.0,
+      "y": -564.3856739233361
     }
   ],
   "edges": [
@@ -737,6 +751,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "STMicroelectronics||Doubles Revenue Target For||Data Center Revenue",
+      "source": "STMicroelectronics",
+      "target": "Data Center Revenue",
+      "rel": "Doubles Revenue Target For",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
     }
   ]
 }
