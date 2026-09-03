@@ -9,7 +9,7 @@ import {
   CAUSAL_TYPE_COLORS,
   CAUSAL_TYPE_LABELS,
   ENTITY_COLORS,
-  ENTITY_LABELS,
+  entityLabel,
 } from "@/components/graphStyles";
 import type { Snapshot } from "@/lib/api/types";
 
@@ -179,7 +179,7 @@ export function FilterRail(props: FilterRailProps) {
             {typesShown.map(([type, count]) => {
               const checked = visibleTypes.has(type);
               const color = ENTITY_COLORS[type] ?? "#71717a";
-              const label = ENTITY_LABELS[type] ?? type;
+              const label = entityLabel(type);
               return (
                 <label
                   key={type}

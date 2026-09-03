@@ -59,8 +59,24 @@ export const ENTITY_LABELS: Record<string, string> = {
   COUNTRY: "Country",
   LOCATION: "Location",
   INSTITUTION: "Institution",
+  EXECUTIVE: "Executive",
+  ORGANIZATION: "Organization",
+  REGULATOR: "Regulator",
+  COMMODITY: "Commodity",
+  INDEX: "Index",
   UNK: "Unclassified",
 };
+
+// Label lookup with a readable fallback: unknown types arrive as raw
+// uppercase ("SUPPLYCHAIN"), which we title-case instead of shouting.
+export function entityLabel(type: string): string {
+  const known = ENTITY_LABELS[type];
+  if (known) return known;
+  return type
+    .replace(/[_\s]+/g, " ")
+    .toLowerCase()
+    .replace(/^./, (c) => c.toUpperCase());
+}
 
 // Causal-type palette (colorblind-safe, adapted from Okabe-Ito).
 // One color per relationship family so analysts can read the graph by

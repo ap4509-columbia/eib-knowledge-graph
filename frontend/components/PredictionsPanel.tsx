@@ -29,7 +29,7 @@ import type {
   PredictionsFile,
   PredictionsVariantMeta,
 } from "@/lib/api/types";
-import { ENTITY_COLORS, ENTITY_LABELS } from "@/components/graphStyles";
+import { ENTITY_COLORS, entityLabel } from "@/components/graphStyles";
 
 interface PredictionsViewProps {
   /** Which corpus the predictions come from. Fetched per-source. */
@@ -121,7 +121,7 @@ function ActivityCell({ z }: { z: number }) {
 
 function EntityChip({ name, type }: { name: string; type: string }) {
   const color = ENTITY_COLORS[type] ?? "#9ca3af";
-  const label = ENTITY_LABELS[type] ?? type;
+  const label = entityLabel(type);
   return (
     <span
       className="inline-flex items-center gap-1.5 rounded border border-border/70 bg-background px-1.5 py-0.5 text-[10px] text-foreground/80"
@@ -150,7 +150,7 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
       <div className="truncate font-medium text-foreground">{entry.entity}</div>
       <div>
         <EntityChip
-          name={ENTITY_LABELS[entry.entity_type] ?? entry.entity_type}
+          name={entityLabel(entry.entity_type)}
           type={entry.entity_type}
         />
       </div>
@@ -176,18 +176,34 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
  *  and how each column is derived. Collapses on click; the choice is
  *  remembered per browser via localStorage so returning users aren't
  *  re-lectured. */
+// Per-variant plain-English explanations for the "How to read this table"
+// block, keyed by variant id. Falls back to the variant's own note for ids
+// not listed here, so newly registered variants still get a line.
+const VARIANT_EXPLAINERS: Record<string, string> = {
+  gat_edge:
+    "the baseline. A graph attention encoder: each entity weighs its neighbors by learned attention, and also reads each connection's relation, category, and strength.",
+  gat_noedge:
+    "the same attention encoder, but shown only the bare graph topology with no edge labels. Comparing it to the baseline isolates how much the edge features contribute.",
+  sage:
+    "a mean-aggregation encoder: each entity averages its neighbors' signatures instead of weighing them by attention. This revisits the Spring 2025 team's architecture comparison.",
+  gat_causal:
+    "the baseline encoder, but each entity's inputs gain 5 extra features read off a causal graph learned with NOTEARS from daily co-occurrence patterns (the Spring 2026 team's method).",
+};
+
 function AboutSection({
   mrr,
   hits1,
   hits3,
   hits10,
   months,
+  variants,
 }: {
   mrr?: number;
   hits1?: number | null;
   hits3?: number | null;
   hits10?: number | null;
   months?: number;
+  variants?: PredictionsVariantMeta[] | null;
 }) {
   // Default to COLLAPSED so the table (below) always has room. Users can
   // toggle to expand; choice is remembered per browser via localStorage.
@@ -259,14 +275,44 @@ function AboutSection({
               What is the model?
             </div>
             <div>
-              A Graph Attention Network (GAT) — a neural network trained on
-              graphs. It reads the network of entities and their news-derived
-              connections, and for each entity learns a numeric signature
-              that captures who it tends to appear with. Two entities with
-              similar signatures are ones the model treats as belonging
-              together, even if they haven't been directly linked yet.
+              Two parts working together. An{" "}
+              <span className="text-foreground">encoder</span> (a graph
+              neural network such as GAT or GraphSAGE) reads the network of
+              entities and their news-derived connections, and for each
+              entity produces a numeric signature — an embedding — that
+              captures who it tends to appear with. A shared{" "}
+              <span className="text-foreground">link-prediction model</span>{" "}
+              then scores pairs of those embeddings: two entities whose
+              signatures score highly are ones the system expects to appear
+              together, even if they haven't been directly linked yet. The
+              embeddings alone predict nothing; the prediction head alone
+              has nothing to score — the forecasts come from the pair.
             </div>
           </div>
+
+          {variants && variants.length > 1 && (
+            <div>
+              <div className="mb-1 font-medium text-foreground">
+                The model variants (the Model toggle above)
+              </div>
+              <div className="mb-1">
+                Every variant shares the identical link-prediction model and
+                training recipe — the only thing swapped is the encoder that
+                produces the embeddings, so the comparison table measures
+                the encoders head-to-head:
+              </div>
+              <ul className="ml-4 list-disc space-y-0.5">
+                {variants.map((v) => (
+                  <li key={v.id}>
+                    <span className="font-medium text-foreground">
+                      {v.label}
+                    </span>{" "}
+                    — {VARIANT_EXPLAINERS[v.id] ?? v.note ?? ""}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div>
             <div className="mb-1 font-medium text-foreground">
@@ -626,6 +672,7 @@ export function PredictionsView({
         hits3={data?.hits3}
         hits10={data?.hits10}
         months={data ? Object.keys(data.periods).length : undefined}
+        variants={variants}
       />
 
       {error && (

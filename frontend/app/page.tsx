@@ -58,7 +58,9 @@ function currentMonthYYYYMM(): string {
 // on first look, so we ship them hidden by default. Toggleable via the rail.
 const DEFAULT_HIDDEN_TYPES = new Set(["FININSTRUMENTINFO", "FIN_INSTRUMENT_INFO"]);
 
-const ACTIVE_SOURCE_STORAGE_KEY = "eibkg.activeSource";
+// v2: reset stored selections so every visitor lands on the catalogue
+// default (the GPT-5.5 refined corpus) once after the source reorder.
+const ACTIVE_SOURCE_STORAGE_KEY = "eibkg.activeSource.v2";
 
 export default function Home() {
   // Data

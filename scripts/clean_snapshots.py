@@ -64,18 +64,31 @@ def is_junk(name: str) -> bool:
 # "Apple" vs "Apple Inc." sits below any safe TF-IDF threshold (short name,
 # big relative suffix), so these merge deterministically instead.
 CORP_SUFFIX = re.compile(
-    r"(,?\s+(inc|incorporated|corp|corporation|company|co|ltd|limited|plc"
-    r"|holdings?|group|n\.?v|s\.?a|a\/s|ag|se|shares?|stock"
+    r"(,?\s+(inc|incorporated|corp|corporation|company|co|ltd|limited"
+    r"|p\.?l\.?c|holdings?|group|n\.?v|s\.?a|a\/s|ag|se|shares?|stock"
     r"|[ab]))+\.?$",
     re.I,
 )
+# "Merck & Co.", "JPMorgan Chase & Co." — the ampersand blocks CORP_SUFFIX
+# (which requires the suffix to follow plain whitespace), so it gets its
+# own pass. "Tiffany & Co" the brand loses nothing by keying to "tiffany".
+_AMP_CO = re.compile(r"\s*(?:&|and)\s+co(?:mpany)?\.?$", re.I)
+# "Walt Disney Company (The)" — index-style inverted article.
+_THE_TRAIL = re.compile(r"\s*\(the\)$", re.I)
 
 
 def _suffix_key(name: str) -> str:
-    """Case-folded name with trailing corporate suffixes stripped."""
+    """Case-folded name with trailing corporate suffixes stripped, plus
+    article/punctuation normalization so "Bristol-Myers Squibb" and
+    "Bristol Myers Squibb Co" collapse to one key."""
     n = name.strip().rstrip(".")
+    n = _THE_TRAIL.sub("", n)
+    n = re.sub(r"^the\s+", "", n, flags=re.I)
+    n = _AMP_CO.sub("", n)
     n = CORP_SUFFIX.sub("", n)
-    return n.lower().strip()
+    n = n.lower().strip()
+    n = re.sub(r"[-‐-―]", " ", n)  # hyphens/dashes -> space
+    return re.sub(r"\s+", " ", n)
 
 
 _TICKER_TYPES = {"STOCK_TICKER", "STOCKTICKER", "TICKER", "STOCK TICKER"}
@@ -129,18 +142,40 @@ def build_ticker_alias_map(
 def build_suffix_canonical_map(
     freq: Counter, type_of: dict[str, str]
 ) -> dict[str, str]:
-    """Deterministic merges: same type + same suffix-stripped, case-folded
-    name. Canonical = the most frequent variant. Catches Apple/Apple Inc.
-    and 52-Week High/52-week High without any similarity guesswork."""
-    groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    """Deterministic merges: same suffix-stripped, case-folded name.
+    Canonical = the most frequent variant. Catches Apple/Apple Inc. and
+    52-Week High/52-week High without any similarity guesswork.
+
+    Type guard, relaxed: extractors type the bare name and the suffixed
+    name inconsistently ("Walmart" Company vs "Walmart Inc." ORGANIZATION),
+    so requiring identical types fragments exactly the firms we most want
+    whole. Members whose raw name differs from the key (a suffix, hyphen,
+    or article was normalized away) merge across types — the difference is
+    itself the evidence they're the same firm. Only when every member is
+    the key verbatim (pure case variants of an ambiguous word) do we still
+    split by type."""
+    groups: dict[str, list[str]] = defaultdict(list)
     for name in freq:
         key = _suffix_key(name)
         if len(key) < 3:
             continue  # too short to trust after stripping
-        groups[(key, type_of.get(name, "UNK"))].append(name)
+        groups[key].append(name)
     mapping: dict[str, str] = {}
-    for members in groups.values():
+    for key, members in groups.items():
         if len(members) < 2:
+            continue
+        normalized_away = any(m.strip().lower() != key for m in members)
+        if not normalized_away:
+            by_type: dict[str, list[str]] = defaultdict(list)
+            for m in members:
+                by_type[type_of.get(m, "UNK")].append(m)
+            for ms in by_type.values():
+                if len(ms) < 2:
+                    continue
+                canonical = max(ms, key=lambda m: freq[m])
+                for m in ms:
+                    if m != canonical:
+                        mapping[m] = canonical
             continue
         canonical = max(members, key=lambda m: freq[m])
         for m in members:
