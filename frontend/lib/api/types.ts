@@ -155,6 +155,30 @@ export interface PredictionsFile {
   periods: Record<string, PredictionPeriod>;
 }
 
+/** One trained model variant for a source's Predictions tab. A source
+ *  with a predictions_variants.json offers several (e.g. GAT baseline
+ *  vs. causally augmented vs. a different GNN architecture), each with
+ *  its own leaderboard file and backtest metrics so they can be
+ *  compared. Sources without the index have the single default
+ *  predictions.json. */
+export interface PredictionsVariantMeta {
+  id: string;
+  label: string;
+  /** Filename under the source dir, e.g. "predictions_causal.json". */
+  file: string;
+  mrr: number;
+  hits1?: number | null;
+  hits3?: number | null;
+  hits10?: number | null;
+  months?: number;
+  /** One-line description shown in the comparison table tooltip. */
+  note?: string;
+}
+
+export interface PredictionsVariantsFile {
+  variants: PredictionsVariantMeta[];
+}
+
 // ── Factor-model bundle (Factor Analysis tab) ──────────────────────────────
 // Produced by scraper/factors.py + scraper/run_daily_factors.py — one file
 // per day per corpus at sources/<id>/factors/<YYYY-MM-DD>.json, plus a

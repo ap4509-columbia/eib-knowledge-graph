@@ -14,6 +14,8 @@ import type {
   FactorsFile,
   Index,
   PredictionsFile,
+  PredictionsVariantMeta,
+  PredictionsVariantsFile,
   Snapshot,
   SourcesFile,
 } from "./types";
@@ -100,16 +102,31 @@ export async function fetchSnapshot(
 }
 
 export async function fetchPredictions(
-  sourceId: string
+  sourceId: string,
+  file: string = "predictions.json"
 ): Promise<PredictionsFile> {
-  const cached = PREDICTIONS_CACHE.get(sourceId);
+  const key = `${sourceId}:${file}`;
+  const cached = PREDICTIONS_CACHE.get(key);
   if (cached) return cached;
-  const res = await fetch(`${sourceBase(sourceId)}/predictions.json`, {
+  const res = await fetch(`${sourceBase(sourceId)}/${file}`, {
     cache: "no-store",
   });
   const data = await jsonOrThrow<PredictionsFile>(res);
-  PREDICTIONS_CACHE.set(sourceId, data);
+  PREDICTIONS_CACHE.set(key, data);
   return data;
+}
+
+/** Model-variant index for the Predictions tab. Missing file (the
+ *  common single-model case) resolves to null rather than an error. */
+export async function fetchPredictionsVariants(
+  sourceId: string
+): Promise<PredictionsVariantMeta[] | null> {
+  const res = await fetch(`${sourceBase(sourceId)}/predictions_variants.json`, {
+    cache: "no-store",
+  });
+  if (res.status === 404) return null;
+  const data = await jsonOrThrow<PredictionsVariantsFile>(res);
+  return data.variants?.length ? data.variants : null;
 }
 
 // Factor-model bundle. factors/latest.json holds the most recent daily

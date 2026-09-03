@@ -22,11 +22,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, ChevronRight, Info, Loader2 } from "lucide-react";
 
-import { fetchPredictions } from "@/lib/api/client";
+import { fetchPredictions, fetchPredictionsVariants } from "@/lib/api/client";
 import type {
   PredictionEntry,
   PredictionPeriod,
   PredictionsFile,
+  PredictionsVariantMeta,
 } from "@/lib/api/types";
 import { ENTITY_COLORS, ENTITY_LABELS } from "@/components/graphStyles";
 
@@ -412,15 +413,38 @@ export function PredictionsView({
 }: PredictionsViewProps) {
   const [data, setData] = useState<PredictionsFile | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Model variants (GAT baseline vs. causal-augmented vs. other GNN
+  // configs). Sources without a variants index get the single default.
+  const [variants, setVariants] = useState<PredictionsVariantMeta[] | null>(
+    null
+  );
+  const [variantId, setVariantId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!sourceId) return;
+    setVariants(null);
+    setVariantId(null);
+    fetchPredictionsVariants(sourceId)
+      .then((v) => {
+        setVariants(v);
+        if (v?.length) setVariantId(v[0].id);
+      })
+      .catch(() => setVariants(null));
+  }, [sourceId]);
+
+  const activeVariant = useMemo(
+    () => variants?.find((v) => v.id === variantId) ?? null,
+    [variants, variantId]
+  );
 
   useEffect(() => {
     if (!sourceId) return;
     setData(null);
     setError(null);
-    fetchPredictions(sourceId)
+    fetchPredictions(sourceId, activeVariant?.file ?? "predictions.json")
       .then(setData)
       .catch((e) => setError(e instanceof Error ? e.message : String(e)));
-  }, [sourceId]);
+  }, [sourceId, activeVariant]);
 
   const rawPeriod: PredictionPeriod | null = useMemo(() => {
     if (!data || !monthTo) return null;
@@ -475,6 +499,73 @@ export function PredictionsView({
           center rather than buried in the header. Renders only when the
           selected source ships predictions (this panel only mounts
           then), so historical-only sources never show it. */}
+      {/* Model-variant switcher + metric comparison — only when the
+          source ships more than one trained model. */}
+      {variants && variants.length > 1 && (
+        <div className="shrink-0 border-b border-border/60 px-6 py-2.5">
+          <div className="mb-2 flex flex-wrap items-center gap-1.5">
+            <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+              Model
+            </span>
+            {variants.map((v) => (
+              <button
+                key={v.id}
+                type="button"
+                onClick={() => setVariantId(v.id)}
+                title={v.note}
+                className={
+                  "rounded-md border px-2.5 py-1 text-xs font-medium transition " +
+                  (v.id === variantId
+                    ? "border-foreground/40 bg-foreground/10 text-foreground"
+                    : "border-border bg-muted/40 text-muted-foreground hover:bg-accent hover:text-foreground")
+                }
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[420px] text-left font-mono text-[11px] tabular-nums">
+              <thead>
+                <tr className="text-[9px] uppercase tracking-wider text-muted-foreground">
+                  <th className="py-1 pr-3 font-medium">Variant</th>
+                  <th className="py-1 pr-3 font-medium">MRR</th>
+                  <th className="py-1 pr-3 font-medium">Hits@1</th>
+                  <th className="py-1 pr-3 font-medium">Hits@3</th>
+                  <th className="py-1 pr-3 font-medium">Hits@10</th>
+                  <th className="py-1 font-medium">Months</th>
+                </tr>
+              </thead>
+              <tbody>
+                {variants.map((v) => (
+                  <tr
+                    key={v.id}
+                    className={
+                      v.id === variantId
+                        ? "text-foreground"
+                        : "text-muted-foreground"
+                    }
+                  >
+                    <td className="py-0.5 pr-3">{v.label}</td>
+                    <td className="py-0.5 pr-3">{v.mrr.toFixed(3)}</td>
+                    <td className="py-0.5 pr-3">
+                      {v.hits1 != null ? v.hits1.toFixed(3) : "–"}
+                    </td>
+                    <td className="py-0.5 pr-3">
+                      {v.hits3 != null ? v.hits3.toFixed(3) : "–"}
+                    </td>
+                    <td className="py-0.5 pr-3">
+                      {v.hits10 != null ? v.hits10.toFixed(3) : "–"}
+                    </td>
+                    <td className="py-0.5">{v.months ?? "–"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {data && (
         <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-3">
           <div
