@@ -1,0 +1,26 @@
+{
+  "variants": [
+    {
+      "id": "gat",
+      "label": "GAT (No Edge Feats)",
+      "file": "predictions.json",
+      "mrr": 0.6307,
+      "hits1": 0.5122,
+      "hits3": 0.6852,
+      "hits10": 0.8878,
+      "months": 168,
+      "note": "Baseline attention encoder - the finalized full-corpus run"
+    },
+    {
+      "id": "sage",
+      "label": "GraphSAGE",
+      "file": "predictions_sage.json",
+      "mrr": 0.7884,
+      "hits1": 0.6929,
+      "hits3": 0.8601,
+      "hits10": 0.9596,
+      "months": 168,
+      "note": "Mean-aggregation encoder, same prediction head"
+    }
+  ]
+}
