@@ -176,19 +176,37 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
  *  and how each column is derived. Collapses on click; the choice is
  *  remembered per browser via localStorage so returning users aren't
  *  re-lectured. */
-// Per-variant plain-English explanations for the "How to read this table"
-// block, keyed by variant id. Falls back to the variant's own note for ids
-// not listed here, so newly registered variants still get a line.
-const VARIANT_EXPLAINERS: Record<string, string> = {
-  gat_edge:
-    "the baseline. A graph attention encoder: each entity weighs its neighbors by learned attention, and also reads each connection's relation, category, and strength.",
-  gat_noedge:
-    "the same attention encoder, but shown only the bare graph topology with no edge labels. Comparing it to the baseline isolates how much the edge features contribute.",
-  sage:
-    "a mean-aggregation encoder: each entity averages its neighbors' signatures instead of weighing them by attention. This revisits the Spring 2025 team's architecture comparison.",
-  gat_causal:
-    "the baseline encoder, but each entity's inputs gain 5 extra features read off a causal graph learned with NOTEARS from daily co-occurrence patterns (the Spring 2026 team's method).",
-};
+// In-depth per-encoder explanations for the "How to read this table"
+// block. Static (not driven by the variants file) so every encoder in the
+// comparison lineup is documented even before its training run registers
+// its metrics row — the table gains rows as runs finish, the explainer
+// describes the full lineup from day one.
+const ENCODER_EXPLAINERS: { id: string; name: string; body: string }[] = [
+  {
+    id: "gat_edge",
+    name: "GAT (Rel+Cat+NormW)",
+    body:
+      "the baseline: a Graph Attention Network. When an entity aggregates information from its neighbors, it does not treat them equally — it learns attention weights that decide how much each neighbor matters, so a firm's embedding can lean on its most informative connections. This variant also feeds each connection's own attributes into that attention: the relation extracted from the news (Rel — e.g. \"acquires\", \"supplies\"), its causal category (Cat), and its normalized co-occurrence weight (NormW). It won the training-recipe sweep and is the encoder deployed on the historical corpora.",
+  },
+  {
+    id: "gat_noedge",
+    name: "GAT (No Edge Feats)",
+    body:
+      "the identical attention encoder with the edge attributes ablated — it sees only the bare topology of who connects to whom, not what the connections say. The gap between this row and the baseline is a controlled measurement of how much the relation/category/weight features actually contribute to ranking accuracy.",
+  },
+  {
+    id: "sage",
+    name: "GraphSAGE",
+    body:
+      "swaps attention for mean aggregation: each entity's embedding is built by averaging its neighbors' signatures, with no learned weighting and no edge-attribute pathway at all. It is the simplest encoder in the lineup, and it revisits the Spring 2025 team's architecture comparison (their poster also found GraphSAGE competitive with GAT on early versions of this graph).",
+  },
+  {
+    id: "gat_causal",
+    name: "GAT + Causal (NOTEARS)",
+    body:
+      "the baseline GAT encoder, but every entity's input features are extended with 5 causal features before message passing begins. Those features come from a separate step: for each training window, the NOTEARS algorithm (Zheng et al., 2018) learns a directed acyclic graph — a candidate causal structure — from how the top-200 entities co-occur in the news day by day. Each entity then contributes its position in that causal graph: causal out-degree (how many entities it appears to drive), in-degree (how many drive it), outgoing and incoming causal-weight sums, and PageRank on the learned DAG. This ports the Spring 2026 team's causal-feature method into our pipeline and tests whether explicit causal structure adds signal beyond correlational message passing.",
+  },
+];
 
 function AboutSection({
   mrr,
@@ -297,25 +315,51 @@ function AboutSection({
           {variants && variants.length > 1 && (
             <div>
               <div className="mb-1 font-medium text-foreground">
-                The model variants (the Model toggle above)
+                The model encoders (the toggle above the metrics table)
               </div>
-              <div className="mb-1">
-                Every variant shares the identical dot-product
-                link-prediction head and cross-entropy training recipe —
-                the only thing swapped is the GNN encoder that produces the
-                embeddings, so the comparison table measures the encoders
-                head-to-head:
+              <div className="mb-1.5">
+                Every row of the comparison table is the same two-part
+                system with one part swapped. The{" "}
+                <span className="text-foreground">
+                  dot-product link-prediction head
+                </span>{" "}
+                and the cross-entropy training recipe are identical across
+                all rows; only the{" "}
+                <span className="text-foreground">GNN encoder</span> that
+                produces the entity embeddings changes. Because the head
+                has no parameters of its own, any difference in MRR or
+                Hits@k between rows is attributable to the encoder — the
+                table is a controlled, head-to-head encoder comparison on
+                the same corpus, the same backtest months, and the same
+                candidate sets.
               </div>
-              <ul className="ml-4 list-disc space-y-0.5">
-                {variants.map((v) => (
-                  <li key={v.id}>
+              <ul className="ml-4 list-disc space-y-1">
+                {ENCODER_EXPLAINERS.map((e) => (
+                  <li key={e.id}>
                     <span className="font-medium text-foreground">
-                      {v.label}
+                      {e.name}
                     </span>{" "}
-                    — {VARIANT_EXPLAINERS[v.id] ?? v.note ?? ""}
+                    — {e.body}
                   </li>
                 ))}
+                {variants
+                  .filter(
+                    (v) => !ENCODER_EXPLAINERS.some((e) => e.id === v.id)
+                  )
+                  .map((v) => (
+                    <li key={v.id}>
+                      <span className="font-medium text-foreground">
+                        {v.label}
+                      </span>{" "}
+                      — {v.note ?? ""}
+                    </li>
+                  ))}
               </ul>
+              <div className="mt-1.5">
+                An encoder described above but missing from the metrics
+                table hasn't finished its backtest yet — rows register
+                automatically as training runs complete.
+              </div>
             </div>
           )}
 
@@ -556,7 +600,7 @@ export function PredictionsView({
         <div className="shrink-0 border-b border-border/60 px-6 py-2.5">
           <div className="mb-2 flex flex-wrap items-center gap-1.5">
             <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-              Model
+              Model encoder
             </span>
             {variants.map((v) => (
               <button
