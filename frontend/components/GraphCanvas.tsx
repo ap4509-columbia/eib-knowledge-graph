@@ -633,9 +633,14 @@ export function GraphCanvas({
       node.addClass("focused");
     });
 
+    // Center the node without touching the zoom level. Fitting to the
+    // neighborhood zoomed in violently on low-degree nodes (tight
+    // clusters -> huge scale jump) and lost the rest of the graph; the
+    // highlight + dim already carries the focus, so the viewport only
+    // needs a gentle pan.
     cy.animate({
-      fit: { eles: neighborhood, padding: 80 },
-      duration: 400,
+      center: { eles: node },
+      duration: 300,
       easing: "ease-in-out",
     });
   }, [focusedNodeId]);
