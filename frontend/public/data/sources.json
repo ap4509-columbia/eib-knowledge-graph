@@ -2,11 +2,11 @@
   "default": "fnspid-gpt55-v7",
   "sources": [
     {
-      "id": "fnspid-19-20-semis",
-      "label": "FNSPID — US semiconductors (2019–2020)",
-      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
+      "id": "fnspid-gpt55-v7",
+      "label": "FNSPID — GPT-5.5 refined (2019–20)",
+      "description": "The 2019–2020 corpus through the GPT-5.5 judge-and-refinement pipeline (V7: quality gates on coverage, semantic validity and uniqueness; rows failing after refinement routed to human review and excluded). Predictions from the 10-configuration GAT sweep winner, CE (Rel+Cat+NormW), trained on the refined edges. Combined work: GPT-5.5 refinement by Ruiwen Wang, GAT sweep by Pierre Pujol.",
       "kind": "historical",
-      "available": false,
+      "available": true,
       "features": [
         "graph",
         "predictions"
@@ -24,38 +24,6 @@
       ],
       "end_note": "FNSPID dataset ends here",
       "end_note_month": "2024-01"
-    },
-    {
-      "id": "fnspid-pierre",
-      "label": "FNSPID — Pierre's run · Qwen (2019–21)",
-      "description": "Pierre's standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
-      "kind": "historical",
-      "available": false,
-      "features": [
-        "graph",
-        "predictions"
-      ]
-    },
-    {
-      "id": "fnspid-gpt55-v7",
-      "label": "FNSPID — GPT-5.5 refined (2019–20)",
-      "description": "The 2019–2020 corpus through the GPT-5.5 judge-and-refinement pipeline (V7: quality gates on coverage, semantic validity and uniqueness; rows failing after refinement routed to human review and excluded). Predictions from the 10-configuration GAT sweep winner, CE (Rel+Cat+NormW), trained on the refined edges. Combined work: GPT-5.5 refinement by Ruiwen Wang, GAT sweep by Pierre Pujol.",
-      "kind": "historical",
-      "available": true,
-      "features": [
-        "graph",
-        "predictions"
-      ]
-    },
-    {
-      "id": "report",
-      "label": "Project report (PDF)",
-      "description": "The full three-semester project report — data, pipeline, GAT, benchmarks, live corpus, factor model, and UI — as an in-app PDF.",
-      "kind": "report",
-      "available": true,
-      "features": [
-        "report"
-      ]
     },
     {
       "id": "stoxx_600_factors",
@@ -78,6 +46,38 @@
       "features": [
         "graph",
         "factors"
+      ]
+    },
+    {
+      "id": "report",
+      "label": "Project report (PDF)",
+      "description": "The full three-semester project report — data, pipeline, GAT, benchmarks, live corpus, factor model, and UI — as an in-app PDF.",
+      "kind": "report",
+      "available": true,
+      "features": [
+        "report"
+      ]
+    },
+    {
+      "id": "fnspid-19-20-semis",
+      "label": "FNSPID — US semiconductors (2019–2020)",
+      "description": "Historical corpus from the FNSPID financial-news dataset, semiconductor slice covering the pre-Covid → Covid-shock → recovery arc. Static; does not update.",
+      "kind": "historical",
+      "available": false,
+      "features": [
+        "graph",
+        "predictions"
+      ]
+    },
+    {
+      "id": "fnspid-pierre",
+      "label": "FNSPID — Pierre's run · Qwen (2019–21)",
+      "description": "Pierre's standalone 2-year run: qwen2.5:14b extraction over 2019–2021 (5,358 articles), judged and third-LLM-refined, with predictions from his CE (No Edge Feats) GAT sweep winner (MRR 0.756).",
+      "kind": "historical",
+      "available": false,
+      "features": [
+        "graph",
+        "predictions"
       ]
     }
   ]
