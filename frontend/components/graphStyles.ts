@@ -284,13 +284,13 @@ export function makeGraphStyles(isDark: boolean, scale = 1): StylesheetJson {
     {
       selector: "node.dimmed",
       style: {
-        opacity: 0.35,
+        opacity: 0.6,
       },
     },
     {
       selector: "edge.dimmed",
       style: {
-        opacity: 0.15,
+        opacity: 0.35,
       },
     },
     {
