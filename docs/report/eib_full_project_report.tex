@@ -218,6 +218,7 @@ Entropy Ratio & 0.735 & 0.679 \\
   \item Migrated the live corpora from Gemini to \textbf{local Qwen on the VM's daily cron} (zero marginal cost) and added a second live corpus: the \textbf{full S\&P 100} (Section~\ref{sec:sp100}).
   \item Added monthly \textbf{GAT retraining and predictions for the live corpora} (STOXX MRR 0.905 over its first backtest months).
   \item Shipped an \textbf{analyst MCP connector} --- Claude can be pointed at the deployed corpus and interrogate the news behind any node, factor or prediction (Section~\ref{sec:mcp}).
+  \item Reopened the two lineage model questions as directly comparable variants on the GPT-5.5 corpus: \textbf{GAT vs.\ GraphSAGE} (Spring 2025's architecture comparison) and \textbf{baseline vs.\ NOTEARS causal features} (Spring 2026's method, ported verbatim), delivered as a model toggle with a metric comparison table in the UI.
   \item Team parallel tracks: Pierre judged the full 2-year corpus and ran the 10-configuration GAT sweep on the VM (CE No-Edge-Feats winner, MRR 0.7558); Ruiwen built a GPT-5.5 judge-and-refinement variant (V7) over the 2019--2020 slice via the OpenAI Responses API (\(\approx\)\$150 / 8 h), giving the team a paid-frontier vs.\ free-local comparison on identical data.
 \end{itemize}
 
@@ -528,6 +529,15 @@ Edge features      & rel\_emb(16) + cat\_emb(16) + \(\log(1+w)\)(1) = 33-dim \\
   \item Weights saved per (loss function, edge-feature setting, month) --- 230 checkpoint files.
 \end{itemize}
 
+\subsection{Late-Summer 2026: model-variant comparison}
+Two lineage questions are reopened on the modern, quality-controlled corpus, as directly comparable \emph{model variants} trained and evaluated identically so that differences come from the model alone.
+
+\begin{itemize}
+  \item \textbf{Architecture: GAT vs.\ GraphSAGE.} Spring 2025 compared the two on early headline-only graphs and found GraphSAGE (mean-aggregation, no attention) ahead --- GraphSAGE Static reached MRR 0.550 vs.\ GAT Static 0.351, with rolling variants between (their published table). We revisit the question with a GraphSAGE twin of the team's GATLP (\texttt{scripts/sage\_model.py}): identical type/node embeddings, LayerNorm/ELU/dropout stack, training loop and losses --- only the message-passing layer differs (SAGEConv instead of GATConv; SAGE has no edge-feature pathway, so it trains in the no-edge configuration). The swap is installed from our wrapper without modifying team code.
+  \item \textbf{Features: baseline vs.\ causal (NOTEARS).} The Spring 2026 causal method is ported verbatim (\texttt{scripts/causal\_features.py}, attributed): per training window, a causal DAG is learned with their pure-numpy NOTEARS over a daily co-occurrence matrix of the top-200 entities (top-k fixed globally across windows, as in their run), and each node gains their 5 causal dimensions --- in/out-degree, in/out edge-weight sums, and PageRank on the DAG, max-normalised. A \texttt{--causal} flag applies the augmentation at training and inference through the same non-invasive patching.
+  \item \textbf{Delivery.} Each variant publishes its own predictions file and registers in a per-source variants index; the UI's Predictions tab exposes a Model switcher and a side-by-side table of MRR, Hits@1/3/10 and backtest months (Section~\ref{sec:ui}) --- the Spring 2025 comparison-table format, instantiated with our runs.
+\end{itemize}
+
 % =====================================================================
 \section{Predictions layer (Summer 2026)}
 \label{sec:predictions}
@@ -632,6 +642,7 @@ Edge features      & rel\_emb(16) + cat\_emb(16) + \(\log(1+w)\)(1) = 33-dim \\
   \item \textbf{Live badges.} Live corpora show a pulsing badge whose date is the \emph{last actual pipeline run} (read from the factor index, not a clock) --- a stalled cron is visible at a glance; the tooltip names the model chain.
   \item \textbf{Phone support.} At phone widths the filter rail becomes a slide-over drawer behind a Filters button, the factor tab stacks (scatter above, cluster cards below), the predictions leaderboard scrolls horizontally with aligned columns, and the header wraps into stable rows.
   \item \textbf{Layout stability.} Switching data sources moves nothing: the source dropdown has a fixed width, the badge lives on the left, the months counter has a reserved slot, and the header never wraps on desktop (verified pixel-identical control positions across all sources).
+  \item \textbf{Model-variant switcher.} Sources shipping several trained models get a Model toggle on the Predictions tab plus a comparison table (variant \(\times\) MRR / Hits@1 / Hits@3 / Hits@10 / backtest months); the leaderboard, scorecard and explainer all follow the selected variant.
   \item \textbf{Source lifecycle.} The superseded 2019--2020 FNSPID source was retired behind its \texttt{available} flag once the VM corpus covered it; the default source is now the live STOXX corpus.
 \end{itemize}
 
