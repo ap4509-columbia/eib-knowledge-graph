@@ -66,7 +66,7 @@ def is_junk(name: str) -> bool:
 CORP_SUFFIX = re.compile(
     r"(,?\s+(inc|incorporated|corp|corporation|company|co|ltd|limited"
     r"|p\.?l\.?c|holdings?|group|n\.?v|s\.?a|a\/s|ag|se|shares?|stock"
-    r"|[ab]))+\.?$",
+    r"|cl(?:ass)?\s+[ab]|preferred|[ab]))+\.?$",
     re.I,
 )
 # "Merck & Co.", "JPMorgan Chase & Co." — the ampersand blocks CORP_SUFFIX
@@ -81,11 +81,17 @@ def _suffix_key(name: str) -> str:
     """Case-folded name with trailing corporate suffixes stripped, plus
     article/punctuation normalization so "Bristol-Myers Squibb" and
     "Bristol Myers Squibb Co" collapse to one key."""
-    n = name.strip().rstrip(".")
+    n = name.strip()
     n = _THE_TRAIL.sub("", n)
     n = re.sub(r"^the\s+", "", n, flags=re.I)
-    n = _AMP_CO.sub("", n)
-    n = CORP_SUFFIX.sub("", n)
+    # Iterate to a fixpoint: an inner period ("Comcast Corp. Cl A") stops
+    # CORP_SUFFIX's single pass, so strip layer by layer.
+    prev = None
+    while n != prev:
+        prev = n
+        n = n.rstrip(".").strip()
+        n = _AMP_CO.sub("", n)
+        n = CORP_SUFFIX.sub("", n)
     n = n.lower().strip()
     n = re.sub(r"[-‐-―]", " ", n)  # hyphens/dashes -> space
     return re.sub(r"\s+", " ", n)
