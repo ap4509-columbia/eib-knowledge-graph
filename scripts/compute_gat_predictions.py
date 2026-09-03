@@ -430,6 +430,8 @@ def main():
     ap.add_argument("--model-label", default="CE (No Edge Feats)")
     ap.add_argument("--mrr", type=float, default=0.7746,
                     help="Headline MRR to display for this weight set.")
+    ap.add_argument("--arch", default="gat", choices=["gat", "sage"],
+                    help="Architecture the checkpoint was trained with.")
     ap.add_argument("--edge-types", action="store_true",
                     help="Load weights trained WITH edge features "
                     "(Rel+Cat+NormW configs). Must match the checkpoint.")
@@ -442,6 +444,11 @@ def main():
     WEIGHTS_DIR = args.weights_dir.expanduser()
     STRATEGY = args.strategy
     USE_EDGE_TYPES = args.edge_types
+    if args.arch == "sage":
+        global GATLP
+        from scripts.sage_model import SAGELP
+        GATLP = SAGELP
+        USE_EDGE_TYPES = False
     OUTPUT_PATH = args.out
     if args.source_id:
         OUTPUT_PATH = (

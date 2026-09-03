@@ -40,6 +40,10 @@ def main() -> None:
                     "components/ and utils/; weights/ is written there).")
     ap.add_argument("--loss", default="bpr", choices=sorted(LOSS_PARAMS))
     ap.add_argument("--edge-types", action="store_true")
+    ap.add_argument("--arch", default="gat", choices=["gat", "sage"],
+                    help="Model architecture: the team GATLP (default) or "
+                    "the GraphSAGE counterpart (scripts/sage_model.py), "
+                    "swapped in without modifying team code.")
     ap.add_argument("--strategy", default="original",
                     help="Column-selection strategy label. Use 'original' "
                     "when the CSV was already strict-filtered upstream "
@@ -53,6 +57,13 @@ def main() -> None:
     sys.path.insert(0, str(eib_root))
 
     from components.gat import run_experiment_case  # noqa: E402
+    if args.arch == "sage":
+        # Swap the architecture the trainer instantiates. SAGE has no
+        # edge-feature pathway, so force the no-edge config.
+        import components.gat as _gat_mod
+        from scripts.sage_model import SAGELP
+        _gat_mod.GATLP = SAGELP
+        args.edge_types = False
     from utils.data_utils import load_df_from_csv  # noqa: E402
     from utils.gat_utils import build_type_map  # noqa: E402
 
@@ -66,7 +77,8 @@ def main() -> None:
     print(f"Loaded {len(df)} triplet rows, {len(global_node2id)} unique nodes")
 
     p = LOSS_PARAMS[args.loss]
-    fs = f"{args.loss}_{'edge' if args.edge_types else 'noedge'}_{args.strategy}"
+    arch_prefix = "" if args.arch == "gat" else f"{args.arch}_"
+    fs = f"{arch_prefix}{args.loss}_{'edge' if args.edge_types else 'noedge'}_{args.strategy}"
     case = {
         "name": f"{args.loss.upper()} ({'Rel+Cat+NormW' if args.edge_types else 'No Edge Feats'})",
         "fs_name": fs,
