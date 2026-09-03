@@ -43,6 +43,7 @@ interface PredictionsViewProps {
 }
 
 const ABOUT_COLLAPSED_STORAGE_KEY = "eibkg.predictions.about.collapsed";
+const METRICS_COLLAPSED_STORAGE_KEY = "eibkg.predictions.metrics.collapsed";
 
 function Sparkline({ values }: { values: readonly number[] }) {
   // Fixed viewport so rows stay comparable regardless of absolute magnitude.
@@ -515,6 +516,26 @@ export function PredictionsView({
   );
   const [variantId, setVariantId] = useState<string | null>(null);
 
+  // Backtest metrics (encoder toggle + scorecard) collapse into one slim
+  // header row so the leaderboard keeps the screen — on phones the full
+  // metrics stack left roughly two table rows visible. Default: collapsed
+  // on narrow screens, expanded on desktop; the choice is remembered.
+  const [metricsCollapsed, setMetricsCollapsed] = useState(true);
+  useEffect(() => {
+    const stored = window.localStorage.getItem(METRICS_COLLAPSED_STORAGE_KEY);
+    if (stored !== null) {
+      setMetricsCollapsed(stored === "1");
+    } else {
+      setMetricsCollapsed(!window.matchMedia("(min-width: 768px)").matches);
+    }
+  }, []);
+  const toggleMetrics = () => {
+    setMetricsCollapsed((v) => {
+      window.localStorage.setItem(METRICS_COLLAPSED_STORAGE_KEY, v ? "0" : "1");
+      return !v;
+    });
+  };
+
   useEffect(() => {
     if (!sourceId) return;
     setVariants(null);
@@ -590,13 +611,35 @@ export function PredictionsView({
         {data && <span>{data.model}</span>}
       </div>
 
-      {/* Backtest scorecard — the model's accuracy stats, front and
-          center rather than buried in the header. Renders only when the
-          selected source ships predictions (this panel only mounts
-          then), so historical-only sources never show it. */}
+      {/* Backtest metrics (encoder toggle + scorecard) behind one slim
+          collapsible header, so the leaderboard keeps the vertical space
+          — critical on phones. Collapsed shows a one-line summary. */}
+      {data && (
+        <button
+          type="button"
+          onClick={toggleMetrics}
+          aria-expanded={!metricsCollapsed}
+          className="flex w-full shrink-0 items-center gap-2 border-b border-border/60 px-6 py-2 text-left text-[11px] font-medium text-foreground transition hover:bg-accent/30"
+        >
+          {metricsCollapsed ? (
+            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+          ) : (
+            <ChevronDown className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+          )}
+          <span>Backtest metrics</span>
+          {metricsCollapsed && data.mrr != null && (
+            <span className="min-w-0 truncate font-mono text-[10px] tabular-nums text-muted-foreground">
+              MRR {data.mrr.toFixed(3)} · {Object.keys(data.periods).length}{" "}
+              months
+              {activeVariant ? ` · ${activeVariant.label}` : ""}
+            </span>
+          )}
+        </button>
+      )}
+
       {/* Model-variant switcher + metric comparison — only when the
           source ships more than one trained model. */}
-      {variants && variants.length > 1 && (
+      {!metricsCollapsed && variants && variants.length > 1 && (
         <div className="shrink-0 border-b border-border/60 px-6 py-2.5">
           <div className="mb-2 flex flex-wrap items-center gap-1.5">
             <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
@@ -668,7 +711,7 @@ export function PredictionsView({
         </div>
       )}
 
-      {data && (
+      {!metricsCollapsed && data && (
         <div className="shrink-0 border-b border-border/60 bg-muted/20 px-6 py-3">
           <div
             className="flex flex-wrap items-stretch gap-2"

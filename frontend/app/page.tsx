@@ -664,6 +664,7 @@ export default function Home() {
                   sectors={sectorCounts}
                   visibleSectors={visibleSectors}
                   onToggleSector={handleToggleSector}
+                  mode={activeTab === "predictions" ? "predictions" : "graph"}
                 />
               );
               return (
