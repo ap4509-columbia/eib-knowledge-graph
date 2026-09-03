@@ -44,6 +44,9 @@ def main() -> None:
                     help="Model architecture: the team GATLP (default) or "
                     "the GraphSAGE counterpart (scripts/sage_model.py), "
                     "swapped in without modifying team code.")
+    ap.add_argument("--causal", action="store_true",
+                    help="Append the Spring 2026 NOTEARS causal features "
+                    "(5 dims per node) — see scripts/causal_features.py.")
     ap.add_argument("--strategy", default="original",
                     help="Column-selection strategy label. Use 'original' "
                     "when the CSV was already strict-filtered upstream "
@@ -71,6 +74,11 @@ def main() -> None:
     if df.empty:
         raise SystemExit(f"No rows loaded from {csv_path}")
 
+    if args.causal:
+        import components.gat as _gat_mod2
+        from scripts.causal_features import install as _install_causal
+        _install_causal(_gat_mod2, df)
+
     global_type2id = build_type_map(df)
     all_nodes = set(df["sub"].unique()) | set(df["obj"].unique())
     global_node2id = {n: i + 1 for i, n in enumerate(sorted(all_nodes))}
@@ -78,7 +86,8 @@ def main() -> None:
 
     p = LOSS_PARAMS[args.loss]
     arch_prefix = "" if args.arch == "gat" else f"{args.arch}_"
-    fs = f"{arch_prefix}{args.loss}_{'edge' if args.edge_types else 'noedge'}_{args.strategy}"
+    causal_prefix = "causal_" if args.causal else ""
+    fs = f"{arch_prefix}{causal_prefix}{args.loss}_{'edge' if args.edge_types else 'noedge'}_{args.strategy}"
     case = {
         "name": f"{args.loss.upper()} ({'Rel+Cat+NormW' if args.edge_types else 'No Edge Feats'})",
         "fs_name": fs,

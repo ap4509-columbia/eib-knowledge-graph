@@ -46,6 +46,7 @@ TRIPLETS_CSV = EIB_EVAL_ROOT / "output" / "summary_triplets_19_20.csv"
 WEIGHTS_DIR = EIB_EVAL_ROOT / "weights" / "ce_noedge_original"
 STRATEGY = "original"
 USE_EDGE_TYPES = False  # winning config was "No Edge Feats"
+CAUSAL_TOP = None  # set in main() when --causal: fixed global top-200 list
 
 OUTPUT_PATH = (
     Path(__file__).resolve().parent.parent
@@ -306,6 +307,16 @@ def compute_period_predictions(
     G = build_graph(month_df, rel2id, cat2id)
     node_map = {u: G.nodes[u].get("node_type", "UNK") for u in G.nodes()}
     X, nodes_list, type_ids = build_node_features(G, node_map, type2id)
+    if CAUSAL_TOP is not None:
+        from scripts.causal_features import (
+            CAUSAL_DIM, compute_causal_features)
+        causal = compute_causal_features(
+            month_df, list(nodes_list), global_top_entities=CAUSAL_TOP)
+        F = np.stack([
+            causal.get(n, np.zeros(CAUSAL_DIM, dtype=np.float32))
+            for n in nodes_list
+        ])
+        X = np.hstack([np.asarray(X, dtype=np.float32), F])
 
     data, _ = pack_pyg_data(
         G, X, nodes_list, type_ids, type2id, node_map,
@@ -430,6 +441,9 @@ def main():
     ap.add_argument("--model-label", default="CE (No Edge Feats)")
     ap.add_argument("--mrr", type=float, default=0.7746,
                     help="Headline MRR to display for this weight set.")
+    ap.add_argument("--causal", action="store_true",
+                    help="Weights were trained with NOTEARS causal features; "
+                    "append the same 5 dims at inference.")
     ap.add_argument("--arch", default="gat", choices=["gat", "sage"],
                     help="Architecture the checkpoint was trained with.")
     ap.add_argument("--edge-types", action="store_true",
@@ -444,6 +458,12 @@ def main():
     WEIGHTS_DIR = args.weights_dir.expanduser()
     STRATEGY = args.strategy
     USE_EDGE_TYPES = args.edge_types
+    if args.causal:
+        global CAUSAL_TOP
+        from scripts.causal_features import _top_entities
+        _full = load_df_from_csv(TRIPLETS_CSV, strategy=STRATEGY)
+        _ents = sorted(set(_full["sub"]) | set(_full["obj"]))
+        CAUSAL_TOP = _top_entities(_full, _ents)
     if args.arch == "sage":
         global GATLP
         from scripts.sage_model import SAGELP
