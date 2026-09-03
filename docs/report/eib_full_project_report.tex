@@ -535,8 +535,25 @@ Two lineage questions are reopened on the modern, quality-controlled corpus, as 
 \begin{itemize}
   \item \textbf{Architecture: GAT vs.\ GraphSAGE.} Spring 2025 compared the two on early headline-only graphs and found GraphSAGE (mean-aggregation, no attention) ahead --- GraphSAGE Static reached MRR 0.550 vs.\ GAT Static 0.351, with rolling variants between (their published table). We revisit the question with a GraphSAGE twin of the team's GATLP (\texttt{scripts/sage\_model.py}): identical type/node embeddings, LayerNorm/ELU/dropout stack, training loop and losses --- only the message-passing layer differs (SAGEConv instead of GATConv; SAGE has no edge-feature pathway, so it trains in the no-edge configuration). The swap is installed from our wrapper without modifying team code.
   \item \textbf{Features: baseline vs.\ causal (NOTEARS).} The Spring 2026 causal method is ported verbatim (\texttt{scripts/causal\_features.py}, attributed): per training window, a causal DAG is learned with their pure-numpy NOTEARS over a daily co-occurrence matrix of the top-200 entities (top-k fixed globally across windows, as in their run), and each node gains their 5 causal dimensions --- in/out-degree, in/out edge-weight sums, and PageRank on the DAG, max-normalised. A \texttt{--causal} flag applies the augmentation at training and inference through the same non-invasive patching.
-  \item \textbf{Delivery.} Each variant publishes its own predictions file and registers in a per-source variants index; the UI's Predictions tab exposes a Model switcher and a side-by-side table of MRR, Hits@1/3/10 and backtest months (Section~\ref{sec:ui}) --- the Spring 2025 comparison-table format, instantiated with our runs.
+  \item \textbf{Delivery.} Each variant publishes its own predictions file and registers in a per-source variants index; the UI's Predictions tab exposes a Model encoder switcher and a side-by-side table of MRR, Hits@1/3/10 and backtest months (Section~\ref{sec:ui}) --- the Spring 2025 comparison-table format, instantiated with our runs.
 \end{itemize}
+
+\paragraph{Results.} All four encoders trained and backtested identically on the GPT-5.5 refined corpus (23 validation months, same dot-product link-prediction head and cross-entropy recipe throughout, so metric differences isolate the encoder):
+
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+Encoder & MRR & Hits@1 & Hits@3 & Hits@10 \\
+\hline
+GAT (Rel+Cat+NormW edge feats) & 0.863 & 0.801 & 0.909 & 0.977 \\
+GAT (no edge feats) & 0.874 & 0.815 & 0.918 & 0.979 \\
+GraphSAGE (mean aggregation) & \textbf{0.942} & \textbf{0.903} & \textbf{0.980} & \textbf{0.998} \\
+GAT + causal (NOTEARS) & 0.864 & 0.802 & 0.911 & 0.975 \\
+\hline
+\end{tabular}
+\end{center}
+
+Three honest findings. First, GraphSAGE wins decisively on this corpus --- the same direction Spring 2025 reported on their early graphs, now reproduced on a quality-controlled corpus with a shared head, which strengthens the lineage claim that attention is not what carries this task. Second, edge features do not pay for themselves here: the no-edge GAT slightly outperforms the edge-featured one, consistent with the sweep result that CE No-Edge-Feats was the winning training configuration on the full corpus. Third, the NOTEARS causal features are metric-neutral (0.864 vs.\ 0.863 baseline): the causal-graph positions add no ranking signal beyond what message passing already captures on this corpus --- mirroring Spring 2026's own finding that causal features mattered mainly for stability under regime shocks rather than for average accuracy.
 
 % =====================================================================
 \section{Predictions layer (Summer 2026)}
