@@ -74,10 +74,10 @@ This report documents the full lineage of the EIB Knowledge Graph project across
     \end{itemize}
   \item \textbf{Current state.}
     \begin{itemize}
-      \item Live web application at \url{https://eib-knowledge-graph.vercel.app} with three data sources: the curated FNSPID 2019--2020 corpus (with GAT predictions), the full 2019--2021 Qwen VM extraction (5{,}358 articles / 30{,}861 triplets), and the daily-updating STOXX Europe 600 live corpus (with the news factor model).
-      \item GAT predictions layer with MRR 0.77 on rolling-window link prediction; project-best MRR 0.8018 (Fall 2025, strict graph).
-      \item Multi-model LLM benchmark completed for four models on identical inputs, scored on four quality dimensions by an independent Judge LLM.
-      \item Full-corpus extraction (54{,}563 articles, 2009--2024) in progress on the team's GPU VM, publishing to the UI chunk by chunk as it completes.
+      \item Live web application at \url{https://eib-knowledge-graph.vercel.app} with four browsable corpora: the GPT-5.5 refined 2019--2020 corpus (the default source, carrying four directly comparable model encoders --- GAT with and without edge features, GraphSAGE, GAT + NOTEARS causal --- MRR 0.863--0.942 over 23 backtest months), the finalised full 15-year FNSPID corpus (54{,}563 articles, 2009--2024, MRR 0.631 over 168 backtest months at \(\approx\)466 candidates per query), and two daily-retraining live corpora (STOXX Europe 600 and the full S\&P 100) with the news factor model.
+      \item Controlled data-quality result: holding the model fixed, GPT-5.5 judging/refinement/gating lifts MRR from 0.766 to 0.863 on identical articles.
+      \item Multi-model LLM benchmark completed for four models on identical inputs, scored on four quality dimensions by an independent Judge LLM (Qwen 0.843 vs.\ GPT-5.5 0.846).
+      \item Fully autonomous production: the entire chain runs on local Qwen at \$0 API cost, the live corpora refresh every morning with no human in the loop, and an MCP connector plus a two-tier handover document make the system inheritable.
     \end{itemize}
 \end{itemize}
 
@@ -216,9 +216,9 @@ Entropy Ratio & 0.735 & 0.679 \\
   \item Built the \textbf{VM-to-UI publishing pipeline} and used it to ship the full 2-year Qwen extraction (5{,}358 articles / 30{,}861 triplets) to the public UI (Section~\ref{sec:vmpipe}).
   \item Launched the \textbf{full 15-year FNSPID corpus run} (54{,}563 articles, 2009--2024) through the complete three-LLM chain on the team GPU VM at zero API cost, in parallel checkpointed lanes, finalised end to end --- canonicalisation, strict graph, CE GAT, live predictions (Section~\ref{sec:vmpipe}).
   \item Migrated the live corpora from Gemini to \textbf{local Qwen on the VM's daily cron} (zero marginal cost) and added a second live corpus: the \textbf{full S\&P 100} (Section~\ref{sec:sp100}).
-  \item Added monthly \textbf{GAT retraining and predictions for the live corpora} (STOXX MRR 0.905 over its first backtest months).
+  \item Added daily \textbf{GAT retraining and predictions for the live corpora} (STOXX MRR \(\approx\)0.89 over its first backtest months --- provisional, the figure moves with each day's retrain).
   \item Shipped an \textbf{analyst MCP connector} --- Claude can be pointed at the deployed corpus and interrogate the news behind any node, factor or prediction (Section~\ref{sec:mcp}).
-  \item Reopened the two lineage model questions as directly comparable variants on the GPT-5.5 corpus: \textbf{GAT vs.\ GraphSAGE} (Spring 2025's architecture comparison) and \textbf{baseline vs.\ NOTEARS causal features} (Spring 2026's method, ported verbatim), delivered as a model toggle with a metric comparison table in the UI.
+  \item Reopened the two lineage model questions as directly comparable variants on the GPT-5.5 corpus: \textbf{GAT vs.\ GraphSAGE} (Spring 2025's architecture comparison) and \textbf{baseline vs.\ NOTEARS causal features} (Spring 2026's method, ported verbatim), delivered as a Model encoder toggle with a metric comparison table in the UI. Results: GraphSAGE 0.942 vs.\ GAT 0.863--0.874; causal features metric-neutral (0.864).
   \item Team parallel tracks: Pierre judged the full 2-year corpus and ran the 10-configuration GAT sweep on the VM (CE No-Edge-Feats winner, MRR 0.7558); Ruiwen built a GPT-5.5 judge-and-refinement variant (V7) over the 2019--2020 slice via the OpenAI Responses API (\(\approx\)\$150 / 8 h), giving the team a paid-frontier vs.\ free-local comparison on identical data.
 \end{itemize}
 
@@ -555,6 +555,8 @@ GAT + causal (NOTEARS) & 0.864 & 0.802 & 0.911 & 0.975 \\
 
 Three honest findings. First, GraphSAGE wins decisively on this corpus --- the same direction Spring 2025 reported on their early graphs, now reproduced on a quality-controlled corpus with a shared head, which strengthens the lineage claim that attention is not what carries this task. Second, edge features do not pay for themselves here: the no-edge GAT slightly outperforms the edge-featured one, consistent with the sweep result that CE No-Edge-Feats was the winning training configuration on the full corpus. Third, the NOTEARS causal features are metric-neutral (0.864 vs.\ 0.863 baseline): the causal-graph positions add no ranking signal beyond what message passing already captures on this corpus --- mirroring Spring 2026's own finding that causal features mattered mainly for stability under regime shocks rather than for average accuracy.
 
+A fourth finding comes from repeating the architecture comparison on the young STOXX live corpus, where the ranking \emph{inverts}: GAT 0.885 vs.\ GraphSAGE 0.506 over its first five provisional backtest months. Encoder ranking is corpus-dependent --- attention wins on the small, sparse, title-only live graph while mean aggregation wins on the large refined corpus --- which is itself an argument for shipping the encoders as swappable variants rather than crowning one.
+
 % =====================================================================
 \section{Predictions layer (Summer 2026)}
 \label{sec:predictions}
@@ -598,7 +600,7 @@ Three honest findings. First, GraphSAGE wins decisively on this corpus --- the s
 \begin{itemize}
   \item Nothing is LLM-generated for these leaderboards. Trend and novelty are recomputed directly from the source CSV; ranking and impacted-entity lists come from real PyTorch weight files (\(\approx\) 10 MB each).
   \item Verified: for Texas Instruments in March 2020, novelty +3.05 and trend [13, 12, 2] both reproduce exactly from the source data.
-  \item Failure modes visible in the output: extraction noise (stray numeric entities), duplicate entities (e.g.\ ``TXN'' and ``Texas Instruments Inc'' treated as separate nodes). These are upstream extraction issues, not prediction-layer issues.
+  \item Failure modes visible in the output: extraction noise (stray numeric entities), duplicate entities (e.g.\ ``TXN'' and ``Texas Instruments Inc'' treated as separate nodes). These are upstream extraction issues, not prediction-layer issues; the live corpora no longer exhibit them (generation-time blocklists plus the daily corpus-level canonicalisation), while the historical sources retain them as an honest record of the raw extraction.
 \end{itemize}
 
 % =====================================================================
@@ -623,9 +625,9 @@ Three honest findings. First, GraphSAGE wins decisively on this corpus --- the s
 
 \subsection{Features}
 \begin{itemize}
-  \item \textbf{Interactive knowledge graph.} Pan, zoom, hover for edge tooltips, click a node to focus its neighbourhood (dim the rest).
+  \item \textbf{Interactive knowledge graph.} Pan, zoom, hover for edge tooltips, click a node to focus its neighbourhood (the rest recedes to reduced opacity but stays readable; the viewport pans to the node without changing zoom).
   \item \textbf{Filter rail.} Toggle entity types on/off; toggle relationship categories; minimum-connections slider (proportional to the current view's max degree).
-  \item \textbf{Time slider.} Dual-thumb date range. Preset chips: 1M / 3M / 6M / 12M / All. Defaults to trailing 6 months. Timeline slider drives BOTH the graph tab and the predictions tab.
+  \item \textbf{Time slider.} Dual-thumb date range. Preset chips: 1M / 3M / 6M / 12M / All. Defaults to the trailing quarter. Timeline slider drives BOTH the graph tab and the predictions tab.
   \item \textbf{Safari-style tabs.} Knowledge graph / Predictions. Only one visible at a time; state preserved on switch (with a Cytoscape lifecycle fix for the fit-viewport race condition).
   \item \textbf{Predictions view.} FinDKG-style table as described in Section~\ref{sec:predictions}.
   \item \textbf{Entity search (\(\mathcal{C}\)K).} Command-palette-style entity picker across the current snapshot.
@@ -659,8 +661,8 @@ Three honest findings. First, GraphSAGE wins decisively on this corpus --- the s
   \item \textbf{Live badges.} Live corpora show a pulsing badge whose date is the \emph{last actual pipeline run} (read from the factor index, not a clock) --- a stalled cron is visible at a glance; the tooltip names the model chain.
   \item \textbf{Phone support.} At phone widths the filter rail becomes a slide-over drawer behind a Filters button, the factor tab stacks (scatter above, cluster cards below), the predictions leaderboard scrolls horizontally with aligned columns, and the header wraps into stable rows.
   \item \textbf{Layout stability.} Switching data sources moves nothing: the source dropdown has a fixed width, the badge lives on the left, the months counter has a reserved slot, and the header never wraps on desktop (verified pixel-identical control positions across all sources).
-  \item \textbf{Model-variant switcher.} Sources shipping several trained models get a Model toggle on the Predictions tab plus a comparison table (variant \(\times\) MRR / Hits@1 / Hits@3 / Hits@10 / backtest months); the leaderboard, scorecard and explainer all follow the selected variant.
-  \item \textbf{Source lifecycle.} The superseded 2019--2020 FNSPID source was retired behind its \texttt{available} flag once the VM corpus covered it; the default source is now the live STOXX corpus.
+  \item \textbf{Model encoder switcher.} Sources shipping several trained models get a Model encoder toggle on the Predictions tab plus a comparison table (encoder \(\times\) MRR / Hits@1 / Hits@3 / Hits@10 / backtest months); the leaderboard, scorecard and explainer follow the selected encoder, a caption under the table states that every row shares the same dot-product link-prediction head and cross-entropy recipe, and the ``How to read this table'' block documents each encoder in depth (including the NOTEARS causal variant).
+  \item \textbf{Source lifecycle.} Superseded sources (the original 2019--2020 FNSPID slice, then the interim Pierre-judged variant) were retired behind their \texttt{available} flags as better corpora covered them; the default source is the GPT-5.5 refined corpus, listed first, with a versioned localStorage key so returning visitors land on it once after the reorder.
 \end{itemize}
 
 \subsection{Data flow diagram}
@@ -700,8 +702,8 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
 
 \subsection{Retroactive snapshot cleanup and live GAT}
 \begin{itemize}
-  \item Weeks of pre-refinement extraction had left junk entities and name variants baked into the immutable month snapshots. A one-off cleaner (\texttt{scripts/clean\_snapshots.py}) rewrote them in place: junk-pattern and generic-phrase removal, TF-IDF canonical merging with a numeric-literal guard, edge rewrite with weight summation, degree recompute (19 junk entities removed, 8 variant merges on the STOXX corpus).
-  \item Once three month snapshots existed, the daily cron gained a GAT stage: month snapshots are converted to the trainer's CSV shape (one aggregate row per month, weights preserved), a single CE No-Edge-Feats configuration is retrained over all accumulated months, and a fresh predictions leaderboard is published. First STOXX backtest: \textbf{MRR 0.905} (few validation months so far; the number will regress toward the FNSPID range as the corpus grows).
+  \item Weeks of pre-refinement extraction had left junk entities and name variants baked into the immutable month snapshots. A snapshot cleaner (\texttt{scripts/clean\_snapshots.py}) rewrites them in place and now runs inside the daily cron: junk-pattern and generic-phrase removal; a watchlist-driven ticker\(\to\)company pass (AZN.L, LSE:AZN and plain AZN all merge into AstraZeneca); deterministic corporate-suffix and case merges covering dotted forms (BP p.l.c.), ampersand suffixes (Merck \& Co.), share classes (Comcast Corp.\ Cl A), inverted articles (Walt Disney Company (The)) and hyphen variants (Bristol-Myers), merging across entity types when the name difference is itself suffix evidence; then a conservative TF-IDF fuzzy pass with a numeric-literal guard; edges rewritten with weight summation and degrees recomputed.
+  \item Once three month snapshots existed, the daily cron gained a GAT stage: month snapshots are converted to the trainer's CSV shape (one aggregate row per month, weights preserved), a single CE No-Edge-Feats configuration is retrained over all accumulated months, and a fresh predictions leaderboard is published. First STOXX backtests sit around \textbf{MRR 0.89} (few validation months; the figure moves with each day's retrain and will regress toward the FNSPID range as the corpus grows). A GraphSAGE encoder variant trained on the same corpus scores 0.506, the reverse of the refined-corpus ranking --- see the corpus-dependence note in Section~\ref{sec:gat}.
   \item The same stage activates automatically for any live corpus when it crosses the 3-month threshold.
 \end{itemize}
 
@@ -730,7 +732,7 @@ All artefacts (JSON)        & \(\to\) & Static Vercel deployment \\
   \end{itemize}
   \item Both passes \emph{fail open}: an API or parse failure keeps the first-pass triplets, so a flaky call degrades quality for a day rather than losing data.
   \item \textbf{Backend abstraction (late Summer 2026).} All LLM stages of the live pipeline route through one module (\texttt{scraper/llm.py}) switchable by environment variable between Gemini and local Ollama models. The production cron runs everything on local Qwen 2.5 14B --- the full three-LLM chain at zero marginal cost --- with Gemini retained as a fallback backend.
-  \item \textbf{Paid-frontier comparison (Ruiwen).} In parallel, a GPT-5.5 judge-and-refinement variant (``V7'', OpenAI Responses API with structured outputs, 64 resumable shards, billing-safe request cache, hard quality gates with a human-review route) was built over the same 2019--2020 slice: \(\approx\)\$150 and 8 hours for the two years, versus \$0 for the local-Qwen chain. Together with the extraction benchmark (Section~\ref{sec:benchmark}, Qwen 0.843 vs.\ GPT-5.5 0.846 judge score), this gives the project a measured cost--quality frontier on identical data.
+  \item \textbf{Paid-frontier comparison (Ruiwen).} In parallel, a GPT-5.5 judge-and-refinement variant (``V7'', OpenAI Responses API with structured outputs, 64 resumable shards, billing-safe request cache, hard quality gates with a human-review route) was built over the same 2019--2020 slice: \(\approx\)\$150 and 8 hours for the two years, versus \$0 for the local-Qwen chain. Together with the extraction benchmark (Section~\ref{sec:benchmark}, Qwen 0.843 vs.\ GPT-5.5 0.846 judge score), this gives the project a measured cost--quality frontier on identical data. The V7 corpus is deployed as the UI's default source, carrying the four-encoder comparison of Section~\ref{sec:gat}.
 \end{itemize}
 
 % =====================================================================
@@ -840,7 +842,8 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
     \item GAT retraining with fixed rolling window (MRR 0.7746)
     \item Full 15-year FNSPID corpus through the three-LLM chain on the GPU VM at \$0 API cost, with rolling-window GAT predictions served
     \item Corpus canonicalisation + strict GAT-input pipeline
-    \item Live corpora (STOXX Europe 600, full S\&P 100) with news factor model and monthly GAT retrain, on a daily VM cron
+    \item Live corpora (STOXX Europe 600, full S\&P 100) with news factor model and daily GAT retrain, on a daily VM cron
+    \item Model-encoder comparison on one shared prediction head: GAT (edge / no-edge), GraphSAGE twin, NOTEARS causal port --- shipped as a UI toggle with metrics
     \item Analyst MCP connector over the deployed corpus
     \item Pierre: full 2-year corpus judged on the VM; 10-configuration GAT sweep (CE No-Edge-Feats winner, MRR 0.7558); predictions source
     \item Ruiwen: GPT-5.5 judge-and-refinement V7 (Responses API, sharded + billing-safe, hard quality gates; \(\approx\)\$150 / 8 h for 2019--2020)
@@ -874,7 +877,7 @@ Summer 2026 & Alexandra Paiz, Pierre Pujol, Ruiwen Wang & \begin{itemize}
   \item Multi-LLM benchmark: 4-model comparison + Judge LLM stats.
   \item Retrained GAT: 230 checkpoints + leaderboard CSV.
   \item Full-corpus VM run: judged + refined + canonicalised FNSPID chunks, master extraction CSVs, canonical UI corpus, strict GAT input.
-  \item Predictions JSON: 23 monthly leaderboards (2019--2020 corpus) + 83 monthly leaderboards (2009--2016 corpus, MRR 0.654) + live STOXX leaderboards (MRR 0.905).
+  \item Predictions JSON: four encoder-variant leaderboard sets on the GPT-5.5 corpus (23 months each, MRR 0.863--0.942) + 168 monthly leaderboards on the finalised 15-year corpus (MRR 0.631) + live STOXX leaderboards (provisional, retrained daily).
   \item Live corpora: STOXX Europe 600 and full S\&P 100, daily VM cron, factor bundles + raw triplet provenance.
   \item Analyst MCP endpoint (\texttt{/api/mcp}) + \texttt{docs/MCP\_CONNECTOR.md}.
   \item Ruiwen's GPT-5.5 judge/refinement bundle (V7) for the paid-frontier comparison.
