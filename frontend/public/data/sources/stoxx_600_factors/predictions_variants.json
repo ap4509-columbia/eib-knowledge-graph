@@ -21,6 +21,17 @@
       "hits10": 0.7588,
       "months": 5,
       "note": "Mean-aggregation encoder, same prediction head"
+    },
+    {
+      "id": "gat_causal",
+      "label": "GAT + Causal (NOTEARS)",
+      "file": "predictions_causal.json",
+      "mrr": 0.8281,
+      "hits1": 0.7772,
+      "hits3": 0.8505,
+      "hits10": 0.9394,
+      "months": 5,
+      "note": "Baseline GAT plus 5 NOTEARS causal node features on the live corpus"
     }
   ]
 }
