@@ -278,11 +278,19 @@ export function makeGraphStyles(isDark: boolean, scale = 1): StylesheetJson {
         opacity: 1,
       },
     },
-    // ── Focus mode: dim everything outside the selected neighborhood ──
+    // ── Focus mode: dim everything outside the selected neighborhood.
+    // Recede, don't erase — the rest of the graph stays readable as
+    // context so selection never feels like the graph vanished. ──
     {
-      selector: ".dimmed",
+      selector: "node.dimmed",
       style: {
-        opacity: 0.08,
+        opacity: 0.35,
+      },
+    },
+    {
+      selector: "edge.dimmed",
+      style: {
+        opacity: 0.15,
       },
     },
     {
