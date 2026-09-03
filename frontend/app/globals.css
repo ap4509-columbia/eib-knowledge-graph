@@ -188,3 +188,17 @@ body {
 .animate-ai-loader-letter {
   animation: ai-loader-letter 3s infinite;
 }
+/* iOS Safari: the app is a fixed full-height shell with inner scrolling
+   panes, so the document itself must never scroll or rubber-band. Also
+   suppresses pull-to-refresh hijacking graph pan gestures, and the
+   300ms double-tap-zoom delay on controls. */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+body {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}

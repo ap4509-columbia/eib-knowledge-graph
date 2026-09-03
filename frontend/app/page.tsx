@@ -488,7 +488,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex h-screen w-screen flex-col overflow-hidden bg-background text-foreground">
+      {/* h-dvh (not h-screen): on iOS Safari 100vh includes the collapsed
+          URL-bar area, pushing the bottom timeline off-screen; dvh tracks
+          the real visible viewport. w-full (not w-screen): 100vw can
+          overflow horizontally on mobile. */}
+      <div className="flex h-dvh w-full flex-col overflow-hidden bg-background text-foreground">
         {/* Header */}
         <header className="flex shrink-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 sm:flex-nowrap sm:px-6 sm:py-3">
           <div className="flex min-w-0 items-baseline gap-3">
