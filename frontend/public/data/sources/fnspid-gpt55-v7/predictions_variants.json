@@ -1,0 +1,37 @@
+{
+  "variants": [
+    {
+      "id": "gat_edge",
+      "label": "GAT (Rel+Cat+NormW)",
+      "file": "predictions.json",
+      "mrr": 0.863,
+      "hits1": 0.8006,
+      "hits3": 0.9087,
+      "hits10": 0.9768,
+      "months": 23,
+      "note": "Baseline GAT with relation/category/weight edge features - sweep winner"
+    },
+    {
+      "id": "gat_noedge",
+      "label": "GAT (No Edge Feats)",
+      "file": "predictions_gat_noedge.json",
+      "mrr": 0.8739,
+      "hits1": 0.8152,
+      "hits3": 0.9184,
+      "hits10": 0.9787,
+      "months": 23,
+      "note": "Same GAT without edge features - topology only"
+    },
+    {
+      "id": "sage",
+      "label": "GraphSAGE",
+      "file": "predictions_sage.json",
+      "mrr": 0.9424,
+      "hits1": 0.9033,
+      "hits3": 0.9802,
+      "hits10": 0.9979,
+      "months": 23,
+      "note": "Mean-aggregation GNN, no attention - revisits the Spring 2025 architecture comparison"
+    }
+  ]
+}
