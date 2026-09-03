@@ -157,7 +157,7 @@ def build_suffix_canonical_map(
     groups: dict[str, list[str]] = defaultdict(list)
     for name in freq:
         key = _suffix_key(name)
-        if len(key) < 3:
+        if len(key) < 2:
             continue  # too short to trust after stripping
         groups[key].append(name)
     mapping: dict[str, str] = {}
@@ -165,6 +165,15 @@ def build_suffix_canonical_map(
         if len(members) < 2:
             continue
         normalized_away = any(m.strip().lower() != key for m in members)
+        if len(key) == 2:
+            # Two-letter keys ("BP", "GE") merge only on hard suffix
+            # evidence — every member must be the key itself or key +
+            # corporate suffix ("BP" / "BP PLC" / "BP p.l.c."), so an
+            # ambiguous 2-letter word can't swallow unrelated names.
+            if not normalized_away or not all(
+                m.strip().lower().startswith(key) for m in members
+            ):
+                continue
         if not normalized_away:
             by_type: dict[str, list[str]] = defaultdict(list)
             for m in members:
