@@ -1,7 +1,7 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 2052,
+    "nodes": 2050,
     "edges": 1999,
     "scored_edges": 0
   },
@@ -2487,7 +2487,7 @@
     {
       "id": "Comcast",
       "type": "COMPANY",
-      "degree": 14,
+      "degree": 15,
       "x": 156.12153608921048,
       "y": 6.688649621054493
     },
@@ -3248,13 +3248,6 @@
       "y": 609.2278957547527
     },
     {
-      "id": "Comcast Corp. Cl A",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 789.2684670368692,
-      "y": -132.26579320677368
-    },
-    {
       "id": "competitors",
       "type": "CONCEPT",
       "degree": 5,
@@ -3943,7 +3936,7 @@
     {
       "id": "Wells Fargo & Company",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 14,
       "x": 369.9082592996613,
       "y": -704.9914140621285
     },
@@ -4100,13 +4093,6 @@
       "degree": 1,
       "x": -813.7466265233514,
       "y": 264.9802401721051
-    },
-    {
-      "id": "Wells Fargo Preferred Share",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 504.27414415739565,
-      "y": -528.4599748167534
     },
     {
       "id": "CDs",
@@ -20581,8 +20567,8 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Comcast Corp. Cl A||Outperforms||competitors",
-      "source": "Comcast Corp. Cl A",
+      "id": "Comcast||Outperforms||competitors",
+      "source": "Comcast",
       "target": "competitors",
       "rel": "Outperforms",
       "rel_cat": "SSI",
@@ -22405,8 +22391,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Wells Fargo Preferred Share||Alternative To||CDs",
-      "source": "Wells Fargo Preferred Share",
+      "id": "Wells Fargo & Company||Alternative To||CDs",
+      "source": "Wells Fargo & Company",
       "target": "CDs",
       "rel": "Alternative To",
       "rel_cat": "GMM",
