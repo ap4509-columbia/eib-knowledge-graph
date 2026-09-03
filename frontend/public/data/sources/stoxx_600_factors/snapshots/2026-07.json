@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 83,
-    "edges": 69,
+    "nodes": 82,
+    "edges": 68,
     "scored_edges": 0
   },
   "nodes": [
@@ -107,7 +107,7 @@
     {
       "id": "Mercedes-Benz Group",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 1,
       "x": 406.43619107395426,
       "y": -379.0577883587699
     },
@@ -574,13 +574,6 @@
       "y": 469.5561683062746
     },
     {
-      "id": "Mercedes-Benz",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -49.600192017795045,
-      "y": -856.2674019152864
-    },
-    {
       "id": "Siemens",
       "type": "STOCK_TICKER",
       "degree": 2,
@@ -796,22 +789,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
-    },
-    {
-      "id": "Mercedes-Benz Group||Has Ticker||Mercedes-Benz",
-      "source": "Mercedes-Benz Group",
-      "target": "Mercedes-Benz",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 2,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Mercedes-Benz Group||Reports||Mixed Q2 Earnings",

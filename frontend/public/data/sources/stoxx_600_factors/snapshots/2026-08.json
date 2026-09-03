@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 215,
-    "edges": 186,
+    "nodes": 213,
+    "edges": 184,
     "scored_edges": 0
   },
   "nodes": [
@@ -756,13 +756,6 @@
       "y": 5.1873100505386605
     },
     {
-      "id": "Mercedes Benz Group",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": -35.93181979766021,
-      "y": -426.51037994302567
-    },
-    {
       "id": "Fleet Charging Deal",
       "type": "EVENT",
       "degree": 2,
@@ -1223,13 +1216,6 @@
       "degree": 2,
       "x": -836.1125871541688,
       "y": 208.3493172644774
-    },
-    {
-      "id": "Mercedes-Benz",
-      "type": "STOCK_TICKER",
-      "degree": 2,
-      "x": -584.1633790164575,
-      "y": -377.3758673444068
     },
     {
       "id": "Households",
@@ -3018,24 +3004,8 @@
       "event_type": "MACRO"
     },
     {
-      "id": "Mercedes Benz Group||Has Ticker||Mercedes-Benz",
-      "source": "Mercedes Benz Group",
-      "target": "Mercedes-Benz",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
-    },
-    {
-      "id": "Mercedes Benz Group||Expands||Fleet Charging Deal",
-      "source": "Mercedes Benz Group",
+      "id": "Mercedes-Benz Group||Expands||Fleet Charging Deal",
+      "source": "Mercedes-Benz Group",
       "target": "Fleet Charging Deal",
       "rel": "Expands",
       "rel_cat": "SSI",
@@ -3048,22 +3018,6 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
-    },
-    {
-      "id": "Mercedes-Benz Group||Has Ticker||Mercedes-Benz",
-      "source": "Mercedes-Benz Group",
-      "target": "Mercedes-Benz",
-      "rel": "Has Ticker",
-      "rel_cat": "GFMK",
-      "causal_type": "STRUCTURAL",
-      "polarity": "neutral",
-      "origin": "news",
-      "weight": 1,
-      "score": null,
-      "sentiment": 0.0,
-      "materiality_usd": 0.0,
-      "materiality_log": 0.0,
-      "event_type": "STRUCTURAL"
     },
     {
       "id": "Mercedes-Benz Group||Has Fleet Charging Deal||Fleet Charging Deal",

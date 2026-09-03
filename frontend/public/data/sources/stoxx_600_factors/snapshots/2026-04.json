@@ -1,7 +1,7 @@
 {
   "month": "2026-04",
   "stats": {
-    "nodes": 24,
+    "nodes": 23,
     "edges": 17,
     "scored_edges": 0
   },
@@ -30,7 +30,7 @@
     {
       "id": "first-quarter profit",
       "type": "FIN_INSTRUMENT_INFO",
-      "degree": 1,
+      "degree": 2,
       "x": 858.5427848845799,
       "y": -33.47037309108202
     },
@@ -89,13 +89,6 @@
       "degree": 1,
       "x": -122.5112795443876,
       "y": 813.1291972013189
-    },
-    {
-      "id": "First-Quarter Profit",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 790.7003180672806,
-      "y": -608.1160514779067
     },
     {
       "id": "Eni",
@@ -305,9 +298,9 @@
       "event_type": "GUIDANCE"
     },
     {
-      "id": "Volkswagen||Reports 14% Drop In||First-Quarter Profit",
+      "id": "Volkswagen||Reports 14% Drop In||first-quarter profit",
       "source": "Volkswagen",
-      "target": "First-Quarter Profit",
+      "target": "first-quarter profit",
       "rel": "Reports 14% Drop In",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",
