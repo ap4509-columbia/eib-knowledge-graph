@@ -276,17 +276,21 @@ function AboutSection({
             </div>
             <div>
               Two parts working together. An{" "}
-              <span className="text-foreground">encoder</span> (a graph
-              neural network such as GAT or GraphSAGE) reads the network of
-              entities and their news-derived connections, and for each
-              entity produces a numeric signature — an embedding — that
-              captures who it tends to appear with. A shared{" "}
-              <span className="text-foreground">link-prediction model</span>{" "}
-              then scores pairs of those embeddings: two entities whose
-              signatures score highly are ones the system expects to appear
-              together, even if they haven't been directly linked yet. The
-              embeddings alone predict nothing; the prediction head alone
-              has nothing to score — the forecasts come from the pair.
+              <span className="text-foreground">encoder</span> — a graph
+              neural network (GNN) such as GAT or GraphSAGE — reads the
+              network of entities and their news-derived connections, and
+              for each entity produces a numeric signature (an embedding)
+              that captures who it tends to appear with. A shared{" "}
+              <span className="text-foreground">link-prediction head</span>{" "}
+              then scores each candidate pair as the{" "}
+              <span className="text-foreground">dot product</span> of the
+              two embeddings: aligned signatures score high, and a
+              cross-entropy loss trains the encoder to score each true
+              partner above negative candidates. The head has no learnable
+              parameters of its own — all the learning lives in the
+              embeddings — so the encoder alone predicts nothing and the
+              head alone has nothing to score; forecasts come from the
+              pair.
             </div>
           </div>
 
@@ -296,10 +300,11 @@ function AboutSection({
                 The model variants (the Model toggle above)
               </div>
               <div className="mb-1">
-                Every variant shares the identical link-prediction model and
-                training recipe — the only thing swapped is the encoder that
-                produces the embeddings, so the comparison table measures
-                the encoders head-to-head:
+                Every variant shares the identical dot-product
+                link-prediction head and cross-entropy training recipe —
+                the only thing swapped is the GNN encoder that produces the
+                embeddings, so the comparison table measures the encoders
+                head-to-head:
               </div>
               <ul className="ml-4 list-disc space-y-0.5">
                 {variants.map((v) => (
@@ -609,6 +614,13 @@ export function PredictionsView({
               </tbody>
             </table>
           </div>
+          <p className="mt-1.5 text-[10px] leading-snug text-muted-foreground">
+            Every variant is a different GNN encoder feeding the same
+            dot-product link-prediction head, trained with the same
+            cross-entropy recipe — the toggle swaps only how the entity
+            embeddings are computed, so the metrics compare encoders
+            head-to-head.
+          </p>
         </div>
       )}
 
