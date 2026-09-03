@@ -1,10 +1,10 @@
 {
   "model": "CE (No Edge Feats)",
   "strategy": "stoxx",
-  "mrr": 0.899,
-  "hits1": 0.86,
-  "hits3": 0.922,
-  "hits10": 0.982,
+  "mrr": 0.89,
+  "hits1": 0.846,
+  "hits3": 0.918,
+  "hits10": 0.974,
   "periods": {
     "2026-04": {
       "period": "2026-04",
@@ -30,12 +30,12 @@
               "type": "EVENT"
             },
             {
-              "entity": "Coffee and Snacks",
-              "type": "PRODUCT"
-            },
-            {
               "entity": "Rising Sales",
               "type": "EVENT"
+            },
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
             },
             {
               "entity": "SAP",
@@ -71,8 +71,8 @@
               "type": "EVENT"
             },
             {
-              "entity": "SAP",
-              "type": "COMPANY"
+              "entity": "Bond Tender Offer",
+              "type": "EVENT"
             }
           ]
         },
@@ -104,46 +104,13 @@
               "type": "EVENT"
             },
             {
-              "entity": "Coffee and Snacks",
-              "type": "PRODUCT"
+              "entity": "Rising Sales",
+              "type": "EVENT"
             }
           ]
         },
         {
           "rank": 4,
-          "entity": "Deutsche Bank",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.163,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "New Debt Issuances",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Bond Tender Offer",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Coffee and Snacks",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Planned Cost Cuts",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Nestl\u00e9",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 5,
           "entity": "NASA",
           "entity_type": "COMPANY",
           "novelty_z": 0.163,
@@ -166,17 +133,149 @@
               "type": "COMPANY"
             },
             {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
               "entity": "InGaAs Infrared Camera",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.735,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "CEO Pay Boost",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Coffee and Snacks",
               "type": "PRODUCT"
             },
             {
-              "entity": "Volkswagen",
+              "entity": "first-quarter profit",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Nestl\u00e9",
               "type": "COMPANY"
             }
           ]
         },
         {
           "rank": 6,
+          "entity": "BitFlow Frame Grabber",
+          "entity_type": "PRODUCT",
+          "novelty_z": 1.96,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Volkswagen",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.163,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BitFlow",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "BitFlow",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.735,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BitFlow Frame Grabber",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "NASA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Space Radiation Testing",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Planned Cost Cuts",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 9,
           "entity": "Market Research Future",
           "entity_type": "COMPANY",
           "novelty_z": -0.735,
@@ -191,7 +290,7 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "CEO Pay Boost",
+              "entity": "Recovery Plan",
               "type": "CONCEPT"
             },
             {
@@ -199,17 +298,50 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Coffee and Snacks",
-              "type": "PRODUCT"
+              "entity": "CEO Pay Boost",
+              "type": "CONCEPT"
             },
             {
-              "entity": "Rising Sales",
-              "type": "EVENT"
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 7,
+          "rank": 10,
+          "entity": "Deutsche Bank",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.163,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "New Debt Issuances",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Tender Offer",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Coffee and Snacks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Recovery Plan",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 11,
           "entity": "InGaAs Infrared Camera",
           "entity_type": "PRODUCT",
           "novelty_z": -0.735,
@@ -228,148 +360,16 @@
               "type": "COMPANY"
             },
             {
-              "entity": "CEO Pay Boost",
+              "entity": "DAX",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "all-time high",
               "type": "CONCEPT"
             },
             {
               "entity": "BitFlow Frame Grabber",
               "type": "PRODUCT"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 8,
-          "entity": "BitFlow Frame Grabber",
-          "entity_type": "PRODUCT",
-          "novelty_z": 1.96,
-          "trend_3m": [
-            0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "BitFlow",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Space Radiation Testing",
-              "type": "EVENT"
-            },
-            {
-              "entity": "NASA",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Volkswagen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 9,
-          "entity": "BitFlow",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.735,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "BitFlow Frame Grabber",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Space Radiation Testing",
-              "type": "EVENT"
-            },
-            {
-              "entity": "NASA",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Volkswagen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 10,
-          "entity": "Eni",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.735,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "CEO Pay Boost",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Market Research Future",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "InGaAs Image Sensor Market by Type, Size, Growth and Analysis \u2013 2035",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "InGaAs Infrared Camera",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Coffee and Snacks",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 11,
-          "entity": "Volkswagen",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.163,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Planned Cost Cuts",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "BitFlow",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "BitFlow Frame Grabber",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "first-quarter profit",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Space Radiation Testing",
-              "type": "EVENT"
             }
           ]
         }
@@ -381,6 +381,72 @@
       "entries": [
         {
           "rank": 1,
+          "entity": "Eni BlackRock CCUS JV",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.483,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.405,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 3,
           "entity": "SAP",
           "entity_type": "COMPANY",
           "novelty_z": 2.562,
@@ -395,6 +461,10 @@
               "type": "COMPANY"
             },
             {
+              "entity": "Valuation Discount",
+              "type": "CONCEPT"
+            },
+            {
               "entity": "Market Sell-off",
               "type": "CONCEPT"
             },
@@ -403,17 +473,46 @@
               "type": "EVENT"
             },
             {
-              "entity": "Wawa",
+              "entity": "Deutsche Bank Aktiengesellschaft",
               "type": "COMPANY"
-            },
-            {
-              "entity": "Valuation Discount",
-              "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 2,
+          "rank": 4,
+          "entity": "BlackRock",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Capital",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "2026 Diversity Award",
+              "type": "EVENT"
+            },
+            {
+              "entity": "American Academy of Physician Associates",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 5,
           "entity": "XTB",
           "entity_type": "COMPANY",
           "novelty_z": -0.674,
@@ -436,17 +535,281 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Shootout",
-              "type": "EVENT"
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
             },
             {
-              "entity": "Wawa",
+              "entity": "Eni",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 3,
+          "rank": 6,
+          "entity": "American Academy of Physician Associates",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "2026 Diversity Award",
+              "type": "EVENT"
+            },
+            {
+              "entity": "BlackRock",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Deutsche Bank Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "HSBC Holdings",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "$0.40",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Market Sell-off",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "$0.40",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "HSBC Holdings",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Market Sell-off",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Industria De Dise\u00f1o Textil",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.405,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Inditex",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Inditex",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Equinor",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Europe gas stocks",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni BlackRock CCUS JV",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hormuz shut",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Deutsche Bank Aktiengesellschaft",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.674,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Deutsche Bank",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wawa",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shootout",
+              "type": "EVENT"
+            },
+            {
+              "entity": "American Academy of Physician Associates",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "2026 Diversity Award",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Schneider Electric",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.405,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Optimistic Future Growth Expectations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Strong Multi-Year Stock Performance",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Inditex",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Retail Optimism",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
           "entity": "Wawa",
           "entity_type": "COMPANY",
           "novelty_z": -0.674,
@@ -469,149 +832,17 @@
               "type": "STOCK_TICKER"
             },
             {
-              "entity": "Equinor",
+              "entity": "American Academy of Physician Associates",
               "type": "COMPANY"
             },
             {
-              "entity": "Optimistic Future Growth Expectations",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "Schneider Electric",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.405,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Optimistic Future Growth Expectations",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Strong Multi-Year Stock Performance",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Wawa",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Retail Optimism",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "entity": "Equinor",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Europe gas stocks",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Shootout",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Wawa",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SSON",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Hormuz shut",
+              "entity": "2026 Diversity Award",
               "type": "EVENT"
             }
           ]
         },
         {
-          "rank": 6,
-          "entity": "Eni BlackRock CCUS JV",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.483,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "BlackRock",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Deutsche Bank Aktiengesellschaft",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Valuation Discount",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 7,
-          "entity": "$0.40",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "HSBC Holdings",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Market Sell-off",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XTB",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SSON",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 8,
+          "rank": 15,
           "entity": "SSON",
           "entity_type": "COMPANY",
           "novelty_z": -0.674,
@@ -626,124 +857,25 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Hormuz shut",
-              "type": "EVENT"
+              "entity": "Equinor",
+              "type": "COMPANY"
             },
             {
               "entity": "Europe gas stocks",
               "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "HSBC Holdings",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 9,
-          "entity": "Eni",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.405,
-          "trend_3m": [
-            0,
-            1,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni BlackRock CCUS JV",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Retail Optimism",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Inditex",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 10,
-          "entity": "BlackRock",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni BlackRock CCUS JV",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Capital",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Deutsche Bank Aktiengesellschaft",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "2026 Diversity Award",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 11,
-          "entity": "HSBC Holdings",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$0.40",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "SSON",
-              "type": "COMPANY"
-            },
-            {
               "entity": "Market Sell-off",
               "type": "CONCEPT"
             },
             {
-              "entity": "SAP Modernization",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
+              "entity": "Hormuz shut",
+              "type": "EVENT"
             }
           ]
         },
         {
-          "rank": 12,
+          "rank": 16,
           "entity": "Deutsche Bank",
           "entity_type": "STOCK_TICKER",
           "novelty_z": 1.483,
@@ -770,140 +902,8 @@
               "type": "COMPANY"
             },
             {
-              "entity": "XTB",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 13,
-          "entity": "Deutsche Bank Aktiengesellschaft",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Deutsche Bank",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Wawa",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Shootout",
-              "type": "EVENT"
-            },
-            {
-              "entity": "BlackRock",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 14,
-          "entity": "Inditex",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Retail Optimism",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Strong Multi-Year Stock Performance",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Schneider Electric",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Valuation Discount",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 15,
-          "entity": "American Academy of Physician Associates",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.674,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
               "entity": "2026 Diversity Award",
               "type": "EVENT"
-            },
-            {
-              "entity": "BlackRock",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Deutsche Bank Aktiengesellschaft",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XTB",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 16,
-          "entity": "Industria De Dise\u00f1o Textil",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.405,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Retail Optimism",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Inditex",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Strong Multi-Year Stock Performance",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Schneider Electric",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Valuation Discount",
-              "type": "CONCEPT"
             }
           ]
         }
@@ -915,138 +915,6 @@
       "entries": [
         {
           "rank": 1,
-          "entity": "Sushi by the pound",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "A Fourth Location",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Japanese Dining Experience",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Three Locations",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Analyst Targets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Iran war concerns",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "entity": "environmental hub",
-          "entity_type": "PRODUCT",
-          "novelty_z": 0.0,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Oil And Gas Growth",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "European Battery Expansion",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Searah",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Southeast Asia",
-              "type": "SECTOR"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "entity": "Eni",
-          "entity_type": "COMPANY",
-          "novelty_z": 2.88,
-          "trend_3m": [
-            1,
-            1,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Baleine Oil And Gas Growth",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "European Battery Expansion",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Searah",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "environmental hub",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Southeast Asia",
-              "type": "SECTOR"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "European Battery Expansion",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Oil And Gas Growth",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "environmental hub",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Searah",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Southeast Asia",
-              "type": "SECTOR"
-            }
-          ]
-        },
-        {
-          "rank": 5,
           "entity": "Baleine Oil And Gas Growth",
           "entity_type": "PRODUCT",
           "novelty_z": -0.72,
@@ -1061,9 +929,34 @@
               "type": "COMPANY"
             },
             {
+              "entity": "Searah",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
               "entity": "European Battery Expansion",
               "type": "PRODUCT"
             },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.88,
+          "trend_3m": [
+            1,
+            1,
+            4
+          ],
+          "predicted_impacted": [
             {
               "entity": "Searah",
               "type": "COMPANY"
@@ -1073,13 +966,54 @@
               "type": "PRODUCT"
             },
             {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            },
+            {
               "entity": "Southeast Asia",
               "type": "SECTOR"
             }
           ]
         },
         {
-          "rank": 6,
+          "rank": 3,
+          "entity": "Novartis",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.44,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "NVS",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 4,
           "entity": "Searah",
           "entity_type": "COMPANY",
           "novelty_z": 0.72,
@@ -1094,15 +1028,15 @@
               "type": "COMPANY"
             },
             {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
               "entity": "Baleine Oil And Gas Growth",
               "type": "PRODUCT"
             },
             {
               "entity": "European Battery Expansion",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "environmental hub",
               "type": "PRODUCT"
             },
             {
@@ -1112,40 +1046,40 @@
           ]
         },
         {
-          "rank": 7,
-          "entity": "Zara",
+          "rank": 5,
+          "entity": "environmental hub",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.72,
+          "novelty_z": 0.0,
           "trend_3m": [
             0,
             0,
-            1
+            2
           ],
           "predicted_impacted": [
             {
-              "entity": "Iran war concerns",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Inditex",
+              "entity": "Eni",
               "type": "COMPANY"
             },
             {
-              "entity": "Analyst Targets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
+              "entity": "Searah",
               "type": "COMPANY"
             },
             {
-              "entity": "Data Center Revenue",
-              "type": "FINANCIAL_ENTITY"
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Southeast Asia",
+              "type": "SECTOR"
             }
           ]
         },
         {
-          "rank": 8,
+          "rank": 6,
           "entity": "Inditex",
           "entity_type": "COMPANY",
           "novelty_z": 1.44,
@@ -1164,54 +1098,21 @@
               "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Data Center Revenue",
-              "type": "FINANCIAL_ENTITY"
+              "entity": "Zara",
+              "type": "PRODUCT"
             },
             {
               "entity": "Iran war concerns",
               "type": "EVENT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 9,
-          "entity": "Southeast Asia",
-          "entity_type": "SECTOR",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Searah",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Oil And Gas Growth",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "European Battery Expansion",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "environmental hub",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 10,
+          "rank": 7,
           "entity": "Industria De Dise\u00f1o Textil",
           "entity_type": "COMPANY",
           "novelty_z": 1.44,
@@ -1222,44 +1123,7 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Analyst Targets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
               "entity": "Inditex",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Data Center Revenue",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Iran war concerns",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 11,
-          "entity": "Data Center Revenue",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
               "type": "COMPANY"
             },
             {
@@ -1267,32 +1131,7 @@
               "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "Inditex",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Iran war concerns",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 12,
-          "entity": "Adyen",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.0,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "North America chief",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "GOV.UK Pay",
+              "entity": "Zara",
               "type": "PRODUCT"
             },
             {
@@ -1300,215 +1139,13 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Japanese Dining Experience",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "A Fourth Location",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 13,
-          "entity": "Hera",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "PlayStation Studios",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Sushi by the pound",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "A Fourth Location",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Japanese Dining Experience",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Sony Interactive Entertainment",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 14,
-          "entity": "STMicroelectronics",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
               "entity": "Data Center Revenue",
               "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Analyst Targets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Inditex",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Iran war concerns",
-              "type": "EVENT"
             }
           ]
         },
         {
-          "rank": 15,
-          "entity": "Sanofi",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.0,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Banco Santander",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AI-Powered Commerce",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Antares Cancer",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Acquisition",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Novartis",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 16,
-          "entity": "PETRONAS",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.72,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Searah",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Southeast Asia",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Data Center Revenue",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Oil And Gas Growth",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 17,
-          "entity": "GOV.UK Pay",
-          "entity_type": "PRODUCT",
-          "novelty_z": 0.0,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Adyen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Industria De Dise\u00f1o Textil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Data Center Revenue",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Japanese Dining Experience",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 18,
-          "entity": "Supa!",
-          "entity_type": "COMPANY",
-          "novelty_z": 2.16,
-          "trend_3m": [
-            0,
-            0,
-            5
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "The Spokesman-Review",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "PlayStation Studios",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Japanese Dining Experience",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Three Locations",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Sushi by the pound",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 19,
+          "rank": 8,
           "entity": "Antares Cancer",
           "entity_type": "COMPANY",
           "novelty_z": -0.72,
@@ -1535,46 +1172,13 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Banco Santander",
-              "type": "COMPANY"
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
             }
           ]
         },
         {
-          "rank": 20,
-          "entity": "Novartis",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.44,
-          "trend_3m": [
-            0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Longevity and Anti-Aging Stock",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Antares Cancer",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "NVS",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Disability Access",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Banco Santander",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 21,
+          "rank": 9,
           "entity": "NVS",
           "entity_type": "STOCK_TICKER",
           "novelty_z": -0.72,
@@ -1593,21 +1197,219 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Longevity and Anti-Aging Stock",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
               "entity": "Disability Access",
               "type": "CONCEPT"
             },
             {
-              "entity": "Banco Santander",
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Zara",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Data Center Revenue",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "European Battery Expansion",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Searah",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Southeast Asia",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Sushi by the pound",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "A Fourth Location",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 22,
+          "rank": 13,
+          "entity": "Southeast Asia",
+          "entity_type": "SECTOR",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Searah",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "European Battery Expansion",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Data Center Revenue",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "GOV.UK Pay",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.0,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "PETRONAS",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Europe",
+              "type": "COUNTRY"
+            }
+          ]
+        },
+        {
+          "rank": 16,
           "entity": "Equinor",
           "entity_type": "COMPANY",
           "novelty_z": 0.0,
@@ -1622,26 +1424,26 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Novartis",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "NVS",
-              "type": "STOCK_TICKER"
-            },
-            {
               "entity": "Eni",
               "type": "COMPANY"
             },
             {
-              "entity": "Antares Cancer",
+              "entity": "Searah",
               "type": "COMPANY"
+            },
+            {
+              "entity": "environmental hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Baleine Oil And Gas Growth",
+              "type": "PRODUCT"
             }
           ]
         },
         {
-          "rank": 23,
-          "entity": "The Spokesman-Review",
+          "rank": 17,
+          "entity": "STMicroelectronics",
           "entity_type": "COMPANY",
           "novelty_z": -0.72,
           "trend_3m": [
@@ -1651,29 +1453,161 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Supa!",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "PlayStation Studios",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Sony Interactive Entertainment",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Hera",
-              "type": "COMPANY"
-            },
-            {
               "entity": "Data Center Revenue",
               "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
             }
           ]
         },
         {
-          "rank": 24,
+          "rank": 18,
+          "entity": "Supa!",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.16,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "The Spokesman-Review",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sushi by the pound",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Japanese Dining Experience",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Three Locations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "PETRONAS",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Industria De Dise\u00f1o Textil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Inditex",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Zara",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Analyst Targets",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Adyen",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.0,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "North America chief",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "Sanofi",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.0,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Banco Santander",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI-Powered Commerce",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Antares Cancer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 22,
           "entity": "Banco Santander",
           "entity_type": "COMPANY",
           "novelty_z": 0.0,
@@ -1700,14 +1634,14 @@
               "type": "COMPANY"
             },
             {
-              "entity": "NVS",
-              "type": "STOCK_TICKER"
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
             }
           ]
         },
         {
-          "rank": 25,
-          "entity": "PlayStation Studios",
+          "rank": 23,
+          "entity": "Hera",
           "entity_type": "COMPANY",
           "novelty_z": -0.72,
           "trend_3m": [
@@ -1717,53 +1651,53 @@
           ],
           "predicted_impacted": [
             {
+              "entity": "PlayStation Studios",
+              "type": "COMPANY"
+            },
+            {
               "entity": "Sony Interactive Entertainment",
               "type": "COMPANY"
             },
             {
-              "entity": "Hera",
-              "type": "COMPANY"
+              "entity": "Iran war concerns",
+              "type": "EVENT"
             },
             {
-              "entity": "The Spokesman-Review",
-              "type": "COMPANY"
+              "entity": "Zara",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Supa!",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Longevity and Anti-Aging Stock",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "Acquisition",
+              "type": "EVENT"
             }
           ]
         },
         {
-          "rank": 26,
-          "entity": "Volkswagen",
+          "rank": 24,
+          "entity": "The Spokesman-Review",
           "entity_type": "COMPANY",
-          "novelty_z": 0.72,
+          "novelty_z": -0.72,
           "trend_3m": [
-            2,
+            0,
             0,
             1
           ],
           "predicted_impacted": [
             {
-              "entity": "Europe",
-              "type": "COUNTRY"
-            },
-            {
-              "entity": "Hera",
+              "entity": "Supa!",
               "type": "COMPANY"
             },
             {
-              "entity": "Acquisition",
-              "type": "EVENT"
+              "entity": "PlayStation Studios",
+              "type": "COMPANY"
             },
             {
-              "entity": "NVS",
-              "type": "STOCK_TICKER"
+              "entity": "Sony Interactive Entertainment",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Longevity and Anti-Aging Stock",
+              "type": "FIN_INSTRUMENT_INFO"
             },
             {
               "entity": "Antares Cancer",
@@ -1772,7 +1706,7 @@
           ]
         },
         {
-          "rank": 27,
+          "rank": 25,
           "entity": "Sony Interactive Entertainment",
           "entity_type": "COMPANY",
           "novelty_z": -0.72,
@@ -1799,13 +1733,46 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Longevity and Anti-Aging Stock",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "GOV.UK Pay",
+              "type": "PRODUCT"
             }
           ]
         },
         {
-          "rank": 28,
+          "rank": 26,
+          "entity": "PlayStation Studios",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.72,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Sony Interactive Entertainment",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Hera",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "The Spokesman-Review",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Supa!",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "GOV.UK Pay",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 27,
           "entity": "Europe",
           "entity_type": "COUNTRY",
           "novelty_z": -0.72,
@@ -1820,20 +1787,53 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Hera",
-              "type": "COMPANY"
+              "entity": "GOV.UK Pay",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Acquisition",
-              "type": "EVENT"
+              "entity": "Disability Access",
+              "type": "CONCEPT"
             },
             {
               "entity": "NVS",
               "type": "STOCK_TICKER"
             },
             {
-              "entity": "Antares Cancer",
+              "entity": "PETRONAS",
               "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "Volkswagen",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.72,
+          "trend_3m": [
+            2,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Europe",
+              "type": "COUNTRY"
+            },
+            {
+              "entity": "GOV.UK Pay",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "PETRONAS",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Iran war concerns",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Disability Access",
+              "type": "CONCEPT"
             }
           ]
         }
@@ -1845,240 +1845,9 @@
       "entries": [
         {
           "rank": 1,
-          "entity": "Deutsche Bank",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            1,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Revenue Guidance",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Pennsylvania Budget",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "entity": "Wegovy",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Wegovy Pill",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "entity": "Novo Nordisk",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.071,
-          "trend_3m": [
-            0,
-            0,
-            5
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Wegovy",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Wegovy Pill",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "Crux",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.206,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Wegovy",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Wegovy Pill",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "entity": "Wegovy Pill",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Wegovy",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 6,
-          "entity": "UK Shares",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Pennsylvania Budget",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "GRYPHLINE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Lead Reporting Standard in Schools",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Mixed Q2 Earnings",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 7,
-          "entity": "Baleine Phase 3 Development",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "TechnipFMC",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Lithium",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Saipem",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "New Long-Term Offshore Drilling Campaign",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 8,
           "entity": "Semiconductor",
           "entity_type": "SECTOR",
-          "novelty_z": -0.66,
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -2098,53 +1867,86 @@
               "type": "COMPANY"
             },
             {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "UK Shares",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
+            },
+            {
               "entity": "Deutsche Bank",
               "type": "COMPANY"
             },
             {
-              "entity": "Bond Funding",
+              "entity": "Regulatory Compliance",
               "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 9,
-          "entity": "TechnipFMC",
+          "rank": 3,
+          "entity": "Deutsche Bank",
           "entity_type": "COMPANY",
-          "novelty_z": -0.227,
+          "novelty_z": -0.137,
           "trend_3m": [
-            0,
+            1,
             0,
             2
           ],
           "predicted_impacted": [
             {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
             },
             {
-              "entity": "Lithium",
-              "type": "PRODUCT"
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
             },
             {
-              "entity": "Saipem",
-              "type": "COMPANY"
+              "entity": "China's Semiconductor Policies",
+              "type": "EVENT"
             },
             {
-              "entity": "Eni",
-              "type": "COMPANY"
+              "entity": "Market Value",
+              "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "New Long-Term Offshore Drilling Campaign",
-              "type": "PRODUCT"
+              "entity": "Semiconductor",
+              "type": "SECTOR"
             }
           ]
         },
         {
-          "rank": 10,
+          "rank": 4,
           "entity": "Siemens",
           "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.66,
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -2160,24 +1962,57 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Mercedes-Benz Group",
+              "entity": "GRYPHLINE",
               "type": "COMPANY"
             },
             {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Oil",
+              "entity": "Arknights: Endfield",
               "type": "PRODUCT"
+            },
+            {
+              "entity": "Adyen",
+              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 11,
-          "entity": "Lithium",
+          "rank": 5,
+          "entity": "GRYPHLINE",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.338,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Arknights: Endfield",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Adyen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Premium Growth Story",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Digital Euro Test",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Unilever",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "Arknights: Endfield",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -2185,50 +2020,203 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "New Long-Term Offshore Drilling Campaign",
+              "entity": "GRYPHLINE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Adyen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Premium Growth Story",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Digital Euro Test",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Siemens",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Adyen",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.237,
+          "trend_3m": [
+            0,
+            2,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "GRYPHLINE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Arknights: Endfield",
               "type": "PRODUCT"
             },
             {
-              "entity": "Eni",
-              "type": "COMPANY"
+              "entity": "Premium Growth Story",
+              "type": "CONCEPT"
             },
             {
-              "entity": "Saipem",
-              "type": "COMPANY"
+              "entity": "Digital Euro Test",
+              "type": "EVENT"
             },
             {
-              "entity": "Chile",
-              "type": "MACRO_INDICATOR"
-            },
-            {
-              "entity": "TechnipFMC",
+              "entity": "Unilever",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 12,
-          "entity": "Schneider Electric",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.638,
+          "rank": 8,
+          "entity": "Wegovy",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.137,
           "trend_3m": [
-            2,
+            0,
             0,
             2
           ],
           "predicted_impacted": [
             {
-              "entity": "California SF6 Free Grid Deal",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cognite",
+              "entity": "Crux",
               "type": "COMPANY"
             },
             {
               "entity": "Novo Nordisk",
               "type": "COMPANY"
             },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Wegovy Pill",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Nestl\u00e9",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Appreciation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "AI-Focused Chip Design",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SIEMENS AG N",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Crux",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.338,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novo Nordisk",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Wegovy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Novo Nordisk",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.288,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
             {
               "entity": "Crux",
               "type": "COMPANY"
@@ -2236,14 +2224,26 @@
             {
               "entity": "Wegovy",
               "type": "PRODUCT"
+            },
+            {
+              "entity": "Wegovy Pill",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Hungary Plant",
+              "type": "CONCEPT"
             }
           ]
         },
         {
           "rank": 13,
-          "entity": "Vehicle Positioning Solution",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.227,
+          "entity": "SIEMENS AG N",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.137,
           "trend_3m": [
             0,
             0,
@@ -2251,98 +2251,32 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "FocalPoint",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AI Revenue Ambitions",
+              "entity": "AI-Focused Chip Design",
               "type": "CONCEPT"
             },
             {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Fair Value",
+              "entity": "Hungary Plant",
               "type": "CONCEPT"
             },
             {
-              "entity": "UK Shares",
-              "type": "FINANCIAL_ENTITY"
+              "entity": "Nestl\u00e9",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Siemens",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Undervalued",
+              "type": "CONCEPT"
             }
           ]
         },
         {
           "rank": 14,
-          "entity": "Pennsylvania Budget",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Lead Reporting Standard in Schools",
-              "type": "EVENT"
-            },
-            {
-              "entity": "UK Shares",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Revenue Guidance",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 15,
-          "entity": "Rare Disease Drugs",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 16,
           "entity": "Mercedes",
           "entity_type": "COMPANY",
-          "novelty_z": -0.227,
+          "novelty_z": -0.137,
           "trend_3m": [
             0,
             0,
@@ -2358,24 +2292,24 @@
               "type": "EVENT"
             },
             {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
               "entity": "UK Shares",
               "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Bond Funding",
+              "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 17,
-          "entity": "Cognite",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.66,
+          "rank": 15,
+          "entity": "Net Profit",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -2383,527 +2317,32 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Schneider Electric",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "California SF6 Free Grid Deal",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Crux",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Wegovy",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 18,
-          "entity": "GRYPHLINE",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.206,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Adyen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Arknights: Endfield",
-              "type": "PRODUCT"
-            },
-            {
               "entity": "Unilever",
               "type": "COMPANY"
+            },
+            {
+              "entity": "DirectorsTalk Interviews",
+              "type": "FINANCIAL_ENTITY"
             },
             {
               "entity": "2026 Sales Outlook",
               "type": "FINANCIAL_ENTITY"
             },
             {
-              "entity": "UK Shares",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        },
-        {
-          "rank": 19,
-          "entity": "Arknights: Endfield",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "GRYPHLINE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Adyen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "UK Shares",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 20,
-          "entity": "Saipem",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "New Long-Term Offshore Drilling Campaign",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Lithium",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Chile",
-              "type": "MACRO_INDICATOR"
-            },
-            {
-              "entity": "TechnipFMC",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 21,
-          "entity": "Eni",
-          "entity_type": "COMPANY",
-          "novelty_z": 3.885,
-          "trend_3m": [
-            1,
-            4,
-            7
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Saipem",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "New Long-Term Offshore Drilling Campaign",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Lithium",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Chile",
-              "type": "MACRO_INDICATOR"
-            },
-            {
-              "entity": "TechnipFMC",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 22,
-          "entity": "FocalPoint",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "STMicroelectronics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AI Revenue Ambitions",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Vehicle Positioning Solution",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Fair Value",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "UK Shares",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        },
-        {
-          "rank": 23,
-          "entity": "SIEMENS AG N",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.227,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
               "entity": "AI-Focused Chip Design",
               "type": "CONCEPT"
             },
             {
-              "entity": "Bond Funding",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Siemens",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Hungary Plant",
+              "entity": "Appreciation",
               "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 24,
-          "entity": "ASML",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.638,
-          "trend_3m": [
-            0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Market Value",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Semiconductor",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Europe",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "China's Semiconductor Policies",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 25,
-          "entity": "Offshore Wind Operations in Japan",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Equinor",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Oil",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Skrugard North Tub\u00e5en",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Tokyo Office",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Bay du Nord",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 26,
-          "entity": "STMicroelectronics",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.071,
-          "trend_3m": [
-            0,
-            1,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AI Revenue Ambitions",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Fair Value",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "FocalPoint",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Vehicle Positioning Solution",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 27,
-          "entity": "AstraZeneca",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.444,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Rare Disease Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Novartis",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Myricx Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "equity trading",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 28,
-          "entity": "New Long-Term Offshore Drilling Campaign",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Lithium",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Eni",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Saipem",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Chile",
-              "type": "MACRO_INDICATOR"
-            },
-            {
-              "entity": "TechnipFMC",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 29,
-          "entity": "Myricx Bio",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.206,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Novartis",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Premium Growth Story",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Mercedes-Benz Group",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Digital Euro Test",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 30,
-          "entity": "Novartis",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.937,
-          "trend_3m": [
-            0,
-            4,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Myricx Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Premium Growth Story",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Mercedes-Benz Group",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Digital Euro Test",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 31,
-          "entity": "Disney",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "the unique potential of animation",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Mercedes-Benz Group",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Mixed Q2 Earnings",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Digital Euro Test",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Volkswagen",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 32,
-          "entity": "Pennsylvania",
+          "rank": 16,
+          "entity": "2026 Sales Outlook",
           "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": 0.206,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "budget hole",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "electric bills",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Pennsylvania Budget",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Lead Reporting Standard in Schools",
-              "type": "EVENT"
-            },
-            {
-              "entity": "ASML",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 33,
-          "entity": "Mercedes-Benz Group",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.66,
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -2911,71 +2350,17 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Mixed Q2 Earnings",
-              "type": "EVENT"
-            },
-            {
-              "entity": "the unique potential of animation",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Disney",
+              "entity": "Unilever",
               "type": "COMPANY"
             },
             {
-              "entity": "Equinor",
-              "type": "COMPANY"
+              "entity": "DirectorsTalk Interviews",
+              "type": "FINANCIAL_ENTITY"
             },
             {
-              "entity": "$372.81 Million",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 34,
-          "entity": "Equinor",
-          "entity_type": "COMPANY",
-          "novelty_z": 2.37,
-          "trend_3m": [
-            1,
-            1,
-            6
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Oil",
-              "type": "PRODUCT"
+              "entity": "Net Profit",
+              "type": "FINANCIAL_ENTITY"
             },
-            {
-              "entity": "Offshore Wind Operations in Japan",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Skrugard North Tub\u00e5en",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Tokyo Office",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Bay du Nord",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 35,
-          "entity": "Adyen",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.937,
-          "trend_3m": [
-            0,
-            2,
-            5
-          ],
-          "predicted_impacted": [
             {
               "entity": "GRYPHLINE",
               "type": "COMPANY"
@@ -2983,92 +2368,14 @@
             {
               "entity": "Arknights: Endfield",
               "type": "PRODUCT"
-            },
-            {
-              "entity": "Premium Growth Story",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Digital Euro Test",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Unilever",
-              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 36,
-          "entity": "Oncology Drugs",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Rare Disease Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Novartis",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Myricx Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "BP",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 37,
-          "entity": "Nestl\u00e9",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Hungary Plant",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Undervalued",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Appreciation",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AI-Focused Chip Design",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "SIEMENS AG N",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 38,
+          "rank": 17,
           "entity": "DirectorsTalk Interviews",
           "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.66,
+          "novelty_z": -0.611,
           "trend_3m": [
             0,
             0,
@@ -3092,88 +2399,16 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Deutsche Bank",
-              "type": "COMPANY"
+              "entity": "Arknights: Endfield",
+              "type": "PRODUCT"
             }
           ]
         },
         {
-          "rank": 39,
-          "entity": "budget hole",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Pennsylvania",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "electric bills",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Pennsylvania Budget",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Lead Reporting Standard in Schools",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Europe",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        },
-        {
-          "rank": 40,
-          "entity": "InGaAs Camera Market",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.66,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$372.81 Million",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "equity trading",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Lead Reporting Standard in Schools",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Mercedes-Benz Group",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Pennsylvania Budget",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        }
-      ]
-    },
-    "2026-08": {
-      "period": "2026-08",
-      "total_entities": 213,
-      "entries": [
-        {
-          "rank": 1,
-          "entity": "Shell's US chemical assets",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.223,
+          "rank": 18,
+          "entity": "Baleine Phase 3 Development",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.137,
           "trend_3m": [
             0,
             0,
@@ -3181,32 +2416,830 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Potential Bidders",
+              "entity": "TechnipFMC",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "Unilever",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.101,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "DirectorsTalk Interviews",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Net Profit",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "2026 Sales Outlook",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "AI-Focused Chip Design",
               "type": "CONCEPT"
             },
             {
-              "entity": "Second LNG Term Contract",
+              "entity": "SIEMENS AG N",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "ASML",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.813,
+          "trend_3m": [
+            0,
+            0,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Market Value",
               "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "China's Semiconductor Policies",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Semiconductor",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "electric bills",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "TechnipFMC",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.137,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Chile",
+              "type": "MACRO_INDICATOR"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Cognite",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Schneider Electric",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Disney",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Digital Euro Test",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Premium Growth Story",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "Pennsylvania",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": 0.338,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "electric bills",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "budget hole",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Pennsylvania Budget",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Lead Reporting Standard in Schools",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Revenue Guidance",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "Novartis",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.237,
+          "trend_3m": [
+            0,
+            4,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Myricx Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Tokyo Office",
+              "type": "CONCEPT"
             },
             {
               "entity": "AstraZeneca",
               "type": "COMPANY"
             },
             {
-              "entity": "Bristol Myers Squibb",
-              "type": "COMPANY"
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
             },
             {
-              "entity": "U.S. Treasury",
+              "entity": "Net Profit",
               "type": "FINANCIAL_ENTITY"
             }
           ]
         },
         {
+          "rank": 25,
+          "entity": "Myricx Bio",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.338,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Tokyo Office",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Net Profit",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "Lithium",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Chile",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "TechnipFMC",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "Eni",
+          "entity_type": "COMPANY",
+          "novelty_z": 4.374,
+          "trend_3m": [
+            1,
+            4,
+            7
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Saipem",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Chile",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "TechnipFMC",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "Saipem",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.137,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Eni",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Lithium",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Chile",
+              "type": "MACRO_INDICATOR"
+            },
+            {
+              "entity": "New Long-Term Offshore Drilling Campaign",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "TechnipFMC",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "AstraZeneca",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.374,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Rare Disease Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Myricx Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "Mercedes-Benz Group",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mixed Q2 Earnings",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Disney",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "the unique potential of animation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Digital Euro Test",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Premium Growth Story",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "budget hole",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "electric bills",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Pennsylvania",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "ASML",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Semiconductor",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "Offshore Wind Operations in Japan",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Equinor",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Skrugard North Tub\u00e5en",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Oil",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Tokyo Office",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Johan Castberg",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "Schneider Electric",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.813,
+          "trend_3m": [
+            2,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Cognite",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "California SF6 Free Grid Deal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Disney",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "$372.81 Million",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Fair Value",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "Disney",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "the unique potential of animation",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Mercedes-Benz Group",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Mixed Q2 Earnings",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Volkswagen",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "$372.81 Million",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "entity": "Vehicle Positioning Solution",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.137,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "FocalPoint",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI Revenue Ambitions",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Fair Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "entity": "Rare Disease Drugs",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oncology Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Myricx Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 37,
+          "entity": "BP",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Europe",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Bay du Nord",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "electric bills",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Pennsylvania",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "ASML",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "FocalPoint",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.137,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "STMicroelectronics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Vehicle Positioning Solution",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "AI Revenue Ambitions",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Fair Value",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "UK Shares",
+              "type": "FINANCIAL_ENTITY"
+            }
+          ]
+        },
+        {
+          "rank": 39,
+          "entity": "Oncology Drugs",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Rare Disease Drugs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Novartis",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Myricx Bio",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "SAP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "entity": "Volkswagen",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.611,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Sales Forecast",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Disney",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "$372.81 Million",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "BNP Paribas",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Crux",
+              "type": "COMPANY"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-08": {
+      "period": "2026-08",
+      "total_entities": 211,
+      "entries": [
+        {
+          "rank": 1,
+          "entity": "Ormen Lange",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Share Buyback Program",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
           "rank": 2,
+          "entity": "Vietnam",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 3,
           "entity": "Baleine Phase 3 Development",
           "entity_type": "PRODUCT",
-          "novelty_z": 0.065,
+          "novelty_z": 0.009,
           "trend_3m": [
             0,
             2,
@@ -3214,20 +3247,53 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "US chemical assets",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
             },
             {
               "entity": "Vietnam",
               "type": "COMPANY"
             },
             {
-              "entity": "Lyondell",
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Share Buyback Program",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "Exxon",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Vietnam",
               "type": "COMPANY"
             },
             {
-              "entity": "Shell Deal",
-              "type": "CONCEPT"
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
             },
             {
               "entity": "Ormen Lange",
@@ -3236,18 +3302,22 @@
           ]
         },
         {
-          "rank": 3,
-          "entity": "Ormen Lange",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.223,
+          "rank": 5,
+          "entity": "Unimot",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.533,
           "trend_3m": [
             0,
             0,
-            2
+            1
           ],
           "predicted_impacted": [
             {
-              "entity": "Shell's US chemical assets",
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Vietnam",
               "type": "COMPANY"
             },
             {
@@ -3255,8 +3325,132 @@
               "type": "PRODUCT"
             },
             {
+              "entity": "US chemical assets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "Shell's US chemical assets",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
               "entity": "Potential Bidders",
               "type": "CONCEPT"
+            },
+            {
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ormen Lange",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Lyondell",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "US chemical assets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "TotalEnergies",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Shell Deal",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "U.S. Treasury",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "U.S. Shell Companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "White Cap",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Shell's Chemicals Business",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "LYB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Exxon",
+              "type": "COMPANY"
             },
             {
               "entity": "US chemical assets",
@@ -3264,134 +3458,6 @@
             },
             {
               "entity": "Vietnam",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "Vietnam",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.065,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Shell Deal",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "entity": "U.S. Shell Companies",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "U.S. Treasury",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "New audit",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 6,
-          "entity": "U.S. Treasury",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "U.S. Shell Companies",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "New audit",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 7,
-          "entity": "Exxon",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.065,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Shell US chemical assets",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "US chemical assets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Lyondell",
               "type": "COMPANY"
             },
             {
@@ -3401,175 +3467,43 @@
           ]
         },
         {
-          "rank": 8,
-          "entity": "Lyondell",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Shell Deal",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "TotalEnergies",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Vietnam",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "US chemical assets",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 9,
-          "entity": "Unimot",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Lyondell",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Ormen Lange",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Shell Deal",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "TotalEnergies",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
           "rank": 10,
-          "entity": "BP PLC",
+          "entity": "BP",
           "entity_type": "COMPANY",
-          "novelty_z": -0.223,
+          "novelty_z": 1.634,
           "trend_3m": [
             0,
-            0,
-            2
+            1,
+            8
           ],
           "predicted_impacted": [
             {
-              "entity": "Half-Year 1 EPS of $0.49",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "reporting rules for shell companies",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Shell's US chemical assets",
+              "entity": "BERENBERG",
               "type": "COMPANY"
             },
             {
-              "entity": "Ormen Lange",
-              "type": "PRODUCT"
+              "entity": "Gulf partners",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Iran War",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Venezuela",
+              "type": "CONCEPT"
             }
           ]
         },
         {
           "rank": 11,
-          "entity": "AstraZeneca",
+          "entity": "Gulf partners",
           "entity_type": "COMPANY",
-          "novelty_z": 0.83,
-          "trend_3m": [
-            0,
-            2,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Bristol Myers Squibb",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Drop",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 12,
-          "entity": "Bristol Myers Squibb",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Drop",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 13,
-          "entity": "LVMH MOET HENNESSY LOUIS VUI",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
+          "novelty_z": -0.533,
           "trend_3m": [
             0,
             0,
@@ -3577,131 +3511,32 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "LVMH",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Pilot",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "CBK.DE",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Arctic Oil and Gas Drilling",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Shell's US chemical assets",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 14,
-          "entity": "Shell's Chemicals Business",
-          "entity_type": "PRODUCT",
-          "novelty_z": 0.065,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Air Pollution Reduction",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Exxon",
+              "entity": "BP",
               "type": "COMPANY"
             },
             {
-              "entity": "Shell US chemical assets",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "LYB",
+              "entity": "BERENBERG",
               "type": "COMPANY"
             },
             {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 15,
-          "entity": "Shell US chemical assets",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Exxon",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Half-Year 1 EPS of $0.49",
+              "entity": "Calypso stake",
               "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "Lyondell",
-              "type": "COMPANY"
+              "entity": "Iran War",
+              "type": "EVENT"
             },
             {
-              "entity": "US chemical assets",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "BP PLC",
-              "type": "COMPANY"
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
             }
           ]
         },
         {
-          "rank": 16,
-          "entity": "TotalEnergies",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Shell Deal",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Lyondell",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Vietnam",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Baleine Phase 3 Development",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Shell",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 17,
+          "rank": 12,
           "entity": "Ralph Lauren",
           "entity_type": "COMPANY",
-          "novelty_z": -0.223,
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
@@ -3713,28 +3548,28 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Gold",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
               "entity": "private asset allocations",
               "type": "CONCEPT"
             },
             {
-              "entity": "Saudi Regional Headquarters",
-              "type": "LOCATION"
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
             },
             {
-              "entity": "open-ended funds",
+              "entity": "Gold",
               "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Saudi Regional Headquarters",
+              "type": "LOCATION"
             }
           ]
         },
         {
-          "rank": 18,
+          "rank": 13,
           "entity": "BNP Paribas",
           "entity_type": "COMPANY",
-          "novelty_z": 2.075,
+          "novelty_z": 1.905,
           "trend_3m": [
             0,
             1,
@@ -3746,28 +3581,94 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Gold",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
               "entity": "private asset allocations",
               "type": "CONCEPT"
             },
             {
-              "entity": "Saudi Regional Headquarters",
-              "type": "LOCATION"
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
             },
             {
-              "entity": "open-ended funds",
+              "entity": "Gold",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Saudi Regional Headquarters",
+              "type": "LOCATION"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Trinidad and Tobago",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Calypso stake",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Woodside Energy",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "South Africa's top court",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Price Gouging",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "BERENBERG",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "BP",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Gulf partners",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Iran War",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Oil",
               "type": "FIN_INSTRUMENT_INFO"
             }
           ]
         },
         {
-          "rank": 19,
+          "rank": 16,
           "entity": "Shell",
           "entity_type": "COMPANY",
-          "novelty_z": 5.521,
+          "novelty_z": 5.156,
           "trend_3m": [
             0,
             0,
@@ -3775,7 +3676,15 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Shell Deal",
+              "entity": "Vietnam",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Baleine Phase 3 Development",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Price Gouging",
               "type": "CONCEPT"
             },
             {
@@ -3783,90 +3692,16 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Vietnam",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "INDYCAR",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bristol Myers Squibb",
-              "type": "COMPANY"
+              "entity": "Sustainable Growth",
+              "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 20,
-          "entity": "rupitasertib",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "giredestrant",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Phase Ib trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Roche",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Evexta Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Breast Cancer Trial",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 21,
-          "entity": "SWX:ROP",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Evexta Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Roche",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Phase Ib trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Breast Cancer Trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "giredestrant",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 22,
-          "entity": "Treasury",
+          "rank": 17,
+          "entity": "Netherlands",
           "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.223,
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
@@ -3874,36 +3709,102 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "shell companies",
+              "entity": "US",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "HSBC Holdings",
               "type": "COMPANY"
             },
             {
-              "entity": "reporting rules for shell companies",
-              "type": "CONCEPT"
+              "entity": "BNP Paribas Obliselect Nordic HY 2016 CC",
+              "type": "FIN_INSTRUMENT_INFO"
             },
             {
-              "entity": "Shell's US chemical assets",
+              "entity": "ASML",
               "type": "COMPANY"
             },
             {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "SWX:ROP",
-              "type": "STOCK_TICKER"
+              "entity": "LD Systems",
+              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 23,
-          "entity": "Saudi Regional Headquarters",
-          "entity_type": "LOCATION",
-          "novelty_z": -0.51,
+          "rank": 18,
+          "entity": "U.S. Treasury",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
-            1
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "U.S. Shell Companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "TotalEnergies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pilot",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Shell Deal",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "New audit",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "U.S. Shell Companies",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "U.S. Treasury",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "TotalEnergies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pilot",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Shell Deal",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "New audit",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "Europe Stocks",
+          "entity_type": "SECTOR",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
           ],
           "predicted_impacted": [
             {
@@ -3915,12 +3816,12 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Gold",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
               "entity": "private asset allocations",
               "type": "CONCEPT"
+            },
+            {
+              "entity": "Sudan Litigation",
+              "type": "EVENT"
             },
             {
               "entity": "open-ended funds",
@@ -3929,142 +3830,10 @@
           ]
         },
         {
-          "rank": 24,
-          "entity": "BERENBERG",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Fiserv",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Bristol Myers Squibb",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Club Le\u00f3n",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Toluca FC",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 25,
-          "entity": "giredestrant",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "rupitasertib",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Phase Ib trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Roche",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Evexta Bio",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Breast Cancer Trial",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 26,
-          "entity": "INDYCAR",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Club Le\u00f3n",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Toluca FC",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Shell",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Leagues Cup 2026 Semifinal",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Oil",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 27,
-          "entity": "Enterprise Distribution Center",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "White Cap",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Pennsylvania Distribution Center",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Pennsylvania Distribution Hub",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Bethlehem, PA",
-              "type": "LOCATION"
-            },
-            {
-              "entity": "Family Voting Blocs",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 28,
+          "rank": 21,
           "entity": "Households",
           "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.51,
+          "novelty_z": -0.533,
           "trend_3m": [
             0,
             0,
@@ -4076,7 +3845,11 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "AstraZeneca",
+              "entity": "Second LNG Term Contract",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Shell's US chemical assets",
               "type": "COMPANY"
             },
             {
@@ -4084,26 +3857,59 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Global Tensions",
+              "entity": "AstraZeneca",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Shell US chemical assets",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Exxon",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Sustainable Growth",
               "type": "CONCEPT"
             },
             {
-              "entity": "Pilot",
+              "entity": "Lyondell",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "US chemical assets",
+              "type": "FIN_INSTRUMENT_INFO"
+            },
+            {
+              "entity": "Price Gouging",
               "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 29,
+          "rank": 23,
           "entity": "Pennsylvania Distribution Center",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.51,
+          "novelty_z": -0.533,
           "trend_3m": [
             0,
             0,
             1
           ],
           "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
             {
               "entity": "White Cap",
               "type": "COMPANY"
@@ -4113,160 +3919,57 @@
               "type": "PRODUCT"
             },
             {
-              "entity": "Pennsylvania Distribution Hub",
-              "type": "PRODUCT"
+              "entity": "TotalEnergies",
+              "type": "COMPANY"
             },
             {
-              "entity": "Family Voting Blocs",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Ralph Lauren",
+              "entity": "Harrisburg YMCA",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 30,
-          "entity": "Evexta Bio",
+          "rank": 24,
+          "entity": "ASML",
           "entity_type": "COMPANY",
-          "novelty_z": 0.352,
+          "novelty_z": 1.634,
           "trend_3m": [
             0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Roche",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Phase Ib trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Breast Cancer Trial",
-              "type": "EVENT"
-            },
-            {
-              "entity": "SWX:ROP",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "giredestrant",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 31,
-          "entity": "Roche",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.543,
-          "trend_3m": [
-            0,
-            0,
+            4,
             5
           ],
           "predicted_impacted": [
             {
-              "entity": "Evexta Bio",
-              "type": "COMPANY"
+              "entity": "AI Chip Boom",
+              "type": "CONCEPT"
             },
             {
-              "entity": "Phase Ib trial",
-              "type": "EVENT"
+              "entity": "AI Demand",
+              "type": "MACRO_INDICATOR"
             },
             {
-              "entity": "Breast Cancer Trial",
-              "type": "EVENT"
+              "entity": "Roaring Growth",
+              "type": "CONCEPT"
             },
             {
-              "entity": "SWX:ROP",
-              "type": "STOCK_TICKER"
+              "entity": "Netherlands",
+              "type": "FINANCIAL_ENTITY"
             },
             {
-              "entity": "giredestrant",
-              "type": "PRODUCT"
+              "entity": "China",
+              "type": "FINANCIAL_ENTITY"
             }
           ]
         },
         {
-          "rank": 32,
-          "entity": "Club Le\u00f3n",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.065,
+          "rank": 25,
+          "entity": "Saudi Regional Headquarters",
+          "entity_type": "LOCATION",
+          "novelty_z": -0.533,
           "trend_3m": [
             0,
             0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Toluca FC",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Leagues Cup 2026 Semifinal",
-              "type": "EVENT"
-            },
-            {
-              "entity": "INDYCAR",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "BERENBERG",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 33,
-          "entity": "Toluca FC",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.065,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Club Le\u00f3n",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Leagues Cup 2026 Semifinal",
-              "type": "EVENT"
-            },
-            {
-              "entity": "INDYCAR",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "BERENBERG",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "AstraZeneca",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 34,
-          "entity": "Europe Stocks",
-          "entity_type": "SECTOR",
-          "novelty_z": -0.223,
-          "trend_3m": [
-            0,
-            0,
-            2
+            1
           ],
           "predicted_impacted": [
             {
@@ -4282,8 +3985,8 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "Gold",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
             },
             {
               "entity": "open-ended funds",
@@ -4292,10 +3995,307 @@
           ]
         },
         {
+          "rank": 26,
+          "entity": "LVMH MOET HENNESSY LOUIS VUI",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "LVMH",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "shell companies",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "CBK.DE",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Commerzbank AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Woodside Energy",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "LYB",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "LD Systems",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "L-Acoustics A Series",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Small Plane",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Shell's Chemicals Business",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "White Cap",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Enterprise Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Family Voting Blocs",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "SAP",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "Small Plane",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Pa. State Police",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "LYB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "LD Systems",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "L-Acoustics A Series",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Nvidia",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "SLB",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Brunei Shell Petroleum",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pilot",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Mid-Air Collision With Pennsylvania Police Helicopter",
+              "type": "EVENT"
+            },
+            {
+              "entity": "LD Systems",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "The Milkshake Mile",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "L-Acoustics A Series",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "LD Systems",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Shell Energy Stadium",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "LYB",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Small Plane",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pa. State Police",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "US",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Netherlands",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "HSBC Holdings",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Geopolitical concerns over Strait of Hormuz",
+              "type": "EVENT"
+            },
+            {
+              "entity": "LD Systems",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Energy Market",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "P.A. Dairymen\u2019s Association",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "The Milkshake Mile",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Harrisburg YMCA",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Bayerische Motoren Werke Aktiengesellschaft",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "BMW.DE",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "October Price Cap",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "Bethlehem, PA",
+          "entity_type": "LOCATION",
+          "novelty_z": -0.533,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Enterprise Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "ITF",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "White Cap",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
           "rank": 35,
           "entity": "SAP",
           "entity_type": "COMPANY",
-          "novelty_z": -0.031,
+          "novelty_z": -0.081,
           "trend_3m": [
             0,
             1,
@@ -4311,90 +4311,24 @@
               "type": "EVENT"
             },
             {
-              "entity": "Outstanding Shares",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "Volkswagen Aktiengesellschaft",
+              "type": "COMPANY"
             },
             {
               "entity": "White Cap",
               "type": "COMPANY"
             },
             {
-              "entity": "Enterprise Distribution Center",
-              "type": "PRODUCT"
+              "entity": "Bristol Myers Squibb",
+              "type": "COMPANY"
             }
           ]
         },
         {
           "rank": 36,
-          "entity": "White Cap",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.065,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Enterprise Distribution Center",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Pennsylvania Distribution Center",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Pennsylvania Distribution Hub",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Family Voting Blocs",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 37,
-          "entity": "Gulf partners",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "BERENBERG",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Family Voting Blocs",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Volkswagen Aktiengesellschaft",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "SAP",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Outstanding Shares",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 38,
-          "entity": "LVMH",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.223,
+          "entity": "Techcombank",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
@@ -4402,89 +4336,155 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "LVMH MOET HENNESSY LOUIS VUI",
+              "entity": "BNP Paribas",
               "type": "COMPANY"
+            },
+            {
+              "entity": "Ralph Lauren",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "private asset allocations",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Europe Stocks",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "open-ended funds",
+              "type": "FIN_INSTRUMENT_INFO"
+            }
+          ]
+        },
+        {
+          "rank": 37,
+          "entity": "Toluca FC",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Club Le\u00f3n",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Leagues Cup 2026 Semifinal",
+              "type": "EVENT"
             },
             {
               "entity": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
               "type": "COMPANY"
             },
             {
-              "entity": "Pilot",
-              "type": "CONCEPT"
+              "entity": "Pa. State Police",
+              "type": "COMPANY"
             },
             {
-              "entity": "Potential Bidders",
-              "type": "CONCEPT"
+              "entity": "Small Plane",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "Club Le\u00f3n",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.009,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Toluca FC",
+              "type": "COMPANY"
             },
             {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
+              "entity": "Leagues Cup 2026 Semifinal",
+              "type": "EVENT"
+            },
+            {
+              "entity": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Pa. State Police",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Small Plane",
+              "type": "PRODUCT"
             }
           ]
         },
         {
           "rank": 39,
-          "entity": "China drug regulator",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.51,
+          "entity": "BPL",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
-            1
+            2
           ],
           "predicted_impacted": [
             {
-              "entity": "AWS",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Novo Nordisk",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Obesity Race",
+              "entity": "Corruption",
               "type": "CONCEPT"
             },
             {
-              "entity": "Raised Outlook",
-              "type": "CONCEPT"
+              "entity": "Overtime Bill",
+              "type": "FINANCIAL_ENTITY"
             },
             {
-              "entity": "Trial Setback",
-              "type": "EVENT"
+              "entity": "Dr. Ing. h.c. F. Porsche AG",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "P911.DE",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Volkswagen Aktiengesellschaft",
+              "type": "COMPANY"
             }
           ]
         },
         {
           "rank": 40,
-          "entity": "Volkswagen Aktiengesellschaft",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.51,
+          "entity": "Enterprise Distribution Center",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.262,
           "trend_3m": [
             0,
             0,
-            1
+            2
           ],
           "predicted_impacted": [
             {
-              "entity": "Volkswagen",
+              "entity": "White Cap",
               "type": "COMPANY"
             },
             {
-              "entity": "Analyst Target Cuts",
-              "type": "EVENT"
+              "entity": "Pennsylvania Distribution Hub",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Market Read",
+              "entity": "Pennsylvania Distribution Center",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Family Voting Blocs",
               "type": "CONCEPT"
             },
             {
-              "entity": "Second LNG Term Contract",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "BERENBERG",
+              "entity": "SAP",
               "type": "COMPANY"
             }
           ]
