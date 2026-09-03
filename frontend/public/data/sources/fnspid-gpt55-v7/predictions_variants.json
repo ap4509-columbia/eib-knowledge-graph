@@ -32,6 +32,17 @@
       "hits10": 0.9979,
       "months": 23,
       "note": "Mean-aggregation GNN, no attention - revisits the Spring 2025 architecture comparison"
+    },
+    {
+      "id": "gat_causal",
+      "label": "GAT + Causal (NOTEARS)",
+      "file": "predictions_causal.json",
+      "mrr": 0.8859,
+      "hits1": 0.0,
+      "hits3": 0.0,
+      "hits10": 0.0,
+      "months": 23,
+      "note": "Baseline GAT plus 5 NOTEARS causal node features - port of the Spring 2026 method"
     }
   ]
 }
