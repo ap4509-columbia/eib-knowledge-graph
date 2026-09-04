@@ -35981,5 +35981,79 @@
       "materiality_usd": null,
       "event_type": "STRUCTURAL"
     }
+  ],
+  "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05ODRBbVp5ZlNpTVBDTWJONHJtOWN3TTVSalJvNUZjTEhRRFVIcGF1THd0N0xuWVE0aGZ0eXlWRHhaMllRVEpZejEtWUdnQS1LWGpkYWtmU2JlcE5Q?oc=5": [
+    {
+      "sub": "GILD",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "NASDAQ:GILD",
+      "obj_type": "FINANCIAL_ENTITY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxON3dKMGJMcHNzczBZNzZfb3Fmb1Z1UlZfYUtuQy11OWtiazlyQ0ZpdW1qQnAxWll0NXpWYnNJb1JsajZITEw4ek9mOVFhVXpvVlRGX09ENW9Db1Vpemt3MVU2V1FhaDZzMVpqX3Q3M1FUWEU0R1I1dmFxWVVVRWs3NTcxdw?oc=5": [
+    {
+      "sub": "MDT",
+      "sub_type": "COMPANY",
+      "rel": "Has Executive Departure",
+      "rel_category": "SSI",
+      "obj": "Director",
+      "obj_type": "ROLE",
+      "sentiment": -0.3,
+      "materiality_usd": null,
+      "event_type": "EXECUTIVE_CHANGE"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxNVGxSU0hLLTMtckpqX2k5UE9NZmNnb3JSdFdvbk80cXVabG15Q0lBRXllVkp5b1RqX2dVaHhwT1lodnVkbm12eml4QjF3OWktd3k0dHBSTDZPWHhEbzJwcjdrTFphOVk3VTVKQzRpQXJOVUFyM25KRm90bVBVblAzdFBNeHNuTC15YzJPemlQSHE0LTZTbDduV1Q1SXMtdw?oc=5": [
+    {
+      "sub": "Thermo Fisher Scientific",
+      "sub_type": "COMPANY",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "TMO",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "sub": "Thermo Fisher Scientific",
+      "sub_type": "COMPANY",
+      "rel": "Unveils New Tools For",
+      "rel_category": "SSI",
+      "obj": "Electron Microscopy And Isotope Analysis",
+      "obj_type": "PRODUCT",
+      "sentiment": 0.5,
+      "materiality_usd": null,
+      "event_type": "PRODUCT"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYndBNlJvQXZmdm1VMVFZcTl1Tzhlclc4QlRfc3FVM3BQYnBPZ2dzZzJVbTFpVVZ4VGNTdDNQWld4WXZ5M0V3TTFWdlpMamF4X1RBa3p4eGZlb29WbkhNTExyY0ZZNWVaaEJPRENCMVZiVGtONy1fdldsa0NIaGdvTnNyaFJZT19LMFA2T1RQeUdaQW52YW9WZ0xlSm5XNllGNTZlbjY0ZnozbVly?oc=5": [
+    {
+      "sub": "XOM",
+      "sub_type": "STOCK_TICKER",
+      "rel": "Has Company",
+      "rel_category": "GFMK",
+      "obj": "ExxonMobil",
+      "obj_type": "COMPANY",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "sub": "ExxonMobil",
+      "sub_type": "COMPANY",
+      "rel": "Is Member Of Sector",
+      "rel_category": "GFMK",
+      "obj": "Energy Sector",
+      "obj_type": "SECTOR",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    }
   ]
 }

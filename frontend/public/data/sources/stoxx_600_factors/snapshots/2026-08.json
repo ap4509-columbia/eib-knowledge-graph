@@ -1,15 +1,15 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 211,
-    "edges": 182,
+    "nodes": 222,
+    "edges": 194,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": 105.07419128947642,
       "y": 144.03975365033625
     },
@@ -289,7 +289,7 @@
     {
       "id": "Drug Discovery",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 3,
       "x": -590.5840649082447,
       "y": 730.9958912284126
     },
@@ -485,7 +485,7 @@
     {
       "id": "Family Voting Blocs",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": -554.048879584767,
       "y": -381.6130880466896
     },
@@ -618,7 +618,7 @@
     {
       "id": "Bershka Brand",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 4,
       "x": -45.91666388628516,
       "y": -737.7143649075739
     },
@@ -702,14 +702,14 @@
     {
       "id": "Inditex",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -269.0516576298946,
       "y": -50.706798656269875
     },
     {
       "id": "Cash Flow",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": 149.3094867601459,
       "y": 706.4239339833441
     },
@@ -996,7 +996,7 @@
     {
       "id": "Adyen",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -43.05960962664163,
       "y": -653.7195577724791
     },
@@ -1122,7 +1122,7 @@
     {
       "id": "DEP",
       "type": "ORGANIZATION",
-      "degree": 1,
+      "degree": 2,
       "x": 516.4148241400068,
       "y": 296.90734463322764
     },
@@ -1444,7 +1444,7 @@
     {
       "id": "Toluca FC",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": 5.725470877304089,
       "y": -412.43553865600694
     },
@@ -1482,6 +1482,83 @@
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
+    },
+    {
+      "id": "U.S.",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 791.0562770840967,
+      "y": 225.5769722558641
+    },
+    {
+      "id": "AI Transition Era",
+      "type": "SERVICE",
+      "degree": 1,
+      "x": 555.2005525575807,
+      "y": 582.8170809146258
+    },
+    {
+      "id": "merchants protect loyalty",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 740.028301891006,
+      "y": -542.77352346088
+    },
+    {
+      "id": "TechnipFMC",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -701.9882775286693,
+      "y": 430.5785734210004
+    },
+    {
+      "id": "PA Turnpike",
+      "type": "INFRASTRUCTURE",
+      "degree": 1,
+      "x": 299.0226886021036,
+      "y": -787.1897595601736
+    },
+    {
+      "id": "drivers",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 377.6598463809253,
+      "y": -843.0374724436925
+    },
+    {
+      "id": "Equinor",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -411.6099483961423,
+      "y": 322.5068886552163
+    },
+    {
+      "id": "Offshore Wind Operations in Japan",
+      "type": "SECTOR",
+      "degree": 2,
+      "x": 62.808864864341366,
+      "y": 829.9281811589078
+    },
+    {
+      "id": "Eni",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 42.858538154229585,
+      "y": 600.9007196941687
+    },
+    {
+      "id": "Oncology Drugs",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -403.1855723512928,
+      "y": 531.7081710902928
+    },
+    {
+      "id": "PA Game Commission",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -556.5617093282464,
+      "y": 786.2053866526392
     }
   ],
   "edges": [
@@ -4396,6 +4473,198 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Drug Discovery||Announces Manufacturing Expansion In||U.S.",
+      "source": "Drug Discovery",
+      "target": "U.S.",
+      "rel": "Announces Manufacturing Expansion In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Drug Discovery||Is Subsidiary Of||Roche",
+      "source": "Drug Discovery",
+      "target": "Roche",
+      "rel": "Is Subsidiary Of",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Cash Flow||Is Certified as Integrated With||AI Transition Era",
+      "source": "Cash Flow",
+      "target": "AI Transition Era",
+      "rel": "Is Certified as Integrated With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Adyen||Suggests Strategy For||merchants protect loyalty",
+      "source": "Adyen",
+      "target": "merchants protect loyalty",
+      "rel": "Suggests Strategy For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "DEP||Selling Stake In||TechnipFMC",
+      "source": "DEP",
+      "target": "TechnipFMC",
+      "rel": "Selling Stake In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "PA Turnpike||Is Used By||drivers",
+      "source": "PA Turnpike",
+      "target": "drivers",
+      "rel": "Is Used By",
+      "rel_cat": "GMM",
+      "causal_type": "OPERATIONAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Equinor||Initiates Exploration Project||Offshore Wind Operations in Japan",
+      "source": "Equinor",
+      "target": "Offshore Wind Operations in Japan",
+      "rel": "Initiates Exploration Project",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Equinor||Has Board Member Change||Family Voting Blocs",
+      "source": "Equinor",
+      "target": "Family Voting Blocs",
+      "rel": "Has Board Member Change",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Eni||Invests In||Offshore Wind Operations in Japan",
+      "source": "Eni",
+      "target": "Offshore Wind Operations in Japan",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.85,
+      "materiality_usd": 8500000000.0,
+      "materiality_log": 22.863,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Oncology Drugs||Impacted By Legal Ruling||PA Game Commission",
+      "source": "Oncology Drugs",
+      "target": "PA Game Commission",
+      "rel": "Impacted By Legal Ruling",
+      "rel_cat": "SSI",
+      "causal_type": "CAUSAL",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Bershka Brand||Has Parent Company||Inditex",
+      "source": "Bershka Brand",
+      "target": "Inditex",
+      "rel": "Has Parent Company",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Bershka Brand||Opens Store In||Toluca FC",
+      "source": "Bershka Brand",
+      "target": "Toluca FC",
+      "rel": "Opens Store In",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
     }
   ]
 }

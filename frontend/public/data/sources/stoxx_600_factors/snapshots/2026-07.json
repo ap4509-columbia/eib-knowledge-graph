@@ -511,13 +511,6 @@
       "y": 700.5325797800217
     },
     {
-      "id": "financial performance",
-      "type": "CONCEPT",
-      "degree": 1,
-      "x": 900.0,
-      "y": -382.9513530363459
-    },
-    {
       "id": "BP",
       "type": "COMPANY",
       "degree": 1,
@@ -579,6 +572,13 @@
       "degree": 2,
       "x": -900.0,
       "y": 232.54383858694828
+    },
+    {
+      "id": "Financial Performance",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -382.9513530363459
     }
   ],
   "edges": [
@@ -1543,9 +1543,9 @@
       "event_type": "PARTNERSHIP"
     },
     {
-      "id": "Equinor||Reports strong||financial performance",
+      "id": "Equinor||Reports strong||Financial Performance",
       "source": "Equinor",
-      "target": "financial performance",
+      "target": "Financial Performance",
       "rel": "Reports strong",
       "rel_cat": "SSI",
       "causal_type": "FINANCIAL_METRIC",

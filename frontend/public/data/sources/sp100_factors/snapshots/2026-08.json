@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 2050,
-    "edges": 1999,
+    "nodes": 2053,
+    "edges": 2002,
     "scored_edges": 0
   },
   "nodes": [
@@ -492,7 +492,7 @@
     {
       "id": "ExxonMobil",
       "type": "COMPANY",
-      "degree": 20,
+      "degree": 21,
       "x": 52.22637891749012,
       "y": 22.0267193013545
     },
@@ -1591,7 +1591,7 @@
     {
       "id": "Medtronic",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 14,
       "x": -634.9544632287854,
       "y": -211.57062615365695
     },
@@ -1626,7 +1626,7 @@
     {
       "id": "Thermo Fisher Scientific",
       "type": "COMPANY",
-      "degree": 12,
+      "degree": 13,
       "x": 37.050552172535355,
       "y": 745.7244455003997
     },
@@ -11039,13 +11039,6 @@
       "y": 305.08265972819845
     },
     {
-      "id": "NIO",
-      "type": "COMPANY",
-      "degree": 2,
-      "x": 668.3201496183236,
-      "y": 10.142219128332478
-    },
-    {
       "id": "Galatasaray",
       "type": "COMPANY",
       "degree": 1,
@@ -12999,13 +12992,6 @@
       "y": 374.3169674259484
     },
     {
-      "id": "Consumer Staples",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": -398.54376247969026,
-      "y": 744.9084447706817
-    },
-    {
       "id": "Depo Provera Brain Tumor Plaintiffs",
       "type": "CONCEPT",
       "degree": 1,
@@ -14355,6 +14341,41 @@
       "degree": 2,
       "x": -425.0553953873992,
       "y": 751.3750254814726
+    },
+    {
+      "id": "Director",
+      "type": "ROLE",
+      "degree": 1,
+      "x": -900.0,
+      "y": 415.6179511975135
+    },
+    {
+      "id": "Electron Microscopy And Isotope Analysis",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 620.4982866325555,
+      "y": -401.7122823735686
+    },
+    {
+      "id": "Energy Sector",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 132.9120209921729,
+      "y": -686.7876951867709
+    },
+    {
+      "id": "Nio",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 668.3201496183236,
+      "y": 10.142219128332478
+    },
+    {
+      "id": "Consumer Staples Sector",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -398.54376247969026,
+      "y": 744.9084447706817
     }
   ],
   "edges": [
@@ -38087,8 +38108,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NIO||Stock Price Declines To||52-week Low",
-      "source": "NIO",
+      "id": "Nio||Stock Price Declines To||52-week Low",
+      "source": "Nio",
       "target": "52-week Low",
       "rel": "Stock Price Declines To",
       "rel_cat": "SSI",
@@ -38391,8 +38412,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "NIO||Stock Price Fell To||52-week Low",
-      "source": "NIO",
+      "id": "Nio||Stock Price Fell To||52-week Low",
+      "source": "Nio",
       "target": "52-week Low",
       "rel": "Stock Price Fell To",
       "rel_cat": "SSI",
@@ -42999,9 +43020,9 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Johnson & Johnson||Belongs To Sector||Consumer Staples",
+      "id": "Johnson & Johnson||Belongs To Sector||Consumer Staples Sector",
       "source": "Johnson & Johnson",
-      "target": "Consumer Staples",
+      "target": "Consumer Staples Sector",
       "rel": "Belongs To Sector",
       "rel_cat": "GFMK",
       "causal_type": "OTHER",
@@ -46331,6 +46352,54 @@
       "source": "Nissay Asset Management Corp Japan",
       "target": "American Tower Corporation",
       "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Medtronic||Has Executive Departure||Director",
+      "source": "Medtronic",
+      "target": "Director",
+      "rel": "Has Executive Departure",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Thermo Fisher Scientific||Unveils New Tools For||Electron Microscopy And Isotope Analysis",
+      "source": "Thermo Fisher Scientific",
+      "target": "Electron Microscopy And Isotope Analysis",
+      "rel": "Unveils New Tools For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "ExxonMobil||Is Member Of Sector||Energy Sector",
+      "source": "ExxonMobil",
+      "target": "Energy Sector",
+      "rel": "Is Member Of Sector",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",

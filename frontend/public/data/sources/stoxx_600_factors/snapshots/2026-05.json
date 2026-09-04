@@ -1,8 +1,8 @@
 {
   "month": "2026-05",
   "stats": {
-    "nodes": 27,
-    "edges": 17,
+    "nodes": 32,
+    "edges": 22,
     "scored_edges": 0
   },
   "nodes": [
@@ -177,7 +177,7 @@
     {
       "id": "Deutsche Bank",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 3,
       "x": -816.5584442915442,
       "y": 900.0
     },
@@ -194,6 +194,41 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Novartis",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 131.26902370455142,
+      "y": -296.01422045703515
+    },
+    {
+      "id": "Rare Disease Drugs",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": 218.80815307842514,
+      "y": -489.9395428977457
+    },
+    {
+      "id": "San Miguel Corporation",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -900.0,
+      "y": 73.11746151990502
+    },
+    {
+      "id": "Financial Performance",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": 477.1421302873249,
+      "y": 265.6520359058161
+    },
+    {
+      "id": "Unilever",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 286.8448219137101,
+      "y": 274.872256229013
     }
   ],
   "edges": [
@@ -468,6 +503,86 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "Novartis||Shows Momentum For||Rare Disease Drugs",
+      "source": "Novartis",
+      "target": "Rare Disease Drugs",
+      "rel": "Shows Momentum For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Novartis||Targets Complex Diseases With High Unmet Need||Rare Disease Drugs",
+      "source": "Novartis",
+      "target": "Rare Disease Drugs",
+      "rel": "Targets Complex Diseases With High Unmet Need",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Deutsche Bank||Has Ticker||San Miguel Corporation",
+      "source": "Deutsche Bank",
+      "target": "San Miguel Corporation",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Deutsche Bank||Releases Earnings For Quarter||Financial Performance",
+      "source": "Deutsche Bank",
+      "target": "Financial Performance",
+      "rel": "Releases Earnings For Quarter",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Unilever||Experiences Weakness In||Financial Performance",
+      "source": "Unilever",
+      "target": "Financial Performance",
+      "rel": "Experiences Weakness In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }
