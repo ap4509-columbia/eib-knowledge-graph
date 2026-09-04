@@ -406,11 +406,12 @@ Full comparison table (Claude / GPT / Qwen / Gemini side-by-side) --- see Pierre
 \label{sec:gat}
 
 \subsection{What the model is doing, in plain English}
+The prediction model is a two-part architecture: a \textbf{GNN encoder} (GAT here; GraphSAGE in the variant comparison below) that turns each entity into an embedding, and a \textbf{link-prediction head} --- the dot product of two embeddings, trained with a ranking loss --- that scores candidate pairs. The head has no parameters of its own, so all learning lives in the encoder; every variant in this report shares the identical head, which is what makes their metrics directly comparable.
 \begin{itemize}
   \item Assign every entity a 256-dimensional vector (its ``meaning'').
   \item Update each entity's vector by attending to its neighbours in the graph, weighted by how relevant each neighbour looks.
   \item After training, similar vectors indicate the model thinks two entities relate to each other.
-  \item ``Link prediction'' = ask the model: for entity \(A\), which unseen entities \(B\) does the model score highest? These are its predictions.
+  \item ``Link prediction'' = ask the model: for entity \(A\), which entities \(B\) get the highest dot-product score against \(A\)? These are its predictions.
 \end{itemize}
 
 \subsection{Architecture}
