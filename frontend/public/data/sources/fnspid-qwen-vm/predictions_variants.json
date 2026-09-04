@@ -21,6 +21,17 @@
       "hits10": 0.9596,
       "months": 168,
       "note": "Mean-aggregation encoder, same prediction head"
+    },
+    {
+      "id": "gat_causal",
+      "label": "GAT + Causal (NOTEARS)",
+      "file": "predictions_causal.json",
+      "mrr": 0.602,
+      "hits1": 0.4803,
+      "hits3": 0.6557,
+      "hits10": 0.8711,
+      "months": 168,
+      "note": "Baseline GAT plus 5 NOTEARS causal node features - Spring 2026 method at full-corpus scale"
     }
   ]
 }
