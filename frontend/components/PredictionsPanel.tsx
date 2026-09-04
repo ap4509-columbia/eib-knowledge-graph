@@ -36,10 +36,6 @@ interface PredictionsViewProps {
   sourceId: string;
   /** The right edge of the currently-selected month range. */
   monthTo: string | null;
-  /** Entity types the user has toggled on in the filter rail. Applied to
-   *  both the source-entity rows and the impacted chips. Predictions.json
-   *  ships every entity type; this narrows the view. */
-  visibleTypes: Set<string>;
 }
 
 const ABOUT_COLLAPSED_STORAGE_KEY = "eibkg.predictions.about.collapsed";
@@ -505,7 +501,6 @@ function AboutSection({
 export function PredictionsView({
   sourceId,
   monthTo,
-  visibleTypes,
 }: PredictionsViewProps) {
   const [data, setData] = useState<PredictionsFile | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -567,27 +562,9 @@ export function PredictionsView({
     return data.periods[monthTo] ?? null;
   }, [data, monthTo]);
 
-  // Apply the graph-tab entity-type filter to the leaderboard. The JSON
-  // ships every entity type; the filter narrows the view. Impacted chips
-  // are also filtered — a co-mover the analyst has hidden shouldn't appear
-  // in someone else's row either.
-  const period: PredictionPeriod | null = useMemo(() => {
-    if (!rawPeriod) return null;
-    if (visibleTypes.size === 0) return rawPeriod;
-    const entries = rawPeriod.entries
-      .filter((e) => visibleTypes.has(e.entity_type))
-      .map((e, i) => ({
-        ...e,
-        // Renumber ranks so the filtered view reads 1, 2, 3 …
-        rank: i + 1,
-        predicted_impacted: e.predicted_impacted.filter((imp) =>
-          visibleTypes.has(imp.type)
-        ),
-      }));
-    return { ...rawPeriod, entries };
-  }, [rawPeriod, visibleTypes]);
-
-  const hiddenCount = (rawPeriod?.entries.length ?? 0) - (period?.entries.length ?? 0);
+  // The leaderboard always shows every entity type — the graph tab's
+  // filters deliberately don't reach this view.
+  const period: PredictionPeriod | null = rawPeriod;
 
   const availablePeriods = useMemo(() => {
     if (!data) return [] as string[];
@@ -841,13 +818,6 @@ export function PredictionsView({
               Showing {period.entries.length} entities of{" "}
               {period.total_entities} active in{" "}
               <span className="font-mono">{period.period}</span>.
-              {hiddenCount > 0 && (
-                <>
-                  {" "}
-                  {hiddenCount} more hidden by the entity-type filter (toggle
-                  types in the left rail to show).
-                </>
-              )}
             </div>
           </div>
           </div>

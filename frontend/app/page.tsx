@@ -628,7 +628,7 @@ export default function Home() {
               </button>
             );
           })}
-          {(activeTab === "graph" || activeTab === "predictions") && (
+          {activeTab === "graph" && (
             <button
               type="button"
               onClick={() => setMobileRailOpen(true)}
@@ -641,14 +641,11 @@ export default function Home() {
         </div>
 
         {/* Body: filter rail | active tab content.
-            Filter rail shows on the graph + predictions tabs — its
-            entity-type toggles drive the graph AND the predictions
-            leaderboard. It's hidden on Factor analysis: that tab renders
-            the whole precomputed bundle and none of the rail's controls
-            apply to it. */}
+            Filter rail shows on the graph tab only — Predictions always
+            displays every entity type, and Factor analysis renders the
+            whole precomputed bundle, so neither has controls to show. */}
         <div className="flex flex-1 overflow-hidden">
-          {activeTab !== "factors" &&
-            activeTab !== "report" &&
+          {activeTab === "graph" &&
             (() => {
               const rail = (
                 <FilterRail
@@ -664,7 +661,6 @@ export default function Home() {
                   sectors={sectorCounts}
                   visibleSectors={visibleSectors}
                   onToggleSector={handleToggleSector}
-                  mode={activeTab === "predictions" ? "predictions" : "graph"}
                 />
               );
               return (
@@ -753,7 +749,6 @@ export default function Home() {
                 <PredictionsView
                   sourceId={activeSourceId}
                   monthTo={monthTo}
-                  visibleTypes={visibleTypes}
                 />
               )
             ) : activeTab === "factors" ? (

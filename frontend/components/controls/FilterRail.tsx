@@ -43,10 +43,6 @@ export interface FilterRailProps {
   sectors?: ReadonlyArray<readonly [string, number]> | null;
   visibleSectors?: Set<string>;
   onToggleSector?: (sector: string) => void;
-  /** Predictions mode hides the sections that only affect the graph view
-   *  (min connections, industry, edge causal types) — the leaderboard is
-   *  filtered by entity type alone, and dead checkboxes read as broken. */
-  mode?: "graph" | "predictions";
 }
 
 export function FilterRail(props: FilterRailProps) {
@@ -63,9 +59,7 @@ export function FilterRail(props: FilterRailProps) {
     sectors,
     visibleSectors,
     onToggleSector,
-    mode = "graph",
   } = props;
-  const graphMode = mode !== "predictions";
 
   // Type + causal-type counts for the current snapshot.
   // (Category list swapped from rel_cat SSI/GMM/GFMK to the causal-type
@@ -117,7 +111,6 @@ export function FilterRail(props: FilterRailProps) {
         </h2>
 
         {/* Min degree slider — proportional to the month's max */}
-        {graphMode && (
         <div className="mb-5">
           <div className="mb-2 flex items-center justify-between">
             <Label className="text-xs">Minimum connections</Label>
@@ -140,9 +133,8 @@ export function FilterRail(props: FilterRailProps) {
             {minDegree === 1 ? "" : "s"} (max in view: {maxDegree}).
           </p>
         </div>
-        )}
 
-        {graphMode && sectors && sectors.length > 0 && (
+        {sectors && sectors.length > 0 && (
           <>
             <Separator />
 
@@ -178,7 +170,7 @@ export function FilterRail(props: FilterRailProps) {
           </>
         )}
 
-        {graphMode && <Separator />}
+        <Separator />
 
         {/* Entity types */}
         <div className="mb-5 mt-4">
@@ -233,8 +225,6 @@ export function FilterRail(props: FilterRailProps) {
           </div>
         </div>
 
-        {graphMode && (
-        <>
         <Separator />
 
         {/* Causal types — primary edge coloring signal, doubles as legend */}
@@ -270,8 +260,6 @@ export function FilterRail(props: FilterRailProps) {
             )}
           </div>
         </div>
-        </>
-        )}
       </div>
     </aside>
   );
