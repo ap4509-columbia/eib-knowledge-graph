@@ -1,10 +1,10 @@
 {
   "model": "CE (No Edge Feats)",
   "strategy": "sp100",
-  "mrr": 0.879,
-  "hits1": 0.84,
-  "hits3": 0.9,
-  "hits10": 0.957,
+  "mrr": 0.857,
+  "hits1": 0.813,
+  "hits3": 0.881,
+  "hits10": 0.948,
   "periods": {
     "2026-07": {
       "period": "2026-07",
@@ -12,6 +12,105 @@
       "entries": [
         {
           "rank": 1,
+          "entity": "T-Mobile US",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.408,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Apple",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "3M Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ExxonMobil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oracle",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "entity": "Jim Cramer",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": 2.449,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Apple",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "3M Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ExxonMobil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oracle",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "entity": "Apple",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.408,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "3M Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "ExxonMobil",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Oracle",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 4,
           "entity": "3M Company",
           "entity_type": "COMPANY",
           "novelty_z": -0.408,
@@ -34,111 +133,12 @@
               "type": "COMPANY"
             },
             {
-              "entity": "ExxonMobil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Second-Quarter 2026 Results",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "entity": "Jim Cramer",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": 2.449,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "3M Company",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Apple",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "T-Mobile US",
+              "entity": "Oracle",
               "type": "COMPANY"
             },
             {
               "entity": "ExxonMobil",
               "type": "COMPANY"
-            },
-            {
-              "entity": "Second-Quarter 2026 Results",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "entity": "T-Mobile US",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.408,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Jim Cramer",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "3M Company",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Apple",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "ExxonMobil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Second-Quarter 2026 Results",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "Apple",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.408,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Jim Cramer",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "3M Company",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "T-Mobile US",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "ExxonMobil",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Second-Quarter 2026 Results",
-              "type": "EVENT"
             }
           ]
         },
@@ -158,6 +158,10 @@
               "type": "EVENT"
             },
             {
+              "entity": "Google Cloud",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
               "entity": "Oracle",
               "type": "COMPANY"
             },
@@ -166,12 +170,8 @@
               "type": "COMPANY"
             },
             {
-              "entity": "3M Company",
+              "entity": "Apple",
               "type": "COMPANY"
-            },
-            {
-              "entity": "Jim Cramer",
-              "type": "FINANCIAL_ENTITY"
             }
           ]
         },
@@ -199,11 +199,11 @@
               "type": "EVENT"
             },
             {
-              "entity": "T-Mobile US",
+              "entity": "3M Company",
               "type": "COMPANY"
             },
             {
-              "entity": "3M Company",
+              "entity": "T-Mobile US",
               "type": "COMPANY"
             }
           ]
@@ -224,19 +224,19 @@
               "type": "COMPANY"
             },
             {
-              "entity": "ExxonMobil",
-              "type": "COMPANY"
-            },
-            {
               "entity": "Second-Quarter 2026 Results",
               "type": "EVENT"
             },
             {
-              "entity": "T-Mobile US",
+              "entity": "ExxonMobil",
               "type": "COMPANY"
             },
             {
               "entity": "3M Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "T-Mobile US",
               "type": "COMPANY"
             }
           ]
@@ -249,108 +249,9 @@
       "entries": [
         {
           "rank": 1,
-          "entity": "Semiconductor",
+          "entity": "Telecommunications",
           "entity_type": "SECTOR",
-          "novelty_z": -0.044,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Strong Buy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "On-Prem AI",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Michael Burry",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Linux",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Pelosi's Bet Meets Dilution",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "entity": "Michael Burry",
-          "entity_type": "PERSON",
-          "novelty_z": 1.51,
-          "trend_3m": [
-            0,
-            0,
-            11
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "NVDA Calls",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Chip Peers",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Gamescom 2026",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Best Month Since May",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "RTX A6000",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "entity": "Cellares",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "ESC Congress",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Growth of Breyanzi",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Large Oncology Drugmaker",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "IMAAVY",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "T, VZ, TMUS",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
+          "novelty_z": -0.598,
           "trend_3m": [
             0,
             0,
@@ -358,98 +259,32 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "T-Mobile US",
-              "type": "COMPANY"
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
             },
             {
-              "entity": "SPCX",
-              "type": "STOCK_TICKER"
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
             },
             {
               "entity": "Jim Cramer",
               "type": "PERSON"
             },
             {
-              "entity": "SPCX:NASDAQ",
-              "type": "STOCK_TICKER"
+              "entity": "Satellite Service",
+              "type": "PRODUCT"
             },
             {
-              "entity": "GE Vernova (GEV)",
+              "entity": "Cisco Systems Inc.",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 5,
-          "entity": "Anthropic",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.15,
-          "trend_3m": [
-            0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$315",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AI Growth",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "No Code Contract Management App",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "$1.2 Trillion",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Packages",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 6,
-          "entity": "Oncology Drugs",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Seagen-Origin Cancer Drug",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Drop",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Large Oncology Drugmaker",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Trading Up",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Ibrance",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 7,
+          "rank": 2,
           "entity": "T-Mobile US",
           "entity_type": "COMPANY",
-          "novelty_z": 2.092,
+          "novelty_z": 1.489,
           "trend_3m": [
             0,
             1,
@@ -465,408 +300,12 @@
               "type": "EVENT"
             },
             {
-              "entity": "MU WMT",
-              "type": "STOCK_TICKER"
-            },
-            {
               "entity": "Cisco Systems Inc.",
               "type": "COMPANY"
             },
             {
-              "entity": "Klarna",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 8,
-          "entity": "Camzyos",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "ESC Congress",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cellares",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Oncology Drugs",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Large Oncology Drugmaker",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "$315",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 9,
-          "entity": "AI Infrastructure Systems",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Pelosi's Bet Meets Dilution",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Tuition Payments",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Nepal",
-              "type": "COUNTRY"
-            },
-            {
-              "entity": "Veteran Executives",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "On-Prem AI",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 10,
-          "entity": "On-Prem AI",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Pelosi's Bet Meets Dilution",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AI Infrastructure Systems",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Retirees",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Semiconductor",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Linux",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 11,
-          "entity": "Openterface KeyMod",
-          "entity_type": "PRODUCT",
-          "novelty_z": 0.345,
-          "trend_3m": [
-            0,
-            0,
-            5
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Gamepad",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "USB Keyboard",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Crowdfunding",
-              "type": "EVENT"
-            },
-            {
-              "entity": "SSH Client",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Mouse",
-              "type": "FIN_INSTRUMENT_INFO"
-            }
-          ]
-        },
-        {
-          "rank": 12,
-          "entity": "Maven",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Thiel Turning To AI Power Assets",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "$100 Price Level",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Worst Month Ever",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Microsoft Corporation's Conference Call",
-              "type": "EVENT"
-            },
-            {
-              "entity": "$250",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 13,
-          "entity": "NeoGenomics Inc.",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Confidence",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "TScan Therapeutics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "$AMGN",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "R&amp;D Portfolio Refocusing",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Incyte Corporation",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 14,
-          "entity": "Einride",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.15,
-          "trend_3m": [
-            0,
-            0,
-            4
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "DensityAI",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "FSD Version",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 15,
-          "entity": "$BMY",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.044,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
               "entity": "MU WMT",
               "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Jim Cramer",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Microsoft Corporation's Conference Call",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Asset One Wealth Management LLC",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Osmosis Investment Management UK Ltd",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 16,
-          "entity": "AI Products",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Margin Loans",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "strong trading day",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "HDV Treatment",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "RTX 5000 Power Limit Control OC",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Michael Burry",
-              "type": "PERSON"
-            }
-          ]
-        },
-        {
-          "rank": 17,
-          "entity": "App Store",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AI and New Devices",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "New Mac Models With AI Upgrades",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Mac mini",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Mac Studio",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 18,
-          "entity": "FSD Version",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "DensityAI",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Driver Monitoring",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 19,
-          "entity": "MU WMT",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Jim Cramer",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Microsoft Corporation's Conference Call",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cisco Systems Inc.",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Klarna",
-              "type": "COMPANY"
             },
             {
               "entity": "GE Vernova (GEV)",
@@ -875,670 +314,10 @@
           ]
         },
         {
-          "rank": 20,
-          "entity": "Branch Expansion",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Digital Mortgage",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Series GG",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Efficiency",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Dividend Hike",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "MU WMT",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 21,
-          "entity": "CyberCab",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "FSD Version",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "TeraFab",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 22,
-          "entity": "HDV Treatment",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Nucleai Oncology",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Accelerated FDA Approval For HDV Treatment",
-              "type": "EVENT"
-            },
-            {
-              "entity": "PRECISE-HD",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Major League Rugby",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Astros",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 23,
-          "entity": "Norfolk Southern",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.044,
-          "trend_3m": [
-            0,
-            0,
-            3
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$159 vs $308",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "CFO",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Railroad Race",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Unipoly Chain",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Regulator",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 24,
-          "entity": "Service Revenue",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Starlink",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Microsoft Corporation's Conference Call",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Jim Cramer",
-              "type": "PERSON"
-            },
-            {
-              "entity": "T-Mobile US",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "MU WMT",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 25,
-          "entity": "Nucleai Oncology",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "HDV Treatment",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Lake Ontario",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Accelerated FDA Approval For HDV Treatment",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Gilead Sciences director",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Lake America",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 26,
-          "entity": "New Mac Models With AI Upgrades",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AI and New Devices",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "App Store",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Foldable iPhones",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Mac Studio",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 27,
-          "entity": "Angola",
-          "entity_type": "SECTOR",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Venezuela Oil Industry",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Angola Find",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Venezuela",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Fusion Technology",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Venezuela Agreement",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 28,
-          "entity": "RTX A6000",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Chip Peers",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Michael Burry",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Gamescom 2026",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Strong Buy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AI chip market",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 29,
-          "entity": "Cox Secured Notes and Legacy Secured Notes",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Unknown Insider",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Local News",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "strong trading day",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Margin Loans",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "De-leveraging",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 30,
-          "entity": "Zoox",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.238,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "FSD Version",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "DensityAI",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 31,
-          "entity": "DensityAI",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "FSD Version",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Driver Monitoring",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 32,
-          "entity": "Solar Roof Program",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Driver Monitoring",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AAPL's iPhone",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "DensityAI",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 33,
-          "entity": "$AMGN",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "TScan Therapeutics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Confidence",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "NeoGenomics Inc.",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Incyte Corporation",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "R&amp;D Portfolio Refocusing",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 34,
-          "entity": "GOOG",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Optimus Robots",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Autonomy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Driver Monitoring",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "DensityAI",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "FSD Version",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 35,
-          "entity": "Nashville",
-          "entity_type": "SECTOR",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "BAE Systems",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Jared Kushner",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Strong Technical Breakout Setup",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "LSE: BA.",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "E Fund Management Co. Ltd.",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 36,
-          "entity": "AI Antibody Technology Company",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "ESC Congress",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Jared Kushner",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Nashville",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Camzyos",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Large Oncology Drugmaker",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 37,
-          "entity": "Advanced Micro Devices",
-          "entity_type": "COMPANY",
-          "novelty_z": 4.228,
-          "trend_3m": [
-            0,
-            0,
-            25
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Semiconductor",
-              "type": "SECTOR"
-            },
-            {
-              "entity": "Michael Burry",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Strong Buy",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Gamescom 2026",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Linux",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 38,
-          "entity": "NBIS",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "NVDA Calls",
-              "type": "FIN_INSTRUMENT_INFO"
-            },
-            {
-              "entity": "Software Selloff",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "First participant",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Micron",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "$315",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 39,
-          "entity": "No Code Contract Management App",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$315",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "AI Growth",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Agentforce AI platform",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Claude",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Anthropic",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 40,
+          "rank": 3,
           "entity": "Jim Cramer",
           "entity_type": "PERSON",
-          "novelty_z": 3.257,
+          "novelty_z": 2.452,
           "trend_3m": [
             0,
             3,
@@ -1558,7 +337,106 @@
               "type": "COMPANY"
             },
             {
-              "entity": "Klarna",
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "entity": "Cisco Systems Inc.",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.526,
+          "trend_3m": [
+            0,
+            0,
+            8
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Satellite Service",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "entity": "General Electric Company",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.205,
+          "trend_3m": [
+            0,
+            0,
+            6
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
               "type": "COMPANY"
             },
             {
@@ -1566,216 +444,1173 @@
               "type": "COMPANY"
             }
           ]
+        },
+        {
+          "rank": 7,
+          "entity": "MU WMT",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Klarna",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "GE Vernova (GEV)",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Cloud Services",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 10,
+          "entity": "Defense",
+          "entity_type": "SECTOR",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Margin Repair",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Cellares",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Heart Drug Rights",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Margin Repair",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "CELMoD",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Klarna",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Satellite Texting",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Satellite Service",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "Mac Studio",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "M6 Chip",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New Mac Models With AI Upgrades",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 15,
+          "entity": "iPhone",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mac Studio",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "M6 Chip",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New Mac Models With AI Upgrades",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "entity": "Service Revenue",
+          "entity_type": "FINANCIAL_ENTITY",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Satellite Service",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Satellite Texting",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "T-Mobile US",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 17,
+          "entity": "Amazon.com",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.044,
+          "trend_3m": [
+            0,
+            0,
+            5
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Cloud Services",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "500 US Cities And Towns",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "AAPL's iPhone",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "FSD Version",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hold",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Autonomy",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "M6 Chip",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mac Studio",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New Mac Models With AI Upgrades",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "JPMorgan Chase & Co.",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.526,
+          "trend_3m": [
+            0,
+            0,
+            8
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Klarna",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "Walt Disney",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.365,
+          "trend_3m": [
+            0,
+            0,
+            7
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Apple",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.613,
+          "trend_3m": [
+            0,
+            1,
+            20
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "Adobe",
+          "entity_type": "COMPANY",
+          "novelty_z": 1.81,
+          "trend_3m": [
+            0,
+            0,
+            16
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "entity": "New Mac Models With AI Upgrades",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mac Studio",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "M6 Chip",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "AI and New Devices",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "F143 Engine",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Margin Repair",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Defense",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "FSD Version",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AAPL's iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "CyberCab",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Autonomy",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "Black Mountain Middle School",
+          "entity_type": "LOCATION",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Legal Tech Start-Ups",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Klarna",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "SpaceX",
+          "entity_type": "COMPANY",
+          "novelty_z": 0.847,
+          "trend_3m": [
+            0,
+            0,
+            10
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AAPL's iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "FSD Version",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "CELMoD",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "ZENBEXUS",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Cellares",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Heart Drug Rights",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "Zoox",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AAPL's iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "FSD Version",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            }
+          ]
+        },
+        {
+          "rank": 31,
+          "entity": "PayPal",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.131,
+          "trend_3m": [
+            0,
+            0,
+            18
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 32,
+          "entity": "Mac mini",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Mac Studio",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            }
+          ]
+        },
+        {
+          "rank": 33,
+          "entity": "Solar Roof Product",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AAPL's iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "FSD Version",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "CyberCab",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 34,
+          "entity": "Streaming Device",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cloud Services",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "GE Vernova (GEV)",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "entity": "CyberCab",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.437,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AAPL's iPhone",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Self-Driving Tech",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "FSD Version",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Einride",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "entity": "$MSFT",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Cloud Services",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Robotaxis",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 37,
+          "entity": "Robotaxis",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Cloud Services",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Klarna",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "GE Vernova",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.613,
+          "trend_3m": [
+            0,
+            0,
+            21
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Jim Cramer",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Cisco Systems Inc.",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Microsoft Corporation's Conference Call",
+              "type": "EVENT"
+            },
+            {
+              "entity": "MU WMT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "General Electric Company",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 39,
+          "entity": "AI Products",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "CNBC Article",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Michael Burry",
+              "type": "PERSON"
+            },
+            {
+              "entity": "Starbase",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "entity": "PNC Financial",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.598,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "-0.4%",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Telecommunications",
+              "type": "SECTOR"
+            },
+            {
+              "entity": "Attractive",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Second Month Of Gains",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Satellite Service",
+              "type": "PRODUCT"
+            }
+          ]
         }
       ]
     },
     "2026-09": {
       "period": "2026-09",
-      "total_entities": 343,
+      "total_entities": 584,
       "entries": [
         {
           "rank": 1,
-          "entity": "UnitedHealth",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.203,
+          "entity": "Low-priced EV Pickup Truck",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
-            6,
-            2
+            0,
+            1
           ],
           "predicted_impacted": [
             {
-              "entity": "Workforce Shortage",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "ConocoPhillips",
+              "entity": "Slate",
               "type": "COMPANY"
             },
             {
-              "entity": "Van ECK Associates Corp",
+              "entity": "Merck",
               "type": "COMPANY"
             },
             {
-              "entity": "Retail Services",
-              "type": "CONCEPT"
+              "entity": "Alzheimer\u2019s Drug",
+              "type": "PRODUCT"
             },
             {
-              "entity": "PANW",
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pfizer",
               "type": "COMPANY"
             }
           ]
         },
         {
           "rank": 2,
-          "entity": "Peers",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Comcast",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "General Dynamics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "null",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "entity": "hypersonic test",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "XA102 Adaptive Engine",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "F/A-18 engine parts",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "GE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Quest Headsets",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Power Rack",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "entity": "RTX 5090",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.178,
-          "trend_3m": [
-            0,
-            4,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "MSRP",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Amazon EMR Trino",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Quest Headsets",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Amazon S3",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Hemi V8",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "entity": "NFL Games",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Bars And Restaurants Nationwide",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Netflix",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Restaurant Delivery",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Merger",
-              "type": "EVENT"
-            },
-            {
-              "entity": "XA102 Adaptive Engine",
-              "type": "PRODUCT"
-            }
-          ]
-        },
-        {
-          "rank": 6,
-          "entity": "Tezspire",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.051,
-          "trend_3m": [
-            0,
-            5,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Amgen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Quest Headsets",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Intuit",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "2027 Ram 3500 HD",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Austin Streets Test Drive",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 7,
           "entity": "Quest Headsets",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
@@ -1791,102 +1626,69 @@
               "type": "PRODUCT"
             },
             {
-              "entity": "2027 Ram 2500 HD",
-              "type": "PRODUCT"
-            },
-            {
               "entity": "Hemi V8",
               "type": "CONCEPT"
             },
             {
-              "entity": "Cummins Diesel",
-              "type": "CONCEPT"
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
             }
           ]
         },
         {
-          "rank": 8,
-          "entity": "Starbucks",
+          "rank": 3,
+          "entity": "Neuphoria",
           "entity_type": "COMPANY",
-          "novelty_z": 2.238,
+          "novelty_z": -0.35,
           "trend_3m": [
             0,
-            22,
+            0,
             2
           ],
           "predicted_impacted": [
             {
-              "entity": "Three Analysts",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Van ECK Associates Corp",
+              "entity": "Merck",
               "type": "COMPANY"
             },
             {
-              "entity": "$SBUX",
+              "entity": "Alzheimer\u2019s Drug",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "NEUP",
               "type": "STOCK_TICKER"
             },
             {
-              "entity": "Bars And Restaurants Nationwide",
-              "type": "CONCEPT"
+              "entity": "Low-priced EV Pickup Truck",
+              "type": "PRODUCT"
             },
             {
-              "entity": "AI Shopping",
-              "type": "CONCEPT"
+              "entity": "Sandisk",
+              "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 9,
-          "entity": "Comcast",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.348,
-          "trend_3m": [
-            0,
-            15,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Ancora Advisors LLC",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Peers",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Intuit",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Owners",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 10,
-          "entity": "Power Rack",
+          "rank": 4,
+          "entity": "RTX 5090",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
+          "novelty_z": 0.175,
           "trend_3m": [
             0,
-            0,
+            4,
             1
           ],
           "predicted_impacted": [
             {
-              "entity": "Amazon EMR Trino",
-              "type": "PRODUCT"
+              "entity": "MSRP",
+              "type": "CONCEPT"
             },
             {
-              "entity": "Quest Headsets",
+              "entity": "Amazon EMR Trino",
               "type": "PRODUCT"
             },
             {
@@ -1894,20 +1696,119 @@
               "type": "PRODUCT"
             },
             {
-              "entity": "MSRP",
-              "type": "CONCEPT"
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Nike",
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "entity": "Merck",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.452,
+          "trend_3m": [
+            0,
+            16,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Alzheimer\u2019s Drug",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Neuphoria",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Low-priced EV Pickup Truck",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "AI Technology",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "American Express",
               "type": "COMPANY"
             }
           ]
         },
         {
-          "rank": 11,
-          "entity": "Van ECK Associates Corp",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.56,
+          "rank": 6,
+          "entity": "Alzheimer\u2019s Drug",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Merck",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Neuphoria",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "AI Technology",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Pfizer",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Low-priced EV Pickup Truck",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "entity": "Custom Power Racks",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Power Rack",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon S3",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "MSRP",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Adreno Neural Fusion",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "entity": "Amazon EMR Trino",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.35,
           "trend_3m": [
             0,
             0,
@@ -1915,20 +1816,53 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "$SBUX",
-              "type": "STOCK_TICKER"
+              "entity": "Amazon S3",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Starbucks",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "MSRP",
+              "entity": "Iceberg REST endpoint",
               "type": "CONCEPT"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 9,
+          "entity": "Power Rack",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Custom Power Racks",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon S3",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Nike",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
             },
             {
               "entity": "RTX 5090",
@@ -1937,10 +1871,43 @@
           ]
         },
         {
-          "rank": 12,
-          "entity": "Beauty Studio",
+          "rank": 10,
+          "entity": "Pfizer",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.627,
+          "trend_3m": [
+            0,
+            15,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AI Technology",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Medicus",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 3500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Patent Cliff",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "entity": "Autoimmune Drugs",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
@@ -1948,11 +1915,110 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Target",
+              "entity": "$LLY",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Seeking Alpha",
               "type": "COMPANY"
             },
             {
-              "entity": "AI Shopping",
+              "entity": "LLY Stock",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "Eli Lilly",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "RDNA 5",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 12,
+          "entity": "Steam Link",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 13,
+          "entity": "Diabetes Tools",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nutrition Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cardiac Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cancer Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "V-10",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 14,
+          "entity": "New MS cell therapy",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.35,
+          "trend_3m": [
+            0,
+            0,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Immune System Damage",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Multiple Sclerosis",
               "type": "CONCEPT"
             },
             {
@@ -1960,251 +2026,20 @@
               "type": "PRODUCT"
             },
             {
-              "entity": "Power Rack",
+              "entity": "Quest Headsets",
               "type": "PRODUCT"
             },
             {
-              "entity": "MMM Films",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 13,
-          "entity": "Oracle",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.602,
-          "trend_3m": [
-            1,
-            16,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Retail Analysts",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "HPE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Disease Progression Tracking",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "HD",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Bars And Restaurants Nationwide",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 14,
-          "entity": "XPeng",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Ultrahuman",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "null",
-              "type": "FINANCIAL_ENTITY"
-            },
-            {
-              "entity": "Qualcomm",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Peers",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
+              "entity": "Amazon S3",
+              "type": "PRODUCT"
             }
           ]
         },
         {
           "rank": 15,
-          "entity": "Danaher",
+          "entity": "Abbott",
           "entity_type": "COMPANY",
-          "novelty_z": 0.076,
-          "trend_3m": [
-            0,
-            6,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "DHR Health",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Nurse Family Partnership Program",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "General Dynamics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Google",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Intuit",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 16,
-          "entity": "Target",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.475,
-          "trend_3m": [
-            0,
-            16,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Beauty Studio",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "AI Shopping",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Jefferies",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 17,
-          "entity": "null",
-          "entity_type": "FINANCIAL_ENTITY",
-          "novelty_z": -0.56,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Li Auto",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Amgen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Peers",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Comcast",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 18,
-          "entity": "F/A-18 engine parts",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "GE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XA102 Adaptive Engine",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "hypersonic test",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Quest Headsets",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Iceberg REST endpoint",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 19,
-          "entity": "Chinese Parts",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Honda",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Suppliers",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "JPMorgan",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Amgen",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Jane Street",
-              "type": "FINANCIAL_ENTITY"
-            }
-          ]
-        },
-        {
-          "rank": 20,
-          "entity": "HPE",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.305,
+          "novelty_z": 0.0,
           "trend_3m": [
             0,
             3,
@@ -2212,110 +2047,180 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Oracle",
+              "entity": "Abbott Laboratories",
               "type": "COMPANY"
             },
             {
-              "entity": "Chevron Corporation",
+              "entity": "Nutrition Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cardiac Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Diabetes Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "UnitedHealth",
               "type": "COMPANY"
-            },
-            {
-              "entity": "Retail Analysts",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Bars And Restaurants Nationwide",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Nationwide",
-              "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 21,
-          "entity": "John Galliano",
-          "entity_type": "PERSON",
-          "novelty_z": -0.305,
+          "rank": 16,
+          "entity": "AI Technology",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.35,
           "trend_3m": [
             0,
-            2,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Met Gala",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Players",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Louisiana Court",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Commercialization",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Disney lawsuit challenging ABC license review",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 22,
-          "entity": "ConocoPhillips",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.432,
-          "trend_3m": [
-            0,
-            2,
+            5,
             1
           ],
           "predicted_impacted": [
             {
-              "entity": "UnitedHealth",
+              "entity": "Pfizer",
               "type": "COMPANY"
             },
             {
-              "entity": "Ancora Advisors LLC",
-              "type": "COMPANY"
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
             },
             {
-              "entity": "DLSS Multi Frame Generation",
+              "entity": "Ukrainian Drama 'Camouflage'",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 3500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hemi V8",
               "type": "CONCEPT"
-            },
-            {
-              "entity": "Comcast",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "RTX 40 series GPUs",
-              "type": "FIN_INSTRUMENT_INFO"
             }
           ]
         },
         {
-          "rank": 23,
-          "entity": "Amazon EMR Trino",
+          "rank": 17,
+          "entity": "Amazon S3",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.56,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
-            2
+            1
           ],
           "predicted_impacted": [
             {
-              "entity": "Amazon S3",
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "RTX 5090",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 18,
+          "entity": "hypersonic test",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "XA102 Adaptive Engine",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "F/A-18 engine parts",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "GE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Robotics",
               "type": "PRODUCT"
             },
             {
               "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 19,
+          "entity": "TransUnion",
+          "entity_type": "COMPANY",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "TSN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "$SPG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "VZ",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "MRK Stock",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "NEUP",
+              "type": "STOCK_TICKER"
+            }
+          ]
+        },
+        {
+          "rank": 20,
+          "entity": "F/A-18 engine parts",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "XA102 Adaptive Engine",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "GE",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "hypersonic test",
               "type": "PRODUCT"
             },
             {
@@ -2323,53 +2228,115 @@
               "type": "CONCEPT"
             },
             {
-              "entity": "2027 Ram 2500 HD",
+              "entity": "Robotics",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 21,
+          "entity": "Robotics",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Cornerstone",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Cornerstone Robotics",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "OnTrac AI",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "$MDT",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 22,
+          "entity": "Adreno Neural Fusion",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Qualcomm",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Ultrahuman",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Android and iPhone handsets",
               "type": "PRODUCT"
             },
             {
-              "entity": "Cummins Diesel",
-              "type": "CONCEPT"
+              "entity": "Amazon S3",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 23,
+          "entity": "Cardiac Tools",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Nutrition Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Diabetes Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cancer Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "V-10",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
             }
           ]
         },
         {
           "rank": 24,
-          "entity": "$SBUX",
-          "entity_type": "STOCK_TICKER",
-          "novelty_z": -0.56,
-          "trend_3m": [
-            0,
-            1,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "VZ",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Verizon Communications Inc.",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "FedEx",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 25,
-          "entity": "2027 Ram 3500 HD",
+          "entity": "2027 Ram 2500 HD",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.432,
+          "novelty_z": -0.175,
           "trend_3m": [
             0,
             0,
@@ -2377,9 +2344,137 @@
           ],
           "predicted_impacted": [
             {
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
               "entity": "Cummins Diesel",
               "type": "CONCEPT"
             },
+            {
+              "entity": "9 Trims",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 25,
+          "entity": "Oracle",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.977,
+          "trend_3m": [
+            1,
+            16,
+            4
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Retail Analysts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Retail Traders",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Disease Progression Tracking",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Stronger Rebound",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "HPE",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "entity": "Nutrition Tools",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Diabetes Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cardiac Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cancer Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "V-10",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "2027 Ram 2500 HD",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 27,
+          "entity": "$WFC",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.35,
+          "trend_3m": [
+            0,
+            1,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "$SPG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Wells Fargo & Company",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "COIN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "TSN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Simon Property Group",
+              "type": "COMPANY"
+            }
+          ]
+        },
+        {
+          "rank": 28,
+          "entity": "2027 Ram 3500 HD",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.175,
+          "trend_3m": [
+            0,
+            0,
+            3
+          ],
+          "predicted_impacted": [
             {
               "entity": "Hemi V8",
               "type": "CONCEPT"
@@ -2389,7 +2484,77 @@
               "type": "CONCEPT"
             },
             {
+              "entity": "Cummins Diesel",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Ukrainian Drama 'Camouflage'",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "AI Technology",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 29,
+          "entity": "Lockheed Martin",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.452,
+          "trend_3m": [
+            0,
+            16,
+            2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Defence Contracts",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "High Defence Demand",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "2027 Ram 3500 HD",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "TSN",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Cummins Diesel",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "entity": "RTX 50-series GPUs",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "AMD Graphics Cards",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
               "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "NBA 2K27",
               "type": "PRODUCT"
             },
             {
@@ -2399,10 +2564,43 @@
           ]
         },
         {
-          "rank": 26,
+          "rank": 31,
+          "entity": "Abbott Laboratories",
+          "entity_type": "COMPANY",
+          "novelty_z": 2.277,
+          "trend_3m": [
+            0,
+            11,
+            6
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Abbott",
+              "type": "COMPANY"
+            },
+            {
+              "entity": "Nutrition Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Diabetes Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cardiac Tools",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cancer Tools",
+              "type": "PRODUCT"
+            }
+          ]
+        },
+        {
+          "rank": 32,
           "entity": "XA102 Adaptive Engine",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
@@ -2422,284 +2620,86 @@
               "type": "PRODUCT"
             },
             {
-              "entity": "Quest Headsets",
+              "entity": "Robotics",
               "type": "PRODUCT"
             },
             {
-              "entity": "Medtronic",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 27,
-          "entity": "McDonald's",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.458,
-          "trend_3m": [
-            0,
-            9,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "RDNA 5",
+              "entity": "Cloud Business",
               "type": "PRODUCT"
-            },
-            {
-              "entity": "Boeing",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Capital One Financial",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Target",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "New Accounts",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 28,
-          "entity": "Astra AI Model",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.56,
-          "trend_3m": [
-            0,
-            0,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Azure Customers",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Iceberg REST endpoint",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Amazon EMR Trino",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Hemi V8",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Cummins Diesel",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 29,
-          "entity": "FedEx",
-          "entity_type": "COMPANY",
-          "novelty_z": 0.585,
-          "trend_3m": [
-            0,
-            9,
-            2
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Driver Fatigue",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Truck Crash Allegations",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "$SBUX",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "Capital One",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 30,
-          "entity": "DHR Health",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.56,
-          "trend_3m": [
-            0,
-            1,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Nurse Family Partnership Program",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "Danaher",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Louisiana Court",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Gilead",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Players",
-              "type": "CONCEPT"
-            }
-          ]
-        },
-        {
-          "rank": 31,
-          "entity": "Amgen",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.221,
-          "trend_3m": [
-            0,
-            15,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Tezspire",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Intuit",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Li Auto",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Tesla",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Austin Streets Test Drive",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 32,
-          "entity": "Restaurant Delivery",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Walmart",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Nationwide",
-              "type": "CONCEPT"
-            },
-            {
-              "entity": "2027 Ram 3500 HD",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "New Fruit Recalls",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cummins Diesel",
-              "type": "CONCEPT"
             }
           ]
         },
         {
           "rank": 33,
-          "entity": "Pfizer",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.348,
+          "entity": "NVIDIA GPUs",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.35,
           "trend_3m": [
             0,
-            15,
+            0,
             2
           ],
           "predicted_impacted": [
             {
-              "entity": "Medicus",
+              "entity": "AWS",
               "type": "COMPANY"
             },
             {
-              "entity": "Van ECK Associates Corp",
-              "type": "COMPANY"
+              "entity": "Cloud Services",
+              "type": "FINANCIAL_ENTITY"
+            },
+            {
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
             },
             {
               "entity": "RTX 5090",
               "type": "PRODUCT"
             },
             {
-              "entity": "Beauty Studio",
+              "entity": "Amazon EMR Trino",
               "type": "PRODUCT"
-            },
-            {
-              "entity": "MSRP",
-              "type": "CONCEPT"
             }
           ]
         },
         {
           "rank": 34,
-          "entity": "HD Hyundai",
+          "entity": "AWS",
           "entity_type": "COMPANY",
-          "novelty_z": -0.305,
+          "novelty_z": 0.0,
           "trend_3m": [
             0,
-            2,
-            2
+            0,
+            4
           ],
           "predicted_impacted": [
             {
-              "entity": "Thoothukudi",
-              "type": "CONCEPT"
+              "entity": "NVIDIA GPUs",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Kakinada",
-              "type": "CONCEPT"
+              "entity": "Cloud Services",
+              "type": "FINANCIAL_ENTITY"
             },
             {
-              "entity": "Lowering BAC Limit",
-              "type": "CONCEPT"
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
             },
             {
-              "entity": "Paris Agreement\u2019s 1.5-degree-C warming target",
-              "type": "MACRO_INDICATOR"
+              "entity": "RTX 5090",
+              "type": "PRODUCT"
             },
             {
-              "entity": "November elections",
-              "type": "EVENT"
+              "entity": "Amazon EMR Trino",
+              "type": "PRODUCT"
             }
           ]
         },
         {
           "rank": 35,
-          "entity": "Manchester City W.F.C.",
+          "entity": "Veeva",
           "entity_type": "COMPANY",
-          "novelty_z": -0.687,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
@@ -2707,131 +2707,32 @@
           ],
           "predicted_impacted": [
             {
-              "entity": "Orlando Pride",
+              "entity": "VEEV",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "Li Auto",
               "type": "COMPANY"
             },
             {
-              "entity": "Anna Moorhouse",
-              "type": "PERSON"
-            },
-            {
-              "entity": "Simon Property Group",
+              "entity": "Abbott",
               "type": "COMPANY"
             },
             {
-              "entity": "\"Hold\"",
-              "type": "CONCEPT"
+              "entity": "General Dynamics Houmach Worldwide",
+              "type": "COMPANY"
             },
             {
-              "entity": "Target",
+              "entity": "Capital One Financial",
               "type": "COMPANY"
             }
           ]
         },
         {
           "rank": 36,
-          "entity": "OnTrac AI",
-          "entity_type": "COMPANY",
-          "novelty_z": -0.56,
-          "trend_3m": [
-            0,
-            1,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Medtronic",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Cornerstone Robotics",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "GE",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "XA102 Adaptive Engine",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Houmach Worldwide",
-              "type": "COMPANY"
-            }
-          ]
-        },
-        {
-          "rank": 37,
-          "entity": "Autoimmune Drugs",
-          "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
-          "trend_3m": [
-            0,
-            0,
-            1
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "$LLY",
-              "type": "STOCK_TICKER"
-            },
-            {
-              "entity": "RDNA 5",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Eli Lilly",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "2027 Ram 3500 HD",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Mondelez",
-              "type": "STOCK_TICKER"
-            }
-          ]
-        },
-        {
-          "rank": 38,
-          "entity": "Tesla",
-          "entity_type": "COMPANY",
-          "novelty_z": 3.637,
-          "trend_3m": [
-            0,
-            30,
-            5
-          ],
-          "predicted_impacted": [
-            {
-              "entity": "Austin Streets Test Drive",
-              "type": "EVENT"
-            },
-            {
-              "entity": "CyberCab",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "Safety Regulator Scrutiny",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cybercab Launch",
-              "type": "EVENT"
-            },
-            {
-              "entity": "Cybercab Event",
-              "type": "EVENT"
-            }
-          ]
-        },
-        {
-          "rank": 39,
           "entity": "Dryer",
           "entity_type": "PRODUCT",
-          "novelty_z": -0.687,
+          "novelty_z": -0.525,
           "trend_3m": [
             0,
             0,
@@ -2847,28 +2748,61 @@
               "type": "SECTOR"
             },
             {
-              "entity": "MSRP",
+              "entity": "New MS cell therapy",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Immune System Damage",
               "type": "CONCEPT"
             },
             {
-              "entity": "Adreno Neural Fusion",
-              "type": "PRODUCT"
-            },
-            {
-              "entity": "RTX 5090",
-              "type": "PRODUCT"
+              "entity": "MSRP",
+              "type": "CONCEPT"
             }
           ]
         },
         {
-          "rank": 40,
-          "entity": "Intuit",
-          "entity_type": "COMPANY",
-          "novelty_z": 1.348,
+          "rank": 37,
+          "entity": "John Galliano",
+          "entity_type": "PERSON",
+          "novelty_z": 0.0,
           "trend_3m": [
             0,
-            15,
+            2,
             2
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "Met Gala",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Maria Bartiromo\u2019s departure",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Lindsay Clancy Murder Case",
+              "type": "EVENT"
+            },
+            {
+              "entity": "Mistrial Declared",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Players",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 38,
+          "entity": "Tezspire",
+          "entity_type": "PRODUCT",
+          "novelty_z": 0.35,
+          "trend_3m": [
+            0,
+            5,
+            1
           ],
           "predicted_impacted": [
             {
@@ -2876,20 +2810,86 @@
               "type": "COMPANY"
             },
             {
-              "entity": "XPeng",
-              "type": "COMPANY"
-            },
-            {
-              "entity": "Tezspire",
+              "entity": "Repatha",
               "type": "PRODUCT"
             },
             {
-              "entity": "Ultrahuman",
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Cummins Diesel",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 39,
+          "entity": "AMD Graphics Cards",
+          "entity_type": "PRODUCT",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "RTX 50-series GPUs",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "NBA 2K27",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Hemi V8",
+              "type": "CONCEPT"
+            },
+            {
+              "entity": "Quest Headsets",
+              "type": "PRODUCT"
+            },
+            {
+              "entity": "Iceberg REST endpoint",
+              "type": "CONCEPT"
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "entity": "TSN",
+          "entity_type": "STOCK_TICKER",
+          "novelty_z": -0.525,
+          "trend_3m": [
+            0,
+            0,
+            1
+          ],
+          "predicted_impacted": [
+            {
+              "entity": "TransUnion",
               "type": "COMPANY"
             },
             {
-              "entity": "GTLB",
-              "type": "COMPANY"
+              "entity": "$SPG",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "VZ",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "MRK Stock",
+              "type": "STOCK_TICKER"
+            },
+            {
+              "entity": "LULU",
+              "type": "STOCK_TICKER"
             }
           ]
         }

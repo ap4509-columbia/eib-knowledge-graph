@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 82,
-    "edges": 68,
+    "nodes": 85,
+    "edges": 71,
     "scored_edges": 0
   },
   "nodes": [
@@ -30,14 +30,14 @@
     {
       "id": "Novartis",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 7,
       "x": 174.42683338276905,
       "y": 795.0635836368486
     },
     {
       "id": "Myricx Bio",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": 167.32434660743826,
       "y": 849.2121935265809
     },
@@ -352,7 +352,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -73.07221869236456,
       "y": 147.86965814240233
     },
@@ -579,6 +579,27 @@
       "degree": 1,
       "x": 900.0,
       "y": -382.9513530363459
+    },
+    {
+      "id": "AI Technology",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -673.9107337755845,
+      "y": -632.4760044362732
+    },
+    {
+      "id": "Oncology",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 228.4693825355899,
+      "y": 844.781327781292
+    },
+    {
+      "id": "Citi",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 251.63251792716392,
+      "y": -338.12551248923484
     }
   ],
   "edges": [
@@ -655,9 +676,9 @@
       "causal_type": "CORPORATE_ACTION",
       "polarity": "positive",
       "origin": "news",
-      "weight": 2,
+      "weight": 3,
       "score": null,
-      "sentiment": 0.85,
+      "sentiment": 0.725,
       "materiality_usd": 3000000000.0,
       "materiality_log": 21.822,
       "event_type": "M_AND_A"
@@ -1669,6 +1690,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
+    },
+    {
+      "id": "Novartis||Invests In||AI Technology",
+      "source": "Novartis",
+      "target": "AI Technology",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Novartis||Expands Pipeline In||Oncology",
+      "source": "Novartis",
+      "target": "Oncology",
+      "rel": "Expands Pipeline In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Citi||Maintains Buy Rating On||AstraZeneca",
+      "source": "Citi",
+      "target": "AstraZeneca",
+      "rel": "Maintains Buy Rating On",
+      "rel_cat": "GMM",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
     }
   ]
 }
