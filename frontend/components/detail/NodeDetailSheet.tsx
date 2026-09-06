@@ -93,8 +93,10 @@ export function NodeDetailSheet({
             </button>
           </div>
 
-          {/* Body */}
-          <ScrollArea className="flex-1">
+          {/* Body — min-h-0 is load-bearing: without it this flex item
+              grows to its content height and the viewport never gets a
+              scrollable overflow, so long edge lists just clip. */}
+          <ScrollArea className="min-h-0 flex-1 overflow-hidden">
             <div className="space-y-5 px-6 py-4 pb-12">
               {data.outgoing.length > 0 && (
                 <section>

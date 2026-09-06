@@ -460,7 +460,7 @@ function ClusterCard({
         />
         <span className="text-xs font-semibold">Cluster {cluster}</span>
         <span className="ml-auto font-mono text-[10px] text-muted-foreground">
-          {size} entities
+          {size} {size === 1 ? "entity" : "entities"}
         </span>
       </div>
       <div className="mt-1 text-[10px] text-muted-foreground">{sigText}</div>
