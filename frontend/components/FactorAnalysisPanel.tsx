@@ -37,24 +37,53 @@ function clusterColor(c: number): string {
   return CLUSTER_COLORS[c % CLUSTER_COLORS.length];
 }
 
-/** Semantic cluster palette: a cluster is colored by its DOMINANT factor
- *  trait, so a color means the same thing at every date on the timeline
- *  (emerald is always "positive tone", slate always "derivative
- *  coverage") and companies change color to follow their cluster —
- *  instead of KMeans's arbitrary cluster indices reshuffling the palette
- *  every date. */
-const FACTOR_SIGN_COLORS: Record<string, string> = {
-  "attention+": "#d97706", // amber — heavily covered
-  "attention-": "#a8a29e", // stone — lightly covered
-  "sentiment+": "#059669", // emerald — positive tone
-  "sentiment-": "#dc2626", // red — negative tone
-  "consensus+": "#0284c7", // sky — sources agree
-  "consensus-": "#7c3aed", // violet — contested story
-  "novelty+": "#0d9488", // teal — generates its own storylines
-  "novelty-": "#64748b", // slate — derivative coverage
-  "materiality+": "#be123c", // rose — big money involved
-  "materiality-": "#92400e", // brown — little money involved
-};
+/** Canonical factor order — signatures always list and key traits in this
+ *  sequence, never by strength. */
+const FACTOR_ORDER = [
+  "attention",
+  "sentiment",
+  "consensus",
+  "novelty",
+  "materiality",
+];
+
+/** Semantic cluster colors: a color is a deterministic function of the
+ *  cluster's FULL trait combination (all signature factors with their
+ *  signs, in canonical order). The same combination — e.g. Consensus+ ·
+ *  Novelty+ · Materiality+ — therefore maps to the same color on every
+ *  date of the timeline, and any different combination maps to a
+ *  different hue. Companies change color only when their cluster's
+ *  combination changes, never because KMeans renumbered its clusters. */
+function signatureKey(
+  signature: Array<{ factor: string; loading: number }>
+): string {
+  return [...signature]
+    .sort(
+      (a, b) => FACTOR_ORDER.indexOf(a.factor) - FACTOR_ORDER.indexOf(b.factor)
+    )
+    .map((s) => `${s.factor}${s.loading > 0 ? "+" : "-"}`)
+    .join("|");
+}
+
+function signatureColor(
+  signature: Array<{ factor: string; loading: number }>
+): string {
+  // Exact enumeration, no hashing: each factor is absent (0), positive
+  // (1) or negative (2) in the signature, giving every possible
+  // combination a unique base-3 index (3^5 = 243). Golden-angle spacing
+  // over that index yields a distinct, stable hue for each — provably
+  // collision-free, so "different combinations, different colors" holds
+  // for the entire signature space, forever.
+  let index = 0;
+  for (let i = 0; i < FACTOR_ORDER.length; i++) {
+    const entry = signature.find((s) => s.factor === FACTOR_ORDER[i]);
+    const state = entry == null ? 0 : entry.loading > 0 ? 1 : 2;
+    index = index * 3 + state;
+  }
+  const hue = (index * 137.508) % 360;
+  const light = 38 + (index % 4) * 4; // 38–50%: extra separation for near hues
+  return `hsl(${hue.toFixed(1)}, 62%, ${light}%)`;
+}
 
 function buildClusterColors(
   clusters: Array<{
@@ -62,23 +91,9 @@ function buildClusterColors(
     signature: Array<{ factor: string; loading: number }>;
   }>
 ): Record<number, string> {
-  const used = new Set<string>();
   const out: Record<number, string> = {};
   for (const c of clusters) {
-    let color: string | undefined;
-    // Walk the signature strongest-first; skip colors already claimed by
-    // another cluster this date so two clusters never look identical.
-    for (const sig of c.signature) {
-      const cand =
-        FACTOR_SIGN_COLORS[`${sig.factor}${sig.loading > 0 ? "+" : "-"}`];
-      if (cand && !used.has(cand)) {
-        color = cand;
-        break;
-      }
-    }
-    color = color ?? clusterColor(c.cluster);
-    used.add(color);
-    out[c.cluster] = color;
+    out[c.cluster] = signatureColor(c.signature);
   }
   return out;
 }
@@ -216,11 +231,12 @@ function AboutStrip() {
             technique (PCA) flattens them onto two axes while preserving as
             much of the differences between entities as possible. Points
             near each other have similar news profiles; colors are the
-            clusters, and each color is keyed to the cluster&rsquo;s
-            dominant trait (emerald is always positive tone, red always
-            negative tone, slate always derivative coverage) — so a color
-            means the same thing at every date on the timeline, and a
-            company changes color when its news personality changes.
+            clusters, and each color is keyed to the cluster&rsquo;s full
+            trait combination — the same combination (say Consensus+ ·
+            Novelty+ · Materiality+) is the same color at every date on
+            the timeline, a different combination is a different color,
+            and a company changes color only when its news personality
+            changes.
             Because the map is a flattened view, trust the colors over the
             distances. Profiles reflect the current rolling news
             window, so the picture shifts as coverage changes — that&rsquo;s
@@ -521,16 +537,7 @@ function ClusterCard({
   color: string;
 }) {
   // Fixed canonical order (not by strength): every card lists its traits
-  // in the same factor sequence, so cards scan column-like instead of
-  // each one starting with a different factor. Color still encodes the
-  // strongest trait (buildClusterColors walks by strength).
-  const FACTOR_ORDER = [
-    "attention",
-    "sentiment",
-    "consensus",
-    "novelty",
-    "materiality",
-  ];
+  // in the same factor sequence, matching the order the color key uses.
   const sigText = [...signature]
     .sort(
       (a, b) => FACTOR_ORDER.indexOf(a.factor) - FACTOR_ORDER.indexOf(b.factor)
