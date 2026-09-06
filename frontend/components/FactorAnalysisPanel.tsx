@@ -520,7 +520,21 @@ function ClusterCard({
   members: string[];
   color: string;
 }) {
-  const sigText = signature
+  // Fixed canonical order (not by strength): every card lists its traits
+  // in the same factor sequence, so cards scan column-like instead of
+  // each one starting with a different factor. Color still encodes the
+  // strongest trait (buildClusterColors walks by strength).
+  const FACTOR_ORDER = [
+    "attention",
+    "sentiment",
+    "consensus",
+    "novelty",
+    "materiality",
+  ];
+  const sigText = [...signature]
+    .sort(
+      (a, b) => FACTOR_ORDER.indexOf(a.factor) - FACTOR_ORDER.indexOf(b.factor)
+    )
     .map((s) => `${factorTitle(s.factor)}${s.loading > 0 ? "+" : "−"}`)
     .join(" · ");
   return (
