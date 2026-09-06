@@ -49,6 +49,15 @@ print(round(d.get('MRR',0),3), round(d.get('Hits@1',0),3), round(d.get('Hits@3',
     --strategy "$TAG" --model-label "CE (No Edge Feats)" --mrr "$MRR" \
     --hits1 "$H1" --hits3 "$H3" --hits10 "$H10"
 
+  # Keep the variants index's baseline row in sync with today's retrain —
+  # without this the comparison table shows registration-day metrics while
+  # the scorecard shows today's.
+  if [ -f "frontend/public/data/sources/$CORPUS/predictions_variants.json" ]; then
+    python3 -m scripts.update_prediction_variants --source-id "$CORPUS" --id gat \
+      --label "GAT (No Edge Feats)" --file predictions.json \
+      --note "Baseline attention encoder, retrained daily by the cron" --first
+  fi
+
   # Ensure the Predictions tab is on for this source once predictions exist.
   python3 - "$CORPUS" <<'PYEOF'
 import json, sys

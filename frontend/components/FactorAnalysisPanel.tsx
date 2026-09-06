@@ -37,6 +37,52 @@ function clusterColor(c: number): string {
   return CLUSTER_COLORS[c % CLUSTER_COLORS.length];
 }
 
+/** Semantic cluster palette: a cluster is colored by its DOMINANT factor
+ *  trait, so a color means the same thing at every date on the timeline
+ *  (emerald is always "positive tone", slate always "derivative
+ *  coverage") and companies change color to follow their cluster —
+ *  instead of KMeans's arbitrary cluster indices reshuffling the palette
+ *  every date. */
+const FACTOR_SIGN_COLORS: Record<string, string> = {
+  "attention+": "#d97706", // amber — heavily covered
+  "attention-": "#a8a29e", // stone — lightly covered
+  "sentiment+": "#059669", // emerald — positive tone
+  "sentiment-": "#dc2626", // red — negative tone
+  "consensus+": "#0284c7", // sky — sources agree
+  "consensus-": "#7c3aed", // violet — contested story
+  "novelty+": "#0d9488", // teal — generates its own storylines
+  "novelty-": "#64748b", // slate — derivative coverage
+  "materiality+": "#be123c", // rose — big money involved
+  "materiality-": "#92400e", // brown — little money involved
+};
+
+function buildClusterColors(
+  clusters: Array<{
+    cluster: number;
+    signature: Array<{ factor: string; loading: number }>;
+  }>
+): Record<number, string> {
+  const used = new Set<string>();
+  const out: Record<number, string> = {};
+  for (const c of clusters) {
+    let color: string | undefined;
+    // Walk the signature strongest-first; skip colors already claimed by
+    // another cluster this date so two clusters never look identical.
+    for (const sig of c.signature) {
+      const cand =
+        FACTOR_SIGN_COLORS[`${sig.factor}${sig.loading > 0 ? "+" : "-"}`];
+      if (cand && !used.has(cand)) {
+        color = cand;
+        break;
+      }
+    }
+    color = color ?? clusterColor(c.cluster);
+    used.add(color);
+    out[c.cluster] = color;
+  }
+  return out;
+}
+
 function factorTitle(name: string): string {
   return {
     attention: "Attention",
@@ -115,23 +161,37 @@ function AboutStrip() {
             company and topic gets a news profile, and similar profiles are
             grouped so unusual behaviour stands out.
           </p>
-          <p>
+          <div>
             <span className="font-medium text-foreground">
               The five factors
             </span>{" "}
             are five simple questions asked of each entity&rsquo;s recent
-            coverage: <span className="text-foreground">Attention</span> —
-            how much is it being written about?{" "}
-            <span className="text-foreground">Sentiment</span> — is the tone
-            positive or negative?{" "}
-            <span className="text-foreground">Consensus</span> — do sources
-            agree, or is the story contested?{" "}
-            <span className="text-foreground">Novelty</span>&nbsp;— is it
-            generating its own storylines, or only appearing in
-            others&rsquo;? <span className="text-foreground">Materiality</span>{" "}
-            — how much money do its stories involve (deal sizes, fines,
-            revenue figures)?
-          </p>
+            coverage:
+            <ul className="mt-1 ml-4 list-disc space-y-0.5">
+              <li>
+                <span className="text-foreground">Attention</span> — how much
+                is it being written about?
+              </li>
+              <li>
+                <span className="text-foreground">Sentiment</span> — is the
+                tone positive or negative?
+              </li>
+              <li>
+                <span className="text-foreground">Consensus</span> — do
+                sources agree, or is the story contested?
+              </li>
+              <li>
+                <span className="text-foreground">Novelty</span> — is it
+                generating its own storylines, or only appearing in
+                others&rsquo;?
+              </li>
+              <li>
+                <span className="text-foreground">Materiality</span> — how
+                much money do its stories involve (deal sizes, fines,
+                revenue figures)?
+              </li>
+            </ul>
+          </div>
           <p>
             <span className="font-medium text-foreground">
               The clusters
@@ -156,8 +216,13 @@ function AboutStrip() {
             technique (PCA) flattens them onto two axes while preserving as
             much of the differences between entities as possible. Points
             near each other have similar news profiles; colors are the
-            clusters. Because the map is a flattened view, trust the colors
-            over the distances. Profiles reflect the current rolling news
+            clusters, and each color is keyed to the cluster&rsquo;s
+            dominant trait (emerald is always positive tone, red always
+            negative tone, slate always derivative coverage) — so a color
+            means the same thing at every date on the timeline, and a
+            company changes color when its news personality changes.
+            Because the map is a flattened view, trust the colors over the
+            distances. Profiles reflect the current rolling news
             window, so the picture shifts as coverage changes — that&rsquo;s
             by design for a live corpus. Point size ≈ mention count; hover
             any point for its exact scores.
@@ -168,7 +233,13 @@ function AboutStrip() {
   );
 }
 
-function Scatter({ entities }: { entities: FactorEntity[] }) {
+function Scatter({
+  entities,
+  clusterColors,
+}: {
+  entities: FactorEntity[];
+  clusterColors: Record<number, string>;
+}) {
   const W = 640, H = 420;
   const M = { top: 20, right: 24, bottom: 40, left: 40 };
   const b = useMemo(() => computeBounds(entities), [entities]);
@@ -368,7 +439,7 @@ function Scatter({ entities }: { entities: FactorEntity[] }) {
               cx={cx}
               cy={cy}
               r={(4 + Math.min(4, e.n_articles - 2)) * Math.sqrt(zs)}
-              fill={clusterColor(e.cluster)}
+              fill={clusterColors[e.cluster] ?? clusterColor(e.cluster)}
               fillOpacity={isHovered ? 1 : 0.85}
               stroke={isHovered ? "currentColor" : "none"}
               strokeWidth={isHovered ? 1.5 : 0}
@@ -441,13 +512,14 @@ function ClusterCard({
   size,
   signature,
   members,
+  color,
 }: {
   cluster: number;
   size: number;
   signature: Array<{ factor: string; loading: number }>;
   members: string[];
+  color: string;
 }) {
-  const color = clusterColor(cluster);
   const sigText = signature
     .map((s) => `${factorTitle(s.factor)}${s.loading > 0 ? "+" : "−"}`)
     .join(" · ");
@@ -616,6 +688,13 @@ function DateScrubber({
 export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
   const [data, setData] = useState<FactorsFile | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Stable semantic colors for this bundle's clusters (see
+  // FACTOR_SIGN_COLORS): recomputed per date, but a given color always
+  // encodes the same dominant trait.
+  const clusterColors = useMemo(
+    () => (data ? buildClusterColors(data.kmeans.clusters) : {}),
+    [data]
+  );
   // History scrubber: dated bundles from factors/index.json; null date =
   // latest.
   const [dates, setDates] = useState<string[]>([]);
@@ -716,7 +795,10 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
                 className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4 transition-opacity duration-150"
                 style={{ opacity: isFetching ? 0.7 : 1 }}
               >
-                <Scatter entities={data.entities} />
+                <Scatter
+                  entities={data.entities}
+                  clusterColors={clusterColors}
+                />
               </div>
             ) : (
               <div className="flex flex-1 items-center px-6 text-xs text-muted-foreground">
@@ -747,6 +829,7 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
                 size={c.size}
                 signature={c.signature}
                 members={c.members}
+                color={clusterColors[c.cluster] ?? clusterColor(c.cluster)}
               />
             ))}
             <div className="pt-2 text-[10px] leading-snug text-muted-foreground">

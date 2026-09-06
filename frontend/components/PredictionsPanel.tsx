@@ -588,7 +588,37 @@ export function PredictionsView({
         {data && <span>{data.model}</span>}
       </div>
 
-      {/* Backtest metrics (encoder toggle + scorecard) behind one slim
+      {/* Model encoder switcher — ALWAYS visible when the source ships
+          several trained models (it must not hide inside the collapsed
+          metrics, or live-source variants look unimplemented on phones).
+          The metric comparison table stays behind the collapse below. */}
+      {variants && variants.length > 1 && (
+        <div className="shrink-0 border-b border-border/60 px-6 py-2">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+              Model encoder
+            </span>
+            {variants.map((v) => (
+              <button
+                key={v.id}
+                type="button"
+                onClick={() => setVariantId(v.id)}
+                title={v.note}
+                className={
+                  "rounded-md border px-2.5 py-1 text-xs font-medium transition " +
+                  (v.id === variantId
+                    ? "border-foreground/40 bg-foreground/10 text-foreground"
+                    : "border-border bg-muted/40 text-muted-foreground hover:bg-accent hover:text-foreground")
+                }
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Backtest metrics (comparison table + scorecard) behind one slim
           collapsible header, so the leaderboard keeps the vertical space
           — critical on phones. Collapsed shows a one-line summary. */}
       {data && (
@@ -614,31 +644,9 @@ export function PredictionsView({
         </button>
       )}
 
-      {/* Model-variant switcher + metric comparison — only when the
-          source ships more than one trained model. */}
+      {/* Metric comparison table — behind the metrics collapse. */}
       {!metricsCollapsed && variants && variants.length > 1 && (
         <div className="shrink-0 border-b border-border/60 px-6 py-2.5">
-          <div className="mb-2 flex flex-wrap items-center gap-1.5">
-            <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-              Model encoder
-            </span>
-            {variants.map((v) => (
-              <button
-                key={v.id}
-                type="button"
-                onClick={() => setVariantId(v.id)}
-                title={v.note}
-                className={
-                  "rounded-md border px-2.5 py-1 text-xs font-medium transition " +
-                  (v.id === variantId
-                    ? "border-foreground/40 bg-foreground/10 text-foreground"
-                    : "border-border bg-muted/40 text-muted-foreground hover:bg-accent hover:text-foreground")
-                }
-              >
-                {v.label}
-              </button>
-            ))}
-          </div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] text-left font-mono text-[11px] tabular-nums">
               <thead>
@@ -652,13 +660,27 @@ export function PredictionsView({
                 </tr>
               </thead>
               <tbody>
-                {variants.map((v) => (
+                {variants.map((rawV) => {
+                  // The selected variant's predictions file carries fresher
+                  // metrics than the registration-time index (live corpora
+                  // retrain the baseline daily) — prefer the live numbers.
+                  const isActive = rawV.id === variantId;
+                  const v =
+                    isActive && data?.mrr != null
+                      ? {
+                          ...rawV,
+                          mrr: data.mrr,
+                          hits1: data.hits1 ?? rawV.hits1,
+                          hits3: data.hits3 ?? rawV.hits3,
+                          hits10: data.hits10 ?? rawV.hits10,
+                          months: Object.keys(data.periods).length,
+                        }
+                      : rawV;
+                  return (
                   <tr
                     key={v.id}
                     className={
-                      v.id === variantId
-                        ? "text-foreground"
-                        : "text-muted-foreground"
+                      isActive ? "text-foreground" : "text-muted-foreground"
                     }
                   >
                     <td className="py-0.5 pr-3">{v.label}</td>
@@ -674,7 +696,8 @@ export function PredictionsView({
                     </td>
                     <td className="py-0.5">{v.months ?? "–"}</td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>
