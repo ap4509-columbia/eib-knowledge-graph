@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 229,
-    "edges": 199,
+    "nodes": 233,
+    "edges": 202,
     "scored_edges": 0
   },
   "nodes": [
@@ -254,7 +254,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 14,
+      "degree": 15,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -331,7 +331,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": 116.62188721766933,
       "y": -557.0797074222387
     },
@@ -1608,6 +1608,34 @@
       "degree": 1,
       "x": 816.3374348604278,
       "y": -261.5477338393686
+    },
+    {
+      "id": "Dutch Court",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 899.9999999999999,
+      "y": -205.4745621465869
+    },
+    {
+      "id": "Swallowing Disorder",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -515.4672542132935,
+      "y": 245.6839304451931
+    },
+    {
+      "id": "Equinor ASA",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -116.88801024506868,
+      "y": -624.2729923581658
+    },
+    {
+      "id": "Shareholders",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -251.5003338731759,
+      "y": -596.8293224493997
     }
   ],
   "edges": [
@@ -4794,6 +4822,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Wins Court Case In||Dutch Court",
+      "source": "Novo Nordisk",
+      "target": "Dutch Court",
+      "rel": "Wins Court Case In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "AstraZeneca||Develops Drug For||Swallowing Disorder",
+      "source": "AstraZeneca",
+      "target": "Swallowing Disorder",
+      "rel": "Develops Drug For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Equinor ASA||Pays Dividend To||Shareholders",
+      "source": "Equinor ASA",
+      "target": "Shareholders",
+      "rel": "Pays Dividend To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

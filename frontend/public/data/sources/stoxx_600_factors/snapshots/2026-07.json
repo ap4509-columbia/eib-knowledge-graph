@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 85,
-    "edges": 71,
+    "nodes": 86,
+    "edges": 73,
     "scored_edges": 0
   },
   "nodes": [
@@ -30,14 +30,14 @@
     {
       "id": "Novartis",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 9,
       "x": 174.42683338276905,
       "y": 795.0635836368486
     },
     {
       "id": "Myricx Bio",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": 167.32434660743826,
       "y": 849.2121935265809
     },
@@ -142,7 +142,7 @@
     {
       "id": "Unilever",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -132.1764795844071,
       "y": 210.4244086463802
     },
@@ -226,7 +226,7 @@
     {
       "id": "Revenue Guidance",
       "type": "EVENT",
-      "degree": 1,
+      "degree": 2,
       "x": -852.2398329935244,
       "y": -4.741615321782631
     },
@@ -600,6 +600,13 @@
       "degree": 1,
       "x": 251.63251792716392,
       "y": -338.12551248923484
+    },
+    {
+      "id": "$1.5 billion",
+      "type": "CURRENCY",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": -562.8504035589095
     }
   ],
   "edges": [
@@ -676,9 +683,9 @@
       "causal_type": "CORPORATE_ACTION",
       "polarity": "positive",
       "origin": "news",
-      "weight": 3,
+      "weight": 4,
       "score": null,
-      "sentiment": 0.725,
+      "sentiment": 0.712,
       "materiality_usd": 3000000000.0,
       "materiality_log": 21.822,
       "event_type": "M_AND_A"
@@ -1738,6 +1745,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Novartis||Pays||$1.5 billion",
+      "source": "Novartis",
+      "target": "$1.5 billion",
+      "rel": "Pays",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 1500000000.0,
+      "materiality_log": 21.129,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Unilever||Surges After Posting||Revenue Guidance",
+      "source": "Unilever",
+      "target": "Revenue Guidance",
+      "rel": "Surges After Posting",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
     }
   ]
 }

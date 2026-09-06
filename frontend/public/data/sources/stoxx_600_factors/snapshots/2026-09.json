@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 76,
-    "edges": 60,
+    "nodes": 85,
+    "edges": 69,
     "scored_edges": 0
   },
   "nodes": [
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 8,
+      "degree": 9,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -310,7 +310,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 7,
+      "degree": 10,
       "x": 47.92199746453692,
       "y": 94.25654591052405
     },
@@ -331,7 +331,7 @@
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": 193.55207812321675,
       "y": 181.24456731285412
     },
@@ -352,7 +352,7 @@
     {
       "id": "7 vitamin, mineral and supplement brands",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": 695.0617172313204,
       "y": -310.95883427310656
     },
@@ -537,6 +537,69 @@
       "degree": 1,
       "x": -803.4371540382788,
       "y": -116.64867422095267
+    },
+    {
+      "id": "AstraZeneca",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 54.850822585053486,
+      "y": -180.73716009055028
+    },
+    {
+      "id": "Evexta Bio",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 802.2554120802362,
+      "y": 234.08601444010404
+    },
+    {
+      "id": "Tagrisso-Orpathys combination",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -691.7830065871505,
+      "y": -595.6903147828546
+    },
+    {
+      "id": "NTSB",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -128.99038423360042,
+      "y": -627.4167419822727
+    },
+    {
+      "id": "Pennsylvania Police Helicopter Collision",
+      "type": "LOCATION",
+      "degree": 2,
+      "x": -48.10064197626212,
+      "y": -588.2804926731238
+    },
+    {
+      "id": "IQAir",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -61.23300488179707,
+      "y": -758.7206872175816
+    },
+    {
+      "id": "Brazil",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 30.962918388481203,
+      "y": 900.0
+    },
+    {
+      "id": "America First Legal",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -864.2476786866429,
+      "y": 269.13868026972636
+    },
+    {
+      "id": "Nuun",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -553.2214947074782,
+      "y": 850.7027430203625
     }
   ],
   "edges": [
@@ -1489,6 +1552,150 @@
       "source": "Nestl\u00e9",
       "target": "Unspecified Buyer",
       "rel": "Sells Business To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 1000000000.0,
+      "materiality_log": 20.723,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "AstraZeneca||Collaborates With||Evexta Bio",
+      "source": "AstraZeneca",
+      "target": "Evexta Bio",
+      "rel": "Collaborates With",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "AstraZeneca||Reports Results For||Tagrisso-Orpathys combination",
+      "source": "AstraZeneca",
+      "target": "Tagrisso-Orpathys combination",
+      "rel": "Reports Results For",
+      "rel_cat": "GMM",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "NTSB||Investigates||Pennsylvania Police Helicopter Collision",
+      "source": "NTSB",
+      "target": "Pennsylvania Police Helicopter Collision",
+      "rel": "Investigates",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Pennsylvania Police Helicopter Collision||Has Air Quality Data From||IQAir",
+      "source": "Pennsylvania Police Helicopter Collision",
+      "target": "IQAir",
+      "rel": "Has Air Quality Data From",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "BP||Welcomes Into Exploration Prospects||Shell",
+      "source": "BP",
+      "target": "Shell",
+      "rel": "Welcomes Into Exploration Prospects",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "BP||Operates Exploration Prospects In||Brazil",
+      "source": "BP",
+      "target": "Brazil",
+      "rel": "Operates Exploration Prospects In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "BP||Operates Exploration Prospects In||America First Legal",
+      "source": "BP",
+      "target": "America First Legal",
+      "rel": "Operates Exploration Prospects In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Nestl\u00e9||Agrees To Divest||7 vitamin, mineral and supplement brands",
+      "source": "Nestl\u00e9",
+      "target": "7 vitamin, mineral and supplement brands",
+      "rel": "Agrees To Divest",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Nestl\u00e9||Sells Assets Of||Nuun",
+      "source": "Nestl\u00e9",
+      "target": "Nuun",
+      "rel": "Sells Assets Of",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "negative",

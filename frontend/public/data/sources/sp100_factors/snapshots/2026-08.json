@@ -14357,13 +14357,6 @@
       "y": -401.7122823735686
     },
     {
-      "id": "Energy Sector",
-      "type": "SECTOR",
-      "degree": 1,
-      "x": 132.9120209921729,
-      "y": -686.7876951867709
-    },
-    {
       "id": "Nio",
       "type": "COMPANY",
       "degree": 2,
@@ -14376,6 +14369,13 @@
       "degree": 1,
       "x": -398.54376247969026,
       "y": 744.9084447706817
+    },
+    {
+      "id": "energy sectors",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 132.9120209921729,
+      "y": -686.7876951867709
     }
   ],
   "edges": [
@@ -46396,9 +46396,9 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "ExxonMobil||Is Member Of Sector||Energy Sector",
+      "id": "ExxonMobil||Is Member Of Sector||energy sectors",
       "source": "ExxonMobil",
-      "target": "Energy Sector",
+      "target": "energy sectors",
       "rel": "Is Member Of Sector",
       "rel_cat": "GFMK",
       "causal_type": "STRUCTURAL",
