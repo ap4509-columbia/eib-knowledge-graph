@@ -1,22 +1,22 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 222,
-    "edges": 194,
+    "nodes": 233,
+    "edges": 202,
     "scored_edges": 0
   },
   "nodes": [
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 7,
       "x": 105.07419128947642,
       "y": 144.03975365033625
     },
     {
       "id": "SWX:ROP",
       "type": "STOCK_TICKER",
-      "degree": 1,
+      "degree": 2,
       "x": -578.9382136383289,
       "y": 683.7451852989007
     },
@@ -254,7 +254,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 14,
+      "degree": 15,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -331,7 +331,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": 116.62188721766933,
       "y": -557.0797074222387
     },
@@ -352,7 +352,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": -19.50858368839895,
       "y": 86.96879071954797
     },
@@ -1192,7 +1192,7 @@
     {
       "id": "Siemens",
       "type": "STOCK_TICKER",
-      "degree": 2,
+      "degree": 3,
       "x": 624.1856717385285,
       "y": -544.6229310865464
     },
@@ -1542,7 +1542,7 @@
     {
       "id": "Eni",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 42.858538154229585,
       "y": 600.9007196941687
     },
@@ -1559,6 +1559,83 @@
       "degree": 1,
       "x": -556.5617093282464,
       "y": 786.2053866526392
+    },
+    {
+      "id": "Broader Market",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": 354.9744206317688
+    },
+    {
+      "id": "Banco Santander",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -481.6269314026794,
+      "y": 650.0984814648458
+    },
+    {
+      "id": "$2 Billion",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -583.072827389482,
+      "y": 812.057684803261
+    },
+    {
+      "id": "Smart Grid Markets",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 498.756401970626,
+      "y": -796.5529374792103
+    },
+    {
+      "id": "Fair Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -867.114497961142,
+      "y": -188.86762856922985
+    },
+    {
+      "id": "Russian Firm",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 729.5252934982021,
+      "y": -301.75875696803496
+    },
+    {
+      "id": "Nestl\u00e9 Units",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 816.3374348604278,
+      "y": -261.5477338393686
+    },
+    {
+      "id": "Dutch Court",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 899.9999999999999,
+      "y": -205.4745621465869
+    },
+    {
+      "id": "Swallowing Disorder",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -515.4672542132935,
+      "y": 245.6839304451931
+    },
+    {
+      "id": "Equinor ASA",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -116.88801024506868,
+      "y": -624.2729923581658
+    },
+    {
+      "id": "Shareholders",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -251.5003338731759,
+      "y": -596.8293224493997
     }
   ],
   "edges": [
@@ -1571,7 +1648,7 @@
       "causal_type": "STRUCTURAL",
       "polarity": "neutral",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
       "sentiment": 0.0,
       "materiality_usd": 0.0,
@@ -4665,6 +4742,134 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
+    },
+    {
+      "id": "ASML||Fell More Than Broader Market||Broader Market",
+      "source": "ASML",
+      "target": "Broader Market",
+      "rel": "Fell More Than Broader Market",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Banco Santander||Completes Debt Deals||$2 Billion",
+      "source": "Banco Santander",
+      "target": "$2 Billion",
+      "rel": "Completes Debt Deals",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 2000000000.0,
+      "materiality_log": 21.416,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Siemens||Is Key Player In||Smart Grid Markets",
+      "source": "Siemens",
+      "target": "Smart Grid Markets",
+      "rel": "Is Key Player In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Eni||Looks Cheap On||Fair Value",
+      "source": "Eni",
+      "target": "Fair Value",
+      "rel": "Looks Cheap On",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Russian Firm||Requests Management Of||Nestl\u00e9 Units",
+      "source": "Russian Firm",
+      "target": "Nestl\u00e9 Units",
+      "rel": "Requests Management Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Wins Court Case In||Dutch Court",
+      "source": "Novo Nordisk",
+      "target": "Dutch Court",
+      "rel": "Wins Court Case In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "AstraZeneca||Develops Drug For||Swallowing Disorder",
+      "source": "AstraZeneca",
+      "target": "Swallowing Disorder",
+      "rel": "Develops Drug For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.9,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Equinor ASA||Pays Dividend To||Shareholders",
+      "source": "Equinor ASA",
+      "target": "Shareholders",
+      "rel": "Pays Dividend To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

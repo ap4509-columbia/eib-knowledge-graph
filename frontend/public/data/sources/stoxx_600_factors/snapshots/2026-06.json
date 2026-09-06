@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 40,
-    "edges": 30,
+    "nodes": 43,
+    "edges": 33,
     "scored_edges": 0
   },
   "nodes": [
@@ -135,7 +135,7 @@
     {
       "id": "Adyen",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": 670.8343865515608,
       "y": -117.35832056378464
     },
@@ -226,7 +226,7 @@
     {
       "id": "GOV.UK Pay",
       "type": "PRODUCT",
-      "degree": 2,
+      "degree": 3,
       "x": -460.3715259988464,
       "y": -363.4493818551081
     },
@@ -285,6 +285,27 @@
       "degree": 1,
       "x": -900.0,
       "y": -564.3856739233361
+    },
+    {
+      "id": "ING",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -315.75763913831804,
+      "y": 396.29486321020744
+    },
+    {
+      "id": "Subscription Banking",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 272.05522026803914,
+      "y": 567.2259299713955
+    },
+    {
+      "id": "ING Groep",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -900.0,
+      "y": 217.83459344884372
     }
   ],
   "edges": [
@@ -767,6 +788,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "GOV.UK Pay||Has Provider||Adyen",
+      "source": "GOV.UK Pay",
+      "target": "Adyen",
+      "rel": "Has Provider",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "ING||Has Ticker||ING Groep",
+      "source": "ING",
+      "target": "ING Groep",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "ING||Launches In||Subscription Banking",
+      "source": "ING",
+      "target": "Subscription Banking",
+      "rel": "Launches In",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

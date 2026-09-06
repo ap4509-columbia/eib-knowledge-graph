@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T07:34:29.142912+00:00",
+  "generated_at": "2026-09-05T07:37:54.986775+00:00",
   "min_articles": 2,
   "kept_factors": [
     "attention",
@@ -12,10 +12,10 @@
     {
       "name": "ASML",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.7319195667944447,
-      "pc2": -0.7065607939696528,
-      "pc3": 1.2841330072992534,
+      "cluster": 2,
+      "pc1": -1.7519457633433764,
+      "pc2": -0.5526268493671234,
+      "pc3": 1.3635738059675642,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.22000000000000003,
@@ -50,9 +50,9 @@
       "name": "Adyen",
       "type": "COMPANY",
       "cluster": 0,
-      "pc1": -0.03478051924926639,
-      "pc2": -1.0931485742275393,
-      "pc3": 0.5082161321956742,
+      "pc1": -0.022095313069409386,
+      "pc2": -1.0297429614888196,
+      "pc3": 0.6272522575289023,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.35,
@@ -79,22 +79,22 @@
     {
       "name": "AstraZeneca",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.8568607856502555,
-      "pc2": -0.9378187519164634,
-      "pc3": 0.6490588561904387,
+      "cluster": 2,
+      "pc1": -1.8480218687521448,
+      "pc2": -1.549417115583374,
+      "pc3": -0.04973755244947176,
       "factors": {
-        "attention": 6.0,
-        "sentiment": 0.04999999999999999,
-        "consensus": 0.45609437093064265,
-        "novelty": 0.8333333333333334,
+        "attention": 3.0,
+        "sentiment": -0.20000000000000004,
+        "consensus": 0.46458738652636633,
+        "novelty": 1.0,
         "materiality": 0.0
       },
-      "n_articles": 6,
+      "n_articles": 3,
       "event_mix": [
         [
           "PARTNERSHIP",
-          2
+          1
         ],
         [
           "M_AND_A",
@@ -103,32 +103,21 @@
         [
           "OTHER",
           1
-        ],
-        [
-          "PRODUCT",
-          1
-        ],
-        [
-          "REGULATORY",
-          1
         ]
       ],
       "top_partners": [
         "Bristol Myers Squibb",
         "Cancer Diagnostics Deals",
-        "Drop",
-        "Evexta Bio",
-        "Swallowing Disorder",
-        "Tagrisso-Orpathys combination"
+        "Drop"
       ]
     },
     {
       "name": "BNP Paribas",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -2.1212113595035005,
-      "pc2": 1.7846597454648867,
-      "pc3": -0.11919854064226444,
+      "cluster": 3,
+      "pc1": -2.135994008407396,
+      "pc2": 1.8800570217094466,
+      "pc3": -0.1518380575184261,
       "factors": {
         "attention": 11.0,
         "sentiment": 0.15454545454545457,
@@ -175,60 +164,58 @@
     {
       "name": "BP",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -1.6104209894546293,
-      "pc2": 0.6882509761948473,
-      "pc3": 1.0418526080673953,
+      "cluster": 2,
+      "pc1": -1.21351785874091,
+      "pc2": 0.6983616910418935,
+      "pc3": 0.8744716785603655,
       "factors": {
-        "attention": 14.0,
-        "sentiment": 0.0785714285714286,
-        "consensus": 0.6615612074147963,
-        "novelty": 0.36363636363636365,
+        "attention": 11.0,
+        "sentiment": 0.04545454545454548,
+        "consensus": 0.6322954833426058,
+        "novelty": 0.25,
         "materiality": 0.0
       },
-      "n_articles": 14,
+      "n_articles": 11,
       "event_mix": [
         [
           "EXECUTIVE_CHANGE",
           4
         ],
         [
-          "STRUCTURAL",
-          3
-        ],
-        [
           "MACRO",
-          2
-        ],
-        [
-          "PARTNERSHIP",
           2
         ],
         [
           "M_AND_A",
           1
+        ],
+        [
+          "EARNINGS",
+          1
+        ],
+        [
+          "STRUCTURAL",
+          1
         ]
       ],
       "top_partners": [
         "AI Demand",
-        "America First Legal",
-        "Brazil",
         "Calypso stake",
         "Family Voting Blocs",
         "Gulf partners",
         "Half-Year 1 EPS of $0.49",
         "Iran War",
-        "Shell",
-        "Vehicle Positioning Solution"
+        "Vehicle Positioning Solution",
+        "Venezuela"
       ]
     },
     {
       "name": "BPL",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.8514342987582969,
-      "pc2": -0.13309628615952568,
-      "pc3": -3.8308395108797653,
+      "cluster": 3,
+      "pc1": -0.922192012647543,
+      "pc2": -0.3819042683799435,
+      "pc3": -3.7367106654073092,
       "factors": {
         "attention": 2.0,
         "sentiment": -1.0,
@@ -255,10 +242,10 @@
     {
       "name": "Bershka Brand",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.49707150487209323,
-      "pc2": -0.10501017184722543,
-      "pc3": 0.6468675074225855,
+      "cluster": 0,
+      "pc1": 0.49412622347478796,
+      "pc2": -0.04189716182089624,
+      "pc3": 0.6550166843912668,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.26666666666666666,
@@ -290,10 +277,10 @@
     {
       "name": "Club Le\u00f3n",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.595101111353658,
-      "pc2": 0.3160461911446494,
-      "pc3": -0.2910640738926634,
+      "cluster": 4,
+      "pc1": 1.5767050548246813,
+      "pc2": 0.28693340985474775,
+      "pc3": -0.3330447788190649,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -316,10 +303,10 @@
     {
       "name": "DEP",
       "type": "ORGANIZATION",
-      "cluster": 3,
-      "pc1": 0.3195725448039022,
-      "pc2": -0.6163659166266141,
-      "pc3": -0.5907916777236637,
+      "cluster": 0,
+      "pc1": 0.29072711847747973,
+      "pc2": -0.642929268605719,
+      "pc3": -0.5266348749537719,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.15,
@@ -346,10 +333,10 @@
     {
       "name": "Drug Discovery",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 0.5150307376770148,
-      "pc2": -0.4611022697354213,
-      "pc3": 0.15948031975008,
+      "cluster": 0,
+      "pc1": 0.5088144407074977,
+      "pc2": -0.4377547050632834,
+      "pc3": 0.20275427656019515,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -376,10 +363,10 @@
     {
       "name": "Eni",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 0.4713826859855594,
-      "pc2": 2.6083953114467215,
-      "pc3": 0.4884934117355426,
+      "cluster": 3,
+      "pc1": 0.5078321761583433,
+      "pc2": 2.6261626320414266,
+      "pc3": 0.2645043226040239,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.5499999999999999,
@@ -411,10 +398,10 @@
     {
       "name": "Equinor",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.5997356088106378,
-      "pc2": 0.07759642733247497,
-      "pc3": 0.16264375432621642,
+      "cluster": 4,
+      "pc1": 0.5754391082208004,
+      "pc2": 0.0899252140505697,
+      "pc3": 0.1326870871733631,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -441,10 +428,10 @@
     {
       "name": "Evexta Bio",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.6539607879689482,
-      "pc2": 0.5659341753146729,
-      "pc3": 0.5204344211077018,
+      "cluster": 4,
+      "pc1": 1.6550276630028415,
+      "pc2": 0.6016853311991398,
+      "pc3": 0.4582382216584888,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.3,
@@ -472,10 +459,10 @@
     {
       "name": "Exxon",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 1.0364445281234156,
-      "pc2": 2.4749366594024034,
-      "pc3": -0.8138738953225223,
+      "cluster": 3,
+      "pc1": 1.0516970578428255,
+      "pc2": 2.3876576963270506,
+      "pc3": -1.0201280850134906,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.175,
@@ -502,10 +489,10 @@
     {
       "name": "HSBC Holdings",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.7498384853566082,
-      "pc2": -1.8112536315334555,
-      "pc3": -1.0882287277245732,
+      "cluster": 2,
+      "pc1": -1.8081529970923211,
+      "pc2": -1.8409137866305951,
+      "pc3": -0.8959964947695057,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.5,
@@ -532,10 +519,10 @@
     {
       "name": "Harrisburg YMCA",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.5150307376770148,
-      "pc2": -0.4611022697354213,
-      "pc3": 0.15948031975008,
+      "cluster": 0,
+      "pc1": 0.5088144407074977,
+      "pc2": -0.4377547050632834,
+      "pc3": 0.20275427656019515,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -562,10 +549,10 @@
     {
       "name": "Hershey brewery",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 0.2609836602634675,
-      "pc2": 0.7998996372305365,
-      "pc3": 0.5751800218514133,
+      "cluster": 0,
+      "pc1": 0.2914117603852285,
+      "pc2": 0.8397354823352673,
+      "pc3": 0.5140120083126553,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.5,
@@ -589,9 +576,9 @@
       "name": "Inditex",
       "type": "COMPANY",
       "cluster": 0,
-      "pc1": -0.6983575209446128,
-      "pc2": -1.2521150834356554,
-      "pc3": 0.8106880176749274,
+      "pc1": -0.6896059441386632,
+      "pc2": -1.161081758691605,
+      "pc3": 0.937740168190521,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.35,
@@ -618,10 +605,10 @@
     {
       "name": "Industria De Dise\u00f1o Textil",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.24839496778704562,
-      "pc2": -0.4888309753757485,
-      "pc3": 0.5608069283142879,
+      "cluster": 0,
+      "pc1": 0.2477548992495433,
+      "pc2": -0.43503258248386417,
+      "pc3": 0.6011279490623268,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.25,
@@ -649,9 +636,9 @@
       "name": "JSS Sustainable Equity CH I CHF dist",
       "type": "FIN_INSTRUMENT_INFO",
       "cluster": 0,
-      "pc1": 0.23486767367027916,
-      "pc2": -1.1550646136945102,
-      "pc3": -0.5939551122998001,
+      "pc1": 0.22410245096417702,
+      "pc2": -1.1706091877195721,
+      "pc3": -0.45656768556693994,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -673,10 +660,10 @@
     {
       "name": "LD Systems",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 1.110442585385081,
-      "pc2": -0.26424556438373764,
-      "pc3": 0.3077624043775119,
+      "cluster": 0,
+      "pc1": 1.118491075124447,
+      "pc2": -0.23666332538997653,
+      "pc3": 0.33458291932096473,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.3,
@@ -699,10 +686,10 @@
     {
       "name": "Lorenzo Grandi",
       "type": "EXECUTIVE",
-      "cluster": 3,
-      "pc1": 0.6483486226219995,
-      "pc2": -0.4472379169152576,
-      "pc3": -0.04118298453202395,
+      "cluster": 0,
+      "pc1": 0.639344211436475,
+      "pc2": -0.439115766352993,
+      "pc3": 0.003567440309129251,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.1,
@@ -729,10 +716,10 @@
     {
       "name": "Market Value",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 1.3996429184805455,
-      "pc2": 0.16078254425345664,
-      "pc3": -1.041336071366407,
+      "cluster": 4,
+      "pc1": 1.3586177325946633,
+      "pc2": 0.08175884631231202,
+      "pc3": -1.0624339303330324,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.3,
@@ -755,10 +742,10 @@
     {
       "name": "Mercedes-Benz Group",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.3777547655089832,
-      "pc2": 0.007339182532290554,
-      "pc3": 1.142242246194829,
+      "cluster": 0,
+      "pc1": 0.387272864940872,
+      "pc2": 0.12805318399371024,
+      "pc3": 1.1638523374413001,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.48,
@@ -796,9 +783,9 @@
       "name": "Montour CT Natural Gas Power Plant",
       "type": "FINANCIAL_ENTITY",
       "cluster": 0,
-      "pc1": -0.031768096219689894,
-      "pc2": -1.1827933193348374,
-      "pc3": -0.1926285037355923,
+      "pc1": -0.03695709049377727,
+      "pc2": -1.167887065140153,
+      "pc3": -0.058194013064808266,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.1,
@@ -821,10 +808,10 @@
     {
       "name": "Morgan Stanley",
       "type": "FINANCIAL_ENTITY",
-      "cluster": 3,
-      "pc1": 1.4611605659053049,
-      "pc2": 0.2825821028898765,
-      "pc3": 1.4198334049369807,
+      "cluster": 0,
+      "pc1": 1.4949432246893635,
+      "pc2": 0.38940388339761395,
+      "pc3": 1.3895827880944864,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.6999999999999998,
@@ -848,46 +835,45 @@
     {
       "name": "Nestl\u00e9",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.775035903529728,
-      "pc2": 1.353532793851644,
-      "pc3": -1.7501113684477911,
+      "cluster": 3,
+      "pc1": -0.3747563841145797,
+      "pc2": 1.1472204504349148,
+      "pc3": -1.885315511105496,
       "factors": {
-        "attention": 5.0,
-        "sentiment": -0.21999999999999997,
-        "consensus": 0.9321767001687473,
-        "novelty": 0.75,
-        "materiality": 22.109560198316302
+        "attention": 3.0,
+        "sentiment": -0.21666666666666665,
+        "consensus": 0.9376390435537676,
+        "novelty": 0.6666666666666666,
+        "materiality": 21.821878125947855
       },
-      "n_articles": 5,
+      "n_articles": 3,
       "event_mix": [
         [
           "M_AND_A",
-          5
+          3
         ]
       ],
       "top_partners": [
         "7 vitamin, mineral and supplement brands",
         "Market Value",
-        "Nuun",
         "Unspecified Buyer"
       ]
     },
     {
       "name": "Novo Nordisk",
       "type": "COMPANY",
-      "cluster": 1,
-      "pc1": -2.764865044592506,
-      "pc2": 0.01533278445546583,
-      "pc3": 1.4326609217965478,
+      "cluster": 2,
+      "pc1": -2.6890058055499586,
+      "pc2": 0.1732902749813559,
+      "pc3": 1.431818746375583,
       "factors": {
-        "attention": 15.0,
-        "sentiment": 0.19333333333333336,
-        "consensus": 0.5345730753144784,
-        "novelty": 0.8571428571428571,
+        "attention": 14.0,
+        "sentiment": 0.1642857142857143,
+        "consensus": 0.5315570733694401,
+        "novelty": 0.8461538461538461,
         "materiality": 0.0
       },
-      "n_articles": 15,
+      "n_articles": 14,
       "event_mix": [
         [
           "OTHER",
@@ -915,21 +901,21 @@
         "AWS",
         "China drug regulator",
         "Drug Discovery",
-        "Dutch Court",
         "Dutch Injunction",
         "Earnings Call",
         "Fair Value",
         "Interim Dividend",
-        "Obesity Race"
+        "Obesity Race",
+        "Raised Outlook"
       ]
     },
     {
       "name": "Ofgem",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.3195725448039022,
-      "pc2": -0.6163659166266141,
-      "pc3": -0.5907916777236637,
+      "cluster": 0,
+      "pc1": 0.29072711847747973,
+      "pc2": -0.642929268605719,
+      "pc3": -0.5266348749537719,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.15,
@@ -956,10 +942,10 @@
     {
       "name": "PA Game Commission",
       "type": "CONCEPT",
-      "cluster": 3,
-      "pc1": 1.3933498641381314,
-      "pc2": 0.3589159794597492,
-      "pc3": -0.4799282421906232,
+      "cluster": 4,
+      "pc1": 1.364244566696151,
+      "pc2": 0.32811924647589213,
+      "pc3": -0.5142806470268008,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.10000000000000002,
@@ -982,10 +968,10 @@
     {
       "name": "Pa. Turnpike Commission",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.4240748305680875,
-      "pc2": -1.5524808867148008,
-      "pc3": 0.16222460139833295,
+      "cluster": 2,
+      "pc1": -1.444674126708958,
+      "pc2": -1.4989561807265357,
+      "pc3": 0.3196520910871066,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -1008,10 +994,10 @@
     {
       "name": "Phase Ib trial",
       "type": "EVENT",
-      "cluster": 0,
-      "pc1": -1.2295614590128199,
-      "pc2": -1.1172728268237717,
-      "pc3": -0.5524674169172009,
+      "cluster": 2,
+      "pc1": -1.2804516212003587,
+      "pc2": -1.112724548445463,
+      "pc3": -0.4321049012408915,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.3333333333333333,
@@ -1039,10 +1025,10 @@
     {
       "name": "RBC",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 2.083746593536439,
-      "pc2": 0.7042053083726313,
-      "pc3": 1.5846159197916958,
+      "cluster": 4,
+      "pc1": 2.121923360399726,
+      "pc2": 0.7998698187108371,
+      "pc3": 1.4904280999658528,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.75,
@@ -1068,10 +1054,10 @@
     {
       "name": "Ralph Lauren",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.13977132880556528,
-      "pc2": -0.5844049492972395,
-      "pc3": 0.40883162601520895,
+      "cluster": 0,
+      "pc1": 0.1375537888192635,
+      "pc2": -0.5272205962757494,
+      "pc3": 0.47766712491206503,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.2333333333333333,
@@ -1103,15 +1089,15 @@
     {
       "name": "Roche",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.5315162132567545,
-      "pc2": 0.22204791341219624,
-      "pc3": 0.46351711013637137,
+      "cluster": 0,
+      "pc1": 0.17840113122525006,
+      "pc2": -0.0753081285611603,
+      "pc3": 0.43017661925682377,
       "factors": {
         "attention": 5.0,
         "sentiment": 0.18,
         "consensus": 0.8700961894323342,
-        "novelty": 0.25,
+        "novelty": 0.5,
         "materiality": 0.0
       },
       "n_articles": 5,
@@ -1140,9 +1126,9 @@
       "name": "SAP",
       "type": "COMPANY",
       "cluster": 0,
-      "pc1": -0.3580736243750496,
-      "pc2": -0.5934410353021419,
-      "pc3": 1.1640208123038545,
+      "pc1": -0.34878450218125134,
+      "pc2": -0.4679279645215146,
+      "pc3": 1.2380887797652456,
       "factors": {
         "attention": 4.0,
         "sentiment": 0.45,
@@ -1171,10 +1157,10 @@
     {
       "name": "SIEMENS AG N",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.7783858762541463,
-      "pc2": -0.3248848739960997,
-      "pc3": -0.3812830955696102,
+      "cluster": 0,
+      "pc1": 0.7606390388425717,
+      "pc2": -0.3322605311304559,
+      "pc3": -0.33291238322941585,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
@@ -1201,10 +1187,10 @@
     {
       "name": "STMicroelectronics",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.5780988327046779,
-      "pc2": -1.4861287058849668,
-      "pc3": 0.04486825297649314,
+      "cluster": 2,
+      "pc1": -1.6067388388991743,
+      "pc2": -1.429825194311991,
+      "pc3": 0.20728952915915735,
       "factors": {
         "attention": 3.0,
         "sentiment": -0.06666666666666665,
@@ -1236,10 +1222,10 @@
     {
       "name": "Shapiro Administration",
       "type": "FINANCIAL_ENTITY",
-      "cluster": 2,
-      "pc1": 0.963429487341828,
-      "pc2": 1.3861474817226662,
-      "pc3": 0.6181073822909808,
+      "cluster": 0,
+      "pc1": 1.0161240270218768,
+      "pc2": 1.4175612747448392,
+      "pc3": 0.5112643765288374,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.7,
@@ -1263,9 +1249,9 @@
       "name": "Shell",
       "type": "COMPANY",
       "cluster": 1,
-      "pc1": -5.132111265840102,
-      "pc2": 3.215211375943224,
-      "pc3": 0.7240011745336961,
+      "pc1": -5.211124584980377,
+      "pc2": 3.5235808533502744,
+      "pc3": 0.6808159610269393,
       "factors": {
         "attention": 25.0,
         "sentiment": -0.033999999999999996,
@@ -1312,10 +1298,10 @@
     {
       "name": "Shell Energy Stadium",
       "type": "SECTOR",
-      "cluster": 3,
-      "pc1": 1.4585025950958357,
-      "pc2": 0.4106705284234802,
-      "pc3": -0.22983757636604188,
+      "cluster": 4,
+      "pc1": 1.4369403407728236,
+      "pc2": 0.39651076765670407,
+      "pc3": -0.2711509298554784,
       "factors": {
         "attention": 3.0,
         "sentiment": 0.0,
@@ -1342,10 +1328,10 @@
     {
       "name": "Shell Oil",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -1.1940904922643882,
-      "pc2": 1.1106527416102117,
-      "pc3": -1.6215173337431124,
+      "cluster": 3,
+      "pc1": -1.2317215241963069,
+      "pc2": 1.0230135630837998,
+      "pc3": -1.6648597103896021,
       "factors": {
         "attention": 4.0,
         "sentiment": -0.375,
@@ -1374,10 +1360,10 @@
     {
       "name": "Toluca FC",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.9149843925119686,
-      "pc2": -0.4195092112749304,
-      "pc3": -0.4425095930962318,
+      "cluster": 0,
+      "pc1": 0.9004037528944293,
+      "pc2": -0.4418378889324122,
+      "pc3": -0.39480623219300237,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.0,
@@ -1400,10 +1386,10 @@
     {
       "name": "TotalEnergies",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.9741122774105203,
-      "pc2": -0.18846517209660296,
-      "pc3": 1.2092703445908823,
+      "cluster": 0,
+      "pc1": 1.002823081819838,
+      "pc2": -0.09715816044893351,
+      "pc3": 1.2192160261657412,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.6,
@@ -1430,10 +1416,10 @@
     {
       "name": "Unilever",
       "type": "COMPANY",
-      "cluster": 2,
-      "pc1": 0.8636949828415261,
-      "pc2": 2.0585455067722496,
-      "pc3": -1.948577878010171,
+      "cluster": 3,
+      "pc1": 0.8417001885216077,
+      "pc2": 1.8970617760936805,
+      "pc3": -2.1088085179361955,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.3,
@@ -1460,10 +1446,10 @@
     {
       "name": "Unimot",
       "type": "COMPANY",
-      "cluster": 4,
-      "pc1": -0.22120144303364997,
-      "pc2": -1.5173464564406267,
-      "pc3": -2.3445897730718688,
+      "cluster": 0,
+      "pc1": -0.2847679675725313,
+      "pc2": -1.6493498359852554,
+      "pc3": -2.1584757057661967,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.7,
@@ -1485,10 +1471,10 @@
     {
       "name": "Vietnam",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.5150307376770148,
-      "pc2": -0.4611022697354213,
-      "pc3": 0.15948031975008,
+      "cluster": 0,
+      "pc1": 0.5088144407074977,
+      "pc2": -0.4377547050632834,
+      "pc3": 0.20275427656019515,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -1515,10 +1501,10 @@
     {
       "name": "Volkswagen",
       "type": "COMPANY",
-      "cluster": 0,
-      "pc1": -1.2849720909726978,
-      "pc2": -0.7431804392902275,
-      "pc3": -0.15224982747027196,
+      "cluster": 2,
+      "pc1": -1.329368793781903,
+      "pc2": -0.6695830169190757,
+      "pc3": -0.019752730550049672,
       "factors": {
         "attention": 7.0,
         "sentiment": -0.14285714285714285,
@@ -1561,10 +1547,10 @@
     {
       "name": "White Cap",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.5728169880921327,
-      "pc2": -0.2749991033329504,
-      "pc3": 0.8166113735132473,
+      "cluster": 0,
+      "pc1": 0.5863165038254182,
+      "pc2": -0.18465451399204116,
+      "pc3": 0.8658561212491269,
       "factors": {
         "attention": 4.0,
         "sentiment": 0.45,
@@ -1588,10 +1574,10 @@
     {
       "name": "Woodside Energy",
       "type": "COMPANY",
-      "cluster": 3,
-      "pc1": 0.9996892636455916,
-      "pc2": 0.1191894857929658,
-      "pc3": -0.43934615852009534,
+      "cluster": 4,
+      "pc1": 0.967028420407732,
+      "pc2": 0.08584203018144089,
+      "pc3": -0.46487342157983447,
       "factors": {
         "attention": 2.0,
         "sentiment": -0.15,
@@ -1618,10 +1604,10 @@
     {
       "name": "central Pa. airport",
       "type": "AIRPORT",
-      "cluster": 3,
-      "pc1": 1.1951474565187041,
-      "pc2": 0.2744531326841585,
-      "pc3": 0.31092583895364834,
+      "cluster": 4,
+      "pc1": 1.1851157426377497,
+      "pc2": 0.2910165937238765,
+      "pc3": 0.2645157299341327,
       "factors": {
         "attention": 2.0,
         "sentiment": 0.15,
@@ -1648,31 +1634,31 @@
   ],
   "pca": {
     "explained_variance": [
-      0.35873846883789634,
-      0.2358933335992088,
-      0.21000177259571548
+      0.35660744384107046,
+      0.2436887913694997,
+      0.2056547251771761
     ],
     "components": [
       [
-        -0.5572493024215341,
-        0.22180496028777963,
-        0.6137777207888472,
-        -0.46951739429298806,
-        -0.2076200868461939
+        -0.5428373568005532,
+        0.24904747366328361,
+        0.6186263929859274,
+        -0.46971483949014464,
+        -0.19993077648949986
       ],
       [
-        0.38601697430742693,
-        0.1761923945300848,
-        0.14703659327288152,
-        -0.5077893931064498,
-        0.7351716181570009
+        0.4255915642079179,
+        0.23430159161804423,
+        0.12172037805977608,
+        -0.5061570821434533,
+        0.7021137674204371
       ],
       [
-        0.2497715492899425,
-        0.8514048357785107,
-        -0.2797723610038475,
-        -0.10455015085485568,
-        -0.3514550764362765
+        0.24039181564196413,
+        0.8329348246587651,
+        -0.28774974854056845,
+        -0.042895483234200525,
+        -0.40471151772092706
       ]
     ]
   },
@@ -1680,191 +1666,191 @@
     "k": 5,
     "centroids": [
       [
-        -0.12496823049589988,
-        -0.1458174836348874,
-        -0.9703343801356863,
-        1.109397340092854,
-        -0.48422920525619406
+        -0.28493424094653513,
+        0.3942095744334618,
+        0.35527852476994365,
+        0.2838307344437111,
+        -0.3446231692143607
       ],
       [
-        3.4702716314630644,
-        -0.029674080199788396,
-        -1.5702146696285382,
-        0.3388874932928728,
-        0.5099110447087034
+        5.492708259210317,
+        -0.34253403139646654,
+        -2.3494110309130534,
+        0.40527578961700433,
+        2.502858245904358
       ],
       [
-        -0.40278221982909257,
-        0.6920375784802184,
-        0.5063762396861985,
-        -0.8903984630785905,
-        1.8669697915085177
+        0.4863335437842468,
+        -0.5070062628829811,
+        -1.5847408971383885,
+        0.8297288791798447,
+        -0.4842935868439815
       ],
       [
-        -0.3103870695304967,
-        0.22996379342136108,
-        0.47999950853740986,
-        -0.5505476981997413,
-        -0.4842292052561939
+        0.0490420380286636,
+        -0.6653373216203836,
+        0.2869801101133202,
+        -0.24484847369519822,
+        2.118572221092333
       ],
       [
-        0.2345557556999965,
-        -1.520082895427693,
-        0.26855763002203303,
-        0.88736038151867,
-        1.5072255416133344
+        -0.34329426620064474,
+        -0.03247641246117362,
+        0.6356950239018585,
+        -1.472740527495777,
+        -0.4842935868439815
       ]
     ],
     "clusters": [
       {
         "cluster": 0,
-        "size": 12,
+        "size": 25,
         "signature": [
           {
-            "factor": "novelty",
-            "loading": 1.109397340092854
+            "factor": "sentiment",
+            "loading": 0.3942095744334618
           },
           {
             "factor": "consensus",
-            "loading": -0.9703343801356863
+            "loading": 0.35527852476994365
           },
           {
             "factor": "materiality",
-            "loading": -0.48422920525619406
+            "loading": -0.3446231692143607
           }
         ],
         "members": [
-          "ASML",
           "Adyen",
-          "AstraZeneca",
-          "HSBC Holdings",
+          "Bershka Brand",
+          "DEP",
+          "Drug Discovery",
+          "Harrisburg YMCA",
+          "Hershey brewery",
           "Inditex",
+          "Industria De Dise\u00f1o Textil",
           "JSS Sustainable Equity CH I CHF dist",
+          "LD Systems",
+          "Lorenzo Grandi",
+          "Mercedes-Benz Group",
           "Montour CT Natural Gas Power Plant",
-          "Pa. Turnpike Commission",
-          "Phase Ib trial",
+          "Morgan Stanley",
+          "Ofgem",
+          "Ralph Lauren",
+          "Roche",
           "SAP",
-          "STMicroelectronics",
-          "Volkswagen"
+          "SIEMENS AG N",
+          "Shapiro Administration",
+          "Toluca FC",
+          "TotalEnergies",
+          "Unimot",
+          "Vietnam",
+          "White Cap"
         ]
       },
       {
         "cluster": 1,
-        "size": 3,
+        "size": 1,
         "signature": [
           {
             "factor": "attention",
-            "loading": 3.4702716314630644
-          },
-          {
-            "factor": "consensus",
-            "loading": -1.5702146696285382
+            "loading": 5.492708259210317
           },
           {
             "factor": "materiality",
-            "loading": 0.5099110447087034
+            "loading": 2.502858245904358
+          },
+          {
+            "factor": "consensus",
+            "loading": -2.3494110309130534
           }
         ],
         "members": [
-          "BP",
-          "Novo Nordisk",
           "Shell"
         ]
       },
       {
         "cluster": 2,
-        "size": 5,
+        "size": 9,
         "signature": [
           {
-            "factor": "materiality",
-            "loading": 1.8669697915085177
+            "factor": "consensus",
+            "loading": -1.5847408971383885
           },
           {
             "factor": "novelty",
-            "loading": -0.8903984630785905
+            "loading": 0.8297288791798447
           },
           {
             "factor": "sentiment",
-            "loading": 0.6920375784802184
+            "loading": -0.5070062628829811
           }
         ],
         "members": [
-          "Eni",
-          "Exxon",
-          "Hershey brewery",
-          "Shapiro Administration",
-          "Unilever"
+          "ASML",
+          "AstraZeneca",
+          "BP",
+          "HSBC Holdings",
+          "Novo Nordisk",
+          "Pa. Turnpike Commission",
+          "Phase Ib trial",
+          "STMicroelectronics",
+          "Volkswagen"
         ]
       },
       {
         "cluster": 3,
-        "size": 26,
+        "size": 7,
         "signature": [
           {
-            "factor": "novelty",
-            "loading": -0.5505476981997413
+            "factor": "materiality",
+            "loading": 2.118572221092333
           },
           {
-            "factor": "materiality",
-            "loading": -0.4842292052561939
+            "factor": "sentiment",
+            "loading": -0.6653373216203836
           },
           {
             "factor": "consensus",
-            "loading": 0.47999950853740986
-          }
-        ],
-        "members": [
-          "Bershka Brand",
-          "Club Le\u00f3n",
-          "DEP",
-          "Drug Discovery",
-          "Equinor",
-          "Evexta Bio",
-          "Harrisburg YMCA",
-          "Industria De Dise\u00f1o Textil",
-          "LD Systems",
-          "Lorenzo Grandi",
-          "Market Value",
-          "Mercedes-Benz Group",
-          "Morgan Stanley",
-          "Ofgem",
-          "PA Game Commission",
-          "RBC",
-          "Ralph Lauren",
-          "Roche",
-          "SIEMENS AG N",
-          "Shell Energy Stadium",
-          "Toluca FC",
-          "TotalEnergies",
-          "Vietnam",
-          "White Cap",
-          "Woodside Energy",
-          "central Pa. airport"
-        ]
-      },
-      {
-        "cluster": 4,
-        "size": 5,
-        "signature": [
-          {
-            "factor": "sentiment",
-            "loading": -1.520082895427693
-          },
-          {
-            "factor": "materiality",
-            "loading": 1.5072255416133344
-          },
-          {
-            "factor": "novelty",
-            "loading": 0.88736038151867
+            "loading": 0.2869801101133202
           }
         ],
         "members": [
           "BNP Paribas",
           "BPL",
+          "Eni",
+          "Exxon",
           "Nestl\u00e9",
           "Shell Oil",
-          "Unimot"
+          "Unilever"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 9,
+        "signature": [
+          {
+            "factor": "novelty",
+            "loading": -1.472740527495777
+          },
+          {
+            "factor": "consensus",
+            "loading": 0.6356950239018585
+          },
+          {
+            "factor": "materiality",
+            "loading": -0.4842935868439815
+          }
+        ],
+        "members": [
+          "Club Le\u00f3n",
+          "Equinor",
+          "Evexta Bio",
+          "Market Value",
+          "PA Game Commission",
+          "RBC",
+          "Shell Energy Stadium",
+          "Woodside Energy",
+          "central Pa. airport"
         ]
       }
     ]
@@ -1874,5 +1860,5 @@
     "2026-09"
   ],
   "corpus": "stoxx_600_factors",
-  "date": "2026-09-06"
+  "date": "2026-09-05"
 }

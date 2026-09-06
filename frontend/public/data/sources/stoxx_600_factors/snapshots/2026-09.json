@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 53,
-    "edges": 38,
+    "nodes": 85,
+    "edges": 69,
     "scored_edges": 0
   },
   "nodes": [
@@ -100,7 +100,7 @@
     {
       "id": "STMicroelectronics",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": 132.7521125330347,
       "y": -581.0122481928685
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 1,
+      "degree": 3,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -205,7 +205,7 @@
     {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -258.84867687655964,
       "y": 2.4028796272181046
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 9,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -289,7 +289,7 @@
     {
       "id": "PA Game Commission",
       "type": "CONCEPT",
-      "degree": 4,
+      "degree": 5,
       "x": 703.8155419989221,
       "y": 134.35814626477907
     },
@@ -310,7 +310,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 10,
       "x": 47.92199746453692,
       "y": 94.25654591052405
     },
@@ -331,7 +331,7 @@
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 5,
       "x": 193.55207812321675,
       "y": 181.24456731285412
     },
@@ -352,7 +352,7 @@
     {
       "id": "7 vitamin, mineral and supplement brands",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": 695.0617172313204,
       "y": -310.95883427310656
     },
@@ -373,9 +373,233 @@
     {
       "id": "Pennsylvania",
       "type": "LOCATION",
-      "degree": 1,
+      "degree": 2,
       "x": -795.4769696483694,
       "y": -259.811354711247
+    },
+    {
+      "id": "Novo Nordisk",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 181.20573941880204,
+      "y": 457.3595387049728
+    },
+    {
+      "id": "Fair Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -707.7666131873267,
+      "y": 523.3437431352156
+    },
+    {
+      "id": "Wegovy",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -259.4673077195777,
+      "y": -682.6989891454782
+    },
+    {
+      "id": "Germany",
+      "type": "COUNTRY",
+      "degree": 1,
+      "x": -292.87220701293217,
+      "y": -783.2124260093096
+    },
+    {
+      "id": "Cheniere",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 432.38330420113,
+      "y": -478.62561930105824
+    },
+    {
+      "id": "LNG Plant",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 520.966918702008,
+      "y": -583.1282360551302
+    },
+    {
+      "id": "Residents",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -563.3919482646801,
+      "y": -384.02851923034683
+    },
+    {
+      "id": "Air Quality",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -629.0248620057816,
+      "y": -363.4891227804875
+    },
+    {
+      "id": "Lorenzo Grandi",
+      "type": "EXECUTIVE",
+      "degree": 2,
+      "x": -216.55254930026484,
+      "y": -358.8917403802636
+    },
+    {
+      "id": "Citi investor conference",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 347.88524861360963,
+      "y": -810.949025994513
+    },
+    {
+      "id": "Reasonable On Fair Value",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 811.3968300298637,
+      "y": 487.254091397527
+    },
+    {
+      "id": "Vietnam's Banking Sector",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 15.490602017880335,
+      "y": -846.8460257416614
+    },
+    {
+      "id": "Marco Schubert",
+      "type": "PERSON",
+      "degree": 1,
+      "x": 376.31054383441545,
+      "y": -223.260557218781
+    },
+    {
+      "id": "Malaysian Asset",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 900.0,
+      "y": 236.88295465710317
+    },
+    {
+      "id": "US Convenience Stores",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 626.1506432739327,
+      "y": 713.4318607098706
+    },
+    {
+      "id": "report recommending 'some' unification",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -560.2167735291366,
+      "y": -634.4398019623184
+    },
+    {
+      "id": "PA Fish & Boat Commission",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -583.0146198517883,
+      "y": -574.7650550193666
+    },
+    {
+      "id": "RBC",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 716.3149794091356,
+      "y": -220.81177800850884
+    },
+    {
+      "id": "Morgan Stanley",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 3,
+      "x": 359.85646998683444,
+      "y": 271.545005309859
+    },
+    {
+      "id": "Eni",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -59.91128429050129,
+      "y": 835.2489533951327
+    },
+    {
+      "id": "Venezuela",
+      "type": "COUNTRY",
+      "degree": 1,
+      "x": -43.20379621151726,
+      "y": 895.2394167656407
+    },
+    {
+      "id": "Unspecified Buyer",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -821.4499138739159,
+      "y": 290.77751693180835
+    },
+    {
+      "id": "PA",
+      "type": "GOVERNMENT_ORGANIZATION",
+      "degree": 1,
+      "x": -803.4371540382788,
+      "y": -116.64867422095267
+    },
+    {
+      "id": "AstraZeneca",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 54.850822585053486,
+      "y": -180.73716009055028
+    },
+    {
+      "id": "Evexta Bio",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 802.2554120802362,
+      "y": 234.08601444010404
+    },
+    {
+      "id": "Tagrisso-Orpathys combination",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -691.7830065871505,
+      "y": -595.6903147828546
+    },
+    {
+      "id": "NTSB",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -128.99038423360042,
+      "y": -627.4167419822727
+    },
+    {
+      "id": "Pennsylvania Police Helicopter Collision",
+      "type": "LOCATION",
+      "degree": 2,
+      "x": -48.10064197626212,
+      "y": -588.2804926731238
+    },
+    {
+      "id": "IQAir",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -61.23300488179707,
+      "y": -758.7206872175816
+    },
+    {
+      "id": "Brazil",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 30.962918388481203,
+      "y": 900.0
+    },
+    {
+      "id": "America First Legal",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -864.2476786866429,
+      "y": 269.13868026972636
+    },
+    {
+      "id": "Nuun",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -553.2214947074782,
+      "y": 850.7027430203625
     }
   ],
   "edges": [
@@ -986,6 +1210,502 @@
       "materiality_usd": 1200000000.0,
       "materiality_log": 20.906,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Novo Nordisk||Looks Below Fair Value||Fair Value",
+      "source": "Novo Nordisk",
+      "target": "Fair Value",
+      "rel": "Looks Below Fair Value",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Wegovy||Enters Market In||Germany",
+      "source": "Wegovy",
+      "target": "Germany",
+      "rel": "Enters Market In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Cheniere||Plans Expansion Of||LNG Plant",
+      "source": "Cheniere",
+      "target": "LNG Plant",
+      "rel": "Plans Expansion Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Residents||Raise Concerns About||Air Quality",
+      "source": "Residents",
+      "target": "Air Quality",
+      "rel": "Raise Concerns About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Lorenzo Grandi||Is President And CFO Of||STMicroelectronics",
+      "source": "Lorenzo Grandi",
+      "target": "STMicroelectronics",
+      "rel": "Is President And CFO Of",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Lorenzo Grandi||Speaks At||Citi investor conference",
+      "source": "Lorenzo Grandi",
+      "target": "Citi investor conference",
+      "rel": "Speaks At",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BNP Paribas||Stock Evaluation||Reasonable On Fair Value",
+      "source": "BNP Paribas",
+      "target": "Reasonable On Fair Value",
+      "rel": "Stock Evaluation",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BNP Paribas||Plans To Enter Market In||Vietnam's Banking Sector",
+      "source": "BNP Paribas",
+      "target": "Vietnam's Banking Sector",
+      "rel": "Plans To Enter Market In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Shell||Fined By||PA",
+      "source": "Shell",
+      "target": "PA",
+      "rel": "Fined By",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 15000000.0,
+      "materiality_log": 16.524,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Pennsylvania||Secures Settlement From||Shell",
+      "source": "Pennsylvania",
+      "target": "Shell",
+      "rel": "Secures Settlement From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.15,
+      "materiality_usd": 15000000.0,
+      "materiality_log": 16.524,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Marco Schubert||Hired By||Volkswagen",
+      "source": "Marco Schubert",
+      "target": "Volkswagen",
+      "rel": "Hired By",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Shell||Considers Exiting Stake In||Malaysian Asset",
+      "source": "Shell",
+      "target": "Malaysian Asset",
+      "rel": "Considers Exiting Stake In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.1,
+      "materiality_usd": 1000000000.0,
+      "materiality_log": 20.723,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Invests In||US Convenience Stores",
+      "source": "Shell",
+      "target": "US Convenience Stores",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.75,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "PA Game Commission||Reacts To Report||report recommending 'some' unification",
+      "source": "PA Game Commission",
+      "target": "report recommending 'some' unification",
+      "rel": "Reacts To Report",
+      "rel_cat": "GMM",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "PA Fish & Boat Commission||Reacts To Report||report recommending 'some' unification",
+      "source": "PA Fish & Boat Commission",
+      "target": "report recommending 'some' unification",
+      "rel": "Reacts To Report",
+      "rel_cat": "GMM",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "RBC||Sets Target Price For||BP",
+      "source": "RBC",
+      "target": "BP",
+      "rel": "Sets Target Price For",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.75,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "RBC||Adjusts Earnings Estimates For||BP",
+      "source": "RBC",
+      "target": "BP",
+      "rel": "Adjusts Earnings Estimates For",
+      "rel_cat": "GMM",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.75,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Morgan Stanley||Upgrades Outlook For||Eni",
+      "source": "Morgan Stanley",
+      "target": "Eni",
+      "rel": "Upgrades Outlook For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Morgan Stanley||Upgrades Outlook For||Shell",
+      "source": "Morgan Stanley",
+      "target": "Shell",
+      "rel": "Upgrades Outlook For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Morgan Stanley||Upgrades Outlook For||BP",
+      "source": "Morgan Stanley",
+      "target": "BP",
+      "rel": "Upgrades Outlook For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "GUIDANCE"
+    },
+    {
+      "id": "Eni||Aims To Recover Debt From||Venezuela",
+      "source": "Eni",
+      "target": "Venezuela",
+      "rel": "Aims To Recover Debt From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Nestl\u00e9||Sells Business To||Unspecified Buyer",
+      "source": "Nestl\u00e9",
+      "target": "Unspecified Buyer",
+      "rel": "Sells Business To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 1000000000.0,
+      "materiality_log": 20.723,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "AstraZeneca||Collaborates With||Evexta Bio",
+      "source": "AstraZeneca",
+      "target": "Evexta Bio",
+      "rel": "Collaborates With",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "AstraZeneca||Reports Results For||Tagrisso-Orpathys combination",
+      "source": "AstraZeneca",
+      "target": "Tagrisso-Orpathys combination",
+      "rel": "Reports Results For",
+      "rel_cat": "GMM",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "NTSB||Investigates||Pennsylvania Police Helicopter Collision",
+      "source": "NTSB",
+      "target": "Pennsylvania Police Helicopter Collision",
+      "rel": "Investigates",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Pennsylvania Police Helicopter Collision||Has Air Quality Data From||IQAir",
+      "source": "Pennsylvania Police Helicopter Collision",
+      "target": "IQAir",
+      "rel": "Has Air Quality Data From",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "BP||Welcomes Into Exploration Prospects||Shell",
+      "source": "BP",
+      "target": "Shell",
+      "rel": "Welcomes Into Exploration Prospects",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "BP||Operates Exploration Prospects In||Brazil",
+      "source": "BP",
+      "target": "Brazil",
+      "rel": "Operates Exploration Prospects In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "BP||Operates Exploration Prospects In||America First Legal",
+      "source": "BP",
+      "target": "America First Legal",
+      "rel": "Operates Exploration Prospects In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.1,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Nestl\u00e9||Agrees To Divest||7 vitamin, mineral and supplement brands",
+      "source": "Nestl\u00e9",
+      "target": "7 vitamin, mineral and supplement brands",
+      "rel": "Agrees To Divest",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Nestl\u00e9||Sells Assets Of||Nuun",
+      "source": "Nestl\u00e9",
+      "target": "Nuun",
+      "rel": "Sells Assets Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 1000000000.0,
+      "materiality_log": 20.723,
+      "event_type": "M_AND_A"
     }
   ]
 }
