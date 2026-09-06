@@ -139,7 +139,7 @@ const COLS =
 function EntryRow({ entry }: { entry: PredictionEntry }) {
   return (
     <div
-      className={`${COLS} border-b border-border/60 px-6 py-2.5 text-xs last:border-b-0 hover:bg-accent/30`}
+      className={`${COLS} border-b border-border/60 px-6 py-1.5 text-xs last:border-b-0 hover:bg-accent/30 md:py-2.5`}
     >
       <div className="font-mono text-xs tabular-nums text-muted-foreground">
         #{entry.rank}
@@ -153,7 +153,9 @@ function EntryRow({ entry }: { entry: PredictionEntry }) {
       </div>
       <ActivityCell z={entry.novelty_z} />
       <Sparkline values={entry.trend_3m} />
-      <div className="flex flex-wrap gap-1 overflow-hidden">
+      {/* max-h on phone: wrapped chips otherwise inflate rows to ~100px
+          and only two companies fit the viewport. */}
+      <div className="flex max-h-[3.4rem] flex-wrap gap-1 overflow-hidden md:max-h-none">
         {entry.predicted_impacted.length === 0 ? (
           <span className="text-[10px] italic text-muted-foreground">
             (no strong targets)
@@ -241,7 +243,7 @@ function AboutSection({
   }, [collapsed, hydrated]);
 
   return (
-    <div className="shrink-0 border-b border-border/60 bg-muted/20">
+    <div className="shrink-0 border-b border-border/60 bg-muted/20 short:hidden">
       <button
         type="button"
         onClick={() => setCollapsed((v) => !v)}
@@ -521,7 +523,12 @@ export function PredictionsView({
     if (stored !== null) {
       setMetricsCollapsed(stored === "1");
     } else {
-      setMetricsCollapsed(!window.matchMedia("(min-width: 768px)").matches);
+      // Expand by default only on screens that are both wide AND tall —
+      // phone landscape (short) needs the height for the table.
+      setMetricsCollapsed(
+        !window.matchMedia("(min-width: 768px) and (min-height: 481px)")
+          .matches
+      );
     }
   }, []);
   const toggleMetrics = () => {
@@ -574,7 +581,7 @@ export function PredictionsView({
   return (
     <div className="flex h-full flex-col overflow-hidden bg-background">
       {/* Metadata strip */}
-      <div className="flex shrink-0 items-center justify-between border-b border-border px-6 py-2 font-mono text-[10px] text-muted-foreground">
+      <div className="flex shrink-0 items-center justify-between border-b border-border px-6 py-2 font-mono text-[10px] text-muted-foreground short:hidden">
         <span>
           {monthTo ? (
             <>

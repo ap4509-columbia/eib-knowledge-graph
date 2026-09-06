@@ -129,6 +129,17 @@ export default function Home() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   // Phone-width filter drawer (the rail is inline from md up).
   const [mobileRailOpen, setMobileRailOpen] = useState(false);
+  // Phone-like viewport (narrow OR short, i.e. portrait or landscape
+  // phone): the report tab hands off to the native PDF viewer there,
+  // because iOS Safari renders PDF iframes as one unscrollable page.
+  const [phoneLike, setPhoneLike] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px), (max-height: 480px)");
+    const update = () => setPhoneLike(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   const [physics, setPhysics] = useState<PhysicsSettings>(DEFAULT_PHYSICS);
   const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
   // Types / causal-types the app has ever encountered under the current
@@ -526,7 +537,7 @@ export default function Home() {
           <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5 sm:w-auto sm:shrink-0 sm:flex-nowrap">
             {sources && (
               <label className="flex min-w-[8.5rem] flex-1 items-center gap-1.5 text-xs text-muted-foreground sm:min-w-0 sm:flex-initial">
-                <span className="hidden sm:inline">Data source</span>
+                <span className="hidden lg:inline">Data source</span>
                 {/* Fixed desktop width: sizing to the selected label made
                     the whole control row shift on every source switch. */}
                 <select
@@ -772,11 +783,31 @@ export default function Home() {
                     Open in new tab ↗
                   </a>
                 </div>
-                <iframe
-                  src="/report.pdf"
-                  title="EIB Knowledge Graph — full project report"
-                  className="min-h-0 w-full flex-1 border-0"
-                />
+                {/* iOS Safari renders PDF iframes as a single unscrollable
+                    page — on phone-like viewports (portrait OR landscape),
+                    hand off to the native viewer instead. */}
+                {phoneLike ? (
+                  <div className="flex flex-1 flex-col items-center justify-center gap-3 px-8 text-center">
+                    <p className="text-sm text-muted-foreground">
+                      The full 30-page report opens in your phone&rsquo;s PDF
+                      viewer.
+                    </p>
+                    <a
+                      href="/report.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-md border border-border bg-muted px-4 py-2 text-sm font-medium text-foreground transition hover:bg-accent"
+                    >
+                      Open the report ↗
+                    </a>
+                  </div>
+                ) : (
+                  <iframe
+                    src="/report.pdf"
+                    title="EIB Knowledge Graph — full project report"
+                    className="min-h-0 w-full flex-1 border-0"
+                  />
+                )}
               </div>
             ) : null}
           </main>
@@ -814,7 +845,7 @@ export default function Home() {
           />
         )}
 
-        <footer className="shrink-0 truncate border-t border-border px-3 py-2 font-mono text-[10px] text-muted-foreground sm:px-6">
+        <footer className="shrink-0 truncate border-t border-border px-3 py-2 font-mono text-[10px] text-muted-foreground sm:px-6 short:hidden">
           IEOR 4737 · Sponsor: European Investment Bank · Summer 2026
         </footer>
       </div>

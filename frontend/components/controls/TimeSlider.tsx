@@ -223,7 +223,7 @@ export function TimeSlider({
         const trainEndMo = allMonths[Math.max(trainStartIdx, trainEndIdx)];
         const predMo = predictionsContext!.predictionMonth;
         return (
-          <div className="mb-2 flex select-none flex-wrap items-center gap-x-4 gap-y-0.5 font-mono text-[10px] text-muted-foreground">
+          <div className="mb-2 hidden select-none flex-wrap items-center gap-x-4 gap-y-0.5 font-mono text-[10px] text-muted-foreground sm:flex short:hidden">
             <span className="flex items-center gap-1.5 whitespace-nowrap">
               <span className="inline-block h-2 w-3 rounded-sm border border-amber-600/50 bg-amber-500/40 dark:border-amber-500/50 dark:bg-amber-400/30" />
               trained on <span className="text-foreground">{trainStartMo} → {trainEndMo}</span>
@@ -320,16 +320,27 @@ export function TimeSlider({
         )}
 
         {/* Year labels along the bottom — adaptively thinned to fit */}
-        <div ref={labelRowRef} className="relative mt-1 h-4">
-          {yearTicksShown.map(({ year, idx }) => (
-            <span
-              key={year}
-              className="absolute -translate-x-1/2 font-mono text-[10px] tabular-nums text-muted-foreground"
-              style={{ left: `${cellStart(idx)}%` }}
-            >
-              {year}
-            </span>
-          ))}
+        <div ref={labelRowRef} className="relative mt-1 h-4 short:hidden">
+          {yearTicksShown.map(({ year, idx }) => {
+            // Clamp edge labels inward: a centered label at 0%/100% pokes
+            // half its width past the screen on phones.
+            const pct = cellStart(idx);
+            const clamp =
+              pct < 4
+                ? "translate-x-0"
+                : pct > 92
+                  ? "-translate-x-full"
+                  : "-translate-x-1/2";
+            return (
+              <span
+                key={year}
+                className={`absolute ${clamp} font-mono text-[10px] tabular-nums text-muted-foreground`}
+                style={{ left: `${pct}%` }}
+              >
+                {year}
+              </span>
+            );
+          })}
           {/* "forecast →" hint at the start of the future zone */}
           {futureMonths.length > 0 && (
             <span
