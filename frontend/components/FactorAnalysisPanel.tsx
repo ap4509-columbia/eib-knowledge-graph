@@ -279,12 +279,18 @@ function Scatter({
   entities,
   clusterColors,
   highlightCluster,
+  onHoverCluster,
+  onTogglePin,
 }: {
   entities: FactorEntity[];
   clusterColors: Record<number, string>;
   /** null = no focus; a cluster index = highlight it, dim the rest;
    *  -1 = a pinned archetype absent on this date, dim everything. */
   highlightCluster: number | null;
+  /** Hovering a dot highlights its whole cluster (label + siblings). */
+  onHoverCluster?: (cluster: number | null) => void;
+  /** Clicking a dot pins/unpins its cluster, same as the sidebar card. */
+  onTogglePin?: (cluster: number) => void;
 }) {
   const W = 640, H = 420;
   const M = { top: 20, right: 24, bottom: 40, left: 40 };
@@ -374,7 +380,7 @@ function Scatter({
     const placed: { x: number; y: number; w: number; h: number }[] = [];
     const overlaps = (a: (typeof placed)[0], c: (typeof placed)[0]) =>
       a.x < c.x + c.w && a.x + a.w > c.x && a.y < c.y + c.h && a.y + a.h > c.y;
-    const out: { name: string; text: string; x: number; y: number; anchor: string }[] = [];
+    const out: { name: string; text: string; x: number; y: number; anchor: string; cluster: number }[] = [];
     const ents = [...entities].sort((a, z) => z.n_articles - a.n_articles);
     for (const e of ents) {
       const cx = pxl(e.pc1);
@@ -413,7 +419,7 @@ function Scatter({
             ? chosen.x - w
             : chosen.x - w / 2;
       placed.push({ x: bx, y: chosen.y - h + 2, w, h });
-      out.push({ name: e.name, text, ...chosen });
+      out.push({ name: e.name, text, ...chosen, cluster: e.cluster });
     }
     return out;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -496,8 +502,15 @@ function Scatter({
               stroke={isHovered ? "currentColor" : "none"}
               strokeWidth={isHovered ? 1.5 : 0}
               style={{ cursor: "pointer" }}
-              onMouseEnter={() => setHoveredName(e.name)}
-              onMouseLeave={() => setHoveredName(null)}
+              onMouseEnter={() => {
+                setHoveredName(e.name);
+                onHoverCluster?.(e.cluster);
+              }}
+              onMouseLeave={() => {
+                setHoveredName(null);
+                onHoverCluster?.(null);
+              }}
+              onClick={() => onTogglePin?.(e.cluster)}
             >
               <title>
                 {`${e.name} — ${e.type}\ncluster ${e.cluster} · ${e.n_articles} articles\nattention ${e.factors.attention.toFixed(1)} · sentiment ${e.factors.sentiment.toFixed(2)} · consensus ${e.factors.consensus.toFixed(2)} · novelty ${e.factors.novelty.toFixed(2)} · materiality ${e.factors.materiality.toFixed(1)}`}
@@ -516,7 +529,11 @@ function Scatter({
             y={l.y}
             textAnchor={l.anchor as "start" | "end" | "middle"}
             className="fill-current"
-            opacity={0.75}
+            opacity={
+              highlightCluster != null && l.cluster !== highlightCluster
+                ? 0.1
+                : 0.75
+            }
             pointerEvents="none"
             style={{
               fontSize: 8.5 * zs,
@@ -593,15 +610,15 @@ function ClusterCard({
       onMouseEnter={() => onHover?.(cluster)}
       onMouseLeave={() => onHover?.(null)}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-start gap-2">
         <span
-          className="inline-block h-2 w-2 shrink-0 rounded-full"
+          className="mt-1 inline-block h-2 w-2 shrink-0 rounded-full"
           style={{ backgroundColor: color }}
         />
-        <span className="min-w-0 truncate text-[11px] font-semibold">
+        <span className="min-w-0 flex-1 text-[11px] font-semibold leading-snug">
           {sigText}
         </span>
-        <span className="ml-auto shrink-0 font-mono text-[10px] text-muted-foreground">
+        <span className="ml-auto shrink-0 self-start font-mono text-[10px] text-muted-foreground">
           {size} {size === 1 ? "entity" : "entities"}
         </span>
       </div>
@@ -628,15 +645,15 @@ function GhostClusterCard({ signature }: { signature: Sig }) {
     .join(" · ");
   return (
     <div className="rounded-md border border-border/40 bg-background p-2.5 opacity-40">
-      <div className="flex items-center gap-2">
+      <div className="flex items-start gap-2">
         <span
-          className="inline-block h-2 w-2 shrink-0 rounded-full"
+          className="mt-1 inline-block h-2 w-2 shrink-0 rounded-full"
           style={{ backgroundColor: signatureColor(signature) }}
         />
-        <span className="min-w-0 truncate text-[11px] font-semibold">
+        <span className="min-w-0 flex-1 text-[11px] font-semibold leading-snug">
           {sigText}
         </span>
-        <span className="ml-auto shrink-0 font-mono text-[10px] text-muted-foreground">
+        <span className="ml-auto shrink-0 self-start font-mono text-[10px] text-muted-foreground">
           —
         </span>
       </div>
@@ -1017,6 +1034,15 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
                     entities={visibleEntities}
                     clusterColors={clusterColors}
                     highlightCluster={highlightCluster}
+                    onHoverCluster={setHoverCluster}
+                    onTogglePin={(c) => {
+                      const hit = data.kmeans.clusters.find(
+                        (x) => x.cluster === c
+                      );
+                      if (!hit) return;
+                      const k = signatureKey(hit.signature);
+                      setPinnedKey((prev) => (prev === k ? null : k));
+                    }}
                   />
                 </div>
               </>
