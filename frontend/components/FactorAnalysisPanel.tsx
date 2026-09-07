@@ -109,8 +109,8 @@ const TRAIT_PHRASES: Record<string, [string, string]> = {
   sentiment: ["getting positive press", "getting negative press"],
   consensus: ["sources in agreement", "a contested storyline"],
   novelty: [
-    "driving its own storylines",
-    "mentioned in others' stories rather than its own",
+    "making headlines of its own",
+    "mentioned in passing in others' coverage",
   ],
   materiality: ["big money on the table", "little money at stake"],
 };
