@@ -295,7 +295,6 @@ function Scatter({
   const W = 640, H = 420;
   const M = { top: 20, right: 24, bottom: 40, left: 40 };
   const b = useMemo(() => computeBounds(entities), [entities]);
-  const [hoveredName, setHoveredName] = useState<string | null>(null);
 
   // Zoom + pan: the viewBox is the camera. Wheel zooms about the cursor
   // (everything — dots AND labels — renders larger, which is what makes
@@ -484,7 +483,6 @@ function Scatter({
       {entities.map((e) => {
         const cx = px(e.pc1);
         const cy = py(e.pc2);
-        const isHovered = hoveredName === e.name;
         return (
           <g key={e.name}>
             <circle
@@ -495,21 +493,12 @@ function Scatter({
               fillOpacity={
                 highlightCluster != null && e.cluster !== highlightCluster
                   ? 0.12
-                  : isHovered
-                    ? 1
-                    : 0.85
+                  : 0.85
               }
-              stroke={isHovered ? "currentColor" : "none"}
-              strokeWidth={isHovered ? 1.5 : 0}
+              stroke="none"
               style={{ cursor: "pointer" }}
-              onMouseEnter={() => {
-                setHoveredName(e.name);
-                onHoverCluster?.(e.cluster);
-              }}
-              onMouseLeave={() => {
-                setHoveredName(null);
-                onHoverCluster?.(null);
-              }}
+              onMouseEnter={() => onHoverCluster?.(e.cluster)}
+              onMouseLeave={() => onHoverCluster?.(null)}
               onClick={() => onTogglePin?.(e.cluster)}
             >
               <title>
@@ -521,8 +510,7 @@ function Scatter({
       })}
       {/* Permanent name labels (collision-avoided; hover overlay handles
           the emphasized full name) */}
-      {pointLabels.map((l) =>
-        l.name === hoveredName ? null : (
+      {pointLabels.map((l) => (
           <text
             key={l.name}
             x={l.x}
@@ -544,33 +532,8 @@ function Scatter({
           >
             {l.text}
           </text>
-        )
-      )}
-      {/* Draw the hovered-entity label last so it sits on top of every dot */}
-      {hoveredName && (() => {
-        const h = entities.find((e) => e.name === hoveredName);
-        if (!h) return null;
-        const cx = px(h.pc1), cy = py(h.pc2);
-        const anchor = cx > (W - M.right - 100) ? "end" : "start";
-        const dx = anchor === "end" ? -8 * zs : 8 * zs;
-        return (
-          <text
-            x={cx + dx}
-            y={cy - 8 * zs}
-            textAnchor={anchor}
-            className="fill-current font-semibold"
-            pointerEvents="none"
-            style={{
-              fontSize: 11 * zs,
-              paintOrder: "stroke",
-              stroke: "var(--background, #fff)",
-              strokeWidth: 3 * zs,
-            }}
-          >
-            {h.name}
-          </text>
-        );
-      })()}
+      ))}
+
     </svg>
     </div>
   );
