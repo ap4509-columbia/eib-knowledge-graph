@@ -12,7 +12,7 @@ import { ChevronDown, ChevronRight, Loader2 } from "lucide-react";
 
 import { fetchFactorsIndex, fetchFactorsLatest } from "@/lib/api/client";
 import type { FactorEntity, FactorsFile } from "@/lib/api/types";
-import { ENTITY_COLORS } from "@/components/graphStyles";
+import { ENTITY_COLORS, entityLabel } from "@/components/graphStyles";
 
 interface FactorAnalysisViewProps {
   sourceId: string;
@@ -96,6 +96,32 @@ function buildClusterColors(
     out[c.cluster] = signatureColor(c.signature);
   }
   return out;
+}
+
+type Sig = Array<{ factor: string; loading: number }>;
+
+/** Plain-English reading of a cluster signature, composed per trait in
+ *  canonical order — "Consensus+ · Materiality+ · Attention−" becomes
+ *  "flying under the radar, sources in agreement, big money on the
+ *  table". */
+const TRAIT_PHRASES: Record<string, [string, string]> = {
+  attention: ["heavily covered", "flying under the radar"],
+  sentiment: ["getting positive press", "getting negative press"],
+  consensus: ["sources in agreement", "a contested storyline"],
+  novelty: ["driving its own storylines", "riding others' storylines"],
+  materiality: ["big money on the table", "little money at stake"],
+};
+
+function describeSignature(signature: Sig): string {
+  const parts = [...signature]
+    .sort(
+      (a, b) => FACTOR_ORDER.indexOf(a.factor) - FACTOR_ORDER.indexOf(b.factor)
+    )
+    .map((sg) => TRAIT_PHRASES[sg.factor]?.[sg.loading > 0 ? 0 : 1])
+    .filter(Boolean);
+  if (parts.length === 0) return "";
+  const text = parts.join(", ");
+  return text.charAt(0).toUpperCase() + text.slice(1) + ".";
 }
 
 function factorTitle(name: string): string {
@@ -252,9 +278,13 @@ function AboutStrip() {
 function Scatter({
   entities,
   clusterColors,
+  highlightCluster,
 }: {
   entities: FactorEntity[];
   clusterColors: Record<number, string>;
+  /** null = no focus; a cluster index = highlight it, dim the rest;
+   *  -1 = a pinned archetype absent on this date, dim everything. */
+  highlightCluster: number | null;
 }) {
   const W = 640, H = 420;
   const M = { top: 20, right: 24, bottom: 40, left: 40 };
@@ -456,7 +486,13 @@ function Scatter({
               cy={cy}
               r={(4 + Math.min(4, e.n_articles - 2)) * Math.sqrt(zs)}
               fill={clusterColors[e.cluster] ?? clusterColor(e.cluster)}
-              fillOpacity={isHovered ? 1 : 0.85}
+              fillOpacity={
+                highlightCluster != null && e.cluster !== highlightCluster
+                  ? 0.12
+                  : isHovered
+                    ? 1
+                    : 0.85
+              }
               stroke={isHovered ? "currentColor" : "none"}
               strokeWidth={isHovered ? 1.5 : 0}
               style={{ cursor: "pointer" }}
@@ -529,12 +565,16 @@ function ClusterCard({
   signature,
   members,
   color,
+  hovered,
+  onHover,
 }: {
   cluster: number;
   size: number;
-  signature: Array<{ factor: string; loading: number }>;
+  signature: Sig;
   members: string[];
   color: string;
+  hovered?: boolean;
+  onHover?: (cluster: number | null) => void;
 }) {
   // Fixed canonical order (not by strength): every card lists its traits
   // in the same factor sequence, matching the order the color key uses.
@@ -545,21 +585,63 @@ function ClusterCard({
     .map((s) => `${factorTitle(s.factor)}${s.loading > 0 ? "+" : "−"}`)
     .join(" · ");
   return (
-    <div className="rounded-md border border-border/70 bg-background p-2.5">
+    <div
+      className={
+        "rounded-md border bg-background p-2.5 transition-colors " +
+        (hovered ? "border-foreground/40" : "border-border/70")
+      }
+      onMouseEnter={() => onHover?.(cluster)}
+      onMouseLeave={() => onHover?.(null)}
+    >
       <div className="flex items-center gap-2">
         <span
           className="inline-block h-2 w-2 shrink-0 rounded-full"
           style={{ backgroundColor: color }}
         />
-        <span className="text-xs font-semibold">Cluster {cluster}</span>
-        <span className="ml-auto font-mono text-[10px] text-muted-foreground">
+        <span className="min-w-0 truncate text-[11px] font-semibold">
+          {sigText}
+        </span>
+        <span className="ml-auto shrink-0 font-mono text-[10px] text-muted-foreground">
           {size} {size === 1 ? "entity" : "entities"}
         </span>
       </div>
-      <div className="mt-1 text-[10px] text-muted-foreground">{sigText}</div>
+      <div className="mt-1 text-[10px] italic leading-snug text-muted-foreground">
+        {describeSignature(signature)}
+      </div>
       <div className="mt-1.5 text-[10px] leading-snug">
         {members.slice(0, 8).join(" · ")}
         {members.length > 8 && ` · +${members.length - 8} more`}
+      </div>
+    </div>
+  );
+}
+
+/** Placeholder for an archetype that exists elsewhere on the timeline but
+ *  has no entities on the selected date — kept in place (same order,
+ *  dimmed) so the sidebar never reshuffles as the user scrubs. */
+function GhostClusterCard({ signature }: { signature: Sig }) {
+  const sigText = [...signature]
+    .sort(
+      (a, b) => FACTOR_ORDER.indexOf(a.factor) - FACTOR_ORDER.indexOf(b.factor)
+    )
+    .map((sg) => `${factorTitle(sg.factor)}${sg.loading > 0 ? "+" : "−"}`)
+    .join(" · ");
+  return (
+    <div className="rounded-md border border-border/40 bg-background p-2.5 opacity-40">
+      <div className="flex items-center gap-2">
+        <span
+          className="inline-block h-2 w-2 shrink-0 rounded-full"
+          style={{ backgroundColor: signatureColor(signature) }}
+        />
+        <span className="min-w-0 truncate text-[11px] font-semibold">
+          {sigText}
+        </span>
+        <span className="ml-auto shrink-0 font-mono text-[10px] text-muted-foreground">
+          —
+        </span>
+      </div>
+      <div className="mt-1 text-[10px] italic leading-snug text-muted-foreground">
+        {describeSignature(signature)} No names here on this date.
       </div>
     </div>
   );
@@ -716,17 +798,91 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
     () => (data ? buildClusterColors(data.kmeans.clusters) : {}),
     [data]
   );
+
   // History scrubber: dated bundles from factors/index.json; null date =
   // latest.
   const [dates, setDates] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  // Entity-type filter for the scatter (clutter control). Types are
+  // hidden by clicking their chip; empty set = show everything.
+  const [hiddenTypes, setHiddenTypes] = useState<Set<string>>(new Set());
+  // Cluster focus: hover is transient (by this date's cluster index),
+  // a click pins the archetype by signature key so the highlight
+  // survives timeline scrubbing.
+  const [hoverCluster, setHoverCluster] = useState<number | null>(null);
+  const [pinnedKey, setPinnedKey] = useState<string | null>(null);
+  // Stable archetype catalog: every signature seen on ANY date of this
+  // source's timeline, in one fixed order — the sidebar renders from
+  // this so cards never reshuffle while scrubbing.
+  const [catalog, setCatalog] = useState<Array<{
+    key: string;
+    signature: Sig;
+  }> | null>(null);
 
   useEffect(() => {
     if (!sourceId) return;
     setDates([]);
     setSelectedDate(null);
+    setHiddenTypes(new Set());
+    setPinnedKey(null);
+    setCatalog(null);
     fetchFactorsIndex(sourceId).then(setDates);
   }, [sourceId]);
+
+  // Build the archetype catalog by sweeping every dated bundle once in
+  // the background (bundles are small, CDN-cached static JSON).
+  useEffect(() => {
+    if (!sourceId || dates.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      const seen = new Map<string, Sig>();
+      for (const d of dates) {
+        if (cancelled) return;
+        try {
+          const b = await fetchFactorsLatest(sourceId, d);
+          for (const c of b.kmeans.clusters) {
+            const k = signatureKey(c.signature);
+            if (!seen.has(k)) seen.set(k, c.signature);
+          }
+        } catch {
+          /* a missing date never blocks the catalog */
+        }
+      }
+      if (!cancelled) {
+        setCatalog(
+          [...seen.entries()]
+            .sort((a, b) => (a[0] < b[0] ? -1 : 1))
+            .map(([key, signature]) => ({ key, signature }))
+        );
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [sourceId, dates]);
+
+  // Entity-type counts for the filter chips; scatter shows only
+  // non-hidden types.
+  const typeCounts = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const e of data?.entities ?? []) m.set(e.type, (m.get(e.type) ?? 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }, [data]);
+  const visibleEntities = useMemo(
+    () => (data?.entities ?? []).filter((e) => !hiddenTypes.has(e.type)),
+    [data, hiddenTypes]
+  );
+  // Resolve the cluster to highlight: hover wins (transient), else the
+  // pinned archetype resolved against THIS date's clusters (-1 when the
+  // archetype has no entities today, which dims the whole map).
+  const highlightCluster = useMemo(() => {
+    if (hoverCluster != null) return hoverCluster;
+    if (pinnedKey == null || !data) return null;
+    const hit = data.kmeans.clusters.find(
+      (c) => signatureKey(c.signature) === pinnedKey
+    );
+    return hit ? hit.cluster : -1;
+  }, [hoverCluster, pinnedKey, data]);
 
   // Stale-while-revalidate: scrubbing dates keeps the current chart on
   // screen while the next bundle loads (bundles are cached client-side,
@@ -812,15 +968,58 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
         <div className="flex min-h-0 flex-1 flex-col overflow-hidden md:flex-row">
           <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
             {data.entities.length > 0 ? (
-              <div
-                className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4 transition-opacity duration-150"
-                style={{ opacity: isFetching ? 0.7 : 1 }}
-              >
-                <Scatter
-                  entities={data.entities}
-                  clusterColors={clusterColors}
-                />
-              </div>
+              <>
+                {typeCounts.length > 1 && (
+                  <div className="flex shrink-0 flex-wrap items-center gap-1 border-b border-border/40 px-4 py-1.5">
+                    {typeCounts.map(([t, n]) => {
+                      const off = hiddenTypes.has(t);
+                      return (
+                        <button
+                          key={t}
+                          type="button"
+                          onClick={() =>
+                            setHiddenTypes((prev) => {
+                              const next = new Set(prev);
+                              if (next.has(t)) next.delete(t);
+                              else next.add(t);
+                              return next;
+                            })
+                          }
+                          title={off ? "Show this entity type" : "Hide this entity type"}
+                          className={
+                            "flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] transition " +
+                            (off
+                              ? "border-border/50 text-muted-foreground/50 line-through"
+                              : "border-border text-foreground hover:bg-accent")
+                          }
+                        >
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full"
+                            style={{
+                              backgroundColor: ENTITY_COLORS[t] ?? "#9ca3af",
+                              opacity: off ? 0.4 : 0.9,
+                            }}
+                          />
+                          {entityLabel(t)}
+                          <span className="font-mono text-muted-foreground">
+                            {n}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+                <div
+                  className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-4 transition-opacity duration-150"
+                  style={{ opacity: isFetching ? 0.7 : 1 }}
+                >
+                  <Scatter
+                    entities={visibleEntities}
+                    clusterColors={clusterColors}
+                    highlightCluster={highlightCluster}
+                  />
+                </div>
+              </>
             ) : (
               <div className="flex flex-1 items-center px-6 text-xs text-muted-foreground">
                 Factor bundle exists but no entities passed the min-articles
@@ -843,16 +1042,74 @@ export function FactorAnalysisView({ sourceId }: FactorAnalysisViewProps) {
             <div className="mb-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
               Archetype clusters
             </div>
-            {data.kmeans.clusters.map((c) => (
-              <ClusterCard
-                key={c.cluster}
-                cluster={c.cluster}
-                size={c.size}
-                signature={c.signature}
-                members={c.members}
-                color={clusterColors[c.cluster] ?? clusterColor(c.cluster)}
-              />
-            ))}
+            {(() => {
+              const currentByKey = new Map(
+                data.kmeans.clusters.map((c) => [signatureKey(c.signature), c])
+              );
+              // Catalog rows (fixed order) + any of today's clusters the
+              // background sweep hasn't seen yet.
+              const base =
+                catalog ??
+                data.kmeans.clusters.map((c) => ({
+                  key: signatureKey(c.signature),
+                  signature: c.signature,
+                }));
+              const extras = data.kmeans.clusters
+                .filter(
+                  (c) => !base.some((r) => r.key === signatureKey(c.signature))
+                )
+                .map((c) => ({
+                  key: signatureKey(c.signature),
+                  signature: c.signature,
+                }));
+              const rows = [...base, ...extras].sort((a, b) =>
+                a.key < b.key ? -1 : 1
+              );
+              return rows.map((r) => {
+                const cur = currentByKey.get(r.key);
+                const pinned = pinnedKey === r.key;
+                if (!cur)
+                  return (
+                    <button
+                      key={r.key}
+                      type="button"
+                      onClick={() => setPinnedKey(pinned ? null : r.key)}
+                      className={
+                        "block w-full text-left " +
+                        (pinned ? "rounded-md ring-1 ring-foreground/40" : "")
+                      }
+                    >
+                      <GhostClusterCard signature={r.signature} />
+                    </button>
+                  );
+                return (
+                  <button
+                    key={r.key}
+                    type="button"
+                    onClick={() => setPinnedKey(pinned ? null : r.key)}
+                    className={
+                      "block w-full text-left " +
+                      (pinned ? "rounded-md ring-1 ring-foreground/40" : "")
+                    }
+                  >
+                    <ClusterCard
+                      cluster={cur.cluster}
+                      size={cur.size}
+                      signature={cur.signature}
+                      members={cur.members}
+                      color={
+                        clusterColors[cur.cluster] ?? clusterColor(cur.cluster)
+                      }
+                      hovered={
+                        hoverCluster === cur.cluster ||
+                        (hoverCluster == null && pinned)
+                      }
+                      onHover={setHoverCluster}
+                    />
+                  </button>
+                );
+              });
+            })()}
             <div className="pt-2 text-[10px] leading-snug text-muted-foreground">
               Factors kept:{" "}
               <span className="font-mono">
