@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 233,
-    "edges": 202,
+    "nodes": 239,
+    "edges": 207,
     "scored_edges": 0
   },
   "nodes": [
@@ -65,7 +65,7 @@
     {
       "id": "STMicroelectronics",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": -429.0437493522472,
       "y": 465.1829454069357
     },
@@ -352,7 +352,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 6,
+      "degree": 7,
       "x": -19.50858368839895,
       "y": 86.96879071954797
     },
@@ -1528,7 +1528,7 @@
     {
       "id": "Equinor",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -411.6099483961423,
       "y": 322.5068886552163
     },
@@ -1636,6 +1636,48 @@
       "degree": 1,
       "x": -251.5003338731759,
       "y": -596.8293224493997
+    },
+    {
+      "id": "Reversal",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 827.2334046082171,
+      "y": -201.18686997058205
+    },
+    {
+      "id": "STM",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -820.6160989497946,
+      "y": 564.4922791026138
+    },
+    {
+      "id": "New UWB Standard",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 513.761959201866,
+      "y": 606.1970495338204
+    },
+    {
+      "id": "ING Groep",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 258.836044658994,
+      "y": -499.2535309829998
+    },
+    {
+      "id": "New CRO",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 442.4490945715906,
+      "y": -866.661783295246
+    },
+    {
+      "id": "Cash Dividend",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -900.0,
+      "y": 34.56318492579662
     }
   ],
   "edges": [
@@ -4860,6 +4902,86 @@
       "source": "Equinor ASA",
       "target": "Shareholders",
       "rel": "Pays Dividend To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Experiences Price Action||Reversal",
+      "source": "ASML",
+      "target": "Reversal",
+      "rel": "Experiences Price Action",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "STMicroelectronics||Has Ticker||STM",
+      "source": "STMicroelectronics",
+      "target": "STM",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "STMicroelectronics||Validates For Standard||New UWB Standard",
+      "source": "STMicroelectronics",
+      "target": "New UWB Standard",
+      "rel": "Validates For Standard",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "ING Groep||Hires||New CRO",
+      "source": "ING Groep",
+      "target": "New CRO",
+      "rel": "Hires",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Equinor||Announces Dividend||Cash Dividend",
+      "source": "Equinor",
+      "target": "Cash Dividend",
+      "rel": "Announces Dividend",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
       "polarity": "positive",

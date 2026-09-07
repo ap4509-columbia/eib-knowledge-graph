@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 85,
-    "edges": 69,
+    "nodes": 89,
+    "edges": 72,
     "scored_edges": 0
   },
   "nodes": [
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 9,
+      "degree": 10,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -600,6 +600,34 @@
       "degree": 1,
       "x": -553.2214947074782,
       "y": 850.7027430203625
+    },
+    {
+      "id": "Roche",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -183.82109513272434,
+      "y": -415.0215176841472
+    },
+    {
+      "id": "Blood-Cancer Deal",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 532.9912644475413,
+      "y": -258.76477586770045
+    },
+    {
+      "id": "$1.53 Billion",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": -562.8504035589095
+    },
+    {
+      "id": "ARC Resources",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 384.00878127503296,
+      "y": 633.650363562969
     }
   ],
   "edges": [
@@ -1705,6 +1733,54 @@
       "sentiment": -0.3,
       "materiality_usd": 1000000000.0,
       "materiality_log": 20.723,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Roche||Commits To Deal||Blood-Cancer Deal",
+      "source": "Roche",
+      "target": "Blood-Cancer Deal",
+      "rel": "Commits To Deal",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.75,
+      "materiality_usd": 75000000.0,
+      "materiality_log": 18.133,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Roche||Has Potential Deal Value Up To||$1.53 Billion",
+      "source": "Roche",
+      "target": "$1.53 Billion",
+      "rel": "Has Potential Deal Value Up To",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.75,
+      "materiality_usd": 1530000000.0,
+      "materiality_log": 21.149,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Acquires Stake In||ARC Resources",
+      "source": "Shell",
+      "target": "ARC Resources",
+      "rel": "Acquires Stake In",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
       "event_type": "M_AND_A"
     }
   ]

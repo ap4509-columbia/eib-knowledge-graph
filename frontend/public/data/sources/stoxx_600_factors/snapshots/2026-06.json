@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 43,
-    "edges": 33,
+    "nodes": 45,
+    "edges": 34,
     "scored_edges": 0
   },
   "nodes": [
@@ -306,6 +306,20 @@
       "degree": 1,
       "x": -900.0,
       "y": 217.83459344884372
+    },
+    {
+      "id": "Schneider Electric",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Su",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -836,6 +850,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "Schneider Electric||Has Ticker||Su",
+      "source": "Schneider Electric",
+      "target": "Su",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
