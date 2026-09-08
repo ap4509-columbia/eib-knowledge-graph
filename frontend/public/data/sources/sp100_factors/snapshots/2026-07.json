@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 8,
-    "edges": 5,
+    "nodes": 10,
+    "edges": 6,
     "scored_edges": 0
   },
   "nodes": [
@@ -61,6 +61,20 @@
       "degree": 1,
       "x": 899.783537190818,
       "y": 564.2541526250698
+    },
+    {
+      "id": "Duke Energy",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Shareholders",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -140,6 +154,22 @@
       "weight": 1,
       "score": null,
       "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Duke Energy||Announces Dividend Payment To||Shareholders",
+      "source": "Duke Energy",
+      "target": "Shareholders",
+      "rel": "Announces Dividend Payment To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.1,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"

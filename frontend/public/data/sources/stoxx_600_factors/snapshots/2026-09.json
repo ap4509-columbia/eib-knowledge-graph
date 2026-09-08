@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 89,
-    "edges": 72,
+    "nodes": 100,
+    "edges": 83,
     "scored_edges": 0
   },
   "nodes": [
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 10,
+      "degree": 13,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -310,7 +310,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 10,
+      "degree": 13,
       "x": 47.92199746453692,
       "y": 94.25654591052405
     },
@@ -331,7 +331,7 @@
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 7,
       "x": 193.55207812321675,
       "y": 181.24456731285412
     },
@@ -513,7 +513,7 @@
     {
       "id": "Eni",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -59.91128429050129,
       "y": 835.2489533951327
     },
@@ -534,7 +534,7 @@
     {
       "id": "PA",
       "type": "GOVERNMENT_ORGANIZATION",
-      "degree": 1,
+      "degree": 2,
       "x": -803.4371540382788,
       "y": -116.64867422095267
     },
@@ -628,6 +628,83 @@
       "degree": 1,
       "x": 384.00878127503296,
       "y": 633.650363562969
+    },
+    {
+      "id": "Capgemini",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -159.71244947083713,
+      "y": 647.4164003465455
+    },
+    {
+      "id": "Ambarella",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 455.9432491204369,
+      "y": 710.8376894292365
+    },
+    {
+      "id": "GBP",
+      "type": "CURRENCY",
+      "degree": 1,
+      "x": -256.09556266727134,
+      "y": -732.436629611821
+    },
+    {
+      "id": "Ian Tyler",
+      "type": "EXECUTIVE",
+      "degree": 1,
+      "x": -660.7103321383913,
+      "y": -308.3223706530989
+    },
+    {
+      "id": "Boardroom Turmoil",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 33.98934046623217,
+      "y": 881.7763409984582
+    },
+    {
+      "id": "Biofuels",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": 181.66231696608313,
+      "y": -845.302534694145
+    },
+    {
+      "id": "private equity firm",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 772.3087604231557,
+      "y": 541.2266951332583
+    },
+    {
+      "id": "vitamins business",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -519.0547473212695,
+      "y": -696.1449272157378
+    },
+    {
+      "id": "Michigan Supreme Court",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -721.3263731437854,
+      "y": 44.86607367939473
+    },
+    {
+      "id": "MCPA",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": 46.42688231233915
+    },
+    {
+      "id": "PETRONAS",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 203.72180265262725,
+      "y": -742.6618522996539
     }
   ],
   "edges": [
@@ -1782,6 +1859,182 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_AND_A"
+    },
+    {
+      "id": "Capgemini||Adopts Technology From||Ambarella",
+      "source": "Capgemini",
+      "target": "Ambarella",
+      "rel": "Adopts Technology From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Shell||Pays Dividend In||PA",
+      "source": "Shell",
+      "target": "PA",
+      "rel": "Pays Dividend In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Pays Dividend In||GBP",
+      "source": "Shell",
+      "target": "GBP",
+      "rel": "Pays Dividend In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BP||Is Compared To||Shell",
+      "source": "BP",
+      "target": "Shell",
+      "rel": "Is Compared To",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BP||Names As Chair||Ian Tyler",
+      "source": "BP",
+      "target": "Ian Tyler",
+      "rel": "Names As Chair",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "BP||Experiences||Boardroom Turmoil",
+      "source": "BP",
+      "target": "Boardroom Turmoil",
+      "rel": "Experiences",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Eni||Invests In||Biofuels",
+      "source": "Eni",
+      "target": "Biofuels",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "PETRONAS||Invests In||Biofuels",
+      "source": "PETRONAS",
+      "target": "Biofuels",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Nestl\u00e9||Sells Business To||private equity firm",
+      "source": "Nestl\u00e9",
+      "target": "private equity firm",
+      "rel": "Sells Business To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 1000000000.0,
+      "materiality_log": 20.723,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Nestl\u00e9||Has Business Unit||vitamins business",
+      "source": "Nestl\u00e9",
+      "target": "vitamins business",
+      "rel": "Has Business Unit",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Michigan Supreme Court||Overturns Precedent Of||MCPA",
+      "source": "Michigan Supreme Court",
+      "target": "MCPA",
+      "rel": "Overturns Precedent Of",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
     }
   ]
 }

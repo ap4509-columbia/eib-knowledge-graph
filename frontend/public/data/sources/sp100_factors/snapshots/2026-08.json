@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 2054,
-    "edges": 2003,
+    "nodes": 2055,
+    "edges": 2005,
     "scored_edges": 0
   },
   "nodes": [
@@ -982,7 +982,7 @@
     {
       "id": "Qualcomm",
       "type": "COMPANY",
-      "degree": 22,
+      "degree": 24,
       "x": 179.69751759876226,
       "y": 15.20111146383072
     },
@@ -8913,7 +8913,7 @@
     {
       "id": "HUMAIN",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 144.99336463927006,
       "y": -860.3194656142072
     },
@@ -10862,13 +10862,6 @@
       "degree": 1,
       "x": -244.39937434427577,
       "y": -788.3483265065084
-    },
-    {
-      "id": "Updated COVID-19 Vaccine",
-      "type": "PRODUCT",
-      "degree": 1,
-      "x": -430.8400508537053,
-      "y": 701.2054555555611
     },
     {
       "id": "Crohn's Disease Label Expansion",
@@ -14383,6 +14376,20 @@
       "degree": 1,
       "x": 838.5317109761761,
       "y": 238.28548794945004
+    },
+    {
+      "id": "Horizon Ultra AI PC",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 899.783537190818,
+      "y": 564.2541526250698
+    },
+    {
+      "id": "Updated COVID-19 vaccines",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -430.8400508537053,
+      "y": 701.2054555555611
     }
   ],
   "edges": [
@@ -37619,9 +37626,9 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "Pfizer||Obtains Approval For||Updated COVID-19 Vaccine",
+      "id": "Pfizer||Obtains Approval For||Updated COVID-19 vaccines",
       "source": "Pfizer",
-      "target": "Updated COVID-19 Vaccine",
+      "target": "Updated COVID-19 vaccines",
       "rel": "Obtains Approval For",
       "rel_cat": "SSI",
       "causal_type": "OTHER",
@@ -46433,6 +46440,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "Qualcomm||Unveils||Horizon Ultra AI PC",
+      "source": "Qualcomm",
+      "target": "Horizon Ultra AI PC",
+      "rel": "Unveils",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Qualcomm||Collaborates With||HUMAIN",
+      "source": "Qualcomm",
+      "target": "HUMAIN",
+      "rel": "Collaborates With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
     }
   ]
 }

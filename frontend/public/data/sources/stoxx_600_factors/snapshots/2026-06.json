@@ -1,8 +1,8 @@
 {
   "month": "2026-06",
   "stats": {
-    "nodes": 45,
-    "edges": 34,
+    "nodes": 47,
+    "edges": 35,
     "scored_edges": 0
   },
   "nodes": [
@@ -317,6 +317,20 @@
     {
       "id": "Su",
       "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    },
+    {
+      "id": "Pennsylvania Senate Republicans",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "Electricity Rates in Pennsylvania",
+      "type": "CONCEPT",
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
@@ -866,6 +880,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Pennsylvania Senate Republicans||Discusses||Electricity Rates in Pennsylvania",
+      "source": "Pennsylvania Senate Republicans",
+      "target": "Electricity Rates in Pennsylvania",
+      "rel": "Discusses",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }
