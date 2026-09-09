@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 100,
-    "edges": 83,
+    "nodes": 116,
+    "edges": 97,
     "scored_edges": 0
   },
   "nodes": [
@@ -58,7 +58,7 @@
     {
       "id": "SAP",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -700.5644959922615,
       "y": 459.86926081444585
     },
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 4,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 3,
+      "degree": 4,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 16,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -268,7 +268,7 @@
     {
       "id": "Shell Energy Stadium",
       "type": "FINANCIAL_ENTITY",
-      "degree": 2,
+      "degree": 4,
       "x": -368.85625509842515,
       "y": -498.0269098171144
     },
@@ -380,7 +380,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 181.20573941880204,
       "y": 457.3595387049728
     },
@@ -534,7 +534,7 @@
     {
       "id": "PA",
       "type": "GOVERNMENT_ORGANIZATION",
-      "degree": 2,
+      "degree": 3,
       "x": -803.4371540382788,
       "y": -116.64867422095267
     },
@@ -705,6 +705,118 @@
       "degree": 1,
       "x": 203.72180265262725,
       "y": -742.6618522996539
+    },
+    {
+      "id": "-2%",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 899.9999999999999,
+      "y": 173.7219753284666
+    },
+    {
+      "id": "Zeiss",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -737.7697135427103,
+      "y": 204.68486299018318
+    },
+    {
+      "id": "Mistral",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": -386.49766020782414,
+      "y": 626.2682707564894
+    },
+    {
+      "id": "NVIDIA ASML",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -466.246359849018,
+      "y": 797.128164216173
+    },
+    {
+      "id": "Samsung",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -143.2954806598297,
+      "y": -177.98250162290535
+    },
+    {
+      "id": "new campus",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 209.17691932331212,
+      "y": -893.9171397537756
+    },
+    {
+      "id": "infra debt fund",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -551.5699339452984,
+      "y": -573.2230640885526
+    },
+    {
+      "id": "Temu Range Rover",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 778.6633773701881,
+      "y": -549.2086439561915
+    },
+    {
+      "id": "Dr. Ing. h.c. F. Porsche AG",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 802.4468672081838,
+      "y": -469.14262603467
+    },
+    {
+      "id": "Shell Oil",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -12.502959607002136,
+      "y": 871.4266182717336
+    },
+    {
+      "id": "Toluca FC and Monterrey C.F.",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 899.9975976003784,
+      "y": -179.05583012348288
+    },
+    {
+      "id": "Leagues Cup Final",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -766.590029710442,
+      "y": -424.35159961165
+    },
+    {
+      "id": "Regulator",
+      "type": "ENTITY",
+      "degree": 1,
+      "x": -734.7058110933733,
+      "y": 541.2294225842893
+    },
+    {
+      "id": "Inditex",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 529.2612418380094,
+      "y": -230.03154981810738
+    },
+    {
+      "id": "Jump",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 655.5195053684874,
+      "y": -319.3824204137656
+    },
+    {
+      "id": "Nvidia",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -278.2668071692922,
+      "y": 441.15681685550965
     }
   ],
   "edges": [
@@ -1453,9 +1565,9 @@
       "causal_type": "REGULATORY",
       "polarity": "negative",
       "origin": "news",
-      "weight": 1,
+      "weight": 2,
       "score": null,
-      "sentiment": -1.0,
+      "sentiment": -0.875,
       "materiality_usd": 15000000.0,
       "materiality_log": 16.524,
       "event_type": "LEGAL"
@@ -2035,6 +2147,230 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Experiences Stock Price Movement||-2%",
+      "source": "Novo Nordisk",
+      "target": "-2%",
+      "rel": "Experiences Stock Price Movement",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Zeiss||Overhauls||SAP",
+      "source": "Zeiss",
+      "target": "SAP",
+      "rel": "Overhauls",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Mistral||Secures Funding From||NVIDIA ASML",
+      "source": "Mistral",
+      "target": "NVIDIA ASML",
+      "rel": "Secures Funding From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 3120000000.0,
+      "materiality_log": 21.861,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Nvidia||Invests In||Mistral",
+      "source": "Nvidia",
+      "target": "Mistral",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 3120000000.0,
+      "materiality_log": 21.861,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "ASML||Invests In||Mistral",
+      "source": "ASML",
+      "target": "Mistral",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 3120000000.0,
+      "materiality_log": 21.861,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Samsung||Deepens Partnership With||ASML",
+      "source": "Samsung",
+      "target": "ASML",
+      "rel": "Deepens Partnership With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "ASML||Breaks Ground On||new campus",
+      "source": "ASML",
+      "target": "new campus",
+      "rel": "Breaks Ground On",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "BNP Paribas||Raises Capital For||infra debt fund",
+      "source": "BNP Paribas",
+      "target": "infra debt fund",
+      "rel": "Raises Capital For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 12960000000.0,
+      "materiality_log": 23.285,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Temu Range Rover||Is Threat To||Dr. Ing. h.c. F. Porsche AG",
+      "source": "Temu Range Rover",
+      "target": "Dr. Ing. h.c. F. Porsche AG",
+      "rel": "Is Threat To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Has Ticker||Shell Oil",
+      "source": "Shell",
+      "target": "Shell Oil",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Shell Energy Stadium||Hosts Match Between||Toluca FC and Monterrey C.F.",
+      "source": "Shell Energy Stadium",
+      "target": "Toluca FC and Monterrey C.F.",
+      "rel": "Hosts Match Between",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell Energy Stadium||Rematch Of||Leagues Cup Final",
+      "source": "Shell Energy Stadium",
+      "target": "Leagues Cup Final",
+      "rel": "Rematch Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Pays Settlement To||Regulator",
+      "source": "Shell",
+      "target": "Regulator",
+      "rel": "Pays Settlement To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 15000000.0,
+      "materiality_log": 16.524,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Inditex||Experiences Sales Increase Of||Jump",
+      "source": "Inditex",
+      "target": "Jump",
+      "rel": "Experiences Sales Increase Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.85,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
     }
   ]
 }

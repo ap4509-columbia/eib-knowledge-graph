@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 239,
-    "edges": 207,
+    "nodes": 242,
+    "edges": 210,
     "scored_edges": 0
   },
   "nodes": [
@@ -51,14 +51,14 @@
     {
       "id": "Pennsylvania Distribution Hub",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": 496.5236602576184,
       "y": -621.918411434799
     },
     {
       "id": "Pennsylvania Distribution Center",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": -170.78548417291955,
       "y": 900.0
     },
@@ -1678,6 +1678,27 @@
       "degree": 1,
       "x": -900.0,
       "y": 34.56318492579662
+    },
+    {
+      "id": "Schneider Electric",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 715.4667896532312,
+      "y": -426.89034953741987
+    },
+    {
+      "id": "Supa Programme",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 900.0,
+      "y": -663.4397485458354
+    },
+    {
+      "id": "Skill Game Machines",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": -639.6496796261638,
+      "y": 472.3608286889346
     }
   ],
   "edges": [
@@ -4992,6 +5013,54 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Schneider Electric||Has Ticker||Supa Programme",
+      "source": "Schneider Electric",
+      "target": "Supa Programme",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Pennsylvania Distribution Hub||Plead For Legalization Of||Skill Game Machines",
+      "source": "Pennsylvania Distribution Hub",
+      "target": "Skill Game Machines",
+      "rel": "Plead For Legalization Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Pennsylvania Distribution Center||Plead For Legalization Of||Skill Game Machines",
+      "source": "Pennsylvania Distribution Center",
+      "target": "Skill Game Machines",
+      "rel": "Plead For Legalization Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
     }
   ]
 }
