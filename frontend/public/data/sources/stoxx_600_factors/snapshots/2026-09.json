@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 116,
-    "edges": 97,
+    "nodes": 129,
+    "edges": 108,
     "scored_edges": 0
   },
   "nodes": [
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 4,
+      "degree": 5,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 16,
+      "degree": 17,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -310,7 +310,7 @@
     {
       "id": "BP",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 15,
       "x": 47.92199746453692,
       "y": 94.25654591052405
     },
@@ -541,7 +541,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 4,
       "x": 54.850822585053486,
       "y": -180.73716009055028
     },
@@ -817,6 +817,97 @@
       "degree": 1,
       "x": -278.2668071692922,
       "y": 441.15681685550965
+    },
+    {
+      "id": "COPD",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 801.0296905848829,
+      "y": -96.98062377010021
+    },
+    {
+      "id": "Citigroup",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 513.0925342850863,
+      "y": -49.06798156427973
+    },
+    {
+      "id": "Intel",
+      "type": "COMPANY",
+      "degree": 3,
+      "x": 4.483404484799658,
+      "y": 452.62452343838953
+    },
+    {
+      "id": "INTC",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": 663.5201543905977,
+      "y": 365.1034775563715
+    },
+    {
+      "id": "High-NA EUV",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -651.410949024832,
+      "y": 538.5184551265708
+    },
+    {
+      "id": "CLARIANE SE",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -413.6465154383677,
+      "y": 398.9185808312618
+    },
+    {
+      "id": "Banco Santander",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 542.4694759348353,
+      "y": -566.4461124205883
+    },
+    {
+      "id": "$1.5b",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 617.356739065019,
+      "y": -607.4853954231844
+    },
+    {
+      "id": "Deutsche Bank",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 254.54835755309256,
+      "y": 539.4580156032281
+    },
+    {
+      "id": "European Consumer Staples",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": 309.14149331067125,
+      "y": 660.5784981747694
+    },
+    {
+      "id": "passengers",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 140.46848625979507,
+      "y": -741.3541910033335
+    },
+    {
+      "id": "compensation",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 169.00779175606786,
+      "y": -900.0
+    },
+    {
+      "id": "September 2027",
+      "type": "DATE",
+      "degree": 1,
+      "x": -356.4617887016287,
+      "y": -812.4394772706221
     }
   ],
   "edges": [
@@ -2371,6 +2462,182 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "AstraZeneca||Reports Data On||COPD",
+      "source": "AstraZeneca",
+      "target": "COPD",
+      "rel": "Reports Data On",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Citigroup||Publishes Peak Sales Estimate For||AstraZeneca",
+      "source": "Citigroup",
+      "target": "AstraZeneca",
+      "rel": "Publishes Peak Sales Estimate For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 7000000000.0,
+      "materiality_log": 22.669,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Intel||Has Ticker||INTC",
+      "source": "Intel",
+      "target": "INTC",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Intel||Moves Into Production||High-NA EUV",
+      "source": "Intel",
+      "target": "High-NA EUV",
+      "rel": "Moves Into Production",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "ASML||Moves Into Production With||Intel",
+      "source": "ASML",
+      "target": "Intel",
+      "rel": "Moves Into Production With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "CLARIANE SE||No Stab Notice Issued By||BNP Paribas",
+      "source": "CLARIANE SE",
+      "target": "BNP Paribas",
+      "rel": "No Stab Notice Issued By",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Banco Santander||Redeems Notes For||$1.5b",
+      "source": "Banco Santander",
+      "target": "$1.5b",
+      "rel": "Redeems Notes For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 1500000000.0,
+      "materiality_log": 21.129,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Deutsche Bank||Publishes Outlook On||European Consumer Staples",
+      "source": "Deutsche Bank",
+      "target": "European Consumer Staples",
+      "rel": "Publishes Outlook On",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "passengers||Are Unlikely To Get||compensation",
+      "source": "passengers",
+      "target": "compensation",
+      "rel": "Are Unlikely To Get",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Shell||Has Superior Cash Flow Than||BP",
+      "source": "Shell",
+      "target": "BP",
+      "rel": "Has Superior Cash Flow Than",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BP||Expected Share Price For||September 2027",
+      "source": "BP",
+      "target": "September 2027",
+      "rel": "Expected Share Price For",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
     }
   ]
 }

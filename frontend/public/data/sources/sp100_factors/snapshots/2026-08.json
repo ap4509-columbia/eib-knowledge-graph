@@ -5383,13 +5383,6 @@
       "y": -295.2786897419029
     },
     {
-      "id": "One Analyst",
-      "type": "CONCEPT",
-      "degree": 2,
-      "x": -594.7429382523787,
-      "y": 191.08867428015853
-    },
-    {
       "id": "Exxon Mobil Corporation and Chevron Corporation",
       "type": "COMPANY",
       "degree": 1,
@@ -14390,6 +14383,13 @@
       "degree": 1,
       "x": -430.8400508537053,
       "y": 701.2054555555611
+    },
+    {
+      "id": "SA Analyst",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -594.7429382523787,
+      "y": 191.08867428015853
     }
   ],
   "edges": [
@@ -25322,8 +25322,8 @@
       "event_type": "OTHER"
     },
     {
-      "id": "One Analyst||Thinks Positive About||Exxon Mobil Corporation and Chevron Corporation",
-      "source": "One Analyst",
+      "id": "SA Analyst||Thinks Positive About||Exxon Mobil Corporation and Chevron Corporation",
+      "source": "SA Analyst",
       "target": "Exxon Mobil Corporation and Chevron Corporation",
       "rel": "Thinks Positive About",
       "rel_cat": "SSI",
@@ -33066,8 +33066,8 @@
       "event_type": "PRODUCT"
     },
     {
-      "id": "One Analyst||Sets Target Price For||Google",
-      "source": "One Analyst",
+      "id": "SA Analyst||Sets Target Price For||Google",
+      "source": "SA Analyst",
       "target": "Google",
       "rel": "Sets Target Price For",
       "rel_cat": "SSI",
