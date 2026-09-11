@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 129,
-    "edges": 108,
+    "nodes": 144,
+    "edges": 124,
     "scored_edges": 0
   },
   "nodes": [
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 8,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 5,
+      "degree": 6,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -177,7 +177,7 @@
     {
       "id": "Mid-Air Collision With Pennsylvania Police Helicopter",
       "type": "EVENT",
-      "degree": 1,
+      "degree": 2,
       "x": -194.06989496793287,
       "y": -727.0703427693935
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 17,
+      "degree": 21,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -541,7 +541,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": 54.850822585053486,
       "y": -180.73716009055028
     },
@@ -562,7 +562,7 @@
     {
       "id": "NTSB",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -128.99038423360042,
       "y": -627.4167419822727
     },
@@ -576,7 +576,7 @@
     {
       "id": "IQAir",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -61.23300488179707,
       "y": -758.7206872175816
     },
@@ -849,14 +849,14 @@
     {
       "id": "High-NA EUV",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": -651.410949024832,
       "y": 538.5184551265708
     },
     {
       "id": "CLARIANE SE",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -413.6465154383677,
       "y": 398.9185808312618
     },
@@ -877,7 +877,7 @@
     {
       "id": "Deutsche Bank",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": 254.54835755309256,
       "y": 539.4580156032281
     },
@@ -908,6 +908,111 @@
       "degree": 1,
       "x": -356.4617887016287,
       "y": -812.4394772706221
+    },
+    {
+      "id": "AI Growth",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -785.2560353657135,
+      "y": 472.982679304278
+    },
+    {
+      "id": "TSMC",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 655.1293686174242,
+      "y": 672.2127830850237
+    },
+    {
+      "id": "Sa Pa",
+      "type": "LOCATION",
+      "degree": 1,
+      "x": -284.4884960630399,
+      "y": -591.5158425829072
+    },
+    {
+      "id": "air pollution",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -315.59265546574045,
+      "y": -685.081522162017
+    },
+    {
+      "id": "Tri Star",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 549.953923898888,
+      "y": -689.3965456183945
+    },
+    {
+      "id": "Constellation Energy",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 853.9190647799091,
+      "y": -195.34544912680093
+    },
+    {
+      "id": "Rhode Island power plant",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 608.3094858306026,
+      "y": -117.48398165944313
+    },
+    {
+      "id": "Hunlock Creek",
+      "type": "FIN_INSTRUMENT_INFO",
+      "degree": 1,
+      "x": 308.9518621563318,
+      "y": -472.2965554607758
+    },
+    {
+      "id": "Angola offshore blocks",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -484.35388225477936,
+      "y": -664.5002252427382
+    },
+    {
+      "id": "EOG",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -663.1402344954193,
+      "y": 73.7129971442032
+    },
+    {
+      "id": "COO",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -846.417416294239,
+      "y": 86.79259001875542
+    },
+    {
+      "id": "Ohio Utica Shale",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -85.79982771491106,
+      "y": 900.0
+    },
+    {
+      "id": "PA Marcellus Shale",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -23.539035779058047,
+      "y": 848.5929133477614
+    },
+    {
+      "id": "BPL",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 143.6429220396799,
+      "y": -655.5966523871102
+    },
+    {
+      "id": "Surety Business Line",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 154.53828697594562,
+      "y": -800.690165002681
     }
   ],
   "edges": [
@@ -2638,6 +2743,262 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "MACRO"
+    },
+    {
+      "id": "Deutsche Bank||Views As Negative Signal||AstraZeneca",
+      "source": "Deutsche Bank",
+      "target": "AstraZeneca",
+      "rel": "Views As Negative Signal",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Faces Premium Valuation Due To||AI Growth",
+      "source": "ASML",
+      "target": "AI Growth",
+      "rel": "Faces Premium Valuation Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Partners With||TSMC",
+      "source": "ASML",
+      "target": "TSMC",
+      "rel": "Partners With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "ASML||Develops Technology For||High-NA EUV",
+      "source": "ASML",
+      "target": "High-NA EUV",
+      "rel": "Develops Technology For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "CLARIANE SE||Has Bank Adviser||BNP Paribas",
+      "source": "CLARIANE SE",
+      "target": "BNP Paribas",
+      "rel": "Has Bank Adviser",
+      "rel_cat": "GMM",
+      "causal_type": "REGULATORY",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Sa Pa||Has Indicator||air pollution",
+      "source": "Sa Pa",
+      "target": "air pollution",
+      "rel": "Has Indicator",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "IQAir||Publishes Data On||air pollution",
+      "source": "IQAir",
+      "target": "air pollution",
+      "rel": "Publishes Data On",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "NTSB||Investigates Incident Involving||Mid-Air Collision With Pennsylvania Police Helicopter",
+      "source": "NTSB",
+      "target": "Mid-Air Collision With Pennsylvania Police Helicopter",
+      "rel": "Investigates Incident Involving",
+      "rel_cat": "SSI",
+      "causal_type": "REGULATORY",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Shell||Acquires Full Ownership Of||Tri Star",
+      "source": "Shell",
+      "target": "Tri Star",
+      "rel": "Acquires Full Ownership Of",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Sells To||Constellation Energy",
+      "source": "Shell",
+      "target": "Constellation Energy",
+      "rel": "Sells To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 715000000.0,
+      "materiality_log": 20.388,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Rhode Island power plant||Is Sold To||Constellation Energy",
+      "source": "Rhode Island power plant",
+      "target": "Constellation Energy",
+      "rel": "Is Sold To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 715000000.0,
+      "materiality_log": 20.388,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Hunlock Creek||Is Acquired By||Shell",
+      "source": "Hunlock Creek",
+      "target": "Shell",
+      "rel": "Is Acquired By",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Shell||Agrees To Develop||Angola offshore blocks",
+      "source": "Shell",
+      "target": "Angola offshore blocks",
+      "rel": "Agrees To Develop",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.25,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "EOG||Has Exec||COO",
+      "source": "EOG",
+      "target": "COO",
+      "rel": "Has Exec",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Ohio Utica Shale||Outperforms||PA Marcellus Shale",
+      "source": "Ohio Utica Shale",
+      "target": "PA Marcellus Shale",
+      "rel": "Outperforms",
+      "rel_cat": "SSI",
+      "causal_type": "COMPETITIVE",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BPL||Launches||Surety Business Line",
+      "source": "BPL",
+      "target": "Surety Business Line",
+      "rel": "Launches",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

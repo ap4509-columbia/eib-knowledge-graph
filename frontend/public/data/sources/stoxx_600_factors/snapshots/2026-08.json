@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 242,
-    "edges": 210,
+    "nodes": 244,
+    "edges": 212,
     "scored_edges": 0
   },
   "nodes": [
@@ -254,7 +254,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 15,
+      "degree": 16,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -1528,7 +1528,7 @@
     {
       "id": "Equinor",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -411.6099483961423,
       "y": 322.5068886552163
     },
@@ -1699,6 +1699,20 @@
       "degree": 2,
       "x": -639.6496796261638,
       "y": 472.3608286889346
+    },
+    {
+      "id": "Obesity Drug",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 861.0412429866086,
+      "y": -881.8922617596519
+    },
+    {
+      "id": "Germany",
+      "type": "SECTOR",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
     }
   ],
   "edges": [
@@ -5061,6 +5075,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "REGULATORY"
+    },
+    {
+      "id": "Novo Nordisk||Experiences Setback In||Obesity Drug",
+      "source": "Novo Nordisk",
+      "target": "Obesity Drug",
+      "rel": "Experiences Setback In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Equinor||Secures Long-Term Supply Deal With||Germany",
+      "source": "Equinor",
+      "target": "Germany",
+      "rel": "Secures Long-Term Supply Deal With",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
     }
   ]
 }
