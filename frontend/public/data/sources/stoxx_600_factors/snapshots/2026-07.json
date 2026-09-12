@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 86,
-    "edges": 73,
+    "nodes": 88,
+    "edges": 74,
     "scored_edges": 0
   },
   "nodes": [
@@ -607,6 +607,20 @@
       "degree": 1,
       "x": -899.9999999999999,
       "y": -562.8504035589095
+    },
+    {
+      "id": "PA Turnpike",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
+    },
+    {
+      "id": "2027 Toll Rates",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -1777,6 +1791,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "PA Turnpike||Announces||2027 Toll Rates",
+      "source": "PA Turnpike",
+      "target": "2027 Toll Rates",
+      "rel": "Announces",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

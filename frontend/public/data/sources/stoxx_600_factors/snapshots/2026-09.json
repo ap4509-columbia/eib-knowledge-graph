@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 144,
-    "edges": 124,
+    "nodes": 150,
+    "edges": 130,
     "scored_edges": 0
   },
   "nodes": [
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 8,
+      "degree": 9,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 6,
+      "degree": 9,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 21,
+      "degree": 23,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -380,7 +380,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": 181.20573941880204,
       "y": 457.3595387049728
     },
@@ -1013,6 +1013,48 @@
       "degree": 1,
       "x": 154.53828697594562,
       "y": -800.690165002681
+    },
+    {
+      "id": "Morgan Stanley Doubts the Offset",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 780.2670786515789,
+      "y": 139.40119302271253
+    },
+    {
+      "id": "AI",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -788.9697003880764,
+      "y": 473.35801525619354
+    },
+    {
+      "id": "Umicore",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 200.58178569962735,
+      "y": -228.19275217054786
+    },
+    {
+      "id": "Derichebourg",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 627.0975408815584,
+      "y": -621.6148052009635
+    },
+    {
+      "id": "PA Turnpike",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -441.5793753491733,
+      "y": 627.808631374552
+    },
+    {
+      "id": "PJM Gas Power Plant",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -122.19827711689953,
+      "y": -844.0949953816981
     }
   ],
   "edges": [
@@ -2999,6 +3041,102 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PRODUCT"
+    },
+    {
+      "id": "Novo Nordisk||Stock Price Drops Due To||Morgan Stanley Doubts the Offset",
+      "source": "Novo Nordisk",
+      "target": "Morgan Stanley Doubts the Offset",
+      "rel": "Stock Price Drops Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "AI||Drives Growth For||ASML",
+      "source": "AI",
+      "target": "ASML",
+      "rel": "Drives Growth For",
+      "rel_cat": "GFMK",
+      "causal_type": "CAUSAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Umicore||Has Transparency Notification By||BNP Paribas",
+      "source": "Umicore",
+      "target": "BNP Paribas",
+      "rel": "Has Transparency Notification By",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 2,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "BNP Paribas||Publishes STAB Notice For||Derichebourg",
+      "source": "BNP Paribas",
+      "target": "Derichebourg",
+      "rel": "Publishes STAB Notice For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Shell||Signs Transactions For||PA Turnpike",
+      "source": "Shell",
+      "target": "PA Turnpike",
+      "rel": "Signs Transactions For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_and_A"
+    },
+    {
+      "id": "Shell||Acquires||PJM Gas Power Plant",
+      "source": "Shell",
+      "target": "PJM Gas Power Plant",
+      "rel": "Acquires",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_and_A"
     }
   ]
 }

@@ -6188,13 +6188,6 @@
       "y": -814.9209058167828
     },
     {
-      "id": "Stocks",
-      "type": "FINANCIAL_ENTITY",
-      "degree": 1,
-      "x": 824.8007873591495,
-      "y": 218.07025468965062
-    },
-    {
       "id": "Moderate Buy",
       "type": "CONCEPT",
       "degree": 2,
@@ -14390,6 +14383,13 @@
       "degree": 2,
       "x": -594.7429382523787,
       "y": 191.08867428015853
+    },
+    {
+      "id": "US Stocks",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": 824.8007873591495,
+      "y": 218.07025468965062
     }
   ],
   "edges": [
@@ -27018,9 +27018,9 @@
       "event_type": "OTHER"
     },
     {
-      "id": "Berkshire Hathaway||Is Net Buyer Of||Stocks",
+      "id": "Berkshire Hathaway||Is Net Buyer Of||US Stocks",
       "source": "Berkshire Hathaway",
-      "target": "Stocks",
+      "target": "US Stocks",
       "rel": "Is Net Buyer Of",
       "rel_cat": "GMM",
       "causal_type": "CORPORATE_ACTION",

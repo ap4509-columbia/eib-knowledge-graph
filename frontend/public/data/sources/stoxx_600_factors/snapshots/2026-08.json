@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 244,
-    "edges": 212,
+    "nodes": 246,
+    "edges": 214,
     "scored_edges": 0
   },
   "nodes": [
@@ -254,7 +254,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 16,
+      "degree": 17,
       "x": -89.37922167506274,
       "y": 110.97683020590178
     },
@@ -996,7 +996,7 @@
     {
       "id": "Adyen",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -43.05960962664163,
       "y": -653.7195577724791
     },
@@ -1710,6 +1710,20 @@
     {
       "id": "Germany",
       "type": "SECTOR",
+      "degree": 1,
+      "x": -816.5584442915442,
+      "y": 900.0
+    },
+    {
+      "id": "LX9851 Obesity Drug",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 861.0412429866086,
+      "y": -881.8922617596519
+    },
+    {
+      "id": "Acquisition",
+      "type": "CONCEPT",
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
@@ -5107,6 +5121,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_AND_A"
+    },
+    {
+      "id": "Novo Nordisk||Reaches Milestone For||LX9851 Obesity Drug",
+      "source": "Novo Nordisk",
+      "target": "LX9851 Obesity Drug",
+      "rel": "Reaches Milestone For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Adyen||Benefit From||Acquisition",
+      "source": "Adyen",
+      "target": "Acquisition",
+      "rel": "Benefit From",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.6,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
