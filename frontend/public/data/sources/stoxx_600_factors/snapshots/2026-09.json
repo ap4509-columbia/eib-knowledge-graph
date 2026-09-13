@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 150,
-    "edges": 130,
+    "nodes": 162,
+    "edges": 144,
     "scored_edges": 0
   },
   "nodes": [
@@ -149,14 +149,14 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 9,
+      "degree": 12,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
     {
       "id": "HSBC Holdings",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 4,
       "x": -580.9191673488466,
       "y": 751.3686859724929
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 23,
+      "degree": 24,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -576,7 +576,7 @@
     {
       "id": "IQAir",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -61.23300488179707,
       "y": -758.7206872175816
     },
@@ -604,7 +604,7 @@
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 3,
       "x": -183.82109513272434,
       "y": -415.0215176841472
     },
@@ -800,7 +800,7 @@
     {
       "id": "Inditex",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": 529.2612418380094,
       "y": -230.03154981810738
     },
@@ -1055,6 +1055,90 @@
       "degree": 1,
       "x": -122.19827711689953,
       "y": -844.0949953816981
+    },
+    {
+      "id": "MediLink",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -321.7890078593226,
+      "y": 300.5172435906982
+    },
+    {
+      "id": "Tam-Peli",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": -421.7836429584303,
+      "y": 406.1400033936621
+    },
+    {
+      "id": "Chinese patient population with relapsed small-cell lung cancer",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -527.5097361187775,
+      "y": 503.11049766620346
+    },
+    {
+      "id": "FX Tokenised Deposit",
+      "type": "PRODUCT",
+      "degree": 2,
+      "x": -232.30071851588366,
+      "y": 780.5258376735152
+    },
+    {
+      "id": "SWIFT",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": -315.4702150207528,
+      "y": -595.8289380740413
+    },
+    {
+      "id": "Wiang Pa Pao",
+      "type": "LOCATION",
+      "degree": 1,
+      "x": 584.800273240113,
+      "y": -251.71608577910584
+    },
+    {
+      "id": "Constellation",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": -436.7257919229187,
+      "y": -246.3156435489067
+    },
+    {
+      "id": "RISEC",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -261.0027390179087,
+      "y": -216.30841080181645
+    },
+    {
+      "id": "Selja",
+      "type": "PERSON",
+      "degree": 1,
+      "x": 473.52110342027413,
+      "y": -530.998039641414
+    },
+    {
+      "id": "Government",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": 586.2928746488789,
+      "y": -671.5078526686453
+    },
+    {
+      "id": "Climate Change Concerns",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": 447.74214615346307
+    },
+    {
+      "id": "Iran War",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 38.118882670265194,
+      "y": -781.0348037019592
     }
   ],
   "edges": [
@@ -3137,6 +3221,230 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "M_and_A"
+    },
+    {
+      "id": "Roche||Collaborates With||MediLink",
+      "source": "Roche",
+      "target": "MediLink",
+      "rel": "Collaborates With",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "MediLink||Announces Phase III Data For||Tam-Peli",
+      "source": "MediLink",
+      "target": "Tam-Peli",
+      "rel": "Announces Phase III Data For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Tam-Peli||Shows Improved Overall Survival In||Chinese patient population with relapsed small-cell lung cancer",
+      "source": "Tam-Peli",
+      "target": "Chinese patient population with relapsed small-cell lung cancer",
+      "rel": "Shows Improved Overall Survival In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "HSBC Holdings||Participates In Trial Of||FX Tokenised Deposit",
+      "source": "HSBC Holdings",
+      "target": "FX Tokenised Deposit",
+      "rel": "Participates In Trial Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "BNP Paribas||Participates In Trial Of||FX Tokenised Deposit",
+      "source": "BNP Paribas",
+      "target": "FX Tokenised Deposit",
+      "rel": "Participates In Trial Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "HSBC Holdings||Collaborates With||BNP Paribas",
+      "source": "HSBC Holdings",
+      "target": "BNP Paribas",
+      "rel": "Collaborates With",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "HSBC Holdings||Uses Platform From||SWIFT",
+      "source": "HSBC Holdings",
+      "target": "SWIFT",
+      "rel": "Uses Platform From",
+      "rel_cat": "GMM",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BNP Paribas||Uses Platform From||SWIFT",
+      "source": "BNP Paribas",
+      "target": "SWIFT",
+      "rel": "Uses Platform From",
+      "rel_cat": "GMM",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Wiang Pa Pao||Has Air Quality Data From||IQAir",
+      "source": "Wiang Pa Pao",
+      "target": "IQAir",
+      "rel": "Has Air Quality Data From",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Constellation||Acquires From||Shell",
+      "source": "Constellation",
+      "target": "Shell",
+      "rel": "Acquires From",
+      "rel_cat": "SSI",
+      "causal_type": "CORPORATE_ACTION",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.35,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "RISEC||Owned By||Constellation",
+      "source": "RISEC",
+      "target": "Constellation",
+      "rel": "Owned By",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.35,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "M_AND_A"
+    },
+    {
+      "id": "Selja||Demands Explanation From||Government",
+      "source": "Selja",
+      "target": "Government",
+      "rel": "Demands Explanation From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Inditex||Reports Revenue Increase Despite||Climate Change Concerns",
+      "source": "Inditex",
+      "target": "Climate Change Concerns",
+      "rel": "Reports Revenue Increase Despite",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
+    },
+    {
+      "id": "Inditex||Reports Revenue Increase Despite||Iran War",
+      "source": "Inditex",
+      "target": "Iran War",
+      "rel": "Reports Revenue Increase Despite",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.4,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EARNINGS"
     }
   ]
 }
