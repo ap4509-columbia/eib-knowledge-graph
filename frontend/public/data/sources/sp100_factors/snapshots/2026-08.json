@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 2055,
-    "edges": 2005,
+    "nodes": 2057,
+    "edges": 2007,
     "scored_edges": 0
   },
   "nodes": [
@@ -7919,7 +7919,7 @@
     {
       "id": "Burger King",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 3,
       "x": 717.0886541661054,
       "y": -271.91814707095585
     },
@@ -14390,6 +14390,20 @@
       "degree": 1,
       "x": 824.8007873591495,
       "y": 218.07025468965062
+    },
+    {
+      "id": "Toei Animation",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 899.783537190818,
+      "y": 564.2541526250698
+    },
+    {
+      "id": "Dragon Ball Super",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": -900.0,
+      "y": -564.3856739233361
     }
   ],
   "edges": [
@@ -46472,6 +46486,38 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Burger King||Partners With||Toei Animation",
+      "source": "Burger King",
+      "target": "Toei Animation",
+      "rel": "Partners With",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "Burger King||Launches New Menu With||Dragon Ball Super",
+      "source": "Burger King",
+      "target": "Dragon Ball Super",
+      "rel": "Launches New Menu With",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

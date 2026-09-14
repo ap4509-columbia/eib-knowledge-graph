@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 88,
-    "edges": 74,
+    "nodes": 90,
+    "edges": 75,
     "scored_edges": 0
   },
   "nodes": [
@@ -621,6 +621,20 @@
       "degree": 1,
       "x": 900.0,
       "y": -886.4088719606855
+    },
+    {
+      "id": "Fairly Valued",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
+    },
+    {
+      "id": "LVMH",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 1,
+      "x": -899.9999999999992,
+      "y": 886.4088719606856
     }
   ],
   "edges": [
@@ -1804,6 +1818,22 @@
       "weight": 1,
       "score": null,
       "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "LVMH||Is Valued As||Fairly Valued",
+      "source": "LVMH",
+      "target": "Fairly Valued",
+      "rel": "Is Valued As",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"

@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 162,
-    "edges": 144,
+    "nodes": 176,
+    "edges": 155,
     "scored_edges": 0
   },
   "nodes": [
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 24,
+      "degree": 25,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -380,7 +380,7 @@
     {
       "id": "Novo Nordisk",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": 181.20573941880204,
       "y": 457.3595387049728
     },
@@ -394,7 +394,7 @@
     {
       "id": "Wegovy",
       "type": "PRODUCT",
-      "degree": 1,
+      "degree": 2,
       "x": -259.4673077195777,
       "y": -682.6989891454782
     },
@@ -534,7 +534,7 @@
     {
       "id": "PA",
       "type": "GOVERNMENT_ORGANIZATION",
-      "degree": 3,
+      "degree": 4,
       "x": -803.4371540382788,
       "y": -116.64867422095267
     },
@@ -1031,7 +1031,7 @@
     {
       "id": "Umicore",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 4,
       "x": 200.58178569962735,
       "y": -228.19275217054786
     },
@@ -1139,6 +1139,104 @@
       "degree": 1,
       "x": 38.118882670265194,
       "y": -781.0348037019592
+    },
+    {
+      "id": "'Novo'",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 724.5864750855808,
+      "y": 392.1495364341772
+    },
+    {
+      "id": "Etcamah",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 353.4336653533284,
+      "y": 695.0676769539944
+    },
+    {
+      "id": "Phase III SERENA-4 Trial",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 425.1662413476765,
+      "y": 774.678467486815
+    },
+    {
+      "id": "Adyen",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 486.5568774266454,
+      "y": -64.41750743762675
+    },
+    {
+      "id": "India",
+      "type": "COUNTRY",
+      "degree": 1,
+      "x": 782.566970722884,
+      "y": -156.29797467315848
+    },
+    {
+      "id": "ElevenLabs",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 373.1565723186431,
+      "y": -197.12211187610887
+    },
+    {
+      "id": "Tandowsky",
+      "type": "EXECUTIVE",
+      "degree": 2,
+      "x": 331.1606941209297,
+      "y": 14.593059652501154
+    },
+    {
+      "id": "IPO Expertise",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 479.45863425935636,
+      "y": -420.3281388766611
+    },
+    {
+      "id": "BNP Paribas Asset Management Holding",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -679.0741490486688,
+      "y": 54.70697061607057
+    },
+    {
+      "id": "BNP Paribas Cardif",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -739.2479028554793,
+      "y": 123.6801721482125
+    },
+    {
+      "id": "PA Lifers",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -349.56706743835286,
+      "y": 656.8107956248317
+    },
+    {
+      "id": "Supreme Court",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -483.47382319856916,
+      "y": 900.0
+    },
+    {
+      "id": "Flight 93",
+      "type": "EVENT",
+      "degree": 1,
+      "x": -230.47875030540948,
+      "y": -446.87177553806634
+    },
+    {
+      "id": "United States National Park Service",
+      "type": "ORGANIZATION",
+      "degree": 1,
+      "x": -351.1731417279366,
+      "y": -694.2576649097099
     }
   ],
   "edges": [
@@ -1887,9 +1985,9 @@
       "causal_type": "REGULATORY",
       "polarity": "negative",
       "origin": "news",
-      "weight": 2,
+      "weight": 3,
       "score": null,
-      "sentiment": -0.875,
+      "sentiment": -0.863,
       "materiality_usd": 15000000.0,
       "materiality_log": 16.524,
       "event_type": "LEGAL"
@@ -3445,6 +3543,182 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "EARNINGS"
+    },
+    {
+      "id": "Novo Nordisk||Rebrands As||'Novo'",
+      "source": "Novo Nordisk",
+      "target": "'Novo'",
+      "rel": "Rebrands As",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Novo Nordisk||Facing Patent Cliff For||Wegovy",
+      "source": "Novo Nordisk",
+      "target": "Wegovy",
+      "rel": "Facing Patent Cliff For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Etcamah||Misses Primary Endpoint In||Phase III SERENA-4 Trial",
+      "source": "Etcamah",
+      "target": "Phase III SERENA-4 Trial",
+      "rel": "Misses Primary Endpoint In",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Adyen||Plans To Expand Operations In||India",
+      "source": "Adyen",
+      "target": "India",
+      "rel": "Plans To Expand Operations In",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "ElevenLabs||Hires||Tandowsky",
+      "source": "ElevenLabs",
+      "target": "Tandowsky",
+      "rel": "Hires",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "Tandowsky||Was CFO Of||Adyen",
+      "source": "Tandowsky",
+      "target": "Adyen",
+      "rel": "Was CFO Of",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "ElevenLabs||Drives Global Expansion With||IPO Expertise",
+      "source": "ElevenLabs",
+      "target": "IPO Expertise",
+      "rel": "Drives Global Expansion With",
+      "rel_cat": "SSI",
+      "causal_type": "CAUSAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BNP Paribas Asset Management Holding||Notifies Transparency About||Umicore",
+      "source": "BNP Paribas Asset Management Holding",
+      "target": "Umicore",
+      "rel": "Notifies Transparency About",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "BNP Paribas Cardif||Notifies Transparency About||Umicore",
+      "source": "BNP Paribas Cardif",
+      "target": "Umicore",
+      "rel": "Notifies Transparency About",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "PA Lifers||Seeks Relief From||Supreme Court",
+      "source": "PA Lifers",
+      "target": "Supreme Court",
+      "rel": "Seeks Relief From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "LEGAL"
+    },
+    {
+      "id": "Flight 93||Is Managed By||United States National Park Service",
+      "source": "Flight 93",
+      "target": "United States National Park Service",
+      "rel": "Is Managed By",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
