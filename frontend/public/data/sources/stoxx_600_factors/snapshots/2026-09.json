@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 176,
-    "edges": 155,
+    "nodes": 190,
+    "edges": 168,
     "scored_edges": 0
   },
   "nodes": [
@@ -72,7 +72,7 @@
     {
       "id": "Europe",
       "type": "REGION",
-      "degree": 1,
+      "degree": 2,
       "x": 124.39787263781184,
       "y": -668.5288564278208
     },
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 9,
+      "degree": 11,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -205,7 +205,7 @@
     {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 4,
+      "degree": 5,
       "x": -258.84867687655964,
       "y": 2.4028796272181046
     },
@@ -373,7 +373,7 @@
     {
       "id": "Pennsylvania",
       "type": "LOCATION",
-      "degree": 2,
+      "degree": 4,
       "x": -795.4769696483694,
       "y": -259.811354711247
     },
@@ -541,7 +541,7 @@
     {
       "id": "AstraZeneca",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 7,
       "x": 54.850822585053486,
       "y": -180.73716009055028
     },
@@ -576,7 +576,7 @@
     {
       "id": "IQAir",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": -61.23300488179707,
       "y": -758.7206872175816
     },
@@ -695,7 +695,7 @@
     {
       "id": "MCPA",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": -899.9999999999999,
       "y": 46.42688231233915
     },
@@ -1237,6 +1237,104 @@
       "degree": 1,
       "x": -351.1731417279366,
       "y": -694.2576649097099
+    },
+    {
+      "id": "Olema Pharmaceuticals",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 128.45028743676195,
+      "y": 708.0818462957685
+    },
+    {
+      "id": "San Pa Tong",
+      "type": "LOCATION",
+      "degree": 2,
+      "x": -764.8990279529704,
+      "y": 353.1792231598113
+    },
+    {
+      "id": "Breast Cancer Combination Treatment",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 120.27064071866845,
+      "y": 778.660464900007
+    },
+    {
+      "id": "AI Safety Experts",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -761.4226908905373,
+      "y": -500.8479259178
+    },
+    {
+      "id": "AI Investment",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -404.59366022855403,
+      "y": -706.1309927145265
+    },
+    {
+      "id": "A Prominent Wall Street Ratings Agency",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -107.71701020970146,
+      "y": -455.279544441157
+    },
+    {
+      "id": "PA Democrats",
+      "type": "ORGANIZATION",
+      "degree": 2,
+      "x": -420.3443246950611,
+      "y": -328.41627048739576
+    },
+    {
+      "id": "ROE cap",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": 60.54819387765849,
+      "y": -618.2176159942737
+    },
+    {
+      "id": "energy package",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -899.9999999999999,
+      "y": -40.25108741713492
+    },
+    {
+      "id": "Allegheny College",
+      "type": "COMPANY",
+      "degree": 2,
+      "x": 431.52645015644543,
+      "y": -22.414596678183536
+    },
+    {
+      "id": "Ohio Students",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 727.6741538847385,
+      "y": 451.2174848846791
+    },
+    {
+      "id": "Ducati",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -633.8498033123012,
+      "y": 752.5507318034583
+    },
+    {
+      "id": "Measles",
+      "type": "MACRO_INDICATOR",
+      "degree": 1,
+      "x": 256.27550062967015,
+      "y": -706.184438991383
+    },
+    {
+      "id": "Agentic AI Foundation",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 393.73679303456026,
+      "y": 722.799215405758
     }
   ],
   "edges": [
@@ -3719,6 +3817,214 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Olema Pharmaceuticals||Shares Fall After||AstraZeneca",
+      "source": "Olema Pharmaceuticals",
+      "target": "AstraZeneca",
+      "rel": "Shares Fall After",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "San Pa Tong||Has Air Quality Data From||IQAir",
+      "source": "San Pa Tong",
+      "target": "IQAir",
+      "rel": "Has Air Quality Data From",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 2,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "AstraZeneca||Misses Target in Study||Breast Cancer Combination Treatment",
+      "source": "AstraZeneca",
+      "target": "Breast Cancer Combination Treatment",
+      "rel": "Misses Target in Study",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "ASML||Faces Warning From||AI Safety Experts",
+      "source": "ASML",
+      "target": "AI Safety Experts",
+      "rel": "Faces Warning From",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Europe||Experiences Boom In||AI Investment",
+      "source": "Europe",
+      "target": "AI Investment",
+      "rel": "Experiences Boom In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "A Prominent Wall Street Ratings Agency||Ratings Upgrade For||ASML",
+      "source": "A Prominent Wall Street Ratings Agency",
+      "target": "ASML",
+      "rel": "Ratings Upgrade For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "PA Democrats||Proposes Regulatory Change||ROE cap",
+      "source": "PA Democrats",
+      "target": "ROE cap",
+      "rel": "Proposes Regulatory Change",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "PA Democrats||Includes In Package||energy package",
+      "source": "PA Democrats",
+      "target": "energy package",
+      "rel": "Includes In Package",
+      "rel_cat": "GMM",
+      "causal_type": "STRUCTURAL",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Allegheny College||Sets Tuition Cap For||Pennsylvania",
+      "source": "Allegheny College",
+      "target": "Pennsylvania",
+      "rel": "Sets Tuition Cap For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Allegheny College||Sets Tuition Cap For||Ohio Students",
+      "source": "Allegheny College",
+      "target": "Ohio Students",
+      "rel": "Sets Tuition Cap For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Volkswagen||Reviews Offer For||Ducati",
+      "source": "Volkswagen",
+      "target": "Ducati",
+      "rel": "Reviews Offer For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Pennsylvania||Reports Death Related To||Measles",
+      "source": "Pennsylvania",
+      "target": "Measles",
+      "rel": "Reports Death Related To",
+      "rel_cat": "SSI",
+      "causal_type": "FINANCIAL_METRIC",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.8,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Agentic AI Foundation||Launches||MCPA",
+      "source": "Agentic AI Foundation",
+      "target": "MCPA",
+      "rel": "Launches",
+      "rel_cat": "SSI",
+      "causal_type": "OPERATIONAL",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }
