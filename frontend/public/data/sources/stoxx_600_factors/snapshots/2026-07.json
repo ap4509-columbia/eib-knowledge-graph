@@ -1,8 +1,8 @@
 {
   "month": "2026-07",
   "stats": {
-    "nodes": 90,
-    "edges": 75,
+    "nodes": 91,
+    "edges": 76,
     "scored_edges": 0
   },
   "nodes": [
@@ -310,7 +310,7 @@
     {
       "id": "Nestl\u00e9",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -255.7766547971174,
       "y": -319.28362671511184
     },
@@ -635,6 +635,13 @@
       "degree": 1,
       "x": -899.9999999999992,
       "y": 886.4088719606856
+    },
+    {
+      "id": "Automation",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 506.51646964947713,
+      "y": 384.60442399798944
     }
   ],
   "edges": [
@@ -1837,6 +1844,22 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "Nestl\u00e9||Invests In||Automation",
+      "source": "Nestl\u00e9",
+      "target": "Automation",
+      "rel": "Invests In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
     }
   ]
 }

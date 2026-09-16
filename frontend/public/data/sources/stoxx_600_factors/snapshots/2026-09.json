@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 190,
-    "edges": 168,
+    "nodes": 197,
+    "edges": 177,
     "scored_edges": 0
   },
   "nodes": [
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 11,
+      "degree": 13,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -149,7 +149,7 @@
     {
       "id": "BNP Paribas",
       "type": "FINANCIAL_ENTITY",
-      "degree": 12,
+      "degree": 14,
       "x": 496.98791525739733,
       "y": -156.66159942882518
     },
@@ -205,7 +205,7 @@
     {
       "id": "Volkswagen",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": -258.84867687655964,
       "y": 2.4028796272181046
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 25,
+      "degree": 26,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -604,7 +604,7 @@
     {
       "id": "Roche",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 4,
       "x": -183.82109513272434,
       "y": -415.0215176841472
     },
@@ -1059,14 +1059,14 @@
     {
       "id": "MediLink",
       "type": "COMPANY",
-      "degree": 2,
+      "degree": 4,
       "x": -321.7890078593226,
       "y": 300.5172435906982
     },
     {
       "id": "Tam-Peli",
       "type": "PRODUCT",
-      "degree": 2,
+      "degree": 3,
       "x": -421.7836429584303,
       "y": 406.1400033936621
     },
@@ -1318,7 +1318,7 @@
     {
       "id": "Ducati",
       "type": "COMPANY",
-      "degree": 1,
+      "degree": 2,
       "x": -633.8498033123012,
       "y": 752.5507318034583
     },
@@ -1335,6 +1335,55 @@
       "degree": 1,
       "x": 393.73679303456026,
       "y": 722.799215405758
+    },
+    {
+      "id": "Lam Research",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": 654.506279392624,
+      "y": 524.1524316140944
+    },
+    {
+      "id": "Applied Materials",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -850.4960716994675,
+      "y": 464.26637871664116
+    },
+    {
+      "id": "ETF Veteran",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -658.8735625708664,
+      "y": -567.1060170753503
+    },
+    {
+      "id": "White Label ETFs",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -496.03475054403305,
+      "y": 606.624763917401
+    },
+    {
+      "id": "Supa Programme",
+      "type": "COMPETITOR",
+      "degree": 1,
+      "x": 397.588868897835,
+      "y": -745.723546228526
+    },
+    {
+      "id": "2026 Para-cycling Road World Championships",
+      "type": "EVENT",
+      "degree": 1,
+      "x": 475.2015395115906,
+      "y": -801.0053350804457
+    },
+    {
+      "id": "52-Week High",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -395.06820713323685,
+      "y": 849.2818065730302
     }
   ],
   "edges": [
@@ -4022,6 +4071,150 @@
       "weight": 1,
       "score": null,
       "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "MediLink||Announces Data For||Tam-Peli",
+      "source": "MediLink",
+      "target": "Tam-Peli",
+      "rel": "Announces Data For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "REGULATORY"
+    },
+    {
+      "id": "Roche||Has Collaborator||MediLink",
+      "source": "Roche",
+      "target": "MediLink",
+      "rel": "Has Collaborator",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PARTNERSHIP"
+    },
+    {
+      "id": "ASML||Has Higher Share Prices Due To||Lam Research",
+      "source": "ASML",
+      "target": "Lam Research",
+      "rel": "Has Higher Share Prices Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Has Higher Share Prices Due To||Applied Materials",
+      "source": "ASML",
+      "target": "Applied Materials",
+      "rel": "Has Higher Share Prices Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.7,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "BNP Paribas||Hires||ETF Veteran",
+      "source": "BNP Paribas",
+      "target": "ETF Veteran",
+      "rel": "Hires",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "EXECUTIVE_CHANGE"
+    },
+    {
+      "id": "BNP Paribas||Pushes||White Label ETFs",
+      "source": "BNP Paribas",
+      "target": "White Label ETFs",
+      "rel": "Pushes",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "PRODUCT"
+    },
+    {
+      "id": "Supa Programme||Wins Medal In||2026 Para-cycling Road World Championships",
+      "source": "Supa Programme",
+      "target": "2026 Para-cycling Road World Championships",
+      "rel": "Wins Medal In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Volkswagen||Reviews Sale Of||Ducati",
+      "source": "Volkswagen",
+      "target": "Ducati",
+      "rel": "Reviews Sale Of",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.15,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Hits||52-Week High",
+      "source": "Shell",
+      "target": "52-Week High",
+      "rel": "Hits",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 1.0,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"

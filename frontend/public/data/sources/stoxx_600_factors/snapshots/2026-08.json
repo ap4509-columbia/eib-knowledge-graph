@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 246,
-    "edges": 214,
+    "nodes": 249,
+    "edges": 218,
     "scored_edges": 0
   },
   "nodes": [
@@ -296,7 +296,7 @@
     {
       "id": "AI",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": 612.3131617542608,
       "y": -568.44301322023
     },
@@ -471,7 +471,7 @@
     {
       "id": "SAP",
       "type": "COMPANY",
-      "degree": 3,
+      "degree": 5,
       "x": 126.29065353973294,
       "y": -2.7894789163906344
     },
@@ -1591,7 +1591,7 @@
     {
       "id": "Fair Value",
       "type": "CONCEPT",
-      "degree": 1,
+      "degree": 2,
       "x": -867.114497961142,
       "y": -188.86762856922985
     },
@@ -1727,6 +1727,27 @@
       "degree": 1,
       "x": -816.5584442915442,
       "y": 900.0
+    },
+    {
+      "id": "Novartis",
+      "type": "FINANCIAL_ENTITY",
+      "degree": 2,
+      "x": 34.611593735382336,
+      "y": -316.62867725932705
+    },
+    {
+      "id": "Entresto",
+      "type": "PRODUCT",
+      "degree": 1,
+      "x": 867.4002117500477,
+      "y": 84.72320641624286
+    },
+    {
+      "id": "ESOP",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 526.5225821423095,
+      "y": -815.6093671507446
     }
   ],
   "edges": [
@@ -5153,6 +5174,70 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "STRUCTURAL"
+    },
+    {
+      "id": "Novartis||Wins Patent For||Entresto",
+      "source": "Novartis",
+      "target": "Entresto",
+      "rel": "Wins Patent For",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Novartis||Could Trade Below||Fair Value",
+      "source": "Novartis",
+      "target": "Fair Value",
+      "rel": "Could Trade Below",
+      "rel_cat": "GMM",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.2,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SAP||Experiences Setback In||AI",
+      "source": "SAP",
+      "target": "AI",
+      "rel": "Experiences Setback In",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SAP||Conducts Share Sale Under||ESOP",
+      "source": "SAP",
+      "target": "ESOP",
+      "rel": "Conducts Share Sale Under",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
     }
   ]
 }

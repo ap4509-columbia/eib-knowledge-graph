@@ -370,5 +370,64 @@
       "materiality_usd": null,
       "event_type": "OTHER"
     }
+  ],
+  "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcURJaHhaUDVjM3hlQ2d2anpqVXU4V2VJOEpJelhUeFNuSnh4N1ZneUJCdE1zRmpaVGdkMFJhOXg2NGMxWmxQMGNKclU4OWlqejRic3B2a2tZVXB3QjVmY1pzUGR3SHRYc3BpdFBoaXFjVWVvNGNwMjRLYVlyVEozYWllZ1V6dndnYl9Dd2pWNThlcW5TaW1xQlNlaw?oc=5": [
+    {
+      "sub": "Deutsche Bank",
+      "sub_type": "COMPANY",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "XTRA:DBK",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "sub": "Deutsche Bank",
+      "sub_type": "COMPANY",
+      "rel": "Announces Buyback",
+      "rel_category": "SSI",
+      "obj": "",
+      "obj_type": "",
+      "sentiment": 0.3,
+      "materiality_usd": null,
+      "event_type": "OTHER"
+    },
+    {
+      "sub": "Deutsche Bank",
+      "sub_type": "COMPANY",
+      "rel": "Releases Earnings Report",
+      "rel_category": "SSI",
+      "obj": "",
+      "obj_type": "",
+      "sentiment": 0.3,
+      "materiality_usd": null,
+      "event_type": "EARNINGS"
+    }
+  ],
+  "https://news.google.com/rss/articles/CBMilgFBVV95cUxNd0paS0JfOGNPTVVmUGVodjNma1ZqZGxZN0dES2hmR1hBWWc4c2stQ01CX0liWHlTNTJGbUhkLWs3bVBVT2FpZmVKbFl0U3lVaWpsRVRzVGZ1MlViMmR4TEJTZVdJN1NibjRXRnlkZ2xtczk4MEZuSkFxWFYzZm9XeXFfZkNTSkZ4TTA4S19YU3NUNG92ZUE?oc=5": [
+    {
+      "sub": "Nestl\u00e9",
+      "sub_type": "COMPANY",
+      "rel": "Has Ticker",
+      "rel_category": "GFMK",
+      "obj": "NESN",
+      "obj_type": "STOCK_TICKER",
+      "sentiment": 0.0,
+      "materiality_usd": null,
+      "event_type": "STRUCTURAL"
+    },
+    {
+      "sub": "Nestl\u00e9",
+      "sub_type": "COMPANY",
+      "rel": "Invests In",
+      "rel_category": "SSI",
+      "obj": "Automation",
+      "obj_type": "CONCEPT",
+      "sentiment": 0.5,
+      "materiality_usd": null,
+      "event_type": "PRODUCT"
+    }
   ]
 }
