@@ -1,8 +1,8 @@
 {
   "month": "2026-08",
   "stats": {
-    "nodes": 249,
-    "edges": 218,
+    "nodes": 250,
+    "edges": 219,
     "scored_edges": 0
   },
   "nodes": [
@@ -471,7 +471,7 @@
     {
       "id": "SAP",
       "type": "COMPANY",
-      "degree": 5,
+      "degree": 6,
       "x": 126.29065353973294,
       "y": -2.7894789163906344
     },
@@ -1748,6 +1748,13 @@
       "degree": 1,
       "x": 526.5225821423095,
       "y": -815.6093671507446
+    },
+    {
+      "id": "Artificial Intelligence In Software Industry",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 900.0,
+      "y": -886.4088719606855
     }
   ],
   "edges": [
@@ -5235,6 +5242,22 @@
       "weight": 1,
       "score": null,
       "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "SAP||Alleviates Concerns About||Artificial Intelligence In Software Industry",
+      "source": "SAP",
+      "target": "Artificial Intelligence In Software Industry",
+      "rel": "Alleviates Concerns About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "positive",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.3,
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"

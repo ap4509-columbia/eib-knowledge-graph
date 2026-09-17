@@ -1,8 +1,8 @@
 {
   "month": "2026-09",
   "stats": {
-    "nodes": 197,
-    "edges": 177,
+    "nodes": 203,
+    "edges": 183,
     "scored_edges": 0
   },
   "nodes": [
@@ -93,7 +93,7 @@
     {
       "id": "ASML",
       "type": "COMPANY",
-      "degree": 13,
+      "degree": 14,
       "x": -169.02158800401654,
       "y": 870.5382971071166
     },
@@ -240,7 +240,7 @@
     {
       "id": "Shell",
       "type": "COMPANY",
-      "degree": 26,
+      "degree": 29,
       "x": 62.793789254614175,
       "y": -97.23250849306999
     },
@@ -324,7 +324,7 @@
     {
       "id": "AI Demand",
       "type": "EXECUTIVE",
-      "degree": 1,
+      "degree": 2,
       "x": 644.6821078816461,
       "y": 4.40126556453892
     },
@@ -1384,6 +1384,48 @@
       "degree": 1,
       "x": -395.06820713323685,
       "y": 849.2818065730302
+    },
+    {
+      "id": "Energy Market Shock Absorbers Weakening",
+      "type": "CONCEPT",
+      "degree": 2,
+      "x": -645.6300193749909,
+      "y": 256.0268285048319
+    },
+    {
+      "id": "Equinor",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -463.6470243383341,
+      "y": 216.04696122704337
+    },
+    {
+      "id": "-2.5%",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": -145.9178690443868,
+      "y": 756.3219093569735
+    },
+    {
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9ene",
+      "type": "CONCEPT",
+      "degree": 1,
+      "x": 645.2473164669732,
+      "y": -699.5968367838403
+    },
+    {
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+      "type": "COMPANY",
+      "degree": 1,
+      "x": -505.25071995589434,
+      "y": -280.09503084510527
+    },
+    {
+      "id": "TEF.MC",
+      "type": "STOCK_TICKER",
+      "degree": 1,
+      "x": -565.471936563281,
+      "y": -160.57620136971116
     }
   ],
   "edges": [
@@ -4218,6 +4260,102 @@
       "materiality_usd": 0.0,
       "materiality_log": 0.0,
       "event_type": "OTHER"
+    },
+    {
+      "id": "ASML||Faces Questions About||AI Demand",
+      "source": "ASML",
+      "target": "AI Demand",
+      "rel": "Faces Questions About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "OTHER"
+    },
+    {
+      "id": "Shell||Warns About||Energy Market Shock Absorbers Weakening",
+      "source": "Shell",
+      "target": "Energy Market Shock Absorbers Weakening",
+      "rel": "Warns About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Equinor||Warns About||Energy Market Shock Absorbers Weakening",
+      "source": "Equinor",
+      "target": "Energy Market Shock Absorbers Weakening",
+      "rel": "Warns About",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Shell||Experiences Price Change Of||-2.5%",
+      "source": "Shell",
+      "target": "-2.5%",
+      "rel": "Experiences Price Change Of",
+      "rel_cat": "GFMK",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.3,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "Shell||Reprices LNG Demand Due To||LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9ene",
+      "source": "Shell",
+      "target": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9ene",
+      "rel": "Reprices LNG Demand Due To",
+      "rel_cat": "SSI",
+      "causal_type": "OTHER",
+      "polarity": "negative",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": -0.5,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "MACRO"
+    },
+    {
+      "id": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne||Has Ticker||TEF.MC",
+      "source": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne",
+      "target": "TEF.MC",
+      "rel": "Has Ticker",
+      "rel_cat": "GFMK",
+      "causal_type": "STRUCTURAL",
+      "polarity": "neutral",
+      "origin": "news",
+      "weight": 1,
+      "score": null,
+      "sentiment": 0.0,
+      "materiality_usd": 0.0,
+      "materiality_log": 0.0,
+      "event_type": "STRUCTURAL"
     }
   ]
 }
