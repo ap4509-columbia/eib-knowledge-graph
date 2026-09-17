@@ -28,7 +28,7 @@ import {
   inferNodeSectors,
   SECTOR_SOURCE_IDS,
 } from "@/lib/sectors";
-import { LiveBadge } from "@/components/LiveBadge";
+import { LiveBadge, MaintenanceNotice } from "@/components/LiveBadge";
 import { TimeSlider } from "@/components/controls/TimeSlider";
 import { FilterRail } from "@/components/controls/FilterRail";
 import { EntitySearch } from "@/components/controls/EntitySearch";
@@ -604,6 +604,14 @@ export default function Home() {
             <ThemeToggle />
           </div>
         </header>
+
+        {/* Post-handover notice: appears on live sources only once their
+            daily refresh has actually gone stale (data-driven, so it
+            vanishes by itself if a maintainer resumes the cron). */}
+        {sources &&
+          activeSourceId &&
+          sources.sources.find((s) => s.id === activeSourceId)?.kind ===
+            "live" && <MaintenanceNotice sourceId={activeSourceId} />}
 
         {/* Safari-style tab strip. Only tabs the current source supports
             are rendered — no grey placeholders. Right-side tools shown per
