@@ -95,6 +95,15 @@ export function GraphCanvas({
   isDarkRef.current = isDark;
   const physicsEnabledRef = useRef(physics.enabled);
   physicsEnabledRef.current = physics.enabled;
+  // Live-physics memory: the positions to restore when physics turns off
+  // (captured at the off→on transition, i.e. AFTER the static pipeline's
+  // convergence pass has settled — not the raw preset coords), plus
+  // whether the snapshot shipped positions at all.
+  const prePhysicsPositionsRef = useRef<Map<string, { x: number; y: number }>>(
+    new Map()
+  );
+  const physicsWasOnRef = useRef(false);
+  const hasPositionsRef = useRef(true);
 
   // Fit the viewport, then normalize node/label sizes to the zoom the fit
   // landed on. Sizes in the stylesheet are graph units, so a sprawling
@@ -499,29 +508,12 @@ export function GraphCanvas({
       cy.add(elements);
     });
 
-    // Layout selection:
-    // - physics disabled → `preset` uses each node's precomputed x/y verbatim
-    // - physics enabled  → d3-force with user's repulsion/link-strength
-    // - no positions available → `grid` fallback (should be rare)
+    // Always lay out from the precomputed positions here — the live-physics
+    // simulation is layered on by its own effect below, so toggling physics
+    // or dragging its sliders NEVER rebuilds the element set (that rebuild
+    // on every slider tick was the source of severe lag).
     let layout;
-    if (physics.enabled) {
-      layout = cy.layout({
-        name: "d3-force",
-        animate: true,
-        fit: false,
-        randomize: !hasPositions, // seed from preset positions if we have them
-        fixedAfterDragging: false,
-        linkId: (d: { id: string }) => d.id,
-        linkDistance: physics.linkStrength,
-        manyBodyStrength: -physics.repulsion,
-        collideRadius: 18,
-        alpha: 0.4,
-        alphaDecay: 0.03,
-        alphaMin: 0.001,
-        velocityDecay: 0.5,
-        infinite: false,
-      } as cytoscape.LayoutOptions);
-    } else if (hasPositions) {
+    if (hasPositions) {
       layout = cy.layout({
         name: "preset",
         fit: false,
@@ -536,6 +528,14 @@ export function GraphCanvas({
     }
     layoutRef.current = layout;
     layout.run();
+    hasPositionsRef.current = hasPositions;
+    // Raw preset coordinates for this element set: physics-off restores
+    // these and reruns the (deterministic) static pipeline, reproducing
+    // the exact pre-physics layout.
+    prePhysicsPositionsRef.current = new Map(
+      cy.nodes().map((n) => [n.id(), { ...n.position() }])
+    );
+    physicsWasOnRef.current = false;
 
     // Fit the viewport once so everything is visible, then hand control to
     // the user. No continuous refit — positions are stable.
@@ -551,7 +551,76 @@ export function GraphCanvas({
       cy.resize();
       fitNormalized(cy);
     });
-  }, [snapshot, physics.enabled, physics.repulsion, physics.linkStrength]);
+  }, [snapshot]);
+
+  // Live physics: start/stop/retune the d3-force simulation WITHOUT
+  // touching the element set. Runs only over visible elements (filters can
+  // hide most of a corpus — simulating hidden nodes wastes the frame
+  // budget), and slider changes are debounced so a drag retunes the sim a
+  // few times, not sixty times a second.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy || !snapshot) return;
+
+    if (!physics.enabled) {
+      try {
+        layoutRef.current?.stop?.();
+      } catch {
+        /* ignore */
+      }
+      // Restore the raw preset coordinates, then rerun the static
+      // fit/convergence pipeline — it is seeded and deterministic, so
+      // this lands on exactly the layout the user saw before physics.
+      const saved = prePhysicsPositionsRef.current;
+      if (physicsWasOnRef.current && saved.size > 0) {
+        cy.batch(() => {
+          cy.nodes().forEach((n) => {
+            const pos = saved.get(n.id());
+            if (pos) n.position(pos);
+          });
+        });
+        if (pendingFitRef.current !== null) {
+          cancelAnimationFrame(pendingFitRef.current);
+        }
+        pendingFitRef.current = requestAnimationFrame(() => {
+          pendingFitRef.current = null;
+          if (cyRef.current !== cy || cy.destroyed()) return;
+          fitNormalized(cy);
+        });
+      }
+      physicsWasOnRef.current = false;
+      return;
+    }
+
+    const t = window.setTimeout(() => {
+      if (cyRef.current !== cy || cy.destroyed()) return;
+      physicsWasOnRef.current = true;
+      try {
+        layoutRef.current?.stop?.();
+      } catch {
+        /* ignore */
+      }
+      const layout = cy.elements(":visible").layout({
+        name: "d3-force",
+        animate: true,
+        fit: false,
+        randomize: !hasPositionsRef.current,
+        fixedAfterDragging: false,
+        linkId: (d: { id: string }) => d.id,
+        linkDistance: physics.linkStrength,
+        manyBodyStrength: -physics.repulsion,
+        collideRadius: 18,
+        alpha: 0.4,
+        alphaDecay: 0.03,
+        alphaMin: 0.001,
+        velocityDecay: 0.5,
+        infinite: false,
+      } as cytoscape.LayoutOptions);
+      layoutRef.current = layout;
+      layout.run();
+    }, 150);
+    return () => window.clearTimeout(t);
+  }, [snapshot, physics.enabled, physics.repulsion, physics.linkStrength, filters]);
 
   // Swap the Cytoscape stylesheet when the theme changes.
   useEffect(() => {
